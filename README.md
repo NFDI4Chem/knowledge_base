@@ -2,6 +2,6 @@
 
 This repo is the core of the NFDI4Chem knowledge base.
 
-# How to contribute
+## How to contribute
 
 Yet to be determined.
