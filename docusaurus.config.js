@@ -26,11 +26,6 @@ module.exports = {
           position: 'left',
           label: 'Knowledge Base',
         },
-        {
-          href: 'https://github.com/NFDI4Chem/knowledge_base',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
