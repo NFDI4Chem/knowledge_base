@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'NFDI4Chem Knowledge Base',
-  tagline: 'A place for all knowledge regarding to general and chemistry specific RDM',
+  tagline: 'A place for all knowledge regarding Research Data Management (RDM) in general & in Chemistry - whether you are a novice or an expert - we have the answers to your questions',
   url: 'https://github.com/JohnJolliffe-JGU/knowledge_base',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -25,11 +25,6 @@ module.exports = {
           docId: 'intro',
           position: 'left',
           label: 'Knowledge Base',
-        },
-        {
-          href: 'https://github.com/NFDI4Chem/knowledge_base',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
@@ -57,6 +52,10 @@ module.exports = {
             {
               label: 'NFDI4Chem Website',
               to: 'https://nfdi4chem.de',
+            },
+            {
+              label: 'NFDI4Chem Helpdesk',
+              to: 'https://nfdi4chem.de/index.php/helpdesk/'
             },
             {
               label: 'GitHub',
