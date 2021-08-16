@@ -4,30 +4,38 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'How to edit this section of front page',
+    title: 'Role',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Navigate to this page via src components HomepageFeatures.js 
+        Enter via your role 
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'User profiles',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Enter via your chemical domain
       </>
     ),
   },
   {
-    title: 'Change colours',
+    title: 'Problems',
+    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        Enter via presented problems
+      </>
+    ),
+  },
+  {
+    title: 'Topics & Concepts',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Navigate to css custom.css
+        Go directly to topics and concepts
       </>
     ),
   },
