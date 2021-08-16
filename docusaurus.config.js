@@ -60,6 +60,16 @@ module.exports = {
             },
           ],
         },
+        {
+          title: ' ',
+          items: [
+            {
+              label: 'About',
+              to: 'about',
+            },
+          
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.`,
     },
