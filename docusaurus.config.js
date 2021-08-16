@@ -60,6 +60,23 @@ module.exports = {
             },
           ],
         },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'NFDI4Chem Website',
+              to: 'https://nfdi4chem.de',
+            },
+            {
+              label: 'NFDI4Chem Helpdesk',
+              to: 'https://nfdi4chem.de/index.php/helpdesk/'
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/NFDI4Chem/knowledge_base',
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.`,
     },
