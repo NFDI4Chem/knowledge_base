@@ -1,43 +1,42 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
 
-const FeatureList = [
+const features = [
   {
-    title: 'Role',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Enter via your role 
-      </>
-    ),
+    imageUrl: 'img/chemeln.jpg',
+    title: 'Chemotion ELN',
+    mainLink: 'http://eln.chemotion.net',
   },
+
   {
-    title: 'User profiles',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Enter via your chemical domain
-      </>
-    ),
+    imageUrl: 'img/chemrepo.png',
+    title: 'Repository',
+    mainLink: 'https://www.chemotion-repository.net/welcome',
+    btnText: 'Enter',
   },
+
   {
-    title: 'Problems',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Enter via presented problems
-      </>
-    ),
+    imageUrl: 'img/chemeln.jpg',
+    title: 'SciMotion ELN',
+    mainLink: 'http://eln.chemotion.net',
   },
+
   {
-    title: 'Topics & Concepts',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Go directly to topics and concepts
-      </>
-    ),
+    imageUrl: 'img/spectraviewer.png',
+    title: 'ChemSpectra',
+    mainLink: 'http://eln.chemotion.net/chemspectra-editor',
+    mainTitle: ' Try our ChemSpectra'
+  },
+
+  {
+    imageUrl: 'img/chemscanner.png',
+    title: 'ChemScanner',
+    mainLink: 'http://eln.chemotion.net/chemscanner',
   },
 ];
 
