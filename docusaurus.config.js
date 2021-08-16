@@ -64,8 +64,8 @@ module.exports = {
           title: 'Funding',
           items: [
             {
-              label: 'NFDI4Chem Website',
-              to: 'https://nfdi4chem.de',
+              imageUrl: 'img/dfg_logo_schriftzug_blau_foerderung_en-768x249.jpg',
+              title: 'Funded by DFG',
             },
           ],
         },
