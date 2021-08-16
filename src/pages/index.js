@@ -35,6 +35,11 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
+      <div className="row" style={{marginLeft: "5px", height:"50%"}}>
+        <Link to='https://www.dfg.de/' className={clsx('col col--3 margin-top--sm margin-bottom--sm')}>
+          <img className={styles.fundImg} src={'img/dfg_logo_schriftzug_blau_foerderung_en-768x249.png'} alt="DFG Logo"/>
+        </Link>
+      </div>
     </Layout>
   );
 }
