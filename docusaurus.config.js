@@ -60,15 +60,6 @@ module.exports = {
             },
           ],
         },
-        {
-          title: 'Funding',
-          items: [
-            {
-              imageUrl: 'img/dfg_logo_schriftzug_blau_foerderung_en-768x249.jpg',
-              title: 'Funded by DFG',
-            },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.`,
     },
