@@ -7,13 +7,13 @@ const FeatureList = [
   {
     title: 'Role',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    //link: '/docs/Role/Research%20group%20leader',
+    link: '/docs/Role/Guide',
     description: <>Enter via your role</>,
   },
   {
     title: 'User profiles',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    //link: '/docs/User%20profiles/Organic%20chemistry',
+    link: '/docs/User%20profiles/Guide',
     description: <>Enter via your chemical domain</>,
   },
   {
