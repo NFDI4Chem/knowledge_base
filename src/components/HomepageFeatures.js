@@ -11,7 +11,7 @@ const FeatureList = [
     description: <>Enter via your role</>,
   },
   {
-    title: 'User profiles',
+    title: 'User Profiles',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     link: '/docs/User%20profiles/Guide',
     description: <>Enter via your chemical domain</>,
