@@ -50,9 +50,4 @@ jobs:
           else
             npm i
           fi
-          npm run build
-      - name: push to gh-pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: .
+          npm run deploy
