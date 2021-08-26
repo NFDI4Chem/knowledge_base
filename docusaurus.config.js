@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
+  trailingSlash: 'true',
   themeConfig: {
     navbar: {
       title: 'Home',
