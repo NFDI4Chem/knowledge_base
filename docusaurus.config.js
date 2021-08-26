@@ -2,12 +2,12 @@
 module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in general & in Chemistry - whether you are a novice or an expert - we have the answers to your questions',
-  url: 'https://github.com/JohnJolliffe-JGU/knowledge_base',
+  url: 'https://github.com/NFDI4Chem/knowledge_base',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'JohnJolliffe-JGU', // Usually your GitHub org/user name.
+  organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
   themeConfig: {
     navbar: {
