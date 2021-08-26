@@ -2,13 +2,14 @@
 module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in general & in Chemistry - whether you are a novice or an expert - we have the answers to your questions',
-  url: 'knowledge_base',
-  baseUrl: 'https://jliermann.github.io/',
+  url: '/knowledge_base',
+  baseUrl: 'https://jliermann.github.io',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
+  trailingSlash: 'true',
   themeConfig: {
     navbar: {
       title: 'Home',
