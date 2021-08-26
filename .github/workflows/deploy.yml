@@ -39,7 +39,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
-          GIT_USER: git
+          GIT_USER: jliermann
         run: |
           git config --global user.email "liermann@uni-mainz.de"
           git config --global user.name "Johannes Liermann"
