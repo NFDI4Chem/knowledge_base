@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in general & in Chemistry - whether you are a novice or an expert - we have the answers to your questions',
   url: 'https://nfdi4chem.chemie.uni-mainz.de/',
   baseUrl: '/knowledge_base/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'pass',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
