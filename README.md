@@ -6,7 +6,7 @@ This repo is the core of the NFDI4Chem knowledge base.
 
 Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
 
-## Standards
+## Conventions
 
 - Use british english
 - headings with: # (primary), ## (secondary), ### (tertiary etc)
