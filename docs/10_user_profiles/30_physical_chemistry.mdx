@@ -20,7 +20,7 @@ Here, it is common practice to perform the same measurement with different param
 This is followed by a more or less sophisticated and time-consuming analysis of the measurement, although in many cases it is only by combining several different measurement methods and interpreting the individual results in the context of other experiments that the desired information can be obtained and well-founded scientific statements can be derived.
 
 ## Documentation of experiments:
-- [Documentation of research data](/docs/Problems/Data%20Documentation) and [metadata](/docs/Topics%20and%20Concepts/Metadata) is carried out digitally using an ELN.
+- [Documentation of research data](/docs/problems/data_documentation) and [metadata](/docs/topics/metadata) is carried out digitally using an ELN.
 - Experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. temperature) are noted in the ELN.
 - Observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment.
 - Obtained unprocessed raw files from measurements are uploaded to the Chemotion ELN in open file formats and attached directly to the respective ELN experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters.
@@ -29,7 +29,7 @@ This is followed by a more or less sophisticated and time-consuming analysis of 
 ## Data producing methods:
 - Data can be collected during the experiment or after the measurement by analysing the obtained (raw) data.
 - In the field of physical chemistry, data are mainly (in the field of theoretical chemistry even exclusively) created digitally. Digital data are usually obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in [proprietary file formats](/docs/Topics%20and%20Concepts/Data%20format%20standards) should be saved alongside interoperable [open file formats](/docs/Topics%20and%20Concepts/Data%20format%20standards) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+- Raw data files in [proprietary file formats](/docs/topics/format_standards) should be saved alongside interoperable [open file formats](/docs/topics/format_standards) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
 
 |Analytical method|Exemplary proprietary file extensions|Typical size of propietary file|Converter to open file format|Recommendation for open file extension*|File size of open format|
 |:------------|:-----------------|:--------|:--------|:------------|:--------------|
@@ -55,12 +55,12 @@ This is followed by a more or less sophisticated and time-consuming analysis of 
 ** *This table will be continuously updated with new recommendations on interoperable open file formats.**
 
 ## Data analysis:
-- Research data are processed, [analysed](/docs/Problems/Data%20analysis) and compared (also to data of other experiments) within the Chemotion ELN, when possible.
+- Research data are processed, [analysed](/docs/problems/data_analysis) and compared (also to data of other experiments) within the Chemotion ELN, when possible.
 - Otherwise, (pre)processing and analysing of obtained digital data with software of analytical device before data are transferred to the Chemotion ELN (cf. data producing methods).
 - A detailed view, evaluation and comprehensible interpretation of results is carried out with the Chemotion ELN features or other open non-proprietary software tools.
 
 ## Publication of research data:
-- In addition to a research article in a scientific journal, the underlying research data are published in a repository and linked to the article to realise research data management according to the [FAIR data principles](/docs/Topics%20and%20Concepts/FAIR%20data%20principles) ([Best practice examples](/docs/Topics%20and%20Concepts/Best%20practice)).
+- In addition to a research article in a scientific journal, the underlying research data are published in a repository and linked to the article to realise research data management according to the [FAIR data principles](/docs/topics/fair) ([Best practice examples](/docs/topics/best_practice)).
 - Publishing data to a repository includes semantically richly annotated raw and processed data in open data formats for reuse.
 - The use of the Chemotion ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/). For the publication of research data in other discipline-specific repositories, such as the [CCDC](https://www.ccdc.cam.ac.uk/) for crystallographic data, data have to be exported from the Chemotion ELN and uploaded into the respective database.
-- A [persistent identifier](/docs/Topics%20and%20Concepts/PID) (e.g. DOI) is generated for a dataset by a repository (via [DataCite](https://datacite.org/) for the Chemotion Repository), which is given in the journal publication or corresponding supporting information to link the data publication with the manuscript.
+- A [persistent identifier](/docs/topics/pid) (e.g. DOI) is generated for a dataset by a repository (via [DataCite](https://datacite.org/) for the Chemotion Repository), which is given in the journal publication or corresponding supporting information to link the data publication with the manuscript.
