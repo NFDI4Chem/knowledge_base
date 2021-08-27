@@ -7,25 +7,25 @@ const FeatureList = [
   {
     title: 'Role',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    link: '/docs/Role/Guide',
+    link: '/docs/role/guide',
     description: <>Enter via your role</>,
   },
   {
     title: 'User Profiles',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    link: '/docs/User%20profiles/Guide',
+    link: '/docs/user_profiles/guide',
     description: <>Enter via your chemical domain</>,
   },
   {
     title: 'Problems',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    link: '/docs/Problems/Data%20Management%20Plan',
+    link: '/docs/problems/dmp',
     description: <>Enter via presented problems</>,
   },
   {
     title: 'Topics & Concepts',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    link: '/docs/Topics%20and%20Concepts/ELN',
+    link: '/docs/topics/fair',
     description: <>Go directly to topics and concepts</>,
   },
 ];
