@@ -4,7 +4,13 @@ This repo is the core of the NFDI4Chem knowledge base.
 
 ## How to contribute
 
-Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, contact helpdesk@nfdi4chem.de.
+Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
+
+## Standards
+
+- Use british english
+- headings with: # (primary), ## (secondary), ### (tertiary etc)
+- Citations: only cite doi and add link to doi
 
 # Website
 
