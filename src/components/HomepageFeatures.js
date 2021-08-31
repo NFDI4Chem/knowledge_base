@@ -13,7 +13,7 @@ const FeatureList = [
   {
     title: 'User Profiles',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    link: '/docs/domain/guide',
+    link: '/docs/domains/guide',
     description: <>Enter via your chemical domain</>,
   },
   {
