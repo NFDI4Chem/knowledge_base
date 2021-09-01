@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Role',
+    title: 'Roles',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     link: '/docs/role/guide',
     description: <>Enter via your role</>,
