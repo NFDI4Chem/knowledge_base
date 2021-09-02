@@ -68,6 +68,14 @@ module.exports = {
               label: 'About',
               to: 'about',
             },
+            {
+              label: 'Legal Notice',
+              to: 'https://www.uni-mainz.de/eng/102.php'
+            },
+            {
+              label: 'Privacy',
+              to: 'https://www.uni-mainz.de/eng/144.php'
+            }
           
           ],
         },
