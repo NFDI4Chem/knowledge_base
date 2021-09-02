@@ -49,11 +49,11 @@ module.exports = {
           items: [
             {
               label: 'NFDI4Chem Website',
-              to: 'https://nfdi4chem.de',
+              href: 'https://nfdi4chem.de',
             },
             {
               label: 'NFDI4Chem Helpdesk',
-              to: 'https://nfdi4chem.de/index.php/helpdesk/'
+              href: 'https://nfdi4chem.de/index.php/helpdesk/'
             },
             {
               label: 'GitHub',
@@ -70,11 +70,11 @@ module.exports = {
             },
             {
               label: 'Legal Notice',
-              to: 'https://www.uni-mainz.de/eng/102.php'
+              href: 'https://www.uni-mainz.de/eng/102.php'
             },
             {
               label: 'Privacy',
-              to: 'https://www.uni-mainz.de/eng/144.php'
+              href: 'https://www.uni-mainz.de/eng/144.php'
             }
           
           ],
