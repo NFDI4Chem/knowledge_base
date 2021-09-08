@@ -6,6 +6,9 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --ifm-color-primary: #009cbc;
   --ifm-color-primary-dark: #008ca9;
@@ -15,6 +18,7 @@
   --ifm-color-primary-lighter: #00b3d8;
   --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'IBM Plex Sans', sans-serif
 }
 
 .docusaurus-highlight-code-line {
