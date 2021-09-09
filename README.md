@@ -2,7 +2,7 @@
 
 This repo is the core of the NFDI4Chem knowledge base.
 
-![Deploy badge](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![kb-deploy](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml)
 
 ## How to contribute
 
