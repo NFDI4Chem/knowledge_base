@@ -33,7 +33,7 @@ module.exports = {
           items: [
             {
               html: `
-              <a href="https://www.dfg.de" target="_blank"><img src="img/dfg_logo_schriftzug_weiss_foerderung_en.gif" /></a>` 
+              <a href="https://www.dfg.de" target="_blank"><img src="/knowledge_base/img/dfg_logo_schriftzug_weiss_foerderung_en.gif" /></a>` 
             }
           ]
         },     
