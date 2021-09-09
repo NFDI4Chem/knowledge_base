@@ -22,4 +22,4 @@ yarn-error.log*
 package-lock.json
 
 # Deploy action
-.github/deploy.yml
+deploy.yml
