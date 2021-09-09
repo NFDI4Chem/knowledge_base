@@ -2,9 +2,9 @@ name: kb-deploy
 
 on:
   pull_request:
-    branches: [NFDI4Chem:main]
+    branches: [main]
   push:
-    branches: [NFDI4Chem:main]
+    branches: [main]
 
 jobs:
   checks:

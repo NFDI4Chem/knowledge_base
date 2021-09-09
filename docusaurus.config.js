@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'NFDI4Chem Knowledge Base',
-  tagline: 'A place for all knowledge regarding Research Data Management (RDM) in general & in Chemistry - whether you are a novice or an expert - we have the answers to your questions',
+  tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
   url: 'https://nfdi4chem.chemie.uni-mainz.de/',
   baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
@@ -29,7 +29,14 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        
+        {
+          items: [
+            {
+              html: `
+              <a href="https://www.dfg.de" target="_blank"><img src="img/dfg_logo_schriftzug_weiss_foerderung_en.gif" /></a>` 
+            }
+          ]
+        },     
         {
           title: 'Community',
           items: [
