@@ -6,47 +6,46 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Roles',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('../../static/img/role.svg').default,
     link: '/docs/role/guide',
-    description: <>Enter via your role</>,
+    description: <>Your Role</>,
   },
   {
     title: 'Domains',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('../../static/img/domain.svg').default,
     link: '/docs/domains/guide',
-    description: <>Enter via your chemical domain</>,
+    description: <>Your Chemical Domain</>,
   },
   {
     title: 'Problems',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('../../static/img/problem.svg').default,
     link: '/docs/problems/dmp',
-    description: <>Enter via presented problems</>,
+    description: <>Your Problems</>,
   },
   {
     title: 'Topics & Concepts',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('../../static/img/topics.svg').default,
     link: '/docs/topics/fair',
-    description: <>Go directly to topics and concepts</>,
+    description: <>Topics & Concepts</>,
   },
 ];
 
 function Feature({ Svg, title, link, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <div className='text--center'>
         <Svg className={styles.featureSvg} alt={title} />
       </div>
       <div className='text--center padding-horiz--md'>
-        <h3>{title}</h3>
         {link ? (
           <Link
             className={clsx('button button--primary button--lg')}
             // ? <Link className={clsx('')}
             to={link}>
-            {description}
+            {title}
           </Link>
         ) : (
-          <p>{description}</p>
+          <p>{title}</p>
         )}
       </div>
     </div>
