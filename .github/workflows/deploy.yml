@@ -8,6 +8,7 @@ on:
 
 jobs:
   checks:
+    if: github.repository == 'NFDI4Chem/knowledge_base'
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +27,7 @@ jobs:
           fi
           npm run build
   gh-release:
+    if: github.repository == 'NFDI4Chem/knowledge_base'
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
