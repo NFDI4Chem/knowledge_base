@@ -18,7 +18,9 @@
   --ifm-color-primary-lighter: #00b3d8;
   --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'IBM Plex Sans', sans-serif
+  --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
+  --ifm-heading-color: #009cbc
+
 }
 
 .docusaurus-highlight-code-line {
@@ -30,4 +32,16 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero--n4c {
+  --ifm-hero-background-color: #ffffff;
+  --ifm-hero-text-color: #EE730C;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #4E4D4D;
+  --ifm-footer-color: var(--ifm-footer-link-color);
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
 }
