@@ -2,6 +2,8 @@
 
 This repo is the core of the NFDI4Chem knowledge base.
 
+![Deploy badge](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?fork=origin)
+
 ## How to contribute
 
 Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
