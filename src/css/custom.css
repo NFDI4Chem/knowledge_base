@@ -19,8 +19,28 @@
   --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
-  --ifm-heading-color: #009cbc
-
+  --ifm-heading-color: #009cbc;
+  --ifm-color-danger: #EE730C;
+  --ifm-color-danger-dark: #d6680b;
+  --ifm-color-danger-darker: #ca620a;
+  --ifm-color-danger-darkest: #a75108;
+  --ifm-color-danger-light: #f4801f;
+  --ifm-color-danger-lighter: #f4872b	;
+  --ifm-color-danger-lightest: #f69b4f;
+  --ifm-color-success-lightest:	#a7a7a7;	
+  --ifm-color-success-lighter:	#939494;	
+  --ifm-color-success-light:	#8d8e8e;
+  --ifm-color-success:	#808181;
+  --ifm-color-success-dark:	#737474;
+  --ifm-color-success-darker:	#6d6e6e;
+  --ifm-color-success-darkest:	#5a5a5a;
+  --ifm-color-caution: #f1de1d;
+  --ifm-color-caution-dark: #e5d20e;
+  --ifm-color-caution-darker: #d8c60d;
+  --ifm-color-caution-darkest: #b2a30b;
+  --ifm-color-caution-light: #f3e236;
+  --ifm-color-caution-lighter: #f3e443;
+  --ifm-color-caution-lightest: #f6e969;
 }
 
 .docusaurus-highlight-code-line {
@@ -44,4 +64,45 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   --ifm-footer-color: var(--ifm-footer-link-color);
   --ifm-footer-link-color: var(--ifm-color-secondary);
   --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+.alert {
+  --ifm-code-background: var(--ifm-alert-background-color-highlight);
+  --ifm-alert-background-color: #white;
+  --ifm-link-color: var(--ifm-alert-foreground-color);
+  --ifm-link-hover-color: var(--ifm-alert-foreground-color);
+  --ifm-link-decoration: underline;
+  --ifm-tabs-color: var(--ifm-alert-foreground-color);
+  --ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+  --ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+  background-color: var(--ifm-alert-background-color);
+  border-color: var(--ifm-alert-border-color);
+  border-style: solid;
+  border-width: var(--ifm-alert-border-width);
+  border-left-width: var(--ifm-alert-border-left-width);
+  border-radius: var(--ifm-alert-border-radius);
+  box-shadow: var(--ifm-alert-shadow);
+  color: var(--ifm-alert-foreground-color);
+  padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+
+.alert--danger {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(250, 56, 62, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-color-danger-contrast-foreground );
+  --ifm-alert-border-color: var(--ifm-color-danger);
+}
+
+.alert--success {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(0, 164, 0, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-color-success-contrast-foreground );
+  --ifm-alert-border-color: var(--ifm-color-success-dark);
+}
+
+.alert--warning {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-color-warning-contrast-foreground );
+  --ifm-alert-border-color: var(--ifm-color-warning);
 }
