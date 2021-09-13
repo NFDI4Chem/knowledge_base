@@ -89,20 +89,20 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .alert--danger {
   --ifm-alert-background-color: #white;
   --ifm-alert-background-color-highlight: rgba(250, 56, 62, 0.15);
-  --ifm-alert-foreground-color: var( --ifm-color-danger-contrast-foreground );
+  --ifm-alert-foreground-color: var( --ifm-text-color );
   --ifm-alert-border-color: var(--ifm-color-danger);
 }
 
 .alert--success {
   --ifm-alert-background-color: #white;
   --ifm-alert-background-color-highlight: rgba(0, 164, 0, 0.15);
-  --ifm-alert-foreground-color: var( --ifm-color-success-contrast-foreground );
+  --ifm-alert-foreground-color: var( --ifm-text-color );
   --ifm-alert-border-color: var(--ifm-color-success-dark);
 }
 
 .alert--warning {
   --ifm-alert-background-color: #white;
   --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
-  --ifm-alert-foreground-color: var( --ifm-color-warning-contrast-foreground );
+  --ifm-alert-foreground-color: var( --ifm-text-color );
   --ifm-alert-border-color: var(--ifm-color-warning);
 }
