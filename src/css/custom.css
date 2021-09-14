@@ -41,6 +41,7 @@
   --ifm-color-caution-light: #f3e236;
   --ifm-color-caution-lighter: #f3e443;
   --ifm-color-caution-lightest: #f6e969;
+  --ifm-global-shadow-lw: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .docusaurus-highlight-code-line {
