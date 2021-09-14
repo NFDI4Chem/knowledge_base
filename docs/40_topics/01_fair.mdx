@@ -9,11 +9,11 @@ author: "Nicole A. Parks"
 
 The FAIR Data Principles were [published](https://doi.org/10.1038/sdata.2016.18) after being defined at the [Lorentz Workshop](https://www.lorentzcenter.nl/) in 2014. These principles serve as guidelines to both those who publish data, e.g. researchers, as well as those who preserve data, e.g. repository or archive service providers. This is an important distinction, highlighting that a researcher's data can only be as FAIR as the infrastructure and services available to them.
 
-Keeping in mind the long term goal of making scientific data reusable to others by creating systematic order in the ever-growing mound of data arising from research, the FAIR Data Principles place a strong focus on machine readable (meta)data. While humans must be able to find and understand the published datasets as well, computers will be tasked with sifting through large amounts of data and determining what datasets are relevant to the intended purpose and how they can be reused.
+Keeping in mind the long-term goal of making scientific data reusable to others by creating systematic order in the ever-growing mound of data arising from research, the FAIR Data Principles place a strong focus on machine-readable (meta)data. While humans must be able to find and understand the published datasets as well, computers will be tasked with sifting through large amounts of data and determining what datasets are relevant to the intended purpose and how they can be reused.
 
-To this end, not only is it important that humans are able to understand and find the data, but, more importantly, machines need to be able to search through available datasets and determine which ones are of use for the intended purpose.
+To this end, not only is it important that humans are able to understand and find the data but, more importantly, machines need to be able to search through available datasets and determine which ones are of use for the intended purpose.
 
-In chemistry, reusing well-curated data on the one hand makes researchers' tasks easier, enabling them to build upon previous research. Furthermore, data reuse has the potential for large stores of data to be mind for machine-learning applications. For example, large amounts of synthesis data could lead to the virtual development of new synthesis methods or the discovery of new compounds.
+In chemistry, reusing well-curated data, on the one hand, makes researchers' tasks easier, enabling them to build upon previous research. Furthermore, data reuse has the potential for large stores of data to be mind for machine-learning applications. For example, large amounts of synthesis data could lead to the virtual development of new synthesis methods or the discovery of new compounds.
 
 The deposition of crystallographic data in a standardized file format (CIF) into a repository such as the [Cambridge Crystallographic Data Centre](https://www.ccdc.cam.ac.uk/), required by many leading journals in the chemical community, is the primary example of the FAIR Data Principles in action. To broaden the scope of such standards, NFDI4Chem is working towards creating an infrastructure for FAIR data in Germany while training researchers in using the available infrastructure to ensure their data is as FAIR as can be.
 
@@ -21,15 +21,15 @@ In the following, we answer the questions: What makes data FAIR? What do researc
 
 ## Findable
 
-Researcher – and the computers working on their behalf – must be able to find datasets to be able to reuse them. Therefore, the first guideline of the FAIR Data Principles outlines methods to ensure a dataset's discovery.
+Researchers – and the computers working on their behalf – must be able to find datasets to be able to reuse them. Therefore, the first guideline of the FAIR Data Principles outlines methods to ensure a dataset's discovery.
 
 ### F1. (meta)data are assigned a globally unique and persistent identifier
 
-A globally unique and persistent identifier (PID) helps both machines and humans find the data in the first place. The registry services that make these identifiers available work to maintain the link to the resource they are associated with, in this case a dataset. A common example is the Digital Object Identifer, or [DOI](https://doi.org/10.1000/182). This type of identifier ensures the object it refers to, such as a dataset or a journal publication, are not only findable but also citable. As with many journals, scientific data repositories oftentimes assign a DOI automatically. The Registry of Research Data Repositories, [re3data](https://www.re3data.org/), indicates whether a given repository assigns an identifier, along with the PID type. For example, both the [The Cambridge Structural Database (CSD)](https://www.ccdc.cam.ac.uk/solutions/csd-system/components/csd/) and the [Chemotion Repository](https://www.chemotion-repository.net/) assign DOIs to each dataset deposited. Researchers must be aware of this option when searching for a suitable repository, while repositories should offer this service.
+A globally unique and persistent identifier (PID) helps both machines and humans find the data in the first place. The registry services that make these identifiers available work to maintain the link to the resource they are associated with, in this case, a dataset. A common example is the Digital Object Identifier, or [DOI](https://doi.org/10.1000/182). This type of identifier ensures the object it refers to, such as a dataset or a journal publication, are not only findable but also citable. As with many journals, scientific data repositories oftentimes assign a DOI automatically. The Registry of Research Data Repositories, [re3data](https://www.re3data.org/), indicates whether a given repository assigns an identifier, along with the PID type. For example, both the [The Cambridge Structural Database (CSD)](https://www.ccdc.cam.ac.uk/solutions/csd-system/components/csd/) and the [Chemotion Repository](https://www.chemotion-repository.net/) assign DOIs to each dataset deposited. Researchers must be aware of this option when searching for a suitable repository, while repositories should offer this service.
 
 ### F2. data are described with rich metadata (defined by R1 below)
 
-The focus here lies on making the (meta)data findable and allowing computers and humans to quickly understand what the dataset contains. Therefore, rich discovery metadata in a standardized format is an essential component in the plurality of metadata described by R1 below. This information may include, but is not limited to:
+The focus here lies on making the (meta)data findable and allowing computers and humans to quickly understand the dataset's contents. Therefore, rich discovery metadata in a standardized format is an essential component in the plurality of metadata described by R1 below. This information may include, but is not limited to:
 
 - the context on what the dataset is, how it was generated, and how it can be interpreted,
 - the data quality,
@@ -41,17 +41,17 @@ Repositories should provide researchers with a fillable application profile that
 
 ### F3. metadata clearly and explicitly include the identifier of the data it describes
 
-As F1 stipulated that the (meta)data must be assigned an identifier, F3 underlines the importance of including this identifer in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifer in the metadata directly links the information to the associated dataset.
-Furthermore, the dataset may not be published alongside the metadata. For example, in the case of unpublished archived datasets, the PID can lead to method to contact those responsible for the data instead of to the data itself.
+As F1 stipulated that the (meta)data must be assigned an identifier, F3 underlines the importance of including this identifier in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifier in the metadata directly links the information to the associated dataset.
+Furthermore, the dataset may not be published alongside the metadata. For example, in the case of unpublished archived datasets, the PID can lead to a method to contact those responsible for the data instead of to the dataset itself.
 Researchers must be aware of this importance, while repositories, as described in F2 above, should ensure that the PID is a required property of the metadata.
 
 ### F4. (meta)data are registered or indexed in a searchable resource
 
-Metadata are used to set up indices, enabling machines to efficiently search and and find data. For this process to work successfully, metadata must be complete as outlined above. Repositories should ensure the metadata entered for a deposited dataset is available in an XML format to facilitate the assignment of indices.
+Metadata are used to set up indices, enabling machines to efficiently search for and find datasets. For this process to work successfully, metadata must be complete as outlined above. Repositories should ensure the metadata entered for a deposited dataset is available in an XML format to facilitate the assignment of indices.
 
 ## Accessible
 
-Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equal open, as outlined below.
+Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equate to open, as outlined below.
 
 ### A1. (meta)data are retrievable by their identifier using a standardized communications protocol
 
@@ -59,11 +59,11 @@ To guarantee access to data sets, use identifiers such as DOIs that are resolved
 
 #### A1.1 the protocol is open, free, and universally implementable
 
-Repositories should only use protocols that allow any computer to access at least the metadata. This means the protocols used should not only be standardized as stated in A1, but also free and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
+Repositories should only use protocols that allow any computer to access at least the metadata. Not only does this refer to standard communication protocols, as stated in A1, they must also be free and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
 
 #### A1.2 the protocol allows for an authentication and authorization procedure, where necessary
 
-Where necessary, machine-readable protocols that let the user know that action needs to be taken (such as a login) to access to data. FAIR data and open data are not synonymous: FAIR data requires that it must be clearly stated how the data can be accessed, as opposed to granting anyone and everyone ful access. This can be especially important for sensitive data, where, for example, personal data and/or medical information may be disclosed. Hence, repositories should also provide a way for users (and their computers) to identify themselves, enabling access permission to be granted.
+Where necessary, machine-readable protocols that let the user know that action needs to be taken (such as a login) to access data. FAIR data and open data are not synonymous: FAIR data requires that it must be clearly stated how the data can be accessed, as opposed to granting anyone and everyone full access. This can be especially important for sensitive data, where, for example, personal data and/or medical information may be disclosed. Hence, repositories should also provide a way for users (and their computers) to identify themselves, enabling access permission to be granted.
 
 ### A2. metadata are accessible, even when the data are no longer available
 
@@ -71,18 +71,18 @@ Storing metadata is cheaper and simpler than storing and maintaining full datase
 
 ## Interoperable
 
-Data need to integrated with and/or compared to other datasets, while computers must be able to interpret and exchange the information. Ideally, they are compatible with standard applications and can thus be integrated into (automated) processing and analysis workflows.
+Data need to be integrated with and/or compared to other datasets, while computers must be able to interpret and exchange the information. Ideally, they are compatible with standard applications and can thus be integrated into (automated) processing and analysis workflows.
 
 ### I1. (meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation
 
 Machines need to be able to understand how to exchange and interpret information. Similar to humans, a uniform and standard language aids in this understanding. In chemistry, a great typical example of such an information exchange standard is the [crystallographic information (CIF)](https://doi.org/10.1107/97809553602060000107). This standard also adheres to the aspects described in I2 and R1.3 below.
 
-Especially when looking at metadata, effective and efficient machine readability greatly depends on being able to reduce ambiguity. Metadata provides context to datasets, however, machines need to be able to interpret this context. Therefore, the structured schemas chosen by the repositories should include universally applied [ontologies](https://terminology.nfdi4chem.de/ts/ontologies) and controlled vocabularies to define relationships and avoid ambiguity. For example, chemistry-specific repositories should be designed to include ontologies such as the [Chemical Methods Ontology (CHMO)](http://purl.obolibrary.org/obo/chmo.owl). Specifically, a drop-down menu in a given metadata field would include terms defined here regarding chemical methods. This negates spelling errors, synonyms, etc. when entering metadata. Such ontologies should be based on widely-applied data models, for instance, the
+Especially when looking at metadata, effective and efficient machine readability greatly depends on being able to reduce ambiguity. Metadata provides context to datasets. However, machines need to be able to interpret this context. Therefore, the structured schemas chosen by the repositories should include universally applied [ontologies](https://terminology.nfdi4chem.de/ts/ontologies) and controlled vocabularies to define relationships and avoid ambiguity. For example, chemistry-specific repositories should be designed to include ontologies such as the [Chemical Methods Ontology (CHMO)](http://purl.obolibrary.org/obo/chmo.owl). Specifically, a drop-down menu in a given metadata field would include terms defined here regarding chemical methods. This negates spelling errors, synonyms, and so on when entering metadata. Such ontologies should be based on widely-applied data models, for instance, the
 [Resource Description Framework (RDF)](https://www.w3.org/RDF/).
 
 ### I2. (meta)data use vocabularies that follow FAIR principles
 
-The applied vocabularies or ontologies should be well documented and resolvable using a PID. For instance CHMO above uses a [persistent URL (PURL)](http://www.purlz.org/home), resolvable using a standard web browser through http, while the [documentation](https://github.com/rsc-ontologies/rsc-cmo) is publicly available on Github.
+The applied vocabularies or ontologies should be well documented and resolvable using a PID. For instance, CHMO above uses a [persistent URL (PURL)](http://www.purlz.org/home), resolvable using a standard web browser through http, while the [documentation](https://github.com/rsc-ontologies/rsc-cmo) is publicly available on Github.
 
 ### I3. (meta)data include qualified references to other (meta)data
 
@@ -109,7 +109,7 @@ Repositories should provide data publishers with the opportunity to include a pl
 
 #### R1.1. (meta)data are released with a clear and accessible data usage license
 
-The metadata should include human and machine-readable use conditions, such as a license. [Creative Commons](https://creativecommons.org/) licenses are commonly used for scientific data and [re3data](https://www.re3data.org/) lists whether a repository allows researchers to directly select a license or a terms of use agreement when depositing data. At a minimum, repositories should allow researcher to add a license file.
+The metadata should include human and machine-readable use conditions, such as a license. [Creative Commons](https://creativecommons.org/) licenses are commonly used for scientific data. [re3data](https://www.re3data.org/) lists whether a repository allows researchers to directly select a license or terms of use agreement when depositing data. At a minimum, repositories should allow researchers to add a license file.
 
 #### R1.2. (meta)data are associated with detailed provenance
 
@@ -118,5 +118,6 @@ In simple terms: metadata include any relevant history. If the dataset is relate
 #### R1.3. (meta)data meet domain-relevant community standards
 
 As research data management and, as such, data publication becomes more and more prevalent across research areas, best practices in the individual communities will arise. This should encompass metadata templates for proper documentation of datasets, how the data should be organized, which vocabularies to use, and file types. NFDI4chem is working to establish minimum chemical information standards (MiChI). Where available, community standards and best practices should be followed when publishers prepare their datasets and relevant metadata for publication. Repositories, especially domain-specific service providers, should adhere to the standards set forth by the community by requiring files and metadata to follow format specifications.
-As noted in I1 above, the CIF format represents a community-specific standard associated with the chemical community. Furthermore, [NMReDATA](https://doi.org/10.1002/mrc.4737) represent a possible standard file format for publishing and archiving NMR data.
+As noted in I1 above, the CIF format represents a community-specific standard associated with the chemical community. Furthermore, [NMReDATA](https://doi.org/10.1002/mrc.4737) represents a possible standard file format for publishing and archiving NMR data.
+
 Where required, format converters should be linked in the dataset's metadata.
