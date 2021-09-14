@@ -6,15 +6,42 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 :root {
-  --ifm-color-primary: #2569c2;
-  --ifm-color-primary-dark: rgb(33, 90, 175);
-  --ifm-color-primary-darker: rgb(44, 31, 165);
-  --ifm-color-primary-darkest: rgb(37, 66, 119);
-  --ifm-color-primary-light: rgb(79, 144, 218);
-  --ifm-color-primary-lighter: rgb(132, 194, 235);
-  --ifm-color-primary-lightest: rgb(193, 223, 252);
+  --ifm-color-primary: #009cbc;
+  --ifm-color-primary-dark: #008ca9;
+  --ifm-color-primary-darker: #0085a0;
+  --ifm-color-primary-darkest: #006d84;
+  --ifm-color-primary-light: #00accf;
+  --ifm-color-primary-lighter: #00b3d8;
+  --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
+  --ifm-heading-color: #009cbc;
+  --ifm-color-danger: #EE730C;
+  --ifm-color-danger-dark: #d6680b;
+  --ifm-color-danger-darker: #ca620a;
+  --ifm-color-danger-darkest: #a75108;
+  --ifm-color-danger-light: #f4801f;
+  --ifm-color-danger-lighter: #f4872b	;
+  --ifm-color-danger-lightest: #f69b4f;
+  --ifm-color-success-lightest:	#a7a7a7;	
+  --ifm-color-success-lighter:	#939494;	
+  --ifm-color-success-light:	#8d8e8e;
+  --ifm-color-success:	#808181;
+  --ifm-color-success-dark:	#737474;
+  --ifm-color-success-darker:	#6d6e6e;
+  --ifm-color-success-darkest:	#5a5a5a;
+  --ifm-color-caution: #f1de1d;
+  --ifm-color-caution-dark: #e5d20e;
+  --ifm-color-caution-darker: #d8c60d;
+  --ifm-color-caution-darkest: #b2a30b;
+  --ifm-color-caution-light: #f3e236;
+  --ifm-color-caution-lighter: #f3e443;
+  --ifm-color-caution-lightest: #f6e969;
+  --ifm-global-shadow-lw: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .docusaurus-highlight-code-line {
@@ -26,4 +53,57 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero--n4c {
+  --ifm-hero-background-color: #ffffff;
+  --ifm-hero-text-color: #EE730C;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #4E4D4D;
+  --ifm-footer-color: var(--ifm-footer-link-color);
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+.alert {
+  --ifm-code-background: var(--ifm-alert-background-color-highlight);
+  --ifm-alert-background-color: #white;
+  --ifm-link-color: var(--ifm-alert-foreground-color);
+  --ifm-link-hover-color: var(--ifm-alert-foreground-color);
+  --ifm-link-decoration: underline;
+  --ifm-tabs-color: var(--ifm-alert-foreground-color);
+  --ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+  --ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+  background-color: var(--ifm-alert-background-color);
+  border-color: var(--ifm-alert-border-color);
+  border-style: solid;
+  border-width: var(--ifm-alert-border-width);
+  border-left-width: var(--ifm-alert-border-left-width);
+  border-radius: var(--ifm-alert-border-radius);
+  box-shadow: var(--ifm-alert-shadow);
+  color: var(--ifm-alert-foreground-color);
+  padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+
+.alert--danger {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(250, 56, 62, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-text-color );
+  --ifm-alert-border-color: var(--ifm-color-danger);
+}
+
+.alert--success {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(0, 164, 0, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-text-color );
+  --ifm-alert-border-color: var(--ifm-color-success-dark);
+}
+
+.alert--warning {
+  --ifm-alert-background-color: #white;
+  --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
+  --ifm-alert-foreground-color: var( --ifm-text-color );
+  --ifm-alert-border-color: var(--ifm-color-warning);
 }
