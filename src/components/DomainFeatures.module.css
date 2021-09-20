@@ -1,0 +1,12 @@
+.features {
+  align-items: center;
+  padding: 2px;
+  width: 100%;
+}
+
+.featureSvg {
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
+}

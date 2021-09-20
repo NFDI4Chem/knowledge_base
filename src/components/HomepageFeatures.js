@@ -32,7 +32,10 @@ const FeatureList = [
 
 function Feature({ Svg, title, link, description }) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className='col-md' style={{
+      width: 300,
+      padding: 5,
+    }}>
       <div className='text--center'>
         <Svg className={styles.featureSvg} alt={title} />
       </div>

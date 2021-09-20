@@ -1,13 +1,15 @@
-/* stylelint-disable docusaurus/copyright-header */
-
 .features {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   align-items: center;
-  padding: 2rem 0;
+  padding: 10px;
   width: 100%;
 }
 
 .featureSvg {
-  height: 200px;
+  padding: 5px;
   width: 150px;
+  height: 150px;
+  margin-top: 5px;
 }
