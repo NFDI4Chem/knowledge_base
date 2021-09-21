@@ -44,16 +44,17 @@ const FeatureList = [
 function Feature({ Svg, title, link }) {
     return (
       <div className='col-sm' style={{
-        width: 300,
-        padding: 5,
+        width: 260,
+        padding: 8,
+        //backgroundColor: 'red',
       }}>
         <div className='text--center'>
-          <Svg className={styles.featureSvg} alt={title} />
+          <a href={link}><Svg className={styles.featureSvg} alt={title} /></a>
         </div>
-        <div className='text--center padding-horiz--md'>
+        <div className='text--center'>
           {link ? (
             <Link
-              className={clsx('button button--secondary button--lg')}
+              className={clsx('button button--secondary button--md')}
               // ? <Link className={clsx('')}
               to={link}>
               {title}

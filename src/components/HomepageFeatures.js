@@ -8,41 +8,37 @@ const FeatureList = [
     title: 'Roles',
     Svg: require('../../static/img/role.svg').default,
     link: '/docs/role/guide',
-    description: <>Your Role</>,
   },
   {
     title: 'Domains',
     Svg: require('../../static/img/domain.svg').default,
     link: '/docs/domains/guide',
-    description: <>Your Chemical Domain</>,
   },
   {
     title: 'Problems',
     Svg: require('../../static/img/problem.svg').default,
     link: '/docs/problems/dmp',
-    description: <>Your Problems</>,
   },
   {
     title: 'Topics & Concepts',
     Svg: require('../../static/img/topics.svg').default,
     link: '/docs/topics/fair',
-    description: <>Topics & Concepts</>,
   },
 ];
 
 function Feature({ Svg, title, link, description }) {
   return (
-    <div className='col-md' style={{
-      width: 300,
+    <div className={clsx('col col--3')} style={{
       padding: 5,
+      //backgroundColor: 'red',
     }}>
-      <div className='text--center'>
+    <div className='text--center'>
         <Svg className={styles.featureSvg} alt={title} />
       </div>
-      <div className='text--center padding-horiz--md'>
+      <div className='text--center'>
         {link ? (
           <Link
-            className={clsx('button button--primary button--lg')}
+            className={clsx('button button--secondary button--lg')}
             // ? <Link className={clsx('')}
             to={link}>
             {title}
