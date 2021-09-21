@@ -6,41 +6,41 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Roles',
-    Svg: require('../../static/img/role.svg').default,
+    Svg: require('../../static/img/role3.svg').default,
     link: '/docs/role/guide',
   },
   {
     title: 'Domains',
-    Svg: require('../../static/img/domain.svg').default,
+    Svg: require('../../static/img/domain3.svg').default,
     link: '/docs/domains/guide',
   },
   {
     title: 'Problems',
-    Svg: require('../../static/img/problem.svg').default,
+    Svg: require('../../static/img/problem3.svg').default,
     link: '/docs/problems/dmp',
   },
   {
     title: 'Topics & Concepts',
-    Svg: require('../../static/img/topics.svg').default,
+    Svg: require('../../static/img/topics3.svg').default,
     link: '/docs/topics/fair',
   },
 ];
 
 function Feature({ Svg, title, link, description }) {
   return (
-    <div className={clsx('col col--3')} style={{
+    <div className={clsx('col col-3')} style={{
       padding: 5,
       //backgroundColor: 'red',
     }}>
-    <div className='text--center'>
-        <Link to={link}><Svg className={styles.featureSvg} alt={title} /></Link>
-      </div>
       <div className='text--center'>
         {link ? (
           <Link
-            className={clsx('button button--secondary button--lg')}
+            className={clsx('button button--primary button--lg')} style={{
+              width: 250,
+            }}
             // ? <Link className={clsx('')}
             to={link}>
+              <Svg className={styles.featureSvg} alt={title} /><br/>
             {title}
           </Link>
         ) : (
