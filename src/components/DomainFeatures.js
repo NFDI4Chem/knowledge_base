@@ -49,7 +49,7 @@ function Feature({ Svg, title, link }) {
         //backgroundColor: 'red',
       }}>
         <div className='text--center'>
-          <a href={link}><Svg className={styles.featureSvg} alt={title} /></a>
+          <Link to={link}><Svg className={styles.featureSvg} alt={title} /></Link>
         </div>
         <div className='text--center'>
           {link ? (
