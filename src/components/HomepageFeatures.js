@@ -28,7 +28,8 @@ const FeatureList = [
 
 function Feature({ Svg, title, link, description }) {
   return (
-    <div className={clsx('col col-3')} style={{
+    <div className={clsx('col')} style={{
+      width: 250,
       padding: 5,
       //backgroundColor: 'red',
     }}>

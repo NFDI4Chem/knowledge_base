@@ -33,7 +33,7 @@ const FeatureList = [
 
 function Feature({ Svg, title, link }) {
   return (
-    <div className='col col--4' style={{
+    <div className='col' style={{
       width: 300,
       padding: 8,
       //backgroundColor: 'red',
