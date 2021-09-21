@@ -5,39 +5,29 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Synthetic Chemistry',
-    Svg: require('/img/oc.svg').default,
-    link: '/docs/domains/synthetic_chemistry',
+    title: 'Research Group Leader',
+    Svg: require('/img/pi.svg').default,
+    link: '/docs/role/research_group_leader/',
   },
   {
-    title: 'Analytical Chemistry',
-    Svg: require('/img/an.svg').default,
-    link: '/docs/domains/analytical_chemistry',
+    title: 'Research Group Member',
+    Svg: require('/img/researcher.svg').default,
+    link: '/docs/role/research_group_member/',
   },
   {
-    title: 'Physical Chemistry',
-    Svg: require('/img/pc.svg').default,
-    link: '/docs/domains/physical_chemistry',
+    title: 'Student',
+    Svg: require('/img/stud.svg').default,
+    link: '/docs/role/student/',
   },
   {
-    title: 'Polymer Chemistry',
-    Svg: require('/img/polymer.svg').default,
-    link: '/docs/domains/polymer_chemistry',
+    title: 'Data Steward',
+    Svg: require('/img/datastew.svg').default,
+    link: '/docs/role/data_steward/',
   },
   {
-    title: 'Biochemistry',
-    Svg: require('/img/bc.svg').default,
-    link: '/docs/domains/biochemistry',
-  },
-  {
-    title: 'Pharmaceutical Chemistry',
-    Svg: require('/img/pharma.svg').default,
-    link: '/docs/domains/pharmaceutical_chemistry',
-  },
-  {
-    title: 'Computational Chemistry',
-    Svg: require('/img/comp.svg').default,
-    link: '/docs/domains/computational_chemistry',
+    title: 'Service Administrator',
+    Svg: require('/img/service.svg').default,
+    link: '/docs/role/service_administrator/',
   },
 ];
 
@@ -67,7 +57,7 @@ function Feature({ Svg, title, link }) {
     );
   }
 
-export default function DomainFeatures() {
+export default function RoleFeatures() {
   return (
     <section className={styles.features}>
       <div className='container'>

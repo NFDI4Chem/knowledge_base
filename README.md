@@ -12,7 +12,7 @@ Create a fork of the repository. Make additions/changes as you required. Create 
 
 - Use british english
 - headings with: # (primary), ## (secondary), ### (tertiary etc)
-- Citations (E.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc.
+- Citations (E.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
 
 # Website
 
