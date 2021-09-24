@@ -36,7 +36,7 @@ function Feature({ Svg, title, link, description }) {
       <div className='text--center'>
         {link ? (
           <Link
-            className={clsx('button button--primary button--lg')} style={{
+            className={clsx('button button--secondary button--lg')} style={{
               width: 250,
             }}
             // ? <Link className={clsx('')}

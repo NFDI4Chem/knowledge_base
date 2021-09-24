@@ -147,14 +147,33 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .button--secondary:not(.button--outline) {
-    --ifm-button-background-color: var(--ifm-color-secondary);
-  }
+  --ifm-button-background-color: var(--ifm-color-secondary);
+}
 
 .button--secondary:not(.button--outline):hover {
-      --ifm-button-background-color: var(--ifm-color-secondary-darker);
-      --ifm-button-border-color: var(--ifm-color-secondary-darker);
-    }
+  --ifm-button-background-color: var(--ifm-color-secondary-darker);
+  --ifm-button-border-color: var(--ifm-color-secondary-darker);
+}
 
 .button.button--secondary {
-     color: var(--ifm-color-white);
-    }
+  color: var(--ifm-color-white);
+}
+
+
+.button--negative {
+  --ifm-button-border-color: white;
+}
+    
+.button--negative:not(.button--outline) {
+  --ifm-button-background-color: white;
+}
+    
+.button--negative:not(.button--outline):hover {
+  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
+}
+    
+.button.button--negative {
+         color: var(--ifm-color-primary);
+        }
+

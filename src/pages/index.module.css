@@ -10,8 +10,8 @@
   text-align: center;
   position: center;
   overflow: hidden;
-  --ifm-hero-background-color: #ffffff;
-  --ifm-hero-text-color: #EE730C;
+  --ifm-hero-background-color: white;
+  --ifm-hero-text-color: var(--ifm-color-danger);
 }
 
 @media screen and (max-width: 966px) {
