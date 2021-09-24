@@ -19,7 +19,7 @@
   --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
-  --ifm-heading-color: #009cbc;
+  --ifm-heading-color: var(--ifm-color-primary);
   --ifm-color-secondary-lightest:	#a7a7a7;	
   --ifm-color-secondary-lighter:	#939494;	
   --ifm-color-secondary-light:	#8d8e8e;
