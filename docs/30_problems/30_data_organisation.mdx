@@ -2,14 +2,69 @@
 title: "Data Organisation"
 ---
 
-Article about Data Organisation
+:::info summary quote:
+Simply making your data „open“ does not make your data usable. Usability is the result of other people being able to make sense of your data: the quality of your filenames, your folder structure and your documentation greatly contribute to the level of reusability of your data. It is neither difficult nor time-consuming to maintain your data in a way that invites other researchers to investigate and explore.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor a justo iaculis sagittis. Nullam sit amet sodales ligula. Nam vel turpis ante. Ut vestibulum, urna ut porttitor volutpat, nisi massa malesuada ex, vitae mattis lorem nisi ac lorem. Fusce bibendum nec enim at tincidunt. Phasellus convallis magna dui, eget cursus eros bibendum id. Phasellus eu lacinia quam. Morbi venenatis suscipit elit ut consectetur. Praesent ut quam ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque non faucibus massa. Duis consequat efficitur magna, non dignissim mauris imperdiet eget.
+_Andreas von der Dunk, Technische Universität Dresden, Service Center Research Data_
+:::
 
-Ut egestas metus ut ante luctus, tristique malesuada ante pretium. Mauris aliquet consectetur eros, eget mollis augue congue sollicitudin. Mauris iaculis metus vitae felis hendrerit, ac tempus tortor vestibulum. Proin ullamcorper, metus sed ultrices molestie, velit nulla feugiat odio, a fermentum erat sem quis sem. Maecenas pharetra mauris non luctus hendrerit. Donec non mauris blandit, fringilla lacus sed, porttitor sem. Integer a ante massa. Morbi rhoncus quis odio in maximus. Nullam mollis pulvinar condimentum. Nunc nulla magna, porttitor a porttitor id, suscipit non nibh. Fusce blandit purus maximus felis egestas imperdiet. Donec quis convallis nibh.
+## General basics
 
-Cras dictum pharetra lectus, a laoreet nulla commodo at. Proin aliquet risus eu nisi tempus, non lobortis mauris tristique. Vivamus at libero a risus ornare commodo. Integer in ante vestibulum, feugiat dolor at, blandit dui. Sed at dui non erat hendrerit ornare sit amet at lorem. Sed sed urna sodales, hendrerit elit sit amet, auctor turpis. Proin lobortis urna nec pulvinar iaculis. Morbi vel mollis erat, ut finibus eros. Phasellus in pharetra dui. Etiam vel ultricies tellus, in mollis ante. Aenean vel lectus odio. Ut tincidunt vel neque non faucibus. Mauris pulvinar velit fermentum, fermentum urna ac, ornare turpis. Integer vel tristique orci. Nulla malesuada mattis erat sed condimentum. Cras dui libero, iaculis a fringilla eget, luctus a diam.
+<img alt="data for future generations" src='/docs/30_problems/img/data_1517.png' width="250" align="right" vspace="10" hspace="10" />
 
-Integer cursus ipsum quis turpis feugiat, in elementum odio porta. Nulla nec ligula metus. Aliquam varius nisi nec mauris bibendum tristique. Maecenas vel elit ac leo suscipit facilisis eget non est. Donec aliquam suscipit erat. Praesent at odio et magna vestibulum euismod a eu nunc. Sed tristique id sapien quis aliquet. Suspendisse ac odio volutpat, mattis odio at, aliquam mauris. Curabitur ac nisl vitae ante interdum auctor vel sed ex. Donec ac accumsan magna. Sed orci justo, commodo dictum nibh vel, vestibulum posuere metus. Proin mollis sapien at libero tempor porttitor. Quisque quis risus posuere, varius diam sed, consectetur risus.
+A clean and comprehensible organisation of data and documents are an important part of good scientific practice and an important step to realise research data management according to the [FAIR data principles](/docs/topics/fair). 
 
-Nunc arcu leo, porta ac laoreet vitae, blandit eget elit. Vestibulum id augue ullamcorper, interdum magna nec, cursus odio. Donec quam justo, posuere sit amet ligula sit amet, pharetra pellentesque dolor. Nullam ante dui, porta vitae auctor eget, accumsan ut mauris. Nunc finibus malesuada accumsan. Sed at libero a ex sollicitudin aliquam. Donec in ante eget nisi cursus euismod. Fusce lorem justo, mollis quis commodo in, pulvinar at libero.
+An essential task is to plan the organisation and storage of data, metadata, and documents in advance and to document the relevant measures.
+
+Central requirements are the definition of [formal responsibilities, organisational conventions](#formal-responsibilities-and-organisational-conventions) and [technical implementations](#technical-implementations) to organise the data and meta information produced. The information collected for this purpose is recorded in the [Data Management Plan](/docs/problems/dmp). Note that a good data organisation also estimates the costs (see [costing tool and checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/costing/) for example) in the early application phase.
+
+
+### Formal responsibilities and organisational conventions
+
+To make a long story short: It's mainly about describing how and who will work with documents. And first steps could be about:
+- Document the responsibilities of primary researchers and project staff.
+- Create user roles: Define detailed rights for users / groups / roles to access data and sensitive information.
+- Describe processes of quality assurance including protected storage, sharing, and accessibility in the short term and on the long run.
+- Data processing: How, where, how fast. Describe input and output data. Decide how you will name and structure files and folders.
+
+The result should be descriptive documents which files in the course of the daily work routines, on which status (for example original file, temporary work file; Draft, intermediate version, final version), where (workstation PC, central file server, Database) and for how long (temporarily, project duration, long-term availability) in which format are saved.
+
+<img alt="small data handout" src='/docs/30_problems/img/en_data_handout.png' width="600" align="center" vspace="10" hspace="10" />
+
+
+### Technical implementations
+
+Get an overview of the occurring data and document flows. A short description, easy to understand for every user, should be accessible on low level and explain the main concepts. The data itself needs to have a bulletproof [Data Documentation](/docs/problems/data_documentation) including [Metadata](/docs/topics/metadata/) and suitable [Data Format Standards](/docs/topics/format_standards/). Find out more about the usual [Best Practice](/docs/topics/best_practice/) at your institute or within your discipline. Plan how documents can be shared between project staff and what needs to be accessed for [Data Publication](/docs/problems/data_publication/) with [PID](/docs/topics/pid/).
+
+Data security affects all technical and organisational issues to protect the data from alteration, loss, and Destruction. In this context, storage methods, backup procedures, necessary physical resources as well as automated and administrative routines must be planned. Ask local contacts or external experts about already established technologies for [Data Storage and Archiving](/docs/problems/data_storage) as well as suitable [Repositories](/docs/topics/repositories/).
+
+
+## Synopsis
+
+<img alt="small data handout" src='/docs/30_problems/img/en_data_orgsteps.png' width="400" align="right" vspace="10" hspace="10" />
+
+Don't rush one's fences and take small steps first - The organisation of research data is primarily an organisational problem that is accompanied and supported by technological measures:
+- Record of status quo:
+    - Which organisational processes have been used so far and which technologies support them?
+    - What are the regulatory boundaries and technical limits?
+    - Which personal roles are involved?
+    - Which devices or file formats are or have been used?
+    - Are there any special features?
+- Awareness: Who produces (meta)data, and who continues to use data and how?
+- Define internal rules and processes: What are the targets of RDM, and how can it be achieved?
+- Apply and evaluate rules, iteratively: Learn, set, follow, repeat. Keep it simple and smart (KISS).
+- Develop a suitable technology: Determine specific requirements in the first project phase and continuously adapt them to changing conditions.
+- Establish supporting technology: Evaluate and test software like [ELN](/docs/topics/eln/) and [Repositories](/docs/topics/repositories/), train staff.
+- Obtain legal advice, include local and higher-level policies and procedures: Contact legal department at your institution or [NFDI Querschnittssektion “Ethik und Recht”](https://www.nfdi.de/einrichtung-von-ersten-sektionen/)
+- Make rules and decisions accessible to everyone at an early stage, for example in the form of a short handout.
+- Check the concept regularly and update it if necessary.
+
+
+## Sources and further information
+- https://www.data.cam.ac.uk/data-management-guide/organising-your-data
+- https://rfii.de/en/topics/
+- https://datascience.codata.org/articles/10.5334/dsj-2020-032/
+- german: "Was Forschende wollen – Bericht aus der Beratungspraxis zum Forschungsdatenmanagement" [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5524930.svg)](https://doi.org/10.5281/zenodo.5524930)
+- german: https://www.researchgate.net/publication/221657547_Handbuch_Forschungsdatenmanagement
+- german: https://www.degruyter.com/document/doi/10.1515/9783110657807/html?lang=en
+- german: https://handbuch.tib.eu/w/Lehrbuch_Forschungsdatenmanagement/_Druckversion
