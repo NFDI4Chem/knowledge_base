@@ -62,13 +62,12 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero--n4c {
-  --ifm-hero-background-color: #ffffff;
-  --ifm-hero-text-color: #EE730C;
+.hero__title {
+  color: var(--ifm-hero-text-color)
 }
 
 .footer--dark {
-  --ifm-footer-background-color: #4E4D4D;
+  --ifm-footer-background-color: var(--ifm-color-secondary-darkest);
   --ifm-footer-color: var(--ifm-footer-link-color);
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-title-color: var(--ifm-color-white);
@@ -143,16 +142,16 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   }
 
 .button--secondary {
-  --ifm-button-border-color: var(--ifm-color-secondary);
+  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
 }
 
 .button--secondary:not(.button--outline) {
-  --ifm-button-background-color: var(--ifm-color-secondary);
+  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
 }
 
 .button--secondary:not(.button--outline):hover {
-  --ifm-button-background-color: var(--ifm-color-secondary-darker);
-  --ifm-button-border-color: var(--ifm-color-secondary-darker);
+  --ifm-button-background-color: var(--ifm-color-primary);
+  --ifm-button-border-color: var(--ifm-color-primary);
 }
 
 .button.button--secondary {
@@ -175,5 +174,10 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     
 .button.button--negative {
          color: var(--ifm-color-primary);
-        }
+}
 
+.n4c--logo {
+  float: left;
+  margin-top: 0;
+  padding: 0 ;
+}
