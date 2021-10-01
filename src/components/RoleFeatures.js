@@ -6,27 +6,27 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Research Group Leader',
-    Svg: require('/img/pi.svg').default,
+    Svg: require('/img/pi_white.svg').default,
     link: '/docs/role/research_group_leader/',
   },
   {
     title: 'Research Group Member',
-    Svg: require('/img/researcher.svg').default,
+    Svg: require('/img/researcher_white.svg').default,
     link: '/docs/role/research_group_member/',
   },
   {
     title: 'Student',
-    Svg: require('/img/stud.svg').default,
+    Svg: require('/img/stud_white.svg').default,
     link: '/docs/role/student/',
   },
   {
     title: 'Data Steward',
-    Svg: require('/img/datastew.svg').default,
+    Svg: require('/img/datastew_white.svg').default,
     link: '/docs/role/data_steward/',
   },
   {
     title: 'Service Administrator',
-    Svg: require('/img/service.svg').default,
+    Svg: require('/img/service_white.svg').default,
     link: '/docs/role/service_administrator/',
   },
 ];
