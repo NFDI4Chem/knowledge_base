@@ -5,13 +5,13 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+ .heroBanner {
+  padding: 2rem 0;
   text-align: center;
   position: center;
   overflow: hidden;
-  --ifm-hero-background-color: white;
-  --ifm-hero-text-color: var(--ifm-color-danger);
+  --ifm-hero-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-color-white);
 }
 
 @media screen and (max-width: 966px) {
