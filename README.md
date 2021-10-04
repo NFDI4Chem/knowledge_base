@@ -18,7 +18,8 @@ Create a fork of the repository. Make additions/changes as you required. Create 
 
 Please place your image files in the suitable subfolder for the topic of your article:
 
-```/static/img/domains
+```
+/static/img/domains
 /static/img/role
 /static/img/problems
 /static/img/topics
