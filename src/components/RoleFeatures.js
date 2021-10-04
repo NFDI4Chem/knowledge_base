@@ -6,56 +6,56 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Research Group Leader',
-    Svg: require('/img/pi_white.svg').default,
+    Svg: require('/img/pi.svg').default,
     link: '/docs/role/research_group_leader/',
   },
   {
     title: 'Research Group Member',
-    Svg: require('/img/researcher_white.svg').default,
+    Svg: require('/img/researcher.svg').default,
     link: '/docs/role/research_group_member/',
   },
   {
     title: 'Student',
-    Svg: require('/img/stud_white.svg').default,
+    Svg: require('/img/stud.svg').default,
     link: '/docs/role/student/',
   },
   {
     title: 'Data Steward',
-    Svg: require('/img/datastew_white.svg').default,
+    Svg: require('/img/datastew.svg').default,
     link: '/docs/role/data_steward/',
   },
   {
     title: 'Service Administrator',
-    Svg: require('/img/service_white.svg').default,
+    Svg: require('/img/service.svg').default,
     link: '/docs/role/service_administrator/',
   },
 ];
 
 function Feature({ Svg, title, link }) {
-  return (
-    <div className='col' style={{
-      width: 300,
-      padding: 8,
-      //backgroundColor: 'red',
-    }}>
-    <div className='text--center'>
-      {link ? (
-        <Link
-          className={clsx('button button--secondary button--lg')} style={{
-            width: 300,
-          }}
-          // ? <Link className={clsx('')}
-          to={link}>
-            <Svg className={styles.featureSvg} alt={title} /><br/>
-          {title}
-        </Link>
-      ) : (
-        <p>{title}</p>
-      )}
-    </div>
-    </div>
-  );
-}
+    return (
+      <div className='col-sm' style={{
+        width: 260,
+        padding: 8,
+        //backgroundColor: 'red',
+      }}>
+        <div className='text--center'>
+          <Link to={link}><Svg className={styles.featureSvg} alt={title} /></Link>
+        </div>
+        <div className='text--center'>
+          {link ? (
+            <Link
+              className={clsx('button button--secondary button--md')}
+              // ? <Link className={clsx('')}
+              to={link}>
+              {title}
+            </Link>
+          ) : (
+            <p>{title}</p>
+          )}
+        </div>
+      </div>
+    );
+  }
 
 export default function RoleFeatures() {
   return (

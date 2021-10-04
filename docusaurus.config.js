@@ -14,8 +14,8 @@ module.exports = {
     navbar: {
       title: 'Home',
       logo: {
-        alt: 'NFDI4Chem Logo',
-        src: 'img/NFDI4Chem-Logo_mehrfarbig_schwarz_nurGraphik.svg',
+        alt: 'My Site Logo',
+        src: 'img/4Chem.png',
       },
       items: [
         {
