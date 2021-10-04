@@ -150,8 +150,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .button--secondary:not(.button--outline):hover {
-  --ifm-button-background-color: var(--ifm-color-primary);
-  --ifm-button-border-color: var(--ifm-color-primary);
+  --ifm-button-background-color: var(--ifm-color-danger);
+  --ifm-button-border-color: var(--ifm-color-danger);
 }
 
 .button.button--secondary {
@@ -173,7 +173,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
     
 .button.button--negative {
-         color: var(--ifm-color-primary);
+         color: var(--ifm-color-danger);
 }
 
 .n4c--logo {
