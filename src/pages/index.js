@@ -5,7 +5,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -20,7 +19,7 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Link
-            className={clsx("button button--negative button--lg")}
+            className={clsx("button button--primary button--lg")}
             to="/docs/intro">
             Get started
           </Link>

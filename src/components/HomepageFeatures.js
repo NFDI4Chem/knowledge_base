@@ -6,22 +6,22 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Roles',
-    Svg: require('../../static/img/role_white.svg').default,
+    Svg: require('../../static/img/role3.svg').default,
     link: '/docs/role/guide',
   },
   {
     title: 'Domains',
-    Svg: require('../../static/img/domain_white.svg').default,
+    Svg: require('../../static/img/domain3.svg').default,
     link: '/docs/domains/guide',
   },
   {
     title: 'Problems',
-    Svg: require('../../static/img/problem_white.svg').default,
+    Svg: require('../../static/img/problem3.svg').default,
     link: '/docs/problems/dmp',
   },
   {
     title: 'Topics & Concepts',
-    Svg: require('../../static/img/topics_white.svg').default,
+    Svg: require('../../static/img/topics3.svg').default,
     link: '/docs/topics/fair',
   },
 ];
@@ -36,7 +36,7 @@ function Feature({ Svg, title, link }) {
       <div className='text--center'>
         {link ? (
           <Link
-            className={clsx('button button--secondary button--lg')} style={{
+            className={clsx('button button--primary button--lg')} style={{
               width: 250,
             }}
             // ? <Link className={clsx('')}

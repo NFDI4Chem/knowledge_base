@@ -62,12 +62,13 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero__title {
-  color: var(--ifm-hero-text-color)
+.hero--n4c {
+  --ifm-hero-background-color: #ffffff;
+  --ifm-hero-text-color: #EE730C;
 }
 
 .footer--dark {
-  --ifm-footer-background-color: var(--ifm-color-secondary-darkest);
+  --ifm-footer-background-color: #4E4D4D;
   --ifm-footer-color: var(--ifm-footer-link-color);
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-title-color: var(--ifm-color-white);
@@ -142,11 +143,11 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   }
 
 .button--secondary {
-  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
+  --ifm-button-border-color: var(--ifm-color-secondary);
 }
 
 .button--secondary:not(.button--outline) {
-  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-button-background-color: var(--ifm-color-secondary);
 }
 
 .button--secondary:not(.button--outline):hover {
@@ -176,8 +177,3 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
          color: var(--ifm-color-danger);
 }
 
-.n4c--logo {
-  float: left;
-  margin-top: 0;
-  padding: 0 ;
-}
