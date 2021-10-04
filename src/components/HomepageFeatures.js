@@ -70,7 +70,7 @@ export function RoleButton() {
   return (
     <section className={styles.features}>
       <div className='container'>
-        <div className='row'>
+        <div className='row--3'>
           <Feature {...FeatureList[0]} />
         </div>
       </div>
@@ -82,7 +82,7 @@ export function DomainButton() {
   return (
     <section className={styles.features}>
       <div className='container'>
-        <div className='row'>
+        <div className='row--3'>
           <Feature {...FeatureList[1]} />
         </div>
       </div>
