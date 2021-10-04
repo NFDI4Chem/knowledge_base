@@ -14,6 +14,22 @@ Create a fork of the repository. Make additions/changes as you required. Create 
 - headings with: # (primary), ## (secondary), ### (tertiary etc)
 - Citations (E.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
 
+## Adding images
+
+Please place your image files in the suitable subfolder for the topic of your article:
+
+```/static/img/domains
+/static/img/role
+/static/img/problems
+/static/img/topics
+```
+
+You can then reference to them by leaving out the `/static` part of the path. Preferably add images using the Markdown syntax like this:
+
+```![FAIR Data](/img/topics/FAIR_data_principles.png)```
+
+Using the `img` HTML tag will require additional prerequisites and is discouraged unless specifically needed for the page layout.
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
