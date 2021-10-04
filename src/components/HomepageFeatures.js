@@ -89,3 +89,27 @@ export function DomainButton() {
     </section>
   );
 }
+
+export function ProblemButton() {
+  return (
+    <section className={styles.features}>
+      <div className='container'>
+        <div className='row--3'>
+          <Feature {...FeatureList[2]} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TopicButton() {
+  return (
+    <section className={styles.features}>
+      <div className='container'>
+        <div className='row--3'>
+          <Feature {...FeatureList[3]} />
+        </div>
+      </div>
+    </section>
+  );
+}
