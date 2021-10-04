@@ -26,7 +26,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, link, description }) {
+function Feature({ Svg, title, link }) {
   return (
     <div className={clsx('col')} style={{
       width: 250,
@@ -60,6 +60,30 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function RoleButton() {
+  return (
+    <section className={styles.features}>
+      <div className='container'>
+        <div className='row'>
+          <Feature {...FeatureList[0]} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DomainButton() {
+  return (
+    <section className={styles.features}>
+      <div className='container'>
+        <div className='row'>
+          <Feature {...FeatureList[1]} />
         </div>
       </div>
     </section>
