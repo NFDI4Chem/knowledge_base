@@ -168,12 +168,13 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
     
 .button--negative:not(.button--outline):hover {
-  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
-  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
+  --ifm-button-background-color: var(--ifm-color-danger);
+  --ifm-button-border-color: var(--ifm-color-danger);
+  color: var(--ifm-color-white)
 }
     
 .button.button--negative {
-         color: var(--ifm-color-danger);
+  color: var(--ifm-color-danger);
 }
 
 .n4c--logo {
