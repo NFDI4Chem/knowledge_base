@@ -8,38 +8,30 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Persistent identifiers (PIDs) are unique, long-lasting references to identified sources, such as publications, datasets or persons and allow to reliably locate, identify and verify the references.<sup>[1](https://doi.org/10.5334/dsj-2017-009),[2](https://doi.org/10.2218/ijdc.v8i1.246),[3](https://doi.org/10.1007/s12145-011-0083-6)</sup> 
 
-The two main PIDs employed within the chemistry community are Digital Object Identifiers (DOIs) as PIDs for objects such as publications, datasets or software as well as Open Research and Contributor iDs (ORCHID iDs) for people.<sup>[4](https://doi.org/10.1087/20120404)</sup> 
-
-Additionally, the Research Organization Registry (ROR) is used to identify research institutions.<sup>[5](https://doi.org/10.6087/kcse.192)</sup> Current development also includes Persistent Identification of Instruments (PIDINST) as PIDs for the instrumentation used to obtain research data.<sup>[6](https://doi.org/10.5334/dsj-2020-018)</sup>
+The two main PIDs employed within the chemistry community are Digital Object Identifiers (DOIs) as PIDs for objects such as publications, datasets or software as well as Open Research and Contributor iDs (ORCHID iDs) for people.<sup>[4](https://doi.org/10.1087/20120404)</sup> Additionally, the Research Organization Registry (ROR) is used to identify research institutions.<sup>[5](https://doi.org/10.6087/kcse.192)</sup> Current development also includes Persistent Identification of Instruments (PIDINST) as PIDs for the instrumentation used to obtain research data.<sup>[6](https://doi.org/10.5334/dsj-2020-018)</sup>
 
 The main benefits of PIDs for chemistry researchers are increased findability, visibility and ease of access of their scientific work.<sup>[7](https://doi.org/10.5334/dsj-2017-009)</sup> In the context of research data, PIDs are especially useful to interconnect publications and datasets in repositories.
 
 ## DOIs
 
-<img align="left" src={useBaseUrl('/img/topics/DOI_logo.svg')} width="90" alt="DOI logo" vspace="10" hspace="10" />
+<img align="left" src={useBaseUrl('/img/topics/DOI_logo.svg')} width="80" alt="DOI logo" vspace="10" hspace="10" />
 
 Digital Object Identifiers are open and non-proprietary PIDs for objects such as  publications and datasets but also physical objects which are assigned by members of the International DOI Foundation.<sup>[8](https://doi.org/10.1081/E-ELIS3-120044418),[9](https://doi.org/10.2481/dsj.4.12)</sup> Most well-recognised DOI registration agencies include CrossRef for publications and DataCite focusing on datasets.<sup>[10](https://doi.org/10.1109/COINFO.2009.66)</sup> 
 
-A DOI consists of a character string divided in to two parts by a slash. The prefix identifies the registrant, who retrieves a DOI from a DOI registration agency and always starts with “10.”. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. DOIs are most frequently displayed as an URL like `https://doi.org/10.1000/182` including a resolver as HTTP proxy server to redirect to the linked object.<sup>[11](https://doi.org/10.1081/E-ELIS3-120044418)</sup>
+A DOI consists of a character string divided in to two parts by a slash. The prefix identifies the registrant, who retrieves a DOI from a DOI registration agency and always starts with “10.”. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. DOIs are most frequently displayed as an URL like `https://doi.org/10.1000/182` including a resolver as HTTP proxy server to redirect to the linked object.<sup>[11](https://doi.org/10.1081/E-ELIS3-120044418)</sup> DOIs are standardised by the International Organisation for Standardisation (ISO) in ISO 26324.<sup>[12](https://www.iso.org/standard/43506.html)</sup>
 
 <img src={useBaseUrl("/img/topics/crossref-logo-landscape-200.svg")} width="200" alt="Crossref logo" />
 <img src={useBaseUrl("/img/topics/datacite.svg")} class="align-center" width="200" alt="DataCite logo" />
-
-DOIs are standardised by the International Organisation for Standardisation (ISO) in ISO 26324.<sup>[12](https://www.iso.org/standard/43506.html)</sup>
 
 Registrants are liable to update the URL connected to the DOI if the object is moved, which is enabled by metadata attached to the DOI during registration.<sup>[13](https://support.datacite.org/docs/doi-registration-policy)</sup>
 
 ## ORCID iDs
 
-<img align="left" src={useBaseUrl("/img/topics/ORCIDiD_iconvector.svg")} width="90" alt="ORCID logo" vspace="10" hspace="10" />
+<img align="left" src={useBaseUrl("/img/topics/ORCIDiD_iconvector.svg")} width="80" alt="ORCID logo" vspace="10" hspace="10" />
 
 ORCID iDs are open and non-proprietary PIDs for authors also described as unique author identifiers and can be retrieved and used by any author free of charge. It is provided by the non-profit Open Research and Contributors ID organisation, ORCID Inc., and sustained by fees of member organisations, providing extended application program interfaces (API) for their members to integrate ORCID iDs.<sup>[14](https://doi.org/10.1087/20120404)</sup>
 
-An ORCID iD is a 16-digit alphanumerical code to unambiguously identify authors, while author names might not be unique, may change or have different ordering conventions depending on cultural differences.<sup>[15](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier)</sup> 
-
-ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` but are also typically depicted without the resolver as an URN, e.g. `ORCID:0000-0000-0000-0000`.
-
-ORCID iDs are a subset of International Standards Name Identifiers (ISNI) provided by the International Organisation for Standardisation (ISO) as ISO 27729.<sup>[16](https://doi.org/10.1038/462825a)</sup>
+An ORCID iD is a 16-digit alphanumerical code to unambiguously identify authors, while author names might not be unique, may change or have different ordering conventions depending on cultural differences.<sup>[15](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier)</sup> ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` but are also typically depicted without the resolver as an URN, e.g. `ORCID:0000-0000-0000-0000`. ORCID iDs are a subset of International Standards Name Identifiers (ISNI) provided by the International Organisation for Standardisation (ISO) as ISO 27729.<sup>[16](https://doi.org/10.1038/462825a)</sup>
 
 The ORCID record connected to ORCID iDs includes the bibliographic output and may also provide information on employment, education and qualification, invited positions and distinctions, memberships as well as service and funding, depending on the privacy setting made by the author.<sup>[17](https://www.orcid.org)</sup>
 
