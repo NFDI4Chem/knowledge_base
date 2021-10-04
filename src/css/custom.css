@@ -19,7 +19,14 @@
   --ifm-color-primary-lightest: #00cbf4;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
-  --ifm-heading-color: #009cbc;
+  --ifm-heading-color: var(--ifm-color-primary);
+  --ifm-color-secondary-lightest:	#a7a7a7;	
+  --ifm-color-secondary-lighter:	#939494;	
+  --ifm-color-secondary-light:	#8d8e8e;
+  --ifm-color-secondary:	#808181;
+  --ifm-color-secondary-dark:	#737474;
+  --ifm-color-secondary-darker:	#6d6e6e;
+  --ifm-color-secondary-darkest:	#5a5a5a;
   --ifm-color-danger: #EE730C;
   --ifm-color-danger-dark: #d6680b;
   --ifm-color-danger-darker: #ca620a;
@@ -55,15 +62,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero--n4c {
-  --ifm-hero-background-color: #ffffff;
-  --ifm-hero-text-color: #EE730C;
+.hero__title {
+  color: var(--ifm-hero-text-color)
 }
 
 .footer--dark {
-  --ifm-footer-background-color: #4E4D4D;
+  --ifm-footer-background-color: var(--ifm-color-secondary-darkest);
   --ifm-footer-color: var(--ifm-footer-link-color);
-  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-title-color: var(--ifm-color-white);
 }
 
@@ -106,4 +112,72 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   --ifm-alert-background-color-highlight: rgba(255, 186, 0, 0.15);
   --ifm-alert-foreground-color: var( --ifm-text-color );
   --ifm-alert-border-color: var(--ifm-color-warning);
+}
+
+
+.button--primary {
+  --ifm-button-border-color: var(--ifm-color-primary);
+}
+
+.button--primary:not(.button--outline) {
+    --ifm-button-background-color: var(--ifm-color-primary);
+  }
+
+.button--primary:not(.button--outline):hover {
+      --ifm-button-background-color: var(--ifm-color-primary-dark);
+      --ifm-button-border-color: var(--ifm-color-primary-dark);
+    }
+
+/* Increase specificity. */
+
+.button--primary:active,
+  .button--primary.button--active {
+    --ifm-button-border-color: var(--ifm-color-primary-darker);
+    --ifm-button-background-color: var(--ifm-color-primary-darker);
+
+    /* Has to be explicitly defined because .button--outline has quite high specificity. */
+    background-color: var(--ifm-color-primary-darker);
+    /* Has to be explicitly defined because .button--outline has quite high specificity. */
+    border-color: var(--ifm-color-primary-darker);
+  }
+
+.button--secondary {
+  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
+}
+
+.button--secondary:not(.button--outline) {
+  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
+}
+
+.button--secondary:not(.button--outline):hover {
+  --ifm-button-background-color: var(--ifm-color-danger);
+  --ifm-button-border-color: var(--ifm-color-danger);
+}
+
+.button.button--secondary {
+  color: var(--ifm-color-white);
+}
+
+
+.button--negative {
+  --ifm-button-border-color: white;
+}
+    
+.button--negative:not(.button--outline) {
+  --ifm-button-background-color: white;
+}
+    
+.button--negative:not(.button--outline):hover {
+  --ifm-button-background-color: var(--ifm-color-secondary-lightest);
+  --ifm-button-border-color: var(--ifm-color-secondary-lightest);
+}
+    
+.button.button--negative {
+         color: var(--ifm-color-danger);
+}
+
+.n4c--logo {
+  float: left;
+  margin-top: 0;
+  padding: 0 ;
 }
