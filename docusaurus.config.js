@@ -24,6 +24,12 @@ module.exports = {
           position: 'left',
           label: 'Knowledge Base',
         },
+        {
+          type: 'doc',
+          docId: 'faq',
+          position: 'left',
+          label: 'FAQs'
+        },
       ],
     },
     footer: {
