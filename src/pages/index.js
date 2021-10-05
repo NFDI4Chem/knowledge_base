@@ -13,7 +13,6 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title text">
-          <img className="n4c--logo" src={useBaseUrl("/img/NFDI4Chem-Logo_einfarbig_weiss_nurGraphik.svg")} width="120" />
           {siteConfig.title}
         </h1>
         <p className="hero__subtitle">
