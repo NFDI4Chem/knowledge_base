@@ -51,6 +51,10 @@
   --ifm-global-shadow-lw: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
+a:link{
+  font-weight: bold;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
