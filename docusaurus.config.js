@@ -25,8 +25,8 @@ module.exports = {
           label: 'Knowledge Base',
         },
         {
-          label: 'LinkedIn',
-          href: 'https://www.linkedin.com/company/nfdi4chem',
+          label: 'FAQ',
+          href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
         },
       ],
     },
