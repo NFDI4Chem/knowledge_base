@@ -14,7 +14,7 @@ module.exports = {
     navbar: {
       title: 'Home',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'NFDI4Chem Logo',
         src: 'img/4Chem.png',
       },
       items: [
@@ -23,6 +23,12 @@ module.exports = {
           docId: 'intro',
           position: 'left',
           label: 'Knowledge Base',
+        },
+        {
+          type: 'doc',
+          docId: 'faq',
+          position: 'left',
+          label: 'FAQs'
         },
       ],
     },
