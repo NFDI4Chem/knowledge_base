@@ -25,10 +25,8 @@ module.exports = {
           label: 'Knowledge Base',
         },
         {
-          type: 'doc',
-          docId: 'faq',
-          position: 'left',
-          label: 'FAQs'
+          label: 'FAQ',
+          href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
         },
       ],
     },
