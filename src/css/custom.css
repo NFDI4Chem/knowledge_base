@@ -238,3 +238,8 @@ a:not([href]) {
   background-color: var(--ifm-menu-color-background-hover);
   text-decoration: none;
 }
+
+.table-of-contents__link {
+  color:var(--ifm-toc-link-color);
+  font-weight: unset;
+ }
