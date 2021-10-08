@@ -55,10 +55,6 @@
   --ifm-link-hover-decoration: underline;
 }
 
-a:link{
-  font-weight: bold;
-}
-
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -199,7 +195,7 @@ a {
   /* autoprefixer: ignore next */
   text-decoration: var(--ifm-link-decoration);
   transition: color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
-/*  font-weight: bold; */
+  font-weight: bold;
 }
 
 a:hover {
