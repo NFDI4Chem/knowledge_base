@@ -243,3 +243,11 @@ a:not([href]) {
   color:var(--ifm-toc-link-color);
   font-weight: unset;
  }
+
+ .table-of-contents__link--active,
+.table-of-contents__link--active code,
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code {
+ color:var(--ifm-color-primary);
+ text-decoration:none
+}
