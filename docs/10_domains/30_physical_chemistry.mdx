@@ -7,7 +7,7 @@ title: "Physical Chemistry"
 Physical chemistry is an interdisciplinary science at the frontier between chemistry and physics, whose topics go beyond the classical areas of the respective individual sciences. While preparative chemistry focuses on questions of the methodology of chemical synthesis of known and new substances, physical chemistry attempts to describe the properties of substances and their transformation by applying concepts of physics to objects of chemistry by means of theoretical and experimental methods. Along with organic and inorganic chemistry, physical chemistry therefore represents one of the three key disciplines of "classical" chemistry, since it provides the theoretical basis for technical chemistry and process engineering. Its knowledge is also an integral part of many other disciplines and is used, for example, for description and understanding in biology and medicine, meteorology as well as the earth sciences. Due to this great interdisciplinarity and the use of numerous physicochemical methods in almost all areas of chemistry, a complete description of physical chemistry as profile is hardly possible, which is why this article explicitly makes no claim to do so.
 :::
 
-# Methods profiles
+# Methods Profiles
 
 ## EPR spectroscopy
 
@@ -21,20 +21,19 @@ Physical chemistry is an interdisciplinary science at the frontier between chemi
 - for distance measurements in the range of about 1-8 nm
 
 ### What kind of data is generated?
-- almost exclusively proprietary file formats (e.g. .spe or .DTA/.DSC) of the "Bruker Corporation" company
-- transfer into open file formats (e.g. .txt or .csv) either via Bruker software on the measuring device itself or via tools like SpinToolbox
-- analysis of data using Bruker software or e.g. EasySpin as open-source toolbox for MATLAB
+- almost exclusively [proprietary file formats](/docs/topics/format_standards) (e.g. .spe or .DTA/.DSC) of the "Bruker Corporation" company
+- transfer into [open file formats](/docs/topics/format_standards) (e.g. .txt or .csv) either via Bruker software on the measuring device itself or via tools like [SpinToolbox](https://www.spintoolbox.com/en/)
+- analysis of data using Bruker software or e.g. [EasySpin](https://www.easyspin.org/) as open-source toolbox for MATLAB
 
-### How to do it FAIR?
-- documentation of all research data and metadata is carried out digitally using an suitable ELN (possibly in addition to a manual laboratory notebook in paper form)
-- experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. frequency, temperature) are noted in the ELN
-- observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment
-- obtained unprocessed raw files from measurements are uploaded to ELN in open file formats and attached directly to the respective ELN experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters
-- metadata related to the obtained data, such as temperature or solvent of measurement, follow common metadata standards
+### How to do it [FAIR](/docs/topics/fair)?
+- [documentation of all research data](/docs/problems/data_documentation) and [metadata](/docs/topics/metadata) is carried out digitally using an suitable [ELN](/docs/topics/eln) (possibly in addition to a manual laboratory notebook in paper form)
+- experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. frequency, temperature) are noted in the [ELN](/docs/topics/eln)
+- observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the [ELN](/docs/topics/eln) entry of the experiment
+- obtained unprocessed raw files from measurements are uploaded to [ELN](/docs/topics/eln) in open file formats and attached directly to the respective [ELN](/docs/topics/eln) experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters
+- [metadata](/docs/topics/metadata) related to the obtained data, such as temperature or solvent of measurement, follow common [metadata standards](/docs/topics/metadata)
 - research data are processed, analysed and compared with open non-proprietary software tools
-- simultaneously with publication as a research article in a scientific journal, the underlying research data is published in an open data repository and linked to the article (incl. semantically richly annotated raw and processed data in open data formats for reuse)
-- an unique persistent identifier (e.g. DOI) is generated for each dataset as well as for the journal publication
-
+- simultaneously with [publication](/docs/problems/data_publication) as a research article in a scientific journal, the underlying research data is published in an open data [repository](/docs/topics/repositories) and linked to the article (incl. semantically richly annotated raw and processed data in open data formats for reuse)
+- an unique [persistent identifier](/docs/topics/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
 
 # Methods Data Format Overview
 
@@ -59,4 +58,5 @@ Physical chemistry is an interdisciplinary science at the frontier between chemi
 |Atomic force microscopy (AFM)|???|???|???|???|???|???|
 |Transmission electron microscopy (TEM)|???|???|???|???|???|???|
 
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats. :::
+:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
+:::
