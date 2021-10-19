@@ -71,7 +71,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .footer--dark {
-  --ifm-footer-background-color: var(--ifm-color-secondary-darkest);
+  --ifm-footer-background-color: var(--ifm-color-secondary);
   --ifm-footer-color: var(--ifm-footer-link-color);
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-title-color: var(--ifm-color-white);
