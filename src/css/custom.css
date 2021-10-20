@@ -251,3 +251,48 @@ a:not([href]) {
  color:var(--ifm-color-primary);
  text-decoration:none
 }
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.5rem;
+
+  margin-bottom: calc(
+    var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading)
+  );
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 2rem;
+
+  margin-bottom: calc(
+    var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+  );
+  margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+}
+
+.markdown > h3 {
+  --ifm-h3-font-size: 1.5rem;
+
+  margin-bottom: calc(
+    var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+  );
+  margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading));
+}
+
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  margin-bottom: calc(
+    var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+  );
+  margin-top: calc(
+    var(--ifm-heading-vertical-rhythm-top) * var(--ifm-leading)
+  );
+}
+
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+}
