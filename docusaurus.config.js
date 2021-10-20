@@ -15,7 +15,7 @@ module.exports = {
       title: 'Home',
       logo: {
         alt: 'NFDI4Chem Logo',
-        src: 'img/4Chem.png',
+        src: 'img/NFDI4Chem-Logo_mehrfarbig_schwarz_nurGraphik.svg',
       },
       items: [
         {
