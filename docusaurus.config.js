@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.png',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
