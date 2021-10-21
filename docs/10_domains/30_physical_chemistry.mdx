@@ -2,65 +2,61 @@
 title: "Physical Chemistry"
 ---
 
-## Summary:
+:::info Summary:
 
-Physical chemists are chemists who work primarily in the field of physical chemistry.
-Physical chemistry (or abbreviated PC) is an interdisciplinary science at the frontier between chemistry and physics, whose topics go beyond the classical areas of the respective individual sciences and can be divided into the five core subdisciplines of thermodynamics, kinetics, electrochemistry, spectroscopy and  quantum chemistry.
-While preparative chemistry focuses on questions of the methodology of chemical synthesis of known and new substances, physical chemistry attempts to describe the properties of substances and their transformation by applying concepts of physics to objects of chemistry by means of theoretical and experimental methods.
-Along with organic and inorganic chemistry, physical chemistry therefore represents one of the three key disciplines of "classical" chemistry, since it provides the theoretical basis for technical chemistry and process engineering.
-Its knowledge is also an integral part of many other disciplines and is used, for example, for description and understanding in biology and medicine, meteorology as well as the earth sciences.
+Physical chemistry is an interdisciplinary science at the frontier between chemistry and physics, whose topics go beyond the classical areas of the respective individual sciences. While preparative chemistry focuses on questions of the methodology of chemical synthesis of known and new substances, physical chemistry attempts to describe the properties of substances and their transformation by applying concepts of physics to objects of chemistry by means of theoretical and experimental methods. Along with organic and inorganic chemistry, physical chemistry therefore represents one of the three key disciplines of "classical" chemistry, since it provides the theoretical basis for technical chemistry and process engineering. Its knowledge is also an integral part of many other disciplines and is used, for example, for description and understanding in biology and medicine, meteorology as well as the earth sciences. Due to this great interdisciplinarity and the use of numerous physicochemical methods in almost all areas of chemistry, a complete description of physical chemistry as profile is hardly possible, which is why this article explicitly makes no claim to do so.
+:::
 
-## Type & planning of experiments:
+# Methods Profiles
 
-The working methods of a physical chemist vary significantly depending on the (main) research area and range from classical thermodynamic and kinetic measurements to electrochemical or spectroscopic investigations and purely computer-based quantum mechanical calculations.
-The type of experiments to be performed or that can be performed is also largely determined by the sample type and quantity, its characteristics (e.g. state of aggregation, stability, etc.) and the properties to be analyzed.
-An essential task of a physical chemist is thus, before starting the actual investigations, to first evaluate through extensive and detailed literature research, which measurements are possible or necessary in order to obtain the desired information, taking into account the available resources (e.g. equipment, time schedule, etc.).
-Once the design of the experiment is complete, the next step is to prepare the sample for the subsequent measurement (e.g. dissolving it in a special solvent, setting a suitable sample concentration, adding other substances necessary for the investigation, etc.) and then to find the best possible measurement conditions for the particular sample.
-Here, it is common practice to perform the same measurement with different parameters (e.g. temperature change) or to repeat it several times under the same conditions in order to subsequently perform an error analysis and thus be able to indicate measurement uncertainties in the result.
-This is followed by a more or less sophisticated and time-consuming analysis of the measurement, although in many cases it is only by combining several different measurement methods and interpreting the individual results in the context of other experiments that the desired information can be obtained and well-founded scientific statements can be derived.
+## EPR spectroscopy
 
-## Documentation of experiments:
-- [Documentation of research data](/docs/problems/data_documentation) and [metadata](/docs/topics/metadata) is carried out digitally using an ELN.
-- Experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. temperature) are noted in the ELN.
-- Observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment.
-- Obtained unprocessed raw files from measurements are uploaded to the Chemotion ELN in open file formats and attached directly to the respective ELN experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters.
-- Metadata related to the obtained data, such as temperature or solvent of measurement, have to be provided according to common metadata standards.
+### What is it?
+- **E**lectron **P**aramagnetic **R**esonance spectroscopy belongs together with NMR (**N**uclear **M**agnetic **R**esonance) spectroscopy to the group of magnetic resonance methods
+- measures the resonant microwave absorption of a paramagnetic sample in an external magnetic field (i.e measurement needs unpaired electrons)
 
-## Data producing methods:
-- Data can be collected during the experiment or after the measurement by analysing the obtained (raw) data.
-- In the field of physical chemistry, data are mainly (in the field of theoretical chemistry even exclusively) created digitally. Digital data are usually obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in [proprietary file formats](/docs/topics/format_standards) should be saved alongside interoperable [open file formats](/docs/topics/format_standards) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+### For what?
+- provides information about the electronic/atomic structure and the chemical environment (e.g. local environmental polarity) of the sample
+- for the characterization of molecular dynamics on the time scale of approx. 10 ps-1 μs (allows e.g. conclusions to be drawn about local nanoviscosity)
+- for distance measurements in the range of about 1-8 nm
 
-|Analytical method|Exemplary proprietary file extensions|Typical size of propietary file|Converter to open file format|Recommendation for open file extension*|File size of open format|
-|:------------|:-----------------|:--------|:--------|:------------|:--------------|
-|NMR spectroscopy|.fid|<1-50 MB|MNova  Topspin|.jdx  .zip|~1 MB|
-|EPR spectroscopy|.spe .DTA/.DSC|<1 MB|SpinToolbox|.txt .csv|<1 MB|
-|IR spectroscopy|.ispd .icIR|<1 MB| |.dx|<1 MB|
-|Raman spectroscopy|.dpt   .spc  .icRaman  .sps  .acs|<1 MB|proprietary software|.dx|<1 MB|
-|UV/VIS spectroscopy|.dsw   .str   .bsk   .bkn   .ksd   .jws   .jwb   .str8   .spc   .sre|<1 MB|proprietary software|.csv|<1 MB|
-|Fluorescence spectroscopy|.fds   .fs2f   .jws   .opj|<1 MB|proprietary software|.dx|<1 MB|
-|Mass spectrometry|.raw   .d   .baf|~250 MB|Proteowizard|.mzML|~250 MB|
-|Single crystal XRD|.raw|<1 MB|proprietary software|.cif|<1 MB|
-|Powder XRD|.raw|<1 MB|proprietary software|.xyd|<1 MB|
-|Gas chromatography|.gcd   .d|~2 MB|proprietary software|.txt|<1 MB|
-|HPLC|.xls|<1 MB|proprietary software|.csv|<1 MB|
-|Cyclic voltammetry|.nox   .pssession|~8 MB|proprietary software|.txt|<1 MB|
-|Differential scanning calorimetry (DSC)|.ngb-dsu   .ngb-taa|<1 MB|proprietary software|.csv|<1 MB|
-|Isothermal titration calorimetry (ITC)| ???|???|???|???|???|
-|Physisorption|.smp|<1 MB|proprietary software|.csv|<1 MB|
-|Dynamic light scattering (DLS)|.apkw .xlsx|<1 MB|proprietary software|.csv|<1 MB|
-|Atomic force microscopy (AFM)|???|???|???|???|???|
-|Transmission electron microscopy (TEM)|???|???|???|???|???|
+### What kind of data is generated?
+- almost exclusively [proprietary file formats](/docs/topics/format_standards) (e.g. .spe or .DTA/.DSC) of the "Bruker Corporation" company
+- transfer into [open file formats](/docs/topics/format_standards) (e.g. .txt or .csv) either via Bruker software on the measuring device itself or via tools like [SpinToolbox](https://www.spintoolbox.com/en/)
+- analysis of data using Bruker software or e.g. [EasySpin](https://www.easyspin.org/) as open-source toolbox for MATLAB
 
-** *This table will be continuously updated with new recommendations on interoperable open file formats.**
+### How to do it [FAIR](/docs/topics/fair)?
+- [documentation of all research data](/docs/problems/data_documentation) and [metadata](/docs/topics/metadata) is carried out digitally using an suitable [ELN](/docs/topics/eln) (possibly in addition to a manual laboratory notebook in paper form)
+- experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. frequency, temperature) are noted in the [ELN](/docs/topics/eln)
+- observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the [ELN](/docs/topics/eln) entry of the experiment
+- obtained unprocessed raw files from measurements are uploaded to [ELN](/docs/topics/eln) in open file formats and attached directly to the respective [ELN](/docs/topics/eln) experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters
+- [metadata](/docs/topics/metadata) related to the obtained data, such as temperature or solvent of measurement, follow common [metadata standards](/docs/topics/metadata)
+- research data are processed, analysed and compared with open non-proprietary software tools
+- simultaneously with [publication](/docs/problems/data_publication) as a research article in a scientific journal, the underlying research data is published in an open data [repository](/docs/topics/repositories) and linked to the article (incl. semantically richly annotated raw and processed data in open data formats for reuse)
+- an unique [persistent identifier](/docs/topics/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
 
-## Data analysis:
-- Research data are processed, analysed and compared (also to data of other experiments) within the Chemotion ELN, when possible.
-- Otherwise, (pre)processing and analysing of obtained digital data with software of analytical device before data are transferred to the Chemotion ELN (cf. data producing methods).
-- A detailed view, evaluation and comprehensible interpretation of results is carried out with the Chemotion ELN features or other open non-proprietary software tools.
+# Methods Data Format Overview
 
-## Publication of research data:
-- In addition to a research article in a scientific journal, the underlying research data are published in a repository and linked to the article to realise research data management according to the [FAIR data principles](/docs/topics/fair) ([Best practice examples](/docs/topics/best_practice)).
-- Publishing data to a repository includes semantically richly annotated raw and processed data in open data formats for reuse.
-- The use of the Chemotion ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/). For the publication of research data in other discipline-specific repositories, such as the [CCDC](https://www.ccdc.cam.ac.uk/) for crystallographic data, data have to be exported from the Chemotion ELN and uploaded into the respective database.
-- A [persistent identifier](/docs/topics/pid) (e.g. DOI) is generated for a dataset by a repository (via [DataCite](https://datacite.org/) for the Chemotion Repository), which is given in the journal publication or corresponding supporting information to link the data publication with the manuscript.
+|Analytical method|Exemplary proprietary file extensions|Typical size of propietary file|Converter to open file format|Recommendation for open file extension*|File format|File size of open format|
+|:------------|:-----------------|:--------|:--------|:------------|:--------------|:--------------|
+|NMR spectroscopy|.fid|<1-50 MB|MNova  Topspin|.jdx  .zip|JCAMP-DX NMReDATA|~1 MB|
+|EPR spectroscopy|.spe .DTA/.DSC|<1 MB|SpinToolbox|.txt .csv|text file, comma-separated values|<1 MB|
+|IR spectroscopy|.ispd .icIR|<1 MB| |.dx|JCAMP-DX|<1 MB|
+|Raman spectroscopy|.dpt   .spc  .icRaman  .sps  .acs|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|UV/VIS spectroscopy|.dsw   .str   .bsk   .bkn   .ksd   .jws   .jwb   .str8   .spc   .sre|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Fluorescence spectroscopy|.fds   .fs2f   .jws   .opj|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|Mass spectrometry|.raw   .d   .baf|~250 MB|Proteowizard|.mzML|mzML|~250 MB|
+|Single crystal XRD|.raw|<1 MB|proprietary software|.cif|crystallographic information file|<1 MB|
+|Powder XRD|.raw|<1 MB|proprietary software|.xyd|text file|<1 MB|
+|Gas chromatography|.gcd   .d|~2 MB|proprietary software|.txt|text file|<1 MB|
+|HPLC|.xls|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Cyclic voltammetry|.nox   .pssession|~8 MB|proprietary software|.txt|text file|<1 MB|
+|Differential scanning calorimetry (DSC)|.ngb-dsu   .ngb-taa|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Isothermal titration calorimetry (ITC)| ???|???|???|???|???|???|
+|Physisorption|.smp|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Dynamic light scattering (DLS)|.apkw .xlsx|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Atomic force microscopy (AFM)|???|???|???|???|???|???|
+|Transmission electron microscopy (TEM)|???|???|???|???|???|???|
+
+:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
+:::

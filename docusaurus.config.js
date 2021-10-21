@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
@@ -14,8 +14,8 @@ module.exports = {
     navbar: {
       title: 'Home',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/4Chem.png',
+        alt: 'NFDI4Chem Logo',
+        src: 'img/NFDI4Chem-Logo_mehrfarbig_schwarz_nurGraphik.svg',
       },
       items: [
         {
@@ -23,6 +23,10 @@ module.exports = {
           docId: 'intro',
           position: 'left',
           label: 'Knowledge Base',
+        },
+        {
+          label: 'FAQ',
+          href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
         },
       ],
     },
