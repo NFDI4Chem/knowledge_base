@@ -34,9 +34,6 @@
   --ifm-color-danger-light: var(--ifm-color-danger);
   --ifm-color-danger-lighter: var(--ifm-color-danger);
   --ifm-color-danger-lightest: var(--ifm-color-danger);
-  --ifm-color-success-lightest:	#a7a7a7;	
-  --ifm-color-success-lighter:	#939494;	
-  --ifm-color-success-light:	#8d8e8e;
   --ifm-color-success: var(--ifm-color-secondary);
   --ifm-color-success-dark: var(--ifm-color-success);
   --ifm-color-success-darker: var(--ifm-color-success);
