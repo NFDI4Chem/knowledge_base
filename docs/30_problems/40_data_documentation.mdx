@@ -1,3 +1,81 @@
 ---
 title: "Data Documentation"
+description: description of everything that "your future-self" would need to know
+page_id: data_documentation
+related_pages:
+	problems: [data_organisation, data_storage]
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+:::note summary quote:
+> Simply making your data „open“ does not make your data usable. Usability is the result of other people being able to make sense of your data: the quality of your filenames, your folder structure and your documentation greatly contribute to the level of reusability of your data. It is neither difficult nor time-consuming to maintain your data in a way that invites other researchers to investigate and explore.
+
+_Andreas von der Dunk, Technische Universität Dresden, Service Center Research Data_
+:::
+
+## General basics
+
+<img alt="data for future generations" src={useBaseUrl('/img/problems/data_1517.png')} width="250" align="right" vspace="10" hspace="10" />
+
+A clean and comprehensible organisation of data and documents are an important part of good scientific practice and an important step to realise research data management according to the [FAIR data principles](/docs/topics/fair). 
+
+An essential task is to plan the organisation and storage of data, metadata, and documents in advance and to document the relevant measures.
+
+Central requirements are the definition of [formal responsibilities, organisational conventions](#formal-responsibilities-and-organisational-conventions) and [technical implementations](#technical-implementations) to organise the data and meta information produced. The information collected for this purpose is recorded in the [Data Management Plan](/docs/problems/dmp). Note that a good data organisation also estimates the costs (see [costing tool and checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/costing/) for example) in the early application phase.
+
+
+### Formal responsibilities and organisational conventions
+
+To make a long story short: It's mainly about describing who will and how to work with documents. First steps could be about:
+- Documenting the responsibilities of primary researchers and project staff.
+- Creating user roles: Define detailed rights for users / groups / roles to access data and sensitive information.
+- Describing processes of quality assurance including protected storage, sharing, and accessibility in the short term and on the long run.
+- Data processing: How, where, how fast. Describe input and output data. Decide how you will name and structure files and folders.
+
+The result should be descriptive documents that unambiguously define for files which are used in the course of the daily work routines:
+- on which status (for example original file, temporary work file; Draft, intermediate version, final version),
+- where (workstation PC, central file server, Database), 
+- for how long (temporarily, project duration, long-term availability),
+- and in which format they are saved.
+
+<img alt="small data handout" src={useBaseUrl('/img/problems/en_data_handout.png')} width="600" align="center" vspace="10" hspace="10" />
+
+
+### Technical implementations
+
+Get an overview of the occurring data and document flows. A short description, easy to understand for every user, should be accessible on a low level and explain the main concepts. The data itself needs to have a bulletproof [Data Organisation](/docs/problems/data_organisation) including [Metadata](/docs/topics/metadata/) and suitable [Data Format Standards](/docs/topics/format_standards/). Find out more about the usual [Best Practice](/docs/topics/best_practice/) at your institute or within your discipline. Plan how documents can be shared between project staff and what needs to be accessed for [Data Publication](/docs/problems/data_publication/) with [PID](/docs/topics/pid/).
+
+Data security affects all technical and organisational issues to protect the data from alteration, loss, and Destruction. In this context, storage methods, backup procedures, necessary physical resources as well as automated and administrative routines must be planned and put in place. Ask local contacts or external experts about already established technologies for [Data Storage and Archiving](/docs/problems/data_storage) as well as suitable [Repositories](/docs/topics/repositories/).
+
+
+## Synopsis
+
+<img alt="small data handout" src={useBaseUrl('/img/problems/en_data_orgsteps.png')} width="400" align="right" vspace="10" hspace="10" />
+
+Good data documentation does not happen over night - take small steps first. The documentation of research data is primarily an organisational problem that is accompanied and supported by technological measures:
+- Record of status quo:
+    - Which organisational processes have been used so far and which technologies support them?
+    - What are the regulatory boundaries and technical limits?
+    - Which personal roles are involved?
+    - Which devices or file formats are or have been used?
+    - Are there any special features?
+- Awareness: Who produces (meta)data, and who continues to use data and how?
+- Define internal rules and processes: What are the targets of RDM, and how can it be achieved?
+- Apply and evaluate rules, iteratively: Learn, set, follow, repeat. Keep it simple and smart (KISS).
+- Develop a suitable technology: Determine specific requirements in the first project phase and continuously adapt them to changing conditions.
+- Establish supporting technology: Evaluate and test software like [ELN](/docs/topics/eln/) and [Repositories](/docs/topics/repositories/), train staff.
+- Obtain legal advice, include local and higher-level policies and procedures: Contact legal department at your institution or [NFDI Querschnittssektion “Ethik und Recht”](https://www.nfdi.de/einrichtung-von-ersten-sektionen/)
+- Make rules and decisions accessible to everyone at an early stage, for example in the form of a short handout.
+- Check the concept regularly and update it if necessary.
+
+
+## Sources and further information
+- https://rdmkit.elixir-europe.org/metadata_management.html
+- https://www.data.cam.ac.uk/data-management-guide/organising-your-data
+- https://rfii.de/en/topics/
+- https://datascience.codata.org/articles/10.5334/dsj-2020-032/
+- german: "Was Forschende wollen – Bericht aus der Beratungspraxis zum Forschungsdatenmanagement" [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5524930.svg)](https://doi.org/10.5281/zenodo.5524930)
+- german: https://www.researchgate.net/publication/221657547_Handbuch_Forschungsdatenmanagement
+- german: https://www.degruyter.com/document/doi/10.1515/9783110657807/html?lang=en
+- german: https://handbuch.tib.eu/w/Lehrbuch_Forschungsdatenmanagement/_Druckversion
