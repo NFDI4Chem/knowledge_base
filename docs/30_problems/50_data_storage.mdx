@@ -7,7 +7,7 @@ related_pages:
 	topics: [repositories]
 ---
 
-If you plan to collect data and process it into information, you should consider different types of storage with regard to security, backup, access time and sharing with others. Also interesting is further [how to estimate the computational resources for data processing and analysis](https://rdmkit.elixir-europe.org/storage.html#how-do-you-estimate-computational-resources-for-data-processing-and-analysis). There are different requirements for the entire [Data Life Cycle](/docs/topics/data_life_cycle/). With regard to the workflows used in the project, care should also be taken to secure these workflows and tools (software version!) to ensure the reproducibility of results.
+If you plan to collect data and process it into information, you should consider different types of storage with regard to security, backup, access time and sharing with others. It is also of interest [how to estimate the computational resources for data processing and analysis](https://rdmkit.elixir-europe.org/storage.html#how-do-you-estimate-computational-resources-for-data-processing-and-analysis). There are different requirements for the entire [Data Life Cycle](/docs/topics/data_life_cycle/). Regarding the workflows used in a project, care should also be taken when securing these workflows and tools (software version!) to ensure the reproducibility of results.
 
 ## Workflow perspective
 Let's discuss different storage solutions along a possible workflow. Think of all possible data sources that provide data in your project, such as laboratory equipment (devices), manually collected data or external data from publications or project partners. Some devices may continuously automatically deliver data points while others regularly provide files for collection. Reduce the amount to the data points necessary for your project, consider possible pre-processing and estimate the data that will arise in terms of frequency and size. It is possible that data can already be processed while other data of the same type is still being recorded. At what point in the workflow is the data annotated by further metadata and does this possibly also work automatically? What descriptive documents are provided by human sources and when?
@@ -22,7 +22,7 @@ When planning [data management](/docs/problems/dmp/), think about storage soluti
 - sharing opportunities, guidelines for data sharing outside the institute, compliance and rights management
 - "read-only" copy of the original raw data in a separate location (not editable)
 - how long raw data, as well as data processing pipelines and analysis workflows need to be stored, especially after the end of the project
-- metadata: identifier and file description, associated with your data
+- [metadata](/docs/topics/metadata/): identifier and file description, associated with your data
 - keeping track of the changes (version control), conflict resolution, data mentoring and back-tracing capabilities
 
 Involve the IT team of your home organisation, they can also provide advice on a tiered storage system:
@@ -36,7 +36,7 @@ The 3-2-1-0 rule:
 - there should be **3** copies of data
 - on **2** different media
 - with **1** copy being offline
-- and there should be **0** problems when recovery. (So test your backups regularly...)
+- and there should be **0** problems in the event of recovery. (So test your backups regularly...)
 
 Why? Sometimes it's not a technical problem, but a "layer-8"-issue: human error.
 
