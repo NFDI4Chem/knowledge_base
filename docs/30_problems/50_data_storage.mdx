@@ -1,16 +1,67 @@
 ---
 title: "Data Storage and Archiving"
+description: how to find appropriate storage solutions
+page_id: data_storage
+related_pages:
+	problems: [data_organisation, data_documentation]
+	topics: [repositories]
 ---
 
+If you plan to collect data and process it into information, you should consider different types of storage with regard to security, backup, access time and sharing with others. It is also of interest [how to estimate the computational resources for data processing and analysis](https://rdmkit.elixir-europe.org/storage.html#how-do-you-estimate-computational-resources-for-data-processing-and-analysis). There are different requirements for the entire [Data Life Cycle](/docs/topics/data_life_cycle/). Regarding the workflows used in a project, care should also be taken when securing these workflows and tools (software version!) to ensure the reproducibility of results.
 
-Article about Data Storage and Archiving
+## Workflow perspective
+Let's discuss different storage solutions along a possible workflow. Think of all possible data sources that provide data in your project, such as laboratory equipment (devices), manually collected data or external data from publications or project partners. Some devices may continuously automatically deliver data points while others regularly provide files for collection. Reduce the amount to the data points necessary for your project, consider possible pre-processing and estimate the data that will arise in terms of frequency and size. It is possible that data can already be processed while other data of the same type is still being recorded. At what point in the workflow is the data annotated by further metadata and does this possibly also work automatically? What descriptive documents are provided by human sources and when?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor a justo iaculis sagittis. Nullam sit amet sodales ligula. Nam vel turpis ante. Ut vestibulum, urna ut porttitor volutpat, nisi massa malesuada ex, vitae mattis lorem nisi ac lorem. Fusce bibendum nec enim at tincidunt. Phasellus convallis magna dui, eget cursus eros bibendum id. Phasellus eu lacinia quam. Morbi venenatis suscipit elit ut consectetur. Praesent ut quam ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque non faucibus massa. Duis consequat efficitur magna, non dignissim mauris imperdiet eget.
+When planning [data management](/docs/problems/dmp/), think about storage solutions and request short-term and long-term storage in advance.
 
-Ut egestas metus ut ante luctus, tristique malesuada ante pretium. Mauris aliquet consectetur eros, eget mollis augue congue sollicitudin. Mauris iaculis metus vitae felis hendrerit, ac tempus tortor vestibulum. Proin ullamcorper, metus sed ultrices molestie, velit nulla feugiat odio, a fermentum erat sem quis sem. Maecenas pharetra mauris non luctus hendrerit. Donec non mauris blandit, fringilla lacus sed, porttitor sem. Integer a ante massa. Morbi rhoncus quis odio in maximus. Nullam mollis pulvinar condimentum. Nunc nulla magna, porttitor a porttitor id, suscipit non nibh. Fusce blandit purus maximus felis egestas imperdiet. Donec quis convallis nibh.
+#### Necessary requirements when designing a storage system:
+- space requirements for collection or generation raw data including temporary files ("fast storage")
+- space requirements for data that can be permanently accessed over the duration of the project
+- access to the data (in case of collaborative projects), how do they expect to access the data and for what purpose
+- transfer speed
+- sharing opportunities, guidelines for data sharing outside the institute, compliance and rights management
+- "read-only" copy of the original raw data in a separate location (not editable)
+- how long raw data, as well as data processing pipelines and analysis workflows need to be stored, especially after the end of the project
+- [metadata](/docs/topics/metadata/): identifier and file description, associated with your data
+- keeping track of the changes (version control), conflict resolution, data mentoring and back-tracing capabilities
 
-Cras dictum pharetra lectus, a laoreet nulla commodo at. Proin aliquet risus eu nisi tempus, non lobortis mauris tristique. Vivamus at libero a risus ornare commodo. Integer in ante vestibulum, feugiat dolor at, blandit dui. Sed at dui non erat hendrerit ornare sit amet at lorem. Sed sed urna sodales, hendrerit elit sit amet, auctor turpis. Proin lobortis urna nec pulvinar iaculis. Morbi vel mollis erat, ut finibus eros. Phasellus in pharetra dui. Etiam vel ultricies tellus, in mollis ante. Aenean vel lectus odio. Ut tincidunt vel neque non faucibus. Mauris pulvinar velit fermentum, fermentum urna ac, ornare turpis. Integer vel tristique orci. Nulla malesuada mattis erat sed condimentum. Cras dui libero, iaculis a fringilla eget, luctus a diam.
+Involve the IT team of your home organisation, they can also provide advice on a tiered storage system:
+- "hot" storage: fast access speed, high access frequency, high value data -> high cost
+- "cold" storage: low access speed and frequency, usually off-premises -> low cost
+- preservation solutions (data archiving services)
 
-Integer cursus ipsum quis turpis feugiat, in elementum odio porta. Nulla nec ligula metus. Aliquam varius nisi nec mauris bibendum tristique. Maecenas vel elit ac leo suscipit facilisis eget non est. Donec aliquam suscipit erat. Praesent at odio et magna vestibulum euismod a eu nunc. Sed tristique id sapien quis aliquet. Suspendisse ac odio volutpat, mattis odio at, aliquam mauris. Curabitur ac nisl vitae ante interdum auctor vel sed ex. Donec ac accumsan magna. Sed orci justo, commodo dictum nibh vel, vestibulum posuere metus. Proin mollis sapien at libero tempor porttitor. Quisque quis risus posuere, varius diam sed, consectetur risus.
 
-Nunc arcu leo, porta ac laoreet vitae, blandit eget elit. Vestibulum id augue ullamcorper, interdum magna nec, cursus odio. Donec quam justo, posuere sit amet ligula sit amet, pharetra pellentesque dolor. Nullam ante dui, porta vitae auctor eget, accumsan ut mauris. Nunc finibus malesuada accumsan. Sed at libero a ex sollicitudin aliquam. Donec in ante eget nisi cursus euismod. Fusce lorem justo, mollis quis commodo in, pulvinar at libero.
+#### No backup? No mercy!
+The 3-2-1-0 rule:
+- there should be **3** copies of data
+- on **2** different media
+- with **1** copy being offline
+- and there should be **0** problems in the event of recovery. (So test your backups regularly...)
+
+Why? Sometimes it's not a technical problem, but a "layer-8"-issue: human error.
+
+
+### Ok, I'm lost - this is far from my business.
+
+Many of the requirements are often solved by dedicated [repositories](/docs/topics/repositories/). It is also worth taking a look at group drives or cloud services such as NextCloud (on-premises). Your local IT team will help you with services that they normally support. But nevertheless: Make sure to generate good documentation (i.e., README file) and metadata together with the data. Check if your institute provides a (meta)data management system, such as iRODS, DataVerse, FAIRDOM-SEEK or OSF.
+
+
+## Nirvana - your data in FAIR-paradise
+:::info Preservation
+> Relevant (meta)data (to guarantee reproducibility) should be preserved for a certain amount of time, that is usually defined by funders or institution policy. However, where to preserve data that are not needed for active processing or analysis anymore is a common question in data management.
+
+_see [RDMKit](https://rdmkit.elixir-europe.org/preserving)_
+:::
+
+Documentation or conversion of files into long-term backup formats. The data-holding facility must for its part guarantee security, quality and availability. Consider any license regulations or data protection of personal data when releasing it to the public.
+
+If you publish your data in public repositories, your data will also be preserved.
+
+
+## Sources and further information
+- https://rdmkit.elixir-europe.org/storage.html
+- https://www.rdm.kit.edu/index.php
+- https://www.druva.com/glossary/what-is-data-archiving-definition-and-related-faqs/
+- german: https://www.researchgate.net/publication/221657547_Handbuch_Forschungsdatenmanagement
+- german: https://www.degruyter.com/document/doi/10.1515/9783110657807/html
+- german: https://handbuch.tib.eu/w/Lehrbuch_Forschungsdatenmanagement/_Druckversion
