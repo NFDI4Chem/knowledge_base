@@ -24,21 +24,21 @@ const FeatureList = [
     Svg: require('/img/polymer.svg').default,
     link: '/docs/domains/polymer_chemistry',
   },
-  {
+/*   {
     title: 'Biochemistry',
     Svg: require('/img/bc.svg').default,
     link: '/docs/domains/biochemistry',
-  },
+  }, */
   {
     title: 'Pharmaceutical Chemistry',
     Svg: require('/img/pharma.svg').default,
     link: '/docs/domains/pharmaceutical_chemistry',
   },
-  {
+/*   {
     title: 'Computational Chemistry',
     Svg: require('/img/comp.svg').default,
     link: '/docs/domains/computational_chemistry',
-  },
+  }, */
 ];
 
 function Feature({ Svg, title, link }) {
