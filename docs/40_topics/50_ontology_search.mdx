@@ -2,15 +2,114 @@
 title: "Ontology Search"
 ---
 
+![Ontology-based RDM](/img/topics/Graphical_Abstract_Ontologies4Chem_2021.svg)
+Image Attribution: Philip Strömert, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 
-Article about Ontology search
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor a justo iaculis sagittis. Nullam sit amet sodales ligula. Nam vel turpis ante. Ut vestibulum, urna ut porttitor volutpat, nisi massa malesuada ex, vitae mattis lorem nisi ac lorem. Fusce bibendum nec enim at tincidunt. Phasellus convallis magna dui, eget cursus eros bibendum id. Phasellus eu lacinia quam. Morbi venenatis suscipit elit ut consectetur. Praesent ut quam ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque non faucibus massa. Duis consequat efficitur magna, non dignissim mauris imperdiet eget.
+:::info Summary:
+The term ontology, as used in our context, refers to a formally specified conceptualization of a certain research domain that is focused on answering the question of what can and needs to be represented in this domain. An ontology thus defines a collection of technical terms that can be used to semantically describe research data in a [FAIR](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/fair/) and machine-readable way by the means of annotating the research data with these technical terms. This is best done automatically behind the scenes by your everyday work apps like the [ELN](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/eln/). However, as automated ontology-based annotation is not the standard yet, as ontologies evolve with the new insights gained from research, and, as they might contain term definitions which a domain expert (e.g. a chemist like you) might disagrees with, one needs to know how to browse and improve ontologies manually. The present article is meant to provide the necessary background needed for this.
+:::
 
-Ut egestas metus ut ante luctus, tristique malesuada ante pretium. Mauris aliquet consectetur eros, eget mollis augue congue sollicitudin. Mauris iaculis metus vitae felis hendrerit, ac tempus tortor vestibulum. Proin ullamcorper, metus sed ultrices molestie, velit nulla feugiat odio, a fermentum erat sem quis sem. Maecenas pharetra mauris non luctus hendrerit. Donec non mauris blandit, fringilla lacus sed, porttitor sem. Integer a ante massa. Morbi rhoncus quis odio in maximus. Nullam mollis pulvinar condimentum. Nunc nulla magna, porttitor a porttitor id, suscipit non nibh. Fusce blandit purus maximus felis egestas imperdiet. Donec quis convallis nibh.
+# Introduction
+Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analyzed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. Ontologies, taxonomies, terminologies or vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data.
+Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones.
 
-Cras dictum pharetra lectus, a laoreet nulla commodo at. Proin aliquet risus eu nisi tempus, non lobortis mauris tristique. Vivamus at libero a risus ornare commodo. Integer in ante vestibulum, feugiat dolor at, blandit dui. Sed at dui non erat hendrerit ornare sit amet at lorem. Sed sed urna sodales, hendrerit elit sit amet, auctor turpis. Proin lobortis urna nec pulvinar iaculis. Morbi vel mollis erat, ut finibus eros. Phasellus in pharetra dui. Etiam vel ultricies tellus, in mollis ante. Aenean vel lectus odio. Ut tincidunt vel neque non faucibus. Mauris pulvinar velit fermentum, fermentum urna ac, ornare turpis. Integer vel tristique orci. Nulla malesuada mattis erat sed condimentum. Cras dui libero, iaculis a fringilla eget, luctus a diam.
+# Ontologies useful for Chemistry
+![Ontology-based RDM](/img/topics/Overview_Ontologies4Chem_2021.svg)
+Image Attribution: Philip Strömert, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 
-Integer cursus ipsum quis turpis feugiat, in elementum odio porta. Nulla nec ligula metus. Aliquam varius nisi nec mauris bibendum tristique. Maecenas vel elit ac leo suscipit facilisis eget non est. Donec aliquam suscipit erat. Praesent at odio et magna vestibulum euismod a eu nunc. Sed tristique id sapien quis aliquet. Suspendisse ac odio volutpat, mattis odio at, aliquam mauris. Curabitur ac nisl vitae ante interdum auctor vel sed ex. Donec ac accumsan magna. Sed orci justo, commodo dictum nibh vel, vestibulum posuere metus. Proin mollis sapien at libero tempor porttitor. Quisque quis risus posuere, varius diam sed, consectetur risus.
+| Ontology | Domain | License | Modularity | Used in |
+| -------- | ------ | ------- | ---------- | ------- |
+| [ChEBI](https://www.ebi.ac.uk/ols/ontologies/chebi) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO \& OBO based | YMDB, HMDB, PubChem, MassBank, KNApSAcK, UM-BBD, GMD, SMID-DB |
+| [CHIRO](https://terminology.nfdi4chem.de/ts/ontologies/chiro)  | chemistry | CC0 1.0 | BFO \& OBO based | unknown |
+| [ChemOnt](http://classyfire.wishartlab.com/downloads) | chemistry | custom OA license | subsumable under BFO's \newline \textit{material entity} | YMDB, HMDB, T3DB, ECMDB, DrugBank,PubChem, ChEBI, LIPID MAPS, MoNA |
+| [CHEMINF](https://terminology.nfdi4chem.de/ts/ontologies/cheminf)  | chemistry | CC-BY 3.0 | BFO \& OBO based | PubChem, Open PHACTS |
+| [CHMO](https://terminology.nfdi4chem.de/ts/ontologies/chmo)  | chemistry | CC-BY 3.0 | BFO \& OBO based | Chemotion, Allotrope™ |
+| [MOP](https://terminology.nfdi4chem.de/ts/ontologies/mop)  | chemistry | CC-BY 4.0 | BFO \& OBO based | RXNO |
+| [RXNO](https://terminology.nfdi4chem.de/ts/ontologies/rxno)  | chemistry | CC-BY 4.0 | BFO \& OBO based | NameRXN, Wikipedia, Chemotion |
+| [OntoKin](http://www.theworldavatar.com/ontology/ontokin/) | chemistry | unknown | OntoCAPE upper level \& modules | J-Park Simulator |
+| [AFO](https://www.ebi.ac.uk/ols/ontologies/afo)  | chemistry | CC-BY 4.0 | BFO classes \& relations, many AFO- some custom OBO-modules  | Allotrope™ |
+| [PROCO](https://terminology.nfdi4chem.de/ts/ontologies/proco) | chemistry | CC-BY 4.0 | AFO \& OBO based | Allotrope™ |
+| [MS](https://terminology.nfdi4chem.de/ontologies/ms) | chemistry | CC-BY 4.0 | BFO \& OBO mapping possible | mzML |
+| [nmrCV](https://terminology.nfdi4chem.de/ontologies/nmrcv) | chemistry | Public Domain Mark 1.0 | BFO \& OBO mapping possible | MetaboLights, HMDB |
+| [BFO](https://terminology.nfdi4chem.de/ontologies/bfo) | upper level (classes only) | CC-BY 4.0 | OBO backbone | >300 ontologies \& >50 organizations, PubChem |
+| [RO](https://terminology.nfdi4chem.de/ts/ontologies/ro) | upper level (relations) | CC0 1.0 | BFO \& OBO based | Monarch Initiative, OBO Foundry, Gene Ontology, PubChem |
+| [IAO](https://terminology.nfdi4chem.de/ts/ontologies/iao) | information artefacts | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™, PubChem, ISA tools |
+| [OBI](https://terminology.nfdi4chem.de/ts/ontologies/obi) | biomedicine | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™, PubChem |
+| [UO](https://terminology.nfdi4chem.de/ts/ontologies/uo) | scientific units | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, UOM, PubChem |
+| [QUDT](http://www.qudt.org/pages/QUDToverviewPage.html) | scientific units | CC-BY 4.0 | BFO \& OBO based mapping possible | openPHACTS |
+| [PATO](https://terminology.nfdi4chem.de/ts/ontologies/pato) | phenotypic \& physical qualities | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™ |
+| [SIO](https://terminology.nfdi4chem.de/ts/ontologies/sio) | upper level | CC-BY 4.0 | BFO alignment | PubChem |
+| [EDAM](https://terminology.nfdi4chem.de/ts/ontologies/edam) | life-sciences \& data management | CC-BY 4.0 | BFO \& OBO mapping possible | EMBOSS, Bio-jETI |
+| [OntoCAPE](http://www.theworldavatar.com/ontology/ontocape/) | upper level \& engineering | GNU GPLv2 | provides upper level concepts | J-Park Simulator |
 
-Nunc arcu leo, porta ac laoreet vitae, blandit eget elit. Vestibulum id augue ullamcorper, interdum magna nec, cursus odio. Donec quam justo, posuere sit amet ligula sit amet, pharetra pellentesque dolor. Nullam ante dui, porta vitae auctor eget, accumsan ut mauris. Nunc finibus malesuada accumsan. Sed at libero a ex sollicitudin aliquam. Donec in ante eget nisi cursus euismod. Fusce lorem justo, mollis quis commodo in, pulvinar at libero.
+# General Scientific Ontologies
+
+## BFO
+The Basic Formal Ontology (BFO)](https://terminology.nfdi4chem.de/ts/ontologies/bfo) is the most widely used upper ontology for many existing chemistry domain ontologies that are part of [The Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/) project.
+## SIO
+The [Semanticscience Integrated Ontology (SIO)](https://terminology.nfdi4chem.de/ts/ontologies/sio)
+It has been used in [Bio2RDF](http://bio2rdf.org/), [SADI Semantic Web Services](http://sadiframework.org), [DisGeNET](http://rdf.imim.es/DisGeNET.html), [PubChemRDF](http://pubchem.ncbi.nlm.nih.gov/rdf/), [EBI's Gene Expression Atlas](http://www.ebi.ac.uk/rdf/documentation/atlas) and the [Graph4Code project](https://wala.github.io/graph4code/). To foster semantic interoperability, SIO is mapped to BFO and RO for important core classes and relations.
+## OntoCape
+**TODO**
+## RO
+**TODO**
+## OBI
+**TODO**
+## IAO
+**TODO**
+## PATO
+**TODO**
+## EDAM
+**TODO**
+## UO
+**TODO**
+## QUDT
+**TODO**
+
+# Chemistry Domain Ontologies
+## Ontologies for Chemical Entities and their Roles
+## ChEBI
+**TODO**
+## ChemOnt
+**TODO**
+## CHIRO
+**TODO**
+## CHEMINF
+**TODO**
+## CHMO
+**TODO**
+## MOP
+**TODO**
+## RXNO
+**TODO**
+## OntoKin
+**TODO**
+## AFO
+**TODO**
+## PROCO
+**TODO**
+## MS
+**TODO**
+## nmrCV
+
+
+
+
+# Glossary
+In order to be able to speak about the existing ontologies in the domain of chemistry, we need to provide a very brief glossary of the most important technical terms that describe an ontology:
+* **classes** represent those portions of reality that exist as generic entities, such as atoms and molecules, chemical reactions, lab equipment and experimental methods (e.g. the class *MassSpectrometer*)
+* **instances**, **individuals** or **particulars** of a class are particular entities that exist in reality, (e.g. a particular mass spectrometer identified via a serial number)
+* **relations** or **properties** are terms used to signify the interdependence between classes or individuals (e.g. a specific molecule *participates in* a certain chemical reaction)
+* **taxonomy** refers to a hierarchical structuring of classes into superclasses and subclasses (e.g *MassSpectrometer is_a Device* or *HomoSapiens is_a Mamal*)
+* **axioms** are the rules defined to express relations that always hold true between classes or instances of classes (e.g. *MolecularProcess* is a *process* that must have one or more *MolecularEntities* as its participants)
+* **upper ontologies** conceptualize the most general parts of reality (e.g. time, space, material matter, process, causality, parthood, etc) and thus can provide a semantic framework for domain or application ontologies
+** In a best case scenario there is only one upper ontology to be used by many domain ontologies to ensure their interoperability
+* **domain ontologies** conceptualize specific aspects of a given domain (e.g. ChEBI conceptualizes only chemical entities like atoms and molecules as well as their roles in certain contexts)
+* **application ontologies** are domain ontologies that are implemented in a concrete application and thus limited to the applications use cases
+
+# References/ further reading
+* [Ontologies4Chem overview paper](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) by TA 6.1
+----
+written by: https://orcid.org/0000-0002-1595-3213
+
