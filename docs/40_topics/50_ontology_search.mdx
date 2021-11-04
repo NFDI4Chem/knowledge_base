@@ -7,22 +7,26 @@ Image Attribution: Philip Strömert, Oliver Köpler, Johannes Hunold, Steffen Ne
 
 
 :::info Summary:
-The term ontology, as used in our context, refers to a formally specified conceptualisation of a certain research domain that is focused on answering the question of what can and needs to be represented in this domain. An ontology thus defines a collection of technical terms that can be used to semantically describe research data in a [FAIR](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/fair/) and machine-readable way by the means of annotating the research data with these technical terms. This is best done automatically behind the scenes by your everyday work apps like the [ELN](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/eln/). However, as automated ontology-based annotation is not the standard yet, as ontologies evolve with the new insights gained from research, and, as they might contain term definitions which a domain expert (e.g. a chemist like you) might disagrees with, one needs to know how to browse and improve ontologies manually. The present article is meant to provide the necessary background needed for this.
+The term ontology, as used in our context, refers to a formally specified conceptualisation of a certain research domain that is focused on answering the question of what can and needs to be represented in this domain. An ontology thus defines a collection of technical terms that can be used to semantically describe research data in a [FAIR](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/fair/) and machine-readable way by the means of annotating the research data with these technical terms. This is best done automatically behind the scenes by your everyday work apps like the [ELN](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/eln/). However, as automated ontology-based annotation is not the standard yet, as ontologies evolve with the new insights gained from research, and, as they might contain term definitions which a domain expert (e.g. a chemist like you) might disagree with, knowing the core concepts of ontologies in ones research domain is helpful in a FAIR RDM context. 
 :::
 
 # Introduction
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b5c2oawLPU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
-Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analyzed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. Ontologies, taxonomies, terminologies or vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data.
-Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones.
+Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analyzed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. As can be seen exemplarily in the graphical abstract above, ontologies, taxonomies, terminologies or vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data.
+Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones. 
+Based on an [analysis done in Task Area 6.1](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) of the NFDI4Chem project, the present article provides a selection of those ontologies that seem most suitable for a FAIR RDM in chemistry.
 
+# Ontologies suitable for a FAIR RDM in chemistry
 
-# Ontologies useful for Chemistry
+## Graphical overview
+This graphical overview shows the suitable ontologies with regard to their position in the BFO/OBO framework. 
 ![Ontology-based RDM](/img/topics/Overview_Ontologies4Chem_2021.svg)
 Image Attribution: Philip Strömert, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+Here we can see that these ontologies have different scopes, which means they only provide terms for the representation/conceptualisation of certain aspects of reality (e.g. ChEBI only covers chemical material entities and their roles). Some have a rather narrow scope, some have a broader scope and sometimes these scopes overlap.  
 
-## Table of Ontologies useful in Chemistry Contexts
+## Tabular overview
 | Ontology | Domain | License | Modularity | Used in |
 | -------- | ------ | ------- | ---------- | ------- |
 | [ChEBI](https://www.ebi.ac.uk/ols/ontologies/chebi) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | YMDB, HMDB, PubChem, MassBank, KNApSAcK, UM-BBD, GMD, SMID-DB |
