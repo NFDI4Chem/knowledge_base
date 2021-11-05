@@ -1,102 +1,111 @@
 ---
-title: "Ontology Search"
+title: "Ontology"
 ---
 
-![Ontology-based RDM](/img/topics/Graphical_Abstract_Ontologies4Chem_2021.svg)
-Image Attribution: Philip Strömert, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
-
-
 :::info Summary:
-The term ontology, as used in our context, refers to a formally specified conceptualisation of a certain research domain that is focused on answering the question of what can and needs to be represented in this domain. An ontology thus defines a collection of technical terms that can be used to semantically describe research data in a [FAIR](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/fair/) and machine-readable way by the means of annotating the research data with these technical terms. This is best done automatically behind the scenes by your everyday work apps like the [ELN](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/eln/). However, as automated ontology-based annotation is not the standard yet, as ontologies evolve with the new insights gained from research, and, as they might contain term definitions which a domain expert (e.g. a chemist like you) might disagrees with, one needs to know how to browse and improve ontologies manually. The present article is meant to provide the necessary background needed for this.
+The term ontology, as used in our context, refers to a formally specified conceptualisation of a certain research domain that is focused on answering the question of what can and needs to be represented in this domain. An ontology thus defines a collection of technical terms that can be used to semantically describe research data in a *[FAIR](/docs/topics/fair/)* and machine-readable way by the means of annotating the research data with these technical terms. This is best done automatically behind the scenes by your everyday work apps like the *[ELN](/docs/topics/eln/)*. However, as automated ontology-based annotation is not the standard yet, as ontologies evolve with the new insights gained from research, and, as they might contain term definitions which a domain expert (e.g. a chemist like you) might disagree with, knowing the core concepts of ontologies in ones research domain is helpful in a FAIR RDM context. 
 :::
 
-# Introduction
-Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analysed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. Ontologies, taxonomies, terminologies or vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data.
-Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones.
+## Introduction
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b5c2oawLPU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Ontologies useful for Chemistry
+![Ontology-based RDM](/img/topics/Graphical_Abstract_Ontologies4Chem_2021.svg)
+<sup>Image Attribution: Philip Strömert, Oliver Köpler, Johannes Hunold, Steffen Neumann, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)</sup>
+
+Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analyzed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. As can be seen exemplarily in the graphical abstract above, ontologies, taxonomies, terminologies or controlled vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data. Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones. Based on an [analysis done in Task Area 6.1](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) of the NFDI4Chem project, the present article provides a commented selections of those ontologies that seem most suitable for a FAIR RDM in chemistry, as well as a very brief [glossary](/docs/topics/ontology#glossary) of ontological technical terms.
+
+## Ontologies suitable for a FAIR RDM in chemistry
+
+### Graphical overview
+This graphical overview shows the suitable chemistry specific ontologies with regard to their position in the [BFO](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/ontology_search/#bfo)/[OBO Foundry](http://www.obofoundry.org/)framework. 
 ![Ontology-based RDM](/img/topics/Overview_Ontologies4Chem_2021.svg)
-Image Attribution: Philip Strömert, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+<sup>Image Attribution: Philip Strömert, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)</sup>
+
+Here we can see that these ontologies have different scopes, which means they only provide terms for the representation/conceptualisation of certain aspects of reality (e.g. ChEBI only covers chemical material entities and their roles). Some have a rather narrow scope, some have a broader scope and sometimes these scopes overlap.  
+
+### Tabular overview
+This tabular overview lists the suitable ontologies with regard to:
+* their general research domain, 
+* their open access license, 
+* the possibility of reusing them in a modular way (wheras a BFO alignment and OBO compatibility indicates an increased possibility),
+* and, their use in known applications.
 
 | Ontology | Domain | License | Modularity | Used in |
 | -------- | ------ | ------- | ---------- | ------- |
-| [ChEBI](https://www.ebi.ac.uk/ols/ontologies/chebi) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO \& OBO based | YMDB, HMDB, PubChem, MassBank, KNApSAcK, UM-BBD, GMD, SMID-DB |
-| [CHIRO](https://terminology.nfdi4chem.de/ts/ontologies/chiro)  | chemistry | CC0 1.0 | BFO \& OBO based | unknown |
-| [ChemOnt](http://classyfire.wishartlab.com/downloads) | chemistry | custom OA license | subsumable under BFO's \newline \textit{material entity} | YMDB, HMDB, T3DB, ECMDB, DrugBank,PubChem, ChEBI, LIPID MAPS, MoNA |
-| [CHEMINF](https://terminology.nfdi4chem.de/ts/ontologies/cheminf)  | chemistry | CC-BY 3.0 | BFO \& OBO based | PubChem, Open PHACTS |
-| [CHMO](https://terminology.nfdi4chem.de/ts/ontologies/chmo)  | chemistry | CC-BY 3.0 | BFO \& OBO based | Chemotion, Allotrope™ |
-| [MOP](https://terminology.nfdi4chem.de/ts/ontologies/mop)  | chemistry | CC-BY 4.0 | BFO \& OBO based | RXNO |
-| [RXNO](https://terminology.nfdi4chem.de/ts/ontologies/rxno)  | chemistry | CC-BY 4.0 | BFO \& OBO based | NameRXN, Wikipedia, Chemotion |
-| [OntoKin](http://www.theworldavatar.com/ontology/ontokin/) | chemistry | unknown | OntoCAPE upper level \& modules | J-Park Simulator |
-| [AFO](https://www.ebi.ac.uk/ols/ontologies/afo)  | chemistry | CC-BY 4.0 | BFO classes \& relations, many AFO- some custom OBO-modules  | Allotrope™ |
-| [PROCO](https://terminology.nfdi4chem.de/ts/ontologies/proco) | chemistry | CC-BY 4.0 | AFO \& OBO based | Allotrope™ |
-| [MS](https://terminology.nfdi4chem.de/ontologies/ms) | chemistry | CC-BY 4.0 | BFO \& OBO mapping possible | mzML |
-| [nmrCV](https://terminology.nfdi4chem.de/ontologies/nmrcv) | chemistry | Public Domain Mark 1.0 | BFO \& OBO mapping possible | MetaboLights, HMDB |
-| [BFO](https://terminology.nfdi4chem.de/ontologies/bfo) | upper level (classes only) | CC-BY 4.0 | OBO backbone | >300 ontologies \& >50 organizations, PubChem |
-| [RO](https://terminology.nfdi4chem.de/ts/ontologies/ro) | upper level (relations) | CC0 1.0 | BFO \& OBO based | Monarch Initiative, OBO Foundry, Gene Ontology, PubChem |
-| [IAO](https://terminology.nfdi4chem.de/ts/ontologies/iao) | information artefacts | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™, PubChem, ISA tools |
-| [OBI](https://terminology.nfdi4chem.de/ts/ontologies/obi) | biomedicine | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™, PubChem |
-| [UO](https://terminology.nfdi4chem.de/ts/ontologies/uo) | scientific units | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, UOM, PubChem |
-| [QUDT](http://www.qudt.org/pages/QUDToverviewPage.html) | scientific units | CC-BY 4.0 | BFO \& OBO based mapping possible | openPHACTS |
-| [PATO](https://terminology.nfdi4chem.de/ts/ontologies/pato) | phenotypic \& physical qualities | CC-BY 4.0 | BFO \& OBO based | OBO Foundry, Allotrope™ |
-| [SIO](https://terminology.nfdi4chem.de/ts/ontologies/sio) | upper level | CC-BY 4.0 | BFO alignment | PubChem |
-| [EDAM](https://terminology.nfdi4chem.de/ts/ontologies/edam) | life-sciences \& data management | CC-BY 4.0 | BFO \& OBO mapping possible | EMBOSS, Bio-jETI |
-| [OntoCAPE](http://www.theworldavatar.com/ontology/ontocape/) | upper level \& engineering | GNU GPLv2 | provides upper level concepts | J-Park Simulator |
+| [ChEBI](https://www.ebi.ac.uk/ols/ontologies/chebi) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | YMDB, HMDB, PubChem, MassBank, KNApSAcK, UM-BBD, GMD, SMID-DB |
+| [CHIRO](https://terminology.nfdi4chem.de/ts/ontologies/chiro)  | chemistry | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | BFO & OBO based | unknown |
+| [ChemOnt](http://classyfire.wishartlab.com/downloads) | chemistry | custom OA license | subsumable under BFO's *material entity* | YMDB, HMDB, T3DB, ECMDB, DrugBank,PubChem, ChEBI, LIPID MAPS, MoNA |
+| [CHEMINF](https://terminology.nfdi4chem.de/ts/ontologies/cheminf)  | chemistry | [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/) | BFO & OBO based | PubChem, Open PHACTS |
+| [CHMO](https://terminology.nfdi4chem.de/ts/ontologies/chmo)  | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | Chemotion, Allotrope™ |
+| [MOP](https://terminology.nfdi4chem.de/ts/ontologies/mop)  | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | RXNO |
+| [RXNO](https://terminology.nfdi4chem.de/ts/ontologies/rxno)  | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | NameRXN, Wikipedia, Chemotion |
+| [OntoKin](http://www.theworldavatar.com/ontology/ontokin/) | chemistry | unknown | OntoCAPE upper level & modules | J-Park Simulator |
+| [AFO](https://www.ebi.ac.uk/ols/ontologies/afo)  | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO classes & relations, many AFO- some custom OBO-modules  | Allotrope™ |
+| [PROCO](https://terminology.nfdi4chem.de/ts/ontologies/proco) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO/AFO & OBO based | Allotrope™ |
+| [MS](https://terminology.nfdi4chem.de/ontologies/ms) | chemistry | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO mapping possible | mzML |
+| [nmrCV](https://terminology.nfdi4chem.de/ontologies/nmrcv) | chemistry | [Public Domain Mark 1.0](https://creativecommons.org/publicdomain/mark/1.0/deed) | BFO & OBO mapping possible | MetaboLights, HMDB |
+| [BFO](https://terminology.nfdi4chem.de/ontologies/bfo) | upper level (classes only) | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | OBO backbone | >300 ontologies & >50 organizations, PubChem |
+| [RO](https://terminology.nfdi4chem.de/ts/ontologies/ro) | upper level (relations) | CC0 1.0 | BFO & OBO based | Monarch Initiative, OBO Foundry, Gene Ontology, PubChem |
+| [IAO](https://terminology.nfdi4chem.de/ts/ontologies/iao) | information artefacts | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, Allotrope™, PubChem, ISA tools |
+| [OBI](https://terminology.nfdi4chem.de/ts/ontologies/obi) | biomedicine | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, Allotrope™, PubChem |
+| [UO](https://terminology.nfdi4chem.de/ts/ontologies/uo) | scientific units | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, UOM, PubChem |
+| [QUDT](http://www.qudt.org/pages/QUDToverviewPage.html) | scientific units | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based mapping possible | openPHACTS |
+| [PATO](https://terminology.nfdi4chem.de/ts/ontologies/pato) | phenotypic & physical qualities | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, Allotrope™ |
+| [SIO](https://terminology.nfdi4chem.de/ts/ontologies/sio) | upper level | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO alignment | PubChem |
+| [EDAM](https://terminology.nfdi4chem.de/ts/ontologies/edam) | life-sciences & data management | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO mapping possible | EMBOSS, Bio-jETI |
+| [OntoCAPE](http://www.theworldavatar.com/ontology/ontocape/) | upper level & engineering | [GNU GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0) | provides upper level concepts | J-Park Simulator |
 
-# General Scientific Ontologies
+### General Scientific Ontologies
 
-## BFO
-The Basic Formal Ontology (BFO)](https://terminology.nfdi4chem.de/ts/ontologies/bfo) is the most widely used upper ontology for many existing chemistry domain ontologies that are part of [The Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/) project.
-## SIO
+#### BFO
+The Basic Formal Ontology [(BFO)](https://terminology.nfdi4chem.de/ts/ontologies/bfo) is the most widely used upper ontology for many existing chemistry domain ontologies that are part of [The Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/) project. It is also in the process of becoming an ISO Standard.
+#### SIO
 The [Semanticscience Integrated Ontology (SIO)](https://terminology.nfdi4chem.de/ts/ontologies/sio)
 It has been used in [Bio2RDF](http://bio2rdf.org/), [SADI Semantic Web Services](http://sadiframework.org), [DisGeNET](http://rdf.imim.es/DisGeNET.html), [PubChemRDF](http://pubchem.ncbi.nlm.nih.gov/rdf/), [EBI's Gene Expression Atlas](http://www.ebi.ac.uk/rdf/documentation/atlas) and the [Graph4Code project](https://wala.github.io/graph4code/). To foster semantic interoperability, SIO is mapped to BFO and RO for important core classes and relations.
-## OntoCape
+#### OntoCape
 **TODO**
-## RO
+#### RO
 **TODO**
-## OBI
+#### OBI
 **TODO**
-## IAO
+#### IAO
 **TODO**
-## PATO
+#### PATO
 **TODO**
-## EDAM
+#### EDAM
 **TODO**
-## UO
+#### UO
 **TODO**
-## QUDT
+#### QUDT
 **TODO**
 
-# Chemistry Domain Ontologies
-## Ontologies for Chemical Entities and their Roles
-## ChEBI
-**TODO**
-## ChemOnt
-**TODO**
-## CHIRO
-**TODO**
-## CHEMINF
-**TODO**
-## CHMO
-**TODO**
-## MOP
-**TODO**
-## RXNO
-**TODO**
-## OntoKin
-**TODO**
-## AFO
-**TODO**
-## PROCO
-**TODO**
-## MS
-**TODO**
-## nmrCV
+### Chemistry Domain Ontologies
 
+#### ChEBI
+**TODO**
+#### ChemOnt
+**TODO**
+#### CHIRO
+**TODO**
+#### CHEMINF
+**TODO**
+#### CHMO
+**TODO**
+#### MOP
+**TODO**
+#### RXNO
+**TODO**
+#### OntoKin
+**TODO**
+#### AFO
+**TODO**
+#### PROCO
+**TODO**
+#### MS
+**TODO**
+#### nmrCV
 
-
-
-# Glossary
+## Glossary
 In order to be able to speak about the existing ontologies in the domain of chemistry, we need to provide a very brief glossary of the most important technical terms that describe an ontology:
 * **classes** represent those portions of reality that exist as generic entities, such as atoms and molecules, chemical reactions, lab equipment and experimental methods (e.g. the class *MassSpectrometer*)
 * **instances**, **individuals** or **particulars** of a class are particular entities that exist in reality, (e.g. a particular mass spectrometer identified via a serial number)
@@ -108,8 +117,7 @@ In order to be able to speak about the existing ontologies in the domain of chem
 * **domain ontologies** conceptualize specific aspects of a given domain (e.g. ChEBI conceptualizes only chemical entities like atoms and molecules as well as their roles in certain contexts)
 * **application ontologies** are domain ontologies that are implemented in a concrete application and thus limited to the applications use cases
 
-# References/ further reading
+## References/ further reading
 * [Ontologies4Chem overview paper](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) by TA 6.1
 ----
-written by: https://orcid.org/0000-0002-1595-3213
-
+<sup>written by: https://orcid.org/0000-0002-1595-3213</sup>
