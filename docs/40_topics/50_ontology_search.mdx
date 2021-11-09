@@ -9,21 +9,23 @@ The term ontology, as used in our context, refers to a formally specified concep
 ## Introduction
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b5c2oawLPU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+
 ![Ontology-based RDM](/img/topics/Graphical_Abstract_Ontologies4Chem_2021.svg)
-<sup>Image Attribution: Philip Strömert, Oliver Köpler, Johannes Hunold, Steffen Neumann, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)</sup>
+Image Attribution: Philip Strömert, Oliver Koepler, Johannes Hunold, Steffen Neumann, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+
 
 Research data is more than the aggregation of numbers or images in a scientific journal article, experimental section, or supplementary information. To fully reproduce the deduction of the results, we need access to the raw data and how it was generated, processed and analyzed. While humans can grasp all the semantics and knowledge expressed in articles and their experimental sections, computers can not do so without fine grained metadata annotations. As can be seen exemplarily in the graphical abstract above, ontologies, taxonomies, terminologies or controlled vocabularies can be used to semantically describe research data, producing this FAIR and machine-readable data. Quite a few ontologies already exist for the semantic description of general scientific concepts and relations, as well as for chemistry specific ones. Based on an [analysis done in Task Area 6.1](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) of the NFDI4Chem project, the present article provides a commented selections of those ontologies that seem most suitable for a FAIR RDM in chemistry, as well as a very brief [glossary](/docs/topics/ontology#glossary) of ontological technical terms.
 
-## Ontologies suitable for a FAIR RDM in chemistry
-
-### Graphical overview
-This graphical overview shows the suitable chemistry specific ontologies with regard to their position in the [BFO](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/ontology_search/#bfo)/[OBO Foundry](http://www.obofoundry.org/)framework. 
+## Graphical overview of chemical ontologies
+This graphical overview shows chemistry specific ontologies suitable for a FAIR RDM with regard to their position in the [BFO](https://nfdi4chem.chemie.uni-mainz.de/knowledge_base/docs/topics/ontology_search/#bfo)/[OBO Foundry](http://www.obofoundry.org/) framework. 
 ![Ontology-based RDM](/img/topics/Overview_Ontologies4Chem_2021.svg)
-<sup>Image Attribution: Philip Strömert, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)</sup>
+Image Attribution: Philip Strömert, [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 
 Here we can see that these ontologies have different scopes, which means they only provide terms for the representation/conceptualisation of certain aspects of reality (e.g. ChEBI only covers chemical material entities and their roles). Some have a rather narrow scope, some have a broader scope and sometimes these scopes overlap.  
 
-### Tabular overview
+### Tabular overview of chemical ontologies
 This tabular overview lists the suitable ontologies with regard to:
 * their general research domain, 
 * their open access license, 
@@ -50,60 +52,69 @@ This tabular overview lists the suitable ontologies with regard to:
 | [OBI](https://terminology.nfdi4chem.de/ts/ontologies/obi) | biomedicine | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, Allotrope™, PubChem |
 | [UO](https://terminology.nfdi4chem.de/ts/ontologies/uo) | scientific units | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, UOM, PubChem |
 | [QUDT](http://www.qudt.org/pages/QUDToverviewPage.html) | scientific units | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based mapping possible | openPHACTS |
-| [PATO](https://terminology.nfdi4chem.de/ts/ontologies/pato) | phenotypic & physical qualities | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO based | OBO Foundry, Allotrope™ |
+| [PATO](https://terminology.nfdi4chem.de/ts/ontologies/pato) | phenotypic & physical qualities | [CC-BY 4.0](https://creativecommons.org/licenses/by/3.0/) | BFO & OBO based | OBO Foundry, Allotrope™ |
 | [SIO](https://terminology.nfdi4chem.de/ts/ontologies/sio) | upper level | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO alignment | PubChem |
 | [EDAM](https://terminology.nfdi4chem.de/ts/ontologies/edam) | life-sciences & data management | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | BFO & OBO mapping possible | EMBOSS, Bio-jETI |
 | [OntoCAPE](http://www.theworldavatar.com/ontology/ontocape/) | upper level & engineering | [GNU GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0) | provides upper level concepts | J-Park Simulator |
 
-### General Scientific Ontologies
+## General Scientific Ontologies
 
-#### BFO
-The Basic Formal Ontology [(BFO)](https://terminology.nfdi4chem.de/ts/ontologies/bfo) is the most widely used upper ontology for many existing chemistry domain ontologies that are part of [The Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/) project. It is also in the process of becoming an ISO Standard.
-#### SIO
-The [Semanticscience Integrated Ontology (SIO)](https://terminology.nfdi4chem.de/ts/ontologies/sio)
-It has been used in [Bio2RDF](http://bio2rdf.org/), [SADI Semantic Web Services](http://sadiframework.org), [DisGeNET](http://rdf.imim.es/DisGeNET.html), [PubChemRDF](http://pubchem.ncbi.nlm.nih.gov/rdf/), [EBI's Gene Expression Atlas](http://www.ebi.ac.uk/rdf/documentation/atlas) and the [Graph4Code project](https://wala.github.io/graph4code/). To foster semantic interoperability, SIO is mapped to BFO and RO for important core classes and relations.
-#### OntoCape
-**TODO**
-#### RO
-**TODO**
-#### OBI
-**TODO**
-#### IAO
-**TODO**
-#### PATO
-**TODO**
-#### EDAM
-**TODO**
-#### UO
-**TODO**
-#### QUDT
-**TODO**
+### BFO
+The second version of the Basic Formal Ontology ([BFO 2.0](https://terminology.nfdi4chem.de/ts/ontologies/bfo)) is used as the upper framework by the [The Open Biological and Biomedical Ontology (OBO) Foundry](http://www.obofoundry.org/). Hence, all ontologies that are part of the OBO Library or that strive to be compatible with OBO need to be aligned to this BFO version. Although the specification reference of BFO 2.0 includes relations, their [temporal aspectcs cause problems](https://github.com/oborel/obo-relations/wiki/ROAndBFO), which is why in the OWL implementation of the BFO 2.0 specification the OBO community decided to only use the BFO 2.0 classes and to curate some of its core relations in the OBO Relation Ontology. In order to become an ISO Standard, the BFO developers have released a newer version called the [BFO 2020](https://basic-formal-ontology.org/bfo-2020.html) that also includes relations. Since these relations still use the the previously critiqued temporalized approch, the OBO community has not adapted BFO 2020 as its upper framework so far. 
+
+### SIO
+The Semanticscience Integrated Ontology ([SIO](https://terminology.nfdi4chem.de/ts/ontologies/sio)) is another upper level ontology that provides basic concepts (e.g. objects, information and processes) as well as their associated basic characteristics (e.g. functions, qualities and roles). It also contains many basic relations (e.g. *part of*, *has participant* or *is about*) needed in the description of real objects, processes and information. It has been used in [Bio2RDF](http://bio2rdf.org/), [SADI Semantic Web Services](http://sadiframework.org), [DisGeNET](http://rdf.imim.es/DisGeNET.html), [PubChemRDF](http://pubchem.ncbi.nlm.nih.gov/rdf/), [EBI's Gene Expression Atlas](http://www.ebi.ac.uk/rdf/documentation/atlas) and the [Graph4Code project](https://wala.github.io/graph4code/). To foster semantic interoperability, SIO is mapped to BFO and RO for important core classes and relations.
+
+### OntoCape
+The ontology for computer-aided chemical process engineering ([OntoCAPE](https://doi.org/10.1016/j.engappai.2006.06.010)) defines fundamental concepts and relations such as data structures, part-whole relations, processes, material, time and space or SI units. OntoCAPE is designed to be reusable and extendable in many different contexts of computer-aided process engineering, without the need for other ontologies. However, as of yet, no evidence could be found to indicate that the meta, upper and conceptual layers of OntoCAPE are being used outside of the network in which it is being developed. Similarly, we could not find any references regarding the interoperability between BFO based ontologies and OntoCAPE. 
+
+### RO
+The Relation Ontology ([RO](https://doi.org/10.5281/zenodo.5606494)) is the reference ontology of the OBO Foundry for general relations that can be reused in many different contexts (e.g. *part of*, *has characteristic* or *occurs in*). It is thus the place to go to whenever one looks for or needs to contribute OBO compliant relations.
+
+### OBI
+The Ontology of Biomedical Investigations ([OBI](https://doi.org/10.1186/2041-1480-1-S1-S7)) is another prominent OBO ontology that contains many of the common scientific terms needed to describe an investigation or experiment, including its protocols and measuring or assay methods and the equipment used in these planned processes.
+
+### IAO
+The Information Artefact Ontology ([IAO](https://terminology.nfdi4chem.de/ts/ontologies/iao)) is the reference ontology of the OBO Foundry for all those entities (e.g. *symbol*, *document*, *data item* or *is quality measurement of*) that are somehow ‘about’ other entities and that we need to describe information in a machine-readable way.
+
+### PATO
+The Phenotype And Trait Ontology ([PATO](https://doi.org/10.5281/zenodo.592861)) is the reference ontology of the OBO Foundry for all general physical qualities, such as *temperature* or *weight*. 
+
+### EDAM
+The Ontology of bioscientific data analysis and data management ([EDAM](https://dx.doi.org/10.1093%2Fbioinformatics%2Fbtt113)) covers research areas (topics), types of data, data formats, a categorisation of algorithm functionality and also aspects of biochemistry and analytical chemistry. It is not aligned with any upper ontology, but widely used in the life sciences to annotate tool registries ([Bio-jETI](https://bio.tools/bio-jeti)) or the ELIXIR training portal ([TeSS](http://emboss.open-bio.org/rel/rel6/apps/ontology_edam_group.html)).
+
+### UO
+The Unit Ontology ([UO](https://dx.doi.org/10.1093%2Fdatabase%2Fbas033)) is the reference ontology of the OBO Foundry for the SI and derived units that are needed for the proper description of measurements. 
+
+
+### QUDT
+The ontology of Quantities, Units, Dimensions andTypes ([QUDT](https://doi.org/10.3233/SW-2012-0069)) is a non OBO compliant ontology that specifies quantities and units of measure.
 
 ### Chemistry Domain Ontologies
 
-#### ChEBI
+### ChEBI
 **TODO**
-#### ChemOnt
+### ChemOnt
 **TODO**
-#### CHIRO
+### CHIRO
 **TODO**
-#### CHEMINF
+### CHEMINF
 **TODO**
-#### CHMO
+### CHMO
 **TODO**
-#### MOP
+### MOP
 **TODO**
-#### RXNO
+### RXNO
 **TODO**
-#### OntoKin
+### OntoKin
 **TODO**
-#### AFO
+### AFO
 **TODO**
-#### PROCO
+### PROCO
 **TODO**
-#### MS
+### MS
 **TODO**
-#### nmrCV
+### nmrCV
 
 ## Glossary
 In order to be able to speak about the existing ontologies in the domain of chemistry, we need to provide a very brief glossary of the most important technical terms that describe an ontology:
