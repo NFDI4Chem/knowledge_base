@@ -91,6 +91,14 @@ font: bold var(--ifm-h3-font-size)/var(--ifm-heading-line-height) var(--ifm-font
 margin-bottom: var(--ifm-heading-margin-bottom);
 }
 
+.admonition-content>:last-child,
+.card__body>:last-child,
+.card__footer>:last-child,
+.card__header>:last-child {
+ margin-bottom:0;
+ text-align: justify;
+}
+
 .alert {
   --ifm-code-background: var(--ifm-alert-background-color-highlight);
   --ifm-alert-background-color: #white;
@@ -222,6 +230,14 @@ a:hover {
 a:not([href]) {
     text-decoration: none;
   }
+
+
+.markdown>p,
+.markdown>pre,
+.markdown>ul {
+ margin-bottom:var(--ifm-leading);
+ text-align: justify;
+}
 
 .menu__link {
   border-radius: 0.25rem;

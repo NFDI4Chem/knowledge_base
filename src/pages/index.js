@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <div className="row">
           <div className="col col--2 n4c--logo">
-            <img src={useBaseUrl("/img/NFDI4Chem-Logo_einfarbig_weiss_nurGraphik.svg")} width="120" />
+            <img src={useBaseUrl("/img/N4C_logo_hero.svg")} width="120" />
           </div>
           <div className="col col--8">
             <h1 className="hero__title text">
