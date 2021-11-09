@@ -93,15 +93,21 @@ The ontology of Quantities, Units, Dimensions andTypes ([QUDT](https://doi.org/1
 ### Chemistry Domain Ontologies
 
 ### ChEBI
-**TODO**
+The Chemical Entities of Biological Interest ([ChEBI](https://doi.org/10.1093/nar/gkp886)) ontology from the European Bioinformatics Institute (EMBL-EBI) is probably one of the most widely used ontologies in the chemical domain, as it provides a comprehensive and well-documented classification of chemical entities. The scope of ChEBI can be subdivided into three ontology modules. The first module, which is the branch that is subsumed under the BFO class *material entity*, covers the chemical entities *atom*, *group*, *chemical substance*  and *molecular entity*. CHEBI’s second ontology module, the branch that is subsumed under the BFO *role* class, covers the roles chemical entities can have (be a bearer of) when used or studied in a chemical, biological or an application context (e.g.*acid* or *base* role, *catalyst* etc.). The third module covers subatomic particles. Serving as the data model for the ChEBI database the ontology also demonstrates its importance to modern chemistry by the many databases it cross-references, such as Human Metabolome database (HMDB),the Golm metabolome database, MassBank, KNApSAcK, UM-BBD, SMID-DB and the Yeast Metabolomedatabase (YMDB), or the many ontologies that reuse terms from or map to it. New chemical entites can be added to ChEBI easily via an [online submission tool](http://www.ebi.ac.uk/chebi/submissions/). The correctness of such submissions will then be validated by the ChEBI curators.
+
 ### ChemOnt
-**TODO**
+An alternative vocabulary to ChEBI for the classification of chemical compounds is the taxonomy ChemOnt.ChemOnt has originally been developed for [ClassyFire](https://dx.doi.org/10.1186%2Fs13321-016-0174-y), which is widely used for automatic classificationof especially organic chemical compounds. Since ChemOnt is only a taxonomy, it lacks relations and axioms to further formalize the chemical knowledge it contains. Thus, it only provides the categories (classes) that are needed by ClassyFire. The actual rules/logic behind the application’s automated classification is encoded into its software. 
+Considering the reusability of ChemOnt it needs to be mentioned that it is neither aligned to BFO like the OBO ontologies, nor to any other upper level ontology. One could subsume ChemOnt’s root category *chemical entities* under the BFO *material entity* branch and thus make it reusable in a BFO context. However, as only the chemical compound classes based on structural elements are conceptualized in ChemOnt, it is less granular as ChEBI, which conceptualizes the actual chemical compounds. 
+
 ### CHIRO
-**TODO**
+The ChEBI Integrated Role Ontology ([CHIRO](https://github.com/chiro)) is a demonstration of how to make the implicit knowledge contained in ChEBI’s role branch explicit by axiomatization. It provides links to other OBO ontologies,such as GOPRO, NCBITaxon, HP or DOID through the use of ad-hoc relations, such asagonist_oforinhibitor_of. The motivation is to establish direct connections between chemical structures such as smallmolecules or drugs and their effects. CHIRO can thus be used as an ontology module that extends orenhances ChEBI’s role branch. As further development or maintenance of CHIRO is on hold at the moment, it should be considered an important reference point and an opportunity for collaboration once the need to use formalized chemical roles arises.
+
 ### CHEMINF
-**TODO**
+The Chemical Information Ontology ([CHEMINF](https://doi.org/10.1371/journal.pone.0025513)) is intended to serve as a single point of truth for the definition and disambiguation of terms and relations used in the domain of cheminformatics. Its scope covers chemical graphs and their various encoding formats, the definition of chemical descriptors, such as InChI or SMILES, commonly used software and algorithms, like the *PubChem software library* or *Lipinski rule of five violation calculation algorithm*, as well as format specifications for chemical data, such as the *MOLfile format specification*. CHEMINF also defines needed chemical qualities, such as *molecular structure * or *charge*, as well as dispositions of chemical entities, like *solubility* or *electronegativity*. Being a highly expressive ontology, the provided axioms of CHEMINF further specify the covered entities in a machine-readable way. CHEMINF must be considered a required resource whenever there arises the need of describing the various properties of chemical entities, their measurementsor predictions, as well as the software and standards used to express these. Its impact is visible in prominent applications such as, the semantic annotation of PubChem’s database, or in the Open PHACTS project.
+
 ### CHMO
-**TODO**
+The Chemical Methods Ontology ([CHMO](https://doi.org/10.1021/bk-2014-1164.ch013)), which is mainly based on the knowledge codified in the IUPAC OrangeBook and the Analytical Abstracts of the Royal Society of Chemistry (RSC), focuses on the conceptualization of experimental methods applied in chemistry. Being an OBO compliant ontology, it thus extends OBI's *planned process* branch with classes such as *spectroscopy*, *thermal analysis* (including *calorimetry*) or *magnetic resonance method*. Also IAO's *data item* and *directive information entity* branch together with other OBI branches are being extended by CHMO with classes for certain lab devices, substances and protocols (e.g. *distillation*, *buffer solution* or *hazard reduction*). For the axiomatisation of its classes CHMO reuses chemical entities defined in ChEBI and relations from RO as well as OBI relations. 
+
 ### MOP
 **TODO**
 ### RXNO
@@ -131,4 +137,4 @@ In order to be able to speak about the existing ontologies in the domain of chem
 ## References/ further reading
 * [Ontologies4Chem overview paper](https://drive.google.com/drive/folders/1lVsDZX9Jm5XK_c0qgNs-ZnNf_sOZ-1VF) by TA 6.1
 ----
-<sup>written by: https://orcid.org/0000-0002-1595-3213</sup>
+written by: https://orcid.org/0000-0002-1595-3213
