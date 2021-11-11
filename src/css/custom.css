@@ -102,9 +102,9 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 .alert {
   --ifm-code-background: var(--ifm-alert-background-color-highlight);
   --ifm-alert-background-color: #white;
-  --ifm-link-color: var(--ifm-alert-foreground-color);
-  --ifm-link-hover-color: var(--ifm-alert-foreground-color);
-  --ifm-link-decoration: underline;
+  --ifm-link-color: inherit;
+  --ifm-link-hover-color: inherit;
+  --ifm-link-decoration: inherit; 
   --ifm-tabs-color: var(--ifm-alert-foreground-color);
   --ifm-tabs-color-active: var(--ifm-alert-foreground-color);
   --ifm-tabs-color-active-border: var(--ifm-alert-border-color);
