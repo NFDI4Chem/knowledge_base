@@ -2,8 +2,6 @@
 
 This repo is the core of the NFDI4Chem knowledge base.
 
-[![kb-deploy](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml)
-
 ## How to contribute
 
 Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
