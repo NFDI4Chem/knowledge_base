@@ -2,8 +2,6 @@
 
 This repo is the core of the NFDI4Chem knowledge base.
 
-[![kb-deploy](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/deploy.yml)
-
 ## How to contribute
 
 Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
@@ -12,7 +10,13 @@ Create a fork of the repository. Make additions/changes as you required. Create 
 
 - Use british english
 - headings with: # (primary), ## (secondary), ### (tertiary etc)
-- Citations (E.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
+
+## Source information
+
+- Citations (e.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
+- For references, sources and/or further information/reading, please always use the heading "Sources and further information".
+- Use bullet points
+- Indicate if a source is written in German (e.g. - German: Article about ...)
 
 ## Adding images
 
