@@ -13,7 +13,7 @@ Create a fork of the repository. Make additions/changes as you required. Create 
 
 ## Source information
 
-- Citations (E.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
+- Citations (e.g. for journal articles): only cite doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote   which contains a citation, use a superscripted number.
 - For references, sources and/or further information/reading, please always use the heading "Sources and further information".
 - Use bullet points
 - Indicate if a source is written in German (e.g. - German: Article about ...)
