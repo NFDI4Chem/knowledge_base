@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: 'Problems',
     Svg: require('../../static/img/problem_white.svg').default,
-    link: '/docs/problems/dmp',
+    link: '/docs/data/dmp',
   },
   {
     title: 'Topics & Concepts',
