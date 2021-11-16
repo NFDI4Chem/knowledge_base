@@ -15,7 +15,7 @@ const FeatureList = [
     link: '/docs/domains/guide',
   },
   {
-    title: 'Problems',
+    title: 'Handling Data',
     Svg: require('../../static/img/problem_white.svg').default,
     link: '/docs/data/dmp',
   },
