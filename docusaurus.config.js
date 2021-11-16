@@ -56,7 +56,7 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
               label: 'NFDI4Chem Website',
@@ -73,7 +73,7 @@ module.exports = {
           ],
         },
         {
-          title: ' ',
+          title: 'Legal information',
           items: [
             {
               label: 'About',
