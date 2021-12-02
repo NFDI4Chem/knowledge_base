@@ -5,48 +5,45 @@ title: "Metadata / MIChI"
 
 # Metadata and Minimum Information
 
-Metadata can be described as "data about data", that means it is data which describes information, the actual content of a dataset or file, and the context of this information. This may include general information like a title or keywords, information about the acquisition method of data, the people and institutions involved, the format of data, the quality or references to other data. For each type of data a different set of metadata may be added. A hierarchical structure of metadata makes it possible to use layers of multiple standards from more generic metadata for digital objects to the more specific ones on samples or instruments. Metadata should be defined by [ontologies](50_ontology.mdx), controlled vocabularies, or [data formats](40_format_standards.mdx).
+Metadata can be described as "data about data", meaning, it is data which describe information, the actual content of a dataset or file, and the context of this information. This may include general information such as a title or keywords, information about the data acquisition method, the people and institutions involved, the data format, the quality, or references to other data. For each type of data a different set of metadata may be added. A hierarchical metadata structure enables layers of multiple standards from more generic metadata for digital objects to more specific ones on samples or instruments. Metadata should be defined by [ontologies](50_ontology.mdx), controlled vocabularies, or [data formats](40_format_standards.mdx).
 
-Minimum information (MI) standards are guidelines on the metadata, which is required when reporting data and which format should be used for these information and the data. The set of MI depends on the type of data and is established to ensure that data is deposited following the FAIR principles. Therefore, minimum information is a subset of rich metadata which can accompany data.
+Minimum information (MI) standards are guidelines regarding which metadata is required when reporting data. Furthermore, these guidelines outline which format to use for both this information as well as for the data itself. The set of MI depends on the type of data and is established to ensure that data are deposited following the FAIR principles. Therefore, minimum information is a subset of rich metadata which can accompany data.
 
-# Metdata and the FAIR principles
+## Metadata and the FAIR Principles
 
-The [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18)  do do not only apply to data but also for their metadata. More information can be found in the [FAIR article](01_fair.mdx) or on [GoFair](https://www.go-fair.org/how-to-go-fair/).
+The [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18) do do not only apply to data but also the associated metadata. More information can be found in the [FAIR article](01_fair.mdx) or on [GoFair](https://www.go-fair.org/how-to-go-fair/).
 
-Metadata, as the data itself, should have assigned unique [persistent identifiers (PID)](100_pid.mdx) to be referenced by publications and other datasets. By organising these PIDs hierarchically each parameter in the metadata can be referenced individually. 
-Machine-readable metadata should be in a standard format and document semantics of metadata entities and their relations between them and the actual data. This can be achieved by defining the metadata as an ontology or schema, e.g. for XML or JSON. Schemas will help to index metadata for search engines, repositories or other data registries, but will also improve interoperability. Most of the other FAIR guidelines also apply for metadata.
+Metadata, as well as the data itself, should be assigned unique [persistent identifiers (PID)](100_pid.mdx) to be referenced in publications and other datasets. By organising these PIDs hierarchically, each parameter in the metadata can be referenced individually.
+Machine-readable metadata should be provided in a standardized format, while the metadata entities should be well-documented regarding semantics and the relations between the entities and the actual data. This can be achieved by defining the metadata as an ontology or schema, e.g. as XML or JSON. Schemas help in indexing metadata for search engines, repositories, or other data registries, and also help improve interoperability—the I in FAIR. Most of the other FAIR guidelines also apply to metadata.
 
-# General Metadata
+## General Metadata
 
-There are metadata standards which are independent of the domain they are used in. These models can be used for chemical data to present a minimum set of metadata and may be complemented by more specific metadata. 
+There are metadata standards which are independent of the domain they are used in. These models can be used for chemical data to present a minimum set of metadata and may be complemented by more specific metadata.
 
-The [Core Scientific Metadata Model (CSMD)](http://icatproject-contrib.github.io/CSMD/) is a model for scientific studies and includes entity classes for facilities, users, investigation, instruments, datafiles, datasets and samples. Within these classes most of the experimental parameters and results can be captured. Additionally, there are classes for e.g. publications, data formats, sample types. Beside a publication of the specification as UML (Unified Modeling language) classes  model definition there is also a representation as  ontology. Future releases will focus on the integration of the PROV model (see below).
+The [Core Scientific Metadata Model (CSMD)](http://icatproject-contrib.github.io/CSMD/) is a model for scientific studies and includes entity classes for facilities, users, investigations, instruments, datafiles, datasets, and samples. Within these classes most of the experimental parameters and results can be captured. Additionally, there are classes for e.g. publications, data formats, and sample types. Besides a publication of the specification as UML (Unified Modeling language) classes model definition, there is also a representation as an ontology. Future releases will focus on the integration of the PROV model (see below).
 
-[ISA (Investigation Study Assay)](https://isa-specs.readthedocs.io/en/latest/index.html) is also a metadata framework and has schemas to for representation in data formats (ISA-Tab and JSON). It can be applied to many methods and allows including ontology references for the entities.
+[ISA (Investigation Study Assay)](https://isa-specs.readthedocs.io/en/latest/index.html) is also a metadata framework and has schemas for the representation in data formats (ISA-Tab and JSON). It can be applied to many methods and allows the inclusion of ontology references for the entities.
 
-[Dublin Core](https://www.dublincore.org/specifications/dublin-core/dces/) is a more general set of fifteen elements describing networked resources. This set has been adapted and extended by other standards since its first  publication in 1995. 
+[Dublin Core](https://www.dublincore.org/specifications/dublin-core/dces/) is a more general set of fifteen elements describing networked resources. This set has been adapted and extended by other standards since its first publication in 1995.
 
-The DOI provider [DataCite](https://datacite.org/) has developed a [schema](https://schema.datacite.org/) of core metadata for research data. The standard is community driven and tries to integrate with other standards such as Dublin Core and ORCID.
+The DOI provider [DataCite](https://datacite.org/) has developed a [schema](https://schema.datacite.org/) of core metadata for research data. The standard is community driven and tries to integrate with other standards such as Dublin Core and [ORCID Record Schema](https://info.orcid.org/documentation/integration-guide/orcid-record/).
 
-The [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](http://www.openarchives.org/OAI/openarchivesprotocol.html) is a framework for harvesting metadata and can be applied to a wide variety of metadata formats, but these should always include Dublin Core metadata. 
+The [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](http://www.openarchives.org/OAI/openarchivesprotocol.html) is a framework for harvesting metadata and can be applied to a wide variety of metadata formats. These should always include Dublin Core metadata.
 
-There are many more general metadata standards mainly defined for libraries, collections and database managing digital objects. 
+There are many more general metadata standards, mainly defined for libraries, collections, and databases managing digital objects.
 
-For provenance information there is the W3C standard [PROV](https://www.w3.org/TR/prov-overview/), which can be used to provide information on the origin of scientific data.
+For provenance information, the W3C standard [PROV](https://www.w3.org/TR/prov-overview/) can be used to provide information on the origin of scientific data.
 
 ## Minimum Information for Chemical Investigations (MIChI)
 
-Due to the increasing amount of the data produced by omics,  biology and related disciplines like bioinformatics and biochemistry, have developed  a large set of [minimum information guidelines](https://fairsharing.org/search/?q=minimum+information) for  different methods. These were promoted by the [Minimum Information for Biological and Biomedical Investigations (MIBBI)](https://doi.org/10.1038/nbt.1411) project
+Due to the increasing amount of data produced by omics, biology and related disciplines such as  bioinformatics and biochemistry have developed a large set of [minimum information guidelines](https://fairsharing.org/search/?q=minimum+information) for  different methods. These were promoted by the [Minimum Information for Biological and Biomedical Investigations (MIBBI)](https://doi.org/10.1038/nbt.1411) project.
 
-Although the explored part of the chemical space along with chemical data produced increases rapidly, there are only few attempts to define guidelines for minimum information in chemistry, e.g. [Metabolomics Standards Initiative (MSI)](https://dx.doi.org/10.1007%2Fs11306-007-0082-2) or  [Collaboratory for the Multi-scale Chemical Sciences (CMCS)](https://www.researchgate.net/publication/228602526_Metadata_in_the_collaboratory_for_multi-scale_chemical_science).  The NFDI4Chem will address this issue and works on Minimum Information for Chemical Investigations (MIChI), which includes standards for methods like mass spectrometry, nuclear magnetic resonance and other spectroscopic methods.
+Although the explored part of the chemical space along with the chemical data produced is increasing rapidly, there are only a few attempts to define guidelines for minimum information in chemistry, e.g. [Metabolomics Standards Initiative (MSI)](https://dx.doi.org/10.1007%2Fs11306-007-0082-2) or [Collaboratory for the Multi-scale Chemical Sciences (CMCS)](https://www.researchgate.net/publication/228602526_Metadata_in_the_collaboratory_for_multi-scale_chemical_science). The NFDI4Chem will address this issue and is working on Minimum Information for Chemical Investigations (MIChI), which includes standards for methods such as mass spectrometry, nuclear magnetic resonance and other spectroscopic methods.
 
-Software projects, like [electronic lab notebooks](10_eln.mdx) or [repositories](20_repositories.mdx) often define their own layer of specific minimum metadata for chemical experiments which are based on existing standards, e.g. for metabolomics, or defined by the [data formats](40_format_standards.mdx) they import. 
+Software projects such as [electronic lab notebooks](10_eln.mdx) or [repositories](20_repositories.mdx) often define their own layer of specific minimum metadata for chemical experiments which are based on existing standards, e.g. for metabolomics, or defined by the [data formats](40_format_standards.mdx) they import.
 
-Existing [ontologies](50_ontology.mdx) are a good starting point to identify the information, which is necessary to describe a method, results, samples or other entities. Furthermore, controlled vocabularies and ontologies define what additional metadata is allowed to create rich metadata improve the FAIRness. Examples for formats with with corresponding ontologies or a controlled vocabularies are [mzML](https://www.psidev.info/mzML), [CIF](https://www.iucr.org/resources/cif), [NeXus](https://www.nexusformat.org/)
-or the
+Existing [ontologies](50_ontology.mdx) are a good starting point to identify the information necessary to describe a method, results, samples, or other entities. Furthermore, controlled vocabularies and ontologies define what additional metadata is allowed in order to create rich metadata, in turn improving the data's FAIRness. Examples for formats with corresponding ontologies or a controlled vocabularies are [mzML](https://www.psidev.info/mzML), [CIF](https://www.iucr.org/resources/cif), [NeXus](https://www.nexusformat.org/),
+and the
 [Allotrope Data Format (ADF)](https://docs.allotrope.org/Allotrope%20Data%20Format.html).
 
-[The Chemical Analysis Metadata Platform (ChAMP)](https://champ.stuchalk.domains.unf.edu/) is a project, which focuses defining a framework for chemical analysis methods.
-
-
-
+[The Chemical Analysis Metadata Platform (ChAMP)](https://champ.stuchalk.domains.unf.edu/) is a project which focuses on defining a framework for chemical analysis methods.
