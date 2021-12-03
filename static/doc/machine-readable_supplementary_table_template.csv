@@ -1,0 +1,6 @@
+Number_article,Number_lab_journal,IUPAC_name,Synonym,SMILES,InChI,InChIKey,PubChem_CID,CAS_RN,Comment
+,,CHEMINF:000107,SIO:000122,CHEMINF:000020,CHEMINF:000038,CHEMINF:000059,CHEMINF:000140,CHEMINF:000446,rdfs:comment
+,,http://semanticscience.org/resource/CHEMINF_000107,http://semanticscience.org/resource/SIO_000122,http://semanticscience.org/resource/CHEMINF_000020,http://semanticscience.org/resource/CHEMINF_000038,http://semanticscience.org/resource/CHEMINF_000059,http://semanticscience.org/resource/CHEMINF_000140,http://semanticscience.org/resource/CHEMINF_000446,http://www.w3.org/2000/01/rdf-schema#comment
+1,NF-0007,1-phenylethanone,acetophenone,CC(C1=CC=CC=C1)=O,"InChI=1S/C8H8O/c1-7(9)8-5-3-2-4-6-8/h2-6H,1H3",KWOLFJPFCHCOCG-UHFFFAOYSA-N,7410,98-86-2,
+2,NF-0789,(2S)-2-aminopropanoic acid,alanine,N[C@@H](C)C(O)=O,"InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",QNAYBMKLOCPYGJ-REOHCLBHSA-N,5950,56-41-7,
+3,NF-1245,"(R)-[(2S,4S,5R)-5-ethenyl-1-azabicyclo[2.2.2]octan-2-yl]-(6-methoxyquinolin-4-yl)methanol",quinine,[H][C@@]1([C@@H](C2=CC=NC3=CC=C(C=C23)OC)O)C[C@@H]4CC[N@]1C[C@@H]4C=C,"InChI=1S/C20H24N2O2/c1-3-13-12-22-9-7-14(13)10-19(22)20(23)16-6-8-21-18-5-4-15(24-2)11-17(16)18/h3-6,8,11,13-14,19-20,23H,1,7,9-10,12H2,2H3/t13-,14-,19-,20+/m0/s1",LOUPRKONTZGTKE-WZBLMQSHSA-N,3034034,72402-53-0,
