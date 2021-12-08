@@ -84,9 +84,8 @@ There were efforts to create a special format for ultraviolet-visible spectrosco
 
 NMR is an indispensable analytical technique providing rich information on bonding and structure as well as molecule interaction and abundance of molecules in samples. Until now, it was common practice to publish the spectra as images in supplementary materials, regularly published as PDF files. Additionally, a list of shifts is reported, sometimes referred to as NMR text.
 
-However, the raw data containing the Free Induction Decays (FIDs), initially processed spectra and the instrument metadata is usually not published, which might allow for reanalysis and reuse. The importance of providing both FID raw data and extracted NMR spectra were previously demonstrated extensively ,[^fid].
+However, the raw data containing the Free Induction Decays (FIDs), initially processed spectra and the instrument metadata is usually not published, which might allow for reanalysis and reuse. The importance of providing both FID raw data and extracted NMR spectra were previously demonstrated extensively.
 
-[^fid]: [https://doi.org/10.1039/C7NP00064B](https://doi.org/10.1039/C7NP00064B), [https://doi.org/10.1039/C6NP00022C](https://doi.org/10.1039/C6NP00022C)
 
 All instrument vendors have developed their own (binary) raw data formats. Since this FID data itself is mainly time-response data with a straight-forward structure, most of the vendor formats are supported by the software used within the NMR community. Many vendors also agreed to import and export the JCAMP-DX format, which has a [specification for FID raw data](https://doi.org/10.1366%2F0003702934067874) and is [recommended by IUPAC](https://doi.org/10.1351/pac199971081549).
 
@@ -94,9 +93,7 @@ The JCAMP-DX format can also be used for exchange, import and export of multidim
 
 Inspired by the mass spectrometry format mzML (see below) the standard [nmrML](https://doi.org/10.1021/acs.analchem.7b02795) was initially developed for metabolomics data, but can also be used for any other kind of NMR data obtained. The standard nmrML is a XML based format for FID raw data for 1D as well as 2D NMR spectra. Due to the explicit syntax specification of this format and the underlying controlled vocabulary (nmrCV), data files can be validated. It is used as a storage format for NMR data in the [Metabolights](https://doi.org/10.1002/0471250953.bi1413s53) data repository.
 
-The open [NMReData](https://doi.org/10.1002/mrc.4737) format is maintained by the NMReData initiative. The NMR record in NMReDATA format includes the instrument (raw) data, a SDFile and, since version 2, also spectral data in JCAMP format in a folder, which can be compressed in the zip format for data exchange. The SDFile contains the chemical structure and the actual NMReDATA as standardised SDF tags. These tags take account of chemical shifts, couplings, signal assignments and lists of 2D correlations, only to mention a few. NMReData can be used for 1D and 2D spectra and contains a core set of NMR parameters. The format allows raw data, extracted data, and structures to be recorded in one format, which is not fully supported in existing formats. It is machine- and human-readable at the same time, and allows flexibility and extensions. FAIRness is the overall principle behind it. Members of the NMReData initiative include open-source projects such as NMRShiftDB2 and Cheminfo.org, commercial NMR software vendors such as MestreLab, NOMAD, C6H6 and ACD/Labs and device vendors like Bruker [^nmredata].
-
-[^nmredata]: https://doi.org/10.1002/mrc.5146
+The open [NMReData](https://doi.org/10.1002/mrc.4737) format is maintained by the NMReData initiative. The NMR record in NMReDATA format includes the instrument (raw) data, a SDFile and, since version 2, also spectral data in JCAMP format in a folder, which can be compressed in the zip format for data exchange. The SDFile contains the chemical structure and the actual NMReDATA as standardised SDF tags. These tags take account of chemical shifts, couplings, signal assignments and lists of 2D correlations, only to mention a few. NMReData can be used for 1D and 2D spectra and contains a core set of NMR parameters. The format allows raw data, extracted data, and structures to be recorded in one format, which is not fully supported in existing formats. It is machine- and human-readable at the same time, and allows flexibility and extensions. FAIRness is the overall principle behind it. Members of the NMReData initiative include open-source projects such as NMRShiftDB2 and Cheminfo.org, commercial NMR software vendors such as MestreLab, NOMAD, C6H6 and ACD/Labs and device vendors like Bruker [NMReData](https://doi.org/10.1002/mrc.5146).
 
 Recently, there were several additional open standard formats developed by the NMR community. A great effort came from protein structure determination by NMR, a field where the specifics and size of the macromolecules required special data formats.
 
@@ -143,3 +140,9 @@ The [Chemical Table File](https://discover.3ds.com/sites/default/files/2020-08/b
 The structure data file (SDF) is a derivative of the chemical data file and can include multiple compounds in one file and associated dta for the elements. The SDF format was extended by NMReData to store NMR data and chemical structure in one file format.
 
 [The Chemical Markup Language (CML) ](http://cml.sourceforge.net/) is based on XML and is an approach to store many chemical data in an universal file format to store. Although it is capable to store also analytical data, it is mainly used for structural information and reactions.
+
+## Sources and further information
+
+- https://doi.org/10.1039/C7NP00064B
+- https://doi.org/10.1039/C6NP00022C
+- https://doi.org/10.1002/mrc.5146
