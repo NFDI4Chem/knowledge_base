@@ -94,7 +94,7 @@ module.exports = {
         },
       ],
       copyright: `
-        <div class="container" style="width: 60%;">
+        <div class="container" style="width: 80%;">
           <div class="row">
             <div class="cell" style="padding: 1rem;" ><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
             </div>
