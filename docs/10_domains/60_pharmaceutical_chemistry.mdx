@@ -1,7 +1,74 @@
 ---
-title: "Pharmaceutical Chemistry"
+title: "Medicinal/Pharmaceutical Chemistry"
 ---
 
-![UnderConstruction](/img/Constr_2bl.png)
+:::info Summary:
 
-Article under construction.
+Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level and the metabolism of the active compounds. 
+The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety. 
+Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimize these leads ideally result in promising candidates for preclinical studies in drug development potentially followed by clinical studies.
+
+:::
+
+## Type of experiments
+
+- Synthesis: 
+    - Preparation of compounds including combinatorial approaches for biological evaluation in suitable test systems
+    - 
+- Analysis:
+    - Characterisation of intermediate and final products
+    - Analysis of (quantitative) structure-activity relationships, molecular modelling studies
+    - Biological evaluation, activity assays
+
+## Planning of experiments
+
+Test systems are established, either target-oriented or phenotypic assays, to identify hit compounds. Alternatively, (potential) hit compounds can be selected from available data (e.g. publications) or by virtual screening.
+Starting from promising hit compounds, optimization cycles are performed to improve the properties of the starting compounds. Suitable assay systems are required to obtain the necessary data to assess the compounds’ properties. These include potency efficacy, selectivity, potential bias, water solubility, lipophilicity, pharmacokinetic properties, e.g. bioavailability and metabolic stability, interaction with liver cytochrome P450 enzymes, hERG channel interaction, cell toxicity, potential genotoxicity, etc. The required properties depend e.g. on the indication, and the application route of the drug.
+
+## Documentation of experiments
+
+-	Documentation of research data and metadata is carried out preferably digitally using a suitable ELN and/or to a manual laboratory notebook in paper form.
+
+Using an ELN:
+-	Experimental conditions and measurement parameters are noted in the ELN
+-	Observations, deviations from planned measurement protocols or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment
+-	Obtained data from analytical instruments (e.g. NMR, MS or IR data) are uploaded to the ELN in open file formats and directly attached to the respective experiment entry including instrumental setup metadata.
+-	Metadata related to the obtained data follow common metadata standards.
+
+## Data producing methods
+
+- Data can be collected during the experiment or after the experiment by analysing the obtained product.
+- Manually determined data: Experimental observations, appearance, yield, melting/boiling point, optical rotation, TLC Rf values, refraction index, etc.
+- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
+- Raw data files in [proprietary file formats](/docs/topics/format_standards) should be saved alongside interoperable [open file formats](/docs/topics/format_standards) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+
+|Analytical method|Exemplary proprietary file extensions|Typical size of proprietary file|Converter to open file format|Recommendation for open file extension*|File format|File size of open format|
+|:------------|:------------|:------------|:------------|:------------|:------------|:------------|
+|NMR spectroscopy|.fid|<1-50 MB|MNova<br/>Topspin|.jdx<br/>.zip<br/>|JCAMP-DX<br/>NMReDATA|~1 MB|
+|UV/vis spectroscopy|.dsw<br/> .str<br/>.bsk<br/>.bkn<br/>.ksd<br/>.jws<br/>.jwb<br/>.str8<br/>.spc<br/>.sre|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|IR spectroscopy|.ispd<br/>.icIR|<1 MB| |.dx|JCAMP-DX|<1 MB|
+|Raman spectroscopy|.dpt<br/>.spc<br/>.icRaman<br/>.sps<br/>.acs|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|Fluorescence spectroscopy|.fds<br/>.fs2f<br/>.jws<br/>.opj|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|Mass spectrometry|.raw<br/>.d<br/>.baf|~250 MB|Proteowizard|.mzML|mzML|~250 MB|
+|Gas chromatography|.gcd<br/>.d|~2 MB|proprietary software|.txt|text file|<1 MB|
+|HPLC-UV, HPLC-MS|.xls|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Capillary electrophoresis| 
+|Polarimetry|
+|Melting point or refractory index|
+|TLC: Rf values, TLC-UV, TLC-MS|
+|Binding assays (radioligand, fluorescence-based, surface plasmon resonance (SPR), microscale thermophoresis (MST), isothermal calorimetry (ICT), etc.)|
+|Activity assays (e.g. colorimetric, fluorescence-based, radioactive-based etc.)
+|Docking calculations|
+|Cytotoxicity assays|
+|Determination of water solubility (pH 7.4; maybe at further pH values)|
+|Determination of logD value (lipophilicity)|
+|Peroral bioavailability (e.g. Caco-2 cell permeation assay)|
+|Brain permeation (in vitro prediction, in vivo)|
+|Metabolic stability (rat/mouse/human liver microsomes)|
+|Inhibition of the most important CYP P450 enzymes involved in drug metabolism to assess potential interactions
+|hERG channel interaction|
+|Genotoxicity assays|
+
+:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
+:::
+
