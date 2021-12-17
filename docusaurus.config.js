@@ -25,7 +25,7 @@ module.exports = {
           label: 'Knowledge Base',
         },
         {
-          label: 'NFDI4Chem Homepage',
+          label: 'NFDI4Chem',
           href: 'https://www.nfdi4chem.de'
         },
         {
@@ -69,11 +69,15 @@ module.exports = {
               href: 'https://nfdi4chem.de',
             },
             {
+              label: 'NFDI4Chem FAQ',
+              href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
+            },
+            {
               label: 'NFDI4Chem Helpdesk',
               href: 'https://nfdi4chem.de/index.php/helpdesk/'
             },
             {
-              label: 'GitHub',
+              label: 'GitHub Repository',
               href: 'https://github.com/NFDI4Chem/knowledge_base',
             },
           ],
