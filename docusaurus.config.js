@@ -25,7 +25,7 @@ module.exports = {
           label: 'Knowledge Base',
         },
         {
-          label: 'NFDI4Chem Homepage'
+          label: 'NFDI4Chem Homepage',
           href: 'https://www.nfdi4chem.de'
         },
         {
