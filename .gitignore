@@ -21,3 +21,7 @@ yarn-error.log*
 yarn.lock
 
 package-lock.json
+
+# config for staging
+
+docusaurus.config.js
