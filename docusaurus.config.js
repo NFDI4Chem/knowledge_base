@@ -5,6 +5,7 @@ module.exports = {
   url: 'https://knowledgebase.nfdi4chem.de/',
 //  baseUrl: '/staging/knowledge_base/',
   baseUrl: '/knowledge_base/',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
