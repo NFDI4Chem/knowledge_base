@@ -3,6 +3,7 @@ module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
   url: 'https://knowledgebase.nfdi4chem.de/',
+//  baseUrl: '/staging/knowledge_base/',
   baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',

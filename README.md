@@ -4,7 +4,7 @@ This repo is the core of the NFDI4Chem knowledge base.
 
 ## How to contribute
 
-Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact helpdesk@nfdi4chem.de.
+Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact [helpdesk@nfdi4chem.de](mailto:helpdesk@nfdi4chem.de).
 
 ## Conventions
 
@@ -33,7 +33,17 @@ You can then reference to them by leaving out the `/static` part of the path. Pr
 
 ```![FAIR Data](/img/topics/FAIR_data_principles.png)```
 
-Using the `img` HTML tag will require additional prerequisites and is discouraged unless specifically needed for the page layout.
+Using the `img` HTML tag will require additional prerequisites and is discouraged unless specifically needed for the page layout. If you have special formatting matters, please contact [us](mailto:helpdesk@nfdi4chem.de).
+
+## Downloadable files
+
+Please place downloadable files, e.g. document templates, in the `assets` folder:
+```
+/static/assets/file.pdf
+/static/assets/template.docx
+```
+
+Please [contact us](mailto:helpdesk@nfdi4chem.de) for assistance in placing the correct links.
 
 # Website
 
