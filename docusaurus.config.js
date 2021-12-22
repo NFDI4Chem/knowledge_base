@@ -3,8 +3,8 @@ module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
   url: 'https://knowledgebase.nfdi4chem.de/',
-  baseUrl: '/staging/knowledge_base/',
-/*  baseUrl: '/knowledge_base/', */
+//  baseUrl: '/staging/knowledge_base/',
+  baseUrl: '/knowledge_base/',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
