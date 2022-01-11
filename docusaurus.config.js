@@ -3,8 +3,8 @@ module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
   url: 'https://knowledgebase.nfdi4chem.de/',
-//  baseUrl: '/staging/knowledge_base/',
-  baseUrl: '/knowledge_base/',
+  baseUrl: '/staging/knowledge_base/',
+//  baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
@@ -132,6 +132,18 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        docsRouteBasePath: '/',
+        indexPages: true, //because of bug: https://github.com/easyops-cn/docusaurus-search-local/issues/42
       },
     ],
   ],
