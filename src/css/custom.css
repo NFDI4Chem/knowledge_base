@@ -327,10 +327,16 @@ a:not([href]) {
   font-size: 1.5rem;
 }
 
-.searchResultItem_18XW, h2, a {
+.searchResultItem_18XW, a, h2 {
 /*  color: unset;*/
   color: var(--ifm-color-primary);
   font-size: unset;
+}
+
+.searchResultItemSummary_5qSX {
+  color: unset;
+  font-style: italic;
+  margin: .5rem 0 0;
 }
 
 mark {
