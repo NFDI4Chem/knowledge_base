@@ -326,3 +326,8 @@ a:not([href]) {
 .hero__subtitle {
   font-size: 1.5rem;
 }
+
+mark {
+  color: white;
+  background: var(--ifm-color-danger);
+}
