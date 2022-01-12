@@ -327,7 +327,12 @@ a:not([href]) {
   font-size: 1.5rem;
 }
 
+.searchResultItem_18XW, h2, a {
+  color: unset;
+  font-size: unset;
+}
+
 mark {
   color: white;
-  background: var(--ifm-color-danger);
+  background: var(--ifm-color-primary);
 }
