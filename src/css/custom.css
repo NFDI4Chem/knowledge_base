@@ -328,11 +328,12 @@ a:not([href]) {
 }
 
 .searchResultItem_18XW, h2, a {
-  color: unset;
+/*  color: unset;*/
   font-size: unset;
 }
 
 mark {
   color: white;
-  background: var(--ifm-color-primary);
+  background: var(--ifm-color-danger);
+/*  background: var(--ifm-color-primary);*/
 }
