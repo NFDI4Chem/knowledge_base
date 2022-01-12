@@ -329,6 +329,7 @@ a:not([href]) {
 
 .searchResultItem_18XW, h2, a {
 /*  color: unset;*/
+  color: var(--ifm-color-primary);
   font-size: unset;
 }
 
