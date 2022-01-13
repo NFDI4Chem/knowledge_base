@@ -334,12 +334,6 @@ a:not([href]) {
   font-size: unset;
 }
 
-/* .searchResultItemSummary_5qSX {
-  color: black;
-  font-style: italic;
-  margin: .5rem 0 0;
-} */
-
 mark {
   color: white;
   background: var(--ifm-color-danger);
