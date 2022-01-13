@@ -4,7 +4,13 @@ This repo is the core of the [NFDI4Chem knowledge base](https://knowledgebase.nf
 
 ## How to contribute
 
-Create a fork of the repository. Make additions/changes as you required. Create pull-request. Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact [helpdesk@nfdi4chem.de](mailto:helpdesk@nfdi4chem.de).
+Just follow these simple steps:
+
+1. Create a fork of the repository.
+2. Make additions/changes as required.
+3. Create a pull-request.
+
+Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact [helpdesk@nfdi4chem.de](mailto:helpdesk@nfdi4chem.de).
 
 ## Conventions
 
@@ -45,34 +51,31 @@ Please place downloadable files, e.g. document templates, in the `assets` folder
 
 Please [contact us](mailto:helpdesk@nfdi4chem.de) for assistance in placing the correct links.
 
-# Website
+# Local testing
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator. When you add or edit pages, you may conveniently preview them locally on your computer.
+
+## Requirements
+
+- In order to clone the repository to your computer, you may simply [download](https://github.com/NFDI4Chem/knowledge_base/archive/refs/heads/main.zip) the repository from Github and extract it. If you want to work locally on changes in your fork, the installation of [Git](https://git-scm.com/) and [Visual Studio Code](https://code.visualstudio.com/) may be convenvient.
+- To create a local preview of the website, you need to install [NodeJS](https://nodejs.org/) (we recommend using the LTS version).
 
 ## Installation
-Instead of ```npm``` you can also use ```yarn```.
+
+To install the required packages to the Docusaurus repository, change to the extracted repository directory on your shell and use the following command :
 
 ```console
 npm install
 ```
 
-## Local Development
+## Start Local Testing
+
+To run a local testing instance of the knowledge base, run:
 
 ```console
-npm start
+npm run start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server. Press ```Ctrl + C``` to stop.
 
-## Build
-
-```console
-npm run build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Clear Cache
-```console
-npm run clear
-```
+For further details please refer to the [Docusaurus documentation](https://docusaurus.io/docs/).
