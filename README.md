@@ -1,6 +1,6 @@
 # Chemistry RDM Knowledge Base
 
-This repo is the core of the NFDI4Chem knowledge base.
+This repo is the core of the [NFDI4Chem knowledge base](https://knowledgebase.nfdi4chem.de).
 
 ## How to contribute
 
