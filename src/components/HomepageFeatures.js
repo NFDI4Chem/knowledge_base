@@ -24,6 +24,11 @@ const FeatureList = [
     Svg: require('../../static/img/topics_white.svg').default,
     link: '/docs/topics/fair',
   },
+  {
+    title: 'Lead-by-Example',
+    Svg: require('../../static/img/lbe_white.svg').default,
+    link: '/docs/lead-by-example',
+  },
 ];
 
 function Feature({ Svg, title, link }) {
