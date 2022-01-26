@@ -25,7 +25,7 @@ const FeatureList = [
     link: '/docs/topics/fair',
   },
   {
-    title: 'Lead-by-Example',
+    title: 'Lead by Example',
     Svg: require('../../static/img/lbe_white.svg').default,
     link: '/docs/lead-by-example',
   },
