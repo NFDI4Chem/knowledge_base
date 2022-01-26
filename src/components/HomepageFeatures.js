@@ -118,3 +118,16 @@ export function TopicButton() {
     </section>
   );
 }
+
+export function LeadButton() {
+  return (
+    <section className={styles.features}>
+      <div className='container'>
+        <div className='row--3'>
+          <Feature {...FeatureList[4]} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
