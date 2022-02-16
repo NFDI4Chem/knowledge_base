@@ -22,7 +22,7 @@ All common structure drawing software save mol files. Copy the structure to a ne
 
 The name of the file might be chosen following your lab journal entry and also numbering of the structure in the article.
 
-## SMILES, InChI and InChIKey and Supplementary Table
+## Get SMILES, InChI and InChIKey
 
 ### ChemDoodle
 
@@ -75,8 +75,8 @@ Alternatively, SMILES, InChI and InChIKey can also be saved as text files by cho
 While the data files can be directly added to the dataset, additional information to enhance machine-readability might be provided as a [supplementary table](https://doi.org/10.1186/s13321-021-00520-4). This table should be also provided in a machine-readable text-based format such as a .csv file.
 
 It is recommended to add the following columns to this table:
-- number of structure in the research article as local identifiers
-- letter-code and number in your lab journal as sample identifiers
+- number of structure in the research article
+- letter-code and number in your lab journal
 - SMILES
 - InChI and InChIKey
 
@@ -89,9 +89,11 @@ Additionally, this table may also include further columns for:
 - CAS_RN
 - comment (if required)
 
-Templates for this table are provided as [.ods](pathname://../../../assets/Supplementary_table_template.ods), [.xlsx](pathname://../../../assets/Supplementary_table_template.xlsx), and [.csv](pathname://../../../assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/topics/ontology) to unambiguously identify terms for humans and machines. PubChem_CIDs as well as CAS_RN are easily retrieved in [PubChem](https://pubchem.ncbi.nlm.nih.gov/) by searching via SMILES, InChI or InChIKey. Care should be taken for SMILES if inorganic compounds are described. If the repository allows to create a dataset and provides a DOI prior upload of the dataset, the DOI of the dataset should be added to this table.
+Templates for this table are provided as [.ods](pathname://../../../assets/Supplementary_table_template.ods), [.xlsx](pathname://../../../assets/Supplementary_table_template.xlsx), and [.csv](pathname://../../../assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/topics/ontology) to unambiguously identify terms for humans and machines. PubChem_CIDs as well as CAS_RN are easily retrieved in [PubChem](https://pubchem.ncbi.nlm.nih.gov/) by searching via SMILES, InChI or InChIKey. If the repository allows to create a dataset and provides a DOI prior upload of the dataset, the DOI of the dataset can be added to this table.
 
-If the experimental work is documented in an [ELN](/docs/topics/eln), this table includes all the compiled information by the ELN system. Chemotion ELN generates [SMILES](/docs/topics/smiles), [InChI](/docs/topics/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions i.e. such a table is not required with structured domain-specific repositories such as Chemotion Repository.
+Care should be taken for SMILES and InChI to describe inorganic and organometallic compounds. 
+
+If the experimental work is documented in an [ELN](/docs/topics/eln), this table could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/topics/smiles), [InChI](/docs/topics/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured domain-specific repositories such as Chemotion Repository.
 
 <img align="right" src='https://licensebuttons.net/l/zero/1.0/88x31.png' alt="CC0 badge" />
 

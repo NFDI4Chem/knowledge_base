@@ -6,23 +6,22 @@ title: "Persistent Identifiers (PIDs)"
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Persistent identifiers (PIDs) are unique, long-lasting references to identified sources, such as publications, datasets or persons and allow to reliably locate, identify and verify the references.<sup>[1](https://doi.org/10.5334/dsj-2017-009),[2](https://doi.org/10.2218/ijdc.v8i1.246),[3](https://doi.org/10.1007/s12145-011-0083-6)</sup> 
+[Persistent identifiers](https://doi.org/10.5334/dsj-2017-009) (PIDs) are unique, long-lasting references to identified sources, such as publications, datasets or persons and allow to reliably locate, identify and verify the references. 
 
-The two main PIDs employed within the chemistry community are [Digital Object Identifiers](https://www.doi.org/) (DOIs) as PIDs for objects such as publications, datasets or software as well as [Open Research and Contributor iDs](https://orchid.org/) (ORCHiDs) for people.<sup>[4](https://doi.org/10.1087/20120404)</sup> Additionally, the [Research Organization Registry](https://ror.org/) (ROR) is used to identify research institutions.<sup>[5](https://doi.org/10.6087/kcse.192)</sup> Current development also includes Persistent Identification of Instruments (PIDINST) as PIDs for the instrumentation used to obtain research data.<sup>[6](https://doi.org/10.5334/dsj-2020-018)</sup>
+The two main PIDs employed within the chemistry community are Digital Object Identifiers ([DOIs](https://www.doi.org/)) as PIDs  for objects such as publications, datasets or software as well as [Open Research and Contributor iDs](https://doi.org/10.1087/20120404) ([ORCHiDs](https://orchid.org/)) for people. Additionally, the [Research Organization Registry](https://doi.org/10.6087/kcse.192) ([ROR](https://ror.org/)) is used to identify research institutions. Current development also includes Persistent Identification of Instruments ([PIDINST](https://doi.org/10.5334/dsj-2020-018)) as PIDs for the instrumentation used to obtain research data.
 
-The main benefits of PIDs for chemistry researchers are increased findability, visibility and ease of access of their scientific work.<sup>[7](https://doi.org/10.5334/dsj-2017-009)</sup> In the context of research data, PIDs are especially useful to interconnect publications and datasets in repositories.
+The main benefits of PIDs for chemistry researchers are increased findability, visibility and ease of access of their scientific work. In the context of research data, PIDs are especially useful to interconnect publications and datasets in repositories.
 
 ## DOIs
 
 <img align="left" src={useBaseUrl('/img/topics/DOI_logo.svg')} width="80" alt="DOI logo" vspace="2" hspace="20" />
 
-Digital Object Identifiers are open and non-proprietary PIDs for objects such as  publications and datasets but also physical objects which are assigned by members of the [International DOI Foundation](International DOI Foundation).<sup>[8](https://doi.org/10.1081/E-ELIS3-120044418),[9](https://datascience.codata.org/articles/abstract/353/)</sup> Most well-recognised DOI registration agencies include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on datasets.<sup>[10](https://doi.org/10.1109/COINFO.2009.66)</sup> 
+Digital Object Identifiers are PIDs for objects such as publications and datasets, but also physical objects, which are assigned by members of the [International DOI Foundation](https://datascience.codata.org/articles/abstract/353/). Most well-recognised DOI registration agencies include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on [datasets](https://doi.org/10.1109/COINFO.2009.66).
 
-A DOI consists of a character string divided in to two parts by a slash. The prefix identifies the registrant, who retrieves a DOI from a DOI registration agency and always starts with “10.”. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. DOIs are most frequently displayed as an URL like `https://doi.org/10.1000/182` including a resolver as HTTP proxy server to redirect to the linked object.<sup>[11](https://doi.org/10.1081/E-ELIS3-120044418)</sup> DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
+A DOI consists of a character string divided in to two parts by a slash. The prefix identifies the registrant, who retrieves a DOI from a DOI registration agency and always starts with “10.”. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. DOIs are most frequently displayed as an URL like `https://doi.org/10.1000/182` including a resolver as HTTP proxy server to redirect to the linked object. DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
 
 <p align="center"><img align="center" src={useBaseUrl("/img/topics/crossref-logo-landscape-200.svg")} width="200" alt="Crossref logo" />
 <img align="center" src={useBaseUrl("/img/topics/datacite.svg")} class="align-center" width="200" alt="DataCite logo" /></p>
-
 
 Registrants are [liable](https://support.datacite.org/docs/doi-registration-policy) to update the URL connected to the DOI if the object is moved, which is enabled by metadata attached to the DOI during registration.
 
@@ -30,13 +29,13 @@ Registrants are [liable](https://support.datacite.org/docs/doi-registration-poli
 
 <img align="left" src={useBaseUrl("/img/topics/ORCIDiD_iconvector.svg")} width="80" alt="ORCiD logo" vspace="12" hspace="20" />
 
-[ORCiDs](https://orchid.org/) are open and non-proprietary PIDs for authors also described as unique author identifiers and can be retrieved and used by any author free of charge. It is provided by the non-profit Open Research and Contributors ID organisation, ORCID Inc., and sustained by fees of member organisations, providing extended application program interfaces (API) for their members to integrate ORCiDs.<sup>[12](https://doi.org/10.1087/20120404)</sup>
+[ORCiDs](https://orchid.org/) are open and non-proprietary PIDs for authors also described as unique author identifiers and can be retrieved and used by any author free of charge. It is provided by the non-profit Open Research and Contributors ID organisation, ORCID Inc., and sustained by fees of member organisations, providing extended application program interfaces (API) for their members to integrate ORCiDs.
 
-An ORCiD is a [16-digit alphanumerical code](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier) to unambiguously identify authors, while author names might not be unique, may change or have different ordering conventions depending on cultural differences. ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` but are also typically depicted without the resolver as an URN, e.g. `ORCID:0000-0000-0000-0000`. ORCiD iDs are a subset of International Standards Name Identifiers (ISNI) provided by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) as [ISO 27729](https://www.iso.org/standard/44292.html).<sup>[13](https://doi.org/10.1038/462825a)</sup>
+An ORCiD is a [16-digit alphanumerical code](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier) to unambiguously identify authors, while author names might not be unique, may change or have different ordering conventions depending on cultural differences. ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` but are also typically depicted without the resolver as an URN, e.g. `ORCID:0000-0000-0000-0000`. ORCiD iDs are a subset of International Standards Name Identifiers (ISNI) provided by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) as [ISO 27729](https://www.iso.org/standard/44292.html).
 
-The [ORCHiD record](https://www.orcid.org) connected to ORCiDs includes the bibliographic output and may also provide information on employment, education and qualification, invited positions and distinctions, memberships as well as service and funding, depending on the privacy setting made by the author.
+The [ORCHiD record](https://doi.org/10.1038/462825a) connected to ORCiDs includes the bibliographic output and may also provide information on employment, education and qualification, invited positions and distinctions, memberships as well as service and funding, depending on the privacy setting made by the author.
 
-In addition to  of ORCiDs as non-proprietary PIDs for authors there are also proprietary author identifiers such as Thomsen Reuters [Web Of Science’s Researcher ID](https://www.researcherid.com/#rid-for-researchers) and Elsevier’s [Scopus Author ID](https://www.scopus.com/freelookup/form/author.uri).<sup>[14](https://doi.org/10.1087/20120404)</sup>
+In addition to ORCiDs as non-proprietary PIDs for authors there are also proprietary author identifiers such as Thomsen Reuters [Web Of Science’s Researcher ID](https://www.researcherid.com/#rid-for-researchers) and Elsevier’s [Scopus Author ID](https://www.scopus.com/freelookup/form/author.uri).
 
 ## Sources and further information 
 
@@ -44,3 +43,6 @@ In addition to  of ORCiDs as non-proprietary PIDs for authors there are also pro
 - German: [Persistent Identifiers - Technische Informationsbibliothek (TIB), Hannover](https://projects.tib.eu/pid-service/persistent-identifiers/persistent-identifiers-pids/)
 - German: [Digital Object Identifiers - Technische Informationsbibliothek (TIB), Hannover](https://projects.tib.eu/pid-service/persistent-identifiers/digital-object-identifiers-dois/)
 - German: [Open Research and Contributor ID (ORICD iD) - Technische Informationsbibliothek (TIB), Hannover](https://projects.tib.eu/pid-service/persistent-identifiers/open-researcher-and-contributor-id-orcid-id/)
+
+----
+Main author: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661)
