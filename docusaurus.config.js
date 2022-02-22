@@ -30,6 +30,10 @@ module.exports = {
           href: 'https://www.nfdi4chem.de'
         },
         {
+          label: 'NFDI4Chem Terminology Service',
+          href: 'https://terminology.nfdi4chem.de/ts/index'
+        },
+        {
           label: 'FAQ',
           href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
         },
@@ -76,6 +80,10 @@ module.exports = {
             {
               label: 'NFDI4Chem Helpdesk',
               href: 'https://nfdi4chem.de/index.php/helpdesk/'
+            },
+            {
+              label: 'NFDI4Chem Terminology Service',
+              href: 'https://terminology.nfdi4chem.de/ts/index'
             },
             {
               label: 'GitHub Repository',
