@@ -30,7 +30,7 @@ module.exports = {
           href: 'https://www.nfdi4chem.de'
         },
         {
-          label: 'NFDI4Chem Terminology Service',
+          label: 'Terminology Service',
           href: 'https://terminology.nfdi4chem.de/ts/index'
         },
         {
