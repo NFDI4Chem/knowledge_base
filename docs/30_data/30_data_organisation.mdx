@@ -9,7 +9,7 @@ related_pages:
 After [documentation of your research data](/docs/data/data_documentation), more detailed descriptions of how your information is saved is required - a quick look at files and folders, but when working with many or large data sets, the advantages of databases can become relevant. Consider whether this applies to your project and whether only files exported from the database might be useful. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data/data_storage).
 
 
-## files: naming conventions
+## Files: naming conventions
 
 Human users benefit from file names that allow for easy sorting and a notion of the content at first glance. However, file names such as the following are not helpful:
 
@@ -36,15 +36,15 @@ Find a balanced set of elements: Too many make it difficult to grasp quickly, wh
 
 #### Example elements to include in the file name
 * Date of creation
-* Project number / Experiment / Acronym
-* Type of data (Sample ID, Analysis, Conditions, Modifications etc.)
-* Device / Location / Coordinates
+* Project number / experiment / acronym
+* Type of data (sample ID, analysis, conditions, modifications etc.)
+* Device / location / coordinates
 * Name / Initials of the creator
 * Version number
 * Reserve the last 3-letters for file format (e.g. .csv, .odt, .tif, .jpg)
 
 
-A good file name like `20180211_ELI5_TEMP_BH01_RAW_03.csv` can easily be sorted by date and tells you:
+A good file name such as `20180211_ELI5_TEMP_BH01_RAW_03.csv` can easily be sorted by date and tells you:
 
     date of file:                 11 February 2018
     project acronym:              ELI5 = Explain like I’m 5 (years old)
@@ -64,7 +64,7 @@ If you need to rename a multiple files, take a look at:
 For some special file formats there are tools for adapting the file name to metadata. For example, to create a file name that fits your scheme and takes date and time information from the EXIF data of a jpg file. Some also allow adding an offset - this helps sort photos into timestamps that run on different clocks.
 
 
-## files: versioning
+## Files: versioning
 
 Stash snapshots or simply track changes and allow to find something that existed in a previous version but was later deleted or changed. With a clear chronological processing one after the other, normally no further tools are required. But even if this often seems so at first, supporting tools quickly proved to be useful and quickly are established in cooperation.
 
@@ -74,7 +74,7 @@ Stash snapshots or simply track changes and allow to find something that existed
 * Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
 
 
-## files: types of metadata
+## Files: types of metadata
 
 Consider the way data and [Metadata](/docs/topics/metadata/) can be stored together as FDOs (Fair Digital Objects). For example, metadata can be divided into the following four categories:
 * descriptive metadata
@@ -84,7 +84,7 @@ Consider the way data and [Metadata](/docs/topics/metadata/) can be stored toget
 
 An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/topics/format_standards/) for more information.
 
-## files: formats
+## Files: formats
 
 Different disciplines use established standards, see [Data Format Standard](/docs/topics/format_standards/). Also consider beyond the duration of the project:
 - usage of proprietary or open file formats
@@ -95,7 +95,7 @@ Different disciplines use established standards, see [Data Format Standard](/doc
 - suitable procedures for preserving the consistency of data and metadata
 
 
-## folder structure
+## Folder structure
 
 Everything should be immediately intuitively understandable. The folder structure helps you to navigate through the individual pieces of information. Develop a convention when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data/data_documentation). Try to consistently apply the same strategy in every project within the research group.
 
