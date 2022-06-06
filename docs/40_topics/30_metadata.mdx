@@ -5,18 +5,16 @@ title: "Metadata / MIChI"
 
 # Metadata and Minimum Information
 
-Metadata can be described as "data about data", meaning, it is data which describe information, the actual content of a dataset or file, and the context of this information. This may include general information such as a title or keywords, information about the data acquisition method, the people and institutions involved, the data format, the quality, or references to other data. For each type of data a different set of metadata may be added. A hierarchical metadata structure enables layers of multiple standards from more generic metadata for digital objects to more specific ones on samples or instruments. Metadata should be defined by [ontologies](50_ontology.mdx), controlled vocabularies, or [data formats](40_format_standards.mdx).
+Metadata can be described as "data about data", meaning, it is data that describes data, like content of a dataset or file, or the context of this data.
+More specific examples could be the title, keywords, acquisition method with a certain analytical technique, and the list continues.
 
-Minimum information (MI) standards are guidelines regarding which metadata is required when reporting data. Furthermore, these guidelines outline which format to use for both this information as well as for the data itself. The set of MI depends on the type of data and is established to ensure that data are deposited following the FAIR principles. Therefore, minimum information is a subset of rich metadata which can accompany data.
+Metadata gets more specialized as the domain it describes does, where the hierarchy of domains can correspond to a hierarchical metadata structure, enabling layers of multiple standards from more generic metadata, where it is completely domain-independent, to more specific one. Metadata should be supported by controlled vocabularies (ideally [ontologies](50_ontology.mdx)), and/or [data formats](40_format_standards.mdx).
 
-## Metadata and the FAIR Principles
+Metadata can be domain-independent, focusing mainly on citation details and findability of the data, such with the title, the keywords, the people and institutions involved, or references to other data. Alternatevily, it can be domain-specific, such as acquisition method with a certain analytical technique, or the data format and its quality.
 
-The [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18) do do not only apply to data but also the associated metadata. More information can be found in the [FAIR article](01_fair.mdx) or on [GoFair](https://www.go-fair.org/how-to-go-fair/).
 
-Metadata, as well as the data itself, should be assigned unique [persistent identifiers (PID)](100_pid.mdx) to be referenced in publications and other datasets. By organising these PIDs hierarchically, each parameter in the metadata can be referenced individually.
-Machine-readable metadata should be provided in a standardized format, while the metadata entities should be well-documented regarding semantics and the relations between the entities and the actual data. This can be achieved by defining the metadata as an ontology or schema, e.g. as XML or JSON. Schemas help in indexing metadata for search engines, repositories, or other data registries, and also help improve interoperability—the I in FAIR. Most of the other FAIR guidelines also apply to metadata.
 
-## General Metadata
+## Domain-Independent Metadata:
 
 There are metadata standards which are independent of the domain they are used in. These models can be used for chemical data to present a minimum set of metadata and may be complemented by more specific metadata.
 
@@ -33,6 +31,19 @@ The [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](http:/
 There are many more general metadata standards, mainly defined for libraries, collections, and databases managing digital objects.
 
 For provenance information, the W3C standard [PROV](https://www.w3.org/TR/prov-overview/) can be used to provide information on the origin of scientific data.
+
+
+
+Minimum information (MI) standards are guidelines regarding which metadata is required when reporting data. Furthermore, these guidelines outline which format to use for both this information as well as for the data itself. The set of MI depends on the type of data and is established to ensure that data are deposited following the FAIR principles. Therefore, minimum information is a subset of rich metadata which can accompany data.
+
+## Metadata and the FAIR Principles
+
+The [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18) do do not only apply to data but also the associated metadata. More information can be found in the [FAIR article](01_fair.mdx) or on [GoFair](https://www.go-fair.org/how-to-go-fair/).
+
+Metadata, as well as the data itself, should be assigned unique [persistent identifiers (PID)](100_pid.mdx) to be referenced in publications and other datasets. By organising these PIDs hierarchically, each parameter in the metadata can be referenced individually.
+Machine-readable metadata should be provided in a standardized format, while the metadata entities should be well-documented regarding semantics and the relations between the entities and the actual data. This can be achieved by defining the metadata as an ontology or schema, e.g. as XML or JSON. Schemas help in indexing metadata for search engines, repositories, or other data registries, and also help improve interoperability—the I in FAIR. Most of the other FAIR guidelines also apply to metadata.
+
+
 
 ## Minimum Information for Chemical Investigations (MIChI)
 
