@@ -19,16 +19,16 @@ const FeatureList = [
     Svg: require('/img/stud_white.svg').default,
     link: '/docs/role/student/',
   },
-/*   {
+  {
     title: 'Data Steward',
     Svg: require('/img/datastew_white.svg').default,
     link: '/docs/role/data_steward/',
   },
   {
-    title: 'Service Administrator',
+    title: 'Core Facility Manager',
     Svg: require('/img/service_white.svg').default,
-    link: '/docs/role/service_administrator/',
-  }, */
+    link: '/docs/role/core_facility_manager/',
+  }
 ];
 
 function Feature({ Svg, title, link }) {
