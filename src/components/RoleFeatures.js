@@ -24,11 +24,11 @@ const FeatureList = [
     Svg: require('/img/datastew_white.svg').default,
     link: '/docs/role/data_steward/',
   },
-  {
+ /* {
     title: 'Service Administrator',
     Svg: require('/img/service_white.svg').default,
     link: '/docs/role/service_administrator/',
-  }, 
+  },*/ 
 ];
 
 function Feature({ Svg, title, link }) {
