@@ -4,6 +4,82 @@ title: "How to choose the right repository"
 
 # How to choose the right repository
 
-![Under Construction](/img/Constr_2bl.png)
+## Introduction
 
-This article is under construction.
+The consortium for chemistry (NFDI4Chem) in the NFDI aims to support the community members (data producers and users) for collecting, storing, processing, analysing, disclosing and re-using research data by establishing a federation of repositories. In the consortium´s website you can find as an entry point an overview of the selected repositories, the central search service and common standards. 
+Aiming to identify the core repositories that are part of the federation and have potential for development, the TA3-team selected in the proposal the following criteria: 
+
+- The repository is suitable for the deposition of molecule related data
+- The repository contains reusable data or functionality (such as viewers, editors or analysis tools) that fulfil the needs of the NFDI4Chem community 
+- The repository software is open source
+- The operators of the repositories have declared their willingness to adapt their services to the standards developed by NFDI4Chem including the FAIR data principles 
+- The repository operators can be funded in accordance with the funding guidelines of the NFDI (i.e., the main operator is based in Germany and is a non-profit organisation)
+
+The repositories that fulfil the above mentioned criteria are reported in the following list as core repositories. In case that not all criteria are fulfilled they are included as associated or relevant repositories: 
+
+## Core Repositories
+
+- [Chemotion Repository](https://www.chemotion-repository.net/welcome) 
+- [MassBank EU](https://massbank.eu/MassBank/) 
+- [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/)  
+- [STRENDA DB](https://www.beilstein-strenda-db.org/) 
+- [SUPRABANK](https://suprabank.org/) 
+
+### Associated Repositories
+
+## Other relevant Repositories
+
+## Further repositories (currently in development):
+
+Moreover, the consortium supports further databases and data repositories on interoperability issues and encourages them to participate in the development of NFDI4Chem standards and interfaces. 
+Please note: you are free to pledge your dataset to the NFDI4Chem-survey form. Support will be provided via a consulting service or more intense data stewardship to assist in publishing your research data. A suitable repository will also be suggested.
+
+### Mapping Matrix Data-Repository
+
+and the interviews with the repository leaders performed by the TA3-team, a list of the most common data types and formats within this community was collected and is reported in Table 1. 
+Table 1 displays which data types are most commonly collected within the chemistry community and suggests which repository is most suitable for storing your specific data type. The recommendations provided in Table 1 will guide you to efficiently and quickly select the best repository for the storage of your data. Selection of the most appropriate database can have a significant impact on findability and citability of the data as well as visibility of the scientist.
+
+
+Table
+
+## Summary of the repositories
+
+A summary with the most relevant information for each repository is reported in the following section:
+
+### Chemotion - Repository for molecules and research data
+
+Quick stats:
+
+- **Accepted data types:** mass spectrometry: jcamp-dx, MzMl, MzXML (open, visualisable and processable), RAW for selected mass data types (processed and converted in JCAMP-dx), NMR: Bruker format (zip) and jcamp-dx, IR and Raman: jcamp-dx, XRD: jcamp-dx, UV-VIS: jcamp-dx, Cyclic voltammetry: jcamd-dx. 
+Chemotion repo offers the option to convert data from different file formats into jcamp-dx.
+- **Used standards/ontologies:** DataCite Metadata Schema, InChI, SMILES, molfile V2000 and V3000  CHMO Ontology, RXNO Ontology
+- **Access rights/licence information/embargo:** CC0, CCBY, CCBY-SA; public domain embargo possible (unlimited)
+- **Recommended by Journals/Societies:** in progress
+
+<details>
+  <summary>Click to expand for more details about Chemotion!</summary>
+  
+ <h3>Chemotion - Repository for molecules and research data</h3>
+ 
+ The Chemotion Repository, covers research data that is assigned to molecules, their properties and characterization as well as reactions and experimental investigations. It is hosted at Karlsruhe Institute for Technology (KIT) and is used by several groups in Germany and beyond. Scientists in the domains of molecular and synthetic chemistry are supported in their efforts to handle data in a FAIR manner: the data is stored according to the common practices of scientists assigned to molecules and reactions and the system provides the required Digital Object Identifiers (DOIs) without additional effort for the scientist. The given metadata is supported by the implementation of ontology terms. The findability of the data is achieved by text, structure and identifier search options and the submitted samples and their structure are referenced in PubChem for gaining higher visibility of the work for the scientists. The repository is interoperable with the Chemotion ELN which means that data can be transferred from ELN to the repository. Data is curated by automatic checks and a peer reviewing process. The integration of data stored in the repository in publications was shown with several examples and its usage is currently recommended by Chemistry methods. Authors can be referenced by Contributor iD (ORCID iD). Chemists and materials scientists can publish data for open access (data view) and registered access (dataset contribution and download). Stored data can be searched by chemical structure, author, dataset type, status, identifier, and DOI. The current AAI solution is based on an internal user administration (administrator, anonymous and registered user, curator). Metadata according to DataCite is compliant with the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) scheme. The Chemotion Repository offers an internal substance register, a spectra viewer (ChemSpectra), a structure editor (Ketcher) and their own data converter.
+
+Please note: Chemotion Repository accepts all data types but only few of them can be processed and edited in viewers. 
+</details>
+
+### MassBank EU - High Quality Mass Spectral Database
+
+Quick stats:
+
+- **Accepted data types:** MassBank format
+- **Used standards/ontologies:** Internal MassBank Record Format 
+- **Access rights/licence information/embargo:** Copyright; individual licences based on creative commons; no embargo
+- **Recommended by Journals/Societies:** in progressofficial database of the Mass Spectrometry Society of Japan
+
+<details>
+  <summary>Click to expand for more details about MassBank EU!</summary>
+  
+ <h3>MassBank EU - High Quality Mass Spectral Database</h3>
+ 
+MassBank EU is the first public repository of mass spectral data for sharing them among the scientific research community. Their target user groups in the domains of chemistry and life sciences are analytical chemists, metabolomics, biochemists, and bioinformaticians. Their data sets from community users and projects are openly accessible and represent the official database of the Mass Spectroscopy Society of Japan. GitHub is used as their current AAI environment (open read access, limited write access) whereas GitHub issues as their curation tracking system. The curation itself is performed by the MassBank record validator. The data sets can be searched for compound and mass spectrometry information and peaks. MassBank Record ID (Accession) and USI (Universal Spectrum Identifier) are used as persistent identifier systems. The MassBank EU spectral data is hosted in a revision control system with all spectral data and the corresponding metadata in a human-readable record format, and continuous integration (CI) checking record integrity for each change. Instances of the web interface are hosted at UFZ and Leibniz Institute of Plant Biochemistry (IPB) (Halle) but can be installed locally as well. They offer interfaces for data import via Git (MassBank record format) and for data export (JSON-LD) and a REST API. On top of that RMassBank is provided as a separated data processing/analysis tool. 
+</details>
+
