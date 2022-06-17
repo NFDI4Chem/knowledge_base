@@ -23,12 +23,12 @@ const FeatureList = [
     title: 'Data Steward',
     Svg: require('/img/datastew_white.svg').default,
     link: '/docs/role/data_steward/',
-  }
-/*  {
+  },
+  {
     title: 'Core Facility Manager',
     Svg: require('/img/service_white.svg').default,
     link: '/docs/role/core_facility_manager/',
-  } */
+  }
 ];
 
 function Feature({ Svg, title, link }) {
