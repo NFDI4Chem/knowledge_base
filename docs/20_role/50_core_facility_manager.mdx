@@ -1,0 +1,70 @@
+---
+title: "Core facility manager"
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+:::info Applies to:
+This article applies to core facility managers and heads of analytical service units.
+:::
+
+## Motivation
+
+<img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/N4C_DataLifecycle.svg')} width="500" align="right" />
+
+In the chemistry data lifecycle, core facilities play an important role as major producers of chemical data. For modern analytical techniques like mass spectrometry or NMR spectroscopy, data are usually recorded digitally and the challenges lie less in digitalisation but management issues.
+
+This article reflects some of the most important areas to consider for a core facilities data storage infrastructure and gives perspectives on where [FAIR guiding principles](/docs/topics/fair/) may already be followed today.
+
+## Good Research Practice
+
+When thinking about how to store data and make them available, an important starting point are Good Research Practice (GRP) considerations. As funding agencies adhere to GRP guidelines and a breach of such guidelines will effectively preclude any future research funding.
+
+### The Situation in Germany
+
+The German Research Council ([DFG](https://www.dfg.de)) summarizes the consensus on the *fundamental principles and standards of good practice* in science in their Code fo Conduct *Guidelines for Safeguarding Good Research Practice* [\[1\]](#dfg_code). In guideline 17, a storage of all research data for the period of ten years is demanded, starting from the date of publication. Data storage strategies should therefore contain longterm storage for at least that time.
+
+## How to start
+
+From the perspective of a core facility, it usually makes sense to separately consider **data safety** and digestion of **sample metadata**.
+
+### Data safety
+
+The most important aspect for core facility managers is to preculde data loss. All recorded data should be saved to a **decentral redundant storage** as soon as possible. The easiest way is to automate this by using the onboard command-line tools of the respective system, like `robocopy.exe` on Windows or `rsync` on most UNIX systems [\[2\]](#sync). Both utilities can be used for automatic incremental synchronisation of local and remote storage.
+
+At most universities, local computing centres will assist in providing decentral and redudant storage. In many cases, this storage can not also be used to provide instrument data to users without direct access to instrument workstations which is usually undesired. Ideally, the remote storage is versioned so that accidental deletions can be reversed.
+
+In addition, **backup strategies** for all instrument workstations should be considered. In addition to providing additional data safety, they also can be very useful for disaster recovery which can be invaluable for legacy systems were software components may no longer be available.
+
+### Sample Metadata
+
+While most of the scientific work still lies ahead, there are already valuable metadata to be harvested and digested at the early stage of sample submission. These can include, among many others:
+
+- Date
+- Creator (person, group)
+- Project
+- Sample identifier
+- Molecular structure(s), and derived properties:
+    - Molecular formula
+    - Molecular weight
+    - Elemental composition
+    - Physicochemical properties 
+- Solvent or solubility
+- Purity
+- Experiment information of interest, such as:
+    - Retation time
+    - Polarity
+    - Ionisation method
+    - NMR nuclei and experiments
+    - Chiroptical data
+- Biological properties
+
+The challenge of digesting those metadata according to [FAIR guiding principles](/docs/topics/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
+
+1. **Parsing of metadata from datasets.** This requires relative little organisation effort in advance but can be difficult depending on the respective data formats. Many instrument vendors use proprietary data formats. If all information, including description, is saved in [binary formats](https://en.wikipedia.org/wiki/Binary_file), the extraction of metadata can be challenging.
+1. **Using a LIMS.** Using a [Laboratory information management system (LIMS)](https://en.wikipedia.org/wiki/Laboratory_information_management_system) allows to efficiently organise all processes connected to sample processing in an electronic fashion. In a way, a LIMS is the core facility counterpart to an [ELN](/docs/topics/eln). If a LIMS is used, the extraction of sample metadata is considerably easier than by hindsight parsing. However, the LIMS requires that the LIMS covers all processes required in the facility. Establishing a LIMS in a core facility may therefore be a complex organisational task.
+
+## Sources
+
+1. <a name="dfg_code"></a> Deutsche Forschungsgemeinschaft (DFG), <em>Guidelines for Safeguarding Good Research Practice. Code of Conduct</em>, September 2019, <a href="https://doi.org/10.5281/zenodo.3923602"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3923602.svg" alt="DOI" /></a>
+2. <a name="sync"></a>See <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy" target="_blank">Microsoft documentation</a> for <code>robocopy</code> or <a href="https://linux.die.net/man/1/rsync" target="_blank">manpage</a> for <code>rsync</code>.
