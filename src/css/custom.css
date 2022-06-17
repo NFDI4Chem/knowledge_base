@@ -210,7 +210,16 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 }
 
 
+/* details environment */
+
+.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module * { 
+  text-align: justify;
+}
+
+
+
 /* Links */
+
 
 a {
   color: var(--ifm-link-color);
@@ -231,7 +240,7 @@ a:not([href]) {
     text-decoration: none;
   }
 
-
+p,
 .markdown>p,
 .markdown>pre,
 .markdown>ul {
