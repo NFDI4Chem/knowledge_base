@@ -10,23 +10,29 @@ A typical workflow begins with the conceptualisation of the research question, a
 
 ## Type of experiments for chemical analysis
 
-- **Sampling**
-    - Collecting of materials for analysis
-    - Transport and storage without alteration of samples
-    - Small-scale experiments to develop / optimise approaches and equipment
-    - Upscaling of methods to obtain sufficient material for a comprehensive analysis
+### Sampling
 
-- **Sample processing**
-    - Preparation of the sample for analysis:
-        - Direct (“non-destructive”) methods: no further treatment (e.g., pH, RFA, MALDI, direct infusion)
-        - Combined methods:
-            - Extraction and enrichment (e.g., solid-phase extraction, aqua regia digestion, volatilisation of solvents)
-            - Separation of interfering compounds (e.g., chromatography, precipitation)
-            - Chemical transforming in measurable form (e.g., complexing, derivatisation)
-    - Small-scale experiments for screening / optimization of separation conditions and upscaling
+- Collecting of materials for analysis
+- Transport and storage without alteration of samples
+- Small-scale experiments to develop / optimise approaches and equipment
+- Upscaling of methods to obtain sufficient material for a comprehensive analysis
 
-- **Determination and evaluation** <br/>
-    Product characterisation with feasible methods (e.g., NMR spectroscopy, mass spectrometry, IR spectroscopy, UV/vis spectroscopy, elemental analysis)
+### Sample processing
+
+- Preparation of the sample for analysis:
+    - Direct methods: no further treatment (e.g., pH, RFA, MALDI, direct infusion)
+    - Single methods:
+        - Dissolving
+        - Extraction
+        - Pulverising 
+    - Combined methods:
+        - Extraction and enrichment (e.g., solid-phase extraction, aqua regia digestion, volatilisation of solvents)
+        - Separation of interfering compounds (e.g., chromatography, precipitation)
+        - Chemical transforming in measurable form (e.g., complexing, derivatisation)
+- Small-scale experiments for screening / optimization of separation conditions and upscaling
+
+### Determination and evaluation
+- Product characterisation with feasible methods (e.g., NMR spectroscopy, mass spectrometry, IR spectroscopy, UV/vis spectroscopy, elemental analysis)
     - to identify analytes (targeted and non-targeted)
     - to assess the constitution of mixtures
     - to quantify analytes
@@ -44,7 +50,7 @@ A typical workflow begins with the conceptualisation of the research question, a
 - Observations and results of analytical methods with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment, which may include temperatures, or the pH (with metadata where applicable).
 - Obtained data from analytical instruments (e.g., NMR, MS, or IR data) are uploaded to the Chemotion ELN in open file formats and directly attached to the respective ELN experiment entry including instrumental setup metadata.
 - In case instrumental metadata is not convertible to open format without information loss, conditions need to be documented in the ELN.
-- Metadata related to the obtained data, such as mass, volumes, or solvent of measurement, have to be provided according to metadata standards, [e.g. x](/docs/topics/format_standards).
+- Metadata related to the obtained data, such as mass, volumes, or solvent of measurement, have to be provided according to [metadata standards](/docs/topics/format_standards).
 
 ## Data producing methods
 
@@ -55,7 +61,7 @@ A typical workflow begins with the conceptualisation of the research question, a
 
 |Analytical method|Exemplary proprietary file extensions|Typical size of proprietary file|Converter to open file format|Recommendation for open file extension*|File format|File size of open format|
 |:------------|:------------|:------------|:------------|:------------|:------------|:------------|
-|NMR spectroscopy|.fid|<1-50 MB|MNova<br/>Topspin|.jdx<br/>.zip<br/>|JCAMP-DX<br/>NMReDATA|~1 MB|
+|NMR spectroscopy|*set of files, no typical extension*|<1-50 MB| [nmrium.org](https://www.nmrium.org/) |.jdx<br/>.zip<br/>|JCAMP-DX *(raw)*<br/>NMReDATA *(assignments)*|<1-50 MB|
 |Mass spectrometry|.raw<br/>.d<br/>.baf|~250 MB|Proteowizard|.mzML|mzML|~250 MB|
 |IR spectroscopy|.ispd<br/>.icIR|<1 MB| |.dx|JCAMP-DX|<1 MB|
 |Raman spectroscopy|.dpt<br/>.spc<br/>.icRaman<br/>.sps<br/>.acs|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
@@ -76,7 +82,7 @@ A typical workflow begins with the conceptualisation of the research question, a
 
 ## Data analysis
 
-- Research data are processed, analysed and compared (also to data of other experiments) within the Chemotion ELN.
+- Research data can be processed, analysed and compared (also to data of other experiments) within the [Chemotion ELN](https://www.chemotion.net/chemotionsaurus/index.html).
 - Optionally, preprocessing of digital data with software of analytical device before data are transferred to the Chemotion ELN (cf. data producing methods).
 - A detailed view, evaluation and interpretation of results is carried out with the Chemotion ELN features.
 

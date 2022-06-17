@@ -4,11 +4,56 @@ title: "ELN"
 
 # Electronic Lab Notebooks (ELNs)
 
-ELNs are a key prerequisite to a comprehensive, digital documentation of research data and are therefore of high importance capturing data for further analysis or a later re-use. ELNs are available as either a commercial, free, or even an Open Source solution. ELNs can be either discipline-agnostic or discipline-specific; some of them combine both aspects. The organization of work with ELNs that support chemistry-specific functions can offer several benefits such as the availability of [chemical structure identifiers](70_machine-readable_chemical_structures.mdx) and [standardized formats](40_format_standards.mdx) as well as the integration of manifold tools and workflows that facilitate scientific work. The direct integration of tools enables a direct support of the scientist without the need to search for additional services and software, thus bringing new developments and information directly to the scientists’ awareness. To date, only a few electronic lab notebooks meet the basic requirements for chemical sciences. This is most likely due to the challenges arising from drawing and processing chemical structures, a crucial and central step in being able to correlate research data to the corresponding chemical reaction or structure. Some Open Source examples for systems in chemistry that offer the necessary support for chemical structures include [Indigo-ELN](https://lifescience.opensource.epam.com/indigo/eln/index.html), [LabTrove](http://labtrove.org/), [OpenEnventory](http://www.open-enventory.de/), and [Chemotion ELN](https://eln.chemotion.net/home).
+## Introduction
+
+Information technology continuously develops at a fast pace. For example, the smartphones we all carry on a daily basis in our pockets are much faster than a supercomputer from the 80s which you could barely fit in an average bedroom. Unfortunately, this accelerated advancement of information technology has not yet fully reached our chemical laboratories. The paper laboratory notebook is just as popular and widespread as it was 100 years ago, with the very essence of how chemical research data is documented - literally with pen and paper - having only made little progress over the last centrury. 
+
+Transferring the advancement of the information technology into the lab (smartlab) does not necessarily mean tablets & touch screens in every corner of your laboratory. The term Smartlab is more about the interconnectivity of the entire workflow and handling research data according to the [FAIR principles](01_fair.mdx). ELNs help to assign rich [metadata](30_metadata.mdx) to experiments and make the collected data traceable as well as reusable. With the possibility to transfer data from measurement devices directly into the ELN, the ELN is the central storage with all data in one place. From the ELN, data can be easily published into repositories and transferred to suitable long-term [archiving](../30_data/50_data_storage.mdx).
+
+One of the most important things, that distinguishes an ELN from a white blank paper is the possibility to document [metadata](30_metadata.mdx) in a structured and ideally in a human as well as machine-readable way. See the following overview for more information on the differences between blank sheets, ELNs and laboratory information management systems (LIMS).
+
+![BS_ELN_LIMS](/img/topics/Differences_BS_ELN_LIMS.png)
+Image Attribution: Lindstädt, Adam, MB MED ELM-Wegweiser: Elektronische Laborbücher im Kontext von FDM und GWP, RWTH Aachen FDM Netzwerktreffen 10.11.2021.
+
+## Advantages of an ELN
+
+ELNs help to link experimental descriptions directly to the collected data so that all information can be found in one place. Furthermore, data loss is avoided by secure data storage and backups. Storing all the data in one central place helps also with knowledge management because the data is easily findable and accessible, even for new members in a research project. The biggest advantage of an ELN is that [metadata](30_metadata.mdx) is stored in a structured and [standardised](40_format_standards.mdx) way. This also helps with publishing research results and transferring research data to a repository.
+
+![Advantage ELN](/img/topics/Advantages_ELN.png)
+
+## The right ELN
+
+To date, there is not one ELN, that fits the requirements for all chemical disciplines. Furthermore, only a few ELNs meet the basic requirements for chemical sciences. This is most likely due to the challenges arising from drawing and processing chemical structures, a crucial and central step in being able to correlate research data to the corresponding chemical reaction or structure. The organisation of work with ELNs that support chemistry-specific functions can offer several benefits, such as the availability of [chemical structure identifiers](70_machine-readable_chemical_structures.mdx) and [standardised formats](40_format_standards.mdx) as well as the integration of manifold tools and workflows that facilitate scientific work. The direct integration of tools enables a direct support of the scientist without the need to search for additional services and software, thus bringing new developments and information directly to the scientists’ awareness. Some Open Source examples for systems in chemistry that offer the necessary support for chemical structures include [Indigo-ELN](https://lifescience.opensource.epam.com/indigo/eln/index.html), [LabTrove](http://labtrove.org/), [OpenEnventory](http://www.open-enventory.de/), and [Chemotion ELN](https://eln.chemotion.net/home).
+
+Therefore, choosing the right ELN is crucial for a successful implementation of an ELN in a laboratory. Three steps should be taken to establish an ELN: 1) Needs assessment, 2) Testing and 3) Introducing the chosen ELN.
+
+![Right ELN](/img/topics/The_right_ELN.png)
+Image Attribution: ZB MED ELN-Guide, 2021, [https://dx.doi.org/10.4126/FRL01-006425772](https://dx.doi.org/10.4126/FRL01-006425772).
+
+### Criteria for selecting an ELN
+
+|Category|Explanation|
+|:------------|:------------|
+|License model|Commercial ELNs mostly use proprietary file formats, the source code is closed source and a license fee is charged. Open source ELNs are free of charge, use open standard formats, source code is openly accessible and further developed by an active developer community. Implementation and maintenance require the appropriate human resources.|
+|Providing model|Software can be provided either in a cloud (SaaS - Software as a Service) or server-based for local installation at the customer's site (on-premises).|
+|File storage|Data storage in the cloud of the ELN provider (or their service provider, e.g. in the EU) or the possibility of storage on own local servers/in the own cloud are offered.|
+|Concept|Concept refers to the subject-specific orientation. Generic tools can be used in all subjects, but usually do not provide specific features, such as structure editors for chemistry.|
+|Standard interface|Standard interfaces enable data exchange with external programs, e.g. ChemDraw, Marvin JS, ChemDoodle, MS Office, Libre Office, ImageJ, Slack|
+|Pragramming interfaces|An API is needed for integration into an existing IT environment, e.g. own storage solutions.|
+|File import/export|Export/import of both human- and machine-readable formats should be possible (e.g. pdf, zip, csv, json, xml), ideally also larger units, such as the ELN.|
+|Metadata|Providing metadata is a crucial factor in ensuring findability and understanding of data. Metadata should be recorded in a structured, machine- and human-readable format.|
+|Collaboration|Collaboration simplifies the exchange of data and results. It should be possible to define roles, e.g. who has access and to what extend (role management).|
+|Sharing/Publication|ELNs allow direct exchange of data with portals for publishing/sharing research data.|
+|Search|The search function allows data to be retrieved and filtered.|
+|Templates|Templates are used for time saving and standardization. One advantage is the option to create templates according to one’s own needs.|
+|Workflows|Documenting processes significantly increases efficiency, traceability and contributes to transparency and transporting of know-how.|
+|Security of evidence|Evidence security means the traceable documentation in compliance with legal regulations, e.g. providing the entries with a time stamp, electronic signature, versioning.|
+|Rule compliance|The tool must enable compliance with regulatory requirements, e.g. GLP, GCP.|
+Table Attribution:ZB MED PUBLISSO ELN-Filter, 2921-06 english.
 
 ## Electronic Lab Notebooks (ELNs) in NFDI4Chem
 
-[NFDI4Chem](https://www.nfdi4chem.de/) will support those ELNs that are relevant for documentation of chemical research activities. This support will include hosting one ELN instance for each of the relevant ELNs at KIT for teaching and training purposes. This service will be established in 2022 to allow all scientists to compare ELNs and their functionalities. Comparing and testing different ELNs is a prerequisite for making the right choice. Furthermore, NFDI4Chem organizes various seminars with the goal of giving a first impression of different ELNs. These seminars are a good opportunity for ELN providers to demonstrate their ELN's usefulness and possible applications. For past and forthcoming seminars, please see the [Stammtisch event page](https://www.nfdi4chem.de/index.php/event/stammtisch-chemotion/).
+[NFDI4Chem](https://www.nfdi4chem.de/) will support those ELNs that are relevant for documentation of chemical research activities. This support will include hosting one ELN instance for each of the relevant ELNs at KIT for teaching and training purposes. This service will be established in 2022 to allow all scientists to compare ELNs and their functionalities. Comparing and testing different ELNs is a prerequisite for making the right choice. Furthermore, NFDI4Chem organises various seminars with the goal of giving a first impression of different ELNs. These seminars are a good opportunity for ELN providers to demonstrate their ELN's usefulness and possible applications. For past and forthcoming seminars, please see the [Stammtisch event page](https://www.nfdi4chem.de/index.php/event/stammtisch-chemotion/).
 
 ## Chemotion ELN
 
