@@ -119,6 +119,11 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
 }
 
+
+.alert * { 
+  text-align: justify;
+}
+
 .alert--danger {
   --ifm-alert-background-color: #white;
   --ifm-alert-background-color-highlight: rgba(250, 56, 62, 0.15);
@@ -140,6 +145,11 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   --ifm-alert-border-color: var(--ifm-color-warning);
 }
 
+.features {
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
 
 .button--primary {
   --ifm-button-border-color: var(--ifm-color-primary);
@@ -180,8 +190,61 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   --ifm-button-border-color: var(--ifm-color-danger);
 }
 
+.button--primary:not(.button--outline):hover {
+  --ifm-button-background-color: var(--ifm-color-danger);
+  --ifm-button-border-color: var(--ifm-color-danger);
+}
+
 .button.button--secondary {
+  color: white;
+}
+
+.button.button--secondary h1,
+.button.button--secondary h2,
+.button.button--secondary h3,
+.button.button--secondary h4,
+.button.button--secondary h5,
+.button.button--secondary h6 {
+  color: white;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.button.button--secondary li,
+.button.button--secondary em
+ {
   color: var(--ifm-color-white);
+  text-align: left;
+  font-weight: 300;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.button.button--primary {
+  color: var(--ifm-color-white);
+}
+
+.button.button--primary h1,
+.button.button--primary h2,
+.button.button--primary h3,
+.button.button--primary h4,
+.button.button--primary h5,
+.button.button--primary h6 {
+  color: white;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.button.button--primary li,
+.button.button--primary em
+ {
+  color: var(--ifm-color-white);
+  text-align: left;
+  font-weight: 300;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 
@@ -208,14 +271,6 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   margin-top: 0;
   padding: 0 ;
 }
-
-
-/* details environment */
-
-.details_node_modules-\@docusaurus-theme-classic-lib-theme-Details-styles-module * { 
-  text-align: justify;
-}
-
 
 
 /* Links */
