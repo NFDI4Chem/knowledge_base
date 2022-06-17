@@ -43,7 +43,6 @@ function Feature({ Svg, title, link }) {
           <Link
             className={clsx('button button--secondary button--lg')} style={{
               width: 250,
-              color: ffffff
             }}
             // ? <Link className={clsx('')}
             to={link}>
