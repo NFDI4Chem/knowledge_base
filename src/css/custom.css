@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --ifm-color-primary: #009cbc;
+  --ifm-color-primary: #ee7400;
   --ifm-color-primary-dark: var(--ifm-color-primary);
   --ifm-color-primary-darker: var(--ifm-color-primary);
   --ifm-color-primary-darkest: var(--ifm-color-primary);
@@ -20,14 +20,14 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
   --ifm-heading-color: var(--ifm-color-primary);
-  --ifm-color-secondary:	#808181;
+  --ifm-color-secondary:	#00617c;
   --ifm-color-secondary-dark: var(--ifm-color-secondary);
   --ifm-color-secondary-darker: var(--ifm-color-secondary);
   --ifm-color-secondary-darkest: var(--ifm-color-secondary);
   --ifm-color-secondary-light: var(--ifm-color-secondary);
   --ifm-color-secondary-lighter: var(--ifm-color-secondary);
   --ifm-color-secondary-lightest: var(--ifm-color-secondary);
-  --ifm-color-danger: #ee7400;
+  --ifm-color-danger: #E30613;
   --ifm-color-danger-dark: var(--ifm-color-danger);
   --ifm-color-danger-darker: var(--ifm-color-danger);
   --ifm-color-danger-darkest: var(--ifm-color-danger);
@@ -72,7 +72,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .footer--dark {
-  --ifm-footer-background-color: var(--ifm-color-secondary);
+  --ifm-footer-background-color: var(--ifm-color-primary);
   --ifm-footer-color: var(--ifm-footer-link-color);
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-title-color: var(--ifm-color-white);
