@@ -25,7 +25,7 @@ function HomepageHeader() {
             </p>
             <div className={styles.buttons}>
               <Link
-                className={clsx("button button--negative button--lg")}
+                className={clsx("button button--primary button--lg")}
                 to="/docs/intro">
                 Get started
               </Link>
@@ -44,8 +44,10 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="A place for all knowledge regarding Research Data Management (RDM) in Chemistry">
       <HomepageHeader />
-      <main>
+      <main className="landingfeatures">
+      <div  >
         <HomepageFeatures />
+      </div>
       </main>
     </Layout>
   );
