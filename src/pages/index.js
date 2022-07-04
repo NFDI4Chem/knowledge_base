@@ -32,7 +32,7 @@ export default function Home() {
           <div className="col col--2">
             <div className={styles.buttons}>
               <Link
-                className="button button--primary button--lg vertical-center"
+                className="button button--primary button--lg"
                 to="/docs/intro">
                 Get started
               </Link>

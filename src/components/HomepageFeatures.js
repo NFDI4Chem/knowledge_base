@@ -33,11 +33,11 @@ const FeatureList = [
 
 function Feature({ Svg, title, link }) {
   return (
-    <div className="col feature-col">
+    <div className={clsx("col feature--col")}>
       <div className="text--center vertical-center">
         {link ? (
           <Link
-            className="button button--primary button--lg feature-button"
+            className={clsx("button button--primary button--lg feature--button")}
             // ? <Link className={clsx('')}
             to={link}>
               <Svg className={styles.featureSvg} alt={title} /><br/>

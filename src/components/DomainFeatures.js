@@ -42,30 +42,24 @@ const FeatureList = [
 ];
 
 function Feature({ Svg, title, link }) {
-    return (
-      <div className='col' style={{
-        width: 300,
-        padding: 8,
-        //backgroundColor: 'red',
-      }}>
-      <div className='text--center'>
-        {link ? (
-          <Link
-            className={clsx('button button--secondary button--lg')} style={{
-              width: 300,
-            }}
-            // ? <Link className={clsx('')}
-            to={link}>
-              <Svg className={styles.featureSvg} alt={title} /><br/>
-            {title}
-          </Link>
-        ) : (
-          <p>{title}</p>
-        )}
-      </div>
-      </div>
-    );
-  }
+  return (
+    <div className='col feature-secondary--col'>
+    <div className='text--center'>
+      {link ? (
+        <Link
+          className={clsx('button button--secondary button--lg feature-secondary--button')} 
+          // ? <Link className={clsx('')}
+          to={link}>
+            <Svg className={styles.featureSvg} alt={title} /><br/>
+          {title}
+        </Link>
+      ) : (
+        <p>{title}</p>
+      )}
+    </div>
+    </div>
+  );
+}
 
 export default function DomainFeatures() {
   return (

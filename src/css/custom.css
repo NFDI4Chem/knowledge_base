@@ -10,8 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --ifm-color-primary: #ee7400;
-/*  --ifm-color-primary: #00617c;  */
+  --ifm-color-primary: #00617c; 
   --ifm-color-primary-dark: var(--ifm-color-primary);
   --ifm-color-primary-darker: var(--ifm-color-primary);
   --ifm-color-primary-darkest: var(--ifm-color-primary);
@@ -21,8 +20,7 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
   --ifm-heading-color: var(--ifm-color-primary);
-  --ifm-color-secondary:	#00617c;
-  /* --ifm-color-secondary:	#ee7400; */
+  --ifm-color-secondary:	#873593;
   --ifm-color-secondary-dark: var(--ifm-color-secondary);
   --ifm-color-secondary-darker: var(--ifm-color-secondary);
   --ifm-color-secondary-darkest: var(--ifm-color-secondary);
@@ -62,13 +60,23 @@
 
   --ifm-button-border-radius: 0;
 
-  --ifm-navbar-height: 6rem;
+  --ifm-navbar-height: 5rem;
 
   --ifm-alert-border-left-width: 2pt;
   --ifm-alert-border-width: 2pt;
   --ifm-alert-border-radius: 0;
   --ifm-alert-shadow: transparent;
+
+  --n4c-button-width: 270px;
+  --n4c-button-height: 230px;
+
+  --n4c-button-secondary-width: 300px;
+
+  --n4c-button-vpad: 10px;
+  --n4c-button-hpad: 5px;
   
+
+  --ifm-font-size-base: 110%;
 }
 
 .navbar__logo img {
@@ -115,21 +123,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-size: 1.2rem;
 }
 
-
-.feature-col {
-  width: 320px;
-  height: 230px;
-  padding: 10px 5px;
-  align-items: center;
-}
-
-.feature-button {
-  width: 300px;
-  padding: 80 0;
-}
-
 .vertical-center {
-  padding: 80 0;
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
 }
 
 .footer__link-item {
@@ -206,17 +201,33 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   --ifm-alert-border-color: var(--ifm-color-warning);
 }
 
-.landingfeatures {
-  background-color: var(--ifm-color-primary);
-} 
-
-
-.features {
+.feature--col {
+  width: var(--n4c-button-width);
+  height: var(--n4c-button-height);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
   align-items: center;
-  padding: 2rem;
-  width: 100%;
 }
 
+.feature-secondary--col {
+  width: var(--n4c-button-secondary-width);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  align-items: center;
+}
+
+.feature--button {
+  width: var(--n4c-button-width);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+}
+
+.feature-secondary--button {
+  width: var(--n4c-button-secondary-width);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+}
+
+
+.landingfeatures {
+  background-color: var(--ifm-color-primary);
+}
 
 .buttons {
   display: flex;
@@ -256,25 +267,25 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   }
 
 .button--secondary {
-  --ifm-button-border-color: var(--ifm-color-secondary);
+  --ifm-button-background-color: white;
+  --ifm-button-border-color: var(--ifm-color-primary);
 }
 
 .button--secondary:not(.button--outline) {
-  --ifm-button-background-color: var(--ifm-color-secondary);
-  --ifm-button-border-color: white;
-
+  --ifm-button-background-color: white;
+  --ifm-button-border-color: var(--ifm-color-primary);
 }
 
 .button--secondary:not(.button--outline):hover {
 /*   --ifm-button-background-color: var(--ifm-color-danger); */
-  --ifm-button-border-color: white;
+  --ifm-button-border-color: var(--ifm-color-primary);
   transform: scale(1.05);
   transition: transform 175ms ease-in-out;
 }
 
 
 .button.button--secondary {
-  color: white;
+  color: var(--ifm-color-primary);
 }
 
 .button.button--secondary h1,
@@ -282,8 +293,9 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 .button.button--secondary h3,
 .button.button--secondary h4,
 .button.button--secondary h5,
-.button.button--secondary h6 {
-  color: white;
+.button.button--secondary h6,
+.button.button--secondary a {
+  color: var(--ifm-color-primary);
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
@@ -292,7 +304,7 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 .button.button--secondary li,
 .button.button--secondary em
  {
-  color: var(--ifm-color-white);
+  color: var(--ifm-color-primary);
   text-align: left;
   font-weight: 300;
   white-space: normal;
@@ -323,25 +335,6 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   font-weight: 300;
   white-space: normal;
   word-wrap: break-word;
-}
-
-
-.button--negative {
-  --ifm-button-border-color: white;
-}
-    
-.button--negative:not(.button--outline) {
-  --ifm-button-background-color: white;
-}
-    
-.button--negative:not(.button--outline):hover {
-  --ifm-button-background-color: var(--ifm-color-danger);
-  --ifm-button-border-color: var(--ifm-color-danger);
-  color: var(--ifm-color-white)
-}
-    
-.button.button--negative {
-  color: var(--ifm-color-danger);
 }
 
 .n4c--logo {
