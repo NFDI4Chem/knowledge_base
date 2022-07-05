@@ -255,9 +255,9 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 }
 
 
-.button--primary {
-  /* --ifm-button-border-color: white; */
-}
+/*  .button--primary {
+   --ifm-button-border-color: white; 
+} */
 
 .button--primary:not(.button--outline) {
     --ifm-button-background-color: var(--ifm-color-primary);
