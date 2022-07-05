@@ -33,17 +33,11 @@ const FeatureList = [
 
 function Feature({ Svg, title, link }) {
   return (
-    <div className={clsx('col')} style={{
-      width: 250,
-      padding: 5,
-      //backgroundColor: 'red',
-    }}>
-      <div className='text--center'>
+    <div className={clsx("col feature--col")}>
+      <div className="text--center vertical-center">
         {link ? (
           <Link
-            className={clsx('button button--secondary button--lg')} style={{
-              width: 250,
-            }}
+            className={clsx("button button--primary button--lg feature--button")}
             // ? <Link className={clsx('')}
             to={link}>
               <Svg className={styles.featureSvg} alt={title} /><br/>
@@ -70,64 +64,3 @@ export default function HomepageFeatures() {
     </section>
   );
 }
-
-export function RoleButton() {
-  return (
-    <section className={styles.features}>
-      <div className='container'>
-        <div className='row--3'>
-          <Feature {...FeatureList[0]} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function DomainButton() {
-  return (
-    <section className={styles.features}>
-      <div className='container'>
-        <div className='row--3'>
-          <Feature {...FeatureList[1]} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function ProblemButton() {
-  return (
-    <section className={styles.features}>
-      <div className='container'>
-        <div className='row--3'>
-          <Feature {...FeatureList[2]} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function TopicButton() {
-  return (
-    <section className={styles.features}>
-      <div className='container'>
-        <div className='row--3'>
-          <Feature {...FeatureList[3]} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function LeadButton() {
-  return (
-    <section className={styles.features}>
-      <div className='container'>
-        <div className='row--3'>
-          <Feature {...FeatureList[4]} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
