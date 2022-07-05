@@ -55,6 +55,10 @@
   --ifm-link-hover-decoration: underline;
   --ifm-footer-link-hover-color: var(--ifm-color-danger);
 
+
+  
+
+
   --ifm-hero-text-color: white;
   
 
@@ -62,6 +66,7 @@
 
   --ifm-navbar-height: 5rem;
   --ifm-navbar-shadow: transparent;
+  --n4c-navbar-border: #e0e0e0;
 
   --ifm-alert-border-left-width: 2pt;
   --ifm-alert-border-width: 2pt;
@@ -76,7 +81,7 @@
   --n4c-button-vpad: 10px;
   --n4c-button-hpad: 5px;
     
-  --n4c-hover-scale: 110%;
+  --n4c-hover-scale: 105%;
   --n4c-transform-time: 175ms;
 
   --ifm-font-size-base: 110%;
@@ -92,7 +97,7 @@
 
 .navbar {
   background-color: var(--ifm-navbar-background-color);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--n4c-navbar-border);
   box-shadow: var(--ifm-navbar-shadow);
   display: flex;
   height: var(--ifm-navbar-height);
