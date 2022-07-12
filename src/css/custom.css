@@ -289,7 +289,12 @@ a:hover {
     /* autoprefixer: ignore next */
     text-decoration: var(--ifm-link-hover-decoration);
   /*  text-decoration-thickness: 2px;*/
-  }
+}
+
+a.button:hover {
+  color: white;
+  text-decoration: unset;
+}
 
 a:not([href]) {
     text-decoration: none;
