@@ -265,12 +265,12 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   }
 
 
-  .button--primary:not(.button--outline):hover {
-    /* --ifm-button-background-color: var(--ifm-color-danger); */
-    /* --ifm-button-border-color: white; */
-    transform: scale(var(--n4c-hover-scale));
-    transition: transform var(--n4c-transform-time) ease-in-out;
-  }
+.button--primary:not(.button--outline):hover {
+  /* --ifm-button-background-color: var(--ifm-color-danger); */
+  /* --ifm-button-border-color: white; */
+  transform: scale(var(--n4c-hover-scale));
+  transition: transform var(--n4c-transform-time) ease-in-out;
+}
 
 /* Increase specificity. */
 
@@ -413,11 +413,22 @@ a:hover {
     /* autoprefixer: ignore next */
     text-decoration: var(--ifm-link-hover-decoration);
   /*  text-decoration-thickness: 2px;*/
-  }
+}
+
+a.button.button--primary:not(.button--outline):hover {
+  color: white;
+  text-decoration: unset;
+}
+
+a.button.button--secondary:not(.button--outline):hover,
+a.button.button--negative:not(.button--outline):hover {
+  color: var(--ifm-color-primary);
+  text-decoration: unset;
+}
 
 a:not([href]) {
     text-decoration: none;
-  }
+}
 
 p,
 .markdown>p,
