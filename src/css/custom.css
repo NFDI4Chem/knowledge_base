@@ -415,14 +415,20 @@ a:hover {
   /*  text-decoration-thickness: 2px;*/
 }
 
-a.button:hover {
+a.button.button--primary:not(.button--outline):hover {
   color: white;
+  text-decoration: unset;
+}
+
+a.button.button--secondary:not(.button--outline):hover,
+a.button.button--negative:not(.button--outline):hover {
+  color: var(--ifm-color-primary);
   text-decoration: unset;
 }
 
 a:not([href]) {
     text-decoration: none;
-  }
+}
 
 p,
 .markdown>p,
