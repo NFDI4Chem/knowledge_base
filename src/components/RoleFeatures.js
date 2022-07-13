@@ -33,7 +33,7 @@ const FeatureList = [
 
 function Feature({ Svg, title, link }) {
   return (
-    <div className='col feature-secondary--col'>
+    <div className='col feature--col'>
     <div className='text--center'>
       {link ? (
         <Link

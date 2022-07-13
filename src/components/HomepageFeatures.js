@@ -34,7 +34,7 @@ const FeatureList = [
 function Feature({ Svg, title, link }) {
   return (
     <div className={clsx("col feature--col")}>
-      <div className="text--center vertical-center">
+      <div className="vertical-center">
         {link ? (
           <Link
             className={clsx("button button--primary button--lg feature--button")}
@@ -64,3 +64,4 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+
