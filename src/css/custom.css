@@ -554,3 +554,7 @@ ul li::marker {
   font-size: 0.9em;
   color: var(--ifm-color-primary);
 }
+
+ul ul {
+  list-style-type: '\2B21\  ';
+} 
