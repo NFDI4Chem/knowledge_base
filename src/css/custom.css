@@ -49,7 +49,7 @@
   --ifm-color-caution-lighter: var(--ifm-color-caution);
   --ifm-color-caution-lightest: var(--ifm-color-caution);
   --ifm-global-shadow-lw: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
-  --ifm-link-color: var(--ifm-color-secondary);
+  --ifm-link-color: var(--ifm-color-primary);
   --ifm-link-decoration: bold;
   --ifm-link-hover-color: var(--ifm-link-color);
   --ifm-link-hover-decoration: underline;
@@ -544,3 +544,17 @@ mark {
   background: var(--ifm-color-danger);
 /*  background: var(--ifm-color-primary);*/
 }
+
+ul {
+  list-style-type: '\2B22\  ';
+} 
+
+ul li::marker {
+  position: absolute;
+  font-size: 0.9em;
+  color: var(--ifm-color-primary);
+}
+
+ul ul {
+  list-style-type: '\2B21\  ';
+} 
