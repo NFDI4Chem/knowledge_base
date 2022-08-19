@@ -1,5 +1,5 @@
 example:
-    internal_id: method000
+    internal_id: m00
     analytical_method: example method
     exemplary_proprietary_file_extensions: exemplary proprietary file extensions
     typical_size_of_proprietary_file: typical size of proprietary file
@@ -9,7 +9,7 @@ example:
     file_size_of_open_format: file size of open format
 
 nmr_spectroscopy:
-    internal_id: method001
+    internal_id: m01
     analytical_method: "NMR spectroscopy"
     exemplary_proprietary_file_extensions: "*set of files, no typical extension*"
     typical_size_of_proprietary_file: "<1-50 MB"
@@ -19,7 +19,7 @@ nmr_spectroscopy:
     file_size_of_open_format: "<1-50 MB"
 
 mass_spectroscopy:
-    internal_id: method002
+    internal_id: m02
     analytical_method: "Mass spectrometry"
     exemplary_proprietary_file_extensions: ".raw<br/>.d<br/>.baf"
     typical_size_of_proprietary_file: "~250 MB"
