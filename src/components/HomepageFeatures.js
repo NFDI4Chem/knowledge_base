@@ -6,27 +6,27 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Roles',
-    Svg: require('../../static/img/role_white.svg').default,
+    Svg: require('../../static/img/nfdi4chem_Roles_white.svg').default,
     link: '/docs/role/guide',
   },
   {
     title: 'Domains',
-    Svg: require('../../static/img/domain_white.svg').default,
+    Svg: require('../../static/img/nfdi4chem_Domains_white.svg').default,
     link: '/docs/domains/guide',
   },
   {
     title: 'Handling Data',
-    Svg: require('../../static/img/problem_white.svg').default,
+    Svg: require('../../static/img/nfdi4chem_Handling_Data_white.svg').default,
     link: '/docs/data/dmp',
   },
   {
     title: 'Topics & Concepts',
-    Svg: require('../../static/img/topics_white.svg').default,
+    Svg: require('../../static/img/nfdi4chem_Topics_and_Concepts_white.svg').default,
     link: '/docs/topics/fair',
   },
   {
     title: 'Lead by Example',
-    Svg: require('../../static/img/lbe_white.svg').default,
+    Svg: require('../../static/img/nfdi4chem_Lead_by_Example_white.svg').default,
     link: '/docs/lead-by-example',
   },
 ];
