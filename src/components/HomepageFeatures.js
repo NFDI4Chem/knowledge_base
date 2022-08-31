@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: 'Handling Data',
     Svg: require('../../static/img/nfdi4chem_Handling_Data_white.svg').default,
-    link: '/docs/data/dmp',
+    link: '/docs/data/guide',
   },
   {
     title: 'Topics & Concepts',
