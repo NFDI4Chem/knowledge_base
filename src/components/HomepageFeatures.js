@@ -22,7 +22,7 @@ const FeatureList = [
   {
     title: 'Topics & Concepts',
     Svg: require('../../static/img/nfdi4chem_Topics_and_Concepts_white.svg').default,
-    link: '/docs/topics/fair',
+    link: '/docs/topics/guide',
   },
   {
     title: 'Lead by Example',
