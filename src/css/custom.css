@@ -126,6 +126,9 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   overflow: hidden;
   --ifm-hero-background-color: var(--ifm-color-primary);
   --ifm-hero-text-color: var(--ifm-color-white);
+  background-image: url('/img/Background.png');
+  background-repeat: no-repeat;
+  background-origin: padding-box;
 }
 
 @media screen and (max-width: 966px) {
