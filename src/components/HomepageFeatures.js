@@ -17,12 +17,12 @@ const FeatureList = [
   {
     title: 'Handling Data',
     Svg: require('../../static/img/nfdi4chem_Handling_Data_white.svg').default,
-    link: '/docs/data/dmp',
+    link: '/docs/data/guide',
   },
   {
     title: 'Topics & Concepts',
     Svg: require('../../static/img/nfdi4chem_Topics_and_Concepts_white.svg').default,
-    link: '/docs/topics/fair',
+    link: '/docs/topics/guide',
   },
   {
     title: 'Lead by Example',

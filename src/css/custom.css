@@ -75,7 +75,7 @@
 
   --n4c-col-width: 250px;
 
-  --n4c-button-width: 250px;
+  --n4c-button-width: 220px;
   --n4c-button-height: 240px;
 
   --n4c-button-secondary-width: 300px;
@@ -119,19 +119,34 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.main-wrapper {
+  display: flex;
+}
+
 .hero {
   padding: 2rem 0;
   text-align: center;
-  position: center;
+  width: 100%;
   overflow: hidden;
   --ifm-hero-background-color: var(--ifm-color-primary);
   --ifm-hero-text-color: var(--ifm-color-white);
+  background-image: url('/img/Background.png'), url('/img/Background_right.png');
+  background-repeat: no-repeat;
+  background-position: left top, right top;
 }
 
 @media screen and (max-width: 966px) {
   .hero {
     padding: 2rem;
+    background-image: url('/img/Background.png');
+    background-repeat: no-repeat;
+    background-position: left top, right top;
   }
+}
+
+.hero__container {
+  position: center;
+  width: 100%;
 }
 
 .hero__title {
