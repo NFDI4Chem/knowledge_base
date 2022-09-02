@@ -131,11 +131,6 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-origin: padding-box;
 }
 
-.main-wrapper {
-  flex:1 0 auto;
-  background: var(--ifm-color-primary);
-}
-
 @media screen and (max-width: 966px) {
   .hero {
     padding: 2rem;
