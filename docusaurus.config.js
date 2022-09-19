@@ -13,10 +13,10 @@ module.exports = {
   trailingSlash: 'true',
   themeConfig: {
     navbar: {
-      title: 'Home',
+ //     title: 'Home',
       logo: {
         alt: 'NFDI4Chem Logo',
-        src: 'img/N4C_logo_navbar.svg',
+        src: 'img/N4C_logo_navbar_large.svg',
       },
       items: [
         {

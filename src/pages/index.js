@@ -7,35 +7,6 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
-        <div className="row">
-          <div className="col col--2 n4c--logo">
-            <img src={useBaseUrl("/img/N4C_logo_hero.svg")} width="120" />
-          </div>
-          <div className="col col--8">
-            <h1 className="hero__title text">
-              {siteConfig.title}
-            </h1>
-            <p className="hero__subtitle">
-              {siteConfig.tagline}
-            </p>
-            <div className={styles.buttons}>
-              <Link
-                className={clsx("button button--negative button--lg")}
-                to="/docs/intro">
-                Get started
-              </Link>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -43,10 +14,34 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="A place for all knowledge regarding Research Data Management (RDM) in Chemistry">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div className="hero">
+        <div className="container hero__container">
+          <div className="row">
+            <div className="col">
+              <h1 className='hero__title text'>
+                {siteConfig.title}
+              </h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col--8">
+              <p className="hero__subtitle vertical-center">
+              {siteConfig.tagline}
+              </p>
+            </div>
+            <div className="col col--2">
+              <div className={styles.buttons}>
+                <Link
+                  className="button button--negative button--lg"
+                  to="/docs/intro">
+                  Get started
+                </Link>
+              </div>
+            </div>
+          </div>
+          <HomepageFeatures />
+        </div>
+      </div>
     </Layout>
   );
 }
