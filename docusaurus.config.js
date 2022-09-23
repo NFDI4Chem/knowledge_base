@@ -143,7 +143,7 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
+  themes: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
