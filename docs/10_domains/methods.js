@@ -1,35 +1,36 @@
 import React from 'react';
+/*import Extractor from "markdown-tables-to-json";*/
 
-var nfdi4chem_methods = [
-        {"name": "example",
-        "internal_id": "method000",
-        "analytical_method": "",
-        "exemplary_proprietary_file_extensions": "",
-        "typical_size_of_proprietary_file": "",
-        "converter_to_open_file_format": "",
-        "recommendation_for_open_file_extension": "",
-        "file_format": "",
-        "file_size_of_open_format": ""},
-        {"name": "nmr_spectroscopy",
-        "internal_id": "method001",
-        "analytical_method": "NMR spectroscopy",
-        "exemplary_proprietary_file_extensions": "*set of files, no typical extension*",
-        "typical_size_of_proprietary_file": "<1-50 MB",
-        "converter_to_open_file_format": " [nmrium.org](https://www.nmrium.org) ",
-        "recommendation_for_open_file_extension": ".jdx, .zip",
-        "file_format": "JCAMP-DX (raw), NMReDATA (assignments)",
-        "file_size_of_open_format": "<1-50 MB"},
-        {"name": "mass_spectroscopy",
-        "internal_id": "method002",
-        "analytical_method": "Mass spectrometry",
-        "exemplary_proprietary_file_extensions": ".raw, .d, .baf",
-        "typical_size_of_proprietary_file": "~250 MB",
-        "converter_to_open_file_format": "Proteowizard",
-        "recommendation_for_open_file_extension": ".mzML",
-        "file_format": "mzML",
-        "file_size_of_open_format": "~250 MB"}
-];
- 
+var { Extractor } = require('markdown-tables-to-json');
+
+var table = `
+|Analytical method|Exemplary proprietary file extensions|Typical size of proprietary file|Converter to open file format|Recommendation for open file extension*|File format|File size of open format|
+|:------------|:------------|:------------|:------------|:------------|:------------|:------------|
+|NMR spectroscopy|*set of files, no typical extension*|<1-50 MB| [nmrium.org](https://www.nmrium.org/) |.jdx<br/>.zip<br/>|JCAMP-DX *(raw)*<br/>NMReDATA *(assignments)*|<1-50 MB|
+|Mass spectrometry|.raw<br/>.d<br/>.baf|~250 MB|Proteowizard|.mzML|mzML|~250 MB|
+|IR spectroscopy|.ispd<br/>.icIR|<1 MB| |.dx|JCAMP-DX|<1 MB|
+|Raman spectroscopy|.dpt<br/>.spc<br/>.icRaman<br/>.sps<br/>.acs|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|UV/vis spectroscopy|.dsw<br/> .str<br/>.bsk<br/>.bkn<br/>.ksd<br/>.jws<br/>.jwb<br/>.str8<br/>.spc<br/>.sre|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Fluorescence spectroscopy|.fds<br/>.fs2f<br/>.jws<br/>.opj|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
+|Single crystal XRD|.raw|~1 GB|proprietary software|.cif|crystallographic information file|<1 MB|
+|Powder XRD|.raw|<1 MB|proprietary software|.xyd|text file|<1 MB|
+|Gas chromatography|.gcd<br/>.d|~2 MB|proprietary software|.txt|text file|<1 MB|
+|HPLC|.xls|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Cyclic voltammetry|.nox<br/>.pssession|~8 MB|proprietary software|.txt|text file|<1 MB|
+|EPR spectroscopy|.spe|<1 MB|proprietary software|.txt|text file|<1 MB|
+|Differential scanning calorimetry|.ngb-dsu<br/>.ngb-taa|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+|Elemental analysis| | |proprietary software|.txt|text file|<1 MB|
+|Physisorption|.smp|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
+`
+
+var nfdi4chem_methods = Extractor.extractObject(table, 'rows', false)
+
+export function DemoTable() {
+    return (
+        JSON.stringify(nfdi4chem_methods, null, 2)
+    )
+}
+
 export default function NFDI4ChemKBMethodsTable({children, methods_to_show}) {
 
     if(methods_to_show[0]==="all"){
