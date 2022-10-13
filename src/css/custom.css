@@ -589,7 +589,22 @@ ul ul {
   --highlight: var(--ifm-color-primary) ;
 }
 
+.details_lbe h4 {
+  padding-top: 15px;
+}
+
 .details_lbe[open] summary {
   padding-bottom: 15px;
   border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+.lbe_button {
+  border: 0.5px solid var(--ifm-color-primary);
+  margin: 2px;
+  font-size: unset;
+  background: none;
+}
+
+.lbe_button a:hover {
+  text-decoration: none;
 }

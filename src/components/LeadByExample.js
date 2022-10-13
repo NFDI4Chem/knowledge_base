@@ -1,43 +1,58 @@
 import React from "react";
 
-var lbeTable = require('../../static/assets/lbe.json');
+var lbeTable = require('@site/static/assets/lbe.json');
+let k = 0;
+
+
+export function MultiUrl( {name,url} ) {
+  let space = " ";
+  return (
+    <button className="lbe_button">
+      <a href={url}>{name}</a>
+    </button>
+  )
+}
 
 export function Lbeblock( {title, authors, link_pub, link_data, link_comment, description} ) {
-  return (
-    <div className="block_lbe">
-      <h3 id={title} className="anchor anchorWithStickyNavbar_node_modules-@docusaurus-theme-classic-lib-theme-Heading-styles-module">{title}</h3>
+    return (
+        <div className="block_lbe">
 
-      <details className="details_lbe">
+          <h3>{title}</h3>
 
-        <summary>Details</summary>
+          <details className="details_lbe">
 
-        &nbsp;
-        <h4>Authors</h4>
-        
-        <p><em>{authors}</em></p>
+            <summary>Details</summary>
 
-        <h4>Description</h4>
+            <h4>Authors</h4>
+            
+            <p><em>{authors}</em></p>
 
-        <p>{description}</p>
+            <h4>Description</h4>
 
-        <h4>Links</h4>
+            <p>{description}</p>
 
-        <ul>
-          <li><a href={link_pub}>Link to publication</a></li>
-          <li><a href={link_data}>Link to data</a> ({link_comment})</li>
-        </ul>        
-      </details>
-    </div>
+            <h4>Links</h4>
+
+            <ul>
+              <li><a href={link_pub}>Link to publication</a></li>
+              <li>{
+                link_data.map((props, idx) => (
+                  <MultiUrl key={idx} {...props} />
+                ))} ({link_comment})</li>
+            </ul>        
+          </details>
+          
+        </div>
   );
 }
 
 export default function Lbe() {
   return (
-    <p>
-      {lbeTable.map((props, idx) => (
-        <Lbeblock key={idx} {...props} />
-      ))}
-    </p>
+      <div>
+        {lbeTable.map((props, idx) => (
+          <Lbeblock key={idx} {...props} />
+        ))}
+      </div>
   )
 }
 
