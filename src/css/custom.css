@@ -601,8 +601,13 @@ ul ul {
 .lbe_button {
   border: 0.5px solid var(--ifm-color-primary);
   margin: 2px;
-  font-size: unset;
+  font-size: 11pt;
   background: none;
+}
+
+.lbe_button:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: transform var(--n4c-transform-time) ease-in-out;
 }
 
 .lbe_button a:hover {

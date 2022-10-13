@@ -8,7 +8,7 @@ export function MultiUrl( {name,url} ) {
   let space = " ";
   return (
     <button className="lbe_button">
-      <a href={url}>{name}</a>
+      <a href={url} target="_blank">{name}</a>
     </button>
   )
 }
@@ -35,10 +35,10 @@ export function Lbeblock( {title, authors, link_pub, link_data, link_comment, de
 
             <ul>
               <li><a href={link_pub}>Link to publication</a></li>
-              <li>{
+              <li>Link(s) to datasets:<br />{
                 link_data.map((props, idx) => (
                   <MultiUrl key={idx} {...props} />
-                ))} ({link_comment})</li>
+                ))} <br /><em>{link_comment}</em></li>
             </ul>        
           </details>
           

@@ -3,7 +3,7 @@
         "title": "Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder",
         "authors": "Nils Keltsch, Viola Munzert, Klaus-Peter Zeller, Hans-Ullrich Siehl, Stefan Berger, Dieter Sicker",
         "link_pub": "https://doi.org/10.1002/ciuz.201900868",
-        "link_data": ["https://doi.org/10.22000/786"],
+        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/786"}],
         "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and IR data. NMR data are provided in Bruker format, as JCAMP-DX (MNova) and NMRium format including NMReDATA (SDfile). MS data are also available in open format mzML. IR and UV/VIS data are accessible in tabular files and in JCAMP-DX format. The structure information on Linderazulene and further supplementary information are provided as tables and SDfile. The corresponding article does not reference to the dataset."
     },
@@ -11,7 +11,7 @@
         "title": "Die Polei-Minze im Wandel der Zeiten",
         "authors": "Agneta Prasse, Viola Munzert, Elena José, Klaus-Peter Zeller, Hans-Ullrich Siehl, Stefan Berger, Dieter Sicker",
         "link_pub": "https://doi.org/10.1002/ciuz.201800860",
-        "link_data": ["https://doi.org/10.22000/785"],
+        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/785"}],
         "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR4Chem, contains NMR, MS and UV/VIS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX for NMR and UV/VIS data and mzML for MS data. Analytical data of CD spectroscopy and MS spectrometry were exported as tabular files and are also provided as CSV files. The structure information on (R)-+-Pulegon and supplementary information are provided as in tabular files and as SDfile format. The corresponding article does not reference to the dataset."
     },
@@ -19,7 +19,7 @@
         "title": "Karminsäure - Das Rot aus Cochenilleläusen",
         "authors": "Franziska Schulze, Juliane Titus, Peter Mettke, Stefan Berger, Hans-Ullrich Siehl, Klaus-Peter Zeller, Dieter Sicker",
         "link_pub": "https://doi.org/10.1002/ciuz.201300634",
-        "link_data": ["https://doi.org/10.22000/795"],
+        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/795"}],
         "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and CD data. NMR data was previously published in NMRShiftDB2 and are provided in Bruker format together with NMReDATA. MS data were converted in several different formats including mzML. UV/VIS data are available in JCAMP-DX format. The structure information on carminic acid and further supplementary information are provided in tabular files and as SDfile. The corresponding article does not reference to the dataset."
     },
