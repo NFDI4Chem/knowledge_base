@@ -573,4 +573,23 @@ ul li::marker {
 
 ul ul {
   list-style-type: '\2B21\  ';
-} 
+}
+
+/* Lead by Example */
+
+.block_lbe {
+  padding: 15px 5px;
+}
+
+.details_lbe {
+  display: flex; 
+  overflow: hidden;
+  border: 1px dashed var(--ifm-color-primary);
+  padding: 15px;
+  --highlight: var(--ifm-color-primary) ;
+}
+
+.details_lbe[open] summary {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--ifm-color-primary);
+}
