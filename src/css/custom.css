@@ -86,6 +86,8 @@
   --n4c-hover-scale: 105%;
   --n4c-transform-time: 175ms;
 
+  --lbe-transform-time: 2s;
+
   --ifm-font-size-base: 110%;
 }
 
@@ -586,7 +588,7 @@ ul ul {
   overflow: hidden;
   border: 1px dashed var(--ifm-color-primary);
   padding: 15px;
-  --highlight: var(--ifm-color-primary) ;
+  transition: var(--lbe-transform-time);
 }
 
 .details_lbe h4 {
@@ -600,16 +602,45 @@ ul ul {
 
 .lbe_button {
   border: 0.5px solid var(--ifm-color-primary);
-  margin: 2px;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0.2em;
   font-size: 11pt;
   background: none;
 }
 
 .lbe_button:hover {
   transform: scale(var(--n4c-hover-scale));
-  transition: transform var(--n4c-transform-time) ease-in-out;
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .lbe_button a:hover {
   text-decoration: none;
 }
+
+/* .lbe_tag {
+  border: none;
+  margin: 2px;
+  font-size: 11pt;
+  background: var(--ifm-color-danger);
+  font-weight: 600;
+  color: white;
+} */
+
+
+.lbe_tag {
+  border: 0.5px solid var(--ifm-color-danger);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0.2em;
+  font-size: 11pt;
+  background: none;
+  font-weight: 600;
+  color: var(--ifm-color-danger);
+}
+
+.lbe_tag:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: transform var(--n4c-transform-time) ease-in-out;
+}
+

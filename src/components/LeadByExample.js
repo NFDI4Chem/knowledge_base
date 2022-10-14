@@ -1,11 +1,8 @@
 import React from "react";
 
 var lbeTable = require('@site/static/assets/lbe.json');
-let k = 0;
-
 
 export function MultiUrl( {name,url} ) {
-  let space = " ";
   return (
     <button className="lbe_button">
       <a href={url} target="_blank">{name}</a>
@@ -13,11 +10,17 @@ export function MultiUrl( {name,url} ) {
   )
 }
 
-export function Lbeblock( {title, authors, link_pub, link_data, link_comment, description} ) {
+export function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
     return (
         <div className="block_lbe">
 
           <h3>{title}</h3>
+
+          <p>{tags.map((tag) => 
+            <button className="lbe_tag">
+              {tag}
+            </button>
+          )}</p>
 
           <details className="details_lbe">
 
