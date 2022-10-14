@@ -580,7 +580,9 @@ ul ul {
 /* Lead by Example */
 
 .block_lbe {
-  padding: 15px 5px;
+  padding: 10px;
+  box-shadow: 4px 4px 8px #ccc;
+  margin: 15px 0px;
 }
 
 .details_lbe {
@@ -598,6 +600,10 @@ ul ul {
 .details_lbe[open] summary {
   padding-bottom: 15px;
   border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+.details_lbe summary::marker {
+  color: var(--ifm-color-primary);
 }
 
 .lbe_button {
