@@ -1,10 +1,9 @@
-import NFDI4ChemMethods from './_methods_table.mdx';
-
 ---
 title: "Analytical Chemistry"
 nfdi4chem-id: dac
-nfdi4chem-methods: ["nmr_spectroscopy", "mass_spectroscopy"]
 ---
+
+import NFDI4ChemKBMethodsTable from './methods.js';
 
 :::info Summary:
 
@@ -63,7 +62,7 @@ A typical workflow begins with the conceptualisation of the research question, a
 - Digital data are obtained with analytical instruments. An overview of file extensions, file sizes, and converters for several analytical methods is given in the table below.
 - Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the analytical device software. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
 
-<NFDI4ChemMethods />
+<NFDI4ChemKBMethodsTable methods_to_show={["all"]} />
 
 :::note *This table will be continuously updated with new recommendations on interoperable open file formats.
 :::
