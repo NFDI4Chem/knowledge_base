@@ -4,7 +4,7 @@ var table = require('@site/static/assets/methods.json');
 
 function Entry({ analytical_method, exemplary_proprietary_file_extensions, typical_size_of_proprietary_file, converter_to_open_file_format, recommendation_for_open_file_extension, file_format, file_size_of_open_format }) {
     return (
-        <tr><td align="left">{analytical_method}</td><td align="left">{exemplary_proprietary_file_extensions}</td><td align="left">{typical_size_of_proprietary_file}</td><td align="left">{converter_to_open_file_format}</td><td align="left">{recommendation_for_open_file_extension}</td><td align="left">{file_format}</td><td align="left">{file_size_of_open_format}</td></tr>
+        <tr><td align="left">{analytical_method}</td><td align="left" dangerouslySetInnerHTML={{__html: exemplary_proprietary_file_extensions}}/><td align="left" dangerouslySetInnerHTML={{__html: typical_size_of_proprietary_file}}/><td align="left" dangerouslySetInnerHTML={{__html: converter_to_open_file_format}}/><td align="left" dangerouslySetInnerHTML={{__html: recommendation_for_open_file_extension}}/><td align="left" dangerouslySetInnerHTML={{__html: file_format}}/><td align="left" dangerouslySetInnerHTML={{__html: file_size_of_open_format}}/></tr>
     )
 }
 

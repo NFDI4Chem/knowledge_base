@@ -1,11 +1,11 @@
 [
     {
         "analytical_method": "NMR spectroscopy",
-        "exemplary_proprietary_file_extensions": "*set of files, no typical extension*",
+        "exemplary_proprietary_file_extensions": "<em>set of files, no typical extension</em>",
         "typical_size_of_proprietary_file": "<1-50 MB",
-        "converter_to_open_file_format": "[nmrium.org](https://www.nmrium.org/)",
+        "converter_to_open_file_format": "<a href='https://www.nmrium.org/' target='_blank'>nmrium.org</a>",
         "recommendation_for_open_file_extension": ".jdx<br/>.zip<br/>",
-        "file_format": "JCAMP-DX *(raw)*<br/>NMReDATA *(assignments)*",
+        "file_format": "JCAMP-DX <em>(raw)</em><br/>NMReDATA <em>(assignments)</em>",
         "file_size_of_open_format": "<1-50 MB"
     },
     {
