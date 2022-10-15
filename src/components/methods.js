@@ -8,7 +8,7 @@ function Entry({ analytical_method, exemplary_proprietary_file_extensions, typic
     )
 }
 
-export default function NFDI4ChemKBMethodsTable({children, methods_to_show}) {
+export default function MethodsTable({children, methods_to_show}) {
 
     if(methods_to_show[0]==="all"){
         return (
