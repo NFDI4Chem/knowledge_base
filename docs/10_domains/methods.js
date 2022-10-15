@@ -17,7 +17,7 @@ export default function NFDI4ChemKBMethodsTable({children, methods_to_show}) {
         {table.map((props, idx) => (
             <Entry key={idx} {...props} />
         ))}
-
+        
         </tbody></table>
         );
     }
@@ -30,23 +30,22 @@ export default function NFDI4ChemKBMethodsTable({children, methods_to_show}) {
         for(let j in methods_to_show) {
             found.push(
                 table.find(function (element) {
-                    return element == methods_to_show[j];
+                    return element.analytical_method == methods_to_show[j];
                 })
             );  
         }
     }
-    
     catch (e) {
         line = "error: " + e.toString();
     }
     
     return (
-        <table><thead><tr><th align="left">Analytical method</th><th align="left">Exemplary proprietary file extensions</th><th align="left">Typical size of proprietary file</th><th align="left">Converter to open file format</th><th align="left">Recommendation for open file extension*</th><th align="left">File format</th><th align="left">File size of open format</th></tr></thead><tbody>
-        
-        {found.map((props, idx) => (
-                <Entry key={idx} {...props} />
-        ))}
-        
-        </tbody></table>
+    <table><thead><tr><th align="left">Analytical method</th><th align="left">Exemplary proprietary file extensions</th><th align="left">Typical size of proprietary file</th><th align="left">Converter to open file format</th><th align="left">Recommendation for open file extension*</th><th align="left">File format</th><th align="left">File size of open format</th></tr></thead><tbody>
+    
+    {found.map((props, idx) => (
+        <Entry key={idx} {...props} />
+    ))}
+    
+    </tbody></table>
     );
 }
