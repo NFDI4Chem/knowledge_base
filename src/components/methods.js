@@ -1,6 +1,6 @@
 import React from 'react';
 
-var table = require('./_methods_table.json');
+var table = require('@site/static/assets/methods.json');
 
 function Entry({ analytical_method, exemplary_proprietary_file_extensions, typical_size_of_proprietary_file, converter_to_open_file_format, recommendation_for_open_file_extension, file_format, file_size_of_open_format }) {
     return (
