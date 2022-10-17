@@ -55,9 +55,9 @@
   --ifm-link-hover-decoration: underline;
   --ifm-footer-link-hover-color: var(--ifm-color-danger);
 
-
-  
-
+  --ifm-table-border-width: 0;
+  --ifm-table-head-background: var(--ifm-color-primary);
+  --ifm-table-head-color: white;
 
   --ifm-hero-text-color: white;
   
@@ -575,6 +575,13 @@ ul li::marker {
 
 ul ul {
   list-style-type: '\2B21\  ';
+} 
+
+
+/* Tables */
+
+table thead tr {
+  border-bottom: none;
 }
 
 /* Lead by Example */
@@ -657,4 +664,3 @@ ul ul {
   transform: scale(var(--n4c-hover-scale));
   transition: transform var(--n4c-transform-time) ease-in-out;
 }
-
