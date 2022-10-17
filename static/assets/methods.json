@@ -2,11 +2,11 @@
     {
         "analytical_method": "NMR spectroscopy",
         "exemplary_proprietary_file_extensions": "<em>set of files, no typical extension</em>",
-        "typical_size_of_proprietary_file": "<1-50 MB",
+        "typical_size_of_proprietary_file": "&lt;1-50 MB",
         "converter_to_open_file_format": "<a href='https://www.nmrium.org/' target='_blank'>nmrium.org</a>",
         "recommendation_for_open_file_extension": ".jdx<br/>.zip<br/>",
         "file_format": "JCAMP-DX <em>(raw)</em><br/>NMReDATA <em>(assignments)</em>",
-        "file_size_of_open_format": "<1-50 MB"
+        "file_size_of_open_format": "&lt;1-50 MB"
     },
     {
         "analytical_method": "Mass spectrometry",
@@ -20,38 +20,38 @@
     {
         "analytical_method": "IR spectroscopy",
         "exemplary_proprietary_file_extensions": ".ispd<br/>.icIR",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Raman spectroscopy",
         "exemplary_proprietary_file_extensions": ".dpt<br/>.spc<br/>.icRaman<br/>.sps<br/>.acs",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "UV/vis spectroscopy",
         "exemplary_proprietary_file_extensions": ".dsw<br/> .str<br/>.bsk<br/>.bkn<br/>.ksd<br/>.jws<br/>.jwb<br/>.str8<br/>.spc<br/>.sre",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Fluorescence spectroscopy",
         "exemplary_proprietary_file_extensions": ".fds<br/>.fs2f<br/>.jws<br/>.opj",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Single crystal XRD",
@@ -60,16 +60,16 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".cif",
         "file_format": "crystallographic information file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Powder XRD",
         "exemplary_proprietary_file_extensions": ".raw",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".xyd",
         "file_format": "text file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Gas chromatography",
@@ -78,16 +78,16 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "HPLC",
         "exemplary_proprietary_file_extensions": ".xls",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Cyclic voltammetry",
@@ -96,25 +96,25 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "EPR spectroscopy",
         "exemplary_proprietary_file_extensions": ".spe",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Differential scanning calorimetry",
         "exemplary_proprietary_file_extensions": ".ngb-dsu<br/>.ngb-taa",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Elemental analysis",
@@ -123,15 +123,15 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     },
     {
         "analytical_method": "Physisorption",
         "exemplary_proprietary_file_extensions": ".smp",
-        "typical_size_of_proprietary_file": "<1 MB",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "<1 MB"
+        "file_size_of_open_format": "&lt;1 MB"
     }
 ]
