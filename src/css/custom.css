@@ -583,6 +583,12 @@ ul ul {
   padding: 10px;
   box-shadow: 4px 4px 8px #ccc;
   margin: 15px 0px;
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.block_lbe:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .details_lbe {
@@ -590,11 +596,12 @@ ul ul {
   overflow: hidden;
   border: 1px dashed var(--ifm-color-primary);
   padding: 15px;
-  transition: var(--lbe-transform-time);
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .details_lbe h4 {
   padding-top: 15px;
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .details_lbe[open] summary {
