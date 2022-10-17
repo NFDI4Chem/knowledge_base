@@ -580,6 +580,10 @@ ul ul {
 
 /* Tables */
 
+table {
+  border-bottom: 2px solid var(--ifm-color-primary);
+}
+
 table thead tr {
   border-bottom: none;
 }
