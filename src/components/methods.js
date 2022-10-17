@@ -22,23 +22,10 @@ export default function MethodsTable({children, methods_to_show}) {
         );
     }
 
-    let line = "";
-    let m = {};
     let found = [];
-    
-    try {
-        for(let j in methods_to_show) {
-            found.push(
-                table.find(function (element) {
-                    return element.analytical_method == methods_to_show[j];
-                })
-            );  
-        }
-    }
-    catch (e) {
-        line = "error: " + e.toString();
-    }
-    
+
+    found = table.filter(m => methods_to_show.includes(m.analytical_method) || methods_to_show.includes(m.shortname));
+
     return (
     <table><thead><tr><th align="left">Analytical method</th><th align="left">Exemplary proprietary file extensions</th><th align="left">Typical size of proprietary file</th><th align="left">Converter to open file format</th><th align="left">Recommendation for open file extension*</th><th align="left">File format</th><th align="left">File size of open format</th></tr></thead><tbody>
     

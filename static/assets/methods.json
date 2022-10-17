@@ -6,7 +6,8 @@
         "converter_to_open_file_format": "<a href='https://www.nmrium.org/' target='_blank'>nmrium.org</a>",
         "recommendation_for_open_file_extension": ".jdx<br/>.zip<br/>",
         "file_format": "JCAMP-DX <em>(raw)</em><br/>NMReDATA <em>(assignments)</em>",
-        "file_size_of_open_format": "&lt;1-50 MB"
+        "file_size_of_open_format": "&lt;1-50 MB",
+        "shortname": "nmr"
     },
     {
         "analytical_method": "Mass spectrometry",
@@ -15,7 +16,8 @@
         "converter_to_open_file_format": "Proteowizard",
         "recommendation_for_open_file_extension": ".mzML",
         "file_format": "mzML",
-        "file_size_of_open_format": "~250 MB"
+        "file_size_of_open_format": "~250 MB",
+        "shortname": "ms"
     },
     {
         "analytical_method": "IR spectroscopy",
@@ -24,7 +26,8 @@
         "converter_to_open_file_format": "",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "keyword": "ir"
     },
     {
         "analytical_method": "Raman spectroscopy",
@@ -33,7 +36,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "raman"
     },
     {
         "analytical_method": "UV/vis spectroscopy",
@@ -42,7 +46,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "uv"
     },
     {
         "analytical_method": "Fluorescence spectroscopy",
@@ -69,7 +74,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".xyd",
         "file_format": "text file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "gc"
     },
     {
         "analytical_method": "Gas chromatography",
