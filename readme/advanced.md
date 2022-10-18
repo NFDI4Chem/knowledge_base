@@ -17,9 +17,9 @@ In order to link the file in your document, use the following Markdown:
 The example assumes that your Markdown file is located on the third filesystem level, e.g. `/docs/10_domains/`. If not, please adjust the number of `../` pointers accordingly.
 
 
-## Format Images using `img`
+## Format images using `img`
 
-In some cases, the image markdown might be too limited and it might be better to use the `img` html tag. To do so, add the following line at the beginning (but after the frontmatter):
+In some cases, the image markdown might be too limited and it might be better to use the `img` html tag. To do so, add the following line at the beginning (but after the [front matter](https://docusaurus.io/docs/create-doc#doc-front-matter)):
 
 ```
 ---
