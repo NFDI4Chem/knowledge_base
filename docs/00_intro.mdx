@@ -3,7 +3,8 @@ title: "Introduction"
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from '../src/components/HomepageFeatures.module.css';
+import styles from '@site/src/components/HomepageFeatures.module.css';
+import IntroButton from '@site/src/components/intro_buttons.js';
 
 
 <img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" vspace="10" hspace="10"/>
@@ -36,30 +37,15 @@ The knowledge base offers different points of entry that help you in navigating 
 
 The domain pages present an exemplary workflow for different chemistry disciplines along the research data life cycle. Multiple domains are illustrated in a user profile. Guidelines are provided for all digitisation steps involved and domain-specific best practices for FAIR data are given. Find out how to apply good RDM and FAIR science in the context of your own specific discipline.
 
-<div className="col intro--col">
-    <div className="text--center vertical-center">
-        <a className="button button--secondary button--lg feature-secondary--button" href={useBaseUrl('/docs/domains/guide')}>
-            <img src={useBaseUrl('/img/nfdi4chem_Domains.svg')} width="120px" />
-            <br />
-            Domains
-        </a>
-    </div>
-</div>
+<IntroButton url={"/docs/domains/guide"} imgUrl={"/img/nfdi4chem_Domains.svg"} text={"Domains"} />
 
 
 ### Role-specific information
 
 The role pages focus on the motivation for role-specific requirements and answer the questions why RDM is important and how it can be implemented. Get a fast impression of all important RDM information related to your role.
 
-<div className="col intro--col">
-    <div className="text--center vertical-center">
-        <a className="button button--secondary button--lg feature-secondary--button" href={useBaseUrl('/docs/role/guide')}>
-            <img src={useBaseUrl('/img/nfdi4chem_Roles.svg')} width="120px" />
-            <br />
-            Roles
-        </a>
-    </div>
-</div>
+<IntroButton url={"/docs/role/guide"} imgUrl={"/img/nfdi4chem_Roles.svg"} text={"Roles"} />
+
 
 ### Handling data
 
@@ -70,15 +56,8 @@ The handling data section explains common problems and challenges regarding RDM.
 - technical implementations
 - further information and reading 
 
-<div className="col intro--col">
-    <div className="text--center vertical-center">
-        <a className="button button--secondary button--lg feature-secondary--button" href={useBaseUrl('/docs/data/guide')}>
-            <img src={useBaseUrl('/img/nfdi4chem_Handling_Data.svg')} width="120px" />
-            <br />
-            Handling Data
-        </a>
-    </div>
-</div>
+<IntroButton url={"/docs/data/guide"} imgUrl={"/img/nfdi4chem_Handling_Data.svg"} text={"Handling Data"} />
+
 
 ### Topics & Concepts
 
@@ -89,15 +68,8 @@ These pages contain general information on specific RDM topics and concepts expl
 - presentation of one or more suitable chemistry-specific examples
 - further information and reading 
 
-<div className="col intro--col">
-    <div className="text--center vertical-center">
-        <a className="button button--secondary button--lg feature-secondary--button" href={useBaseUrl('/docs/topics/guide')}>
-            <img src={useBaseUrl('/img/nfdi4chem_Topics_and_Concepts.svg')} width="120px" />
-            <br />
-            Topics & Concepts
-        </a>
-    </div>
-</div>
+<IntroButton url={"/docs/topics/guide"} imgUrl={"/img/nfdi4chem_Topics_and_Concepts.svg"} text={"Topics & Concepts"} />
+
 
 ### Lead by Example
 
@@ -105,15 +77,7 @@ The section on Lead by Example presents representative as well as substantially 
 
 Additionally, this list documents the process of evolving FAIRness of chemistry research data, surfaces practical issues and gives suggestions for improvements to be fed back to other projects within NFDI4Chem.
 
-<div className="col intro--col">
-    <div className="text--center vertical-center">
-        <a className="button button--secondary button--lg feature-secondary--button" href={useBaseUrl('/docs/lead-by-example')}>
-            <img src={useBaseUrl('/img/nfdi4chem_Lead_by_Example.svg')} width="120px" />
-            <br />
-            Lead by Example
-        </a>
-    </div>
-</div>
+<IntroButton url={"/docs/lead-by-example"} imgUrl={"/img/nfdi4chem_Lead_by_Example.svg"} text={"Lead by Example"} />
 
 
 :::info Info: 
