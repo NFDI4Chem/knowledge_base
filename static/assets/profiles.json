@@ -1,0 +1,10 @@
+[
+    {
+        "name": "synthetic",
+        "methods": [ "nmr","ms","uv","ir","hplc" ]
+    },
+    {
+        "name": "analytical",
+        "methods": ["all"]
+    }    
+]
