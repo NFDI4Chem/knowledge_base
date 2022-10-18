@@ -56,7 +56,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "fluoresc"
     },
     {
         "analytical_method": "Single crystal XRD",
@@ -125,7 +126,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "dsc"
     },
     {
         "analytical_method": "Elemental analysis",
@@ -134,7 +136,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "ea"
     },
     {
         "analytical_method": "Physisorption",
@@ -143,6 +146,207 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "physisorpt"
+    },
+    {
+        "analytical_method": "Capillary electrophoresis",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "electrophoresis"
+    },
+    {
+        "analytical_method": "Polarimetry",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "polarimetry"
+    },
+    {
+        "analytical_method": "Melting point or refractory index",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "mp"
+    },
+    {
+        "analytical_method": "TLC: Rf values, TLC-UV, TLC-MS",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "tlc"
+    },
+    {
+        "analytical_method": "Binding assays (radioligand, fluorescence-based, surface plasmon resonance (SPR), microscale thermophoresis (MST), isothermal calorimetry (ICT), etc.)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "binding"
+    },
+    {
+        "analytical_method": "Activity assays (e.g. colorimetric, fluorescence-based, radioactive-based etc.)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "activity"
+    },
+    {
+        "analytical_method": "Docking calculations",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "docking"
+    },
+    {
+        "analytical_method": "Cytotoxicity assays",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "cytotox"
+    },
+    {
+        "analytical_method": "Determination of water solubility (pH 7.4; maybe at further pH values)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "watersol"
+    },
+    {
+        "analytical_method": "Determination of logD value (lipophilicity)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "logd"
+    },
+    {
+        "analytical_method": "Peroral bioavailability (e.g. Caco-2 cell permeation assay)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "peror_bioavail"
+    },
+    {
+        "analytical_method": "Brain permeation (in vitro prediction, in vivo)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "brain_perme"
+    },
+    {
+        "analytical_method": "Metabolic stability (rat/mouse/human liver microsomes)",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "metab_stab"
+    },
+    {
+        "analytical_method": "Inhibition of the most important CYP P450 enzymes involved in drug metabolism to assess potential interactions",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "inihib_p450"
+    },
+    {
+        "analytical_method": "hERG channel interaction",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "herg_int"
+    },
+    {
+        "analytical_method": "Genotoxicity assays",
+        "exemplary_proprietary_file_extensions": "",
+        "Typical size of proprietary file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "genotox"
+    },
+    {
+        "analytical_method": "Isothermal titration calorimetry (ITC)",
+        "exemplary_proprietary_file_extensions": "",
+        "typical_size_of_proprietary_file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "itc"
+    },
+    {
+        "analytical_method": "Dynamic light scattering (DLS)",
+        "exemplary_proprietary_file_extensions": ".apkw .xlsx",
+        "typical_size_of_proprietary_file": "&lt;1 MB",
+        "converter_to_open_file_format": "proprietary software",
+        "recommendation_for_open_file_extension": ".csv",
+        "file_format": "comma-separated values",
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "dls"
+    },
+    {
+        "analytical_method": "Atomic force microscopy (AFM)",
+        "exemplary_proprietary_file_extensions": "",
+        "typical_size_of_proprietary_file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "afm"
+    },
+    {
+        "analytical_method": "Transmission electron microscopy (TEM)",
+        "exemplary_proprietary_file_extensions": "",
+        "typical_size_of_proprietary_file": "",
+        "converter_to_open_file_format": "",
+        "recommendation_for_open_file_extension": "",
+        "file_format": "",
+        "file_size_of_open_format": "",
+        "shortname": "tem"
     }
 ]
