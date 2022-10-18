@@ -581,11 +581,11 @@ ul ul {
 /* Tables */
 
 table {
-  border-bottom: 2px solid var(--ifm-color-primary);
+  border: .5px solid var(--ifm-color-primary);
 }
 
 table thead tr {
-  border-bottom: none;
+  border-bottom: 1px solid var(--ifm-color-primary);
 }
 
 /* Lead by Example */
