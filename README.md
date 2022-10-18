@@ -1,4 +1,4 @@
-![](./static/img/N4C_logo_navbar_large.svg)
+<img src="./static/img/N4C_logo_navbar_large.svg" alt="N4C logo" width="50%"/>
 
 # Chemistry RDM Knowledge Base
 
