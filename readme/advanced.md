@@ -57,10 +57,12 @@ The table is then generated with `<MethodsTable methods_to_show={["argument1","a
 Instead of calling `<MethodsTable methods_to_show={["argument1","argument2"]} />` with a long list of individual arguments, you can also add a set of methods to [/static/assets/profiles.json](../static/assets/profiles.json) (use the `shortname` properties):
 
 ```
+[...]
     {
         "name": "magres",
         "methods": [ "nmr","epr" ]
     },
+[...]
 ```
 
 Include the profile table generation script with:
