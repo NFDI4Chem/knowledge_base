@@ -5,14 +5,14 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Roles',
-    Svg: require('../../static/img/nfdi4chem_Roles_white.svg').default,
-    link: '/docs/role/guide',
-  },
-  {
     title: 'Domains',
     Svg: require('../../static/img/nfdi4chem_Domains_white.svg').default,
     link: '/docs/domains/guide',
+  },
+  {
+    title: 'Roles',
+    Svg: require('../../static/img/nfdi4chem_Roles_white.svg').default,
+    link: '/docs/role/guide',
   },
   {
     title: 'Handling Data',
@@ -28,7 +28,7 @@ const FeatureList = [
     title: 'Lead by Example',
     Svg: require('../../static/img/nfdi4chem_Lead_by_Example_white.svg').default,
     link: '/docs/lead-by-example',
-  },
+  }
 ];
 
 function Feature({ Svg, title, link }) {
