@@ -27,7 +27,7 @@
         "recommendation_for_open_file_extension": ".dx",
         "file_format": "JCAMP-DX",
         "file_size_of_open_format": "&lt;1 MB",
-        "keyword": "ir"
+        "shortname": "ir"
     },
     {
         "analytical_method": "Raman spectroscopy",
@@ -65,7 +65,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".cif",
         "file_format": "crystallographic information file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "xray"
     },
     {
         "analytical_method": "Powder XRD",
@@ -75,7 +76,7 @@
         "recommendation_for_open_file_extension": ".xyd",
         "file_format": "text file",
         "file_size_of_open_format": "&lt;1 MB",
-        "shortname": "gc"
+        "shortname": "xrd"
     },
     {
         "analytical_method": "Gas chromatography",
@@ -84,7 +85,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "gc"
     },
     {
         "analytical_method": "HPLC",
@@ -93,7 +95,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".csv",
         "file_format": "comma-separated values",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "hplc"
     },
     {
         "analytical_method": "Cyclic voltammetry",
@@ -102,7 +105,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "cv"
     },
     {
         "analytical_method": "EPR spectroscopy",
@@ -111,7 +115,8 @@
         "converter_to_open_file_format": "proprietary software",
         "recommendation_for_open_file_extension": ".txt",
         "file_format": "text file",
-        "file_size_of_open_format": "&lt;1 MB"
+        "file_size_of_open_format": "&lt;1 MB",
+        "shortname": "epr"
     },
     {
         "analytical_method": "Differential scanning calorimetry",

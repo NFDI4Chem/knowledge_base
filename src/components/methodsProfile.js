@@ -1,6 +1,19 @@
 import React from 'react';
 
 var table = require('@site/static/assets/methods.json');
+var profiles = require('@site/static/assets/profiles.json');
+
+
+export default function MethodsProfileTable({children, profile_to_show}) {
+
+    let methodsSet = [];
+
+    methodsSet = profiles.filter(m => profile_to_show.includes(m.name));
+    
+    return (
+        <>{methodsSet.map((m,n) => <MethodsTable methods_to_show={m.methods} {...n}/>)}</>
+    );
+}
 
 function Entry({ analytical_method, exemplary_proprietary_file_extensions, typical_size_of_proprietary_file, converter_to_open_file_format, recommendation_for_open_file_extension, file_format, file_size_of_open_format }) {
     return (
@@ -8,7 +21,7 @@ function Entry({ analytical_method, exemplary_proprietary_file_extensions, typic
     )
 }
 
-export default function MethodsTable({children, methods_to_show}) {
+export function MethodsTable({children, methods_to_show}) {
 
     if(methods_to_show[0]==="all"){
         return (
