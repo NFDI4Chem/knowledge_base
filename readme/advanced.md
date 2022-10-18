@@ -38,3 +38,6 @@ Where you wish to reference the image, use the `img` html tag in this way:
 
 ## Dymanic tables
 
+The use of dynamic table data is possible. The first example is the table with the analytical methods, used for example in the article [Synthetic Organic/Inorganic Chemistry](../docs/10_domains/10_synthetic_chemistry.mdx).
+
+The table data is stored in this file: [/static/assets/methods.json]
