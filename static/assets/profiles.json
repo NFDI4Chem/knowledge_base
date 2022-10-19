@@ -1,10 +1,12 @@
 [
     {
         "name": "synthetic",
+        "longname": "Synthetic Chemistry",
         "methods": [ "nmr", "ms", "ir", "raman", "uv", "fluoresc", "xray", "xrd", "gc", "hplc", "cv", "epr", "dsc", "ea", "physisorpt" ]
     },
     {
         "name": "magres",
+        "longname": "Magnetic Resonance",
         "methods": [ "nmr","epr" ]
     },
     {
