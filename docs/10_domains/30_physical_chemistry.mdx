@@ -2,6 +2,8 @@
 title: "Physical and Computational Chemistry"
 ---
 
+import MethodsProfileTable from '@site/src/components/methodsProfile.js';
+
 :::info Summary:
 
 Physical chemistry is an interdisciplinary science at the frontier between chemistry and physics, whose topics go beyond the classical areas of the respective individual sciences. While preparative chemistry focuses on questions of the methodology of chemical synthesis of known and new substances, physical chemistry attempts to describe the properties of substances and their transformation by applying concepts of physics to objects of chemistry by means of theoretical and experimental methods. Along with organic and inorganic chemistry, physical chemistry therefore represents one of the three key disciplines of "classical" chemistry, since it provides the theoretical basis for technical chemistry and process engineering. Its knowledge is also an integral part of many other disciplines and is used, for example, for description and understanding in biology and medicine, meteorology as well as the earth sciences. Due to this great interdisciplinarity and the use of numerous physicochemical methods in almost all areas of chemistry, a complete description of physical chemistry as profile is hardly possible, which is why this article explicitly makes no claim to do so.
@@ -94,26 +96,7 @@ Physical chemistry is an interdisciplinary science at the frontier between chemi
 
 # Methods Data Format Overview
 
-|Analytical method|Exemplary proprietary file extensions|Typical size of proprietary file|Converter to open file format|Recommendation for open file extension*|File format|File size of open format|
-|:------------|:-----------------|:--------|:--------|:------------|:--------------|:--------------|
-|NMR spectroscopy|.fid|<1-50 MB|MNova  Topspin|.jdx  .zip|JCAMP-DX NMReDATA|~1 MB|
-|EPR spectroscopy|.spe .DTA/.DSC|<1 MB|SpinToolbox|.txt .csv|text file, comma-separated values|<1 MB|
-|IR spectroscopy|.ispd .icIR|<1 MB| |.dx|JCAMP-DX|<1 MB|
-|Raman spectroscopy|.dpt   .spc  .icRaman  .sps  .acs|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
-|UV/VIS spectroscopy|.dsw   .str   .bsk   .bkn   .ksd   .jws   .jwb   .str8   .spc   .sre|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
-|Fluorescence spectroscopy|.fds   .fs2f   .jws   .opj|<1 MB|proprietary software|.dx|JCAMP-DX|<1 MB|
-|Mass spectrometry|.raw   .d   .baf|~250 MB|Proteowizard|.mzML|mzML|~250 MB|
-|Single crystal XRD|.raw|<1 MB|proprietary software|.cif|crystallographic information file|<1 MB|
-|Powder XRD|.raw|<1 MB|proprietary software|.xyd|text file|<1 MB|
-|Gas chromatography|.gcd   .d|~2 MB|proprietary software|.txt|text file|<1 MB|
-|HPLC|.xls|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
-|Cyclic voltammetry|.nox   .pssession|~8 MB|proprietary software|.txt|text file|<1 MB|
-|Differential scanning calorimetry (DSC)|.ngb-dsu   .ngb-taa|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
-|Isothermal titration calorimetry (ITC)| | | | | | |
-|Physisorption|.smp|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
-|Dynamic light scattering (DLS)|.apkw .xlsx|<1 MB|proprietary software|.csv|comma-separated values|<1 MB|
-|Atomic force microscopy (AFM)| | | | | | |
-|Transmission electron microscopy (TEM)| | | | | | |
+<MethodsProfileTable profile_to_show={"physical"} />
 
 :::note *This table will be continuously updated with new recommendations on interoperable open file formats.
 :::

@@ -1,0 +1,18 @@
+[
+    {
+        "name": "synthetic",
+        "methods": [ "nmr", "ms", "ir", "raman", "uv", "fluoresc", "xray", "xrd", "gc", "hplc", "cv", "epr", "dsc", "ea", "physisorpt" ]
+    },
+    {
+        "name": "magres",
+        "methods": [ "nmr","epr" ]
+    },
+    {
+        "name": "physical",
+        "methods": [ "nmr", "epr", "ir", "raman", "uv", "fluoresc", "ms", "xray", "xrd", "gc", "hplc", "cv", "dsc", "itc", "physisorpt", "dls", "afm", "tem" ]
+    },
+    {
+        "name": "pharma",
+        "methods": [ "nmr", "uv", "ir", "raman", "fluoresc", "ms", "gc", "hplc", "electrophoresis", "polarimetry", "mp", "tlc", "binding", "activity", "docking", "cytotox", "watersol", "logd", "peror_bioavail", "brain_perme", "metab_stab", "inihib_p450", "herg_int", "genotox" ]
+    }    
+]
