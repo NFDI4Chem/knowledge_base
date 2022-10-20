@@ -29,7 +29,7 @@ export default function FilteredProfile( {children, props } ) {
     console.log(filterProfile);
 
     return (
-        <><div className="block_filter">{result.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <><div className="block_filter">Click to filter: {result.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
         <div><MethodsProfileTable profile_to_show={filterProfile} /></div></>    
 )
 }
