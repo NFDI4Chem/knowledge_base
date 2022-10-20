@@ -11,10 +11,17 @@
     },
     {
         "name": "physical",
+        "longname": "Physical Chemistry",
         "methods": [ "nmr", "epr", "ir", "raman", "uv", "fluoresc", "ms", "xray", "xrd", "gc", "hplc", "cv", "dsc", "itc", "physisorpt", "dls", "afm", "tem" ]
     },
     {
         "name": "pharma",
+        "longname": "Pharmaceutical Chemistry",
         "methods": [ "nmr", "uv", "ir", "raman", "fluoresc", "ms", "gc", "hplc", "electrophoresis", "polarimetry", "mp", "tlc", "binding", "activity", "docking", "cytotox", "watersol", "logd", "peror_bioavail", "brain_perme", "metab_stab", "inihib_p450", "herg_int", "genotox" ]
+    },
+    {
+        "name": "all",
+        "longname": "All Entries",
+        "methods": ["all"]
     }    
 ]
