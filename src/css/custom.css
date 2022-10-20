@@ -594,7 +594,7 @@ table thead tr {
 .block_filter {
   padding: 10px;
   margin: 15px 0px;
-  box-shadow: 4px 4px 8px #ccc;
+  border: 1px dashed var(--ifm-color-primary);
 }
 
 .block_lbe {
