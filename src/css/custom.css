@@ -590,6 +590,13 @@ table thead tr {
 
 /* Lead by Example */
 
+
+.block_filter {
+  padding: 10px;
+  margin: 15px 0px;
+  box-shadow: 4px 4px 8px #ccc;
+}
+
 .block_lbe {
   padding: 10px;
   box-shadow: 4px 4px 8px #ccc;

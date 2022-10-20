@@ -12,6 +12,7 @@ export default function FilteredProfile( {children, props } ) {
     
         return (
             <button 
+                className="lbe_tag"
                 onClick={() => setFilterProfile(name)} 
             >
                 {longname}
@@ -28,7 +29,7 @@ export default function FilteredProfile( {children, props } ) {
     console.log(filterProfile);
 
     return (
-        <><div>{result.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <><div className="block_filter">{result.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
         <div><MethodsProfileTable profile_to_show={filterProfile} /></div></>    
 )
 }

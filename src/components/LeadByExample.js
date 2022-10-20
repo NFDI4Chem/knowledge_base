@@ -1,8 +1,9 @@
-import React from "react";
+import React,{ useState } from "react";
 
 var lbeTable = require('@site/static/assets/lbe.json');
+var categories = ["Natural Products","Synthesis","Heterocycles","Inorganic Chemistry"]
 
-export function MultiUrl( {name,url} ) {
+function MultiUrl( {name,url} ) {
   return (
     <button className="lbe_button">
       <a href={url} target="_blank">{name}</a>
@@ -10,7 +11,7 @@ export function MultiUrl( {name,url} ) {
   )
 }
 
-export function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
+function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
     return (
       <div className="col col--4"><div className="block_lbe">
 
@@ -50,12 +51,34 @@ export function Lbeblock( {title, authors, link_pub, link_data, link_comment, de
 }
 
 export default function Lbe() {
+
+  const [filterSets, setFilterSets] = useState("all");
+
+  function FilterButton( { name } ) {
+      console.log("11: name:"+name+", longname:"+name);
+  
+      return (
+          <button 
+              className="lbe_tag"
+              onClick={() => setFilterSets(name)} 
+          >
+              {name}
+          </button>
+      )
+  }
+
+  var result = lbeTable.filter(m => filterSets.includes(m.tags));
+
+  console.log(filterSets);
+  console.log(result);
+
   return (
+      <><div className="block_filter">{categories.map((props) => <FilterButton name={props} />)}</div>
       <div className="row">
-        {lbeTable.map((props, idx) => (
+        {result.map((props, idx) => (
           <Lbeblock key={idx} {...props} />
         ))}
-      </div>
+      </div></>
   )
 }
 
