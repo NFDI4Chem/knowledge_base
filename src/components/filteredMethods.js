@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import MethodsProfileTable from '@site/src/components/MethodsProfile.js';
+import MethodsProfileTable from '@site/src/components/methodsProfile.js';
 
 var profiles = require('@site/static/assets/profiles.json');
 
