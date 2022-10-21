@@ -1,11 +1,14 @@
 import React,{ useState } from 'react';
 import MethodsProfileTable from '@site/src/components/methodsProfile.js';
+import MethodsTable from '@site/src/components/methods.js'
 
 var profiles = require('@site/static/assets/profiles.json');
 
-export default function FilteredProfile( {children, props } ) {
+export default function FilteredProfile( { props } ) {
 
     const [filterProfile, setFilterProfile] = useState("all");
+    const [searchFilter, setSearchFilter] = useState("");
+    const handleChange = e => {setSearchFilter(e.target.value)};
 
     function FilterButton( { name, longname } ) {
         console.log("11: name:"+name+", longname:"+longname);
@@ -25,18 +28,10 @@ export default function FilteredProfile( {children, props } ) {
             </button>
         )
     }
-    
-    var result = [];
-
-    result = profiles.filter(m => props.includes(m.name));
-    console.log(result,props);
-
-    console.log("32:");
-    console.log(filterProfile);
 
     return (
-        <><div className="block_filter">Click to filter: {result.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <><div className="block_filter">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
         <div><MethodsProfileTable profile_to_show={filterProfile} /></div></>    
-)
+    )
 }
 
