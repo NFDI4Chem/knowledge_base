@@ -1,14 +1,11 @@
 import React,{ useState } from 'react';
 import MethodsProfileTable from '@site/src/components/methodsProfile.js';
-import MethodsTable from '@site/src/components/methods.js'
 
 var profiles = require('@site/static/assets/profiles.json');
 
 export default function FilteredProfile( { props } ) {
 
     const [filterProfile, setFilterProfile] = useState("all");
-    const [searchFilter, setSearchFilter] = useState("");
-    const handleChange = e => {setSearchFilter(e.target.value)};
 
     function FilterButton( { name, longname } ) {
         console.log("11: name:"+name+", longname:"+longname);
