@@ -9,10 +9,16 @@ export default function FilteredProfile( {children, props } ) {
 
     function FilterButton( { name, longname } ) {
         console.log("11: name:"+name+", longname:"+longname);
-    
+
+        var buttonClass = "lbe_tag";
+
+        if (name == filterProfile) {
+            buttonClass = "lbe_tag_active";
+        }
+        
         return (
             <button 
-                className="lbe_tag"
+                className={buttonClass}
                 onClick={() => setFilterProfile(name)} 
             >
                 {longname}
