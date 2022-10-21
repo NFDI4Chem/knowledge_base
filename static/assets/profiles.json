@@ -1,7 +1,7 @@
 [
     {
         "name": "synthetic",
-        "longname": "Synthetic Chemistry",
+        "longname": "Synthetic / Analytical Chemistry",
         "methods": [ "nmr", "ms", "ir", "raman", "uv", "fluoresc", "xray", "xrd", "gc", "hplc", "cv", "epr", "dsc", "ea", "physisorpt" ]
     },
     {
