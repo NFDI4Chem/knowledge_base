@@ -22,7 +22,7 @@ export default function Methods( {defaultProfile} ) {
         return (
             <button 
                 className={buttonClass}
-                onClick={() => setFilterProfile(name)} 
+                onClick={() => {setFilterProfile(name); setSearchFilter("")}} 
             >
                 {longname}
             </button>
