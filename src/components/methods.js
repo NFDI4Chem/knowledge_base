@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 
 var table = require('@site/static/assets/methods.json');
 
@@ -22,7 +22,11 @@ export default function Methods( {defaultProfile} ) {
         return (
             <button 
                 className={buttonClass}
+<<<<<<< HEAD
                 onClick={() => {setFilterProfile(name); setSearchFilter("")}} 
+=======
+                onClick={() => setFilterProfile(name)} 
+>>>>>>> 03ed1b6 (chore: clean-up methods table)
             >
                 {longname}
             </button>
@@ -54,7 +58,7 @@ function Entry({ analytical_method, exemplary_proprietary_file_extensions, typic
     )
 }
 
-export default function MethodsTable({children, methods_to_show}) {
+function MethodsTable({methods_to_show}) {
 
     if(methods_to_show[0]==="all"){
         return (
@@ -68,8 +72,7 @@ export default function MethodsTable({children, methods_to_show}) {
         );
     }
 
-    let found = [];
-    found = table.filter(m => methods_to_show.includes(m.analytical_method) || methods_to_show.includes(m.shortname));
+    var found = table.filter(m => methods_to_show.includes(m.shortname));
 
     return (
     <table><thead><tr><th align="left">Analytical method</th><th align="left">Exemplary proprietary file extensions</th><th align="left">Typical size of proprietary file</th><th align="left">Converter to open file format</th><th align="left">Recommendation for open file extension*</th><th align="left">File format</th><th align="left">File size of open format</th></tr></thead><tbody>
