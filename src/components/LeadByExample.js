@@ -17,10 +17,16 @@ export default function Lbe() {
 
   function FilterButton( { name } ) {
       console.log("11: name:"+name+", longname:"+name);
+
+      var buttonClass = "lbe_tag";
+
+      if (name == filterSets) {
+        buttonClass = "lbe_tag_active";
+      }
   
       return (
           <button 
-              className="lbe_tag"
+              className={buttonClass}
               onClick={() => setFilterSets(name)} 
           >
               {name}
@@ -29,17 +35,35 @@ export default function Lbe() {
   }
 
   function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
+
+    var buttonClass = "lbe_tag";
+
+    function FilterButton( { name } ) {
+      console.log("11: name:"+name+", longname:"+name);
+
+      var buttonClass = "lbe_tag";
+
+      if (name == filterSets) {
+        buttonClass = "lbe_tag_active";
+      }
+  
+      return (
+          <button 
+              className={buttonClass}
+              onClick={() => setFilterSets(name)} 
+          >
+              {name}
+          </button>
+      )
+    }
+
     return (
       <div className="col col--4"><div className="block_lbe">
 
         <h3>{title}</h3>
 
-        <p>{tags.map((tag) => 
-          <button 
-            className="lbe_tag"
-            onClick={() => setFilterSets(tag)} >
-            {tag}
-          </button>
+        <p>{tags.map((tag,idx) => 
+          <FilterButton key={idx} name={tag} />
         )}</p>
 
         <details className="details_lbe">
