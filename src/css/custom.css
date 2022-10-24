@@ -86,6 +86,8 @@
   --n4c-hover-scale: 105%;
   --n4c-transform-time: 175ms;
 
+  --lbe-transform-time: 2s;
+
   --ifm-font-size-base: 110%;
 }
 
@@ -584,4 +586,105 @@ table {
 
 table thead tr {
   border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+/* Lead by Example */
+
+
+.block_filter {
+  padding: 10px;
+  margin: 15px 0px;
+  border: 1px dashed var(--ifm-color-primary);
+}
+
+.block_lbe {
+  padding: 10px;
+  box-shadow: 4px 4px 8px #ccc;
+  margin: 15px 0px;
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.block_lbe:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.details_lbe {
+  display: flex; 
+  overflow: hidden;
+  border: 1px dashed var(--ifm-color-primary);
+  padding: 15px;
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.details_lbe h4 {
+  padding-top: 15px;
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.details_lbe[open] summary {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+.details_lbe summary::marker {
+  color: var(--ifm-color-primary);
+}
+
+.lbe_button {
+  border: 0.5px solid var(--ifm-color-primary);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0.2em;
+  font-size: 11pt;
+  background: none;
+}
+
+.lbe_button:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.lbe_button a:hover {
+  text-decoration: none;
+}
+
+
+
+.lbe_tag {
+  border-radius: var(--ifm-breadcrumb-border-radius);
+  color: white;
+  display: inline-block;
+  font-size: calc(0.75rem * var(--ifm-breadcrumb-size-multiplier));
+  padding: calc( var(--ifm-breadcrumb-padding-vertical) * var(--ifm-breadcrumb-size-multiplier) ) calc( var(--ifm-breadcrumb-padding-horizontal) * var(--ifm-breadcrumb-size-multiplier) );
+  border: none;
+  margin: 0.2em;
+  background: var(--ifm-color-primary);
+}
+
+.lbe_tag_active {
+  border-radius: var(--ifm-breadcrumb-border-radius);
+  color: white;
+  display: inline-block;
+  font-size: calc(0.75rem * var(--ifm-breadcrumb-size-multiplier));
+  padding: calc( var(--ifm-breadcrumb-padding-vertical) * var(--ifm-breadcrumb-size-multiplier) ) calc( var(--ifm-breadcrumb-padding-horizontal) * var(--ifm-breadcrumb-size-multiplier) );
+  border: none;
+  margin: 0.2em;
+  background: var(--ifm-color-secondary);
+}
+
+/* .lbe_tag {
+  border: 0.5px solid var(--ifm-color-danger);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0.2em;
+  font-size: 11pt;
+  background: none;
+  font-weight: 600;
+  color: var(--ifm-color-danger);
+} */
+
+.lbe_tag:hover, .lbe_tag_active:hover {
+  transform: scale(var(--n4c-hover-scale));
+  transition: transform var(--n4c-transform-time) ease-in-out;
 }
