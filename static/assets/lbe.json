@@ -110,6 +110,52 @@
         "tags": ["Synthesis","Heterocycles"]
     },
     {
+        "title": "In-situ study of the impact of temperature and architecture on the interfacial structure of microgels",
+        "authors": "Steffen Bochenek, Fabrizio Camerin, Emanuela Zaccarelli, Armando Maestro, Maximilian M. Schmidt, Walter Richtering, Andrea Scotti",
+        "link_pub": "https://dx.doi.org/10.1038/s41467-022-31209-3",
+        "link_data": [{ "name": "RADAR", "url": "https://dx.doi.org/10.22000/603"},{ "name": "ILL Data Portal", "url": "https://dx.doi.org/10.5291ILL-DATA.9-11-187191"},{ "name": "ILL Data Portal", "url": "https://dx.doi.org/10.5291/ILL-DATA.EASY-46292"}],
+        "link_comment": "curated by the publishing authors",
+        "description": "The dataset  inludes raw, associated, and derived data supporting the reported results; methods: NR, DLS, AFM, SANS.RADAR DOI as well as ePIC for archived dataset (identical to published dataset) are given in the data availability statement. The RADAR DOI is also listed listed in the references. The NR raw data used in the study are available in the ILL Data Portal database.",
+        "tags": ["Macromolecules"]
+    },
+    {
+        "title": "Synthesis and biological evaluation of highly potent fungicidal deoxy-hygrophorones",
+        "authors": "Toni Ditfe, Eileen Bette, Haider N. Sultani, Alexander Otto, Ludger A. Wessjohann, Norbert Arnold, Bernhard Westermann",
+        "link_pub": "https://doi.org/10.1002/ejoc.202100729",
+        "link_data": [{ "name": "RADAR", "url": "https://doi.org/10.22000/451"}],
+        "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR, contains NMR and MS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX, NMReDATA for NMR data and mzML for MS data. Results from the bioassay are available as CSV. Additionally, all structures are provided as CTfiles and are listed, corresponding to their numbering in the publication, in an CSV including IPB 3LC lab journal entries, SMILES structure codes and InChI and InChIkey identifiers. The corresponding article references the dataset in the section on supporting information.",
+        "tags": ["Natural Products","Biological acitivity"]
+    },
+    {
+        "title": "A risk based assessment approach for chemical mixtures from wastewater treatment plant effluents",
+        "authors": "Saskia Finckh, Liza-Marie Beckers, Wibke Busch, Eric Carmona, Valeria Dulio, Lena Kramer, Martin Krauss, Leo Posthuma, Tobias Schulze, Jaap Slootweg, Peter C. von der Ohe, Werner Brack",
+        "link_pub": "https://doi.org/10.1016/j.envint.2022.107234",
+        "link_data": [{ "name": "Pangaea", "url": "https://doi.pangaea.de/10.1594/PANGAEA.940755"}],
+        "link_comment": "curated by the publishing authors",
+        "description": "The dataset includes results data, raw mass spectral files, and processing data (MZmine, MZquant, Tracefinder). Pangaea is a repository for geospatial data and enviromental chemistry. The publication contains a supplemental [word document](https://ars.els-cdn.com/content/image/1-s2.0-S016041202200160X-mmc1.docx) and [spreadsheet](https://ars.els-cdn.com/content/image/1-s2.0-S016041202200160X-mmc2.xlsx).",
+        "tags": ["Ecology"]
+
+    },
+    {
+        "title": "Comparability of Raman spectroscopic configurations: A large scale cross-laboratory study",
+        "authors": "Guo, Shuxia; Beleites, Claudia; Neugebauer, Ute; Abalde-Cela, Sara; Afseth, Nils Kristian; Alsamad, Fatima; Anand, Suresh; Araujo-Andrade, Cuauhtemoc; Aškrabić, Sonja; Avci, Ertug; Baia, Monica; Baranska, Malgorzata; Baria, Enrico; Batista de Carvalho, Luis A. E.; de Bettignies, Philippe; Bonifacio, Alois; Bonnier, Franck; Brauchle, Eva Maria; Byrne, Hugh J.; Chourpa, Igor; Cicchi, Riccardo; Cuisinier, Frederic; Culha, Mustafa; Dahms, Marcel; David, Catalina; Duponchel, Ludovic; Duraipandian, Shiyamala; El-Mashtoly, Samir F.; Ellis, David I.; Eppe, Gauthier; Falgayrac, Guillaume; Gamulin, Ozren; Gardner, Benjamin; Gardner, Peter; Gerwert, Klaus; Giamarellos-Bourboulis, Evangelos J.; Gizurarson, Sveinbjorn; Gnyba, Marcin; Goodacre, Royston; Grysan, Patrick; Guntinas-Lichius, Orlando; Helgadottir, Helga; Grošev, Vlasta Mohaček; Kendall, Catherine; Kiselev, Roman; Kölbach, Micha; Krafft, Christoph; Krishnamoorthy, Sivashankar; Kubryck, Patrick; Lendl, Bernhard; Loza-Alvarez, Pablo; Lyng, Fiona M.; Machill, Susanne; Malherbe, Cedric; Marro, Monica; Marques, M. P. M.; Matuszyk, Ewelina; Morasso, Carlo Francesco; Moreau, Myriam; Muhamadali, Howbeer; Mussi, Valentina; Notingher, Ioan; Pacia, Marta Z.; Pavone, Francesco S.; Penel, Guillaume; Petersen, Dennis; Piot, Olivier; Rau, Julietta V.; Richter, Marc; Rybarczyk, Maria Krystyna; Salehi, Hamideh; Schenke-Layland, Katja; Schlücker, Sebastian; Schosserer, Markus; Schütze, Karin; Sergo, Valter; Sinjab, Faris; Smulko, Janusz; Sockalingum, Ganesh D; Stiebing, Clara; Stone, Nick; Untereiner, Valérie; Vanna, Renzo; Wieland, Karin; Popp, Juergen; Bocklitz, Thomas",
+        "link_pub": "https://doi.org/10.1021/acs.analchem.0c02696",
+        "link_data": [{ "name": "Zenodo", "url": "https://zenodo.org/record/4152953"}],
+        "link_comment": "curated by the publishing authors",
+        "description": "Slightly processed raw data for the paper 'Comparability of Raman Spectroscopic Configurations: A Large Scale Cross-Laboratory Study': The processing include a spike removal to allow an interpolation to a common wavenumber axis. Always three files belong to each other: wavenumber axis file (wx_XYZ), spectral intensity file (spec_XYZ) and metadata file (meta_XYZ). The ‘XYZ’ refers to the samples measured (see the publication and its SI for details).",
+        "tags": ["Spectroscopy"]
+    },
+    {
+        "title": "5α-Cyprinol sulfate: complete NMR assignment and revision of earlier published data, including the submission of a computer-readable assignment in NMReDATA format",
+        "authors": "Meike Hahn, Eric von Elert, Laurent Bigler, M. Dolores Díaz Hernández, Nils E. Schloerer",
+        "link_pub": "https://doi.org/10.1002/mrc.4782",
+        "link_data": [{ "name": "NMRShiftDB2", "url": "https://doi.org/10.18716/nmrshiftdb2/60004113/nmredata_mrc_cd3od"}],
+        "link_comment": "curated by the publishing authors",
+        "description": "The dataset, curated by the publishing authors, is published in NMRShiftDB2 and also available from the publisher as supporting information. References to the dataset is given via DOI in the supporting information word document.",
+        "tags": ["Natural Products"]
+    },
+    {
         "title": "A new generation of terminal copper nitrenes and their application in aromatic C–H amination reactions",
         "authors": "Fabian Thomas, Matthias Oster, Florian Schön, Kai C. Göbgen, Benedikt Amarouch, Dominik Steden, Alexander Hoffmann, Sonja Herres-Pawlis",
         "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF.",

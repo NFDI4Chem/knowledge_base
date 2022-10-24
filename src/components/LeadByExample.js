@@ -14,9 +14,12 @@ function MultiUrl( {name,url} ) {
 export default function Lbe() {
 
   const [filterSets, setFilterSets] = useState("All");
+  const [searchFilter, setSearchFilter] = useState("");
+
+  const handleChange = e => {setSearchFilter(e.target.value); setFilterSets("")};
+
 
   function FilterButton( { name } ) {
-      console.log("11: name:"+name+", longname:"+name);
 
       var buttonClass = "lbe_tag";
 
@@ -27,7 +30,7 @@ export default function Lbe() {
       return (
           <button 
               className={buttonClass}
-              onClick={() => setFilterSets(name)} 
+              onClick={() => {setFilterSets(name); setSearchFilter("")}} 
           >
               {name}
           </button>
@@ -36,11 +39,7 @@ export default function Lbe() {
 
   function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
 
-    var buttonClass = "lbe_tag";
-
     function FilterButton( { name } ) {
-      console.log("11: name:"+name+", longname:"+name);
-
       var buttonClass = "lbe_tag";
 
       if (name == filterSets) {
@@ -50,7 +49,7 @@ export default function Lbe() {
       return (
           <button 
               className={buttonClass}
-              onClick={() => setFilterSets(name)} 
+              onClick={() => {setFilterSets(name); setSearchFilter("")}}
           >
               {name}
           </button>
@@ -70,23 +69,25 @@ export default function Lbe() {
 
           <summary>Details</summary>
 
-          <h4>Authors</h4>
-          
-          <p><em>{authors}</em></p>
+          <div className="collapsible_lbe">
+            <h4>Authors</h4>
+            
+            <p><em>{authors}</em></p>
 
-          <h4>Description</h4>
+            <h4>Description</h4>
 
-          <p>{description}</p>
+            <p>{description}</p>
 
-          <h4>Links</h4>
+            <h4>Links</h4>
 
-          <ul>
-            <li><a href={link_pub}>Link to publication</a></li>
-            <li>Link(s) to datasets:<br />{
-              link_data.map((props, idx) => (
-                <MultiUrl key={idx} {...props} />
-              ))} <br /><em>{link_comment}</em></li>
-          </ul>        
+            <ul>
+              <li><a href={link_pub} target="_blank">Link to publication</a></li>
+              <li>Link(s) to datasets:<br />{
+                link_data.map((props, idx) => (
+                  <MultiUrl key={idx} {...props} />
+                ))} <br /><em>{link_comment}</em></li>
+            </ul>
+          </div>        
         </details>
       </div></div>
 
@@ -96,7 +97,8 @@ export default function Lbe() {
 
   if (filterSets == "All") {
     return(
-      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}</div>
+      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
+      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
       <div className="row">
         {lbeTable.map((props, idx) => (
           <Lbeblock key={idx} {...props} />
@@ -106,13 +108,18 @@ export default function Lbe() {
     )
   }
 
-  var result = lbeTable.filter(n => n.tags.includes(filterSets));
+  var result = [];
 
-  console.log("72: "+filterSets);
-  console.log(result);
+  if (searchFilter == "") {
+    result = lbeTable.filter(n => n.tags.includes(filterSets));
+  }
+  else {
+    result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));
+  }
 
   return (
-      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}</div>
+      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
+      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
       <div className="row">
         {result.map((props, idx) => (
           <Lbeblock key={idx} {...props} />
