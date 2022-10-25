@@ -665,7 +665,7 @@ table thead tr {
 }
 
 .lbe_tag_active {
-  background: var(--ifm-color-secondary);
+  background: var(--ifm-color-danger);
 }
 
 /* .lbe_tag {
