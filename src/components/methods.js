@@ -5,8 +5,8 @@ var profiles = require('@site/static/assets/profiles.json');    // extract subdo
 
 export default function Methods( {defaultProfile} ) {
 
-    const [filterProfile, setFilterProfile] = useState(defaultProfile);                     // define state for filtering through subdomain profile, default profile is given by function prop
-    const [searchFilter, setSearchFilter] = useState("");                                   // define state for text filtering
+    const [filterProfile, setFilterProfile] = useState(defaultProfile);                     // define React state for filtering through subdomain profile, default profile is given by function prop
+    const [searchFilter, setSearchFilter] = useState("");                                   // define React state for text filtering
     const handleChange = e => {setSearchFilter(e.target.value); setFilterProfile("")};      // handle text input changes in state
 
     function FilterButton( { name, longname } ) {
