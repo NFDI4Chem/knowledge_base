@@ -50,7 +50,7 @@ In your page, you have to include the table generation script with:
 import MethodsTable from '@site/src/components/methods.js';
 ```
 
-The table is then generated with `<MethodsTable defaultProfile={["argument"]} />`. You can either use `all` as argument or choose the `name` of the required methods set (currenty available: `synthetic`, `magres`, `physical`, `pharma`).
+The table is then generated with `<MethodsTable defaultProfile={ "argument" } />`. You can either use `all` as argument or choose the `name` of the required methods set (currenty available: `synthetic`, `magres`, `physical`, `pharma`).
 
 ### Define a set of methods
 
