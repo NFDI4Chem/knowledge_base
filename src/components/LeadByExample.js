@@ -1,7 +1,6 @@
 import React,{ useState } from "react";
 
 var lbeTable = require('@site/static/assets/lbe.json');
-var categories = require('@site/static/assets/lbe_categories.json');
 
 function MultiUrl( {name,url} ) {
   return (
@@ -11,20 +10,28 @@ function MultiUrl( {name,url} ) {
   )
 }
 
-export default function Lbe() {
+export default function Lbe( {useCategoriesList} ) {
 
   const [filterSets, setFilterSets] = useState("All");
   const [searchFilter, setSearchFilter] = useState("");
 
   const handleChange = e => {setSearchFilter(e.target.value); setFilterSets("")};
 
+  if ( useCategoriesList == "true" ) {
+    var categories = require('@site/static/assets/lbe_categories.json');
+  }
+  else {
+    var categoriesSet = new Set(lbeTable.map(obj => obj.tags).flat());
+    var categories = Array.from(categoriesSet).sort();
+    categories.unshift("All");  
+  }
 
   function FilterButton( { name } ) {
 
       var buttonClass = "lbe_tag";
 
       if (name == filterSets) {
-        buttonClass = "lbe_tag_active";
+        buttonClass = "lbe_tag lbe_tag_active";
       }
   
       return (
@@ -43,7 +50,7 @@ export default function Lbe() {
       var buttonClass = "lbe_tag";
 
       if (name == filterSets) {
-        buttonClass = "lbe_tag_active";
+        buttonClass = "lbe_tag lbe_tag_active";
       }
   
       return (
