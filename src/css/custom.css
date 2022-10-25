@@ -599,7 +599,8 @@ table thead tr {
 
 .block_lbe {
   padding: 10px;
-  box-shadow: 4px 4px 8px #ccc;
+  box-shadow: 2px 2px 8px #eee;
+  border: 1px solid var(--n4c-navbar-border);
   margin: 15px 0px;
   transition: all var(--n4c-transform-time) ease-in-out;
 }
@@ -655,7 +656,8 @@ table thead tr {
   border-radius: var(--ifm-breadcrumb-border-radius);
   color: white;
   display: inline-block;
-  font-size: calc(0.75rem * var(--ifm-breadcrumb-size-multiplier));
+  font-size: calc(0.6rem * var(--ifm-breadcrumb-size-multiplier));
+  font-weight: 600;
   padding: calc( var(--ifm-breadcrumb-padding-vertical) * var(--ifm-breadcrumb-size-multiplier) ) calc( var(--ifm-breadcrumb-padding-horizontal) * var(--ifm-breadcrumb-size-multiplier) );
   border: none;
   margin: 0.2em;
@@ -663,13 +665,6 @@ table thead tr {
 }
 
 .lbe_tag_active {
-  border-radius: var(--ifm-breadcrumb-border-radius);
-  color: white;
-  display: inline-block;
-  font-size: calc(0.75rem * var(--ifm-breadcrumb-size-multiplier));
-  padding: calc( var(--ifm-breadcrumb-padding-vertical) * var(--ifm-breadcrumb-size-multiplier) ) calc( var(--ifm-breadcrumb-padding-horizontal) * var(--ifm-breadcrumb-size-multiplier) );
-  border: none;
-  margin: 0.2em;
   background: var(--ifm-color-secondary);
 }
 
