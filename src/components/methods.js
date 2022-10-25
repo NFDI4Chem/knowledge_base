@@ -14,7 +14,7 @@ export default function Methods( {defaultProfile} ) {
         var buttonClass = "lbe_tag";            // Default style
 
         if (name == filterProfile) {
-            buttonClass = "lbe_tag_active";     // Style if active
+            buttonClass = "lbe_tag lbe_tag_active";     // Style if active
         }
         
         return (
