@@ -50,25 +50,26 @@ In your page, you have to include the table generation script with:
 import MethodsTable from '@site/src/components/methods.js';
 ```
 
-The table is then generated with `<MethodsTable methods_to_show={["argument1","argument2"]} />`. You can either use `all` as only argument or list the `analytical_method` or `shortname` properties of the required table entries.
+The table is then generated with `<MethodsTable defaultProfile={["argument"]} />`. You can either use `all` as argument or choose the `name` of the required methods set (currenty available: `synthetic`, `magres`, `physical`, `pharma`).
 
 ### Define a set of methods
 
-Instead of calling `<MethodsTable methods_to_show={["argument1","argument2"]} />` with a long list of individual arguments, you can also add a set of methods to [/static/assets/profiles.json](../static/assets/profiles.json) (use the `shortname` properties):
+If required, you can also define your own set of methods in [/static/assets/profiles.json](../static/assets/profiles.json) (use the `shortname` properties of the methods):
 
 ```
 {
     "name": "magres",
+    "longname": "Magnetic Resonance",
     "methods": [ "nmr","epr" ]
 },
 ```
 
-Include the profile table generation script with:
+Like above, include the profile table generation script with:
 
 ```
-import MethodsProfileTable from '@site/src/components/methodsProfile.js';
+import MethodsTable from '@site/src/components/methods.js';
 ```
 
-You can then generate the table with your set of entries using `<MethodsProfileTable profile_to_show={"magres"} />`, yielding this table:
+You can then generate the table with your set of entries using `<MethodsTable defaultProfile={"magres"} />`, yielding this table:
 
 ![](../static/img/readme/magres_table.png)
