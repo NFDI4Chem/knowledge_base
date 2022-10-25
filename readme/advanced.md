@@ -70,6 +70,6 @@ Like above, include the profile table generation script with:
 import MethodsTable from '@site/src/components/methods.js';
 ```
 
-You can then generate the table with your set of entries using `<MethodsProfileTable profile_to_show={"magres"} />`, yielding this table:
+You can then generate the table with your set of entries using `<MethodsProfileTable defaultProfile={"magres"} />`, yielding this table:
 
 ![](../static/img/readme/magres_table.png)
