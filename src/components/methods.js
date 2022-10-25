@@ -1,8 +1,6 @@
 import React,{ useState } from 'react';
 
 var table = require('@site/static/assets/methods.json');
-
-var table = require('@site/static/assets/methods.json');
 var profiles = require('@site/static/assets/profiles.json');
 
 export default function Methods( {defaultProfile} ) {
@@ -22,8 +20,8 @@ export default function Methods( {defaultProfile} ) {
         return (
             <button 
                 className={buttonClass}
-                onClick={() => {setFilterProfile(name); setSearchFilter("")}} 
-            >
+                onClick={() => {setFilterProfile(name); setSearchFilter("")}}
+                >
                 {longname}
             </button>
         )
