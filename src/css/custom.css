@@ -597,6 +597,9 @@ table thead tr {
 
 /* Lead by Example */
 
+.lbe {
+  max-width: 950px;
+}
 
 .block_filter {
   padding: 10px;

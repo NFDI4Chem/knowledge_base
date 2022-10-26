@@ -64,7 +64,7 @@ export default function Lbe( {useCategoriesList} ) {
     }
 
     return (
-      <div className="col col--4"><div className="block_lbe">
+      <div className="col col--12"><div className="block_lbe">
 
         <h3>{title}</h3>
 
@@ -101,17 +101,22 @@ export default function Lbe( {useCategoriesList} ) {
     );
   }
 
+  function LbeRender( { list } ) {
+    return(
+      <div className="lbe"><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
+      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
+      <div className="row">
+        {list.map((props, idx) => (
+          <Lbeblock key={idx} {...props} />
+        ))}
+      </div></div>  
+    )
+  }
+
 
   if (filterSets == "All") {
     return(
-      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
-      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
-      <div className="row">
-        {lbeTable.map((props, idx) => (
-          <Lbeblock key={idx} {...props} />
-        ))}
-      </div></>
-
+      <LbeRender list={lbeTable} />
     )
   }
 
@@ -125,13 +130,7 @@ export default function Lbe( {useCategoriesList} ) {
   }
 
   return (
-      <><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
-      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
-      <div className="row">
-        {result.map((props, idx) => (
-          <Lbeblock key={idx} {...props} />
-        ))}
-      </div></>
+    <LbeRender list={result} />
   )
 }
 
