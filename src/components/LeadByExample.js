@@ -41,11 +41,6 @@ export default function Lbe( {useCategoriesList} ) {
   const [searchFilter, setSearchFilter] = useState(textDefault);
   const [filterSwitch, setFilterSwitch] = useState(switchDefault);
 
-
-
-  console.log(queryTag,queryText);
-
-
   // Handles text input
 
   const handleChange = e => {setSearchFilter(e.target.value); setTagFilter(""); setJournalFilter(""); setFilterSwitch("text")};
