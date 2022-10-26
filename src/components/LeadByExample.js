@@ -156,6 +156,8 @@ export default function Lbe( {useCategoriesList} ) {
     )
   }
 
+  // Render LBE section
+
   function LbeRender( { list } ) {
     return(
       <div className="row">
@@ -166,6 +168,8 @@ export default function Lbe( {useCategoriesList} ) {
     )
   }
 
+  // Render all datasets if "All" is selected
+
   if (tagFilter == "All") {
     return(
       <div className="lbe"><details className="details_lbe"><summary>Filters and Search</summary>
@@ -174,6 +178,8 @@ export default function Lbe( {useCategoriesList} ) {
         <LbeRender list={lbeTable} /></div>
     )
   }
+
+  // Determine result set based on filterSwitch states
 
   var result = [];
 
