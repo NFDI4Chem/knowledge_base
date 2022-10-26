@@ -15,6 +15,7 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Get URL params
 
+  const location = useLocation()
   const queryParameters = new URLSearchParams(location.search);
   const queryText = queryParameters.get("text");
   const queryTag = queryParameters.get("tag");
