@@ -1,4 +1,5 @@
 import React,{ useState } from "react";
+import { useLocation } from "react-router-dom"
 
 var lbeTable = require('@site/static/assets/lbe.json');
 
@@ -14,7 +15,7 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Get URL params
 
-  const queryParameters = new URLSearchParams(window.location.search);
+  const queryParameters = new URLSearchParams(location.search);
   const queryText = queryParameters.get("text");
   const queryTag = queryParameters.get("tag");
 
