@@ -12,12 +12,37 @@ function MultiUrl( {name,url} ) {
 
 export default function Lbe( {useCategoriesList} ) {
 
+  // Get URL params
+
+  const queryParameters = new URLSearchParams(window.location.search);
+  const queryText = queryParameters.get("text");
+  const queryTag = queryParameters.get("tag");
+
+  var tagDefault = "All";
+  var textDefault = "";
+  var switchDefault = "tag";
+  
+  if ( queryTag !== null ) {
+    tagDefault = queryTag;
+  }
+
+  if ( queryText !== null ) {
+    textDefault = queryText;
+    tagDefault = "";
+    switchDefault = "text"
+  }
+
   // Define React states for filtering
 
-  const [tagFilter, setTagFilter] = useState("All");
+  const [tagFilter, setTagFilter] = useState(tagDefault);
   const [journalFilter, setJournalFilter] = useState("");
-  const [searchFilter, setSearchFilter] = useState("");
-  const [filterSwitch, setFilterSwitch] = useState("tag");
+  const [searchFilter, setSearchFilter] = useState(textDefault);
+  const [filterSwitch, setFilterSwitch] = useState(switchDefault);
+
+
+
+  console.log(queryTag,queryText);
+
 
   // Handles text input
 
@@ -79,7 +104,10 @@ export default function Lbe( {useCategoriesList} ) {
     return (
       <div className="col col--12"><div className="block_lbe">
 
-        <h3>{title}</h3>
+        <div className="row">
+          <div className="col col--10"><h3>{title}</h3></div>
+          <div className="col col--2"><MultiUrl name="Permalink" url={"./?text=".concat(link_pub.slice(link_pub.indexOf("doi.org")+8))} /></div>
+        </div>
 
         <p>{tags.map((tag,idx) => 
           <TagButton key={idx} name={tag} />
