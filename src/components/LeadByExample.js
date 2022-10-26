@@ -20,18 +20,20 @@ export default function Lbe( {useCategoriesList} ) {
   const queryText = queryParameters.get("text");
   const queryTag = queryParameters.get("tag");
 
-  var tagDefault = "All";
+  var tagDefault = "";
   var textDefault = "";
   var switchDefault = "tag";
   
   if ( queryTag !== null ) {
     tagDefault = queryTag;
   }
-
-  if ( queryText !== null ) {
+  else if ( queryText !== null ) {
     textDefault = queryText;
     tagDefault = "";
     switchDefault = "text"
+  }
+  else {
+    tagDefault = "All";
   }
 
   // Define React states for filtering
@@ -98,11 +100,13 @@ export default function Lbe( {useCategoriesList} ) {
 
   function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags} ) {
 
+  var doi = link_pub.slice(link_pub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
+
     return (
       <div className="block_lbe">
         <div className="header_lbe">
           <div className="header_lbe_title"><h3>{title}</h3></div>
-          <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(link_pub.slice(link_pub.indexOf("doi.org")+8))} /></div>
+          <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
         <p>{tags.map((tag,idx) => 
@@ -124,7 +128,7 @@ export default function Lbe( {useCategoriesList} ) {
 
             <h4>Publication</h4>
 
-            <p><em>{journal}</em> <strong>{pub_year}</strong>, DOI: <a href={link_pub} target="_blank">{link_pub.slice(link_pub.indexOf("doi.org")+8)}</a></p>
+            <p><em>{journal}</em> <strong>{pub_year}</strong>, DOI: <a href={link_pub} target="_blank">{doi}</a></p>
 
             <h4>Links to datasets</h4>
 
