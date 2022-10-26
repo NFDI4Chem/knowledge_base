@@ -187,7 +187,6 @@
         "journal": "Dalton Transactions",
         "pub_year": "2021",
         "link_pub": "https://doi.org/10.1039/D1DT00832C",
-        "link_data": "",
         "link_comment": "curated by the publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF.",
         "link_data": [
@@ -228,8 +227,7 @@
                             "url": "https://doi.org/10.19061/iochem-bd-6-84"
                         }
                     ],
-        "link_comment": "curated by the publishing authors",
-        "link_pub": "(https://doi.org/10.1039/D1DT00832C",        "subdiscipline": "",
+        "subdiscipline": "",
         "tags": ["Synthesis","Inorganic Chemistry"]
     }
 ]
