@@ -151,8 +151,8 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><h5>Filter subdisciplines</h5><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p>
-      <h5>Filter journals</h5><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></>
+      <><h4>Filter subdisciplines</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p>
+      <h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></>
     )
   }
 
@@ -168,10 +168,10 @@ export default function Lbe( {useCategoriesList} ) {
 
   if (tagFilter == "All") {
     return(
-      <div className="lbe"><div className="block_filter">
+      <div className="lbe"><details className="details_lbe"><summary>Filters and Search</summary>
       <LbeButtons />
-      <h5>Type to search</h5><p><input value={searchFilter} onChange={handleChange} /></p></div>
-      <LbeRender list={lbeTable} /></div>
+      <h4>Type to search</h4><p><input value={searchFilter} onChange={handleChange} /></p></details>
+        <LbeRender list={lbeTable} /></div>
     )
   }
 
@@ -190,9 +190,9 @@ export default function Lbe( {useCategoriesList} ) {
   }
   
   return (
-    <div className="lbe"><div className="block_filter">
+    <div className="lbe"><details className="details_lbe"><summary>Filters and Search</summary>
     <LbeButtons />
-    Type to search: <input value={searchFilter} onChange={handleChange} /></div>
+    <h4>Type to search</h4><p><input value={searchFilter} onChange={handleChange} /></p></details>
     <LbeRender list={result} /></div>
   )
 }
