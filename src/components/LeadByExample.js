@@ -12,10 +12,14 @@ function MultiUrl( {name,url} ) {
 
 export default function Lbe( {useCategoriesList} ) {
 
-  const [filterSets, setFilterSets] = useState("All");
+  const [tagFilter, setTagFilter] = useState("All");
+  const [journalFilter, setJournalFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
+  const [filterSwitch, setFilterSwitch] = useState("tag");
 
-  const handleChange = e => {setSearchFilter(e.target.value); setFilterSets("")};
+  console.log(tagFilter,journalFilter,searchFilter,filterSwitch);
+
+  const handleChange = e => {setSearchFilter(e.target.value); setTagFilter(""); setJournalFilter(""); setFilterSwitch("text")};
 
   if ( useCategoriesList == "true" ) {
     var categories = require('@site/static/assets/lbe_categories.json');
@@ -26,42 +30,46 @@ export default function Lbe( {useCategoriesList} ) {
     categories.unshift("All");  
   }
 
-  function FilterButton( { name } ) {
+  var journalsSet = new Set(lbeTable.map(obj => obj.journal));
+  var journals = Array.from(journalsSet).sort();
+
+  function TagButton( { name } ) {
 
       var buttonClass = "lbe_tag";
 
-      if (name == filterSets) {
+      if (name == tagFilter) {
         buttonClass = "lbe_tag lbe_tag_active";
       }
   
       return (
           <button 
               className={buttonClass}
-              onClick={() => {setFilterSets(name); setSearchFilter("")}} 
+              onClick={() => {setTagFilter(name); setJournalFilter(""); setSearchFilter(""); setFilterSwitch("tag")}} 
           >
               {name}
           </button>
       )
   }
 
-  function Lbeblock( {title, authors, link_pub, link_data, link_comment, description, tags} ) {
+  function JournalButton( { name } ) {
 
-    function FilterButton( { name } ) {
-      var buttonClass = "lbe_tag";
+    var buttonClass = "lbe_tag";
 
-      if (name == filterSets) {
-        buttonClass = "lbe_tag lbe_tag_active";
-      }
-  
-      return (
-          <button 
-              className={buttonClass}
-              onClick={() => {setFilterSets(name); setSearchFilter("")}}
-          >
-              {name}
-          </button>
-      )
+    if (name == journalFilter) {
+      buttonClass = "lbe_tag lbe_tag_active";
     }
+
+    return (
+        <button 
+            className={buttonClass}
+            onClick={() => {setJournalFilter(name); setTagFilter(""); setSearchFilter(""); setFilterSwitch("journal")}} 
+        >
+            {name}
+        </button>
+    )
+  }
+
+  function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags} ) {
 
     return (
       <div className="col col--12"><div className="block_lbe">
@@ -69,7 +77,7 @@ export default function Lbe( {useCategoriesList} ) {
         <h3>{title}</h3>
 
         <p>{tags.map((tag,idx) => 
-          <FilterButton key={idx} name={tag} />
+          <TagButton key={idx} name={tag} />
         )}</p>
 
         <details className="details_lbe">
@@ -85,26 +93,31 @@ export default function Lbe( {useCategoriesList} ) {
 
             <p>{description}</p>
 
-            <h4>Links</h4>
+            <h4>Publication</h4>
 
-            <ul>
-              <li><a href={link_pub} target="_blank">Link to publication</a></li>
-              <li>Link(s) to datasets:<br />{
-                link_data.map((props, idx) => (
-                  <MultiUrl key={idx} {...props} />
-                ))} <br /><em>{link_comment}</em></li>
-            </ul>
+            <p><em>{journal}</em> <strong>{pub_year}</strong>, DOI: <a href={link_pub} target="_blank">{link_pub.slice(link_pub.indexOf("doi.org")+8)}</a></p>
+
+            <h4>Links to datasets</h4>
+
+            <p>
+              {link_data.map((props, idx) => (
+                <MultiUrl key={idx} {...props} />
+              ))}
+            </p>
+            <p><em>{link_comment}</em></p>
+
           </div>        
         </details>
       </div></div>
-
     );
   }
 
   function LbeRender( { list } ) {
     return(
-      <div className="lbe"><div className="block_filter">Click to filter: {categories.map((props) => <FilterButton name={props} />)}<br />
-      Type to search: <input value={searchFilter} onChange={handleChange} /></div>
+      <div className="lbe"><div className="block_filter">
+        Click to filter subdisciplines: {categories.map((props) => <TagButton name={props} />)}<br />
+        Click to filter journals: {journals.map((props) => <JournalButton name={props} />)}<br />
+        Type to search: <input value={searchFilter} onChange={handleChange} /></div>
       <div className="row">
         {list.map((props, idx) => (
           <Lbeblock key={idx} {...props} />
@@ -114,7 +127,7 @@ export default function Lbe( {useCategoriesList} ) {
   }
 
 
-  if (filterSets == "All") {
+  if (tagFilter == "All") {
     return(
       <LbeRender list={lbeTable} />
     )
@@ -122,13 +135,20 @@ export default function Lbe( {useCategoriesList} ) {
 
   var result = [];
 
-  if (searchFilter == "") {
-    result = lbeTable.filter(n => n.tags.includes(filterSets));
-  }
-  else {
-    result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));
+  switch ( filterSwitch ) {
+    case "tag":
+      result = lbeTable.filter(n => n.tags.includes(tagFilter));
+      break;
+    case "journal":
+      result = lbeTable.filter(n => n.journal.includes(journalFilter));
+      break;
+    case "text":
+      result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));
+    break;
   }
 
+  console.log(result);
+  
   return (
     <LbeRender list={result} />
   )
