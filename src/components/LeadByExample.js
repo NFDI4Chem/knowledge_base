@@ -99,11 +99,10 @@ export default function Lbe( {useCategoriesList} ) {
   function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags} ) {
 
     return (
-      <div className="col col--12"><div className="block_lbe">
-
-        <div className="row">
-          <div className="col col--10"><h3>{title}</h3></div>
-          <div className="col col--2"><MultiUrl name="Permalink" url={"./?text=".concat(link_pub.slice(link_pub.indexOf("doi.org")+8))} /></div>
+      <div className="block_lbe">
+        <div className="header_lbe">
+          <div className="header_lbe_title"><h3>{title}</h3></div>
+          <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(link_pub.slice(link_pub.indexOf("doi.org")+8))} /></div>
         </div>
 
         <p>{tags.map((tag,idx) => 
@@ -138,7 +137,7 @@ export default function Lbe( {useCategoriesList} ) {
 
           </div>        
         </details>
-      </div></div>
+      </div>
     );
   }
 
@@ -155,11 +154,11 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeRender( { list } ) {
     return(
-      <div className="row">
+      <>
         {list.map((props, idx) => (
           <Lbeblock key={idx} {...props} />
         ))}
-      </div>
+      </>
     )
   }
 

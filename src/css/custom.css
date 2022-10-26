@@ -620,6 +620,35 @@ table thead tr {
   transition: all var(--n4c-transform-time) ease-in-out;
 }
 
+.header_lbe {
+  display: flex;
+  align-items: center;
+}
+
+.header_lbe_title {
+  width: 85%;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.header_lbe_link {
+  width: 15%;
+  display: flex;
+  justify-content: right;
+}
+
+@media screen and (max-width: 966px) { .header_lbe {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+  .header_lbe_title, .header_lbe_link {
+    width: 100%;
+    justify-content: left;
+  }
+}
+
 .details_lbe {
   display: flex; 
   overflow: hidden;
