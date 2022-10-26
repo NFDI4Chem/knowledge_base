@@ -107,7 +107,7 @@
                     ],
         "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and CD data. NMR data was previously published in NMRShiftDB2 and are provided in Bruker format together with NMReDATA. MS data were converted in several different formats including mzML. UV/VIS data are available in JCAMP-DX format. The structure information on carminic acid and further supplementary information are provided in tabular files and as SDfile. The corresponding article does not reference to the dataset.",
-        "tags": ["Synthesis","Heterocycles","Microscopy"]
+        "tags": ["Synthesis","Heterocycles"]
     },
     {
         "title": "In-situ study of the impact of temperature and architecture on the interfacial structure of microgels",
