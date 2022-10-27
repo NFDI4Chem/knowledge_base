@@ -600,12 +600,40 @@ table thead tr {
   display: flex;
 }
 
+.block_filter-row {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .block_lbe {
   padding: 10px;
   box-shadow: 2px 2px 8px #eee;
   border: 1px solid var(--n4c-navbar-border);
   margin: 15px 0px;
   transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.filter_methods {
+  width: calc(8/12*100%);
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.search_methods {
+  width: calc(4/12*100%);
+  padding: 0var(--ifm-spacing-horizontal);
+}
+
+
+@media screen and (max-width: 1350px) {
+  .filter_methods {
+    width: unset;
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
+  
+  .search_methods {
+    width: unset;
+    padding: var(--ifm-spacing-horizontal);
+  }
 }
 
 .block_lbe:hover {

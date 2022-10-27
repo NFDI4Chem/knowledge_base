@@ -40,8 +40,8 @@ export default function Methods( {defaultProfile} ) {
     }
 
     return (
-        <><div className="block_filter"><div className="row"><div className="col col--8">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
-        <div className="search_lbe col col--4"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
+        <><div className="block_filter"><div className="row block_filter-row"><div className="filter_methods">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <div className="col search_methods"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
         <div><MethodsTable methods_to_show={resultSet} /></div></>    
     )
 }
