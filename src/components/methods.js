@@ -35,13 +35,13 @@ export default function Methods( {defaultProfile} ) {
         resultSet = result.map(n => n.methods)[0];                              // create list of methods from profile for table rendering
     }
     else {
-        result = table.filter(obj => Object.keys(obj).some(key => obj[key].toLowerCase().includes(searchFilter.toLowerCase())));
+        result = table.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));       // JSON.stringify squashes table entry object for string search
         resultSet = result.map(m => m.shortname);
     }
 
     return (
-        <><div className="block_filter">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}<br />
-        Type to search: <input value={searchFilter} onChange={handleChange} /></div>
+        <><div className="block_filter"><div className="row"><div className="col col--8">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <div className="search_lbe col col--4"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
         <div><MethodsTable methods_to_show={resultSet} /></div></>    
     )
 }

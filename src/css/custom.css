@@ -595,6 +595,7 @@ table thead tr {
   padding: 10px;
   margin: 15px 0px;
   border: 1px dashed var(--ifm-color-primary);
+  display: flex;
 }
 
 .block_lbe {
