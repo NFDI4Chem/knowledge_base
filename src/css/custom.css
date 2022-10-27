@@ -67,6 +67,8 @@
   --ifm-table-head-color: white;
 
   --ifm-hero-text-color: white;
+
+  --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
   
 
   --ifm-button-border-radius: 0;
@@ -657,6 +659,19 @@ table thead tr {
   transition: all var(--n4c-transform-time) ease-in-out;
 }
 
+.searchfilter_lbe {
+  display: flex;
+}
+
+.searchfilter_lbe input:focus {
+  width: calc(5/12*100%);
+  transition: all --n4c-transform-time ease-in-out;
+}
+
+.search_lbe {
+  padding-top: 1rem;
+}
+
 .details_lbe h4 {
   color: var(--ifm-color-primary);
   padding-top: 15px;
@@ -689,8 +704,6 @@ table thead tr {
 .lbe_button a:hover {
   text-decoration: none;
 }
-
-
 
 .lbe_tag {
   border-radius: var(--ifm-breadcrumb-border-radius);
