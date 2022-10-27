@@ -173,7 +173,7 @@ export default function Lbe( {useCategoriesList} ) {
       <div className="lbe">
         <details className="details_lbe searchfilter_lbe">
           <summary>Filters and Search</summary>
-          <div className="row"><div className="search_lbe col"><input className="navbar__search-input" value={searchFilter} onChange={handleChange} /></div></div>
+          <div className="row"><div className="search_lbe col"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div>
           <div className="row"><LbeButtons /></div>
         </details>
         <LbeRender list={lbeTable} />
@@ -201,7 +201,7 @@ export default function Lbe( {useCategoriesList} ) {
     <div className="lbe">
       <details className="details_lbe searchfilter_lbe">
         <summary>Filters and Search</summary>
-        <div className="row"><div className="search_lbe col"><input className="navbar__search-input" value={searchFilter} onChange={handleChange} /></div></div>
+        <div className="row"><div className="search_lbe col"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div>
         <div className="row"><LbeButtons /></div>
       </details>
       <LbeRender list={result} />
