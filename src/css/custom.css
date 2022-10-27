@@ -655,7 +655,6 @@ table thead tr {
 
 .searchfilter_lbe input:focus {
   width: calc(5/12*100%);
-  transition: all --n4c-transform-time ease-in-out;
 }
 
 .search_lbe {
