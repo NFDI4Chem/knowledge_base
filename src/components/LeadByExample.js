@@ -149,8 +149,8 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><h4>Filter subdisciplines</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p>
-      <h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></>
+      <><div className="filter_lbe col col--5"><h4>Filter subdisciplines</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div>
+      <div className="filter_lbe col col--7"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div></>
     )
   }
 
@@ -170,10 +170,14 @@ export default function Lbe( {useCategoriesList} ) {
 
   if (tagFilter == "All") {
     return(
-      <div className="lbe"><details className="details_lbe"><summary>Filters and Search</summary>
-      <LbeButtons />
-      <h4>Type to search</h4><p><input value={searchFilter} onChange={handleChange} /></p></details>
-        <LbeRender list={lbeTable} /></div>
+      <div className="lbe">
+        <details className="details_lbe searchfilter_lbe">
+          <summary>Filters and Search</summary>
+          <div className="row"><div className="search_lbe col"><input className="navbar__search-input" value={searchFilter} onChange={handleChange} /></div></div>
+          <div className="row"><LbeButtons /></div>
+        </details>
+        <LbeRender list={lbeTable} />
+      </div>
     )
   }
 
@@ -194,10 +198,14 @@ export default function Lbe( {useCategoriesList} ) {
   }
   
   return (
-    <div className="lbe"><details className="details_lbe"><summary>Filters and Search</summary>
-    <LbeButtons />
-    <h4>Type to search</h4><p><input value={searchFilter} onChange={handleChange} /></p></details>
-    <LbeRender list={result} /></div>
+    <div className="lbe">
+      <details className="details_lbe searchfilter_lbe">
+        <summary>Filters and Search</summary>
+        <div className="row"><div className="search_lbe col"><input className="navbar__search-input" value={searchFilter} onChange={handleChange} /></div></div>
+        <div className="row"><LbeButtons /></div>
+      </details>
+      <LbeRender list={result} />
+    </div>
   )
 }
 
