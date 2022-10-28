@@ -653,6 +653,7 @@ table thead tr {
 .block_lbe-search{
   padding: 0.75rem;
   border: 1px dashed var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
 }
 
 .filter_lbe p {
