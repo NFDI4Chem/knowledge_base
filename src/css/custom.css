@@ -623,6 +623,11 @@ table thead tr {
   transition: all var(--n4c-transform-time) ease-in-out;
 }
 
+.block_lbe:hover {
+  transform: scale(101%);
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
 .filter_methods {
   width: calc(8/12*100%);
   padding: 0 var(--ifm-spacing-horizontal);
@@ -644,11 +649,6 @@ table thead tr {
     width: unset;
     padding: var(--ifm-spacing-horizontal);
   }
-}
-
-.block_lbe:hover {
-  transform: scale(var(--n4c-hover-scale));
-  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .header_lbe {
