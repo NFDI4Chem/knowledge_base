@@ -600,8 +600,35 @@ table thead tr {
 /* Lead by Example */
 
 .lbe {
-  max-width: 950px;
+  display: flex;
+  flex-direction: row-reverse;
 }
+
+.col-searchfilter {
+  padding-left: 0.5rem;
+  width: 35%;
+}
+
+.body_lbe {
+  padding-right: 0.5rem;
+  width: 65%;
+}
+
+@media screen and (max-width: 1200px) {
+.lbe {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-searchfilter {
+  padding: 0;
+  width: 100%;
+}
+
+.body_lbe {
+  padding: 0;
+  width: 100%;
+}}
 
 .block_filter {
   padding: 10px;
@@ -619,7 +646,7 @@ table thead tr {
   padding: 10px;
   /* box-shadow: 2px 2px 8px #eee; */
   border: 1px dashed var(--ifm-color-primary);
-  margin: 15px 0px;
+  margin-bottom: 15px;
   transition: all var(--n4c-transform-time) ease-in-out;
 }
 
@@ -684,12 +711,8 @@ table thead tr {
   display: flex; 
   overflow: hidden;
   border: 1px solid var(--ifm-color-primary);
-  padding: 15px;
+  padding: 1rem;
   transition: all var(--n4c-transform-time) ease-in-out;
-}
-
-.searchfilter_lbe {
-  display: flex;
 }
 
 .searchfilter_lbe input:focus {
@@ -697,7 +720,7 @@ table thead tr {
 }
 
 .search_lbe {
-  padding-top: 1rem;
+  padding: .5rem 0;
 }
 
 .details_lbe h4 {
