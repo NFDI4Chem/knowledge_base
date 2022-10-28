@@ -642,12 +642,25 @@ table thead tr {
   flex-wrap: wrap;
 }
 
-.block_lbe, .block_lbe-search {
-  padding: 10px;
+.block_lbe  {
+  padding: 0.75rem;
   /* box-shadow: 2px 2px 8px #eee; */
   border: 1px dashed var(--ifm-color-primary);
-  margin-bottom: 15px;
+  margin-bottom: 0.75rem;
   transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.block_lbe-search{
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-primary);
+}
+
+.filter_lbe p {
+  margin: unset;
+}
+
+.filter_lbe h4 {
+  margin: 0.5rem 0;
 }
 
 .block_lbe:hover {
