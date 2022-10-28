@@ -642,7 +642,7 @@ table thead tr {
   flex-wrap: wrap;
 }
 
-.block_lbe {
+.block_lbe, .block_lbe-search {
   padding: 10px;
   /* box-shadow: 2px 2px 8px #eee; */
   border: 1px dashed var(--ifm-color-primary);
