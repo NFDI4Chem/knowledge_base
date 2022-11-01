@@ -54,43 +54,31 @@
   --ifm-link-hover-color: var(--ifm-link-color);
   --ifm-link-hover-decoration: underline;
   --ifm-footer-link-hover-color: var(--ifm-color-danger);
-
   --ifm-table-border-width: 0;
   --ifm-table-head-background: var(--ifm-color-primary);
   --ifm-table-head-color: white;
-
   --ifm-hero-text-color: white;
-
   --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
-  
-
   --ifm-button-border-radius: 0;
-
   --ifm-navbar-height: 5rem;
   --ifm-navbar-shadow: transparent;
   --n4c-navbar-border: #e0e0e0;
-
   --ifm-alert-border-left-width: 1pt;
   --ifm-alert-border-width: 1pt;
   --ifm-alert-border-radius: 0;
   --ifm-alert-shadow: transparent;
-
   --n4c-col-width: 250px;
-
   --n4c-button-width: 220px;
   --n4c-button-height: 240px;
-
   --n4c-button-secondary-width: 300px;
-
   --n4c-button-vpad: 10px;
   --n4c-button-hpad: 5px;
-    
   --n4c-hover-scale: 105%;
   --n4c-transform-time: 175ms;
-
   --lbe-transform-time: 2s;
-
   --ifm-font-size-base: 110%;
+  --ifm-container-width: 80%;
+  --ifm-container-width-xl: 80%;
 }
 
 .navbar__logo img {
