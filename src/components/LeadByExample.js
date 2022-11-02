@@ -78,7 +78,7 @@ export default function Lbe( {useCategoriesList} ) {
     // Styling of active button
 
     if (name == tagFilter) {  
-      buttonClass = "lbe_tag lbe_tag_secondary lbe_tag_active";
+      buttonClass = "lbe_tag lbe_tag_active";
     }
 
     // Show number of items

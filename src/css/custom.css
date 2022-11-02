@@ -782,14 +782,14 @@ table thead tr {
   background: var(--ifm-color-primary);
 }
 
-.lbe_tag_secondary {
+.lbe_tag.lbe_tag_secondary {
   background: var(--ifm-breadcrumb-item-background-active);
   color: var(--ifm-color-primary);
 }
 
-.lbe_tag_active {
-  background: var(--ifm-color-danger) !important;
-  color: white !important;
+.lbe_tag.lbe_tag_active {
+  background: var(--ifm-color-danger);
+  color: white;
 }
 
 /* .lbe_tag {
