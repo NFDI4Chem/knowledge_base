@@ -38,7 +38,7 @@ export default function Lbe( {useCategoriesList} ) {
   else {
     tagDefault = "All";
     subdDefault = "All";
-    journalDefault = "All"
+    journalDefault = "All";
   }
 
   // Define React states for filtering

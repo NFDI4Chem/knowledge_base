@@ -788,8 +788,8 @@ table thead tr {
 }
 
 .lbe_tag_active {
-  background: var(--ifm-color-danger);
-  color: white;
+  background: var(--ifm-color-danger) !important;
+  color: white !important;
 }
 
 /* .lbe_tag {
