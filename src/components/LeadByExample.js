@@ -231,7 +231,7 @@ export default function Lbe( {useCategoriesList} ) {
     return(
       <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
       <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter Keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
+      <div className="filter_lbe"><h4>Filter keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
     )
   }
 
@@ -280,22 +280,22 @@ export default function Lbe( {useCategoriesList} ) {
       result = lbeTable.filter(n => n.journal.includes(journalFilter));
       break;
     case "text":
-      result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));
-    break;
+      result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));   // Squash object with JSON.stringify() for better searchability
+      break;
   }
   
   return (
     <div className="lbe">
-    <div className="col-searchfilter">
-      <div className="block_lbe-search">
-          <div className="search_lbe">
-            <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
-          </div>
-          <LbeButtons />
+      <div className="col-searchfilter">
+        <div className="block_lbe-search">
+            <div className="search_lbe">
+              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
+            </div>
+            <LbeButtons />
+        </div>
       </div>
+      <div className="body_lbe"><LbeRender list={result} /></div> 
     </div>
-    <div className="body_lbe"><LbeRender list={result} /></div> 
-  </div>
-)
+  )
 }
 
