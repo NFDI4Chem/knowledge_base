@@ -19,10 +19,13 @@ export default function Lbe( {useCategoriesList} ) {
   const queryParameters = new URLSearchParams(location.search);
   const queryText = queryParameters.get("text");
   const queryTag = queryParameters.get("tag");
+  const querySubd = queryParameters.get("subdisc");
 
   var tagDefault = "";
+  var subdDefault = "";
+  var journalDefault = "";
   var textDefault = "";
-  var switchDefault = "tag";
+  var switchDefault = "subd";
   
   if ( queryTag !== null ) {
     tagDefault = queryTag;
@@ -34,18 +37,26 @@ export default function Lbe( {useCategoriesList} ) {
   }
   else {
     tagDefault = "All";
+    subdDefault = "All";
+    journalDefault = "All"
   }
 
   // Define React states for filtering
 
   const [tagFilter, setTagFilter] = useState(tagDefault);
-  const [journalFilter, setJournalFilter] = useState("");
+  const [subdFilter, setSubdFilter] = useState(subdDefault);
+  const [journalFilter, setJournalFilter] = useState(journalDefault);
   const [searchFilter, setSearchFilter] = useState(textDefault);
   const [filterSwitch, setFilterSwitch] = useState(switchDefault);
 
   // Handles text input
 
-  const handleChange = e => {setSearchFilter(e.target.value); setTagFilter(""); setJournalFilter(""); setFilterSwitch("text")};
+  const handleChange = e => {setSearchFilter(e.target.value); setSubdFilter(""); setTagFilter(""); setJournalFilter(""); setFilterSwitch("text")};
+
+  // Get list of subdisciplines
+
+  var subdiscs = Array.from(new Set(lbeTable.map(obj => obj.subdiscipline).flat())).sort();
+  subdiscs.unshift("All"); // Add "All" option at the beginning
 
   // Get list of tags
 
@@ -55,50 +66,119 @@ export default function Lbe( {useCategoriesList} ) {
   // Get list of journals
   
   var journals = Array.from(new Set(lbeTable.map(obj => obj.journal))).sort();
+  journals.unshift("All"); // Add "All" option at the beginning
 
   // Function for Tag filter buttons
 
   function TagButton( { name } ) {
 
-      var buttonClass = "lbe_tag";
+    var buttonClass = "lbe_tag";
+    var number = 0;
 
-      if (name == tagFilter) {
-        buttonClass = "lbe_tag lbe_tag_active";
-      }
-  
-      return (
-          <button 
-              className={buttonClass}
-              onClick={() => {setTagFilter(name); setJournalFilter(""); setSearchFilter(""); setFilterSwitch("tag")}} 
+    // Styling of active button
+
+    if (name == tagFilter) {  
+      buttonClass = "lbe_tag lbe_tag_active";
+    }
+
+    // Show number of items
+
+    if (name == "All") {
+      number = lbeTable.length;
+    } else {
+      number = lbeTable.filter(m => m.tags.includes(name)).length;
+    }
+
+    return (
+        <button 
+            className={buttonClass}
+            onClick={() => {
+              if (name == "All") {
+                setJournalFilter("All"); setSubdFilter("All"); setTagFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
+              else {
+                setJournalFilter(""); setSubdFilter(""); setTagFilter(name); setSearchFilter(""); setFilterSwitch("tag")
+              }
+            }}
           >
-              {name}
-          </button>
-      )
+            {name} ({number})
+        </button>
+    )
   }
+
+  function SubdButton( { name } ) {
+
+    var buttonClass = "lbe_tag lbe_tag_secondary";
+    var number = 0;
+
+    // Styling of active button
+
+    if (name == subdFilter) {
+      buttonClass = "lbe_tag lbe_tag_secondary lbe_tag_active";
+    }
+
+    // Show number of items
+
+    if (name == "All") {
+      number = lbeTable.length;
+    } else {
+      number = lbeTable.filter(m => m.subdiscipline.includes(name)).length;
+    }
+
+    return (
+        <button 
+            className={buttonClass}
+            onClick={() => {
+              if (name == "All") {
+                setJournalFilter("All"); setSubdFilter("All"); setTagFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
+              else {
+                setJournalFilter(""); setSubdFilter(name); setTagFilter(""); setSearchFilter(""); setFilterSwitch("subd")
+              }
+            }} 
+        >
+            {name} ({number})
+        </button>
+    )
+}
 
   // Function for Journal filter buttons
 
   function JournalButton( { name } ) {
 
     var buttonClass = "lbe_tag";
+    var number = 0;
 
     if (name == journalFilter) {
       buttonClass = "lbe_tag lbe_tag_active";
     }
 
+    if (name == "All") {
+      number = lbeTable.length;
+    } else {
+      number = lbeTable.filter(m => m.journal.includes(name)).length;
+    }
+
+
+    // Show number of items
+
+
     return (
         <button 
             className={buttonClass}
-            onClick={() => {setJournalFilter(name); setTagFilter(""); setSearchFilter(""); setFilterSwitch("journal")}} 
-        >
-            {name}
+            onClick={() => {
+              if (name == "All") {
+                setJournalFilter("All"); setSubdFilter("All"); setTagFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
+              else {
+                setJournalFilter(name); setSubdFilter(""); setTagFilter(""); setSearchFilter(""); setFilterSwitch("journal")
+              }}
+            }>
+            {name} ({number})
         </button>
     )
   }
 
   // Function for single lbe dataset block
 
-  function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags} ) {
+  function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags, subdiscipline } ) {
 
   var doi = link_pub.slice(link_pub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
 
@@ -109,7 +189,9 @@ export default function Lbe( {useCategoriesList} ) {
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
-        <p>{tags.map((tag,idx) => 
+        <p>{subdiscipline.map((tag,idx) => 
+          <SubdButton key={idx} name={tag} />
+        )}{tags.map((tag,idx) => 
           <TagButton key={idx} name={tag} />
         )}</p>
 
@@ -149,8 +231,9 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div></>
+      <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
+      <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
+      <div className="filter_lbe"><h4>Filter Keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
     )
   }
 
@@ -168,7 +251,7 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Render all datasets if "All" is selected
 
-  if (tagFilter == "All") {
+  if (tagFilter == "All" || subdFilter == "All") {
     return(
       <div className="lbe">
         <div className="col-searchfilter">
@@ -191,6 +274,9 @@ export default function Lbe( {useCategoriesList} ) {
   switch ( filterSwitch ) {
     case "tag":
       result = lbeTable.filter(n => n.tags.includes(tagFilter));
+      break;
+    case "subd":
+      result = lbeTable.filter(n => n.subdiscipline.includes(subdFilter));
       break;
     case "journal":
       result = lbeTable.filter(n => n.journal.includes(journalFilter));

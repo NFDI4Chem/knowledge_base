@@ -782,6 +782,10 @@ table thead tr {
   background: var(--ifm-color-primary);
 }
 
+.lbe_tag_secondary {
+  background: var(--ifm-color-secondary);
+}
+
 .lbe_tag_active {
   background: var(--ifm-color-danger);
 }
