@@ -72,13 +72,13 @@ export default function Lbe( {useCategoriesList} ) {
 
   function TagButton( { name } ) {
 
-    var buttonClass = "lbe_tag";
+    var buttonClass = "lbe_tag lbe_tag_secondary";
     var number = 0;
 
     // Styling of active button
 
     if (name == tagFilter) {  
-      buttonClass = "lbe_tag lbe_tag_active";
+      buttonClass = "lbe_tag lbe_tag_secondary lbe_tag_active";
     }
 
     // Show number of items
@@ -107,13 +107,13 @@ export default function Lbe( {useCategoriesList} ) {
 
   function SubdButton( { name } ) {
 
-    var buttonClass = "lbe_tag lbe_tag_secondary";
+    var buttonClass = "lbe_tag";
     var number = 0;
 
     // Styling of active button
 
     if (name == subdFilter) {
-      buttonClass = "lbe_tag lbe_tag_secondary lbe_tag_active";
+      buttonClass = "lbe_tag lbe_tag_active";
     }
 
     // Show number of items
@@ -151,15 +151,13 @@ export default function Lbe( {useCategoriesList} ) {
       buttonClass = "lbe_tag lbe_tag_active";
     }
 
+    // Show number of items
+
     if (name == "All") {
       number = lbeTable.length;
     } else {
       number = lbeTable.filter(m => m.journal.includes(name)).length;
     }
-
-
-    // Show number of items
-
 
     return (
         <button 
