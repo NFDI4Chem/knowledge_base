@@ -664,10 +664,10 @@ table thead tr {
   margin: 0.5rem 0;
 }
 
-.block_lbe:hover {
+/* .block_lbe:hover {
   transform: scale(101%);
   transition: all var(--n4c-transform-time) ease-in-out;
-}
+} */
 
 .filter_methods {
   width: calc(8/12*100%);

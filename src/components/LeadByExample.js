@@ -253,11 +253,11 @@ export default function Lbe( {useCategoriesList} ) {
     return(
       <div className="lbe">
         <div className="col-searchfilter">
-        <div className="block_lbe-search">
-              <div className="search_lbe">
-                <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
-              </div>
-              <LbeButtons />
+          <div className="block_lbe-search">
+            <div className="search_lbe">
+              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
+            </div>
+            <LbeButtons />
           </div>
         </div>
         <div className="body_lbe"><LbeRender list={lbeTable} /></div> 
