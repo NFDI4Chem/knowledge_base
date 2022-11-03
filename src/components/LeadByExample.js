@@ -184,11 +184,6 @@ export default function Lbe( {useCategoriesList} ) {
       <div className="block_lbe">
         <div className="header_lbe">
           <div className="header_lbe_title"><h3>{title}</h3></div>
-          
-          <p><em>{authors}</em></p>
-
-<p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
-
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
@@ -234,15 +229,9 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><div className="filter_lbe"><h4>Filter by subdisciplines</h4>
-        <p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p>
-      </div>
-      <div className="filter_lbe"><h4>Filter by journals</h4>
-        <p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p>
-      </div>
-      <div className="filter_lbe"><h4>Filter by keywords</h4>
-        <p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p>
-      </div></>
+      <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
+      <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
+      <div className="filter_lbe"><h4>Filter keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
     )
   }
 
@@ -264,11 +253,11 @@ export default function Lbe( {useCategoriesList} ) {
     return(
       <div className="lbe">
         <div className="col-searchfilter">
-        <div className="block_lbe-search">
-              <div className="search_lbe">
-                <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
-              </div>
-              <LbeButtons />
+          <div className="block_lbe-search">
+            <div className="search_lbe">
+              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
+            </div>
+            <LbeButtons />
           </div>
         </div>
         <div className="body_lbe"><LbeRender list={lbeTable} /></div> 
@@ -309,3 +298,4 @@ export default function Lbe( {useCategoriesList} ) {
     </div>
   )
 }
+
