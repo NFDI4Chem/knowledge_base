@@ -3,10 +3,10 @@
         "title": "Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder",
         "authors": "Nils Keltsch, Viola Munzert, Klaus-Peter Zeller, Hans-Ullrich Siehl, Stefan Berger, Dieter Sicker",
         "journal": "Chemie in unserer Zeit",
-        "pub_year": "2019",
-        "link_pub": "https://doi.org/10.1002/ciuz.201900868",
-        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/786"}],
-        "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "pubyear": "2019",
+        "linkpub": "https://doi.org/10.1002/ciuz.201900868",
+        "linkdata": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/786"}],
+        "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and IR data. NMR data are provided in Bruker format, as JCAMP-DX (MNova) and NMRium format including NMReDATA (SDfile). MS data are also available in open format mzML. IR and UV/VIS data are accessible in tabular files and in JCAMP-DX format. The structure information on Linderazulene and further supplementary information are provided as tables and SDfile. The corresponding article does not reference to the dataset.",
         "subdiscipline": ["Organic Chemistry","Analytical Chemistry"],
         "tags": ["Natural Products","ChiuZ"]
@@ -15,10 +15,10 @@
         "title": "Die Polei-Minze im Wandel der Zeiten",
         "authors": "Agneta Prasse, Viola Munzert, Elena José, Klaus-Peter Zeller, Hans-Ullrich Siehl, Stefan Berger, Dieter Sicker",
         "journal": "Chemie in unserer Zeit",
-        "pub_year": "2019",
-        "link_pub": "https://doi.org/10.1002/ciuz.201800860",
-        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/785"}],
-        "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "pubyear": "2019",
+        "linkpub": "https://doi.org/10.1002/ciuz.201800860",
+        "linkdata": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/785"}],
+        "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR4Chem, contains NMR, MS and UV/VIS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX for NMR and UV/VIS data and mzML for MS data. Analytical data of CD spectroscopy and MS spectrometry were exported as tabular files and are also provided as CSV files. The structure information on (R)-+-Pulegon and supplementary information are provided as in tabular files and as SDfile format. The corresponding article does not reference to the dataset.",
         "subdiscipline": ["Organic Chemistry","Analytical Chemistry"],
         "tags": ["Natural Products","ChiuZ"]
@@ -27,10 +27,10 @@
         "title": "Karminsäure - Das Rot aus Cochenilleläusen",
         "authors": "Franziska Schulze, Juliane Titus, Peter Mettke, Stefan Berger, Hans-Ullrich Siehl, Klaus-Peter Zeller, Dieter Sicker",
         "journal": "Chemie in unserer Zeit",
-        "pub_year": "2013",
-        "link_pub": "https://doi.org/10.1002/ciuz.201300634",
-        "link_data": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/795"}],
-        "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "pubyear": "2013",
+        "linkpub": "https://doi.org/10.1002/ciuz.201300634",
+        "linkdata": [{"name": "RADAR4Chem", "url": "https://doi.org/10.22000/795"}],
+        "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and CD data. NMR data was previously published in NMRShiftDB2 and are provided in Bruker format together with NMReDATA. MS data were converted in several different formats including mzML. UV/VIS data are available in JCAMP-DX format. The structure information on carminic acid and further supplementary information are provided in tabular files and as SDfile. The corresponding article does not reference to the dataset.",
         "subdiscipline": ["Organic Chemistry","Analytical Chemistry"],
         "tags": ["Natural Products","ChiuZ"]
@@ -39,10 +39,10 @@
         "title": "Resolving the different bulk moduli within individual soft nanogels using small-angle neutron scattering",
         "authors": "Judith Elizabeth Houston, Lisa Fruhner, Alexis de la Cotte, Javier Rojo González, Alexander Valerievich Petrunin, Urs Gasser, Ralf Schweins, Jürgen Allgaier, Walter Richtering, Alberto Fernandez-Nieves, Andrea Scotti",
         "journal": "Science Advances",
-        "pub_year": "2022",
-        "link_pub": "https://doi.org/10.1126/sciadv.abn6129",
-        "link_data": [{"name":"RADAR4Chem","url":"https://dx.doi.org/10.22000/604"}],
-        "link_comment": "curated by publishing authors",
+        "pubyear": "2022",
+        "linkpub": "https://doi.org/10.1126/sciadv.abn6129",
+        "linkdata": [{"name":"RADAR4Chem","url":"https://dx.doi.org/10.22000/604"}],
+        "linkcomment": "curated by publishing authors",
         "description": "The dataset includes SANS data. The link (not DOI) is inlcuded in the published article's data availability statement as well as a DOI to further SANS data (http://dx.doi.org/10.5291/ILL-DATA.9-11-2067). ",
         "subdiscipline": [],
         "tags": []
@@ -51,10 +51,10 @@
         "title": "Manipulating electron transfer – the influence of substituents on novel copper guanidine quinolinyl complexes",
         "authors": "Joshua Heck, Fabian Metz, Sören Buchenau, Melissa Teubner, Benjamin Grimm-Lebsanft, Thomas P. Spaniol, Alexander Hoffmann, Michael A. Rübhausen, Sonja Herres-Pawlis",
         "journal": "Chemical Science",
-        "pub_year": "2022",
-        "link_pub": "https://doi.org/10.1039/D2SC02910C",
-        "link_data": [],
-        "link_comment": "Curated by publishing authors",
+        "pubyear": "2022",
+        "linkpub": "https://doi.org/10.1039/D2SC02910C",
+        "linkdata": [],
+        "linkcomment": "Curated by publishing authors",
         "description": "The dataset includes reactions, sample data (ATR-FTIR, HR-ESI-TOF-MS,  1N/13C-NMR), and density functional theory (DFT) data.The publication contains a supplemental PDF and crystal structure data. The reactions and samples are deposited on Chemotion Repository and the DFT data on RADAR.",
         "subdiscipline": ["Inorganic Chemistry"],
         "tags": []
@@ -63,9 +63,9 @@
         "title": "In-situ study of the impact of temperature and architecture on the interfacial structure of microgels",
         "authors": "Steffen Bochenek, Fabrizio Camerin, Emanuela Zaccarelli, Armando Maestro, Maximilian M. Schmidt, Walter Richtering, Andrea Scotti",
         "journal": "Nature Communications",
-        "pub_year": "2022",
-        "link_pub": "https://dx.doi.org/10.1038/s41467-022-31209-3",
-        "link_data": [
+        "pubyear": "2022",
+        "linkpub": "https://dx.doi.org/10.1038/s41467-022-31209-3",
+        "linkdata": [
             {
                 "name": "RADAR",
                 "url": "https://dx.doi.org/10.22000/603"
@@ -79,7 +79,7 @@
                 "url": "https://dx.doi.org/10.5291/ILL-DATA.EASY-46292"
             }
         ],
-        "link_comment": "curated by the publishing authors",
+        "linkcomment": "curated by the publishing authors",
         "description": "The dataset  inludes raw, associated, and derived data supporting the reported results; methods: NR, DLS, AFM, SANS.RADAR DOI as well as ePIC for archived dataset (identical to published dataset) are given in the data availability statement. The RADAR DOI is also listed listed in the references. The NR raw data used in the study are available in the ILL Data Portal database.",
         "subdiscipline": [],
         "tags": ["Macromolecules"]
@@ -88,10 +88,10 @@
         "title": "A risk based assessment approach for chemical mixtures from wastewater treatment plant effluents",
         "authors": "Saskia Finckh, Liza-Marie Beckers, Wibke Busch, Eric Carmona, Valeria Dulio, Lena Kramer, Martin Krauss, Leo Posthuma, Tobias Schulze, Jaap Slootweg, Peter C. von der Ohe, Werner Brack",
         "journal": "Environment International",
-        "pub_year": "2022",
-        "link_pub": "https://doi.org/10.1016/j.envint.2022.107234",
-        "link_data": [{"name":"Pangaea","url":"https://doi.pangaea.de/10.1594/PANGAEA.940755"}],
-        "link_comment": "curated by the publishing authors",
+        "pubyear": "2022",
+        "linkpub": "https://doi.org/10.1016/j.envint.2022.107234",
+        "linkdata": [{"name":"Pangaea","url":"https://doi.pangaea.de/10.1594/PANGAEA.940755"}],
+        "linkcomment": "curated by the publishing authors",
         "description": "The dataset includes results data, raw mass spectral files, and processing data (MZmine, MZquant, Tracefinder). Pangaea is a repository for geospatial data and enviromental chemistry. The publication contains a supplemental [word document](https://ars.els-cdn.com/content/image/1-s2.0-S016041202200160X-mmc1.docx) and [spreadsheet](https://ars.els-cdn.com/content/image/1-s2.0-S016041202200160X-mmc2.xlsx).",
         "subdiscipline": [],
         "tags": ["Ecology"]
@@ -100,14 +100,14 @@
         "title": "Improving the screening analysis of pesticide metabolites in human biomonitoring by combining high-throughput in vitro incubation and automated LC−HRMS data processing",
         "authors": "Carolin Huber, Erik Müller, Tobias Schulze, Werner Brack, and Martin Krauss",
         "journal": "Analytical Chemistry",
-        "pub_year": "2021",
-        "link_pub": "https://doi.org/10.1021/acs.analchem.1c00972",
-        "link_data": [
+        "pubyear": "2021",
+        "linkpub": "https://doi.org/10.1021/acs.analchem.1c00972",
+        "linkdata": [
             {"name":"MetaboLights","url":"https://www.ebi.ac.uk/metabolights/MTBLS2402/descriptors"},
             {"name":"GitHub","url":"https://github.com/MassBank/MassBank-data/commit/691fe2429e33c883e56d5234277a6586a128cc5c"},
             {"name":"GitHub","url":"https://github.com/chufz/incubatoR"}
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The dataset, curated by the publishing authors, contain MS data is published in MetaboLight, Massbank and MassBank-data at GitHub. All raw mass spectra were converted to mzML format. The used code is available at GitHub and were referenced in corresponding article.",
         "subdiscipline": [],
         "tags": []
@@ -116,9 +116,9 @@
         "title": "Desymmetrization strategy to achieve triptycene-based 3,6-dimethoxytriphenylenes via oxidative cyclodehydrogenation",
         "authors": "Dennis Reinhard, Frank Rominger, Michael Mastalerz",
         "journal": "European Journal of Organic Chemistry",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.1002/ejoc.202001073",
-        "link_data": [
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.1002/ejoc.202001073",
+        "linkdata": [
             {
                 "name": "heiDATA",
                 "url": "https://doi.org/10.11588/data/OH6757"
@@ -128,7 +128,7 @@
                 "url": "https://doi.org/10.5517/ccdc.csd.cc25v89m"
             }
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The datasets, curated by the publishing authors, and published in heiData, contains data of NMR, MS, IR in the instrument manufacturers formats.The IR data is also available in TSV format. Elemental analysis data is provided as JPG. Crystallographic data as CIF are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article.",
         "subdiscipline": [],
         "tags": []
@@ -137,10 +137,10 @@
         "title": "A data et of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods",
         "authors": "Erik Müller, Carolin Huber, Liza-Marie Beckers, Werner Brack, Martin Krauss, Tobias Schulze ",
         "journal": "Metabolites",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.3390/metabo10040162",
-        "link_data": [{"name":"Zenodo","url":"https://doi.org/10.5281/zenodo.3756211"}],
-        "link_comment": "curated by publishing authors",
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.3390/metabo10040162",
+        "linkdata": [{"name":"Zenodo","url":"https://doi.org/10.5281/zenodo.3756211"}],
+        "linkcomment": "curated by publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms",
         "subdiscipline": [],
         "tags": []
@@ -149,10 +149,10 @@
         "title": "Systematic evaluation of the biological variance within the Raman based colorectal tissue diagnostics",
         "authors": "Nadine Vogler, Thomas Bocklitz, Firas Subhi Salah, Carsten Schmidt, Rolf Brauer, Tiantian Cui, Masoud Mireskandari, Florian R. Greten, Michael Schmitt, Andreas Stallmach, Iver Petersen, Jürgen Popp",
         "journal": "Journal of Biophotonics",
-        "pub_year": "2015",
-        "link_pub": "https://doi.org/10.1002/jbio.201500237",
-        "link_data": [{"name":"Zenodo","url":"https://zenodo.org/record/3905058"}],
-        "link_comment": "curated by publishing authors",
+        "pubyear": "2015",
+        "linkpub": "https://doi.org/10.1002/jbio.201500237",
+        "linkdata": [{"name":"Zenodo","url":"https://zenodo.org/record/3905058"}],
+        "linkcomment": "curated by publishing authors",
         "description": "In the following, a short desciption for each csv files: Meta data: includes information about mice ID, scans collected from each mouse, location of extracted scans, activity of P53 gene, mouce gender, tissue type. MSpectra: contains mean spectra of tissue . Wavenumbers: includes Raman spectra wavenumbers.TissueLabels: describes different divisions of tissue types;e.g. normal vs abnormal, normal vs HB vs Karzinom, normal vs HB vs adenoma vs carcinomatypes with respect to each extracted scan.",
         "subdiscipline": [],
         "tags": []
@@ -161,10 +161,10 @@
         "title": "Comparability of Raman spectroscopic configurations: A large scale cross-laboratory study",
         "authors": "Shuxia Guo, Claudia Beleites, Ute Neugebauer, Sara Abalde-Cela, Nils Kristian Afseth, Fatima Alsamad, Suresh Anand, Cuauhtemoc Araujo-Andrade, Sonja Aškrabić, Ertug Avci, Monica Baia, Malgorzata Baranska, Enrico Baria, Luis A. E. Batista de Carvalho, Philippe de Bettignies, Alois Bonifacio, Franck Bonnier, Eva Maria Brauchle, Hugh J. Byrne, Igor Chourpa, Riccardo Cicchi, Frederic Cuisinier, Mustafa Culha, Marcel Dahms, Catalina David, Ludovic Duponchel, Shiyamala Duraipandian, Samir F. El-Mashtoly, David I. Ellis, Gauthier Eppe, Guillaume Falgayrac, Ozren Gamulin, Benjamin Gardner, Peter Gardner, Klaus Gerwert, Evangelos J. Giamarellos-Bourboulis, Sveinbjorn Gizurarson, Marcin Gnyba, Royston Goodacre, Patrick Grysan, Orlando Guntinas-Lichius, Helga Helgadottir, Vlasta Mohaček Grošev, Catherine Kendall, Roman Kiselev, Micha Kölbach, Christoph Krafft, Sivashankar Krishnamoorthy, Patrick Kubryck, Bernhard Lendl, Pablo Loza-Alvarez, Fiona M. Lyng, Susanne Machill, Cedric Malherbe, Monica Marro, Maria Paula M. Marques, Ewelina Matuszyk, Carlo Francesco Morasso, Myriam Moreau, Howbeer Muhamadali, Valentina Mussi, Ioan Notingher, Marta Z. Pacia, Francesco S. Pavone, Guillaume Penel, Dennis Petersen, Olivier Piot, Julietta V. Rau, Marc Richter, Maria Krystyna Rybarczyk, Hamideh Salehi, Katja Schenke-Layland, Sebastian Schlücker, Markus Schosserer, Karin Schütze, Valter Sergo, Faris Sinjab, Janusz Smulko, Ganesh D. Sockalingum, Clara Stiebing, Nick Stone, Valérie Untereiner, Renzo Vanna, Karin Wieland, Jürgen Popp, and Thomas Bocklitz*",
         "journal": "Analytical Chemistry",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.1021/acs.analchem.0c02696",
-        "link_data": [{ "name": "Zenodo", "url": "https://zenodo.org/record/4152953"}],
-        "link_comment": "curated by the publishing authors",
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.1021/acs.analchem.0c02696",
+        "linkdata": [{ "name": "Zenodo", "url": "https://zenodo.org/record/4152953"}],
+        "linkcomment": "curated by the publishing authors",
         "description": "Slightly processed raw data for the paper 'Comparability of Raman Spectroscopic Configurations: A Large Scale Cross-Laboratory Study': The processing include a spike removal to allow an interpolation to a common wavenumber axis. Always three files belong to each other: wavenumber axis file (wx_XYZ), spectral intensity file (spec_XYZ) and metadata file (meta_XYZ). The ‘XYZ’ refers to the samples measured (see the publication and its SI for details).",
         "subdiscipline": [],
         "tags": ["Spectroscopy"]
@@ -173,9 +173,9 @@
         "title": "A triptycene-based enantiopure bis(diazadibenzoanthracene) by a chirality-assisted synthesis approach",
         "authors": "Xubin Wang, Bernd Kohl, Frank Rominger, Sven M. Elbert, Prof. Michael Mastalerz",
         "journal": "Chemistry – A European Journal",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.1002/chem.202002781",
-        "link_data": [
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.1002/chem.202002781",
+        "linkdata": [
             {
                 "name": "heiDATA",
                 "url": "https://doi.org/10.11588/data/46LINE"
@@ -189,7 +189,7 @@
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc25b972"
             }
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CCDC. References to datasets are given in the supporting information PDF of the corresponding article.",
         "subdiscipline": [],
         "tags": []
@@ -198,9 +198,9 @@
         "title": "Bicyclo[1.1.1]pentyl sulfoximines: synthesis and functionalizations",
         "authors": "Robin M. Bär, Lukas Langer, Martin Nieger, Stefan Bräse",
         "journal": "Advanced Synthesis & Catalysis",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.1002/adsc.201901453",
-        "link_data": [
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.1002/adsc.201901453",
+        "linkdata": [
             {
                 "name": "Chemotion",
                 "url": "https://dx.doi.org/10.14272/NMNCNBZSKZJASF-UHFFFAOYSA-N.1"
@@ -275,7 +275,7 @@
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl6f"
             }    
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The datasets, curated by the publishing authors, contains NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article.",
         "subdiscipline": [],
         "tags": ["Synthesis","Heterocycles"]
@@ -284,9 +284,9 @@
         "title": "Exploring the role of solvent on carbohydrate−aryl interactions by diffusion NMR-based studies",
         "authors": "Linda Jütten, Karla Ramírez-Gualito, Andreas Weilhard, Benjamin albrecht, Gabriel Cuevas, María del Carmen Fernández-Alonso, Jesús Jiménez-Barbero, Nils E. Schlörer, Dolores Diaz",
         "journal": "ACS Omega",
-        "pub_year": "2018",
-        "link_pub": "https://doi.org/10.1021/acsomega.7b01630",
-        "link_data": [
+        "pubyear": "2018",
+        "linkpub": "https://doi.org/10.1021/acsomega.7b01630",
+        "linkdata": [
             {
                 "name": "NMRShiftDB2",
                 "url": "http://www.nmrshiftdb.org/molecule/60004029"
@@ -308,7 +308,7 @@
                 "url": "http://www.nmrshiftdb.org/molecule/60004073"
             }
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The dataset was curated by the publishing authors and is published in NMRShiftDB2. References to the dataset is given via DOI in the supporting information PDF.",
         "subdiscipline": [],
         "tags": []
@@ -317,9 +317,9 @@
         "title": "A new generation of terminal copper nitrenes and their application in aromatic C–H amination reactions",
         "authors": "Fabian Thomas, Matthias Oster, Florian Schön, Kai C. Göbgen, Benedikt Amarouch, Dominik Steden, Alexander Hoffmann, Sonja Herres-Pawlis",
         "journal": "Dalton Transactions",
-        "pub_year": "2021",
-        "link_pub": "https://doi.org/10.1039/D1DT00832C",
-        "link_data": [
+        "pubyear": "2021",
+        "linkpub": "https://doi.org/10.1039/D1DT00832C",
+        "linkdata": [
             {
                 "name": "Chemotion Repository",
                 "url": "https://dx.doi.org/10.14272/UFNYJPFRGDSKSE-UHFFFAOYSA-N.1"
@@ -357,7 +357,7 @@
                 "url": "https://doi.org/10.19061/iochem-bd-6-84"
             }
         ],
-        "link_comment": "curated by the publishing authors",
+        "linkcomment": "curated by the publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF.",
         "subdiscipline": ["Inorganic Chemistry"],
         "tags": ["Synthesis","Inorganic Chemistry"]
@@ -366,9 +366,9 @@
         "title": "Exceptional substrate diversity in oxygenation reactions catalyzed by a bis(µ-oxo) copper comple",
         "authors": "Melanie Paul, Melissa Teubner, Benjamin Grimm-Lebsanft, Christiane Golchert, Yannick Meiners, Laura Senft, Kristina Keisers, Patricia Liebhäuser, Thomas Rösener, Florian Biebl, Sören Buchenau, Maria Naumova, Vadim Murzin, Roxanne Krug, Alexander Hoffmann, Jörg Pietruszka, Ivana Ivanovic-Burmazovic, Michael Rübhausen, Sonja Herres-Pawlis ",
         "journal": "Chemistry – A European Journal",
-        "pub_year": "2020",
-        "link_pub": "https://doi.org/10.1002/chem.202000664",
-        "link_data": [
+        "pubyear": "2020",
+        "linkpub": "https://doi.org/10.1002/chem.202000664",
+        "linkdata": [
             {
                 "name": "Chemotion Repository",
                 "url": "https://dx.doi.org/10.14272/FCAMUPIRWKNASD-UHFFFAOYSA-N.1"
@@ -438,7 +438,7 @@
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23wtb5"
             }
         ],
-        "link_comment": "curated by publishing authors",
+        "linkcomment": "curated by publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CCDC. References to datasets are given in the supporting information PDF of the corresponding article.",
         "subdiscipline": ["Inorganic Chemistry"],
         "tags": []
@@ -447,10 +447,10 @@
         "title": "Synthesis and biological evaluation of highly potent fungicidal deoxy-hygrophorones",
         "authors": "Toni Ditfe, Eileen Bette, Haider N. Sultani, Alexander Otto, Ludger A. Wessjohann, Norbert Arnold, Bernhard Westermann",
         "journal": "European Journal of Organic Chemistry",
-        "pub_year": "2021",
-        "link_pub": "https://doi.org/10.1002/ejoc.202100729",
-        "link_data": [{ "name": "RADAR", "url": "https://doi.org/10.22000/451"}],
-        "link_comment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "pubyear": "2021",
+        "linkpub": "https://doi.org/10.1002/ejoc.202100729",
+        "linkdata": [{ "name": "RADAR", "url": "https://doi.org/10.22000/451"}],
+        "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
         "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR, contains NMR and MS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX, NMReDATA for NMR data and mzML for MS data. Results from the bioassay are available as CSV. Additionally, all structures are provided as CTfiles and are listed, corresponding to their numbering in the publication, in an CSV including IPB 3LC lab journal entries, SMILES structure codes and InChI and InChIkey identifiers. The corresponding article references the dataset in the section on supporting information.",
         "subdiscipline": ["Organic Chemistry"],
         "tags": ["Natural Products","Biological acitivity"]
@@ -459,10 +459,10 @@
         "title": "5α-Cyprinol sulfate: complete NMR assignment and revision of earlier published data, including the submission of a computer-readable assignment in NMReDATA format",
         "authors": "Meike Hahn, Eric von Elert, Laurent Bigler, M. Dolores Díaz Hernández, Nils E. Schloerer",
         "journal": "Magnetic Resonance in Chemistry",
-        "pub_year": "2018",
-        "link_pub": "https://doi.org/10.1002/mrc.4782",
-        "link_data": [{ "name": "NMRShiftDB2", "url": "https://doi.org/10.18716/nmrshiftdb2/60004113/nmredata_mrc_cd3od"}],
-        "link_comment": "curated by the publishing authors",
+        "pubyear": "2018",
+        "linkpub": "https://doi.org/10.1002/mrc.4782",
+        "linkdata": [{ "name": "NMRShiftDB2", "url": "https://doi.org/10.18716/nmrshiftdb2/60004113/nmredata_mrc_cd3od"}],
+        "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, is published in NMRShiftDB2 and also available from the publisher as supporting information. References to the dataset is given via DOI in the supporting information word document.",
         "subdiscipline": ["Organic Chemistry", "NMR spectroscopy", "Natural Products"],
         "tags": ["Natural Products"]
