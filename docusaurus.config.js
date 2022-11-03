@@ -31,7 +31,11 @@ module.exports = {
         },
         {
           label: 'Terminology Service',
-          href: 'https://terminology.nfdi4chem.de/ts/index'
+          href: 'https://terminology.nfdi4chem.de/'
+        },
+        {
+          label: 'Search Service',
+          href: 'https://search.nfdi4chem.de/'
         },
         {
           label: 'FAQ',
@@ -83,7 +87,11 @@ module.exports = {
             },
             {
               label: 'NFDI4Chem Terminology Service',
-              href: 'https://terminology.nfdi4chem.de/ts/index'
+              href: 'https://terminology.nfdi4chem.de/'
+            },
+            {
+              label: 'Search Service',
+              href: 'https://search.nfdi4chem.de/'
             },
             {
               label: 'GitHub Repository',
