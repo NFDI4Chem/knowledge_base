@@ -90,7 +90,7 @@ module.exports = {
               href: 'https://terminology.nfdi4chem.de/'
             },
             {
-              label: 'Search Service',
+              label: 'NFDI4Chem Search Service',
               href: 'https://search.nfdi4chem.de/'
             },
             {
