@@ -73,12 +73,12 @@
   --n4c-button-secondary-width: 300px;
   --n4c-button-vpad: 10px;
   --n4c-button-hpad: 5px;
-  --n4c-hover-scale: 105%;
+  --n4c-hover-scale: 100%;
   --n4c-transform-time: 175ms;
   --lbe-transform-time: 2s;
   --ifm-font-size-base: 110%;
-  --ifm-container-width: 80%;
-  --ifm-container-width-xl: 80%;
+ /* --ifm-container-width: 100%;
+  --ifm-container-width-xl: 100%;*/
 }
 
 .navbar__logo img {
