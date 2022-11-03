@@ -176,9 +176,9 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Function for single lbe dataset block
 
-  function Lbeblock( {title, authors, journal, pub_year, link_pub, link_data, link_comment, description, tags, subdiscipline } ) {
+  function Lbeblock( {title, authors, journal, pubyear, linkpub, linkdata, linkcomment, description, tags, subdiscipline } ) {
 
-  var doi = link_pub.slice(link_pub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
+  var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
 
     return (
       <div className="block_lbe">
@@ -208,16 +208,16 @@ export default function Lbe( {useCategoriesList} ) {
 
             <h4>Publication</h4>
 
-            <p><em>{journal}</em> <strong>{pub_year}</strong>, DOI: <a href={link_pub} target="_blank">{doi}</a></p>
+            <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
 
             <h4>Links to datasets</h4>
 
             <p>
-              {link_data.map((props, idx) => (
+              {linkdata.map((props, idx) => (
                 <MultiUrl key={idx} {...props} />
               ))}
             </p>
-            <p><em>{link_comment}</em></p>
+            <p><em>{linkcomment}</em></p>
 
           </div>        
         </details>
