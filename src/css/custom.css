@@ -70,6 +70,7 @@
 
   --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
   
+  --ifm-font-size-base: 110%;
 
   --ifm-button-border-radius: 0;
 
@@ -95,9 +96,11 @@
   --n4c-hover-scale: 105%;
   --n4c-transform-time: 175ms;
 
-  --lbe-transform-time: 2s;
+/* Lead by example */
 
-  --ifm-font-size-base: 110%;
+  --lbe-hover-scale: 104%;
+  --lbe-transform-time: 175ms;
+  
 }
 
 .navbar__logo img {
@@ -762,8 +765,8 @@ table thead tr {
 }
 
 .lbe_button:hover {
-  transform: scale(var(--n4c-hover-scale));
-  transition: all var(--n4c-transform-time) ease-in-out;
+  transform: scale(var(--lbe-hover-scale));
+  transition: all var(--lbe-transform-time) ease-in-out;
 }
 
 .lbe_button a:hover {
@@ -804,6 +807,6 @@ table thead tr {
 } */
 
 .lbe_tag:hover, .lbe_tag_active:hover {
-  transform: scale(var(--n4c-hover-scale));
-  transition: transform var(--n4c-transform-time) ease-in-out;
+  transform: scale(var(--lbe-hover-scale));
+  transition: transform var(--lbe-transform-time) ease-in-out;
 }
