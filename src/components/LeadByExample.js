@@ -189,9 +189,9 @@ export default function Lbe( {useCategoriesList} ) {
 
         <p>{subdiscipline.map((tag,idx) => 
           <SubdButton key={idx} name={tag} />
-        )}{tags.map((tag,idx) => 
+        )}{/* tags.map((tag,idx) => 
           <TagButton key={idx} name={tag} />
-        )}</p>
+        ) */}</p>
 
         <details className="details_lbe">
 
@@ -229,9 +229,11 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
+      <>
+        <div className="filter_lbe"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
+        <div className="filter_lbe"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
+        {/* <div className="filter_lbe"><h4>Filter by keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div> */}
+      </>
     )
   }
 
