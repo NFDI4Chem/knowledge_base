@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState, UseRef } from "react";
 import { useLocation } from "react-router-dom"
 
 var lbeTable = require('@site/static/assets/lbe.json');
@@ -105,10 +105,11 @@ export default function Lbe( {useCategoriesList} ) {
     )
   }
 
-  function SubdButton( { name } ) {
+  function SubdButton( { name,parent } ) {
 
     var buttonClass = "lbe_tag";
-    var number = 0;
+    var number = 0;    
+    var label = "";
 
     // Styling of active button
 
@@ -124,6 +125,13 @@ export default function Lbe( {useCategoriesList} ) {
       number = lbeTable.filter(m => m.subdiscipline.includes(name)).length;
     }
 
+    if (parent == "block") {
+      label = name;
+    }
+    else {
+      label = name+" ("+number+")";
+    }
+
     return (
         <button 
             className={buttonClass}
@@ -135,7 +143,7 @@ export default function Lbe( {useCategoriesList} ) {
               }
             }} 
         >
-            {name} ({number})
+            {label}
         </button>
     )
 }
@@ -190,7 +198,7 @@ export default function Lbe( {useCategoriesList} ) {
         <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
 
         <p>{subdiscipline.map((tag,idx) => 
-          <SubdButton key={idx} name={tag} />
+          <SubdButton key={idx} name={tag} parent="block" />
         )}{/* tags.map((tag,idx) => 
           <TagButton key={idx} name={tag} />
         ) */}</p>
