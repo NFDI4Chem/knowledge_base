@@ -187,6 +187,8 @@ export default function Lbe( {useCategoriesList} ) {
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
+
         <p>{subdiscipline.map((tag,idx) => 
           <SubdButton key={idx} name={tag} />
         )}{/* tags.map((tag,idx) => 
@@ -205,10 +207,6 @@ export default function Lbe( {useCategoriesList} ) {
             <h4>Description</h4>
 
             <p>{description}</p>
-
-            <h4>Publication</h4>
-
-            <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
 
             <h4>Links to datasets</h4>
 
