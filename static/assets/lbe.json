@@ -85,7 +85,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The dataset in RADAR4Chem, curated by the publishing authors, includes SANS data as tab separated text files. The corresponding article does contain a reference to the dataset in RADAR4Chem in the data and materials availability statement via its URL. Moreover, the article references a dataset in Institut Laue-Langevin's data portal repository via its DOI.",
+        "description": "The dataset in RADAR4Chem, curated by the publishing authors, includes SANS data as tab separated text files. The corresponding article references the dataset in RADAR4Chem in the data and materials availability statement via its URL. Moreover, the article references a dataset in Institut Laue-Langevin (ILL) data portal repository via its DOI.",
         "subdiscipline": [
             
         ],
@@ -218,14 +218,14 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The dataset, curated by the publishing authors, include reactions and sample data with its ATR-FTIP, HR-ESI-TOF-MS and 1H/13C NMR data published in Chemotion Repository. Data of DFT calculations is available in RADAR4Chem and referenced in the data availability statement of the corresponding publication. The supplementary information PDF, which reference datasets in Chemotion Repository via their DOI, and crystal structure data are availble from the publishers web page. ",
+        "description": "The dataset, curated by the publishing authors, includes reactions and sample data with its ATR-FTIP, HR-ESI-TOF-MS and 1H/13C NMR data published in Chemotion Repository. Data of DFT calculations is available in RADAR4Chem and referenced in the data availability statement of the corresponding publication. The supplementary information PDF, which reference datasets in Chemotion Repository via their DOI, and crystal structure data are available from the web page of the publisher.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
         "tags": [
-            "tbd"
+            
         ]
-    }, 
+    },
     {
         "title": "In-situ study of the impact of temperature and architecture on the interfacial structure of microgels",
         "authors": "Steffen Bochenek, Fabrizio Camerin, Emanuela Zaccarelli, Armando Maestro, Maximilian M. Schmidt, Walter Richtering, Andrea Scotti",
@@ -243,7 +243,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, inludes raw, associated, and derived data of NR, DLS, AFM and SANS supporting the reported results. RADAR DOI as well as ePIC for archived dataset, identical to published dataset, are given in the data availability statement. The RADAR DOI is also listed listed in the references of the corresponding publication. The NR raw data used in the study are available in the ILL Data Portal repository.",
+        "description": "The datasets, curated by the publishing authors, includes raw, associated, and derived data of NR, DLS, AFM and SANS supporting the reported results. RADAR DOI as well as ePIC for archived dataset, identical to published dataset, are given in the data availability statement. The RADAR DOI is also listed listed in the references of the corresponding publication. The NR raw data used in the study are available in the ILL Data Portal repository.",
         "subdiscipline": [
             
         ],
@@ -264,7 +264,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The dataset, curated by the publishing authors, includes results data, raw MS files, and processing data (MZmine, MZquant, Tracefinder) in Pangaea – a repository for geospatial data and enviromental chemistry. Supplementary material of the corresponding publication includes a word document and a excel document.",
+        "description": "The dataset, curated by the publishing authors, includes results data, raw MS files, and processing data (MZmine, MZquant, Tracefinder) in Pangaea – a repository for geospatial data and environmental chemistry. Supplementary material of the corresponding publication includes a word document and a excel document.",
         "subdiscipline": [
             
         ],
@@ -371,7 +371,7 @@
     },
     {
         "title": "Comparability of Raman spectroscopic configurations: A large scale cross-laboratory study",
-        "authors": "Shuxia Guo, Claudia Beleites, Ute Neugebauer, Sara Abalde-Cela, Nils Kristian Afseth, Fatima Alsamad, Suresh Anand, Cuauhtemoc Araujo-Andrade, Sonja Aškrabić, Ertug Avci, Monica Baia, Malgorzata Baranska, Enrico Baria, Luis A. E. Batista de Carvalho, Philippe de Bettignies, Alois Bonifacio, Franck Bonnier, Eva Maria Brauchle, Hugh J. Byrne, Igor Chourpa, Riccardo Cicchi, Frederic Cuisinier, Mustafa Culha, Marcel Dahms, Catalina David, Ludovic Duponchel, Shiyamala Duraipandian, Samir F. El-Mashtoly, David I. Ellis, Gauthier Eppe, Guillaume Falgayrac, Ozren Gamulin, Benjamin Gardner, Peter Gardner, Klaus Gerwert, Evangelos J. Giamarellos-Bourboulis, Sveinbjorn Gizurarson, Marcin Gnyba, Royston Goodacre, Patrick Grysan, Orlando Guntinas-Lichius, Helga Helgadottir, Vlasta Mohaček Grošev, Catherine Kendall, Roman Kiselev, Micha Kölbach, Christoph Krafft, Sivashankar Krishnamoorthy, Patrick Kubryck, Bernhard Lendl, Pablo Loza-Alvarez, Fiona M. Lyng, Susanne Machill, Cedric Malherbe, Monica Marro, Maria Paula M. Marques, Ewelina Matuszyk, Carlo Francesco Morasso, Myriam Moreau, Howbeer Muhamadali, Valentina Mussi, Ioan Notingher, Marta Z. Pacia, Francesco S. Pavone, Guillaume Penel, Dennis Petersen, Olivier Piot, Julietta V. Rau, Marc Richter, Maria Krystyna Rybarczyk, Hamideh Salehi, Katja Schenke-Layland, Sebastian Schlücker, Markus Schosserer, Karin Schütze, Valter Sergo, Faris Sinjab, Janusz Smulko, Ganesh D. Sockalingum, Clara Stiebing, Nick Stone, Valérie Untereiner, Renzo Vanna, Karin Wieland, Jürgen Popp, and Thomas Bocklitz*",
+        "authors": "Shuxia Guo, Claudia Beleites, Ute Neugebauer, Sara Abalde-Cela, Nils Kristian Afseth, Fatima Alsamad, Suresh Anand, Cuauhtemoc Araujo-Andrade, et al.",
         "journal": "Analytical Chemistry",
         "pubyear": 2020,
         "linkpub": "https://doi.org/10.1021/acs.analchem.0c02696",
@@ -665,7 +665,7 @@
             "inorganic chemistry"
         ],
         "tags": [
-            "tbd"
+            
         ]
     },
     {
@@ -713,5 +713,4 @@
             "NMR spectroscopy"
         ]
     }
-    
 ]

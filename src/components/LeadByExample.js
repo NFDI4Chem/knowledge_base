@@ -194,7 +194,7 @@ export default function Lbe( {useCategoriesList} ) {
           <div className="header_lbe_title"><h3>{title}</h3></div>
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
-
+        <p><em>{authors}</em></p>
         <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
 
         <p>{subdiscipline.map((tag,idx) => 
@@ -208,10 +208,7 @@ export default function Lbe( {useCategoriesList} ) {
           <summary>Details</summary>
 
           <div className="collapsible_lbe">
-            <h4>Authors</h4>
             
-            <p><em>{authors}</em></p>
-
             <h4>Description</h4>
 
             <p>{description}</p>
