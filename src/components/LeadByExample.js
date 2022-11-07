@@ -194,9 +194,11 @@ export default function Lbe( {useCategoriesList} ) {
           <div className="header_lbe_title"><h3>{title}</h3></div>
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
-        <p><em>{authors}</em></p>
-        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
 
+        <p><em><Authors authors={authors} length={3} /></em></p>
+
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
+        
         <p>{subdiscipline.map((tag,idx) => 
           <SubdButton key={idx} name={tag} parent="block" />
         )}{/* tags.map((tag,idx) => 
