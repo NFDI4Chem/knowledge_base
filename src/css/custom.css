@@ -774,9 +774,11 @@ table thead tr {
 }
 
 .lbe_button_small {
-  scale: 66%;
-  padding: 2px 0.5em;
+  scale: 90%;
+  color: var(--ifm-color-primary);
+  padding: 0 0.5em;
   margin: 0;
+  border: none;
 }
 
 .lbe_button:hover {

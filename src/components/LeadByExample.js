@@ -187,16 +187,24 @@ export default function Lbe( {useCategoriesList} ) {
   function Authors( { authors, length } ) {
 
     const [listOpen,ToggleListOpen] = useState(false); // Define state for author list, default "false"
-    var shortlist = authors.split(", ",length);   // Create array of authors with elements given by length
+    var shortlist = authors.split(", ",length).join(", ");   // List of authors with elements given by length
 
-    if (listOpen) {
-      return(
-        <>{authors} <button className="lbe_button lbe_button_small" onClick={() => ToggleListOpen(!listOpen)}>collapse</button></> 
+    // If there are less than {length} authors, do not display button
+
+    if ( shortlist == authors ) {
+      return (
+        <>{authors}</>
       )
     }
 
-    return (
-      <>{shortlist.map(x => x+", ")} ... <button className="lbe_button lbe_button_small" onClick={() => ToggleListOpen(!listOpen)}>show all</button></>
+    else if (listOpen) {
+      return(
+        <>{authors} <button className="lbe_button lbe_button_small" onClick={() => ToggleListOpen(!listOpen)}>&#9650; collapse</button></> 
+      )
+    }
+
+    else return (
+      <>{shortlist}, ... <button className="lbe_button lbe_button_small" onClick={() => ToggleListOpen(!listOpen)}>show all &#9660;</button></>
     )
   }
   
