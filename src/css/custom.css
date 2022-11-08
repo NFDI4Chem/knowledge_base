@@ -749,6 +749,10 @@ table thead tr {
   padding: .5rem 0;
 }
 
+.search_lbe > em {
+  color: var(--ifm-color-primary);
+}
+
 .details_lbe h4 {
   color: var(--ifm-color-primary);
   padding-top: 15px;

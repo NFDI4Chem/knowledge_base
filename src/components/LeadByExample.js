@@ -315,15 +315,22 @@ export default function Lbe( {useCategoriesList} ) {
       break;
     case "text":
       result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));   // Squash object with JSON.stringify() for better searchability
+      if ( searchFilter == "" ) {
+        var resultOutput = "";
+      } else if (result.length == 1) {
+        var resultOutput = result.length+" entry found...";
+      } else {
+        var resultOutput = result.length+" entries found...";
+      }
       break;
   }
-  
+
   return (
     <div className="lbe">
       <div className="col-searchfilter">
         <div className="block_lbe-search">
             <div className="search_lbe">
-              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
+              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /> &ensp; <em>{resultOutput}</em>
             </div>
             <LbeButtons />
         </div>
