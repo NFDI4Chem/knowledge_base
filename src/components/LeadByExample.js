@@ -58,17 +58,17 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Get list of subdisciplines
 
-  var subdiscs = Array.from(new Set(lbeTable.map(obj => obj.subdiscipline).flat())).sort();
+  var subdiscs = Array.from(new Set(lbeTable.map(obj => obj.subdiscipline).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   subdiscs.unshift("All"); // Add "All" option at the beginning
 
   // Get list of tags
 
-  var categories = Array.from(new Set(lbeTable.map(obj => obj.tags).flat())).sort();
+  var categories = Array.from(new Set(lbeTable.map(obj => obj.tags).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   categories.unshift("All"); // Add "All" option at the beginning
   
   // Get list of journals
   
-  var journals = Array.from(new Set(lbeTable.map(obj => obj.journal))).sort();
+  var journals = Array.from(new Set(lbeTable.map(obj => obj.journal))).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   journals.unshift("All"); // Add "All" option at the beginning
   
   // Get list of repos
