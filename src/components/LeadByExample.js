@@ -115,10 +115,11 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Function for Repo button
 
-  function RepoButton( { name } ) {
+  function RepoButton( { name,parent } ) {
 
     var buttonClass = "lbe_tag";
     var number = 0;
+    var label = "";
 
     // Styling of active button
 
@@ -131,8 +132,18 @@ export default function Lbe( {useCategoriesList} ) {
     if (name == "All") {
       number = lbeTable.length;
     } else {
-       number = lbeTable.filter(m => m.linkdata.map(m => m.name).includes(name)).length;
+      number = lbeTable.filter(m => m.linkdata.map(m => m.name).includes(name)).length;
     }
+
+    // Show number if parent is not LbeBlock
+
+    if (parent == "block") {
+      label = name;
+    }
+    else {
+      label = name+" ("+number+")";
+    }
+
     
     return (
         <button 
@@ -145,7 +156,7 @@ export default function Lbe( {useCategoriesList} ) {
               }
             }}
           >
-            {name} ({number})
+            {label}
         </button>
     )
   }
@@ -262,6 +273,8 @@ export default function Lbe( {useCategoriesList} ) {
 
   var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
 
+  var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
+
     return (
       <div className="block_lbe">
         <div className="header_lbe">
@@ -273,7 +286,7 @@ export default function Lbe( {useCategoriesList} ) {
 
         <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
-        <p>{repos.map((tag,idx) => 
+        <p>{myRepos.map((tag,idx) => 
           <RepoButton key={idx} name={tag} parent="block" />)
           }
         </p>
