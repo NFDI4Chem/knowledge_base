@@ -133,7 +133,7 @@ export default function Lbe( {useCategoriesList} ) {
     } else {
        number = lbeTable.filter(m => m.linkdata.map(m => m.name).includes(name)).length;
     }
-
+    
     return (
         <button 
             className={buttonClass}
@@ -149,6 +149,8 @@ export default function Lbe( {useCategoriesList} ) {
         </button>
     )
   }
+
+// Function for subd button
 
   function SubdButton( { name,parent } ) {
 
@@ -271,8 +273,8 @@ export default function Lbe( {useCategoriesList} ) {
 
         <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
-        <p>{subdiscipline.map((tag,idx) => 
-          <SubdButton key={idx} name={tag} parent="block" />)
+        <p>{repos.map((tag,idx) => 
+          <RepoButton key={idx} name={tag} parent="block" />)
           }
         </p>
 
