@@ -269,7 +269,7 @@ export default function Lbe( {useCategoriesList} ) {
 
         <p><em><Authors authors={authors} length={10} /></em></p>
 
-        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
         <p>{subdiscipline.map((tag,idx) => 
           <SubdButton key={idx} name={tag} parent="block" />)
