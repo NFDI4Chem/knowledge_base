@@ -713,6 +713,15 @@ table thead tr {
   justify-content: right;
 }
 
+.block_lbe > p {
+  padding: 0 0.3rem;
+}
+
+.block_lbe p:nth-of-type(-n+2), .header_lbe_title h3 {
+  margin-bottom: calc(0.5*var(--ifm-leading));
+  text-align: left;
+}
+
 @media screen and (max-width: 966px) { .header_lbe {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -740,6 +749,10 @@ table thead tr {
   padding: .5rem 0;
 }
 
+.search_lbe > em {
+  color: var(--ifm-color-primary);
+}
+
 .details_lbe h4 {
   color: var(--ifm-color-primary);
   padding-top: 15px;
@@ -764,6 +777,14 @@ table thead tr {
   background: none;
 }
 
+.lbe_button_small {
+  scale: 90%;
+  color: var(--ifm-color-primary);
+  padding: 0 0.5em;
+  margin: 0;
+  border: none;
+}
+
 .lbe_button:hover {
   transform: scale(var(--lbe-hover-scale));
   transition: all var(--lbe-transform-time) ease-in-out;
@@ -771,6 +792,10 @@ table thead tr {
 
 .lbe_button a:hover {
   text-decoration: none;
+}
+
+.lbe_button_small:hover {
+  transform: unset;
 }
 
 .lbe_tag {
