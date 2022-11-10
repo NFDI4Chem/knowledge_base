@@ -133,7 +133,7 @@ export default function Lbe( {useCategoriesList} ) {
     } else {
        number = lbeTable.filter(m => m.linkdata.map(m => m.name).includes(name)).length;
     }
-
+    
     return (
         <button 
             className={buttonClass}
@@ -149,6 +149,8 @@ export default function Lbe( {useCategoriesList} ) {
         </button>
     )
   }
+
+// Function for subd button
 
   function SubdButton( { name,parent } ) {
 
@@ -267,15 +269,14 @@ export default function Lbe( {useCategoriesList} ) {
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
-        <p><em><Authors authors={authors} length={3} /></em></p>
+        <p><em><Authors authors={authors} length={10} /></em></p>
 
-        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
-        <p>{subdiscipline.map((tag,idx) => 
-          <SubdButton key={idx} name={tag} parent="block" />
-        )}{/* tags.map((tag,idx) => 
-          <TagButton key={idx} name={tag} />
-        ) */}</p>
+        <p>{repos.map((tag,idx) => 
+          <RepoButton key={idx} name={tag} parent="block" />)
+          }
+        </p>
 
         <details className="details_lbe">
 
@@ -307,9 +308,9 @@ export default function Lbe( {useCategoriesList} ) {
   function LbeButtons() {
     return(
       <>
-        <div className="filter_lbe"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
-        <div className="filter_lbe"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
         <div className="filter_lbe"><h4>Filter by repositories</h4><p>{repos.map((props, idx) => <RepoButton key={idx} name={props} />)}</p></div>
+        <div className="filter_lbe"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
+        <div className="filter_lbe"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
       </>
     )
   }

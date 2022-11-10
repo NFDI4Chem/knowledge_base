@@ -266,10 +266,12 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, includes results data, raw MS files, and processing data (MZmine, MZquant, Tracefinder) in Pangaea – a repository for geospatial data and environmental chemistry. Supplementary material of the corresponding publication includes a word document and a excel document.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "environmental chemistry"
         ],
         "tags": [
-            "ecology"
+            "mass spectrometry"
         ]
     },
     {
@@ -293,12 +295,15 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain MS data and were published in MetaboLight, Massbank and MassBank-data/GitHub. All raw mass spectra were converted to the open format mzML format. The used code is available at GitHub and were referenced in the corresponding article.",
+        "description": "The dataset, curated by the publishing authors, contain MS data and were published in MetaboLight, Massbank and MassBank-data/GitHub. All raw mass spectra were converted to the open format mzML format. The used code is available at GitHub and were referenced in the corresponding article.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "metabolomics",
+            "epidemiology"
         ],
         "tags": [
-            
+            "mass spectrometry"
         ]
     },
     {
@@ -323,7 +328,7 @@
             "organic chemistry"
         ],
         "tags": [
-            "organic synthesis"
+            "Triptycene"
         ]
     },
     {
@@ -341,10 +346,12 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms. The scientific publication references the dataset in Zenodo in its data availability statement.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "cheminformatics"
         ],
         "tags": [
-            
+            "mass spectrometry"
         ]
     },
     {
@@ -413,11 +420,9 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR, MS and IR data in the instrument manufacturers formats. The IR data is also availabe as data point table (DPT) files. Data of elemental analysis was added to the dataset as scans of analysis reports. Crystallographic data as CIF files are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article, while the dataset in heiDATA is not referenced in the scientific publication or supporting information.",
         "subdiscipline": [
-            "organic chemistry",
-            "analytical chemistry"
+            "organic chemistry"
         ],
         "tags": [
-            "asymmetric synthesis",
             "N-heteropolycyclenes"
         ]
     },
@@ -503,10 +508,10 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The NMR datasets, curated by the publishing authors, was published in NMRShiftDB2. References to the dataset is given via DOI in the supporting information PDF.",
         "subdiscipline": [
-            "analystical chemistry"
+            "analytical chemistry"
         ],
         "tags": [
-            "diffusion",
+            "Carbohydrates",
             "NMR spectroscopy"
         ]
     },
