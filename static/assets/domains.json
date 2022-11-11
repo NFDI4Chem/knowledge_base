@@ -1,0 +1,27 @@
+[
+  {
+    "title":  "Synthetic Chemistry",
+    "svg": "/img/nfdi4chem_Synthetic_Chemistry.svg",
+    "link":  "/docs/domains/synthetic_chemistry"
+  },
+  {
+    "title":  "Analytical Chemistry",
+    "svg": "/img/nfdi4chem_Analytical_Chemistry.svg",
+    "link":  "/docs/domains/analytical_chemistry"
+  },
+  {
+    "title":  "Physical Chemistry",
+    "svg": "/img/nfdi4chem_Physial_Chemistry.svg",
+    "link":  "/docs/domains/physical_chemistry"
+  },
+  {
+    "title":  "Polymer Chemistry",
+    "svg": "/img/nfdi4chem_Polymer_Chemistry.svg",
+    "link":  "/docs/domains/polymer_chemistry"
+  },
+  {
+    "title":  "Pharmaceutical Chemistry",
+    "svg": "/img/nfdi4chem_Medicinal-Pharmaceutical_Chemistry.svg",
+    "link":  "/docs/domains/pharmaceutical_chemistry"
+  }
+]
