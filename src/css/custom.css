@@ -198,6 +198,22 @@ font: bold var(--ifm-h3-font-size)/var(--ifm-heading-line-height) var(--ifm-font
 margin-bottom: var(--ifm-heading-margin-bottom);
 }
 
+/* N4C Feature styles */
+
+.features {
+  align-items: center;
+  padding: 2px;
+  width: 100%;
+}
+
+.featureSvg {
+  padding: 2px;
+  width: 110px;
+  height: 110px;
+  margin-top: 5px;
+}
+
+
 .admonition-content>:last-child,
 .card__body>:last-child,
 .card__footer>:last-child,
