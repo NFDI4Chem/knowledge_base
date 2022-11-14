@@ -322,8 +322,8 @@ export default function Lbe( {useCategoriesList} ) {
     return(
       <>
         <div className="filter_lbe"><h4>Filter by repositories</h4><p>{repos.map((props, idx) => <RepoButton key={idx} name={props} />)}</p></div>
-        <div className="filter_lbe"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
         <div className="filter_lbe"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
+        <div className="filter_lbe"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
       </>
     )
   }
