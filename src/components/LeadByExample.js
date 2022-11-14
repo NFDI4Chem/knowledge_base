@@ -11,6 +11,13 @@ function MultiUrl( {name,url} ) {
   )
 }
 
+function TextSearch( {handleChange,searchFilter,resultOutput} ) {  return(
+    <div className="search_lbe">
+      <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /> &ensp; <em>{resultOutput}</em>
+    </div>
+  )
+}
+
 export default function Lbe( {useCategoriesList} ) {
 
   // Get URL params
@@ -204,7 +211,7 @@ export default function Lbe( {useCategoriesList} ) {
             {label}
         </button>
     )
-}
+  }
 
   // Function for Journal filter buttons
 
@@ -347,9 +354,7 @@ export default function Lbe( {useCategoriesList} ) {
       <div className="lbe">
         <div className="col-searchfilter">
           <div className="block_lbe-search">
-            <div className="search_lbe">
-              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} />
-            </div>
+            <TextSearch handleChange={handleChange} searchFilter={searchFilter} resultOutput={resultOutput} />
             <LbeButtons />
           </div>
         </div>
@@ -391,9 +396,7 @@ export default function Lbe( {useCategoriesList} ) {
     <div className="lbe">
       <div className="col-searchfilter">
         <div className="block_lbe-search">
-            <div className="search_lbe">
-              <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /> &ensp; <em>{resultOutput}</em>
-            </div>
+            <TextSearch handleChange={handleChange} searchFilter={searchFilter} resultOutput={resultOutput} />
             <LbeButtons />
         </div>
       </div>
