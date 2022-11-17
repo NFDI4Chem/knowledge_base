@@ -87,10 +87,10 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset in RADAR4Chem, curated by the publishing authors, includes SANS data as tab separated text files. The corresponding article references the dataset in RADAR4Chem in the data and materials availability statement via its URL. Moreover, the article references a dataset in Institut Laue-Langevin (ILL) data portal repository via its DOI.",
         "subdiscipline": [
-            
+            "physical chemistry"
         ],
         "tags": [
-            
+            "nanogels"
         ]
     },
     {
@@ -223,7 +223,7 @@
             "inorganic chemistry"
         ],
         "tags": [
-            
+            "copper complexes"
         ]
     },
     {
@@ -245,7 +245,7 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The datasets, curated by the publishing authors, includes raw, associated, and derived data of NR, DLS, AFM and SANS supporting the reported results. RADAR DOI as well as ePIC for archived dataset, identical to published dataset, are given in the data availability statement. The RADAR DOI is also listed listed in the references of the corresponding publication. The NR raw data used in the study are available in the ILL Data Portal repository.",
         "subdiscipline": [
-            
+            "physical chemistry"
         ],
         "tags": [
             "macromolecules"
@@ -670,7 +670,7 @@
             "inorganic chemistry"
         ],
         "tags": [
-            
+            "copper complexes"
         ]
     },
     {
