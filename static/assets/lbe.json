@@ -266,10 +266,12 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, includes results data, raw MS files, and processing data (MZmine, MZquant, Tracefinder) in Pangaea – a repository for geospatial data and environmental chemistry. Supplementary material of the corresponding publication includes a word document and a excel document.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "environmental chemistry"
         ],
         "tags": [
-            "ecology"
+            "mass spectrometry"
         ]
     },
     {
@@ -293,12 +295,15 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain MS data and were published in MetaboLight, Massbank and MassBank-data/GitHub. All raw mass spectra were converted to the open format mzML format. The used code is available at GitHub and were referenced in the corresponding article.",
+        "description": "The dataset, curated by the publishing authors, contain MS data and were published in MetaboLight, Massbank and MassBank-data/GitHub. All raw mass spectra were converted to the open format mzML format. The used code is available at GitHub and were referenced in the corresponding article.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "metabolomics",
+            "epidemiology"
         ],
         "tags": [
-            
+            "mass spectrometry"
         ]
     },
     {
@@ -323,7 +328,7 @@
             "organic chemistry"
         ],
         "tags": [
-            "organic synthesis"
+            "Triptycene"
         ]
     },
     {
@@ -341,10 +346,12 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms. The scientific publication references the dataset in Zenodo in its data availability statement.",
         "subdiscipline": [
-            
+            "organic chemistry",
+            "analytical chemistry",
+            "cheminformatics"
         ],
         "tags": [
-            
+            "mass spectrometry"
         ]
     },
     {
@@ -371,7 +378,7 @@
     },
     {
         "title": "Comparability of Raman spectroscopic configurations: A large scale cross-laboratory study",
-        "authors": "Shuxia Guo, Claudia Beleites, Ute Neugebauer, Sara Abalde-Cela, Nils Kristian Afseth, Fatima Alsamad, Suresh Anand, Cuauhtemoc Araujo-Andrade, et al.",
+        "authors": "Shuxia Guo, Claudia Beleites, Ute Neugebauer, Sara Abalde-Cela, Nils Kristian Afseth, Fatima Alsamad, Suresh Anand, Cuauhtemoc Araujo-Andrade, Sonja Aškrabić, Ertug Avci, Monica Baia, Malgorzata Baranska, Enrico Baria, Luis A. E. Batista de Carvalho, Philippe de Bettignies, Alois Bonifacio, Franck Bonnier, Eva Maria Brauchle, Hugh J. Byrne, Igor Chourpa, Riccardo Cicchi, Frederic Cuisinier, Mustafa Culha, Marcel Dahms, Catalina David, Ludovic Duponchel, Shiyamala Duraipandian, Samir F. El-Mashtoly, David I. Ellis, Gauthier Eppe, Guillaume Falgayrac, Ozren Gamulin, Benjamin Gardner, Peter Gardner, Klaus Gerwert, Evangelos J. Giamarellos-Bourboulis, Sveinbjorn Gizurarson, Marcin Gnyba, Royston Goodacre, Patrick Grysan, Orlando Guntinas-Lichius, Helga Helgadottir, Vlasta Mohaček Grošev, Catherine Kendall, Roman Kiselev, Micha Kölbach, Christoph Krafft, Sivashankar Krishnamoorthy, Patrick Kubryck, Bernhard Lendl, Pablo Loza-Alvarez, Fiona M. Lyng, Susanne Machill, Cedric Malherbe, Monica Marro, Maria Paula M. Marques, Ewelina Matuszyk, Carlo Francesco Morasso, Myriam Moreau, Howbeer Muhamadali, Valentina Mussi, Ioan Notingher, Marta Z. Pacia, Francesco S. Pavone, Guillaume Penel, Dennis Petersen, Olivier Piot, Julietta V. Rau, Marc Richter, Maria Krystyna Rybarczyk, Hamideh Salehi, Katja Schenke-Layland, Sebastian Schlücker, Markus Schosserer, Karin Schütze, Valter Sergo, Faris Sinjab, Janusz Smulko, Ganesh D. Sockalingum, Clara Stiebing, Nick Stone, Valérie Untereiner, Renzo Vanna, Karin Wieland, Jürgen Popp, and Thomas Bocklitz*",
         "journal": "Analytical Chemistry",
         "pubyear": 2020,
         "linkpub": "https://doi.org/10.1021/acs.analchem.0c02696",
@@ -413,11 +420,9 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The datasets, curated by the publishing authors, contain NMR, MS and IR data in the instrument manufacturers formats. The IR data is also availabe as data point table (DPT) files. Data of elemental analysis was added to the dataset as scans of analysis reports. Crystallographic data as CIF files are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article, while the dataset in heiDATA is not referenced in the scientific publication or supporting information.",
         "subdiscipline": [
-            "organic chemistry",
-            "analytical chemistry"
+            "organic chemistry"
         ],
         "tags": [
-            "asymmetric synthesis",
             "N-heteropolycyclenes"
         ]
     },
@@ -503,10 +508,10 @@
         "linkcomment": "curated by the publishing authors",
         "description": "The NMR datasets, curated by the publishing authors, was published in NMRShiftDB2. References to the dataset is given via DOI in the supporting information PDF.",
         "subdiscipline": [
-            "analystical chemistry"
+            "analytical chemistry"
         ],
         "tags": [
-            "diffusion",
+            "Carbohydrates",
             "NMR spectroscopy"
         ]
     },

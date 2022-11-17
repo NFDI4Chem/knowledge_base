@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Domains",
+      "svg": "/img/nfdi4chem_Domains_white.svg",
+      "link": "/docs/domains/guide"
+    },
+    {
+      "title": "Roles",
+      "svg": "/img/nfdi4chem_Roles_white.svg",
+      "link": "/docs/role/guide"
+    },
+    {
+      "title": "Handling Data",
+      "svg": "/img/nfdi4chem_Handling_Data_white.svg",
+      "link": "/docs/data/guide"
+    },
+    {
+      "title": "Topics & Concepts",
+      "svg": "/img/nfdi4chem_Topics_and_Concepts_white.svg",
+      "link": "/docs/topics/guide"
+    },
+    {
+      "title": "Lead by Example",
+      "svg": "/img/nfdi4chem_Lead_by_Example_white.svg",
+      "link": "/docs/lead-by-example"
+    }
+]
