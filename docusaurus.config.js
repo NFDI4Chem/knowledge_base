@@ -160,4 +160,7 @@ module.exports = {
       },
     ],
   ],
+  stylesheets: [
+    'https://knowledgebase.nfdi4chem.de/fonts/fonts.css'
+  ],
 };
