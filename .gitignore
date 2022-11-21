@@ -2,6 +2,7 @@
 /node_modules
 # Production
 /build
+fonts
 # Generated files
 .docusaurus
 .cache-loader
