@@ -11,7 +11,7 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap'); */
 
-@import url('../css/fonts.css');
+@import url('/src/css/fonts.css');
 
 :root {
   --ifm-color-primary: #00617c; 
@@ -388,7 +388,7 @@ margin-bottom: var(--ifm-heading-margin-bottom);
  {
   color: var(--ifm-color-primary);
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
   white-space: normal;
   word-wrap: break-word;
 }
@@ -414,7 +414,7 @@ margin-bottom: var(--ifm-heading-margin-bottom);
  {
   color: var(--ifm-color-white);
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
   white-space: normal;
   word-wrap: break-word;
 }
@@ -438,7 +438,7 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 
 .button.button--negative {
   color: var(--ifm-color-primary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .button.button--negative h1,
@@ -595,6 +595,8 @@ mark {
 /*  background: var(--ifm-color-primary);*/
 }
 
+/* Hexagon ul bullets */
+
 ul {
   list-style-type: '\2B22\  ';
 } 
@@ -602,6 +604,9 @@ ul {
 ul li::marker {
   position: absolute;
   font-size: 0.9em;
+}
+
+.markdown > ul > li::marker {
   color: var(--ifm-color-primary);
 }
 
