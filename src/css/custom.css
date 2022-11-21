@@ -604,10 +604,11 @@ ul {
 ul li::marker {
   position: absolute;
   font-size: 0.9em;
+  color: var(--ifm-color-primary);
 }
 
-.markdown > ul > li::marker {
-  color: var(--ifm-color-primary);
+.button li::marker {
+  color: unset;
 }
 
 ul ul {
