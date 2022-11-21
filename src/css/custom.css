@@ -595,6 +595,8 @@ mark {
 /*  background: var(--ifm-color-primary);*/
 }
 
+/* Hexagon ul bullets */
+
 ul {
   list-style-type: '\2B22\  ';
 } 
@@ -602,6 +604,9 @@ ul {
 ul li::marker {
   position: absolute;
   font-size: 0.9em;
+}
+
+.markdown > ul > li::marker {
   color: var(--ifm-color-primary);
 }
 
