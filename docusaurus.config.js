@@ -159,8 +159,5 @@ module.exports = {
         highlightSearchTermsOnTargetPage: true
       },
     ],
-  ],
-  stylesheets: [
-    'https://knowledgebase.nfdi4chem.de/fonts/fonts.css'
-  ],
+  ]
 };
