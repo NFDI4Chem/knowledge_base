@@ -11,10 +11,10 @@ export default function Methods( {defaultProfile} ) {
 
     function FilterButton( { name, longname } ) {
 
-        var buttonClass = "lbe_tag";            // Default style
+        var buttonClass = "lbe__filterbutton";            // Default style
 
         if (name == filterProfile) {
-            buttonClass = "lbe_tag lbe_tag_active";     // Style if active
+            buttonClass = "lbe__filterbutton lbe__filterbutton--active";     // Style if active
         }
         
         return (
@@ -40,8 +40,8 @@ export default function Methods( {defaultProfile} ) {
     }
 
     return (
-        <><div className="block_filter"><div className="row block_filter-row"><div className="filter_methods">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
-        <div className="col search_methods"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
+        <><div className="methods__searchfilter"><div className="row methods__searchfilter__row"><div className="methods__searchfilter__filter">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+        <div className="col methods__searchfilter__search"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
         <div><MethodsTable methods_to_show={resultSet} /></div></>    
     )
 }
