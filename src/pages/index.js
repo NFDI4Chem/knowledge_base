@@ -23,7 +23,7 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col col--8">
-              <p className="hero__subtitle vertical-center">
+              <p className="hero__subtitle">
               {siteConfig.tagline}
               </p>
             </div>
