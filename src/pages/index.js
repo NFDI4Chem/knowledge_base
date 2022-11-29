@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
 import N4CFeatures from '../components/N4CFeatures';
 
 
@@ -28,7 +27,7 @@ export default function Home() {
               </p>
             </div>
             <div className="col col--2">
-              <div className={styles.buttons}>
+              <div className="buttons">
                 <Link
                   className="button button--negative button--lg"
                   to="/docs/intro">
