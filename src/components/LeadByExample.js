@@ -299,11 +299,11 @@ export default function Lbe( {useCategoriesList} ) {
           }
         </p>
 
-        <details className="lbe__block__details">
+        <details className="lbe__details">
 
           <summary>Details</summary>
 
-          <div className="lbe__block__details--collapsible">
+          <div className="lbe__details--collapsible">
             
             <h4>Description</h4>
 
@@ -353,13 +353,13 @@ export default function Lbe( {useCategoriesList} ) {
   if (repoFilter == "All" || subdFilter == "All") {
     return(
       <div className="lbe">
-        <div className="col-searchfilter">
-          <div className="block_lbe-search">
+        <div className="lbe__searchfilter">
+          <div className="lbe__searchfilter__container">
             <TextSearch handleChange={handleChange} searchFilter={searchFilter} resultOutput={resultOutput} />
             <LbeButtons />
           </div>
         </div>
-        <div className="body_lbe"><LbeRender list={lbeTable} /></div> 
+        <div className="lbe__body"><LbeRender list={lbeTable} /></div> 
       </div>
     )
   }

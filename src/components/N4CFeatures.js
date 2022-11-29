@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 function Feature({ title, svg, link, style }) {
 
   return (
-    <div className='col feature--col'>
+    <div className='col feature__col'>
     <div className='text--center'>
       {link ? (
         <Link
@@ -30,9 +30,9 @@ export default function N4CFeatures( { feature } ) {
   var featureList = require("@site/static/assets/"+feature+".json");;
 
   if (feature == "entry") {
-    style="button button--primary button--lg feature--button";
+    style="button button--primary button--lg feature__button";
   } else {
-    style="button button--secondary button--lg feature-secondary--button";
+    style="button button--secondary button--lg feature__button--secondary";
   }
 
   return (

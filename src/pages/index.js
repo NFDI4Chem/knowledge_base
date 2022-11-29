@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
 import N4CFeatures from '../components/N4CFeatures';
 
 
@@ -23,12 +22,12 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col col--8">
-              <p className="hero__subtitle vertical-center">
+              <p className="hero__subtitle">
               {siteConfig.tagline}
               </p>
             </div>
             <div className="col col--2">
-              <div className={styles.buttons}>
+              <div className="buttons">
                 <Link
                   className="button button--negative button--lg"
                   to="/docs/intro">
