@@ -78,7 +78,7 @@
 
   --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
   
-  --ifm-font-size-base: 110%;
+  --ifm-font-size-base: 13pt;
 
   --ifm-button-border-radius: 0;
 
@@ -460,13 +460,11 @@ ul ul {
 /********** Alerts ************/
 
 .alert {
-  --ifm-alert-background-color: #white;
-  border-style: dashed;
-}
-
-.alert * { 
-  text-align: justify;
+  color: black;
   --ifm-alert-foreground-color: black;
+  --ifm-alert-background-color: white;
+  border-style: dashed;
+  text-align: justify;
 }
 
 .alert a {
