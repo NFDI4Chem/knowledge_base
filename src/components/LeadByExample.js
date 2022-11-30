@@ -26,39 +26,40 @@ export default function Lbe( {useCategoriesList} ) {
   const location = useLocation()
   const queryParameters = new URLSearchParams(location.search);
   const queryText = queryParameters.get("text");
-  const queryRepo = queryParameters.get("repo");
-  const querySubd = queryParameters.get("subdisc");
 
-  var tagDefault = "";
-  var repoDefault = "";
-  var subdDefault = "";
-  var journalDefault = "";
-  var textDefault = "";
-  var switchDefault = "subd";
-  
-  if ( queryRepo !== null ) {
-    repoDefault = queryRepo;
+  const [repoFilter, setRepoFilter] = useState(() => ReturnAll(queryText));
+  const [subdFilter, setSubdFilter] = useState(() => ReturnAll(queryText));
+  const [journalFilter, setJournalFilter] = useState(() => ReturnAll(queryText));
+  const [searchFilter, setSearchFilter] = useState(() => ReturnText(queryText));
+  const [filterSwitch, setFilterSwitch] = useState(() => ReturnSwitch(queryText));
+
+  function ReturnText(queryText) {
+    if (queryText !== null) {
+      return(queryText);
+    } else {
+      return("");
+    }
   }
-  else if ( queryText !== null ) {
-    textDefault = queryText;
-    tagDefault = "";
-    switchDefault = "text"
+
+  function ReturnSwitch(queryText) {
+    if (queryText !== null) {
+      return("text");
+    } else {
+      return("subd");
+    }
   }
-  else {
-    tagDefault = "All";
-    subdDefault = "All";
-    journalDefault = "All";
-    repoDefault = "All";
+
+  function ReturnAll(queryText) {
+    if (queryText !== null) {
+      return("");
+    } else {
+      return("All");
+    }
   }
 
   // Define React states for filtering
 
 /*   const [tagFilter, setTagFilter] = useState(tagDefault); */
-  const [repoFilter, setRepoFilter] = useState(repoDefault);
-  const [subdFilter, setSubdFilter] = useState(subdDefault);
-  const [journalFilter, setJournalFilter] = useState(journalDefault);
-  const [searchFilter, setSearchFilter] = useState(textDefault);
-  const [filterSwitch, setFilterSwitch] = useState(switchDefault);
 
   // Handles text input
 
