@@ -1,12 +1,17 @@
-import React,{ useState } from "react";
+import React,{ useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom"
 
 var lbeTable = require('@site/static/assets/lbe.json');
 
 function MultiUrl( {name,url} ) {
+
+  const aRef = useRef(null);
+
+  useEffect(() => (aRef.current.href = url)); // Force re-assignment of a.href attribute
+
   return (
     <button className="lbe__block__link">
-      <a href={url} target="_blank">{name}</a>
+      <a ref={aRef} href={url} target="_blank">{name}</a>
     </button>
   )
 }
@@ -26,39 +31,47 @@ export default function Lbe( {useCategoriesList} ) {
   const location = useLocation()
   const queryParameters = new URLSearchParams(location.search);
   const queryText = queryParameters.get("text");
-  const queryRepo = queryParameters.get("repo");
-  const querySubd = queryParameters.get("subdisc");
+  const queryDoi = queryParameters.get("doi");
 
-  var tagDefault = "";
-  var repoDefault = "";
-  var subdDefault = "";
-  var journalDefault = "";
-  var textDefault = "";
-  var switchDefault = "subd";
-  
-  if ( queryRepo !== null ) {
-    repoDefault = queryRepo;
+  // Define React states
+
+  const [repoFilter, setRepoFilter] = useState(() => ReturnAll());
+  const [subdFilter, setSubdFilter] = useState(() => ReturnAll());
+  const [journalFilter, setJournalFilter] = useState(() => ReturnAll());
+  const [searchFilter, setSearchFilter] = useState(() => ReturnText());
+  const [filterSwitch, setFilterSwitch] = useState(() => ReturnSwitch());
+
+  // Conditions for initial states
+
+  function ReturnText() {
+    if (queryText !== null) {
+      return(queryText);
+    } else {
+      return("");
+    }
   }
-  else if ( queryText !== null ) {
-    textDefault = queryText;
-    tagDefault = "";
-    switchDefault = "text"
+
+  function ReturnSwitch() {
+    if (queryDoi !== null) {
+      return("doi");
+    } else if (queryText !== null) {
+      return("text");
+    } else {
+      return("subd");
+    }
   }
-  else {
-    tagDefault = "All";
-    subdDefault = "All";
-    journalDefault = "All";
-    repoDefault = "All";
+
+  function ReturnAll() {
+    if (queryDoi !== null || queryText !== null) {
+      return("");
+    } else {
+      return("All");
+    }
   }
 
   // Define React states for filtering
 
 /*   const [tagFilter, setTagFilter] = useState(tagDefault); */
-  const [repoFilter, setRepoFilter] = useState(repoDefault);
-  const [subdFilter, setSubdFilter] = useState(subdDefault);
-  const [journalFilter, setJournalFilter] = useState(journalDefault);
-  const [searchFilter, setSearchFilter] = useState(textDefault);
-  const [filterSwitch, setFilterSwitch] = useState(switchDefault);
 
   // Handles text input
 
@@ -277,22 +290,25 @@ export default function Lbe( {useCategoriesList} ) {
   
   // Function for single lbe dataset block
 
-  function LbeBlock( {title, authors, journal, pubyear, linkpub, linkdata, linkcomment, description, tags, subdiscipline } ) {
+  function LbeBlock( {key, title, authors, journal, pubyear, linkpub, linkdata, linkcomment, description, tags, subdiscipline } ) {
 
-  var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"
+    var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"    
+    var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
 
-  var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
+    const aRef = useRef(null);
 
+    useEffect(() => (aRef.current.href = linkpub)); // Force re-assignment of a.href attribute
+    
     return (
       <div className="lbe__block">
         <div className="lbe__block__header">
           <div className="lbe__block__header__title"><h3>{title}</h3></div>
-          <div className="lbe__block__header__link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
+          <div className="lbe__block__header__link"><MultiUrl name="Permalink" url={"./?doi=".concat(doi)} /></div>
         </div>
 
         <p><em><Authors authors={authors} length={10} /></em></p>
 
-        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a ref={aRef} href={linkpub} target="_blank">{doi}</a>.</p>
         
         <p>{myRepos.map((tag,idx) => 
           <RepoButton key={idx} name={tag} parent="block" />)
@@ -391,7 +407,11 @@ export default function Lbe( {useCategoriesList} ) {
         var resultOutput = result.length+" entries found...";
       }
       break;
+    case "doi":
+      result = lbeTable.filter(n => n.linkpub.includes(queryDoi));  
   }
+
+  console.log(result);
 
   return (
     <>
