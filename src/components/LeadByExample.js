@@ -4,11 +4,6 @@ import { useLocation } from "react-router-dom"
 var lbeTable = require('@site/static/assets/lbe.json');
 
 function MultiUrl( {name,url} ) {
-
-  // const aRef = useRef(null);
-
-  // useEffect(() => (aRef.current.href = url)); // Force re-assignment of a.href attribute
-
   return (
     <button className="lbe__block__link">
       <a href={url} target="_blank">{name}</a>
@@ -21,6 +16,32 @@ function TextSearch( {handleChange,searchFilter,resultOutput} ) {
     <div className="lbe__searchfilter__search">
       <input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /> &ensp; <em>{resultOutput}</em>
     </div>
+  )
+}
+
+// Function for expandible author list
+
+function Authors( { authors, length } ) {
+
+  const [listOpen,ToggleListOpen] = useState(false); // Define state for author list, default "false"
+  var shortlist = authors.split(", ",length).join(", ");   // List of authors with elements given by length
+
+  // If there are less than {length} authors, do not display button
+
+  if ( shortlist == authors ) {
+    return (
+      <>{authors}</>
+    )
+  }
+
+  else if (listOpen) {
+    return(
+      <>{authors} <button className="lbe__block__author-trigger" onClick={() => ToggleListOpen(!listOpen)}>&#9650; collapse</button></> 
+    )
+  }
+
+  else return (
+    <>{shortlist}, ... <button className="lbe__block__author-trigger" onClick={() => ToggleListOpen(!listOpen)}>show all &#9660;</button></>
   )
 }
 
@@ -202,34 +223,7 @@ export default function Lbe( {useCategoriesList} ) {
             {name} ({number})
         </button>
     )
-  }
-
-  // Function for expandible author list
-
-  function Authors( { authors, length } ) {
-
-    const [listOpen,ToggleListOpen] = useState(false); // Define state for author list, default "false"
-    var shortlist = authors.split(", ",length).join(", ");   // List of authors with elements given by length
-
-    // If there are less than {length} authors, do not display button
-
-    if ( shortlist == authors ) {
-      return (
-        <>{authors}</>
-      )
-    }
-
-    else if (listOpen) {
-      return(
-        <>{authors} <button className="lbe__block__author-trigger" onClick={() => ToggleListOpen(!listOpen)}>&#9650; collapse</button></> 
-      )
-    }
-
-    else return (
-      <>{shortlist}, ... <button className="lbe__block__author-trigger" onClick={() => ToggleListOpen(!listOpen)}>show all &#9660;</button></>
-    )
-  }
-  
+  }  
   
   // Function for single lbe dataset block
 
