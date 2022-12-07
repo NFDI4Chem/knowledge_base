@@ -5,13 +5,13 @@ var lbeTable = require('@site/static/assets/lbe.json');
 
 function MultiUrl( {name,url} ) {
 
-  const aRef = useRef(null);
+  // const aRef = useRef(null);
 
-  useEffect(() => (aRef.current.href = url)); // Force re-assignment of a.href attribute
+  // useEffect(() => (aRef.current.href = url)); // Force re-assignment of a.href attribute
 
   return (
     <button className="lbe__block__link">
-      <a ref={aRef} href={url} target="_blank">{name}</a>
+      <a href={url} target="_blank">{name}</a>
     </button>
   )
 }
@@ -33,49 +33,29 @@ export default function Lbe( {useCategoriesList} ) {
   const queryText = queryParameters.get("text");
   const queryDoi = queryParameters.get("doi");
 
-  // Define React states
+  // Define React state object
 
-  const [repoFilter, setRepoFilter] = useState(() => ReturnAll());
-  const [subdFilter, setSubdFilter] = useState(() => ReturnAll());
-  const [journalFilter, setJournalFilter] = useState(() => ReturnAll());
-  const [searchFilter, setSearchFilter] = useState(() => ReturnText());
-  const [filterSwitch, setFilterSwitch] = useState(() => ReturnSwitch());
+  const [lbeState, setLbeState] = useState({
+    repo: "",
+    subd: "",
+    journal: "",
+    search: "",
+    switch: ""
+  });
 
   // Conditions for initial states
 
-  function ReturnText() {
-    if (queryText !== null) {
-      return(queryText);
-    } else {
-      return("");
-    }
+  if (queryText !== null) {
+    useEffect(() => {setLbeState({search: queryText, switch: "text"}); },[]);
+  } else if (queryDoi !== null) {
+    useEffect(() => {setLbeState({switch: "doi"}); },[]);
+  } else {
+    useEffect(() => {setLbeState({repo: "All", subd: "All", journal: "All", search: "", switch: "subd"})},[]);
   }
-
-  function ReturnSwitch() {
-    if (queryDoi !== null) {
-      return("doi");
-    } else if (queryText !== null) {
-      return("text");
-    } else {
-      return("subd");
-    }
-  }
-
-  function ReturnAll() {
-    if (queryDoi !== null || queryText !== null) {
-      return("");
-    } else {
-      return("All");
-    }
-  }
-
-  // Define React states for filtering
-
-/*   const [tagFilter, setTagFilter] = useState(tagDefault); */
 
   // Handles text input
 
-  const handleChange = e => {setSearchFilter(e.target.value); setSubdFilter(""); setRepoFilter(""); setJournalFilter(""); setFilterSwitch("text")};
+  const handleChange = e => setLbeState({search: e.target.value, subd: "", repo: "", journal: "", switch: "text"},[e.target.value]);
 
   // Get list of subdisciplines
 
@@ -97,43 +77,6 @@ export default function Lbe( {useCategoriesList} ) {
   var repos = Array.from(new Set(lbeTable.map(obj => obj.linkdata.map(obj => obj.name)).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   repos.unshift("All"); // Add "All" option at the beginning
 
-  // Function for Tag filter buttons (Currently not in use)
-
-  function TagButton( { name } ) {
-
-    var buttonClass = "lbe__filterbutton lbe__filterbutton_secondary";
-    var number = 0;
-
-    // Styling of active button
-
-    if (name == tagFilter) {  
-      buttonClass = "lbe__filterbutton lbe__filterbutton--active";
-    }
-
-    // Show number of items
-
-    if (name == "All") {
-      number = lbeTable.length;
-    } else {
-      number = lbeTable.filter(m => m.tags.includes(name)).length;
-    }
-
-    return (
-        <button 
-            className={buttonClass}
-            onClick={() => {
-              if (name == "All") {
-                setJournalFilter("All"); setSubdFilter("All"); setTagFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
-              else {
-                setJournalFilter(""); setSubdFilter(""); setTagFilter(name); setSearchFilter(""); setFilterSwitch("tag")
-              }
-            }}
-          >
-            {name} ({number})
-        </button>
-    )
-  }
-
   // Function for Repo button
 
   function RepoButton( { name,parent } ) {
@@ -144,7 +87,7 @@ export default function Lbe( {useCategoriesList} ) {
 
     // Styling of active button
 
-    if (name == repoFilter) {  
+    if (name == lbeState.repo) {  
       buttonClass = "lbe__filterbutton lbe__filterbutton--active";
     }
 
@@ -171,9 +114,9 @@ export default function Lbe( {useCategoriesList} ) {
             className={buttonClass}
             onClick={() => {
               if (name == "All") {
-                setJournalFilter("All"); setSubdFilter("All"); setRepoFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
-              else {
-                setJournalFilter(""); setSubdFilter(""); setRepoFilter(name); setSearchFilter(""); setFilterSwitch("repo")
+                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
+              } else {
+                setLbeState({journal: "", subd: "", repo: name, search: "", switch: "repo"});
               }
             }}
           >
@@ -182,7 +125,7 @@ export default function Lbe( {useCategoriesList} ) {
     )
   }
 
-// Function for subd button
+  // Function for subd button
 
   function SubdButton( { name,parent } ) {
 
@@ -192,7 +135,7 @@ export default function Lbe( {useCategoriesList} ) {
 
     // Styling of active button
 
-    if (name == subdFilter) {
+    if (name == lbeState.subd) {
       buttonClass = "lbe__filterbutton lbe__filterbutton--active";
     }
 
@@ -216,13 +159,13 @@ export default function Lbe( {useCategoriesList} ) {
             className={buttonClass}
             onClick={() => {
               if (name == "All") {
-                setJournalFilter("All"); setSubdFilter("All"); setRepoFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
-              else {
-                setJournalFilter(""); setSubdFilter(name); setRepoFilter(""); setSearchFilter(""); setFilterSwitch("subd")
+                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
+              } else {
+                setLbeState({journal: "", subd: name, repo: "", search: "", switch: "subd"});
               }
             }} 
         >
-            {label}
+          {label}
         </button>
     )
   }
@@ -234,7 +177,7 @@ export default function Lbe( {useCategoriesList} ) {
     var buttonClass = "lbe__filterbutton";
     var number = 0;
 
-    if (name == journalFilter) {
+    if (name == lbeState.journal) {
       buttonClass = "lbe__filterbutton lbe__filterbutton--active";
     }
 
@@ -251,11 +194,11 @@ export default function Lbe( {useCategoriesList} ) {
             className={buttonClass}
             onClick={() => {
               if (name == "All") {
-                setJournalFilter("All"); setSubdFilter("All"); setRepoFilter("All"); setSearchFilter(""); setFilterSwitch("subd")}
-              else {
-                setJournalFilter(name); setSubdFilter(""); setRepoFilter(""); setSearchFilter(""); setFilterSwitch("journal")
-              }}
-            }>
+                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
+              } else {
+                setLbeState({journal: name, subd: "", repo: "", search: "", switch: "journal"});
+              }
+            }}>
             {name} ({number})
         </button>
     )
@@ -295,9 +238,9 @@ export default function Lbe( {useCategoriesList} ) {
     var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"    
     var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
 
-    const aRef = useRef(null);
+    // const aRef = useRef(null);
 
-    useEffect(() => (aRef.current.href = linkpub)); // Force re-assignment of a.href attribute
+    // useEffect(() => (aRef.current.href = linkpub)); // Force re-assignment of a.href attribute
     
     return (
       <div className="lbe__block">
@@ -308,7 +251,7 @@ export default function Lbe( {useCategoriesList} ) {
 
         <p><em><Authors authors={authors} length={10} /></em></p>
 
-        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a ref={aRef} href={linkpub} target="_blank">{doi}</a>.</p>
+        <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
         <p>{myRepos.map((tag,idx) => 
           <RepoButton key={idx} name={tag} parent="block" />)
@@ -366,12 +309,12 @@ export default function Lbe( {useCategoriesList} ) {
 
   // Render all datasets if "All" is selected
 
-  if (repoFilter == "All" || subdFilter == "All") {
+  if (lbeState.repo == "All" || lbeState.subd == "All") {
     return(
       <div className="lbe">
         <div className="lbe__searchfilter">
           <div className="lbe__searchfilter__container">
-            <TextSearch handleChange={handleChange} searchFilter={searchFilter} resultOutput={resultOutput} />
+            <TextSearch handleChange={handleChange} searchFilter={lbeState.search} resultOutput={resultOutput} />
             <LbeButtons />
           </div>
         </div>
@@ -380,26 +323,26 @@ export default function Lbe( {useCategoriesList} ) {
     )
   }
 
-  // Determine result set based on filterSwitch states
+  // Determine result set based on lbeState.switch states
 
   var result = [];
 
-  switch ( filterSwitch ) {
+  switch ( lbeState.switch ) {
     case "tag":
       result = lbeTable.filter(n => n.tags.includes(tagFilter));
       break;
     case "repo":
-      result = lbeTable.filter(n => n.linkdata.map(n => n.name).includes(repoFilter));
+      result = lbeTable.filter(n => n.linkdata.map(n => n.name).includes(lbeState.repo));
       break;
     case "subd":
-      result = lbeTable.filter(n => n.subdiscipline.includes(subdFilter));
+      result = lbeTable.filter(n => n.subdiscipline.includes(lbeState.subd));
       break;
     case "journal":
-      result = lbeTable.filter(n => n.journal.includes(journalFilter));
+      result = lbeTable.filter(n => n.journal.includes(lbeState.journal));
       break;
     case "text":
-      result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(searchFilter.toLowerCase()));   // Squash object with JSON.stringify() for better searchability
-      if ( searchFilter == "" ) {
+      result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(lbeState.search.toLowerCase()));   // Squash object with JSON.stringify() for better searchability
+      if ( lbeState.search == "" ) {
         var resultOutput = "";
       } else if (result.length == 1) {
         var resultOutput = result.length+" entry found...";
@@ -411,14 +354,12 @@ export default function Lbe( {useCategoriesList} ) {
       result = lbeTable.filter(n => n.linkpub.includes(queryDoi));  
   }
 
-  console.log(result);
-
   return (
     <>
       <div className="lbe">
         <div className="lbe__searchfilter">
           <div className="lbe__searchfilter__container">
-              <TextSearch handleChange={handleChange} searchFilter={searchFilter} resultOutput={resultOutput} />
+              <TextSearch handleChange={handleChange} searchFilter={lbeState.search} resultOutput={resultOutput} />
               <LbeButtons />
           </div>
         </div>
