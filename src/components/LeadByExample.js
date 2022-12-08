@@ -58,10 +58,10 @@ export default function Lbe( {useCategoriesList} ) {
 
   const [lbeState, setLbeState] = useState({
     repo: "",
-    subd: "",
+    subd: "All",
     journal: "",
     search: "",
-    switch: ""
+    switch: "subd"
   });
 
   // Conditions for initial states
@@ -94,9 +94,18 @@ export default function Lbe( {useCategoriesList} ) {
   var repos = Array.from(new Set(lbeTable.map(obj => obj.linkdata.map(obj => obj.name)).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   repos.unshift("All"); // Add "All" option at the beginning
 
+  // Lookup for JSON attributes corresponding to type
+
+  const filterAttr = {
+    "subd": "subdiscipline",
+    "journal": "journal",
+    "repo": "linkdata",
+    "doi": "linkpub"
+  };
+
   // Handles text input
 
-  const handleChange = e => setLbeState({search: e.target.value, subd: "", repo: "", journal: "", switch: "text"},[e.target.value]);
+  const handleChange = e => setLbeState({search: e.target.value, subd: "", repo: "", journal: "", switch: "search"},[e.target.value]);
 
   // Function for handling button clicks
 
@@ -111,14 +120,6 @@ export default function Lbe( {useCategoriesList} ) {
   // Function for filtering buttons
 
   function FilterButton( {type, name, numbered} ) { // type and name are strings, numbered is boolean
-
-    // Lookup for JSON attributes corresponding to type
-
-    const filterAttr = {
-      "subd": "subdiscipline",
-      "journal": "journal",
-      "repo": "linkdata"
-    };
 
     // Initialize variables
 
@@ -264,7 +265,7 @@ export default function Lbe( {useCategoriesList} ) {
     case "journal":
       result = lbeTable.filter(n => n.journal.includes(lbeState.journal));
       break;
-    case "text":
+    case "search":
       result = lbeTable.filter(obj => JSON.stringify(obj).toLowerCase().includes(lbeState.search.toLowerCase()));   // Squash object with JSON.stringify() for better searchability
       if ( lbeState.search == "" ) {
         var resultOutput = "";
