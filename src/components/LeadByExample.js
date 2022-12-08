@@ -101,7 +101,6 @@ export default function Lbe( {useCategoriesList} ) {
   // Function for handling button clicks
 
   function HandleClick( {name,newState} ) {
-    console.log(newState,name);
     if (name == "All") {
       setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
     } else {
