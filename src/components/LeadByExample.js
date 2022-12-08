@@ -74,10 +74,6 @@ export default function Lbe( {useCategoriesList} ) {
     useEffect(() => {setLbeState({repo: "All", subd: "All", journal: "All", search: "", switch: "subd"})},[]);
   }
 
-  // Handles text input
-
-  const handleChange = e => setLbeState({search: e.target.value, subd: "", repo: "", journal: "", switch: "text"},[e.target.value]);
-
   // Get list of subdisciplines
 
   var subdiscs = Array.from(new Set(lbeTable.map(obj => obj.subdiscipline).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
@@ -98,6 +94,21 @@ export default function Lbe( {useCategoriesList} ) {
   var repos = Array.from(new Set(lbeTable.map(obj => obj.linkdata.map(obj => obj.name)).flat())).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
   repos.unshift("All"); // Add "All" option at the beginning
 
+  // Handles text input
+
+  const handleChange = e => setLbeState({search: e.target.value, subd: "", repo: "", journal: "", switch: "text"},[e.target.value]);
+
+  // Function for handling button clicks
+
+  function HandleClick( {name,newState} ) {
+    console.log(newState,name);
+    if (name == "All") {
+      setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
+    } else {
+      setLbeState(newState);
+    }
+  }
+
   // Function for Repo button
 
   function RepoButton( { name,parent } ) {
@@ -105,6 +116,7 @@ export default function Lbe( {useCategoriesList} ) {
     var buttonClass = "lbe__filterbutton";
     var number = 0;
     var label = "";
+    var newState={repo: name, switch: "repo"};
 
     // Styling of active button
 
@@ -131,18 +143,12 @@ export default function Lbe( {useCategoriesList} ) {
 
     
     return (
-        <button 
-            className={buttonClass}
-            onClick={() => {
-              if (name == "All") {
-                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
-              } else {
-                setLbeState({journal: "", subd: "", repo: name, search: "", switch: "repo"});
-              }
-            }}
-          >
-            {label}
-        </button>
+      <button 
+        className={buttonClass}
+        onClick={() => HandleClick( {name, newState} )} 
+      >
+        {label}
+      </button>
     )
   }
 
@@ -153,6 +159,7 @@ export default function Lbe( {useCategoriesList} ) {
     var buttonClass = "lbe__filterbutton";
     var number = 0;    
     var label = "";
+    var newState={subd: name, switch: "subd"};
 
     // Styling of active button
 
@@ -178,13 +185,7 @@ export default function Lbe( {useCategoriesList} ) {
     return (
         <button 
             className={buttonClass}
-            onClick={() => {
-              if (name == "All") {
-                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
-              } else {
-                setLbeState({journal: "", subd: name, repo: "", search: "", switch: "subd"});
-              }
-            }} 
+            onClick={() => HandleClick( {name, newState} )} 
         >
           {label}
         </button>
@@ -197,6 +198,7 @@ export default function Lbe( {useCategoriesList} ) {
 
     var buttonClass = "lbe__filterbutton";
     var number = 0;
+    var newState={journal: name, switch: "journal"};
 
     if (name == lbeState.journal) {
       buttonClass = "lbe__filterbutton lbe__filterbutton--active";
@@ -213,13 +215,8 @@ export default function Lbe( {useCategoriesList} ) {
     return (
         <button 
             className={buttonClass}
-            onClick={() => {
-              if (name == "All") {
-                setLbeState({journal: "All", subd: "All", repo: "All", search: "", switch: "subd"});
-              } else {
-                setLbeState({journal: name, subd: "", repo: "", search: "", switch: "journal"});
-              }
-            }}>
+            onClick={() => HandleClick( {name, newState} )} 
+        >
             {name} ({number})
         </button>
     )
@@ -227,7 +224,7 @@ export default function Lbe( {useCategoriesList} ) {
   
   // Function for single lbe dataset block
 
-  function LbeBlock( {key, title, authors, journal, pubyear, linkpub, linkdata, linkcomment, description, tags, subdiscipline } ) {
+  function LbeBlock( { title, authors, journal, pubyear, linkpub, linkdata, linkcomment, description, tags, subdiscipline } ) {
 
     var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"    
     var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
