@@ -108,39 +108,47 @@ export default function Lbe( {useCategoriesList} ) {
     }
   }
 
-  // Function for Repo button
+  // Function for filtering buttons
 
-  function RepoButton( { name,parent } ) {
+  function FilterButton( {type, name, numbered} ) { // type and name are strings, numbered is boolean
+
+    // Lookup for JSON attributes corresponding to type
+
+    const filterAttr = {
+      "subd": "subdiscipline",
+      "journal": "journal",
+      "repo": "linkdata"
+    };
+
+    // Initialize variables
 
     var buttonClass = "lbe__filterbutton";
     var number = 0;
     var label = "";
-    var newState={repo: name, switch: "repo"};
 
+    // Define how the state object should be set when clicked
+
+    var newState={[type]: name, switch: type};
+    
     // Styling of active button
 
-    if (name == lbeState.repo) {  
+    if (name == lbeState[type]) {  
       buttonClass = "lbe__filterbutton lbe__filterbutton--active";
     }
 
-    // Show number of items
+    // Determine number (when needed)
 
-    if (name == "All") {
-      number = lbeTable.length;
+    if (numbered) {
+      if (name == "All") {
+        number = lbeTable.length;
+      } else {
+        number = lbeTable.map(m => JSON.stringify(m[filterAttr[type]])).filter(m => m.includes(name)).length;
+      }
+      label = name + " (" + number + ")";  
     } else {
-      number = lbeTable.filter(m => m.linkdata.map(m => m.name).includes(name)).length;
-    }
-
-    // Show number if parent is not LbeBlock
-
-    if (parent == "block") {
       label = name;
     }
-    else {
-      label = name+" ("+number+")";
-    }
 
-    
     return (
       <button 
         className={buttonClass}
@@ -150,76 +158,6 @@ export default function Lbe( {useCategoriesList} ) {
       </button>
     )
   }
-
-  // Function for subd button
-
-  function SubdButton( { name,parent } ) {
-
-    var buttonClass = "lbe__filterbutton";
-    var number = 0;    
-    var label = "";
-    var newState={subd: name, switch: "subd"};
-
-    // Styling of active button
-
-    if (name == lbeState.subd) {
-      buttonClass = "lbe__filterbutton lbe__filterbutton--active";
-    }
-
-    // Show number of items
-
-    if (name == "All") {
-      number = lbeTable.length;
-    } else {
-      number = lbeTable.filter(m => m.subdiscipline.includes(name)).length;
-    }
-
-    if (parent == "block") {
-      label = name;
-    }
-    else {
-      label = name+" ("+number+")";
-    }
-
-    return (
-        <button 
-            className={buttonClass}
-            onClick={() => HandleClick( {name, newState} )} 
-        >
-          {label}
-        </button>
-    )
-  }
-
-  // Function for Journal filter buttons
-
-  function JournalButton( { name } ) {
-
-    var buttonClass = "lbe__filterbutton";
-    var number = 0;
-    var newState={journal: name, switch: "journal"};
-
-    if (name == lbeState.journal) {
-      buttonClass = "lbe__filterbutton lbe__filterbutton--active";
-    }
-
-    // Show number of items
-
-    if (name == "All") {
-      number = lbeTable.length;
-    } else {
-      number = lbeTable.filter(m => m.journal.includes(name)).length;
-    }
-
-    return (
-        <button 
-            className={buttonClass}
-            onClick={() => HandleClick( {name, newState} )} 
-        >
-            {name} ({number})
-        </button>
-    )
-  }  
   
   // Function for single lbe dataset block
 
@@ -228,10 +166,6 @@ export default function Lbe( {useCategoriesList} ) {
     var doi = linkpub.slice(linkpub.indexOf("doi.org")+8); // Extract DOI from link by cutting right of "doi.org"    
     var myRepos = Array.from(new Set(linkdata.map(obj => obj.name))).flat().sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));  // Define set of repos in this dataset
 
-    // const aRef = useRef(null);
-
-    // useEffect(() => (aRef.current.href = linkpub)); // Force re-assignment of a.href attribute
-    
     return (
       <div className="lbe__block">
         <div className="lbe__block__header">
@@ -244,7 +178,7 @@ export default function Lbe( {useCategoriesList} ) {
         <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
         
         <p>{myRepos.map((tag,idx) => 
-          <RepoButton key={idx} name={tag} parent="block" />)
+          <FilterButton key={idx} name={tag} type="repo" numbered={false} />)
           }
         </p>
 
@@ -278,9 +212,9 @@ export default function Lbe( {useCategoriesList} ) {
   function LbeButtons() {
     return(
       <>
-        <div className="lbe__searchfilter__section"><h4>Filter by repositories</h4><p>{repos.map((props, idx) => <RepoButton key={idx} name={props} />)}</p></div>
-        <div className="lbe__searchfilter__section"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
-        <div className="lbe__searchfilter__section"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
+        <div className="lbe__searchfilter__section"><h4>Filter by repositories</h4><p>{repos.map((props, idx) => <FilterButton key={idx} name={props} type={"repo"} numbered={true} />)}</p></div>
+        <div className="lbe__searchfilter__section"><h4>Filter by subdisciplines</h4><p>{subdiscs.map((props, idx) => <FilterButton key={idx} name={props} type={"subd"} numbered={true} />)}</p></div>
+        <div className="lbe__searchfilter__section"><h4>Filter by journals</h4><p>{journals.map((props, idx) => <FilterButton key={idx} name={props} type={"journal"} numbered={true} />)}</p></div>
       </>
     )
   }
