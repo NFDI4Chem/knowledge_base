@@ -58,10 +58,10 @@ export default function Lbe( {useCategoriesList} ) {
 
   const [lbeState, setLbeState] = useState({
     repo: "",
-    subd: "All",
+    subd: "",
     journal: "",
     search: "",
-    switch: "subd"
+    switch: ""
   });
 
   // Conditions for initial states
