@@ -1,6 +1,6 @@
 ---
 title: "Chemical Table File Formats"
-slug: "/docs/ct_files"
+slug: "/ct_files"
 ---
  # Chemical Table File Formats
 
@@ -20,7 +20,7 @@ The structures and relations of the most relevant CTfiles are shown in figure 1.
 
 The data block may consist of several data items each starting with a data header in one line followed by the data, which might span over multiple lines. Each data item is terminated by a blank line.
 
-All CTfiles do not make use of controlled vocabularies or [ontologies](/docs/topics/ontology) in the data block, but these can be easily added or linked, due to the text-based nature of CTfile formats. One example is the [controlled vocabulary](https://nmredata.org/wiki/NMReDATA_tag_format) for SDtags of the open analytical data format [NMReDATA](https://nmredata.org/). The data block might be also used to store supplementary data to enhance [machine-readability of chemical structures](/docs/topics/machine-readable_chemical_structures).
+All CTfiles do not make use of controlled vocabularies or [ontologies](/docs/ontology) in the data block, but these can be easily added or linked, due to the text-based nature of CTfile formats. One example is the [controlled vocabulary](https://nmredata.org/wiki/NMReDATA_tag_format) for SDtags of the open analytical data format [NMReDATA](https://nmredata.org/). The data block might be also used to store supplementary data to enhance [machine-readability of chemical structures](/docs/machine-readable_chemical_structures).
 
 There are two variants of these formats in use. Due to limitations in the V2000 format, the extended V3000 format was released. This V3000 format also includes a collection block, template block, extended connection table (extended CTAB) and enhanced features on stereochemistry. The V2000 format is limited in the size of molecules by supporting up to 999 atoms, thus, it is not applicable to large molecules. Moreover, the V2000 format does not support R-groups. However, the V3000 variant is currently not supported by all tools and applications. The V2000 format should be used to maximise interoperability, especially for chemistry dealing with small molecules.
 

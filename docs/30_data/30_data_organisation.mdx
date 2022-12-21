@@ -3,10 +3,10 @@ title: "Data Organisation"
 nfdi4chem-description: best practices to name and organise research data
 nfdi4chem-id: data_organisation
 nfdi4chem-tags: [data_organisation, data_storage, repositories]
-slug: "/docs/data_organisation"
+slug: "/data_organisation"
 ---
 
-After [documentation of your research data](/docs/data/data_documentation), more detailed descriptions of how your information is saved is required - a quick look at files and folders, but when working with many or large data sets, the advantages of databases can become relevant. Consider whether this applies to your project and whether only files exported from the database might be useful. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data/data_storage).
+After [documentation of your research data](/docs/data_documentation), more detailed descriptions of how your information is saved is required - a quick look at files and folders, but when working with many or large data sets, the advantages of databases can become relevant. Consider whether this applies to your project and whether only files exported from the database might be useful. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data_storage).
 
 
 ## Files: naming conventions
@@ -18,7 +18,7 @@ Human users benefit from file names that allow for easy sorting and a notion of 
     myfinaldata_V2.csv
     myfinaldata_V2_ready.csv
 
-We need short and descriptive file names as an identifier for a document. Useful names give information on what the files contain and helps in sorting them. Pay attention to your naming scheme when working with others: It is important to follow the same file naming convention, so develop an adapted scheme when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data/data_documentation).
+We need short and descriptive file names as an identifier for a document. Useful names give information on what the files contain and helps in sorting them. Pay attention to your naming scheme when working with others: It is important to follow the same file naming convention, so develop an adapted scheme when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation).
 
 Try to think about the different statuses (raw data, draft, temporary, finished, ...) and types (editable source format like textfiles or csv in contrast to export formats such as PDF) of your documents.
 
@@ -71,25 +71,25 @@ Stash snapshots or simply track changes and allow to find something that existed
 #### Possible Solutions
 * Low number of requirements: manage manually e.g. by keeping a log where the changes for each respective file is documented, version by version.
 * For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted by e.g. [GitHub](https://github.com/) or your home institution. Very strong with uncompressed, readable and comparable files such as text files or csv.
-* Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
+* Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
 
 
 ## Files: types of metadata
 
-Consider the way data and [Metadata](/docs/topics/metadata/) can be stored together as FDOs (Fair Digital Objects). For example, metadata can be divided into the following four categories:
+Consider the way data and [Metadata](/docs/metadata/) can be stored together as FDOs (Fair Digital Objects). For example, metadata can be divided into the following four categories:
 * descriptive metadata
 * administrative metadata
 * technical metadata
 * structural metadata
 
-An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/topics/format_standards/) for more information.
+An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/format_standards/) for more information.
 
 ## Files: formats
 
-Different disciplines use established standards, see [Data Format Standard](/docs/topics/format_standards/). Also consider beyond the duration of the project:
+Different disciplines use established standards, see [Data Format Standard](/docs/format_standards/). Also consider beyond the duration of the project:
 - usage of proprietary or open file formats
 - exchange within and outside of the working group
-- short term and long term storage, [Data Storage and Archiving](/docs/data/data_storage)
+- short term and long term storage, [Data Storage and Archiving](/docs/data_storage)
 - special workflows and procedures (e.g. for data collection, documentation and evaluation)
 - shared or separate storage (e.g. SPSS file for data; XML file for metadata)
 - suitable procedures for preserving the consistency of data and metadata
@@ -97,7 +97,7 @@ Different disciplines use established standards, see [Data Format Standard](/doc
 
 ## Folder structure
 
-Everything should be immediately intuitively understandable. The folder structure helps you to navigate through the individual pieces of information. Develop a convention when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data/data_documentation). Try to consistently apply the same strategy in every project within the research group.
+Everything should be immediately intuitively understandable. The folder structure helps you to navigate through the individual pieces of information. Develop a convention when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation). Try to consistently apply the same strategy in every project within the research group.
 
 Folders should:
 * follow a structure with folders and subfolders that correspond to the project design and workflow

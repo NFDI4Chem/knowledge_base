@@ -14,7 +14,7 @@ do
     if [[ $i =~ $regex ]]; then
 
         #compose slug string from filename
-        slug="slug: \"/docs/${BASH_REMATCH[1]}\""
+        slug="slug: \"/${BASH_REMATCH[1]}\""
 
         echo "File $i: Slug is added to frontmatter:"
         echo "$slug"
