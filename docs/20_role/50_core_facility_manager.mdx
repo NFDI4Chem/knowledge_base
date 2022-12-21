@@ -15,7 +15,7 @@ This article applies to core facility managers and heads of analytical service u
 
 In the chemistry data lifecycle, core facilities play an important role as major producers of chemical data. For modern analytical techniques such as mass spectrometry or NMR spectroscopy, data are usually recorded digitally and the challenges lie less in digitalisation but management issues.
 
-This article reflects some of the most important areas to consider for a core facilities [data storage](/docs/data/data_storage/) infrastructure and gives perspectives on where [FAIR guiding principles](/docs/topics/fair/) may already be followed today.
+This article reflects some of the most important areas to consider for a core facilities [data storage](/docs/data_storage/) infrastructure and gives perspectives on where [FAIR guiding principles](/docs/fair/) may already be followed today.
 
 ## Good Research Practice
 
@@ -27,7 +27,7 @@ The German Research Council ([DFG](https://www.dfg.de)) summarizes the consensus
 
 ## How to start
 
-From the perspective of a core facility, it usually makes sense to separately consider **data safety** and digestion of [sample metadata](/docs/topics/metadata/).
+From the perspective of a core facility, it usually makes sense to separately consider **data safety** and digestion of [sample metadata](/docs/metadata/).
 
 ### Data safety
 
@@ -35,7 +35,7 @@ The most important aspect for core facility managers is to preculde data loss. A
 
 At most universities, local computing centres will assist in providing decentral and redudant storage. In many cases, this storage can not also be used to provide instrument data to users without direct access to instrument workstations which is usually undesired. Ideally, the remote storage is versioned so that accidental deletions can be reversed.
 
-In addition, [backup strategies](/docs/data/data_storage/) for all instrument workstations should be considered. In addition to providing additional data safety, they also can be very useful for disaster recovery which can be invaluable for legacy systems were software components may no longer be available.
+In addition, [backup strategies](/docs/data_storage/) for all instrument workstations should be considered. In addition to providing additional data safety, they also can be very useful for disaster recovery which can be invaluable for legacy systems were software components may no longer be available.
 
 ### Sample Metadata
 
@@ -60,10 +60,10 @@ While most of the scientific work still lies ahead, there are already valuable m
     - Chiroptical data
 - Biological properties
 
-The challenge of digesting those metadata according to [FAIR guiding principles](/docs/topics/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
+The challenge of digesting those metadata according to [FAIR guiding principles](/docs/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
 
 1. **Parsing of metadata from datasets.** This requires relative little organisation effort in advance but can be difficult depending on the respective data formats. Many instrument vendors use proprietary data formats. If all information, including description, is saved in [binary formats](https://en.wikipedia.org/wiki/Binary_file), the extraction of metadata can be challenging.
-1. **Using a LIMS.** Using a [Laboratory information management system (LIMS)](https://en.wikipedia.org/wiki/Laboratory_information_management_system) allows to efficiently organise all processes connected to sample processing in an electronic fashion. In a way, a LIMS is the core facility counterpart to an [ELN](/docs/topics/eln). If a LIMS is used, the extraction of sample metadata is considerably easier than by hindsight parsing. However, the LIMS requires that the LIMS covers all processes required in the facility. Establishing a LIMS in a core facility may therefore be a complex organisational task.
+1. **Using a LIMS.** Using a [Laboratory information management system (LIMS)](https://en.wikipedia.org/wiki/Laboratory_information_management_system) allows to efficiently organise all processes connected to sample processing in an electronic fashion. In a way, a LIMS is the core facility counterpart to an [ELN](/docs/eln). If a LIMS is used, the extraction of sample metadata is considerably easier than by hindsight parsing. However, the LIMS requires that the LIMS covers all processes required in the facility. Establishing a LIMS in a core facility may therefore be a complex organisational task.
 
 ## Sources
 
