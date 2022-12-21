@@ -9,8 +9,6 @@ regex='[0-9]+\_([a-zA-Z0-9_-]*).mdx'
 
 for i in "$@"
 do
-    echo "$i"
-
     # check if filename fits the pattern
 
     if [[ $i =~ $regex ]]; then
