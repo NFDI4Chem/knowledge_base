@@ -21,7 +21,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'intro/intro',
           position: 'left',
           label: 'Knowledge Base',
         },
