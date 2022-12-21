@@ -18,7 +18,8 @@ do
         #compose slug string from filename
         slug="slug: \"/docs/${BASH_REMATCH[1]}\""
 
-        echo "File $i: Slug is added to frontmatter:\n$slug"
+        echo "File $i: Slug is added to frontmatter:"
+        echo "$slug"
         
         # Remove existing slug
         sed -i '/slug:.*/d' $i
