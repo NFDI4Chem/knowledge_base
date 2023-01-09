@@ -1,3 +1,7 @@
 {
-  "label": "Handling Data"
+  "label": "Handling Data",
+  "link": {
+    "type"  : "doc",
+    "id" : "data_guide"
+  }
 }

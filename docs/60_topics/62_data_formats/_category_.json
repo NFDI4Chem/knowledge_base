@@ -1,3 +1,7 @@
 {
-  "label": "Data Formats"
+  "label": "Data Formats",
+  "link": {
+    "type"  : "doc",
+    "id" : "format_standards"
+  }
 }

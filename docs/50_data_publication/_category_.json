@@ -1,3 +1,7 @@
 {
-  "label": "Data Publication"
+  "label": "Data Publication",
+  "link": {
+    "type"  : "doc",
+    "id" : "data_publication"
+  }
 }
