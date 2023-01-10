@@ -15,13 +15,13 @@
       "link": "/docs/data_guide"
     },
     {
-      "title": "Topics & Concepts",
-      "svg": "/img/nfdi4chem_Topics_and_Concepts_white.svg",
-      "link": "/docs/topics_guide"
+      "title": "Smartlab",
+      "svg": "/img/nfdi4chem_SmartLab_white.svg",
+      "link": "/docs/smartlab"
     },
     {
-      "title": "Lead by Example",
-      "svg": "/img/nfdi4chem_Lead_by_Example_white.svg",
-      "link": "/docs/lbe-intro/"
+      "title": "Data Publication",
+      "svg": "/img/nfdi4chem_Data_Publication_white.svg",
+      "link": "/docs/data_publication"
     }
 ]
