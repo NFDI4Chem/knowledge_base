@@ -1,5 +1,26 @@
 [
     {
+        "title": "Hydrogen bond redistribution effects in mixtures of protic ionic liquids sharing the same cation: non-ideal mixing with large negative mixing enthalpies",
+        "authors": "Benjamin Golub, Daniel Ondo, Viviane Overbeck, Ralf Ludwig, Dietmar Paschek",
+        "journal": "Physical Chemistry Chemical Physics",
+        "pubyear": 2022,
+        "linkpub": "https://doi.org/10.1039/D2CP01209J",
+        "linkdata": [
+            {
+                "name": "RosDok",
+                "url": "https://doi.org/10.18453/rosdok_id00003537"
+            }
+        ],
+        "linkcomment": "curated by the publishing authors",
+        "description": "The dataset, curated by the publishing authors, includes data from molecular dynamics simulations and was published in RosDok. The dataset also includes documentation on PDF format. The RosDok DOI is listed in the references of the corresponding publication.",
+        "subdiscipline": [
+            "physical chemistry"
+        ],
+        "tags": [
+            "physical chemistry"
+        ]
+    },
+    {
         "title": "Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder",
         "authors": "Nils Keltsch, Viola Munzert, Klaus-Peter Zeller, Hans-Ullrich Siehl, Stefan Berger, Dieter Sicker",
         "journal": "Chemie in unserer Zeit",
@@ -370,10 +391,12 @@
         "description": "The dataset, prepared for publication by the publishing authors, contains MS data and RAMAN spectral data in CSV format. Moreover, CSVs with information on samples, gene activity, tissue type and more ara available. The corresponding scientific publication does not reference the dataset in Zenodo via its DOI.",
         "subdiscipline": [
             "medicinal chemistry",
-            "chemometric"
+            "chemometric",
+            "physical chemistry"
         ],
         "tags": [
-            "raman spectrsocopy"
+            "raman spectrsocopy",
+            "biomedical diagnostics"
         ]
     },
     {
