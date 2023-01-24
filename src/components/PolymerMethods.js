@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 
-var table = require('@site/static/assets/polymer_methods.json');        // extract table data
+var table = require('@site/static/assets/methods.json');        // extract table data
 var profiles = require('@site/static/assets/profiles.json');    // extract subdomain profiles
 var icon = require('@site/static/img/domains/tick-image.png'); 
 
@@ -84,8 +84,8 @@ function Entry({ analytical_method, exemplary_proprietary_file_extensions, typic
             <td align="left" dangerouslySetInnerHTML={{__html: recommendation_for_open_file_extension}}/>
             <td align="left" dangerouslySetInnerHTML={{__html: file_format}}/>
             <td align="left" dangerouslySetInnerHTML={{__html: file_size_of_open_format}}/>
-            <td>{monomer_characterization ? <img className="style" src={icon.default} alt="monomer-check" /> : ""}</td>
-            <td>{polymer_characterization ? <img className="style" src={icon.default} alt="polymer-check" /> : ""}</td>
+            <td>{monomer_characterization ? <img style={{width: "25px"}} src={icon.default} alt="monomer-check" /> : ""}</td>
+            <td>{polymer_characterization ? <img style={{width: "25px"}} src={icon.default} alt="polymer-check" /> : ""}</td>
             <td align="left" dangerouslySetInnerHTML={{__html: progress_of_eln_integration}}/>
         </tr>
     )
