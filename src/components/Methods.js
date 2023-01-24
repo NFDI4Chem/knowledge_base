@@ -3,7 +3,6 @@ import React,{ useState } from 'react';
 const table = require('@site/static/assets/methods.json');        // extract table data
 const profiles = require('@site/static/assets/profiles.json');    // extract subdomain profiles
 const headers = table.filter(entry => entry.shortname === "headers")[0];   // extract header names
-delete headers.shortname;
 
 export default function Methods( {defaultProfile} ) {
 
@@ -63,7 +62,7 @@ function TableHead( {alignment, activeHeaders} ) {
     return(
         <thead>
             <tr>
-                {activeHeaders.map(header => <th align={alignment}>{headers[header]}</th>)}
+                {activeHeaders.filter(header => header !== "shortname").map(header => <th align={alignment}>{headers[header]}</th>)}
             </tr>
         </thead>
     )
@@ -75,7 +74,7 @@ function Entry({ entry, activeHeaders }) {
 
     return(
         <tr>
-            {activeHeaders.map(header => {
+            {activeHeaders.filter(header => header !== "shortname").map(header => {
                 if ( entry[header] && entry[header].toString() === "true" ) {
                     return <td align="center">&#10004;</td>
                 } else {
@@ -98,7 +97,7 @@ function MethodsTable({resultSet}) {
         <table>
             <TableHead alignment="center" {...{activeHeaders}} />
             <tbody>
-                {table.map((entry, idx) => (
+                {table.filter(entry => entry.shortname !== "headers").map((entry, idx) => (
                     <Entry key={idx} {...{entry, activeHeaders}} />
                     ))}        
             </tbody>
