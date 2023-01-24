@@ -1,5 +1,17 @@
 [
   {
+    "analytical_method": "Analytical method",
+    "exemplary_proprietary_file_extensions": "Exemplary proprietary file extensions",
+    "typical_size_of_proprietary_file": "Typical size of proprietary file",
+    "converter_to_open_file_format": "Converterf to open file format",
+    "recommendation_for_open_file_extension": "Recommendation for open file extension*",
+    "file_format": "File format",
+    "file_size_of_open_format": "File size of open format",
+    "monomer_characterization": "Monomer characterization",
+    "polymer_characterization": "Polymer characterization",
+    "shortname": "headers"
+  },
+  {
     "analytical_method": "NMR spectroscopy",
     "exemplary_proprietary_file_extensions": "<em>set of files, no typical extension</em>",
     "typical_size_of_proprietary_file": "&lt;1-50 MB",
