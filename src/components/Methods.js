@@ -1,7 +1,9 @@
 import React,{ useState } from 'react';
 
-var table = require('@site/static/assets/methods.json');        // extract table data
-var profiles = require('@site/static/assets/profiles.json');    // extract subdomain profiles
+const table = require('@site/static/assets/methods.json');        // extract table data
+const profiles = require('@site/static/assets/profiles.json');    // extract subdomain profiles
+const headers = table.filter(entry => entry.shortname === "headers")[0];   // extract header names
+delete headers.shortname;
 
 export default function Methods( {defaultProfile} ) {
 
@@ -40,76 +42,76 @@ export default function Methods( {defaultProfile} ) {
     }
 
     return (
-        <><div className="methods__searchfilter"><div className="row methods__searchfilter__row"><div className="methods__searchfilter__filter">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
-        <div className="col methods__searchfilter__search"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div></div></div>
-        <div><MethodsTable methods_to_show={resultSet} /></div></>    
+        <React.Fragment>
+            <div className="methods__searchfilter">
+                <div className="row methods__searchfilter__row">
+                    <div className="methods__searchfilter__filter">Click to filter: {profiles.map((props,idx) => <FilterButton key={idx} {...props} />)}</div>
+                    <div className="col methods__searchfilter__search"><input className="navbar__search-input" placeholder="Type to search" value={searchFilter} onChange={handleChange} /></div>
+                </div>
+            </div>
+            <div><MethodsTable {...{resultSet}} /></div>
+        </React.Fragment>    
     )
 }
 
 /* TableHead renders the table header */
 
-function TableHead( {alignment} ) {
+function TableHead( {alignment, activeHeaders} ) {
 
-    if (alignment == "") {
-        alignment = "left"; // default value
-    }
+    ( alignment === "" ) ? "left" : alignment; // default value
 
     return(
         <thead>
             <tr>
-                <th align={alignment}>Analytical method</th>
-                <th align={alignment}>Exemplary proprietary file extensions</th>
-                <th align={alignment}>Typical size of proprietary file</th>
-                <th align={alignment}>Converter to open file format</th>
-                <th align={alignment}>Recommendation for open file extension*</th>
-                <th align={alignment}>File format</th>
-                <th align={alignment}>File size of open format</th>
+                {activeHeaders.map(header => <th align={alignment}>{headers[header]}</th>)}
             </tr>
         </thead>
     )
 }
 
-/* Entry renders table entries. dangerouslySetInnerHTML required to process links in table */
+/* Entry renders table entries. dangerouslySetInnerHTML required to process links in table. If field contains boolean true, a check mark is returned */
 
-function Entry({ analytical_method, exemplary_proprietary_file_extensions, typical_size_of_proprietary_file, converter_to_open_file_format, recommendation_for_open_file_extension, file_format, file_size_of_open_format }) {
-    return (
+function Entry({ entry, activeHeaders }) {
+
+    return(
         <tr>
-            <td align="left">{analytical_method}</td>
-            <td align="left" dangerouslySetInnerHTML={{__html: exemplary_proprietary_file_extensions}}/>
-            <td align="left" dangerouslySetInnerHTML={{__html: typical_size_of_proprietary_file}}/>
-            <td align="left" dangerouslySetInnerHTML={{__html: converter_to_open_file_format}}/>
-            <td align="left" dangerouslySetInnerHTML={{__html: recommendation_for_open_file_extension}}/>
-            <td align="left" dangerouslySetInnerHTML={{__html: file_format}}/>
-            <td align="left" dangerouslySetInnerHTML={{__html: file_size_of_open_format}}/>
+            {activeHeaders.map(header => {
+                if ( entry[header] && entry[header].toString() === "true" ) {
+                    return <td align="center">&#10004;</td>
+                } else {
+                    return <td align="left" dangerouslySetInnerHTML={{__html: entry[header] }}/>
+                }
+            })}
         </tr>
     )
 }
 
 /* MethodsTable renders table from array of method shortnames (prop methods_to_show) using function Entry */
 
-function MethodsTable({methods_to_show}) {
+function MethodsTable({resultSet}) {
 
-    if(methods_to_show[0]==="all"){
+    var found = table.filter(m => resultSet.includes(m.shortname));     // generates methods set - is current method contained in methods_to_show array?
+    var activeHeaders = (resultSet[0] === "all") ? Object.keys(headers) : Array.from(new Set(found.map(entry => Object.keys(entry).filter(key => key !== "shortname")).flat()));  // Get list of headers required for found set or all headers for all
+
+    if(resultSet[0] === "all"){
         return (
         <table>
-            <TableHead alignment={"center"} />
+            <TableHead alignment="center" {...{activeHeaders}} />
             <tbody>
-                {table.map((props, idx) => (
-                    <Entry key={idx} {...props} />
+                {table.map((entry, idx) => (
+                    <Entry key={idx} {...{entry, activeHeaders}} />
                     ))}        
             </tbody>
         </table>
         );
     }
 
-    var found = table.filter(m => methods_to_show.includes(m.shortname));     // generates methods set - is current method contained in methods_to_show array?
-
     return (
     <table>
-        <TableHead alignment={"center"} />
+        <TableHead alignment="center" {...{activeHeaders}} />
         <tbody>
-            {found.map((props, idx) => (
-                <Entry key={idx} {...props} />
+            {found.map((entry, idx) => (
+                <Entry key={"entry_"+idx} {...{entry, activeHeaders}} />
             ))}
         </tbody>
     </table>
