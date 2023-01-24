@@ -3,6 +3,45 @@ title: "Polymer Chemistry"
 ---
 
 
-![UnderConstruction](/img/Constr_2bl.png)
+import PolymerMethods from '@site/src/components/PolymerMethods.js';
 
-Article under construction.
+:::info Summary:
+
+Polymer chemistry is focused on the synthesis and characterization of monomer units, macromolecules and resultant
+materials for applications in e.g. optics, electronics and energy, packaging and containers, coatings and adhesives,
+catalysis or medicine. Polymeric materials can be subdivided by their origin into synthetic, inorganic and
+biopolymers, where the latter is a significant subject of recent research as they can be derived from renewable
+resources and therefore are deemed to be part of the solution for a sustainable future. The toolbox for monomer synthesis and modification, their polymerization as well as post-functionalization are often translated form organic chemistry, yet for cutting-edge materials new experimental strategies have to be developed. Many characterization methods, especially for monomers or small polymers, can also be adapted from established organic chemistry. However, since macromolecules can feature highly complex structures, e.g. brushes, dendrimers, rings and star shapes, advanced methods such as (2D) SEC, LCCC, DOSY NMR, or electron microscopy need to be applied in order to obtain an exhaustive structure determination (for abbreviations see table below). For their subsequent application as high-tech material, their mechanical and physical properties play an important role as well, where cyclic voltammetry or rheological characterization are just a few examples for the vast array of techniques that are available. A standard approach for the development of new polymeric materials can be described as follows:
+
+- Preparation of organic/inorganic monomer units.
+- Small-scale experiments for screening/optimization of reaction conditions.
+- Upscaling of reactions to obtain sufficient product for subsequent polymerization steps.
+- (Co)polymerization of monomers in different ratios/chain lengths as well as optimization of reaction conditions.
+- Post-polymerization functionalization.
+- Synthesis of macroscopic materials through 3D printing, moulding etc.
+
+In order to collect comprehensive analytical data to characterize the synthesized materials the following steps can be taken:
+
+- Data can be collected during the experiment through online methods, drawing samples on a specific schedule, or after the experiment by analyzing the obtained product.
+- Manually determined data: Experimental observations such as colour change or precipitants, appearance, yield and consistency of the product, solubility etc.
+- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
+- When necessary, pre-processing of digital data with software of analytical device before data are transferred to the Chemotion-ELN.
+- Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the software of the analytical device. If no specific open format is currently available, exporting as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+:::
+
+
+## Documentation and publication of research data
+
+The Chemotion-ELN was initially developed for organic chemistry and is now adapted for other disciplines in chemistry as well. The adaption for polymer chemistry and the integration of analytical methods are now ongoing, therefore the individual methods in the table below are marked respectively. Generally, the documentation of research data is conducted as follows:
+
+- Documentation of research data  is carried out digitally using an ELN.
+- Experimental conditions (e.g. solvents, temperature, duration, pressure) are noted in the ELN.
+- Observations and results of analytical methods with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment, including colour change or precipitants, appearance, yield and consistency of the product, solubility etc.
+- Obtained data from analytical instruments (e.g. NMR, SEC, MS or IR data) are uploaded to the Chemotion-ELN in open file formats and directly attached to the respective ELN experiment entry including instrumental setup metadata.
+
+In an effort to realize research data management in line with the FAIR principles, the data can be published in a repository including raw and processed data for reuse, directly from the Chemotion-ELN. The use of the Chemotion-ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. PubChem. For the publication of research data in other discipline-specific repositories, data have to be exported from the Chemotion-ELN and uploaded into the respective database.
+
+<PolymerMethods defaultProfile={"polymer"} />
+
+:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
+:::

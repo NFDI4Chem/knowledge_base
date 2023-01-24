@@ -20,6 +20,11 @@
         "methods": [ "nmr", "uv", "ir", "raman", "fluoresc", "ms", "gc", "hplc", "electrophoresis", "polarimetry", "mp", "tlc", "binding", "activity", "docking", "cytotox", "watersol", "logd", "peror_bioavail", "brain_perme", "metab_stab", "inihib_p450", "herg_int", "genotox" ]
     },
     {
+      "name": "polymer",
+      "longname": "Polymer Chemistry",
+      "methods": [ "poly_nmr", "poly_esi_ms", "poly_maldi_ms", "poly_ir", "poly_raman", "poly_uv", "poly_fluoresc", "poly_gc", "poly_hplc", "poly_cv", "poly_eis", "poly_epr", "poly_dsc", "poly_ea", "poly_physisorpt", "poly_tga", "poly_sec_lccc", "poly_rheo", "poly_xps", "poly_tof_sims", "poly_dls", "poly_sls", "poly_zeta", "poly_sem", "poly_edx", "poly_tem", "poly_contact", "poly_afm", "poly_ellips" ]
+    },
+    {
         "name": "all",
         "longname": "All Entries",
         "methods": ["all"]
