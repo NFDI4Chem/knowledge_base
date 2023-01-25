@@ -19,6 +19,9 @@
     "recommendation_for_open_file_extension": ".jdx<br/>.zip<br/>",
     "file_format": "JCAMP-DX <em>(raw)</em><br/>NMReDATA <em>(assignments)</em>",
     "file_size_of_open_format": "&lt;1-50 MB",
+    "monomer_characterization": true,
+    "polymer_characterization": true,
+    "progress_of_eln_integration": "",
     "shortname": "nmr"
   },
   {
@@ -65,6 +68,9 @@
     "recommendation_for_open_file_extension": ".csv",
     "file_format": "comma-separated values",
     "file_size_of_open_format": "&lt;1 MB",
+    "monomer_characterization": true,
+    "polymer_characterization": true,
+    "progress_of_eln_integration": "",
     "shortname": "uv"
   },
   {
@@ -121,6 +127,9 @@
     "recommendation_for_open_file_extension": ".csv",
     "file_format": "comma-separated values",
     "file_size_of_open_format": "&lt;1 MB",
+    "monomer_characterization": true,
+    "polymer_characterization": "",
+    "progress_of_eln_integration": "",
     "shortname": "hplc"
   },
   {
@@ -144,6 +153,9 @@
     "recommendation_for_open_file_extension": ".txt",
     "file_format": "text file",
     "file_size_of_open_format": "&lt;1 MB",
+    "monomer_characterization": true,
+    "polymer_characterization": true,
+    "progress_of_eln_integration": "",
     "shortname": "epr"
   },
   {
@@ -363,6 +375,9 @@
     "recommendation_for_open_file_extension": ".csv",
     "file_format": "comma-separated values",
     "file_size_of_open_format": "&lt;1 MB",
+    "monomer_characterization": "",
+    "polymer_characterization": true,
+    "progress_of_eln_integration": "",
     "shortname": "dls"
   },
   {
@@ -387,19 +402,6 @@
     "file_format": "",
     "file_size_of_open_format": "",
     "shortname": "tem"
-  },
-  {
-    "analytical_method": "Nuclear magnetic resonance spectroscopy",
-    "exemplary_proprietary_file_extensions": ".fid",
-    "typical_size_of_proprietary_file": "&lt;1-50 MB",
-    "converter_to_open_file_format": "MNova Topspin",
-    "recommendation_for_open_file_extension": ".jdx<br/>.zip<br/>",
-    "file_format": "JCAMP-DX<br/>NMReDATA",
-    "file_size_of_open_format": "~1 MB",
-    "monomer_characterization": true,
-    "polymer_characterization": true,
-    "progress_of_eln_integration": "",
-    "shortname": "poly_nmr"
   },
   {
     "analytical_method": "Electron spray ionisation mass spectrometry",
@@ -428,32 +430,6 @@
     "shortname": "maldi_ms"
   },
   {
-    "analytical_method": "Ultraviolet/visible spectroscopy",
-    "exemplary_proprietary_file_extensions": ".dsw<br/>.str<br/>.bsk<br/>.bkn<br/>.ksd<br/>.jws<br/>.jwb<br/>.str8<br/>.spc<br/>.sre",
-    "typical_size_of_proprietary_file": "&lt;1 MB",
-    "converter_to_open_file_format": "proprietary software",
-    "recommendation_for_open_file_extension": ".csv",
-    "file_format": "comma-separated values",
-    "file_size_of_open_format": "&lt;1 MB",
-    "monomer_characterization": true,
-    "polymer_characterization": true,
-    "progress_of_eln_integration": "",
-    "shortname": "poly_uv"
-  },
-  {
-    "analytical_method": "High performance liquid chromatography",
-    "exemplary_proprietary_file_extensions": ".xls",
-    "typical_size_of_proprietary_file": "&lt;1 MB",
-    "converter_to_open_file_format": "proprietary software",
-    "recommendation_for_open_file_extension": ".csv",
-    "file_format": "comma-separated values",
-    "file_size_of_open_format": "&lt;1 MB",
-    "monomer_characterization": true,
-    "polymer_characterization": "",
-    "progress_of_eln_integration": "",
-    "shortname": "poly_hplc"
-  },
-  {
     "analytical_method": "Electrochemical impedance spectroscopy",
     "exemplary_proprietary_file_extensions": "",
     "typical_size_of_proprietary_file": "",
@@ -465,19 +441,6 @@
     "polymer_characterization": true,
     "progress_of_eln_integration": "",
     "shortname": "eis"
-  },
-  {
-    "analytical_method": "Electron paramagnet resonance spectroscopy",
-    "exemplary_proprietary_file_extensions": ".spe",
-    "typical_size_of_proprietary_file": "&lt;1 MB",
-    "converter_to_open_file_format": "proprietary software",
-    "recommendation_for_open_file_extension": ".txt",
-    "file_format": "text file",
-    "file_size_of_open_format": "&lt;1 MB",
-    "monomer_characterization": true,
-    "polymer_characterization": true,
-    "progress_of_eln_integration": "",
-    "shortname": "poly_epr"
   },
   {
     "analytical_method": "Thermogravimetric Analysis",
@@ -543,19 +506,6 @@
     "polymer_characterization": true,
     "progress_of_eln_integration": "",
     "shortname": "tof_sims"
-  },
-  {
-    "analytical_method": "Dynamic light scattering (DLS)",
-    "exemplary_proprietary_file_extensions": ".dts",
-    "typical_size_of_proprietary_file": "&lt;1 MB",
-    "converter_to_open_file_format": "proprietary software",
-    "recommendation_for_open_file_extension": ".txt<br/>.pdf",
-    "file_format": "text file<br/>report file",
-    "file_size_of_open_format": "&lt;1 MB",
-    "monomer_characterization": "",
-    "polymer_characterization": true,
-    "progress_of_eln_integration": "",
-    "shortname": "poly_dls"
   },
   {
     "analytical_method": "Static Light Scattering",
