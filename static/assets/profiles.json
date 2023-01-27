@@ -22,7 +22,7 @@
     {
       "name": "polymer",
       "longname": "Polymer Chemistry",
-      "methods": [ "poly_nmr", "esi_ms", "maldi_ms", "ir", "raman", "poly_uv", "fluoresc", "gc", "poly_hplc", "cv", "eis", "poly_epr", "dsc", "ea", "physisorpt", "tga", "sec_lccc", "rheo", "xps", "tof_sims", "poly_dls", "sls", "zeta", "sem", "edx", "tem", "contact", "afm", "ellips" ]
+      "methods": [ "nmr", "esi_ms", "maldi_ms", "ir", "raman", "uv", "fluoresc", "gc", "hplc", "cv", "eis", "epr", "dsc", "ea", "physisorpt", "tga", "sec_lccc", "rheo", "xps", "tof_sims", "dls", "sls", "zeta", "sem", "edx", "tem", "contact", "afm", "ellips" ]
     },
     {
         "name": "all",
