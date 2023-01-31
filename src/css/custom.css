@@ -222,6 +222,8 @@ margin-bottom: var(--ifm-heading-margin-bottom);
 }
 
 .feature__button {
+  background-color: unset;
+  border: none;
   width: var(--n4c-button-width);
   padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
 }
