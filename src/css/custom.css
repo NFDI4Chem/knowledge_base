@@ -117,6 +117,18 @@
 
 /********** General and Landing page ************/
 
+div[class^='announcementBar_'] {
+  --site-announcement-bar-stripe-color1: rgba(0, 156, 188, 0.15);
+  --site-announcement-bar-stripe-color2: white;
+  background: repeating-linear-gradient(
+    -35deg,
+    var(--site-announcement-bar-stripe-color1),
+    var(--site-announcement-bar-stripe-color1) 20px,
+    var(--site-announcement-bar-stripe-color2) 10px,
+    var(--site-announcement-bar-stripe-color2) 40px
+  );
+}
+
 .navbar__logo img {
   margin-bottom: 0%;
   height: 110%;
@@ -132,6 +144,8 @@
 }
 
 .hero {
+  display: flex;
+  flex-grow: 1;
   padding: 2rem 0;
   text-align: center;
   width: 100%;

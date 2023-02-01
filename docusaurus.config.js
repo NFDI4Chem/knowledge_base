@@ -12,6 +12,12 @@ module.exports = {
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
   themeConfig: {
+    announcementBar: {
+      id: 'community_survey',
+      content:
+        '<strong>We want your experience!</strong> To provide the best resources for chemists we would like to get your input in this <a href="https://www.nfdi4chem.de/index.php/nfdi4chem-chemistry-data-survey/" target="_blank">15 minute questionnaire</a>. &#9989;',
+      isCloseable: true,
+    },
     navbar: {
  //     title: 'Home',
       logo: {
