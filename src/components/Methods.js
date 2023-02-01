@@ -62,7 +62,7 @@ function TableHead( {alignment, activeHeaders} ) {
     return(
         <thead>
             <tr>
-                {activeHeaders.filter(header => header !== "shortname").map(header => <th align={alignment}>{headers[header]}</th>)}
+                {activeHeaders.filter(header => header !== "shortname").map(header => <th key={"header_"+header} align={alignment}>{headers[header]}</th>)}
             </tr>
         </thead>
     )
@@ -76,9 +76,9 @@ function Entry({ entry, activeHeaders }) {
         <tr>
             {activeHeaders.filter(header => header !== "shortname").map(header => {
                 if ( entry[header] && entry[header].toString() === "true" ) {
-                    return <td align="center">&#10004;</td>
+                    return <td key={Math.random()} align="center">&#10004;</td>
                 } else {
-                    return <td align="left" dangerouslySetInnerHTML={{__html: entry[header] }}/>
+                    return <td key={Math.random()} align="left" dangerouslySetInnerHTML={{__html: entry[header] }}/>
                 }
             })}
         </tr>
@@ -92,13 +92,19 @@ function MethodsTable({resultSet}) {
     var found = table.filter(m => resultSet.includes(m.shortname));     // generates methods set - is current method contained in methods_to_show array?
     var activeHeaders = (resultSet[0] === "all") ? Object.keys(headers) : Array.from(new Set(found.map(entry => Object.keys(entry).filter(key => key !== "shortname")).flat()));  // Get list of headers required for found set or all headers for all
 
+    if(found.length === 0) {
+        return (
+            <h4>No methods match your search query. Do you miss something? Contact us via <a href="mailto:helpdesk@nfdi4chem.de">helpdesk@nfdi4chem.de</a>!</h4>
+        );
+    }
+
     if(resultSet[0] === "all"){
         return (
         <table>
             <TableHead alignment="center" {...{activeHeaders}} />
             <tbody>
                 {table.filter(entry => entry.shortname !== "headers").map((entry, idx) => (
-                    <Entry key={idx} {...{entry, activeHeaders}} />
+                    <Entry key={"entry_"+idx} {...{entry, activeHeaders}} />
                     ))}        
             </tbody>
         </table>
