@@ -94,7 +94,7 @@ function MethodsTable({resultSet}) {
 
     if(found.length === 0) {
         return (
-            <h4>No methods match your search query. Do you miss something? Contact us via <a href="mailto:helpdesk@nfdi4chem.de">helpdesk@nfdi4chem.de</a>!</h4>
+            <h4>No methods match your search query. Is your method missing? Contact us via <a href="mailto:helpdesk@nfdi4chem.de">helpdesk@nfdi4chem.de</a>!</h4>
         );
     }
 
