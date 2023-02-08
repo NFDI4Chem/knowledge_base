@@ -21,6 +21,7 @@ function Lbe() {
 	const location = useLocation()
 	const queryParameters = new URLSearchParams(location.search);
 	const queryText = queryParameters.get("text");
+	const querySubd = queryParameters.get("subd");
 	const queryDoi = queryParameters.get("doi");
 
 
@@ -34,6 +35,12 @@ function Lbe() {
 		useEffect(() => {setLbeState({
 			search: queryText,
 			switch: "text"
+		}); },[]);
+
+	} else if (querySubd !== null) {
+		useEffect(() => {setLbeState({
+			subd: querySubd,
+			switch: "subd"
 		}); },[]);
 
 	} else if (queryDoi !== null) {
