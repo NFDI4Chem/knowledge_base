@@ -629,6 +629,15 @@ table thead tr {
   color: var(--ifm-color-primary);
 }
 
+.lbe__filterbutton.lbe__chip {
+  background: var(--ifm-breadcrumb-item-background-active);
+  color: var(--ifm-color-primary);
+  font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));
+  font-weight: 300;
+  justify-self: left;
+  margin-bottom: 1rem;
+}
+
 .lbe__filterbutton.lbe__filterbutton--active {
   background: var(--ifm-color-danger);
   color: white;
