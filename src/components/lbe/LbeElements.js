@@ -1,4 +1,7 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 // Import global data
@@ -85,4 +88,14 @@ function FilterButton( {type, name, numbered, lbeState, setLbeState} ) { // type
     )
 }
 
-export { RepoButton, TextSearch, FilterButton };
+function LbeChip( {title} ) {
+  return(
+    <Link to={useBaseUrl("/docs/lbe/datasets/?subd="+title)}>
+      <button className="lbe__filterbutton">
+        {title}
+      </button>
+    </Link>
+  )
+}
+
+export { RepoButton, TextSearch, FilterButton, LbeChip };
