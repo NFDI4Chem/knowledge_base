@@ -746,3 +746,19 @@ table thead tr {
   text-decoration: none;
 }
 
+/********** Tag Cloud ************/
+
+.tag-cloud {
+  text-align: center;
+  color: var(--ifm-color-primary);
+}
+
+.tag-cloud-tag {
+  padding: .2em;
+}
+
+.tag-cloud-tag:hover {
+  transform: scale(1.1);
+  color: var(--ifm-color-danger);
+  transition: all var(--lbe-transform-time) ease-in-out;
+}
