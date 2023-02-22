@@ -117,6 +117,18 @@
 
 /********** General and Landing page ************/
 
+div[class^='announcementBar_'] {
+  --site-announcement-bar-stripe-color1: rgba(0, 156, 188, 0.15);
+  --site-announcement-bar-stripe-color2: white;
+  background: repeating-linear-gradient(
+    -35deg,
+    var(--site-announcement-bar-stripe-color1),
+    var(--site-announcement-bar-stripe-color1) 20px,
+    var(--site-announcement-bar-stripe-color2) 10px,
+    var(--site-announcement-bar-stripe-color2) 40px
+  );
+}
+
 .navbar__logo img {
   margin-bottom: 0%;
   height: 110%;
@@ -132,6 +144,8 @@
 }
 
 .hero {
+  display: flex;
+  flex-grow: 1;
   padding: 2rem 0;
   text-align: center;
   width: 100%;
@@ -617,6 +631,15 @@ table thead tr {
   color: var(--ifm-color-primary);
 }
 
+.lbe__filterbutton.lbe__chip {
+  background: var(--ifm-breadcrumb-item-background-active);
+  color: var(--ifm-color-primary);
+  font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));
+  font-weight: 300;
+  justify-self: left;
+  margin-bottom: 1rem;
+}
+
 .lbe__filterbutton.lbe__filterbutton--active {
   background: var(--ifm-color-danger);
   color: white;
@@ -725,3 +748,19 @@ table thead tr {
   text-decoration: none;
 }
 
+/********** Tag Cloud ************/
+
+.tag-cloud {
+  text-align: center;
+  color: var(--ifm-color-primary);
+}
+
+.tag-cloud-tag {
+  padding: .2em;
+}
+
+.tag-cloud-tag:hover {
+  transform: scale(1.1);
+  color: var(--ifm-color-danger);
+  transition: all var(--lbe-transform-time) ease-in-out;
+}
