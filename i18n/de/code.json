@@ -286,7 +286,7 @@
     "message": "Datenpublikation"
   },
   "A place for all knowledge regarding Research Data Management (RDM) in Chemistry": {
-    "message": "Ein Platz für alles Wissenswerte zum Forschungsdatenmanagement (RDM) in der Chemie"
+    "message": "Ein Platz für alles Wissenswerte zum Forschungsdatenmanagement (FDM) in der Chemie"
   },
   "Synthetic Chemistry": {
     "message": "Synthetische Chemie"
@@ -317,5 +317,8 @@
   },
   "Core Facility Manager": {
     "message": "Core Facility Manager"
+  },
+  "Get started": {
+    "message": "Los geht's"
   }
 }

@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'NFDI4Chem Knowledge Base',
-  tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
+  // tagline: <Translate>A place for all knowledge regarding Research Data Management (RDM) in Chemistry</Translate>,
   url: 'https://knowledgebase.nfdi4chem.de/',
 //  baseUrl: '/staging/knowledge_base/',
   baseUrl: '/knowledge_base/',
@@ -69,7 +69,7 @@ module.exports = {
           items: [
             {
               html: `
-              <a href="https://www.dfg.de" target="_blank"><img src="/knowledge_base/img/dfg_logo_schriftzug_weiss_foerderung_en.gif" /></a>
+              <a href="https://www.dfg.de" target="_blank"><img src="img/dfg_logo_schriftzug_weiss_foerderung_en.gif" /></a>
               <p>NFDI4Chem is funded by DFG<br>Project Number 441958208</p>
               ` 
             },
@@ -142,7 +142,7 @@ module.exports = {
           <div class="row">
             <div class="cell" style="padding: 1rem;" ><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
             </div>
-            <div class="cell" style="padding: 0.1rem; text-align: left;" >Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>, if not stated otherwise.<br />
+            <div class="cell" style="padding: 0.1rem; text-align: left;" >Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>, if not stated otherwise.<br />
             Copyright © 2021 NFDI4Chem. Built with Docusaurus.
             </div>
           </div>
