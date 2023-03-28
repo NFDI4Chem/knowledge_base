@@ -1,0 +1,66 @@
+---
+title: "Data Storage and Archiving"
+nfdi4chem-description: how to find appropriate storage solutions
+nfdi4chem-id: data_storage
+nfdi4chem-tags: [data_organisation, data_storage, repositories]
+slug: "/data_storage"
+---
+
+If you plan to collect data and process it into information, you should consider different types of storage with regard to security, backup, access time and sharing with others. It is also of interest [how to estimate the computational resources for data processing and analysis](https://rdmkit.elixir-europe.org/storage.html#how-do-you-estimate-computational-resources-for-data-processing-and-analysis). There are different requirements for the entire [Data Life Cycle](/docs/data_life_cycle/). Regarding the workflows used in a project, care should also be taken when securing these workflows and tools (software version!) to ensure the reproducibility of results.
+
+## Workflow perspective
+Let's discuss different storage solutions along a possible workflow. Think of all possible data sources that provide data in your project, such as laboratory equipment (devices), manually collected data or external data from publications or project partners. Some devices may continuously automatically deliver data points while others regularly provide files for collection. Reduce the amount to the data points necessary for your project, consider possible pre-processing and estimate the data that will arise in terms of frequency and size. It is possible that data can already be processed while other data of the same type is still being recorded. At what point in the workflow is the data annotated by further metadata and does this possibly also work automatically? What descriptive documents are provided by human sources and when?
+
+When planning [data management](/docs/dmp/), think about storage solutions and request short-term and long-term storage in advance.
+
+#### Necessary requirements when designing a storage system:
+- space requirements for collection or generation of raw data including temporary files ("fast storage")
+- space requirements for data that can be permanently accessed over the duration of the project
+- access requirements to the data (in case of collaborative projects), how do they expect to access the data and for what purpose
+- transfer speed requirements
+- sharing opportunities, guidelines for data sharing outside the institute, compliance and rights management
+- "read-only" copy of the original raw data in a separate location (not editable)
+- how long raw data, as well as data processing pipelines and analysis workflows need to be stored, especially after the end of the project
+- [metadata](/docs/metadata/): identifier and file description, associated with your data
+- requirements on version control to keep track of changes, conflict resolution, data mentoring and back-tracing capabilities
+
+Involve the IT team of your home organisation, they can also provide advice on a tiered storage system:
+- "hot" storage: fast access speed, high access frequency, high value data -> high cost
+- "cold" storage: low access speed and frequency, usually off-premises -> low cost
+- preservation solutions (data archiving services)
+
+
+#### No backup? No mercy!
+The 3-2-1-0 rule:
+- there should be **3** copies of data
+- on **2** different media
+- with **1** copy being offline
+- and there should be **0** problems in the event of recovery. (So test your backups regularly...)
+
+Why? Sometimes it's not a technical problem, but a "layer-8"-issue: human error.
+
+
+### Ok, I'm lost - this is far from my business.
+
+Many of the requirements are often solved by dedicated [repositories](/docs/repositories/). It is also worth taking a look at group drives or cloud services such as NextCloud (on-premises). Your local IT team and computing centre will help you with services that they usually support. But nevertheless: Make sure to generate good documentation (i.e., README file) and metadata together with the data. Check if your institute provides a (meta)data management system, such as iRODS, DataVerse, FAIRDOM-SEEK or OSF.
+
+
+## Nirvana - your data in FAIR-paradise
+:::info Preservation
+> Relevant (meta)data (to guarantee reproducibility) should be preserved for a certain amount of time, that is usually defined by funders or institution policy. However, where to preserve data that are not needed for active processing or analysis anymore is a common question in data management.
+
+_see [RDMKit](https://rdmkit.elixir-europe.org/preserving)_
+:::
+
+Documentation or conversion of files into long-term backup formats. The data-holding facility must for its part guarantee security, quality and availability. Consider any license regulations or data protection of personal data when releasing it to the public.
+
+If you publish your data in public repositories, your data will also be preserved.
+
+
+## Sources and further information
+- https://rdmkit.elixir-europe.org/storage.html
+- https://www.rdm.kit.edu/index.php
+- https://www.druva.com/glossary/what-is-data-archiving-definition-and-related-faqs/
+- German: https://www.researchgate.net/publication/221657547_Handbuch_Forschungsdatenmanagement
+- German: https://www.degruyter.com/document/doi/10.1515/9783110657807/html
+- German: https://handbuch.tib.eu/w/Lehrbuch_Forschungsdatenmanagement/_Druckversion

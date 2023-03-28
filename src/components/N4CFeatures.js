@@ -1,7 +1,91 @@
 import React from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Translate from '@docusaurus/Translate';
+
+const features = {
+  entry: [
+    {
+      "title": <Translate>Domains</Translate>,
+      "svg": "/img/nfdi4chem_Domains_white.svg",
+      "link": "/docs/domain_guide"
+    },
+    {
+      "title": <Translate>Roles</Translate>,
+      "svg": "/img/nfdi4chem_Roles_white.svg",
+      "link": "/docs/role_guide"
+    },
+    {
+      "title": <Translate>Handling Data</Translate>,
+      "svg": "/img/nfdi4chem_Handling_Data_white.svg",
+      "link": "/docs/data_guide"
+    },
+    {
+      "title": <Translate>Electronic Lab Notebooks</Translate>,
+      "svg": "/img/nfdi4chem_SmartLab_white.svg",
+      "link": "/docs/smartlab"
+    },
+    {
+      "title": <Translate>Data Publication</Translate>,
+      "svg": "/img/nfdi4chem_Data_Publication_white.svg",
+      "link": "/docs/data_publication"
+    }
+  ],
+  domains: [
+    {
+      "title": <Translate>Synthetic Chemistry</Translate>,
+      "svg": "/img/nfdi4chem_Synthetic_Chemistry.svg",
+      "link":  "/docs/synthetic_chemistry"
+    },
+    {
+      "title": <Translate>Analytical Chemistry</Translate>,
+      "svg": "/img/nfdi4chem_Analytical_Chemistry.svg",
+      "link":  "/docs/analytical_chemistry"
+    },
+    {
+      "title": <Translate>Physical Chemistry</Translate>,
+      "svg": "/img/nfdi4chem_Physial_Chemistry.svg",
+      "link":  "/docs/physical_chemistry"
+    },
+    {
+      "title": <Translate>Polymer Chemistry</Translate>,
+      "svg": "/img/nfdi4chem_Polymer_Chemistry.svg",
+      "link":  "/docs/polymer_chemistry"
+    },
+    {
+      "title": <Translate>Pharmaceutical Chemistry</Translate>,
+      "svg": "/img/nfdi4chem_Medicinal-Pharmaceutical_Chemistry.svg",
+      "link":  "/docs/pharmaceutical_chemistry"
+    }
+  ],
+  roles: [
+    {
+      "title": <Translate>Research Group Leader</Translate>,
+      "svg": "/img/nfdi4chem_Research_Group_Leader.svg",
+      "link": "/docs/research_group_leader"
+    },
+    {
+      "title": <Translate>Research Group Member</Translate>,
+      "svg": "/img/nfdi4chem_Research_Group_Member.svg",
+      "link": "/docs/research_group_member"
+    },
+    {
+      "title": <Translate>Student</Translate>,
+      "svg": "/img/nfdi4chem_Student.svg",
+      "link": "/docs/student"
+    },
+    {
+      "title": <Translate>Data Steward</Translate>,
+      "svg": "/img/nfdi4chem_Data_Steward.svg",
+      "link": "/docs/data_steward"
+    },
+    {
+      "title": <Translate>Core Facility Manager</Translate>,
+      "svg": "/img/nfdi4chem_Core_Facility_Manager.svg",
+      "link": "/docs/core_facility_manager"
+    }
+  ]
+};
 
 function Feature({ title, svg, link, style }) {
 
@@ -27,7 +111,7 @@ function Feature({ title, svg, link, style }) {
 export default function N4CFeatures( { feature } ) {
 
   var style = "";
-  var featureList = require("@site/static/assets/"+feature+".json");;
+  const featureList = features[feature];
 
   if (feature == "entry") {
     style="button button--primary button--lg feature__button";

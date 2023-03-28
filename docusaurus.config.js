@@ -11,6 +11,15 @@ module.exports = {
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de'],
+    localeConfigs: { 
+      en: {
+        htmlLang: 'en-GB'
+      }  
+    }
+  },  
   themeConfig: {
     announcementBar: {
       id: 'community_survey',
@@ -46,6 +55,10 @@ module.exports = {
         {
           label: 'FAQ',
           href: 'https://www.nfdi4chem.de/index.php/frequently-asked-questions/',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'left',
         },
       ],
     },

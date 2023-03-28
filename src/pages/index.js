@@ -3,14 +3,14 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import N4CFeatures from '../components/N4CFeatures';
-
+import {translate} from '@docusaurus/Translate';
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A place for all knowledge regarding Research Data Management (RDM) in Chemistry">
+      description={translate({message: "A place for all knowledge regarding Research Data Management (RDM) in Chemistry"})}>
       <div className="hero">
         <div className="container hero__container">
           <div className="row">
