@@ -74,6 +74,10 @@ module.exports = {
               label: 'Twitter',
               href: 'https://twitter.com/nfdi4chem',
             },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/NFDI4Chem',
+            },
           ],
         },
         {
