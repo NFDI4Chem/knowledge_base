@@ -104,7 +104,7 @@ module.exports = {
               href: 'https://search.nfdi4chem.de/'
             },
             {
-              label: 'GitHub Repository',
+              label: 'NFDI4Chem Knowledge Base GitHub Repository',
               href: 'https://github.com/NFDI4Chem/knowledge_base',
             },
           ],
