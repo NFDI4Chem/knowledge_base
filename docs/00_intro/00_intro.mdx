@@ -7,26 +7,28 @@ id: "intro"
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import IntroButton from '@site/src/components/IntroButton.js';
 
-
 <img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" vspace="10" hspace="10"/>
 
 The NFDI4Chem knowledge base provides information and recommendations to digitalise all key steps of chemical research to support scientists in their efforts to collect, store, process, analyse, publish, and reuse research data. This knowledge base is inspired by [RDMkit](https://rdmkit.elixir-europe.org/index.html) but has been tailored specifically towards Chemists as end-users.
 
 Actions to [promote Open Science and Research Data Management](https://riojournal.com/article/55852/) in accordance with the FAIR data principles are presented by everyday users and range from planning and implementation to publication and reuse.
 
-
 ## Why is RDM important for chemistry?
 
 :::danger Notice:                                
-Research Data Management in chemistry is currently not systematically organised and individual solutions of single institutions lead to low visibility, accessibility, and usability of research results. The added value of preserving and researching scientific data in chemistry is particularly high because the significance of the data is often immortal, hence, older data can be reused for current investigations. In most cases, it is even mandatory to be able to access older data, since experimental data or complex simulation data in particular can only be generated with great effort. A loss of previously acquired data is an [irretrievable loss of knowledge](https://riojournal.com/article/55852/).
+Research Data Management in chemistry is currently not systematically organised and individual solutions of single institutions lead to low visibility, accessibility, and usability of research results. The added value of preserving and researching scientific data in chemistry is particularly high because the significance of the data is often immortal, hence, older data can be reused for current investigations. In most cases, it is even mandatory to be able to access older data, since experimental data or complex simulation data in particular can only be regenerated with great effort. 
 :::
 
-- prevention of data loss and data security
-- verifiability, transparency and reproducibility
-- faster retrieval of data and information
-- saving time and resources
-- long-term availability of research data 
-- data reuse in new research projects
+Main motivations for RDM in chemistry are:
+
+- to prevent the loss of data and ensure data security
+- to warrant long-term availability of research data 
+- to accelerate retrieval of data and information
+- to enhance transparency, reproducibility allow verifiability of research findings
+- to boost sustainability by saving time and resources
+- to enable data reuse in new research projects
+
+At least and most importantly a loss of previously acquired data is always an [irretrievable loss of knowledge](https://riojournal.com/article/55852/).
 
 ## Navigation through knowledge base
 
@@ -34,13 +36,11 @@ Research Data Management in chemistry is currently not systematically organised 
 The knowledge base offers different points of entry that help you in navigating the site and simplify the targeted search for information. Start learning more about RDM by selecting a domain or role, viewing the handling data articles, or finding information about electronic lab notebooks as part of a smartlab. Information on the publication of data is also provided.
 :::
 
-
 ### Domain-specific information
 
 The domain pages present an exemplary workflow for different chemistry disciplines along the research data life cycle. Multiple domains are illustrated in a user profile. Guidelines are provided for all digitisation steps involved and domain-specific best practices for FAIR data are given. Find out how to apply good RDM and FAIR science in the context of your own specific discipline!
 
 <IntroButton url={"/docs/domain_guide"} imgUrl={"/img/nfdi4chem_Domains.svg"} text={"Domains"} />
-
 
 ### Role-specific information
 
@@ -48,38 +48,20 @@ The role pages focus on the motivation for role-specific requirements and answer
 
 <IntroButton url={"/docs/role_guide/"} imgUrl={"/img/nfdi4chem_Roles.svg"} text={"Roles"} />
 
-
 ### Handling data
 
-The handling data section explains common problems and challenges regarding RDM. Problematic aspects of data handling are considered, starting with the creation of data management plans, data organisation and data documentation. Data storage and archiving are also covered. Find a detailed description of the following aspects:
-
-- general basics
-- formal responsibilities and organisational conventions
-- technical implementations
-- further information and reading 
+The handling data section explains common problems and challenges regarding RDM. Problematic aspects of data handling are considered, starting with the creation of data management plans, data organisation and data documentation. Moreover, aspects on data storage and archiving are also covered. Find a detailed description of the following aspects:
 
 <IntroButton url={"/docs/data_guide/"} imgUrl={"/img/nfdi4chem_Handling_Data.svg"} text={"Handling Data"} />
 
-
 ### Smartlab
 
-To enable fully digital workflows in chemistry, the development and provision of a modular virtual laboratory environment with concepts, services and software (smartlab) is essential. Electronic lab notebooks are an important part of the smartlab:
-
-- designed as a modular platform
-- covering the entire data life cycle
-- possibility of integrating devices and using external information sources 
-- seamless data transfer to data repositories
+To enable fully digital workflows in chemistry, the development and provision of a modular virtual laboratory environment with concepts, services and software (smartlab) is essential. Electronic lab notebooks are an important part of the smartlab, as well as integration of analytical instrumentation and data transfer to repositories.
 
 <IntroButton url={"/docs/smartlab"} imgUrl={"/img/nfdi4chem_Smartlab.svg"} text={"Smartlab"} />
 
-
 ### Data Publication
 
-In the category data publication you will find all the important information on the topic of publishing data:
-
-- What is a repository and how do I choose a suitable one?
-- Best practices for research data management 
-- Learn about data availability statements
-- Why are machine-readable chemical structures meaningful?
+In the category of data publication you will find all the important information on the topic of publishing data. This includes the motivation to publish research data, paths to publish data, recommendations for research data repositories to be used, best practices and aspects of machine actionability.  
 
 <IntroButton url={"/docs/data_publication"} imgUrl={"/img/nfdi4chem_Data_Publication.svg"} text={"Data Publication"} />
