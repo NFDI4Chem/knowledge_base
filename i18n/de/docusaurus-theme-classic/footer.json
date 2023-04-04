@@ -39,10 +39,6 @@
     "message": "NFDI4Chem Search Service",
     "description": "The label of footer link with label=NFDI4Chem Search Service linking to https://search.nfdi4chem.de/"
   },
-  "link.item.label.GitHub Repository": {
-    "message": "GitHub Repository",
-    "description": "The label of footer link with label=GitHub Repository linking to https://github.com/NFDI4Chem/knowledge_base"
-  },
   "link.item.label.About": {
     "message": "Über",
     "description": "The label of footer link with label=About linking to about"
@@ -58,5 +54,13 @@
   "copyright": {
     "message": "\n        <div class=\"container\" style=\"width: 80%;\">\n          <div class=\"row\">\n            <div class=\"cell\" style=\"padding: 1rem;\" ><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/4.0/88x31.png\"></a>\n            </div>\n            <div class=\"cell\" style=\"padding: 0.1rem; text-align: left;\" >Lizenziert unter der <a class=\"footer__link-item\" rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons BY-SA 4.0 Lizenz</a>, sofern nicht anders angegeben.<br />\n            Copyright © 2021 NFDI4Chem. Built with Docusaurus.\n            </div>\n          </div>\n        </div>\n        ",
     "description": "The footer copyright"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/NFDI4Chem"
+  },
+  "link.item.label.NFDI4Chem Knowledge Base GitHub Repository": {
+    "message": "NFDI4Chem Knowledge Base GitHub Repository",
+    "description": "The label of footer link with label=NFDI4Chem Knowledge Base GitHub Repository linking to https://github.com/NFDI4Chem/knowledge_base"
   }
 }
