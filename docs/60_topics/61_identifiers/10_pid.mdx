@@ -17,14 +17,23 @@ The main benefits of PIDs for chemistry researchers are increased findability, v
 
 <img align="left" src={useBaseUrl('/img/topics/DOI_logo.svg')} width="80" alt="DOI logo" vspace="2" hspace="20" />
 
-Digital Object Identifiers are PIDs for objects such as publications and datasets, but also physical objects, which are assigned by members of the [International DOI Foundation](https://datascience.codata.org/articles/abstract/353/). Most well-recognised [DOI registration agencies](https://www.doi.org/the-community/existing-registration-agencies/) include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on [datasets](https://doi.org/10.1109/COINFO.2009.66).
+Digital Object Identifiers are PIDs for objects such as publications and datasets, but also physical objects. DOIs are resolved based on the [Handle System](https://www.handle.net/) and are assigned by members of the [International DOI Foundation](https://datascience.codata.org/articles/abstract/353/). Most well-recognised [DOI registration agencies](https://www.doi.org/the-community/existing-registration-agencies/) include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on [datasets](https://doi.org/10.1109/COINFO.2009.66).
 
-A DOI consists of a character string divided into two parts by a slash. The prefix always starts with a `10.` and identifies the registrant, who retrieves a DOI from a DOI registration agency. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. DOIs are most frequently displayed as an URL such as `https://doi.org/10.1000/182` and include a resolver as HTTP proxy server to redirect to the linked object. DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
+A DOI consists of a character string divided into two parts by a slash. The prefix always starts with a `10.` and identifies the registrant, who retrieves a DOI from a DOI registration agency. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency. 
 
-<p align="center"><img align="center" src={useBaseUrl("/img/topics/crossref-logo-landscape-200.svg")} width="200" alt="Crossref logo" />
-<img align="center" src={useBaseUrl("/img/topics/datacite.svg")} class="align-center" width="200" alt="DataCite logo" /></p>
+DOIs are most frequently displayed as an URL such as `https://doi.org/10.1000/182` and include a resolver as HTTP proxy server to redirect to the linked object. DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
 
-Registrants are [liable](https://support.datacite.org/docs/doi-registration-policy) to update the URL connected to the DOI if the object is moved, which is enabled by metadata attached to the DOI during registration.
+<div class="text--center">
+    <img align="center" src={useBaseUrl("/img/topics/crossref-logo-landscape-200.svg")} width="200" alt="Crossref logo" hspace="50"  />
+    <img align="center" src={useBaseUrl("/img/topics/datacite.svg")} class="align-center" width="200" alt="DataCite logo" hspace="50" />
+</div>
+<br></br>
+
+:::danger Notice:   
+Most importantly, domain-independent [metadata](/docs/metadata) also including [provenance information](/docs/provenance) is attached to the DOI. This metadata follows the metadata schemes provided by registration agencies such as the [CrossRef Metadata Schema](https://www.crossref.org/documentation/schema-library/) and the [DataCite Metadata Schema](https://schema.datacite.org/). 
+:::
+
+Registrants are [liable](https://support.datacite.org/docs/doi-registration-policy) to update the URL connected to the DOI if the object is moved.
 
 ## ORCID iDs
 
@@ -43,7 +52,7 @@ In addition to ORCID iDs as non-proprietary PIDs for authors, there are also pro
 
 <img align="left" src={useBaseUrl("/img/topics/ePIC-head.png")} width="200" alt="ePIC Header logo" vspace="12" hspace="20" />
 
-The Persistent Identifier for eResearch ([ePICs](https://www.pidconsortium.net/)), like the DOI, are based on the [Handle.Net Registry (HNR)](https://www.handle.net/) system yet they are intended to be used for unpublished digital research objects, while [DOIs](#dois) are intended for published objects. To this end, ePICs may be assigned even at early stages of research to locate research data and may be used by various research data management or archiving systems. Upon publication of a dataset, the full research data can be linked via the ePIC, for example, in cases that include proprietary or sensitive information. 
+The Persistent Identifier for eResearch ([ePICs](https://www.pidconsortium.net/)) are based on the [Handle.Net Registry (HNR)](https://www.handle.net/) system and are intended to be used for unpublished digital research objects, while [DOIs](#dois) are intended for published objects. To this end, ePICs can be assigned at early stages of research to locate research data and may be used by various research data management or archiving systems. Upon publication of a dataset, the full research data can be linked via the ePIC, for example, in cases that include proprietary or sensitive information. 
 
 This type of PID will commonly lead to a landing page, the content of which is maintained by the PID owner. Examples here include the dataset's metadata or a method of contacting those responsible for the dataset.
 
