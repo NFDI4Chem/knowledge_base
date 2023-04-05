@@ -90,7 +90,7 @@ function FilterButton( {type, name, numbered, lbeState, setLbeState} ) { // type
 
 function LbeChip( {title} ) {
   return(
-    <Link to={useBaseUrl("/docs/lbe/datasets/?subd="+title)}>
+    <Link to={useBaseUrl("/docs/datasets/?subd="+title)}>
       <button className="lbe__filterbutton lbe__chip">
         Lead by Example 
         &#9654;<strong>{title}</strong>
