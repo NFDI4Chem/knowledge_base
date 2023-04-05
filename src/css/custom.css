@@ -240,10 +240,20 @@ margin-bottom: var(--ifm-heading-margin-bottom);
   border: none;
   width: var(--n4c-button-width);
   padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  font-size: 1.1rem;
 }
 
 .feature__button--secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: var(--n4c-button-secondary-width);
+  font-size: 13pt;
+}
+
+.feature__button--secondary > * {
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .buttons {

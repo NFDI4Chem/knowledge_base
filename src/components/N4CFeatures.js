@@ -30,9 +30,9 @@ export default function N4CFeatures( { feature } ) {
   var featureList = require("@site/static/assets/"+feature+".json");;
 
   if (feature == "entry") {
-    style="button button--primary button--lg feature__button";
+    style="button button--primary feature__button";
   } else {
-    style="button button--secondary button--lg feature__button--secondary";
+    style="button button--secondary feature__button--secondary";
   }
 
   return (
