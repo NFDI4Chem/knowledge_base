@@ -1,3 +1,7 @@
 {
-  "label": "Roles"
+  "label": "Roles",
+  "link": {
+    "type"  : "doc",
+    "id" : "role_guide"
+  }
 }

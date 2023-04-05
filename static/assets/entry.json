@@ -2,26 +2,26 @@
     {
       "title": "Domains",
       "svg": "/img/nfdi4chem_Domains_white.svg",
-      "link": "/docs/domains/guide"
+      "link": "/docs/domain_guide"
     },
     {
       "title": "Roles",
       "svg": "/img/nfdi4chem_Roles_white.svg",
-      "link": "/docs/role/guide"
+      "link": "/docs/role_guide"
     },
     {
       "title": "Handling Data",
       "svg": "/img/nfdi4chem_Handling_Data_white.svg",
-      "link": "/docs/data/guide"
+      "link": "/docs/data_guide"
     },
     {
-      "title": "Topics & Concepts",
-      "svg": "/img/nfdi4chem_Topics_and_Concepts_white.svg",
-      "link": "/docs/topics/guide"
+      "title": "Electronic Lab Notebooks",
+      "svg": "/img/nfdi4chem_SmartLab_white.svg",
+      "link": "/docs/smartlab"
     },
     {
-      "title": "Lead by Example",
-      "svg": "/img/nfdi4chem_Lead_by_Example_white.svg",
-      "link": "/docs/lbe/intro/"
+      "title": "Data Publication",
+      "svg": "/img/nfdi4chem_Data_Publication_white.svg",
+      "link": "/docs/data_publication"
     }
 ]
