@@ -8,139 +8,137 @@ slug: "/fair"
 
 Image Attribution: SangyaPundir, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 
-## Introduction
+## Einführung
 
-The [FAIR Data Principles](https://doi.org/10.1038/sdata.2016.18) were published after being defined at the [Lorentz Workshop](https://www.lorentzcenter.nl/) in 2014.
-These principles serve as guidelines to both those who publish data, e.g. researchers, as well as those who preserve data, e.g. [repository](/docs/repositories) or archive service providers. This is an important distinction, highlighting that a researcher’s data can only be as FAIR as the infrastructure and services available to them.
+Die [FAIR Data Principles](https://doi.org/10.1038/sdata.2016.18) wurden veröffentlicht, nachdem sie auf dem [Lorentz Workshop](https://www.lorentzcenter.nl/) im Jahr 2014 festgelegt worden waren. Diese Grundsätze dienen als Leitlinien sowohl für diejenigen, die Daten veröffentlichen, z. B. Forschende, als auch für diejenigen, die Daten aufbewahren, z. B. [Repositorien](/docs/repositories)- oder Archivdienstleister. Dies ist eine wichtige Unterscheidung, die verdeutlicht, dass die Daten von Forschenden nur so FAIR sein können wie die Infrastruktur und die Dienste, die ihm zur Verfügung stehen.
 
-Keeping in mind the long-term goal of making scientific data reusable to others by creating systematic order in the ever-growing mound of data arising from research, the FAIR Data Principles place a strong focus on machine-readable (meta)data. While humans must be able to find and understand the published datasets as well, computers will be tasked with sifting through large amounts of data and determining which datasets are relevant to the intended purpose and how they can be reused.
+In Anbetracht des langfristigen Ziels, wissenschaftliche Daten für andere wiederverwendbar zu machen, indem eine systematische Ordnung in den ständig wachsenden Datenhaufen aus der Forschung geschaffen wird, legen die FAIR Data Principles einen starken Schwerpunkt auf maschinenlesbare (Meta-)Daten. Zwar müssen auch Menschen in der Lage sein, die veröffentlichten Datensätze zu finden und zu verstehen, doch wird es die Aufgabe von Computern sein, große Datenmengen zu sichten und zu bestimmen, welche Datensätze für den beabsichtigten Zweck relevant sind und wie sie wiederverwendet werden können.
 
-Reusing well-curated research data, makes researchers’ tasks easier, enabling them to build upon previous research. Furthermore, data reuse has the potential for large stores of data to be mined for machine-learning applications. For example, large amounts of chemical synthesis data could lead to the virtual development of new synthesis methods or the discovery of new compounds.
+Die Wiederverwendung gut kuratierter Forschungsdaten erleichtert Forschenden die Arbeit und ermöglicht es ihnen, auf früheren Forschungsergebnissen aufzubauen. Darüber hinaus hat die Wiederverwendung von Daten das Potenzial, große Datenbestände für Anwendungen des maschinellen Lernens zu nutzen. So könnten beispielsweise große Mengen an chemischen Synthesedaten zur virtuellen Entwicklung neuer Synthesemethoden oder zur Entdeckung neuer Verbindungen führen.
 
-In chemistry, the deposition of crystallographic data in a standardized file format ([CIF](https://www.iucr.org/resources/cif/spec/version1.1/cifsyntax)) into a repository such as the [Cambridge Crystallographic Data Centre](https://www.ccdc.cam.ac.uk/) (CCDC), required by many leading journals in the chemical community, is the primary example of the FAIR Data Principles in action. To broaden the scope of such standards, [NFDI4Chem](https://www.nfdi4chem.de/) is working towards creating an infrastructure for FAIR data in Germany while training researchers in using the available infrastructure to ensure their data is as FAIR as can be.
+In der Chemie ist die Hinterlegung von kristallografischen Daten in einem standardisierten Dateiformat ([CIF](https://www.iucr.org/resources/cif/spec/version1.1/cifsyntax)) in einem Repositorium wie dem [Cambridge Crystallographic Data Centre](https://www.ccdc.cam.ac.uk/) (CCDC), das von vielen führenden Zeitschriften der chemischen Gemeinschaft gefordert wird, das wichtigste Beispiel für die Anwendung der FAIR-Datengrundsätze. Um den Anwendungsbereich solcher Standards zu erweitern, arbeitet [NFDI4Chem](https://www.nfdi4chem.de/) daran, eine Infrastruktur für FAIRe Daten in Deutschland zu schaffen und gleichzeitig Forschende darin zu schulen, die vorhandene Infrastruktur zu nutzen, um sicherzustellen, dass ihre Daten so FAIR wie möglich sind.
 
-In the following, we answer the questions: What makes data FAIR? What do researchers and those who provide data preservation services need to consider?
+Im Folgenden beantworten wir die Fragen: Was macht Daten FAIR? Was müssen Forschende und diejenigen, die Datenerhaltungsdienste anbieten, beachten?
 
-## Findable
+## Auffindbar (Findable) 
 
-Researchers — and the computers working on their behalf — must be able to find datasets to be able to reuse them. Therefore, the first guideline of the FAIR Data Principles outlines methods to ensure a dataset’s discovery.
+Forschende - und die für sie arbeitenden Computer - müssen in der Lage sein, Datensätze zu finden, um sie wiederverwenden zu können. Daher werden in der ersten Leitlinie der FAIR Data Principles Methoden zur Gewährleistung der Auffindbarkeit eines Datensatzes beschrieben.
 
-### F1. (meta)data are assigned a globally unique and persistent identifier
+### F1. (Meta-)Daten werden mit einer weltweit eindeutigen und dauerhaften Kennung versehen
 
-A globally unique and [persistent identifier (PID)](/docs/pid) helps both machines and humans find the data in the first place. These PIDs are essential for research as they guarantee the availability of the associated resource, in this case a dataset. The registry services that make these identifiers available work to maintain the link to the resource, thus avoiding dead links. This ensures the resource remains findable and may be referenced simply by the use of its PID.
+Ein weltweit eindeutiger und [persistenter Identifikator (PID)](/docs/pid) hilft sowohl Maschinen als auch Menschen, die Daten überhaupt erst zu finden. Diese PIDs sind für die Forschung unerlässlich, da sie die Verfügbarkeit der zugehörigen Ressource, in diesem Fall eines Datensatzes, garantieren. Die Registrierungsdienste, die diese Kennungen zur Verfügung stellen, sorgen dafür, dass die Verbindung zur Ressource aufrechterhalten wird, um tote Links zu vermeiden. Dadurch wird sichergestellt, dass die Ressource auffindbar bleibt und einfach durch die Verwendung ihrer PID referenziert werden kann.
 
-A common example of a citable PID is the Digital Object Identifier, or [DOI](https://doi.org/10.1000/182). As with many journals, scientific data repositories often assign a DOI automatically. The Registry of Research Data Repositories, [re3data](https://www.re3data.org/), indicates whether a given repository assigns an identifier, along with the PID type. For example, both the [The Cambridge Structural Database (CSD)](https://www.ccdc.cam.ac.uk/solutions/csd-system/components/csd/) and the [Chemotion Repository](https://www.chemotion-repository.net/) assign DOIs to each dataset deposited. Researchers must be aware of this option when searching for a suitable repository, while repositories should offer this service.
+Ein gängiges Beispiel für eine zitierfähige PID ist der Digital Object Identifier oder [DOI] (https://doi.org/10.1000/182). Wie bei vielen Zeitschriften wird auch bei wissenschaftlichen Datenspeichern ein DOI oft automatisch vergeben. Das Registry of Research Data Repositories, [re3data](https://www.re3data.org/), gibt an, ob ein bestimmtes Repositorium einen Identifikator vergibt, zusammen mit dem PID-Typ. So weisen beispielsweise sowohl die [The Cambridge Structural Database (CSD)](https://www.ccdc.cam.ac.uk/solutions/csd-system/components/csd/) als auch das [Chemotion Repository](https://www.chemotion-repository.net/) jedem hinterlegten Datensatz einen DOI zu. Forschende müssen sich dieser Option bei der Suche nach einem geeigneten Repositorium bewusst sein, und die Repositorien sollten diesen Service anbieten.
 
-### F2. data are described with rich metadata (defined by R1 below)
+### F2. Daten werden mit umfangreichen Metadaten beschrieben (definiert durch R1 unten)
 
-Data need to be sufficiently described in order to make them both findable and reusable. Hence, the specific focus here lies on making the (meta)data findable by using rich discovery [metadata](/docs/metadata) in a standardized format and allowing computers and humans to quickly understand the dataset’s contents. This is an essential component in the plurality of metadata described by [R1](#r1-metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes) below. This information may include, but is not limited to:
+Daten müssen ausreichend beschrieben werden, damit sie sowohl auffindbar als auch wiederverwendbar sind. Daher liegt der Schwerpunkt auf der Auffindbarkeit von (Meta-)Daten durch die Verwendung umfangreicher [Metadaten](/docs/metadata) in einem standardisierten Format, die es Computern und Menschen ermöglichen, den Inhalt des Datensatzes schnell zu verstehen. Dies ist ein wesentlicher Bestandteil der unter [R1](#r1-meta-daten-sind-umfassend-mit-einer-vielzahl-von-genauen-und-relevanten-attributen-beschrieben) beschriebenen Vielzahl von Metadaten. Diese Informationen können unter anderem Folgendes umfassen:
 
-- the context on what the dataset is, how it was generated, and how it can be interpreted,
-- the data quality,
-- licensing and (re)use agreements,
-- what other data may be related (linked via its PID), and
-- associated journal publications and their DOI.
+- den Kontext, um den es sich bei dem Datensatz handelt, wie er erstellt wurde und wie er interpretiert werden kann,
+- die Qualität der Daten,
+- Lizenz- und (Wieder-)Nutzungsvereinbarungen,
+- welche anderen Daten möglicherweise damit in Verbindung stehen (verlinkt über die PID), und
+- zugehörige Zeitschriftenveröffentlichungen und deren DOI.
 
-Repositories should provide researchers with a fillable [application profile](https://en.wikipedia.org/wiki/Application_profile) that allows researchers to give extensive and precise information on their deposited datasets. For example, the Chemotion Repository uses, among others, the [Datacite Metadata Schema 4.0](http://doi.org/10.5438/0012) to build its application profile, a schema specifically created for the publication and citation of research data. [RADAR](https://radar.products.fiz-karlsruhe.de/en), including the variant [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/), has also built [its metadata schema](https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema) on Datacite. These include an assortment of mandatory, recommended, and optional metadata properties, allowing for a rich description of the deposited dataset. For those publishing data, always keep in mind: the more information provided, the better.
+Die Repositorien sollten Forschenden ein ausfüllbares [Anwendungsprofil](https://de.wikipedia.org/wiki/Anwendungsprofil) zur Verfügung stellen, das es Forschenden ermöglicht, umfassende und genaue Angaben zu ihren hinterlegten Datensätzen zu machen. Das Chemotion Repository zum Beispiel verwendet unter anderem das [Datacite Metadata Schema 4.0](http://doi.org/10.5438/0012), um sein Anwendungsprofil zu erstellen, ein Schema, das speziell für die Veröffentlichung und Zitierung von Forschungsdaten entwickelt wurde. [RADAR](https://radar.products.fiz-karlsruhe.de/en), einschließlich der Variante [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/), hat [sein Metadatenschema](https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema) ebenfalls auf Datacite aufgebaut. Diese umfassen eine Reihe von obligatorischen, empfohlenen und optionalen Metadateneigenschaften, die eine umfassende Beschreibung des hinterlegten Datensatzes ermöglichen. Denken Sie bei der Veröffentlichung von Daten immer daran: Je mehr Informationen bereitgestellt werden, desto besser.
 
-### F3. metadata clearly and explicitly include the identifier of the data it describes
+### F3. Metadaten müssen eindeutig und ausdrücklich die Identifier der beschriebenen Daten enthalten
 
-While [F1](#f1-metadata-are-assigned-a-globally-unique-and-persistent-identifier) stipulates the assignment of an identifier, F3 underlines the importance of including this identifier in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifier in the metadata directly links the information to the associated dataset.
+Während [F1](#f1-meta-daten-werden-mit-einer-weltweit-eindeutigen-und-dauerhaften-kennung-versehen) die Zuweisung eines Identifikators vorschreibt, unterstreicht F3 die Bedeutung der Aufnahme dieses Identifikators in die Metadaten selbst. Die Metadaten und der Datensatz, den sie beschreiben, sind in der Regel getrennte Dateien. Durch die Aufnahme der Kennung in die Metadaten werden die Informationen direkt mit dem zugehörigen Datensatz verknüpft.
 
-Furthermore, the dataset may not be published alongside the metadata. For example, in the case of unpublished archived datasets, the PID can lead to a method (e.g. a landing page) to contact those responsible for the data instead of to the dataset itself.
-Researchers must be aware of this importance, while repositories must not only assign a PID as described in [F2](#f2-data-are-described-with-rich-metadata-defined-by-r1-below) above, but should also ensure that this PID is a required property of the metadata.
+Außerdem wird der Datensatz möglicherweise nicht zusammen mit den Metadaten veröffentlicht. Bei unveröffentlichten archivierten Datensätzen kann die PID beispielsweise zu einer Methode (z. B. einer Landing Page) führen, mit der die Verantwortlichen für die Daten kontaktiert werden können, anstatt zum Datensatz selbst.
+Forschende müssen sich dieser Bedeutung bewusst sein, während Repositorien nicht nur eine PID zuweisen müssen, wie in [F2](#f2-daten-werden-mit-umfangreichen-metadaten-beschrieben-definiert-durch-r1-unten) oben beschrieben, sondern auch sicherstellen sollten, dass diese PID eine erforderliche Eigenschaft der Metadaten ist.
 
-### F4. (meta)data are registered or indexed in a searchable resource
+### F4. (Meta-)Daten werden in einer durchsuchbaren Ressource registriert oder indiziert.
 
-Metadata are used to set up indices, enabling machines to efficiently search for and find datasets. For this process to work successfully, metadata must be complete as outlined [above](#f2-data-are-described-with-rich-metadata-defined-by-r1-below). Repositories should ensure the metadata entered for a deposited dataset is available in a machine-readable format to facilitate the assignment of indices.
+Metadaten werden verwendet, um Indizes zu erstellen, die es Maschinen ermöglichen, effizient nach Datensätzen zu suchen und diese zu finden. Damit dieser Prozess erfolgreich funktioniert, müssen die Metadaten vollständig sein, wie [oben] beschrieben #f2-daten-werden-mit-umfangreichen-metadaten-beschrieben-definiert-durch-r1-unten). Die Repositorien sollten sicherstellen, dass die für einen hinterlegten Datensatz eingegebenen Metadaten in einem maschinenlesbaren Format vorliegen, um die Zuordnung von Indizes zu erleichtern.
 
-## Accessible
+## Zugänglich (Accessible)
 
-Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equate to open, as further explained in [A1.2](#a12-the-protocol-allows-for-an-authentication-and-authorization-procedure-where-necessary).
+Zugänglich bedeutet, dass Menschen und Maschinen Anweisungen erhalten, wie sie die Daten erhalten können. Es ist zu beachten, dass FAIR nicht mit offen gleichzusetzen ist, wie in [A1.2](#a12-das-protokoll-erm%C3%B6glicht-ein-authentifizierungs--und-autorisierungsverfahren-falls-erforderlich) näher erläutert wird.
 
-### A1. (meta)data are retrievable by their identifier using a standardized communications protocol
+### A1. (Meta-)Daten sind über ihren Identifier unter Verwendung eines standardisierten Kommunikationsprotokolls abrufbar
 
-To guarantee access to datasets, persistent identifiers, such as DOIs, are suggested, which are resolved by standard methods. Common protocols include http(s) or (s)ftp.
+Um den Zugang zu Datensätzen zu gewährleisten, werden dauerhafte Identifikatoren wie DOIs vorgeschlagen, die mit Standardmethoden aufgelöst werden. Zu den gängigen Protokollen gehören http(s) oder (s)ftp.
 
-#### A1.1 the protocol is open, free, and universally implementable
+#### A1.1 Das Protokoll ist offen, frei und universell implementierbar
 
-Repositories should only use protocols that allow any computer to access at least the metadata. Not only does this refer to the use of standard communication protocols, as stated in [A1](#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), these protocols must also be freely available and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
+Repositorien sollten nur Protokolle verwenden, die es jedem Computer erlauben, zumindest auf die Metadaten zuzugreifen. Dies bezieht sich nicht nur auf die Verwendung von Standard-Kommunikationsprotokollen, wie in [A1] (#a1-meta-daten-sind-%C3%BCber-ihren-identifier-unter-verwendung-eines-standardisierten-kommunikationsprotokolls-abrufbar) angegeben, sondern diese Protokolle müssen auch frei verfügbar und Open-Source sein. Daher sollten proprietäre oder nicht standardisierte Protokolle vermieden werden.
 
-#### A1.2 the protocol allows for an authentication and authorization procedure, where necessary
+#### A1.2 das Protokoll ermöglicht ein Authentifizierungs- und Autorisierungsverfahren, falls erforderlich
 
-Where necessary, machine-readable protocols that let the user know that action needs to be taken (such as a login) to access data must be in place. FAIR data and open data are not synonymous: FAIR data requires that it must be clearly stated how the data can be accessed, as opposed to granting anyone and everyone full access. This can be especially important for sensitive data, where, for example, personal data and/or medical information may be disclosed. Hence, repositories should also provide a way for users (and their computers) to identify themselves, enabling access permission to be granted.
+Erforderlichenfalls müssen maschinenlesbare Protokolle vorhanden sein, die dem Nutzer mitteilen, dass für den Zugriff auf die Daten eine Aktion erforderlich ist (z. B. ein Login). FAIR-Daten und offene Daten sind keine Synonyme: FAIR-Daten setzen voraus, dass klar angegeben wird, wie auf die Daten zugegriffen werden kann, im Gegensatz zur Gewährung des uneingeschränkten Zugangs für jeden. Dies kann vor allem bei sensiblen Daten wichtig sein, wenn beispielsweise personenbezogene Daten und/oder medizinische Informationen offengelegt werden können. Daher sollten Repositorien auch die Möglichkeit bieten, dass sich die Nutzer (und ihre Computer) identifizieren können, so dass eine Zugriffsberechtigung erteilt werden kann.
 
-### A2. metadata are accessible, even when the data are no longer available
+### A2. Metadaten sind zugänglich, auch wenn die Daten nicht mehr verfügbar sind
 
-The metadata that describes a dataset should be stored in a separate file so it is available, even if the datasets themselves can no longer be accessed. Problems with dataset availability are usually due to 1) the cost of maintaining and storing full datasets and 2) file format deprecation as technologies evolve. Maintaining metadata files is cheaper and simpler and ensures that, at a minimum, details such as contact information remains available. These files should thus be archived forever.
+Die Metadaten, die einen Datensatz beschreiben, sollten in einer separaten Datei gespeichert werden, damit sie auch dann noch verfügbar sind, wenn auf die Datensätze selbst nicht mehr zugegriffen werden kann. Probleme mit der Verfügbarkeit von Datensätzen sind in der Regel auf 1) die Kosten für die Pflege und Speicherung vollständiger Datensätze und 2) die Veralterung von Dateiformaten im Zuge der Weiterentwicklung von Technologien zurückzuführen. Die Pflege von Metadaten-Dateien ist billiger und einfacher und gewährleistet, dass zumindest Details wie Kontaktinformationen verfügbar bleiben. Diese Dateien sollten daher für immer archiviert werden.
 
-A repository should clearly state a contingency plan for metadata storage should the service no longer exist, such as migrating to another repository service provider while ensuring the integrity of the persistent identifier is guaranteed.
+Ein Repositorium sollte einen Notfallplan für die Speicherung von Metadaten für den Fall aufstellen, dass der Dienst nicht mehr existiert, z. B. die Migration zu einem anderen Anbieter von Repositorien, wobei die Integrität der dauerhaften Kennung gewährleistet sein muss.
 
-## Interoperable
+## Interoperabel
 
-Data need to be integrated with and/or compared to other datasets, while computers must be able to interpret and exchange the information. Ideally, they are compatible with standard applications and can thus be integrated into (automated) processing and analysis workflows. Interoperability often functions as a precursor to [reusability](#reusable), as it ensures the compatibility across systems.
+Die Daten müssen mit anderen Datensätzen integriert und/oder verglichen werden, und die Computer müssen in der Lage sein, die Informationen zu interpretieren und auszutauschen. Im Idealfall sind sie mit Standardanwendungen kompatibel und können so in (automatisierte) Verarbeitungs- und Analyseabläufe integriert werden. Interoperabilität fungiert oft als Vorläufer der [Wiederverwendbarkeit](#reusable), da sie die Kompatibilität zwischen Systemen gewährleistet.
 
-### I1. (meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation
+### I1. (Meta-)Daten eine formale, zugängliche, gemeinsame und allgemein anwendbare Sprache zur Wissensdarstellung verwenden
 
-Machines need to be able to understand how to exchange and interpret information. Similar to humans, a uniform and standard language aids in this understanding. In chemistry, a great typical example of such an information exchange standard is the [crystallographic information (CIF)](https://doi.org/10.1107/97809553602060000107). This standard also adheres to the aspects described in [I2](#i2-metadata-use-vocabularies-that-follow-fair-principles) and [R1.3](#r13-metadata-meet-domain-relevant-community-standards) below. Simply put, [standard file formats](/docs/format_standards) for a given analytical method ensure the data and the associated metadata, which typically include measurement details, for example, follows a prescribed format. This ensures both humans and machines receive the information required to interpret the data.
+Maschinen müssen verstehen können, wie sie Informationen austauschen und interpretieren können. Ähnlich wie beim Menschen hilft eine einheitliche und standardisierte Sprache bei diesem Verständnis. In der Chemie ist ein typisches Beispiel für einen solchen Standard für den Informationsaustausch die [crystallographic information (CIF)] (https://doi.org/10.1107/97809553602060000107). Dieser Standard hält sich auch an die in [I2](#i2-meta-daten-verwenden-vokabulare-die-den-fair-grunds%C3%A4tzen-entsprechen) und [R1.3](#r13-meta-daten-entsprechen-fachlichen-gemeinschaftsstandards) beschriebenen Aspekte. Vereinfacht ausgedrückt, gewährleisten [Standarddateiformate](/docs/format_standards) für eine bestimmte Analysemethode, dass die Daten und die zugehörigen Metadaten, die z. B. typischerweise Messdetails enthalten, einem vorgeschriebenen Format folgen. Dadurch wird sichergestellt, dass sowohl Menschen als auch Maschinen die Informationen erhalten, die zur Interpretation der Daten erforderlich sind.
 
-Especially when looking at metadata, effective and efficient machine readability greatly depends on being able to reduce ambiguity. Metadata provides context to datasets. However, machines need to be able to interpret this context. Therefore, the structured schemas chosen by the repositories should include universally applied [ontologies](https://terminology.nfdi4chem.de/ts/ontologies) and controlled vocabularies to define relationships and avoid ambiguity. For example, chemistry-specific repositories should be designed to include [ontologies](/docs/ontology) such as the [Chemical Methods Ontology (CHMO)](http://purl.obolibrary.org/obo/chmo.owl) or the [Chemical Information Ontology (cheminf)](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) to accurately describe the (meta)data provided. Such ontologies should be based on widely-applied data models, for instance, the
+Insbesondere bei den Metadaten hängt die effektive und effiziente maschinelle Lesbarkeit stark davon ab, dass Mehrdeutigkeiten reduziert werden. Metadaten liefern den Kontext zu den Datensätzen. Maschinen müssen jedoch in der Lage sein, diesen Kontext zu interpretieren. Daher sollten die von den Repositorien gewählten strukturierten Schemata universell angewandte [Ontologien] (https://terminology.nfdi4chem.de/ts/ontologies) und kontrollierte Vokabulare enthalten, um Beziehungen zu definieren und Mehrdeutigkeit zu vermeiden. Beispielsweise sollten chemiespezifische Repositorien so konzipiert sein, dass sie [Ontologien](/docs/ontology) wie die [Chemical Methods Ontology (CHMO)](http://purl.obolibrary.org/obo/chmo.owl) oder die [Chemical Information Ontology (cheminf)](http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl) zur genauen Beschreibung der bereitgestellten (Meta-)Daten enthalten. Solche Ontologien sollten auf weit verbreiteten Datenmodellen beruhen, z. B. dem
 [Resource Description Framework (RDF)](https://www.w3.org/RDF/).
 
-### I2. (meta)data use vocabularies that follow FAIR principles
+### I2. (Meta-)Daten verwenden Vokabulare, die den FAIR-Grundsätzen entsprechen
 
-The applied vocabularies or ontologies should be well-documented and resolvable using a PID. For instance, CHMO mentioned [above](#i1-metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation) uses a [persistent URL (PURL)](http://www.purlz.org/home), resolvable using a standard web browser through `http`, while the [documentation](https://github.com/rsc-ontologies/rsc-cmo) is publicly available on Github.
+Die verwendeten Vokabulare oder Ontologien sollten gut dokumentiert und über eine PID auflösbar sein. Das [oben](#i1-meta-daten-eine-formale-zug%C3%A4ngliche-gemeinsame-und-allgemein-anwendbare-sprache-zur-wissensdarstellung-verwenden) erwähnte CHMO  verwendet zum Beispiel eine [persistent URL (PURL)] (http://www.purlz.org/home), die mit einem Standard-Webbrowser über `http` aufgelöst werden kann, während die [Dokumentation] (https://github.com/rsc-ontologies/rsc-cmo) auf Github öffentlich zugänglich ist.
 
-### I3. (meta)data include qualified references to other (meta)data
+### I3. (Meta-)Daten enthalten qualifizierte Verweise auf andere (Meta-)Daten
 
-Related datasets should be linked in a reliable manner, preferably via their PIDs. This includes any previous versions, datasets required to fully use and comprehend the current dataset, or datasets that the dataset builds upon. This relationship should also be described in a meaningful manner. For example, if dataset X is a previous version of dataset Y, it would be described as such rather than simply being described as a related or an associated dataset. Repositories should include a method of referring to other datasets in their metadata form.
+Verwandte Datensätze sollten auf zuverlässige Weise verknüpft werden, vorzugsweise über ihre PIDs. Dazu gehören alle früheren Versionen, Datensätze, die für die vollständige Nutzung und das Verständnis des aktuellen Datensatzes erforderlich sind, oder Datensätze, auf denen der Datensatz aufbaut. Diese Beziehung sollte auch auf sinnvolle Weise beschrieben werden. Wenn z. B. Datensatz X eine Vorgängerversion von Datensatz Y ist, sollte er als solcher beschrieben werden und nicht einfach als verwandter oder zugehöriger Datensatz bezeichnet werden. Repositorien sollten eine Methode vorsehen, um in ihren Metadaten auf andere Datensätze Bezug zu nehmen.
 
-## Reusable
+## Wiederverwendbar (Reusable)
 
-Many of the previous points lead to one key aspect of data sharing: data reusability. Datasets must be described in a manner that allows the user to easily determine how and under which conditions the data can be reused.
+Viele der vorangegangenen Punkte führen zu einem Schlüsselaspekt der gemeinsamen Datennutzung: die Wiederverwendbarkeit der Daten. Datensätze müssen so beschrieben werden, dass der Benutzer leicht feststellen kann, wie und unter welchen Bedingungen die Daten wiederverwendet werden können.
 
-### R1. (meta)data are richly described with a plurality of accurate and relevant attributes
+### R1. (Meta-)Daten sind umfassend mit einer Vielzahl von genauen und relevanten Attributen beschrieben.
 
-Related to [F2](#f2-data-are-described-with-rich-metadata-defined-by-r1-below) above, the focus here lies on whether the data, once found, is useable to the person or computer searching. It also stresses giving the data as many attributes as possible. Researchers should not assume the person—or that person’s computer—looking to re(use) their data is completely familiar with the discipline. Examples of information to assign here include (non-exhaustive list):
+In Anlehnung an [F2](#f2-daten-werden-mit-umfangreichen-metadaten-beschrieben-definiert-durch-r1-unten) oben liegt der Schwerpunkt hier darauf, ob die Daten, sobald sie gefunden wurden, für die suchende Person oder den Computer nutzbar sind. Außerdem wird betont, dass die Daten mit möglichst vielen Attributen versehen werden sollten. Forschende sollten nicht davon ausgehen, dass die Person - oder der Computer dieser Person -, die ihre Daten wiederverwenden möchte, mit dem Fachgebiet vollständig vertraut ist. Beispiele für Informationen, die hier angegeben werden sollten, sind (nicht vollständige Liste):
 
-- What the dataset contains, including whether the data is raw and/or processed
-- How the data was processed
-- How the data can be reused
-- Who created the data
-- Date of creation
-- Variable names
-- Standard methods used
-- Scope of the data and project
-- Lab conditions
-- Any limitations to the data
-- Software and versions used for acquisition and processing.
+- Was der Datensatz enthält, einschließlich der Angabe, ob es sich um Rohdaten und/oder verarbeitete Daten handelt
+- Wie die Daten verarbeitet wurden
+- Wie die Daten wiederverwendet werden können
+- Wer die Daten erstellt hat
+- Datum der Erstellung
+- Namen der Variablen
+- Verwendete Standardmethoden
+- Umfang der Daten und des Projekts
+- Laborbedingungen
+- Etwaige Einschränkungen der Daten
+- Für die Erfassung und Verarbeitung verwendete Software und Versionen.
 
-An important piece of information for chemical data is a [machine-readable chemical structures](/docs/machine-readable_chemical_structures). This should be included within the dataset and/or metadata and aids computers in finding the correct data in their queries.
+Eine wichtige Information für chemische Daten ist eine [maschinenlesbare chemische Struktur] (/docs/machine-readable_chemical_structures). Diese sollte im Datensatz und/oder in den Metadaten enthalten sein und hilft Computern, bei ihren Abfragen die richtigen Daten zu finden.
 
-Repositories should provide data publishers with the opportunity to include a plurality of information in their metadata. This includes giving a wide range of optional and free-fill fields for data publishers to complete.
+Repositorien sollten Datenherausgebern die Möglichkeit bieten, eine Vielzahl von Informationen in ihre Metadaten aufzunehmen. Dazu gehört auch eine breite Palette von optionalen und frei auszufüllenden Feldern, die die Datenverleger ausfüllen können.
 
-#### R1.1. (meta)data are released with a clear and accessible data usage license
+#### R1.1 (Meta-)Daten werden mit einer klaren und zugänglichen Datennutzungslizenz freigegeben
 
-The metadata should include human and machine-readable use conditions, such as a license. [Creative Commons](https://creativecommons.org/) licenses are commonly used for scientific data and this [license selection tool](https://creativecommons.org/choose/) can help researchers assign a license that fits their needs. [re3data](https://www.re3data.org/) lists whether a repository allows researchers to directly select a license or terms of use agreement when depositing data. At a minimum, repositories should allow researchers to add a license file.
+Die Metadaten sollten menschen- und maschinenlesbare Verwendungsbedingungen, wie z. B. eine Lizenz, enthalten. [Creative Commons](https://creativecommons.org/) Lizenzen werden häufig für wissenschaftliche Daten verwendet, und dieses [Lizenzauswahltool](https://creativecommons.org/choose/) kann Forschenden helfen, eine Lizenz zuzuweisen, die ihren Bedürfnissen entspricht. [re3data](https://www.re3data.org/) listet auf, ob ein Repositorium es Forschenden erlaubt, bei der Hinterlegung von Daten direkt eine Lizenz oder eine Nutzungsvereinbarung auszuwählen. Repositorien sollten Forschenden zumindest die Möglichkeit geben, eine Lizenzdatei hinzuzufügen.
 
-#### R1.2. (meta)data are associated with detailed provenance
+#### R1.2 (Meta-)Daten sind mit einer detaillierten Herkunft verbunden
 
-In simple terms: metadata include any relevant history. If the dataset is related to other datasets or based on another researcher’s data, these should be linked via their PID as described in I3. This includes citing or acknowledging others for their work, which also takes their licensing or use agreements into consideration (see [R1.1](#r11-metadata-are-released-with-a-clear-and-accessible-data-usage-license)). Furthermore, metadata should contain machine-readable information on how the data was generated or processed.
+Vereinfacht ausgedrückt: Metadaten beinhalten jede relevante Historie. Wenn der Datensatz mit anderen Datensätzen in Verbindung steht oder auf den Daten anderer Forschender basiert, sollten diese über ihre PID verlinkt werden, wie in [I3](#i3-meta-daten-enthalten-qualifizierte-verweise-auf-andere-meta-daten) beschrieben. Dazu gehört auch, dass andere für ihre Arbeit zitiert oder gewürdigt werden, was auch deren Lizenz- oder Nutzungsvereinbarungen berücksichtigt (siehe [R1.1](#r11-meta-daten-werden-mit-einer-klaren-und-zug%C3%A4nglichen-datennutzungslizenz-freigegeben). Darüber hinaus sollten die Metadaten maschinenlesbare Informationen darüber enthalten, wie die Daten erzeugt oder verarbeitet wurden.
 
-#### R1.3. (meta)data meet domain-relevant community standards
+#### R1.3 (Meta-)Daten entsprechen fachlichen Gemeinschaftsstandards
 
-As research data management and, as such, [data publication](/docs/data_publication) becomes more and more prevalent across research areas, [best practices](/docs/best_practice) in the individual communities will arise. This should encompass metadata templates for proper documentation of datasets, how the data should be [organized](/docs/data_organisation), which vocabularies or [ontologies](/docs/ontology) to use, and [file formats](/docs/format_standards). NFDI4Chem is working to establish [metadata and data standards](https://www.nfdi4chem.de/index.php/task-areas/) for the various communities in chemistry.
+Da sich das Management von Forschungsdaten und damit auch die [Datenveröffentlichung](/docs/data_publication) in allen Forschungsbereichen immer mehr durchsetzt, werden in den einzelnen Communities [best practices](/docs/best_practice) entstehen. Dazu gehören Metadatenvorlagen für die ordnungsgemäße Dokumentation von Datensätzen, die Art und Weise, wie die Daten [organisiert](/docs/data_organisation) werden sollten, welche Vokabulare oder [Ontologien](/docs/ontology) zu verwenden sind, und [Dateiformate](/docs/format_standards). NFDI4Chem arbeitet an der Erstellung von [Metadaten- und Datenstandards](https://www.nfdi4chem.de/index.php/task-areas/) für die verschiedenen Gemeinschaften in der Chemie.
 
-Where available, community standards and best practices should be followed when those publishing prepare their datasets and relevant metadata for publication. [Repositories](/docs/repositories), especially domain-specific service providers, should adhere to the standards set forth by the community by requiring files and metadata to follow format specifications.
-As noted in [I1](#i1-metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation) above, the CIF format represents a community-specific standard associated with the chemical community. Furthermore, [NMReDATA](https://doi.org/10.1002/mrc.4737) represents a possible [standard file format](/docs/format_standards) for publishing and archiving Nuclear Magnetic Resonance (NMR) data.
+Soweit verfügbar, sollten die Standards und bewährten Praktiken der Gemeinschaft befolgt werden, wenn die Herausgeber ihre Datensätze und relevanten Metadaten für die Veröffentlichung vorbereiten. [Repositorien](/docs/repositories), insbesondere domänenspezifische Dienstleister, sollten sich an die von der Gemeinschaft festgelegten Standards halten, indem sie verlangen, dass Dateien und Metadaten den Formatspezifikationen entsprechen.
+Wie in [I1](#i1-meta-daten-eine-formale-zug%C3%A4ngliche-gemeinsame-und-allgemein-anwendbare-sprache-zur-wissensdarstellung-verwenden) oben erwähnt, stellt das CIF-Format einen gemeinschaftsspezifischen Standard dar, der mit der chemischen Gemeinschaft assoziiert ist. Darüber hinaus stellt [NMReDATA](https://doi.org/10.1002/mrc.4737) ein mögliches [Standarddateiformat](/docs/format_standards) für die Veröffentlichung und Archivierung von Kernspinresonanzdaten (NMR) dar.
 
-Where required, format converters should be linked in the dataset’s metadata.
+Falls erforderlich, sollten Formatkonverter in den Metadaten des Datensatzes verlinkt werden.
 
-## Sources and further information
+## Quellen und weitere Informationen
 
-- [FORCE 11: FAIR Data Principles](https://www.force11.org/group/fairgroup/fairprinciples)
-- [Go-FAIR initiative: FAIR Principles](https://www.go-fair.org/fair-principles/)
-- [TIB Blog: The FAIR Data Principles for Research Data](https://blogs.tib.eu/wp/tib/2017/09/12/the-fair-data-principles-for-research-data/)
-- [FAIRSFAIR: How to be FAIR with your data. A teaching and training handbook for higher education institutions](https://zenodo.org/record/5787046#.Yd_Emv7MKUn)
-- [Checklist: How FAIR are your data?
-](https://doi.org/10.5281/zenodo.1065991) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065991.svg)](https://doi.org/10.5281/zenodo.1065991)
+- [FORCE 11: FAIR-Datengrundsätze](https://www.force11.org/group/fairgroup/fairprinciples)
+- [Go-FAIR-Initiative: FAIR-Grundsätze](https://www.go-fair.org/fair-principles/)
+- [TIB-Blog: Die FAIR-Datengrundsätze für Forschungsdaten](https://blogs.tib.eu/wp/tib/2017/09/12/the-fair-data-principles-for-research-data/)
+- [FAIRSFAIR: Wie man mit seinen Daten FAIR ist. Ein Lehr- und Schulungshandbuch für Hochschuleinrichtungen](https://zenodo.org/record/5787046#.Yd_Emv7MKUn)
+- [Checkliste: Wie FAIR sind Ihre Daten?] (https://doi.org/10.5281/zenodo.1065991) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1065991.svg)](https://doi.org/10.5281/zenodo.1065991)
