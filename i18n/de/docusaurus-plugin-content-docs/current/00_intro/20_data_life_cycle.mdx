@@ -11,56 +11,56 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" vspace="10" hspace="10"/>
 
-In scientific work, the assurance of [good research practice](https://doi.org/10.5281/zenodo.3923602) is the highest imperative.
+In der wissenschaftlichen Arbeit ist die Sicherstellung einer [guten Forschungspraxis](https://doi.org/10.5281/zenodo.3923602) oberstes Gebot.
 
-To ensure compliance, professional handling of research data is of particular importance. To illustrate the handling of research data, there are various models such as the [domain model](https://subs.emis.de/LNI/Proceedings/Proceedings257/55.pdf) or the research data life cycle model. The research data life cycle model describes the lifespan of the data and beyond based on various phases from planning to publication or conscious deletion. For the research data life cycle, there are different approaches to the same model depending on the institution, the funder, etc. Different priorities can be placed on the data life cycle. The approach taken by [NFDI4Chem](https://www.nfdi4chem.de/) is shown in the figure on the right.
+Um dies zu gewährleisten, ist ein professioneller Umgang mit Forschungsdaten von besonderer Bedeutung. Zur Veranschaulichung des Umgangs mit Forschungsdaten gibt es verschiedene Modelle wie das [Domänenmodell](https://subs.emis.de/LNI/Proceedings/Proceedings257/55.pdf) oder das Lebenszyklusmodell für Forschungsdaten. Das Lebenszyklusmodell für Forschungsdaten beschreibt die Lebensdauer der Daten und darüber hinaus anhand verschiedener Phasen von der Planung bis zur Veröffentlichung oder bewussten Löschung. Für den Lebenszyklus von Forschungsdaten gibt es je nach Einrichtung, Geldgeber usw. unterschiedliche Ansätze für dasselbe Modell. Dem Datenlebenszyklus können unterschiedliche Prioritäten beigemessen werden. Der von [NFDI4Chem](https://www.nfdi4chem.de/) verfolgte Ansatz ist in der Abbildung auf der rechten Seite dargestellt.
 <!-- One possible approach is shown in figure 1. -->
 
 
-## Phase 1: Experiment Design
+## Phase 1: Experimentaufbau
 
-In phase 1, you start with the **planning of your experiment design** as well as your **data management** ([formats](/docs/format_standards), [storage](/docs/data_storage) …). During this planning phase, already **existing data** should be located and the **legal framework** for use should be checked.
-You should be aware of the various **requirements** of the research funder, your university, your institution, and your community and should write a **first draft** of your [data management plan (DMP)](/docs/dmp). In this first draft, you should define the **responsibilities**.
+In Phase 1 beginnen Sie mit der **Planung Ihres Experimentaufbaus** sowie Ihrer **Datenverwaltung** ([Formate](/docs/format_standards), [Speicherung](/docs/data_storage) ...). In dieser Planungsphase sollten bereits **vorhandene Daten** ausfindig gemacht und die **rechtlichen Rahmenbedingungen** für die Nutzung geprüft werden.
+Sie sollten sich über die verschiedenen **Anforderungen** des Forschungsgebers, Ihrer Universität, Ihrer Einrichtung und Ihrer Gemeinde im Klaren sein und einen **ersten Entwurf** Ihres [Datenmanagementplans (DMP)](/docs/dmp) erstellen. In diesem ersten Entwurf sollten Sie die **Zuständigkeiten** definieren.
 
-## Phase 2: Experiment/ Data Collection
+## Phase 2: Experiment/Datensammlung
 
-**New data** is created or collected in this phase, e.g. through chemical synthesis, simulations of molecules, or measurements carried out on samples. When conducting the respective experiment, make sure that you also create or record the **relevant [metadata](/docs/metadata)** that describes the data. The [documentation](/docs/data_documentation) of the created data with all further information and metadata should be recorded in an [(electronic) laboratory notebook](/docs/eln).
+In dieser Phase werden **neue Daten** erzeugt oder gesammelt, z.B. durch chemische Synthese, Simulationen von Molekülen oder Messungen an Proben. Achten Sie bei der Durchführung des jeweiligen Experiments darauf, dass Sie auch die **relevanten [Metadaten](/docs/metadata)**, die die Daten beschreiben, erstellen oder aufzeichnen. Die [Dokumentation](/docs/data_documentation) der erstellten Daten mit allen weiteren Informationen und Metadaten sollte in einem [(elektronischen) Laborjournal](/docs/eln) festgehalten werden.
 
-If you use existing data or samples, **clarify the rights of use**. In this case, provenance metadata may provide you with information. In addition, a link should be created between the existing data and the newly generated data. This is relevant information and helps you in the [reuse phase](#phase-6-re-use).
+Wenn Sie vorhandene Daten oder Proben verwenden, **klären Sie die Nutzungsrechte**. In diesem Fall können Ihnen Provenienz-Metadaten Auskunft geben. Darüber hinaus sollte eine Verknüpfung zwischen den vorhandenen Daten und den neu erzeugten Daten hergestellt werden. Dies ist eine relevante Information und hilft Ihnen in der [Wiederverwendungsphase](#phase-6-wiederverwendung).
 
-## Phase 3: Data Processing
+## Phase 3: Verarbeitung der Daten
 
-In the data processing phase, the collected data should be **digitised** if it is not directly coming in a digital format and as far as it is possible. An electronic lab notebook can greatly assist in this step and brings the data together—whether digital or digitised. Furthermore, **you should think about collecting further information and metadata** on the data. Think about the different types of metadata such as descriptive, administrative, or structural metadata. Enriching the data with further, machine-readable metadata makes the data searchable.
-Moreover, **quality assurance** is important at this phase. Check, validate and clean the data! You should save the data and prepare a data backup.
+In der Phase der Datenverarbeitung sollten die gesammelten Daten **digitalisiert** werden, wenn sie nicht direkt in einem digitalen Format vorliegen und soweit dies möglich ist. Ein elektronisches Laborjournal kann bei diesem Schritt sehr hilfreich sein und führt die Daten zusammen - egal ob digital oder digitalisiert. Darüber hinaus sollten **Sie darüber nachdenken, weitere Informationen und Metadaten** zu den Daten zu sammeln. Denken Sie dabei an die verschiedenen Arten von Metadaten wie beschreibende, administrative oder strukturelle Metadaten. Die Anreicherung der Daten mit weiteren, maschinenlesbaren Metadaten macht die Daten durchsuchbar.
+Außerdem ist in dieser Phase die **Qualitätssicherung** wichtig. Prüfen, validieren und bereinigen Sie die Daten! Sie sollten die Daten speichern und eine Datensicherung erstellen.
 
-## Phase 4: Analysis
+## Phase 4: Analyse
 
-In the 4th phase, as the name suggests, the focus is on the **analysis and interpretation of the data**. After analysing the data, the data should be evaluated. You should also consider **sharing the data** with colleagues in a closed and secure environment like on a project or working group level. Secure environments for sharing data are often provided by universities or federal states through Sync&share solutions. Consult your local research data team about this. 
+In der 4. Phase geht es, wie der Name schon sagt, um die **Analyse und Interpretation der Daten**. Nach der Analyse der Daten sollten die Daten ausgewertet werden. Sie sollten auch in Erwägung ziehen, die Daten **in einer geschlossenen und sicheren Umgebung, z. B. auf Projekt- oder Arbeitsgruppenebene, mit Kollegen zu teilen**. Sichere Umgebungen für die gemeinsame Nutzung von Daten werden häufig von Universitäten oder Bundesländern über Sync&share-Lösungen bereitgestellt. Wenden Sie sich diesbezüglich an Ihr lokales Forschungsdatenteam. 
 
-Before sharing data, you should check whether the data is subject to **copyright protection or other protective rights**. 
+Bevor Sie Daten weitergeben, sollten Sie prüfen, ob die Daten einem **Urheberrechtsschutz oder anderen Schutzrechten** unterliegen. 
 
 
-## Phase 5: Disclosure/ Publication
+## Phase 5: Phase 5: Offenlegung/Veröffentlichung
 
-During this exchange and the associated reflections on the data, you should think about archiving and using the data in scientific publications. If you are not aware of any **criteria for archiving** and no criteria are specified in your working group or institute, decision-making guides such as the [“5 steps to decide what data to keep”](https://www.dcc.ac.uk/guidance/how-guides/five-steps-decide-what-data-keep)  outlined by the DCC can help. Based on the established criteria, it is determined which of the collected raw data should be archived and which should be deliberately deleted.
+Während dieses Austauschs und der damit verbundenen Reflexion der Daten sollten Sie über die Archivierung und die Verwendung der Daten in wissenschaftlichen Publikationen nachdenken. Wenn Sie keine **Kriterien für die Archivierung** kennen und in Ihrer Arbeitsgruppe oder Ihrem Institut keine Kriterien festgelegt sind, können Entscheidungshilfen wie die vom DCC skizzierten ["5 steps to decide what data to keep"] (https://www.dcc.ac.uk/guidance/how-guides/five-steps-decide-what-data-keep) helfen. Anhand der festgelegten Kriterien wird entschieden, welche der gesammelten Rohdaten archiviert und welche bewusst gelöscht werden sollen.
 
-In addition to the criteria, the migration of the data into **suitable [formats](/docs/format_standards) and onto suitable media** is important for archiving the data. In this step, the data should again be enriched with metadata so that it can be understood in the future without further knowledge about the data.
-In addition to archiving, the [publication](/docs/data_publication) of the data plays a special role. Many research funders expect the data to be published if there are no special reasons not to do so, such as a non-disclosure agreement or the inclusion of personal data. A **chemistry-specific or chemistry-related [repository](/docs/repositories)** such as the [Chemotion Repository](https://www.chemotion-repository.net/), [NOMAD](https://nomad-lab.eu/services/repo-arch), or [MassBank](https://massbank.eu/MassBank/)  is recommended for the publication of data. An overview of repositories can be found, for example, at [re3data.org](https://www.re3data.org/) or [fairsharing.org](https://fairsharing.org/). re3data.org allows you to filter repositories according to certain criteria such as the assignment of a persistent identifier or access.
-Data publication often takes place at certain milestones, for example, in combination with a text publication or at the end of a project. The **final version of the data management plan** is also required at the end of a project.
+Neben den Kriterien ist die Migration der Daten in **geeignete [Formate](/docs/format_standards) und auf geeignete Medien** wichtig für die Archivierung der Daten. In diesem Schritt sollten die Daten wiederum mit Metadaten angereichert werden, damit sie auch in Zukunft ohne weiteres Wissen über die Daten verstanden werden können.
+Neben der Archivierung spielt auch die [Veröffentlichung](/docs/data_publication) der Daten eine besondere Rolle. Viele Forschungsförderer erwarten, dass die Daten veröffentlicht werden, wenn nicht besondere Gründe dagegen sprechen, wie z.B. eine Geheimhaltungsvereinbarung oder die Aufnahme von personenbezogenen Daten. Für die Veröffentlichung von Daten wird ein **chemiespezifisches oder chemiebezogenes [Repositorium](/docs/repositories)** wie das [Chemotion Repository](https://www.chemotion-repository.net/), [NOMAD](https://nomad-lab.eu/services/repo-arch) oder [MassBank](https://massbank.eu/MassBank/) empfohlen. Eine Übersicht über Repositories findet sich z.B. bei [re3data.org](https://www.re3data.org/) oder [fairsharing.org](https://fairsharing.org/). re3data.org ermöglicht es, Repositories nach bestimmten Kriterien wie der Vergabe eines persistenten Identifikators oder des Zugangs zu filtern.
 
-## Phase 6: Re-use
 
-In the re-use phase, you or others conduct further research on how the data can be put into **new contexts** and how **new ideas** can be generated. Questions such as: How can I further develop my synthesis strategy? Which settings do I need to change in my spectroscopic measurements? and so on are developed further in this phase. **New usage scenarios** can also arise in chemistry or in other disciplines, such as Big Data applications. Furthermore, these data and the insights gained from them can be valuable for teaching and learning purposes.
+## Phase 6: Wiederverwendung
 
-In order to return these data to the cycle, it is important that these data are described in detail with metadata, that proper documentation has been carried out in the form of a DMP, and that the data are citable.
+In der Phase der Wiederverwendung erforschen Sie oder andere, wie die Daten in einen **neuen Kontext** gestellt werden können und wie **neue Ideen** generiert werden können. Fragen wie: Wie kann ich meine Synthesestrategie weiterentwickeln? Welche Einstellungen muss ich bei meinen spektroskopischen Messungen ändern? und so weiter werden in dieser Phase weiterentwickelt. **Neue Nutzungsszenarien** können sich auch in der Chemie oder in anderen Disziplinen ergeben, wie z.B. Big-Data-Anwendungen. Darüber hinaus können diese Daten und die daraus gewonnenen Erkenntnisse auch für Lehr- und Lernzwecke wertvoll sein.
 
-What is the potential of your data?  
+Um diese Daten in den Kreislauf zurückführen zu können, ist es wichtig, dass diese Daten detailliert mit Metadaten beschrieben sind, eine ordentliche Dokumentation in Form eines DMP durchgeführt wurde und die Daten zitierfähig sind.
 
-## Sources and further information
+Was ist das Potenzial Ihrer Daten?   
+
+## Quellen und weitere Informationen
 
 - DFG Guidelines for Safeguarding Good Research Practice. Code of Conduct [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3923602.svg)](https://doi.org/10.5281/zenodo.3923602)
 - [Introducing research data management as a service suite at RWTH Aachen University](https://dl.gi.de/handle/20.500.12116/894) <!--ISBN: 978-3-88579-651-0-->
 - [Review of data management lifecycle models](https://researchportal.bath.ac.uk/en/publications/review-of-data-management-lifecycle-models)
 - [DCC: 5 steps to decide what data to keep](https://www.dcc.ac.uk/guidance/how-guides/)
-- German: [Überblick zum Management von Forschungsdaten (FDM I) = Research Data Management - An Overview](https://doi.org/10.18154/RWTH-2019-06489)
-- German: [Forschungsdaten.info: Informieren und Planen](https://www.forschungsdaten.info/themen/informieren-und-planen/datenlebenszyklus/ )
+- Deutsch: [Überblick zum Management von Forschungsdaten (FDM I) = Research Data Management - An Overview](https://doi.org/10.18154/RWTH-2019-06489)
+- Deutsch: [Forschungsdaten.info: Informieren und Planen](https://www.forschungsdaten.info/themen/informieren-und-planen/datenlebenszyklus/ )
