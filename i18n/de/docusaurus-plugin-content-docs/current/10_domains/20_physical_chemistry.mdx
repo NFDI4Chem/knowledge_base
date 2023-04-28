@@ -34,29 +34,29 @@ Die physikalische Chemie ist eine interdisziplinäre Wissenschaft im Grenzbereic
 - Auswertung der Daten mit Bruker-Software oder z.B. [EasySpin](https://www.easyspin.org/) als Open-Source-Toolbox für MATLAB
 
 ### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using an suitable [ELN](/docs/eln) (possibly in addition to a manual laboratory notebook in paper form)
-- experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. frequency, temperature) are noted in the [ELN](/docs/eln)
-- observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the [ELN](/docs/eln) entry of the experiment
-- obtained unprocessed raw files from measurements are uploaded to [ELN](/docs/eln) in open file formats and attached directly to the respective [ELN](/docs/eln) experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters
-- [metadata](/docs/metadata) related to the obtained data, such as temperature or solvent of measurement, follow common [metadata standards](/docs/metadata)
-- research data are processed, analysed and compared with open non-proprietary software tools
-- simultaneously with [publication](/docs/data_publication) as a research article in a scientific journal, the underlying research data is published in an open data [repository](/docs/repositories) and linked to the article (incl. semantically richly annotated raw and processed data in open data formats for reuse)
-- an unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
+- die [documentation of all research data](/docs/data_documentation) und [metadata](/docs/metadata) erfolgt digital mit einem geeigneten [ELN](/docs/eln) (ggf. zusätzlich zu einem manuellen Laborjournal in Papierform)
+- Versuchsbedingungen (z. B. Probenkonzentration, Lösungsmittel usw.) und Messparameter (z. B. Häufigkeit, Temperatur) werden im [ELN](/docs/eln) notiert
+- Beobachtungen, Abweichungen vom geplanten Messprotokoll oder andere Besonderheiten während der Messung ohne digitale Ausgabe (d. h. ohne Datendateien) werden manuell zum [ELN](/docs/eln)-Eintrag des Experiments hinzugefügt
+- erhaltene unbearbeitete Rohdateien von Messungen werden in offenen Dateiformaten in [ELN](/docs/eln) hochgeladen und direkt an den jeweiligen [ELN](/docs/eln)-Eintrag des Experiments angehängt, einschließlich Metadaten mit Daten zum Instrument (z. B. Hersteller, Typ usw.), Messbedingungen und -parameter
+- Die [metadata](/docs/metadata), die sich auf die gewonnenen Daten beziehen, wie z. B. Temperatur oder Lösungsmittel der Messung, folgen gängigen [metadata standards](/docs/metadata)
+- die Forschungsdaten werden mit offenen, nicht-proprietären Softwaretools verarbeitet, analysiert und verglichen
+- gleichzeitig mit der [publication](/docs/data_publication) als Forschungsartikel in einer wissenschaftlichen Zeitschrift werden die zugrundeliegenden Forschungsdaten in einem offenen Daten-[repository](/docs/repositories) veröffentlicht und mit dem Artikel verlinkt (einschließlich semantisch reichhaltig annotierter Roh- und verarbeiteter Daten in offenen Datenformaten zur Wiederverwendung)
+- ein eindeutiger [persistent identifier](/docs/pid) (z. B. DOI) wird für jeden Datensatz sowie für die Zeitschriftenpublikation erzeugt
 
-## Quantum Mechanical (QM) calculations
+## Quantenmechanische (QM) Berechnungen
 
-### What is it?
-- **Q**uantum **M**echanical calculations are one of the major computational tools to elucidate molecular properties on a first-principles basis
-- solving the Schrödinger equation provides the electronic energy of a molecule/molecular system, from which properties can be derived as higher-order derivatives. Descriptors can also be computed from orbital/density data which is equally available
+### Was ist das?
+- Q**uanten-**M**echanische Berechnungen sind eines der wichtigsten Berechnungsinstrumente, um molekulare Eigenschaften auf der Grundlage erster Prinzipien zu ergründen
+- Die Lösung der Schrödinger-Gleichung liefert die elektronische Energie eines Moleküls/Molekülsystems, aus der sich die Eigenschaften als Ableitungen höherer Ordnung ableiten lassen. Deskriptoren können auch aus Orbital-/Dichtedaten berechnet werden, die ebenfalls verfügbar sind
 
-### For what?
-- calculated molecular properties include e.g. molecular structures (usually local minima and transition states), energies, spectroscopic parameters/properties, dipole moments, polarizabilities and non-observables such as atomic charges and topological analysis
-- properties can be calculated prior to conducting experimental measurements to guide synthesis (computational screening) or a posteriori to help interpret experimental results atomistically
-- the application range depends on the level of theory used. Correlated wave function methods are commonly applied to systems with less than 100 atoms, density functional theory (DFT) up to 500 atoms, semiempirical methods can be routinely applied in the range of thousands
+### Wofür?
+- Zu den berechneten molekularen Eigenschaften gehören z. B. Molekülstrukturen (in der Regel lokale Minima und Übergangszustände), Energien, spektroskopische Parameter/Eigenschaften, Dipolmomente, Polarisierbarkeiten und nicht beobachtbare Größen wie atomare Ladungen und topologische Analysen
+- die Eigenschaften können vor der Durchführung experimenteller Messungen berechnet werden, um die Synthese zu steuern (computergestütztes Screening) oder im Nachhinein, um die Interpretation experimenteller Ergebnisse auf atomarer Ebene zu unterstützen
+- Der Anwendungsbereich hängt von der verwendeten Theoriestufe ab Korrelierte Wellenfunktionsmethoden werden üblicherweise auf Systeme mit weniger als 100 Atomen angewandt, Dichtefunktionaltheorie (DFT) bis zu 500 Atomen, semiempirische Methoden können routinemäßig im Bereich von Tausenden von Atomen angewendet werden
 
-### What kind of data is generated?
-- data formats depend strongly on the program that is used for the QM calculations, e.g. Gaussian, ORCA, Molpro, TURBOMOLE or Jaguar, but generally formatted text files are used as input and log files. Compressed data formats are used to store wavefunction, density information and operators. Molecular structures are provided in human-readable format
-- data analysis is carried out using custom scripts. A few programs provide their own scripts for common tasks (such as plotting of molecular orbitals) and dedicated GUIs
+### Welche Art von Daten wird generiert?
+- Die Datenformate hängen stark von dem Programm ab, das für die QM-Berechnungen verwendet wird, z. B. Gaussian, ORCA, Molpro, TURBOMOLE oder Jaguar, aber im Allgemeinen werden formatierte Textdateien als Eingabe- und Protokolldateien verwendet. Komprimierte Datenformate werden zur Speicherung von Wellenfunktionen, Dichteinformationen und Operatoren verwendet. Die Molekülstrukturen werden in einem für den Menschen lesbaren Format bereitgestellt
+- Die Datenanalyse wird mit Hilfe von benutzerdefinierten Skripten durchgeführt. Einige wenige Programme bieten eigene Skripte für allgemeine Aufgaben (z. B. das Plotten von Molekülorbitalen) und spezielle grafische Benutzeroberflächen
 
 ### How to do it [FAIR](/docs/fair)?
 - [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using a suitable repository (e.g. NOMAD, ioChem-BD or a general-purpose repository) to store the input files, main log and structures files (if not included in the log)
