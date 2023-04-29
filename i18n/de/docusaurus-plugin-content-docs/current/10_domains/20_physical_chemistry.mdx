@@ -15,9 +15,9 @@ Die physikalische Chemie ist eine interdisziplinäre Wissenschaft im Grenzbereic
 
 :::
 
-# Methods Profiles
+# Methoden-Profile
 
-## EPR spectroscopy
+## EPR-Spektroskopie
 
 ### Was ist das?
 - Die **E**lektronen **P**aramagnetische **R**esonanzspektroskopie gehört zusammen mit der NMR (**N**ukleare **M**agnetische **R**esonanz) Spektroskopie zur Gruppe der magnetischen Resonanzmethoden
@@ -28,25 +28,25 @@ Die physikalische Chemie ist eine interdisziplinäre Wissenschaft im Grenzbereic
 - zur Charakterisierung der Molekulardynamik auf der Zeitskala von ca. 10 ps-1 μs (lässt z. B. Rückschlüsse auf die lokale Nanoviskosität zu)
 - für Abstandsmessungen im Bereich von etwa 1-8 nm
 
-### Welche Art von Daten wird generiert? 
-- fast ausschließlich [proprietary file formats](/docs/format_standards) (z.B. .spe oder .DTA/.DSC) der Firma "Bruker Corporation"
-- Übertragung in [open file formats](/docs/format_standards) (z.B. .txt oder .csv) entweder über Bruker-Software am Messgerät selbst oder über Tools wie [SpinToolbox](https://www.spintoolbox.com/en/)
+### Welche Arten von Daten werden generiert? 
+- fast ausschließlich [proprietäre Dateiformate](/docs/format_standards) (z.B. .spe oder .DTA/.DSC) der Firma "Bruker Corporation"
+- Übertragung in [offene Dateiformate](/docs/format_standards) (z.B. .txt oder .csv) entweder über Bruker-Software am Messgerät selbst oder über Tools wie [SpinToolbox](https://www.spintoolbox.com/en/)
 - Auswertung der Daten mit Bruker-Software oder z.B. [EasySpin](https://www.easyspin.org/) als Open-Source-Toolbox für MATLAB
 
-### How to do it [FAIR](/docs/fair)?
-- die [documentation of all research data](/docs/data_documentation) und [metadata](/docs/metadata) erfolgt digital mit einem geeigneten [ELN](/docs/eln) (ggf. zusätzlich zu einem manuellen Laborjournal in Papierform)
+### Wie wird es [FAIR](/docs/fair) gemacht?
+- die [Dokumentation aller Forschungsdaten](/docs/data_documentation) und [Metadaten](/docs/metadata) erfolgt digital mit einem geeigneten [ELN](/docs/eln) (ggf. zusätzlich zu einem manuellen Laborjournal in Papierform)
 - Versuchsbedingungen (z. B. Probenkonzentration, Lösungsmittel usw.) und Messparameter (z. B. Häufigkeit, Temperatur) werden im [ELN](/docs/eln) notiert
 - Beobachtungen, Abweichungen vom geplanten Messprotokoll oder andere Besonderheiten während der Messung ohne digitale Ausgabe (d. h. ohne Datendateien) werden manuell zum [ELN](/docs/eln)-Eintrag des Experiments hinzugefügt
 - erhaltene unbearbeitete Rohdateien von Messungen werden in offenen Dateiformaten in [ELN](/docs/eln) hochgeladen und direkt an den jeweiligen [ELN](/docs/eln)-Eintrag des Experiments angehängt, einschließlich Metadaten mit Daten zum Instrument (z. B. Hersteller, Typ usw.), Messbedingungen und -parameter
-- Die [metadata](/docs/metadata), die sich auf die gewonnenen Daten beziehen, wie z. B. Temperatur oder Lösungsmittel der Messung, folgen gängigen [metadata standards](/docs/metadata)
+- Die [Metadaten](/docs/metadata), die sich auf die gewonnenen Daten beziehen, wie z. B. Temperatur oder Lösungsmittel der Messung, folgen gängigen [Metadaten-Standards](/docs/metadata)
 - die Forschungsdaten werden mit offenen, nicht-proprietären Softwaretools verarbeitet, analysiert und verglichen
-- gleichzeitig mit der [publication](/docs/data_publication) als Forschungsartikel in einer wissenschaftlichen Zeitschrift werden die zugrundeliegenden Forschungsdaten in einem offenen Daten-[repository](/docs/repositories) veröffentlicht und mit dem Artikel verlinkt (einschließlich semantisch reichhaltig annotierter Roh- und verarbeiteter Daten in offenen Datenformaten zur Wiederverwendung)
-- ein eindeutiger [persistent identifier](/docs/pid) (z. B. DOI) wird für jeden Datensatz sowie für die Zeitschriftenpublikation erzeugt
+- gleichzeitig mit der [Veröffentlichung](/docs/data_publication) als Forschungsartikel in einer wissenschaftlichen Zeitschrift werden die zugrundeliegenden Forschungsdaten in einem offenen Daten-[Repositorium](/docs/repositories) veröffentlicht und mit dem Artikel verlinkt (einschließlich semantisch reichhaltig annotierter Roh- und verarbeiteter Daten in offenen Datenformaten zur Wiederverwendung)
+- ein eindeutiger [dauerhafter Bezeichner](/docs/pid) (z. B. DOI) wird für jeden Datensatz sowie für die Zeitschriftenpublikation erzeugt
 
 ## Quantenmechanische (QM) Berechnungen
 
 ### Was ist das?
-- Q**uanten-**M**echanische Berechnungen sind eines der wichtigsten Berechnungsinstrumente, um molekulare Eigenschaften auf der Grundlage erster Prinzipien zu ergründen
+- **Q**uanten-**M**echanische Berechnungen sind eines der wichtigsten Berechnungsinstrumente, um molekulare Eigenschaften auf der Grundlage erster Prinzipien zu ergründen
 - Die Lösung der Schrödinger-Gleichung liefert die elektronische Energie eines Moleküls/Molekülsystems, aus der sich die Eigenschaften als Ableitungen höherer Ordnung ableiten lassen. Deskriptoren können auch aus Orbital-/Dichtedaten berechnet werden, die ebenfalls verfügbar sind
 
 ### Wofür?
@@ -54,53 +54,53 @@ Die physikalische Chemie ist eine interdisziplinäre Wissenschaft im Grenzbereic
 - die Eigenschaften können vor der Durchführung experimenteller Messungen berechnet werden, um die Synthese zu steuern (computergestütztes Screening) oder im Nachhinein, um die Interpretation experimenteller Ergebnisse auf atomarer Ebene zu unterstützen
 - Der Anwendungsbereich hängt von der verwendeten Theoriestufe ab Korrelierte Wellenfunktionsmethoden werden üblicherweise auf Systeme mit weniger als 100 Atomen angewandt, Dichtefunktionaltheorie (DFT) bis zu 500 Atomen, semiempirische Methoden können routinemäßig im Bereich von Tausenden von Atomen angewendet werden
 
-### Welche Art von Daten wird generiert?
+### Welche Arten von Daten werden generiert?
 - Die Datenformate hängen stark von dem Programm ab, das für die QM-Berechnungen verwendet wird, z. B. Gaussian, ORCA, Molpro, TURBOMOLE oder Jaguar, aber im Allgemeinen werden formatierte Textdateien als Eingabe- und Protokolldateien verwendet. Komprimierte Datenformate werden zur Speicherung von Wellenfunktionen, Dichteinformationen und Operatoren verwendet. Die Molekülstrukturen werden in einem für den Menschen lesbaren Format bereitgestellt
 - Die Datenanalyse wird mit Hilfe von benutzerdefinierten Skripten durchgeführt. Einige wenige Programme bieten eigene Skripte für allgemeine Aufgaben (z. B. das Plotten von Molekülorbitalen) und spezielle grafische Benutzeroberflächen
 
-### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using a suitable repository (e.g. NOMAD, ioChem-BD or a general-purpose repository) to store the input files, main log and structures files (if not included in the log)
-- reproducibility of calculations to within numerical accuracy can be ensured by storing the input files and adding the program and its version (ideally even the compiler version and any compiler flags) as metadata. Numerical thresholds are well defined but reproducibility of calculations across different programs and versions is not guaranteed. This warrants the safekeeping of version specific source files for the same time period as the stored data
-- data analysis scripts should be uploaded to the repository in open file formats, attached directly to the corresponding data entry and accompanied with appropriate documentation
-- if possible, analysis and evaluation of calculations should be conducted with open, non-proprietary software tools
-- simultaneously with [publication](/docs/data_publication) as a research article in a scientific journal, the data in the [repository](/docs/repositories) is linked to the article (incl. semantically richly annotated raw and processed data, if possible in open data formats for reuse)
-- a unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for the dataset as well as for the journal publication
-- XML and CML (Chemical Markup Language) is used by a few software packages but this is not common practice
+### Wie wird es [FAIR](/docs/fair) gemacht?
+- Die [Dokumentation aller Forschungsdaten](/docs/data_documentation) und [Metadaten](/docs/metadata) erfolgt digital unter Verwendung eines geeigneten Repositoriums (z. B. NOMAD, ioChem-BD oder ein allgemeines Repositorium) zur Speicherung der Eingabedateien, des Hauptprotokolls und der Strukturdateien (falls nicht im Protokoll enthalten)
+- Die Reproduzierbarkeit von Berechnungen mit numerischer Genauigkeit kann durch Speicherung der Eingabedateien und Hinzufügen des Programms und seiner Version (idealerweise auch der Compiler-Version und etwaiger Compiler-Flags) als Metadaten gewährleistet werden. Numerische Schwellenwerte sind gut definiert, aber die Reproduzierbarkeit von Berechnungen über verschiedene Programme und Versionen hinweg ist nicht garantiert. Dies rechtfertigt die Aufbewahrung von versionsspezifischen Quelldateien für denselben Zeitraum wie die gespeicherten Daten
+- Skripte zur Datenanalyse sollten in offenen Dateiformaten in das Repositorium hochgeladen, direkt an den entsprechenden Dateneintrag angehängt und mit entsprechender Dokumentation versehen werden.
+- die Analyse und Auswertung der Berechnungen sollte nach Möglichkeit mit offenen, nicht-proprietären Softwaretools durchgeführt werden
+- gleichzeitig mit der [Veröffentlichung](/docs/data_publication) als Forschungsartikel in einer wissenschaftlichen Zeitschrift werden die Daten im [Repositorium](/docs/repositories) mit dem Artikel verlinkt (inkl. semantisch reich kommentierter Roh- und verarbeiteter Daten, wenn möglich in offenen Datenformaten zur Wiederverwendung)
+- ein eindeutiger [persistenter Identifikator](/docs/pid) (z. B. DOI) wird sowohl für den Datensatz als auch für die Zeitschriftenpublikation erzeugt
+- XML und CML (Chemical Markup Language) werden von einigen wenigen Softwarepaketen verwendet, sind aber keine gängige Praxis
 
-### Challenges to make data FAIR
-- no standardised transfer into [open file formats](/docs/format_standards). All repositories of quantum chemical calculations to date make use of in-house parsers to extract the calculation data from uploaded logs. This trend hinders the improvement of FAIR practices since new developers are not provided with a template for log files. Any new software can only be featured in repositories after a unique parser is developed
-- lack of open meta-input and output file formats that are necessary to enable full interoperability of different programs and tools used for QM calculations. Particularly concerning is the lack of standards for: z-matrix and xyz file formats, trajectory files in molecular dynamics or structure optimisations, definition of isotopes, potential energy surfaces as well as equations used in the derivation of properties including thermodynamic quantities
+### Herausforderungen, um Daten FAIR zu machen
+- keine standardisierte Übertragung in [offene Dateiformate](/docs/format_standards). Alle bisherigen Repositorien für quantenchemische Berechnungen verwenden eigene Parser, um die Berechnungsdaten aus hochgeladenen Protokollen zu extrahieren. Dieser Trend behindert die Verbesserung der FAIR-Praktiken, da neuen Entwicklern keine Vorlage für Protokolldateien zur Verfügung gestellt wird. Jede neue Software kann erst dann in die Repositories aufgenommen werden, wenn ein eigener Parser entwickelt wurde.
+- Fehlen offener Meta-Eingabe- und -Ausgabedateiformate, die für eine vollständige Interoperabilität verschiedener Programme und Werkzeuge für QM-Berechnungen erforderlich sind. Besonders bedenklich ist das Fehlen von Standards für: z-Matrix- und xyz-Dateiformate, Trajektoriendateien in der Molekulardynamik oder Strukturoptimierung, Definition von Isotopen, potenziellen Energieflächen sowie Gleichungen zur Ableitung von Eigenschaften einschließlich thermodynamischer Größen
 
-## Molecular Mechanical (MM) simulations
+## Molekularmechanische (MM) Simulationen
 
-### What is it?
-- **M**olecular **M**echanical simulations approximate intra- and intermolecular interactions using simple Newtonian mechanics and neglect quantum effects
-- the system is parametrised with a suitable force field and propagated in time by solving the system’s Newtonian equations of motion. Potentials or modifications of the force field parameters can be applied to extract thermodynamic/kinetic data
+### Was ist das?
+- **M**olekulare **M**echanische Simulationen beschreiben die intra- und intermolekularen Wechselwirkungen mit Hilfe der einfachen Newtonschen Mechanik und vernachlässigen Quanteneffekte
+- Das System wird mit einem geeigneten Kraftfeld parametrisiert und durch Lösen der Newtonschen Bewegungsgleichungen des Systems in der Zeit propagiert. Potentiale oder Modifikationen der Kraftfeldparameter können angewendet werden, um thermodynamische/kinetische Daten zu gewinnen.
 
-### For what?
-- systems can be as large as millions of atoms, allowing for the investigation of protein dynamics and protein-ligand interactions on a microsecond timescale. More complex systems such as protein-protein interactions or proteins embedded in a biomembrane can also be simulated
-- simulations of pure liquids, mixtures or interfaces between liquids and solids or gases enable the investigation of such systems
-- explaining and interpreting the behaviour of macroscopic systems by investigating them at a microscopic level
+### Wofür?
+- Systeme können bis zu Millionen von Atomen umfassen, was die Untersuchung von Proteindynamik und Protein-Ligand-Wechselwirkungen auf einer Mikrosekunden-Zeitskala ermöglicht. Komplexere Systeme wie Protein-Protein-Wechselwirkungen oder in eine Biomembran eingebettete Proteine können ebenfalls simuliert werden
+- Simulationen von reinen Flüssigkeiten, Gemischen oder Grenzflächen zwischen Flüssigkeiten und Festkörpern oder Gasen ermöglichen die Untersuchung solcher Systeme
+- das Verhalten makroskopischer Systeme zu erklären und zu interpretieren, indem sie auf mikroskopischer Ebene untersucht werden
 
-### What kind of data is generated?
-- data formats depend strongly on the program that is used for the MM calculations, e.g. AMBER, CHARMM, GROMACS, LAMMPS or NAMD but in general specifically formatted text files are used as input and log files, and a binary representation for checkpoint and trajectory files
-- analysis of data using tools provided by the software’s manufacturer or custom scripts
+### Welche Arten von Daten werden generiert?
+- die Datenformate hängen stark von dem Programm ab, das für die MM-Berechnungen verwendet wird, z. B. AMBER, CHARMM, GROMACS, LAMMPS oder NAMD, aber im Allgemeinen werden speziell formatierte Textdateien als Eingabe- und Protokolldateien und eine binäre Darstellung für Checkpoint- und Trajektoriendateien verwendet
+- Analyse der Daten mit Hilfe von Werkzeugen, die vom Hersteller der Software zur Verfügung gestellt werden, oder durch eigene Skripte
 
-### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using a suitable repository to store the data
-- reproducibility of calculations can be ensured by storing the input file and adding the program and its version (ideally including the compiler and any compiler flags) as metadata
-- if possible, analysis and evaluation of calculations should be conducted with open non-proprietary software tools
-- simultaneously with [publication](/docs/data_publication) as a research article in a scientific journal, the data in the [repository](/docs/repositories) is linked to the article (incl. semantically richly annotated raw and processed data, if possible in open data formats for reuse)
-- a unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
+### Wie wird es [FAIR](/docs/fair) gemacht?
+- die [Dokumentation aller Forschungsdaten](/docs/data_documentation) und [Metadaten](/docs/metadata) erfolgt digital unter Verwendung eines geeigneten Repositoriums zur Speicherung der Daten
+- die Reproduzierbarkeit von Berechnungen durch Speicherung der Eingabedatei und Hinzufügen des Programms und seiner Version (idealerweise einschließlich des Compilers und etwaiger Compiler-Flags) als Metadaten gewährleistet werden kann
+- die Analyse und Auswertung der Berechnungen sollte nach Möglichkeit mit offenen, nicht-proprietären Softwaretools durchgeführt werden
+- gleichzeitig mit der [Veröffentlichung](/docs/data_publication) als Forschungsartikel in einer wissenschaftlichen Zeitschrift werden die Daten im [Repositorium](/docs/repositories) mit dem Artikel verlinkt (einschließlich semantisch reichhaltig annotierter Roh- und verarbeiteter Daten, wenn möglich in offenen Datenformaten zur Wiederverwendung)
+- ein eindeutiger [persistenter Identifikator](/docs/pid) (z. B. DOI) wird für jeden Datensatz sowie für die Zeitschriftenpublikation generiert
 
-### Challenges to make data FAIR
-- no standardised transfer into [open file formats](/docs/format_standards) for different simulation packages
-- development of open meta-input and output file formats is required to handle the multitude of different programs and tools used in MM calculations in accordance with the FAIR principles. Tools such as PLUMED can help users with this problem
-- trajectory files are typically too large to store in commonly used repository environments, even when using compressed file formats. To make this data FAIR, standards for handling large amounts of data must be developed or solutions from other fields applied
-- reproducibility of long time-scale molecular dynamics is unattainable (numerical noise will eventually affect the resulting trajectories, especially in a multicore environment). Depending on the numerical accuracy and the specific implementation, deviations can be observed as soon as in the picosecond range. However, thermodynamic averages or other probabilistic measurements should be achieved within a suitable margin of error. This margin would have to be estimated and provided by the authors of a publication
+### Herausforderungen, um Daten FAIR zu machen
+- keine standardisierte Übertragung in [offene Dateiformate](/docs/format_standards) für verschiedene Simulationspakete
+- Die Entwicklung offener Meta-Eingabe- und Ausgabedateiformate ist erforderlich, um die Vielzahl verschiedener Programme und Werkzeuge, die bei MM-Berechnungen verwendet werden, gemäß den FAIR-Prinzipien zu handhaben. Werkzeuge wie PLUMED können den Nutzern bei diesem Problem helfen
+- Trajektoriendateien sind in der Regel zu groß, um sie in gängigen Repository-Umgebungen zu speichern, selbst wenn komprimierte Dateiformate verwendet werden. Um diese Daten FAIR zu machen, müssen Standards für den Umgang mit großen Datenmengen entwickelt oder Lösungen aus anderen Bereichen angewendet werden
+- Die Reproduzierbarkeit der Molekulardynamik auf langen Zeitskalen ist unerreichbar (numerisches Rauschen beeinträchtigt schließlich die resultierenden Trajektorien, insbesondere in einer Multicore-Umgebung). Abhängig von der numerischen Genauigkeit und der spezifischen Implementierung können Abweichungen bereits im Pikosekundenbereich beobachtet werden. Thermodynamische Mittelwerte oder andere probabilistische Messungen sollten jedoch innerhalb einer angemessenen Fehlermarge erzielt werden. Dieser Spielraum müsste von den Autoren einer Veröffentlichung geschätzt und angegeben werden.
 
 
-# Methods Data Format Overview
+# Methoden Datenformat Übersicht
 
 <Methods defaultProfile={"physical"} />
 
