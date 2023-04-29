@@ -11,43 +11,43 @@ import {LbeChip} from '@site/src/components/lbe/LbeElements.js';
 
 :::info Summary:
 
-Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification, and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level, and the metabolism of the active compounds.
-The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro, and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety.
-Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimise these leads ideally result in promising candidates for preclinical studies in drug development, potentially followed by clinical studies.
+Die medizinische Chemie ist eine stark interdisziplinäre Disziplin, die auf Chemie basiert. Sie befasst sich mit der Entdeckung, Entwicklung, Identifizierung und Synthese biologisch aktiver Verbindungen, der Interpretation ihres Wirkmechanismus auf molekularer Ebene und dem Metabolismus der Wirkstoffe.
+Die Wechselwirkungen von Wirkstoffen mit ihren biologischen Zielen werden in silico (Chemoinformatik), in vitro und in vivo analysiert, um die Selektivität und das Potenzial im Hinblick auf ihre therapeutische Wirksamkeit und Sicherheit zu bestimmen.
+Arzneimittelchemiker bereiten geeignete Verbindungen für die biologische Bewertung vor und/oder wählen sie aus, die, falls sie sich als aktiv erweisen, als Leitverbindungen dienen könnten. Chemische Modifikationen zur Optimierung dieser Leitverbindungen führen im Idealfall zu vielversprechenden Kandidaten für präklinische Studien in der Arzneimittelentwicklung, denen möglicherweise klinische Studien folgen.
 
 :::
 
-## Type of experiments
+## Arten von Experimenten
 
-- Synthesis:
-  - Preparation of compounds including combinatorial approaches for biological evaluation in suitable test systems
-- Analysis:
-  - Characterisation of intermediate and final products
-  - Analysis of (quantitative) structure-activity relationships, molecular modelling studies
-  - Biological evaluation, activity assays
+- Synthese:
+  - Herstellung von Verbindungen einschließlich kombinatorischer Ansätze für die biologische Bewertung in geeigneten Testsystemen
+- Analyse:
+  - Charakterisierung von Zwischen- und Endprodukten
+  - Analyse von (quantitativen) Struktur-Wirkungs-Beziehungen, Molecular Modelling Studien
+- Biologische Bewertung, Aktivitätsprobe
 
-## Planning of experiments
+## Planung von Experimenten
 
-Test systems are established, either target-oriented or phenotypic assays, to identify hit compounds. Alternatively, (potential) hit compounds can be selected from available data (e.g. publications) or by virtual screening.
-Starting from promising hit compounds, optimisation cycles are performed to improve the properties of the starting compounds. Suitable assay systems are required to obtain the necessary data to assess the compounds’ properties. These include potency efficacy, selectivity, potential bias, water solubility, lipophilicity, pharmacokinetic properties, e.g. bioavailability and metabolic stability, interaction with liver cytochrome P450 enzymes, hERG channel interaction, cell toxicity, potential genotoxicity, etc. The required properties depend e.g. on the indication and the application route of the drug.
+Es werden Testsysteme eingerichtet, entweder zielgerichtete oder phänotypische Proben, um Trefferverbindungen zu ermitteln. Alternativ können (potenzielle) Hit-Verbindungen aus verfügbaren Daten (z. B. Veröffentlichungen) oder durch virtuelles Screening ausgewählt werden.
+Ausgehend von vielversprechenden Hit-Verbindungen werden Optimierungszyklen durchgeführt, um die Eigenschaften der Ausgangsverbindungen zu verbessern. Um die notwendigen Daten zur Bewertung der Eigenschaften der Verbindungen zu erhalten, sind geeignete Testsysteme erforderlich. Dazu gehören Potenz, Wirksamkeit, Selektivität, potenzielle Verzerrung, Wasserlöslichkeit, Lipophilie, pharmakokinetische Eigenschaften, z. B. Bioverfügbarkeit und metabolische Stabilität, Interaktion mit Leber-Cytochrom-P450-Enzymen, Interaktion mit dem hERG-Kanal, Zelltoxizität, potenzielle Genotoxizität usw. Die erforderlichen Eigenschaften hängen z. B. von der Indikation und dem Applikationsweg des Arzneimittels ab.
 
-## Documentation of experiments
+## Dokumentation von Experimenten
 
-[Documentation](/docs/data_documentation) of research data and [metadata](/docs/metadata) is carried out, preferably digitally, using a suitable [ELN](/docs/eln) and/or a manual laboratory notebook in paper form.
+Die [Dokumentation](/docs/data_documentation) von Forschungsdaten und [Metadaten](/docs/metadata) erfolgt vorzugsweise digital mit Hilfe eines geeigneten [ELN](/docs/eln) und/oder eines manuellen Laborjournals in Papierform.
 
-Using an ELN:
+Verwendung eines ELN:
 
-- Experimental conditions and measurement parameters are noted in the ELN.
-- Observations, deviations from planned measurement protocols, or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN experiment entry.
-- Obtained data from analytical instruments (e.g. NMR, MS, or IR data) are uploaded to the ELN in open file formats and directly attached to the respective experiment entry, including instrumental setup metadata.
-- Metadata related to the obtained data follow common metadata standards.
+- Versuchsbedingungen und Messparameter werden im ELN notiert.
+- Beobachtungen, Abweichungen von geplanten Messprotokollen oder andere Besonderheiten während der Messung ohne digitale Ausgabe (d. h. ohne Datendateien) werden manuell in den ELN-Versuchseintrag eingetragen.
+- Die von analytischen Instrumenten erhaltenen Daten (z. B. NMR-, MS- oder IR-Daten) werden in offenen Dateiformaten in das ELN hochgeladen und direkt an den jeweiligen Experimenteintrag angehängt, einschließlich der Metadaten zum Instrumentenaufbau.
+- Die Metadaten zu den gewonnenen Daten entsprechen den üblichen Metadatenstandards.
 
-## Data producing methods
+## Methoden der Datenerfassung
 
-- Data can be collected during or after the experiment by analysing the obtained product.
-- Manually determined data: Experimental observations, appearance, yield, melting/boiling point, optical rotation, TLC Rf values, refraction index, etc.
-- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in proprietary file formats should be saved alongside interoperable [open file formats](/docs/format_standards) by using converters or the analytical device software. If no specific open format is currently available, an export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+- Daten können während oder nach dem Experiment durch Analyse des erhaltenen Produkts erhoben werden.
+- Manuell ermittelte Daten: Experimentelle Beobachtungen, Aussehen, Ausbeute, Schmelz-/Siedepunkt, optische Drehung, TLC-Rf-Werte, Brechungsindex usw.
+- Digitale Daten werden mit analytischen Geräten gewonnen. Die nachstehende Tabelle gibt einen Überblick über Dateierweiterungen, Dateigrößen und Konverter für verschiedene Analysemethoden.
+- Rohdatendateien in proprietären Dateiformaten sollten neben interoperablen [offenen Dateiformaten](/docs/format_standards) mit Hilfe von Konvertern oder der Software des Analysegeräts gespeichert werden. Wenn derzeit kein spezifisches offenes Format verfügbar ist, wird ein Export als .txt oder .csv empfohlen. Bitte beachten Sie, dass die Metadaten im Header von .txt- oder .csv-Dateien möglicherweise nicht einem definierten (offenen) Format entsprechen und die Metadaten zusätzlich auch in das ELN aufgenommen werden sollten.
 
 <Methods defaultProfile={"pharma"} />
 
