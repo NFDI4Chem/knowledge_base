@@ -10,9 +10,9 @@ slug: "/repositories"
 
 Repositories are locations where digital objects are stored and made available to the public. They can be regarded as the core of research data sharing as they provide platforms to store, curate, publish, archive, preserve, and access data. Pre-print servers can also be considered as repositories, although these are tailored toward scientific articles rather than research data.
 
-Repositories can be classified differently according to:
+Repositories can be classified mainly according to:
 
-- the type of objects to be stored (e.g. scientific articles or research data),
+- the type of objects to be stored (e.g. scientific articles or research data) and
 - the domain of the data contained (field-specific or generic repositories),
 <!--- the storage period of the data (e.g. at least 10 years) or
 the data access and -reuse policy -->
@@ -21,21 +21,23 @@ Repositories can be hosted at institutional server or are provided by broader or
 
 ## How do repositories work?
 
-Curators proof-check data before **ingestion** in the repository, with regard to their content or quality, and, sometimes, also regarding their legal aspects (copyright, data protection) and ensure that the data are directly available to data-users.
+A repository is constituted by a repository software and a database. Researchers transfer their data to the repository typically via a web-based user interface, or the repository operators **harvest** the data from other platforms via appropriate protocols and interfaces.
 
-A repository is constituted by repository software and a database. Data providers can transfer the data to the repository typically via a web-based user interface, or the repository operators collect (**harvest**) the data automatically from other platforms via appropriate protocols and interfaces.
+Some, but not all, repositories curate and review the data before **ingestion**, with regard to their content and quality, and, sometimes, also regarding their legal aspects (copyright, data protection, [licenses](/docs/licenses)).
 
-In order to allow data re-use by third parties, [metadata](/docs/metadata) are required beside the actual data. They describe the content of the research data and provide information about its creation, the software or methods used and legal aspects. Metadata can be either added manually or provided through other applications. The metadata should also include terms of use in the form of licences that regulate access to the data (registration, embargo, etc.).
+In order to allow data re-use by other researchers, [metadata](/docs/metadata) are required beside the actual data. Metadata describe the content of the research data and provide information about its creation, the methods or software used as well as legal aspects. Metadata can be either added manually or can be provided through other applications. The process to manually add metadata via a metadata editor can be compared to the process of submitting a manuscript to a publisher via the publishers submission system. 
 
-Usually repositories offer a search function with which users can find, view and download data. In order to ensure that data are permanently referenced and cited, repositories assign unique [persistent identifiers](/docs/pid) (PIDs). 
+One main function of repositories is to provide a search function with which users and machines can find, view and download data. In order to ensure that data are permanently referenced and can be cited, repositories assign unique [persistent identifiers](/docs/pid) (PIDs). This also enhances the findability and accessibility of research data. 
 
 ## Finding the right repository
 
-Because of the multitudes of data repositories existing, users could better orient themselves using a research data repository registry (e.g. https://fairsharing.org/ or https://www.re3data.org/). Repository registry services are an essential component of the [FAIR](/docs/fair) (**F**indable **A**ccessible **I**nteroperable **R**eusable)-strategy as they help researchers to navigate through thousands of data repository services to find the most suitable one to store and provide access to their research outputs as well as to enable them to search for and repurpose FAIR data created by others. DataCite's Repository Finder finds repositories that meet the criteria recommended by the Enabling FAIR Data Project. ROAR and OPENDOAR are directories that list Open Access repositories from all over the world.
+Because of the multitudes of data repositories existing, users could better orient themselves using a research data repository registry such as [Re3data](https://www.re3data.org/) and [FAIRsharing](https://fairsharing.org/). Repository registry services are an essential component of [FAIR](/docs/fair) data as they should help researchers to navigate through thousands of data repository services to find the most appropriate repository for their data. 
+
+DataCite's Repository Finder finds repositories that meet the criteria recommended by the Enabling FAIR Data Project. ROAR and OPENDOAR are directories that list Open Access repositories from all over the world.
 
 Repositories can also be certified (e.g. CoreTrustSeal). Such certification ensures data users, among other things, that data will be usable, citable and preserved in the long run. 
 
-Nowadays more and more peer review journals mandate authors to deposit their data into repositories (e.g. figshare) prior to manuscript submission. If authors do not comply with these rules, the review process is not initiated.
+<!--- Nowadays more and more peer reviewed journals mandate authors to deposit their data into repositories prior to manuscript submission. If authors do not comply with these rules, the review process is not initiated. -->
 
 ## Repositories for Chemistry
 
