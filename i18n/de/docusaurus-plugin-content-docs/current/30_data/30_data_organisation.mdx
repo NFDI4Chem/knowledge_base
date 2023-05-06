@@ -6,127 +6,127 @@ nfdi4chem-tags: [data_organisation, data_storage, repositories]
 slug: "/data_organisation"
 ---
 
-After [documentation of your research data](/docs/data_documentation), more detailed descriptions of how your information is saved is required - a quick look at files and folders, but when working with many or large data sets, the advantages of databases can become relevant. Consider whether this applies to your project and whether only files exported from the database might be useful. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data_storage).
+Nach der [Dokumentation Ihrer Forschungsdaten](/docs/data_documentation) ist eine detailliertere Beschreibung der Art und Weise, wie Ihre Informationen gespeichert werden, erforderlich - ein kurzer Blick auf Dateien und Ordner, aber wenn Sie mit vielen oder großen Datensätzen arbeiten, können die Vorteile von Datenbanken relevant werden. Überlegen Sie, ob dies auf Ihr Projekt zutrifft und ob nur aus der Datenbank exportierte Dateien sinnvoll sein könnten. Einen Überblick über Speicherorte und Speichermethoden finden Sie unter [Datenspeicherung und Archivierung](/docs/data_storage).
 
 
-## Files: naming conventions
+## Dateien: Benennungskonventionen
 
-Human users benefit from file names that allow for easy sorting and a notion of the content at first glance. However, file names such as the following are not helpful:
+Menschliche Benutzer profitieren von Dateinamen, die ein einfaches Sortieren ermöglichen und den Inhalt auf den ersten Blick erkennen lassen. Dateinamen wie die folgenden sind jedoch nicht hilfreich:
 
     mydata.csv
-    mydata_final.csv
-    myfinaldata_V2.csv
-    myfinaldata_V2_ready.csv
+    meineDaten_endg.csv
+    meinefinaldaten_V2.csv
+    meinefinaldaten_V2_fertig.csv
 
-We need short and descriptive file names as an identifier for a document. Useful names give information on what the files contain and helps in sorting them. Pay attention to your naming scheme when working with others: It is important to follow the same file naming convention, so develop an adapted scheme when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation).
+Wir brauchen kurze und aussagekräftige Dateinamen als Identifikator für ein Dokument. Nützliche Namen geben Auskunft über den Inhalt der Dateien und helfen beim Sortieren. Achten Sie auf Ihr Benennungsschema, wenn Sie mit anderen zusammenarbeiten: Es ist wichtig, sich an dieselbe Dateinamenskonvention zu halten. Entwickeln Sie daher zu Beginn des Projekts ein angepasstes Schema und schreiben Sie es einschließlich der Erläuterung von Abkürzungen in Ihre [Datendokumentation](/docs/data_documentation).
 
-Try to think about the different statuses (raw data, draft, temporary, finished, ...) and types (editable source format like textfiles or csv in contrast to export formats such as PDF) of your documents.
+Versuchen Sie, die verschiedenen Status (Rohdaten, Entwurf, vorläufig, fertig, ...) und Typen (bearbeitbares Quellformat wie Textdateien oder csv im Gegensatz zu Exportformaten wie PDF) Ihrer Dokumente zu berücksichtigen.
 
-Find a balanced set of elements: Too many make it difficult to grasp quickly, while too few elements rapidly exhaust the possible namespace. Be aware of the maximum number of characters for path names, which is usually 255 characters.
+Finden Sie eine ausgewogene Anzahl von Elementen: Zu viele erschweren das schnelle Erfassen, während zu wenige Elemente den möglichen Namensraum schnell erschöpfen. Beachten Sie die maximale Anzahl von Zeichen für Pfadnamen, die in der Regel 255 Zeichen beträgt.
 
-:::note General basics for naming files:
-* Order the elements from general to specific.
-* Use meaningful abbreviations instead of long identifiers.
-* Use underscore (_), hypen (-) or capitalized letters to separate elements in the name. Don’t use spaces or special characters: ?!& , * % # ; * ( ) @$ ^ ~ ‘ { } [ ] < >.
-* Use date format ISO8601: YYYYMMDD, and time if needed HHMMSS.
-* Include a version number if appropriate: minimum two digits (V02) and extend it, if needed for minor corrections (V02-03). The leading zeros, will ensure the files are sorted correctly.
+:::note Allgemeine Grundlagen für die Benennung von Dateien:
+* Ordnen Sie die Elemente vom Allgemeinen zum Speziellen.
+* Verwenden Sie aussagekräftige Abkürzungen anstelle von langen Bezeichnungen.
+* Verwenden Sie Unterstrich (_), Bindestrich (-) oder Großbuchstaben, um Elemente im Namen zu trennen. Verwenden Sie keine Leer- oder Sonderzeichen: ?!& , * % # ; * ( ) @$ ^ ~ ' { } [ ] < >.
+* Verwenden Sie das Datumsformat ISO8601: JJJJMMTT, und Uhrzeit, falls erforderlich HHMMSS.
+* Fügen Sie gegebenenfalls eine Versionsnummer ein: mindestens zweistellig (V02) und bei Bedarf für kleinere Korrekturen erweitert (V02-03). Die führenden Nullen stellen sicher, dass die Dateien korrekt sortiert werden.
 
-(by [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file))
+(von [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file))
 :::
 
-#### Example elements to include in the file name
-* Date of creation
-* Project number / experiment / acronym
-* Type of data (sample ID, analysis, conditions, modifications etc.)
-* Device / location / coordinates
-* Name / Initials of the creator
-* Version number
-* Reserve the last 3-letters for file format (e.g. .csv, .odt, .tif, .jpg)
+#### Beispiele für Elemente, die im Dateinamen enthalten sein sollten
+* Datum der Erstellung
+* Projektnummer / Experiment / Akronym
+* Art der Daten (Proben-ID, Analyse, Bedingungen, Änderungen usw.)
+* Gerät / Standort / Koordinaten
+* Name / Initialen des Erstellers
+* Versionsnummer
+* Reservieren Sie die letzten 3 Buchstaben für das Dateiformat (z. B. .csv, .odt, .tif, .jpg)
 
 
-A good file name such as `20180211_ELI5_TEMP_BH01_RAW_03.csv` can easily be sorted by date and tells you:
+Ein guter Dateiname wie `20180211_ELI5_TEMP_BH01_RAW_03.csv` kann leicht nach Datum sortiert werden und gibt Aufschluss:
 
-    date of file:                 11 February 2018
-    project acronym:              ELI5 = Explain like I’m 5 (years old)
-    measured value type:          TEMP = temperature values
-    measuring point / location:   BH01 = beehive # 01
-    type of data:                 RAW = raw data from measuring device
-    number of file containing data for that measurement series
+    Datum der Datei:                 11. Februar 2018
+    Projektkürzel: ELI5 = Erklären wie ich 5 bin (Jahre alt)
+    Messwerttyp:          TEMP = Temperaturwerte
+    Messstelle / Ort:   BH01 = Bienenstock Nr. 01
+    Art der Daten:                 RAW = Rohdaten vom Messgerät
+    Nummer der Datei, die die Daten für diese Messreihe enthält
 
 
-If you need to rename a multiple files, take a look at:
+Wenn Sie mehrere Dateien umbenennen müssen, schauen Sie sich das an:
 - [Thunar Bulk Rename](https://docs.xfce.org/xfce/thunar/bulk-renamer/start) (Linux, GUI)
-- [command line: mv, mmv, rename](https://linuxconfig.org/how-to-rename-multiple-files-on-linux) (Linux, CLI)
-- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) (Windows, free)
-- [TotalCommander](https://www.ghisler.com/advanced.htm#tutorial_rename) (windows, Shareware)
+- [Befehlszeile: mv, mmv, rename](https://linuxconfig.org/how-to-rename-multiple-files-on-linux) (Linux, CLI)
+- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) (Windows, kostenlos)
+- [TotalCommander](https://www.ghisler.com/advanced.htm#tutorial_rename) (Windows, Shareware)
 - [Renamer4Mac](https://renamer.com/) (Mac).
 
-For some special file formats there are tools for adapting the file name to metadata. For example, to create a file name that fits your scheme and takes date and time information from the EXIF data of a jpg file. Some also allow adding an offset - this helps sort photos into timestamps that run on different clocks.
+Für einige spezielle Dateiformate gibt es Tools zur Anpassung des Dateinamens an die Metadaten. Zum Beispiel, um einen Dateinamen zu erstellen, der zu Ihrem Schema passt und die Datums- und Zeitinformationen aus den EXIF-Daten einer jpg-Datei übernimmt. Einige erlauben auch das Hinzufügen eines Offsets - dies hilft beim Sortieren von Fotos nach Zeitstempeln, die auf unterschiedlichen Uhren laufen.
 
 
-## Files: versioning
+## Dateien: Versionierung
 
-Stash snapshots or simply track changes and allow to find something that existed in a previous version but was later deleted or changed. With a clear chronological processing one after the other, normally no further tools are required. But even if this often seems so at first, supporting tools quickly proved to be useful and quickly are established in cooperation.
+Verstecken Sie Schnappschüsse oder verfolgen Sie einfach Änderungen und ermöglichen Sie es, etwas zu finden, das in einer früheren Version existierte, aber später gelöscht oder geändert wurde. Bei einer klaren chronologischen Abarbeitung nacheinander sind normalerweise keine weiteren Werkzeuge erforderlich. Doch auch wenn dies anfangs oft so scheint, haben sich unterstützende Werkzeuge schnell als nützlich erwiesen und sind in der Zusammenarbeit schnell etabliert.
 
-#### Possible Solutions
-* Low number of requirements: manage manually e.g. by keeping a log where the changes for each respective file is documented, version by version.
-* For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted by e.g. [GitHub](https://github.com/) or your home institution. Very strong with uncompressed, readable and comparable files such as text files or csv.
-* Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
-
-
-## Files: types of metadata
-
-Consider the way data and [Metadata](/docs/metadata/) can be stored together as FDOs (Fair Digital Objects). For example, metadata can be divided into the following four categories:
-* descriptive metadata
-* administrative metadata
-* technical metadata
-* structural metadata
-
-An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/format_standards/) for more information.
-
-## Files: formats
-
-Different disciplines use established standards, see [Data Format Standard](/docs/format_standards/). Also consider beyond the duration of the project:
-- usage of proprietary or open file formats
-- exchange within and outside of the working group
-- short term and long term storage, [Data Storage and Archiving](/docs/data_storage)
-- special workflows and procedures (e.g. for data collection, documentation and evaluation)
-- shared or separate storage (e.g. SPSS file for data; XML file for metadata)
-- suitable procedures for preserving the consistency of data and metadata
+#### Mögliche Lösungen
+* Geringe Anzahl von Anforderungen: Manuelle Verwaltung, z. B. durch Führen eines Protokolls, in dem die Änderungen für jede einzelne Datei, Version für Version, dokumentiert werden.
+* Für die automatische Verwaltung der Versionierung, Konfliktlösung und Rückverfolgungsmöglichkeiten verwenden Sie eine geeignete Versionskontrollsoftware wie [Git](https://git-scm.com/), die z. B. von [GitHub](https://github.com/) oder Ihrer Einrichtung bereitgestellt wird. Sehr stark mit unkomprimierten, lesbaren und vergleichbaren Dateien wie Textdateien oder csv.
+* Verwenden Sie einen Cloud-Speicherdienst (siehe [Datenspeicherung und Archivierung](/docs/data_storage)), der eine automatische Dateiversionierung bietet. Sehr gut geeignet für Tabellenkalkulationen, Textdateien und Folien.
 
 
-## Folder structure
+## Dateien: Arten von Metadaten
 
-Everything should be immediately intuitively understandable. The folder structure helps you to navigate through the individual pieces of information. Develop a convention when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation). Try to consistently apply the same strategy in every project within the research group.
+Betrachten Sie die Art und Weise, wie Daten und [Metadaten](/docs/metadata/) zusammen als FDOs (Fair Digital Objects) gespeichert werden können. Metadaten lassen sich beispielsweise in die folgenden vier Kategorien einteilen:
+* beschreibende Metadaten
+* administrative Metadaten
+* technische Metadaten
+* strukturelle Metadaten
 
-Folders should:
-* follow a structure with folders and subfolders that correspond to the project design and workflow
-* have a self-explanatory name that is only as long as is necessary
-* have a unique name – avoid assigning the same name to a folder and a subfolder
+Ein FDO kapselt Daten und Metadaten in einer Datei und kann z.B. als [HDF5](https://www.hdfgroup.org/solutions/hdf5/) gespeichert werden. Siehe [Data Format Standard](/docs/format_standards/) für weitere Informationen.
 
-The top folder should have a README.txt file describing the folder structure and what files are contained within the folders. This file should also contain explanation of the file naming convention.
+## Dateien: Formate
 
-#### An example by [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file):
+Verschiedene Disziplinen verwenden etablierte Standards, siehe [Data Format Standard](/docs/format_standards/). Berücksichtigen Sie auch über die Dauer des Projekts hinaus:
+- Verwendung von proprietären oder offenen Dateiformaten
+- Austausch innerhalb und außerhalb der Arbeitsgruppe
+- Kurzzeit- und Langzeitspeicherung, [Datenspeicherung und Archivierung](/docs/data_storage)
+- spezielle Arbeitsabläufe und Verfahren (z.B. zur Datenerhebung, Dokumentation und Auswertung)
+- gemeinsame oder getrennte Speicherung (z. B. SPSS-Datei für Daten; XML-Datei für Metadaten)
+- geeignete Verfahren zur Wahrung der Konsistenz von Daten und Metadaten
+
+
+## Ordnerstruktur
+
+Alles sollte sofort intuitiv verständlich sein. Die Ordnerstruktur hilft Ihnen, durch die einzelnen Informationen zu navigieren. Entwickeln Sie zu Beginn des Projekts eine Konvention und schreiben Sie diese einschließlich der Erläuterung von Abkürzungen in Ihrer [Datendokumentation](/docs/data_documentation) nieder. Versuchen Sie, die gleiche Strategie in jedem Projekt innerhalb der Forschungsgruppe konsequent anzuwenden.
+
+Mappen sollten:
+* einer Struktur mit Ordnern und Unterordnern folgen, die dem Projektdesign und dem Arbeitsablauf entspricht
+* einen selbsterklärenden Namen haben, der nur so lang wie nötig ist
+* einen eindeutigen Namen haben - vermeiden Sie es, einem Ordner und einem Unterordner denselben Namen zuzuweisen
+
+Der oberste Ordner sollte eine README.txt-Datei enthalten, in der die Ordnerstruktur beschrieben wird und welche Dateien in den Ordnern enthalten sind. Diese Datei sollte auch eine Erklärung der Dateinamenskonvention enthalten.
+
+#### Ein Beispiel von [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file):
 
     project/  
-      code/                 code needed to go from input files to final results   
-      data/                 raw and primary data (never edit!)   
-         raw_external/  
-         raw_internal/
+      code/ Code, der benötigt wird, um von den Eingabedateien zu den endgültigen Ergebnissen zu gelangen   
+      data/ Roh- und Primärdaten (niemals bearbeiten!)   
+         raw_extern/  
+         roh_intern/
          meta/  
-      doc/                  documentation of the study  
-      intermediate/         output files from intermediate analysis steps  
-      logs/                 logs from the different analysis steps  
-      notebooks/            notebooks that document your day-to-day work  
-      results/              output from workflows and analyses  
-         figures/  
-         reports/  
-         tables/  
-      scratch/              temporary files that can safely be deleted or lost  
-      README.txt            file and folder description  
+      doc/ Dokumentation der Studie  
+      intermediate/ Ausgabedateien von Zwischenschritten der Analyse  
+      logs/ Protokolle der verschiedenen Analyseschritte  
+      notebooks/ Notizbücher, die Ihre tägliche Arbeit dokumentieren  
+      Ergebnisse/ Ergebnisse von Arbeitsabläufen und Analysen  
+         Abbildungen/  
+         Berichte/  
+         Tabellen/  
+      Scratch/ temporäre Dateien, die sicher gelöscht werden oder verloren gehen können  
+      README.txt Datei und Ordnerbeschreibung  
 
 
-## Sources and further information
+## Quellen und weitere Informationen
 - https://rdmkit.elixir-europe.org/data_organisation.html
 - https://www.data.cam.ac.uk/data-management-guide/organising-your-data
 - https://libguides.vu.nl/rdm/data-documentation
