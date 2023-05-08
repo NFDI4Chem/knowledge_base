@@ -14,63 +14,63 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 _Andreas von der Dunk, Technische Universität Dresden, Service Center Research Data_
 :::
 
-## General basics
+## Allgemeine Grundlagen
 
-<img alt="data for future generations" src={useBaseUrl('/img/data/data_1517.png')} width="250" align="right" vspace="10" hspace="10" />
+<img alt="Daten für zukünftige Generationen" src={useBaseUrl('/img/data/data_1517.png')} width="250" align="right" vspace="10" hspace="10" />
 
-A clean and comprehensible organisation of data and documents are an important part of good research practice and an important step to realise research data management according to the [FAIR data principles](/docs/fair). 
+Eine saubere und nachvollziehbare Organisation von Daten und Dokumenten ist ein wichtiger Bestandteil guter Forschungspraxis und ein wichtiger Schritt, um Forschungsdatenmanagement nach den [FAIR Datenprinzipien](/docs/fair) zu realisieren. 
 
-An essential task is to plan the organisation and storage of data, [metadata](/docs/metadata), and documents in advance and to document the relevant measures.
+Eine wesentliche Aufgabe ist es, die Organisation und Speicherung von Daten, [Metadaten](/docs/metadata) und Dokumenten im Vorfeld zu planen und die entsprechenden Maßnahmen zu dokumentieren.
 
-Central requirements are the definition of [formal responsibilities, organisational conventions](#formal-responsibilities-and-organisational-conventions) and [technical implementations](#technical-implementations) to organise the data and meta information produced. The information collected for this purpose is recorded in the [Data Management Plan](/docs/dmp). Note that a good data organisation also estimates the costs (see [costing tool and checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/costing/) for example) in the early application phase.
+Zentrale Anforderungen sind die Festlegung von [formalen Zuständigkeiten, organisatorischen Konventionen](#formal-responsibilities-and-organisational-conventions) und [technischen Implementierungen](#technical-implementations) zur Organisation der anfallenden Daten und Metainformationen. Die zu diesem Zweck gesammelten Informationen werden im [Datenmanagementplan](/docs/dmp) festgehalten. Beachten Sie, dass eine gute Datenorganisation in der frühen Anwendungsphase auch die Kosten abschätzt (siehe z.B. [Kalkulationswerkzeug und Checkliste](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/costing/)).
 
 
-### Formal responsibilities and organisational conventions
+### Formale Verantwortlichkeiten und organisatorische Konventionen
 
-To make a long story short: It's mainly about describing who will and how to work with documents. First steps could be about:
-- Documenting the responsibilities of primary researchers and project staff.
-- Creating user roles: Define detailed rights for users / groups / roles to access data and sensitive information.
-- Describing processes of quality assurance including protected storage, sharing, and accessibility in the short term and on the long run.
-- Data processing: How, where, how fast. Describe input and output data. Decide how you will name and structure files and folders.
+Um es kurz zu machen: Es geht vor allem darum, zu beschreiben, wer und wie mit den Dokumenten arbeiten soll. Erste Schritte könnten darin bestehen:
+- Dokumentieren der Verantwortlichkeiten von Primärforschern und Projektmitarbeitern.
+- Erstellen von Benutzerrollen: Festlegung detaillierter Rechte für Benutzer/Gruppen/Rollen für den Zugriff auf Daten und sensible Informationen.
+- Beschreibung von Qualitätssicherungsprozessen, einschließlich geschützter Speicherung, Weitergabe und Zugänglichkeit auf kurze und lange Sicht.
+- Datenverarbeitung: Wie, wo, wie schnell. Beschreiben Sie Eingabe- und Ausgabedaten. Entscheiden Sie, wie Sie Dateien und Ordner benennen und strukturieren wollen.
 
-The result should be descriptive documents that unambiguously define for files which are used in the course of the daily work routines:
-- on which status (for example original file, temporary work file; Draft, intermediate version, final version),
-- where (workstation PC, central file server, database), 
-- for how long (temporarily, project duration, long-term availability),
-- and in which format they are saved.
+Das Ergebnis sollten beschreibende Dokumente sein, die für Dateien, die im Arbeitsalltag verwendet werden, eindeutig festlegen:
+- mit welchem Status (z.B. Originaldatei, temporäre Arbeitsdatei; Entwurf, Zwischenversion, Endversion),
+- wo (Arbeitsplatz-PC, zentraler Dateiserver, Datenbank), 
+- wie lange (temporär, Projektdauer, langfristige Verfügbarkeit),
+- und in welchem Format sie gespeichert werden.
 
 <img alt="small data handout" src={useBaseUrl('/img/data/en_data_handout.png')} width="600" align="center" vspace="10" hspace="10" />
 
 
-### Technical implementations
+### Technische Implementierungen
 
-Get an overview of the occurring data and document flows. A short description, easy to understand for every user, should be accessible on a low level and explain the main concepts. The data itself needs to have a bulletproof [Data Organisation](/docs/data_organisation) including [Metadata](/docs/metadata/) and suitable [Data Format Standards](/docs/format_standards/). Find out more about the usual [Best Practice](/docs/best_practice/) at your institute or within your discipline. Plan how documents can be shared between project staff and what needs to be accessed for [Data Publication](/docs/data_publication/) with [PID](/docs/pid/).
+Verschaffen Sie sich einen Überblick über die anfallenden Daten- und Dokumentenflüsse. Eine kurze, für jeden Benutzer leicht verständliche Beschreibung sollte auf niedrigem Niveau zugänglich sein und die wichtigsten Konzepte erklären. Die Daten selbst müssen eine kugelsichere [Datenorganisation](/docs/data_organisation) einschließlich [Metadaten](/docs/metadata/) und geeignete [Datenformatstandards](/docs/format_standards/) haben. Informieren Sie sich über die üblichen [Best Practice](/docs/best_practice/) an Ihrem Institut oder innerhalb Ihrer Disziplin. Planen Sie, wie Dokumente zwischen Projektmitarbeitern ausgetauscht werden können und was für die [Datenveröffentlichung](/docs/data_publication/) mit [PID](/docs/pid/) zugänglich gemacht werden muss.
 
-Data security affects all technical and organisational issues to protect the data from alteration, loss, and destruction. In this context, storage methods, backup procedures, necessary physical resources as well as automated and administrative routines must be planned and put in place. Ask local contacts or external experts about already established technologies for [Data Storage and Archiving](/docs/data_storage) as well as suitable [Repositories](/docs/repositories/).
+Die Datensicherheit betrifft alle technischen und organisatorischen Aspekte zum Schutz der Daten vor Veränderung, Verlust und Zerstörung. In diesem Zusammenhang müssen Speichermethoden, Sicherungsverfahren, notwendige physische Ressourcen sowie automatisierte und administrative Routinen geplant und eingerichtet werden. Erkundigen Sie sich bei lokalen Ansprechpartnern oder externen Experten nach bereits etablierten Technologien zur [Datenspeicherung und -archivierung](/docs/data_storage) sowie nach geeigneten [Repositorien](/docs/repositories/).
 
 
 ## Synopsis
 
-<img alt="small data handout" src={useBaseUrl('/img/data/en_data_orgsteps.png')} width="400" align="right" vspace="10" hspace="10" />
+<img alt="mall data handout" src={useBaseUrl('/img/data/de_data_orgsteps.png')} width="400" align="right" vspace="10" hspace="10" />
 
-Good data documentation does not happen over night - take small steps first. The documentation of research data is primarily an organisational problem that is accompanied and supported by technological measures:
-- Record of status quo:
-    - Which organisational processes have been used so far and which technologies support them?
-    - What are the regulatory boundaries and technical limits?
-    - Which personal roles are involved?
-    - Which devices or file formats are or have been used?
-    - Are there any special features?
-- Awareness: Who produces (meta)data, and who continues to use data and how?
-- Define internal rules and processes: What are the targets of RDM, and how can it be achieved?
-- Apply and evaluate rules, iteratively: Learn, set, follow, repeat. Keep it simple and smart (KISS).
-- Develop a suitable technology: Determine specific requirements in the first project phase and continuously adapt them to changing conditions.
-- Establish supporting technology: Evaluate and test software like [ELN](/docs/eln/) and [Repositories](/docs/repositories/), train staff.
-- Obtain legal advice, include local and higher-level policies and procedures: Contact legal department at your institution or [NFDI Querschnittssektion “Ethik und Recht”](https://www.nfdi.de/einrichtung-von-ersten-sektionen/)
-- Make rules and decisions accessible to everyone at an early stage, for example in the form of a short handout.
-- Check the concept regularly and update it if necessary.
+Eine gute Datendokumentation entsteht nicht über Nacht - gehen Sie zunächst in kleinen Schritten vor. Die Dokumentation von Forschungsdaten ist in erster Linie ein organisatorisches Problem, das durch technische Maßnahmen begleitet und unterstützt wird:
+- Erfassung des Status quo:
+    - Welche organisatorischen Abläufe wurden bisher genutzt und welche Technologien unterstützen sie?
+    - Wo liegen die rechtlichen und technischen Grenzen?
+    - Welche persönlichen Rollen sind betroffen?
+    - Welche Geräte oder Dateiformate werden oder wurden verwendet?
+    - Gibt es besondere Merkmale?
+- Sensibilisierung: Wer produziert (Meta-)Daten, und wer nutzt die Daten wie weiter?
+- Definieren Sie interne Regeln und Prozesse: Was sind die Ziele von FDM, und wie können sie erreicht werden?
+- Regeln anwenden und bewerten, iterativ: Lernen, festlegen, befolgen, wiederholen. Keep it simple and smart (KISS).
+- Entwickeln Sie eine geeignete Technologie: Bestimmen Sie in der ersten Projektphase die spezifischen Anforderungen und passen Sie diese kontinuierlich an die sich ändernden Bedingungen an.
+- Unterstützende Technologie etablieren: Software wie [ELN](/docs/eln/) und [Repositorien](/docs/repositories/) evaluieren und testen, Personal schulen.
+- Holen Sie rechtlichen Rat ein, beziehen Sie lokale und übergeordnete Richtlinien und Verfahren ein: Wenden Sie sich an die Rechtsabteilung Ihrer Einrichtung oder an die [NFDI Querschnittssektion "Ethik und Recht"](https://www.nfdi.de/einrichtung-von-ersten-sektionen/)
+- Machen Sie Regeln und Entscheidungen frühzeitig für alle zugänglich, z. B. in Form eines kurzen Handouts.
+- Überprüfen Sie das Konzept regelmäßig und aktualisieren Sie es bei Bedarf.
 
 
-## Sources and further information
+## Quellen und weitere Informationen
 - https://rdmkit.elixir-europe.org/metadata_management.html
 - https://www.data.cam.ac.uk/data-management-guide/organising-your-data
 - https://rfii.de/en/topics/
