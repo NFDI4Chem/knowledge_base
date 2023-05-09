@@ -17,6 +17,19 @@ On this page, we provide best practices for data publication in field-specific a
 Field-specific repositories should be the first choice as these repositories enhance the FAIRness of data on behalf of the submitters. To retain the same level of FAIRness, data publication in generic repositories requires manual FAIRification.
 :::
 
+## How to use dataset PIDs in publications
+
+During deposition of research data, a [persistent identifier](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
+
+- For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [Data Availability Statement](/docs/data_availability_statement). If you believe that your data publication is as important as the article itself, add your dataset to the references as well.
+- For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
+
+:::info Notice:
+This distinction is important, because the link to the dataset in the DOI metadata of scientific articles is differently set, depending on whether the dataset is a directly related source of information or a referenced source of other researchers and its information is reused.
+:::
+
+In addition, the PID of a related dataset could also be additionally mentioned in the supplementary PDF, if such a document is generated.
+
 ## Best practices for field-specific repositories
 
 Using a field-specific repository such as [Chemotion ELN](/docs/chemotion_eln) in combination with its repository [Chemotion Repository](/docs/chemotion_repo) realises efficient data handling for synthetically working chemists. The entire Chemotion package allows researchers to collect, analyse, process, store, and publish various types of analytical data attached to reactions and samples in one digital environment.
@@ -27,7 +40,7 @@ During the seamless export from the ELN into the repository, [persistent identif
 
 Additionally, Chemotion Repository is connected to other databases (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and repositories (e.g. [NMRShiftDB2](https://nmrshiftdb.nmr.uni-koeln.de/), soon to be superseded by [nmrXiv](https://nmrxiv.org/)), to ensure best visibility and a user-friendly search of original research data.
 
-### Best practice examples
+### Best practice examples for field-specific repositories
 
  Several working groups of NFDI4Chem and beyond already deposit research data in the [Chemotion-Repository](https://www.chemotion-repository.net/welcome). For a better understanding of how data publications are linked to related journal publications, the following examples including their data (open-access) can be viewed:
 
@@ -67,25 +80,12 @@ For further aspects to consider, we provide a non-exhaustive list of generic bes
 Does that sound like a lot of manual work? Avoid extra work by using a [smart lab](/docs/smartlab) digital environments for collecting, processing, analysing and publishing research data, such as [Chemotion](/docs/chemotion_eln)! Plus, you may omit the preparation of supplementary PDFs and use the saved work time to prepare your dataset for publication!
 :::
 
-### Best practice examples
+### Best practice examples for generic repositories
 
 - in RADAR4Chem: [Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder](/docs/datasets/?doi=10.1002/ciuz.201900868)
 - in Zenodo: [A data et of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods](/docs/datasets/?doi=10.3390/metabo10040162)
 - in RADAR: [Synthesis and biological evaluation of highly potent fungicidal deoxy-hygrophorones](/docs/datasets/?doi=10.3390/metabo10040162)
 - in DaRus: [Predictive design of ordered mesoporous silica with well-defined, ultra-large mesopores](/docs/tba)
-
-## How to use dataset PIDs in publications
-
-During deposition of research data, a [persistent identifier](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
-
-- For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [Data Availability Statement](/docs/data_availability_statement). If you believe that your data publication is as important as the article itself, add your dataset to the references as well.
-- For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
-
-:::info Notice:
-This distinction is important, because the link to the dataset in the DOI metadata of scientific articles is differently set, depending on whether the dataset is a directly related source of information or a referenced source of other researchers and its information is reused.
-:::
-
-In addition, the PID of a related dataset could also be additionally mentioned in the supplementary PDF, if such a document is generated.
 
 ----
 Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661), [ORCID:0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840) and [ORCID:0000-0003-2060-842X](https://orcid.org/0000-0003-2060-842X)
