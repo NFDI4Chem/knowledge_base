@@ -361,8 +361,12 @@
         "linkdata": [
             {
                 "name": "Zenodo",
-                "url": "https://doi.org/10.5281/zenodo.6137082"
-            }
+                "url": "https://doi.org/10.5281/zenodo.3756211"
+            },
+            {
+                "name": "MetaboLights",
+                "url": "https://www.ebi.ac.uk/metabolights/editor/MTBLS1455"
+            }       
         ],
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms. The scientific publication references the dataset in Zenodo in its data availability statement.",
