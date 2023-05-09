@@ -9,11 +9,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Introduction
 
-All scientists generate scientific data independently of whether they are working practically or theoretically, and produce data such as reaction protocols, analytical data, or data from calculations. These data can be [domain-specific](/docs/domain_guide) and should be always accompanied by [metadata](/docs/metadata) that fully describes the data.
+All scientists generate scientific data independently of whether they are working practically or theoretically, and produce data such as protocols, analytical data, or data from calculations. These data can be [domain-specific](/docs/domain_guide) and should always be accompanied by [metadata](/docs/metadata) that fully describe the data.
 
-On this page, we like to provide best practices for data publication in field-specific as well as generic research data repositories. Additionally, we include best practices on special aspects, such as how to use PIDs of datasets in academic publishing.
-
-<!--- In fact, all scientists are responsible for [organisation](/docs/data_organisation) and [documentation](/docs/data_documentation) of their data in order to ensure that the data can be archived in a [FAIR](/docs/fair) way. For good data handling practices, the use of [data management plans](/docs/dmp) is recommended. Most research and funding institutions provide internal guidelines for research data management (RDM), such as the [DFG](https://www.dfg.de/download/pdf/foerderung/grundlagen_dfg_foerderung/forschungsdaten/forschungsdaten_checkliste_de.pdf). Many funding institutions encourage or even enforce the [storage](/docs/data_storage) and [publication](/docs/data_publication) of research data in repositories in a FAIR manner. --->
+On this page, we provide best practices for data publication in field-specific as well as generic research data repositories, while best practices for Chemotion Repository are provided on a separate page about [Chemotion Repository](/docs/chemotion_repo). Additionally, we include best practices on special aspects, such as how to use PIDs of datasets in academic publishing.
 
 :::danger Notice:
 Field-specific repositories should be the first choice as these repositories enhance the FAIRness of data on behalf of the submitters. To retain the same level of FAIRness, data publication in generic repositories requires manual FAIRification.
@@ -21,20 +19,15 @@ Field-specific repositories should be the first choice as these repositories enh
 
 ## Best practices for field-specific repositories
 
-For field-specific repositories such as Chemotion ELN/Repository, the data is collected along the scientific workflows, analytical data files are automatically converted to open formats, controlled vocabularies or ontologies are used to describe data, and analysis data is interconnected to reactions and samples, hence, chemical structures. 
+Using a field-specific repository such as [Chemotion ELN](/docs/chemotion_eln) in combination with its repository [Chemotion Repository](/docs/chemotion_repo) realises efficient data handling for synthetically working chemists. The entire Chemotion package allows researchers to collect, analyse, process, store, and publish various types of analytical data attached to reactions and samples in one digital environment.
 
-Using a field-specific repository such as [Chemotion ELN](https://www.chemotion.net/docs) in combination with its repository [Chemotion Repository](https://www.chemotion-repository.net/welcome) realises efficient data handling for synthetically working chemists. The entire Chemotion package allows researchers to collect, analyse, process, store, and publish various types of analytical data attached to reactions and samples in one digital environment.
+For field-specific repositories such as Chemotion ELN with Chemotion Repository, the data is collected along the scientific workflows, analytical data files are automatically converted to open formats, controlled vocabularies or ontologies are used to describe data, and analysis data is interconnected to reactions and samples, hence, chemical structures. 
 
 During the seamless export from the ELN into the repository, [persistent identifiers (DOIs)](/docs/pid) are assigned to the deposited data. Chemotion Repository [provides](https://www.chemotion.net/docs/repo/doi) DOIs for reactions, samples and analysis data. Moreover, Collection DOIs can be assigned for a set of reactions, samples, and analyses to assemble a study. This study can then directly correspond to a published scientific article and be referenced in a bundled manner within the data availability statement.
 
-Additionally,  Chemotion Repository is connected to other databases (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and repositories (e.g. [NMRShiftDB2](https://nmrshiftdb.nmr.uni-koeln.de/), soon to be superseded by [nmrXiv](https://nmrxiv.org/)), to ensure best visibility and a user-friendly search of original research data.
+Additionally, Chemotion Repository is connected to other databases (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and repositories (e.g. [NMRShiftDB2](https://nmrshiftdb.nmr.uni-koeln.de/), soon to be superseded by [nmrXiv](https://nmrxiv.org/)), to ensure best visibility and a user-friendly search of original research data.
 
-:::danger Notice:
-Are you asking yourself right now, "That's it?" Yes, that's it! As mentioned above, field specific repositories carry out much of the heavy lifting when it comes to FAIRification, while the digital smart lab environment collects structured data directly along the scientific workflow.
-:::
-
-<!--- ![BestPractice](/img/topics/BestPractice.png) <br/>
-**Figure 1:** Section of the experimental part in journal publication DOI: [10.1039/d1dt00832c](https://doi.org/10.1039/D1DT00832C), citation of data publication marked in orange. Ti: This should not be the way to go which should be highlighted with a figure--->
+### Best practice examples
 
  Several working groups of NFDI4Chem and beyond already deposit research data in the [Chemotion-Repository](https://www.chemotion-repository.net/welcome). For a better understanding of how data publications are linked to related journal publications, the following examples including their data (open-access) can be viewed:
 
@@ -42,11 +35,18 @@ Are you asking yourself right now, "That's it?" Yes, that's it! As mentioned abo
 - [Next Generation of Zinc Bisguanidine Polymerization Catalysts towards Highly Crystalline, Biodegradable Polyesters](https://doi.org/10.1002/anie.202008473)
 - [Synthesis of new pyrazolo[1,2,3]triazines by cyclative cleavage of pyrazolyltriazenes](https://doi.org/10.3762/bjoc.17.187)
 - [Exceptional Substrate Diversity in Oxygenation Reactions Catalyzed by a Bis(μ-oxo) Copper Complex](http://dx.doi.org/10.1002/chem.202000664)
-- [Insertion of [1.1.1]propellane into aromatic disulfides](https://doi.org/10.3762/bjoc.15.114) Ti: We might move this to Chemotion Documentation
+- [Insertion of [1.1.1]propellane into aromatic disulfides](https://doi.org/10.3762/bjoc.15.114)
+
+:::danger Notice:
+Are you asking yourself right now, "That's it?" Yes, that's it! As mentioned above, field specific repositories carry out much of the heavy lifting when it comes to FAIRification, while the digital smart lab environment collects structured data directly along the scientific workflow.
+:::
+
+<!--- ![BestPractice](/img/topics/BestPractice.png) <br/>
+**Figure 1:** Section of the experimental part in journal publication DOI: [10.1039/d1dt00832c](https://doi.org/10.1039/D1DT00832C), citation of data publication marked in orange. Ti: Shall we highlight supplementary PDFs and IUPAC recommendations from 1970?--->
 
 ## Best practices for generic repositories
 
-While field-specific repositories provide significant support for the [FAIRification](/docs/fair) of data along the entire data life cycle, the preparation of datasets for data publication in generic repositories occurs at the disclosure and publication stage, as long as no (institutional) RDM workflows streamline data publication. Ususally, data is gathered contemporaneous with the preparation of a corresponding manuscript, hence, datasets which are planned to be published with a generic repository require manual [FAIRification](/docs/fair) prior upload and publishing.
+While field-specific repositories provide significant support for the [FAIRification](/docs/fair) of data along the entire [data life cycle](/docs/data_life_cycle), the preparation of datasets for data publication in generic repositories occurs at the disclosure and publication stage, as long as no (institutional) RDM workflows streamline data publication. Ususally, data is gathered contemporaneous with the preparation of a corresponding manuscript, hence, datasets which are planned to be published with a generic repository require manual [FAIRification](/docs/fair) prior upload and publishing.
 
 To start, all data to be published is collected and ordered in a logical folder structure, e.g. a folder for NMR and another folder for MS data (figure 1). Nested folder structures should be avoided and aspects of [data organisation](/docs/data_organisation), such as file naming, should be taken into account. Researchers should aim for a data package which is as self-explanatory as the supplemental PDFs, they have previously published along scientific articles.
 
@@ -65,6 +65,11 @@ For further aspects to consider, we provide a non-exhaustive list of generic bes
 :::danger Notice:
 Does that sound like a lot of manual work? Avoid extra work by using a [smart lab](/docs/smartlab) digital environments for collecting, processing, analysing and publishing research data, such as [Chemotion](/docs/chemotion_eln)! Plus, you may omit the preparation of supplementary PDFs and use the saved work time to prepare your dataset for publication!
 :::
+
+### Best practice examples
+
+ [Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder](/docs/datasets/?doi=10.1002/ciuz.201900868)
+ 
 
 ## How to use dataset PIDs in publications
 
