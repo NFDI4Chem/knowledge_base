@@ -239,7 +239,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The dataset, curated by the publishing authors, includes reactions and sample data with its ATR-FTIP, HR-ESI-TOF-MS and 1H/13C NMR data published in Chemotion Repository. Data of DFT calculations is available in RADAR4Chem and referenced in the data availability statement of the corresponding publication. The supplementary information PDF, which reference datasets in Chemotion Repository via their DOI, and crystal structure data are available from the web page of the publisher.",
+        "description": "The dataset, curated by the publishing authors, includes reactions and sample data with its ATR-FTIP, HR-ESI-TOF-MS and 1H/13C NMR data published in Chemotion Repository. Data of DFT calculations is available in RADAR4Chem and referenced in the data availability statement of the corresponding publication. The supplementary information PDF, which reference datasets in Chemotion Repository via their DOI, and crystal structure data are available from the web page of the publisher. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
@@ -339,7 +339,7 @@
                 "url": "https://doi.org/10.11588/data/OH6757"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://doi.org/10.5517/ccdc.csd.cc25v89m"
             }
         ],
@@ -436,11 +436,11 @@
                 "url": "https://doi.org/10.11588/data/46LINE"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc25b961"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc25b972"
             }
         ],
@@ -461,35 +461,35 @@
         "linkpub": "https://doi.org/10.1002/adsc.201901453",
         "linkdata": [
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hkz5"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl07"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl18"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl29"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl3b"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl4c"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl5d"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl6f"
             }
         ],
@@ -578,23 +578,23 @@
                 "url": "https://dx.doi.org/10.14272/BJUATVHTJTTWSW-UHFFFAOYSA-H.1"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7mw"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7nx"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7py"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7qz"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7r0"
             },
             {
@@ -603,7 +603,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF.",
+        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
@@ -671,28 +671,28 @@
                 "url": "https://dx.doi.org/10.14272/BMNLXKVRGRRHKW-UHFFFAOYSA-N.1"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtbr"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtcs"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtdt"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtfv"
             },
             {
-                "name": "CCDC",
+                "name": "CSD/CCDC",
                 "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23wtb5"
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CCDC. References to datasets in Chemotion Repository are given in the supporting information PDF of the corresponding article via DOIs, while datasets in CCDC were referenced with their CCDC number.",
+        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CCDC. References to datasets in Chemotion Repository are given in the supporting information PDF of the corresponding article via DOIs, while datasets in CCDC were referenced with their CCDC number. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
@@ -787,6 +787,75 @@
         ],
         "tags": [
             "mesoporous silica"
+        ]
+    },
+    {
+        "title": "Modular Synthesis of trans-A2B2-Porphyrins with Terminal Esters: Systematically Extending the Scope of Linear Linkers for Porphyrin-Based MOFs",
+        "authors": "Stefan M. Marschner, Ritesh Haldar, Olaf Fuhr, Christof Wöll, Stefan Bräse",
+        "journal": "Chemistry – A European Journal",
+        "pubyear": 2020,
+        "linkpub": "https://doi.org/10.1002/chem.202003885",
+        "linkdata": [
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-PBTPREHATA-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ.4"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-BHYVHYPBRY-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-QKHPYPUCYC-UHFFFADPSC-NUHFF-NHYOA-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJGWMTKKMO-UHFFFADPSC-NUHFF-NNYHH-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-CQICNQVIXS-UHFFFADPSC-NUHFF-NKDHF-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UYKMRQXETK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DVNRJSFZLK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LVGOHACWPD-UHFFFADPSC-NUHFF-NUVBP-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JQQMHNZHWI-UHFFFADPSC-NUHFF-NNSBK-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJCDFXZBRU-UHFFFADPSC-NUHFF-NOCLW-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LLIFZWKYAN-UHFFFADPSC-NUHFF-NHDGP-NUHFF-ZZZ"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LHQKMJBXIU-UHFFFADPSC-NUHFF-NLTSL-NUHFF-ZZZ"
+            },
+            {
+                "name": "CSD/CCDC",
+                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc216k3y"
+            }
+        ],
+        "linkcomment": "curated by the publishing authors",
+        "description": "Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
+        "subdiscipline": [
+            "organic chemistry"
+        ],
+        "tags": [
+            "porphyrins"
         ]
     }
 ]
