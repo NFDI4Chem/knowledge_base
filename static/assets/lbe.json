@@ -353,16 +353,20 @@
         ]
     },
     {
-        "title": "A data et of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods ",
-        "authors": "Erik Müller, Carolin Huber, Liza-Marie Beckers, Werner Brack, Martin Krauss, Tobias Schulze ",
+        "title": "A dataset of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods ",
+        "authors": "Erik Müller, Carolin Huber, Liza-Marie Beckers, Werner Brack, Martin Krauss, Tobias Schulze",
         "journal": "Metabolites",
         "pubyear": 2020,
         "linkpub": "https://doi.org/10.3390/metabo10040162",
         "linkdata": [
             {
                 "name": "Zenodo",
-                "url": "https://doi.org/10.5281/zenodo.6137082"
-            }
+                "url": "https://doi.org/10.5281/zenodo.3756211"
+            },
+            {
+                "name": "MetaboLights",
+                "url": "https://www.ebi.ac.uk/metabolights/editor/MTBLS1455"
+            }       
         ],
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms. The scientific publication references the dataset in Zenodo in its data availability statement.",
@@ -739,6 +743,50 @@
         "tags": [
             "natural producs",
             "NMR spectroscopy"
+        ]
+    },
+    {
+        "title": "Modular Synthesis of New Pyrroloquinoline Quinone Derivatives",
+        "authors": "Rachel Janßen, Violeta A. Vetsova, Dominik Putz, Peter Mayer, Lena J. Daumann",
+        "journal": "Synthesis",
+        "pubyear": 2023,
+        "linkpub": "https://doi.org/10.1055/s-0041-1738426",
+        "linkdata": [
+            {
+                "name": "Chemotion Repository",
+                "url": "https://doi.org/10.14272/collection/RAJ_2022-08-25"
+            }
+        ],
+        "linkcomment": "curated by the publishing authors",
+        "description": "The dataset, curated by the publishing authors, was awarded with the FAIR4Chem Award 2023.",
+        "subdiscipline": [
+            "organic chemistry"
+        ],
+        "tags": [
+            "organic synthesis"
+        ]
+    },
+    {
+        "title": "Predictive design of ordered mesoporous silica with well-defined, ultra-large mesopores",
+        "authors": "Charlotte Vogler, Stefan Naumann, Johanna R. Bruckner",
+        "journal": "Molecular Systems Design & Engineering",
+        "pubyear": 2022,
+        "linkpub": "https://doi.org/10.1039/D2ME00107A",
+        "linkdata": [
+            {
+                "name": "DaRus",
+                "url": "https://doi.org/10.18419/darus-2374"
+            }
+        ],
+        "linkcomment": "curated by the publishing authors",
+        "description": "The dataset, curated by the publishing authors, was awarded with the FAIR4Chem Award 2023.",
+        "subdiscipline": [
+            "physical chemistry",
+            "polymer chemistry",
+            "material science"
+        ],
+        "tags": [
+            "mesoporous silica"
         ]
     }
 ]
