@@ -15,14 +15,14 @@ On this page, we provide best practices for data publication in field-specific a
 
 During deposition of research data, a [persistent identifier](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
 
-- For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [Data Availability Statement](/docs/data_availability_statement). If you believe that your data publication is as important as the article itself, add your dataset to the references as well.
+- For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [Data Availability Statement](/docs/data_availability_statement). If you believe that your data publication is as important as the article itself, add your dataset to the references as well and cite your data publication.
 - For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
 
 :::info Notice:
 This distinction is important, because the link to the dataset in the DOI metadata of scientific articles is differently set, depending on whether the dataset is a directly related source of information or a referenced source of other researchers and its information is reused.
 :::
 
-In addition, the PID of a related dataset could also be additionally mentioned in the supplementary PDF, if such a document is generated.
+In addition, the PID of a related dataset could also be mentioned in the supplementary PDF, if such a document is generated.
 
 ## Best practices for field-specific repositories
 
@@ -34,12 +34,15 @@ During the seamless export from the ELN into the repository, [persistent identif
 
 Additionally, Chemotion Repository is connected to other databases (e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/)) and repositories (e.g. [NMRShiftDB2](https://nmrshiftdb.nmr.uni-koeln.de/), soon to be superseded by [nmrXiv](https://nmrxiv.org/)), to ensure best visibility and a user-friendly search of original research data.
 
-### Best practice examples for field-specific repositories
+### Best practice examples
 
- Several working groups of NFDI4Chem and beyond already deposit research data in the [Chemotion-Repository](https://www.chemotion-repository.net/welcome). For a better understanding of how data publications are linked to related journal publications, the following examples including their data (open-access) can be viewed:
+For a better understanding of how data publications are linked to related journal publications, the following examples including their data (open-access) can be viewed:
 
-- [Modular Synthesis of New Pyrroloquinoline Quinone Derivatives](/docs/tba)
+- [Modular Synthesis of New Pyrroloquinoline Quinone Derivatives](/docs/datasets/?doi=10.1055/s-0041-1738426)
 - [Modular Synthesis of trans‐A2B2‐Porphyrins with Terminal Esters: Systematically Extending the Scope of Linear Linkers for Porphyrin‐Based MOFs](https://doi.org/10.1002/chem.202003885)
+
+
+
 - [Next Generation of Zinc Bisguanidine Polymerization Catalysts towards Highly Crystalline, Biodegradable Polyesters](https://doi.org/10.1002/anie.202008473)
 - [Synthesis of new pyrazolo[1,2,3]triazines by cyclative cleavage of pyrazolyltriazenes](https://doi.org/10.3762/bjoc.17.187)
 - [Exceptional Substrate Diversity in Oxygenation Reactions Catalyzed by a Bis(μ-oxo) Copper Complex](http://dx.doi.org/10.1002/chem.202000664)
@@ -54,13 +57,19 @@ Are you asking yourself right now, "That's it?" Yes, that's it! As mentioned abo
 
 ## Best practices for generic repositories
 
+### Introduction
+
 While field-specific repositories provide significant support for the [FAIRification](/docs/fair) of data along the entire [data life cycle](/docs/data_life_cycle), the preparation of datasets for data publication in generic repositories occurs at the disclosure and publication stage, as long as no (institutional) RDM workflows streamline data publication. Ususally, data is gathered contemporaneous with the preparation of a corresponding manuscript, hence, datasets which are planned to be published with a generic repository require manual [FAIRification](/docs/fair) prior upload and publishing.
+
+### How to start
 
 To start, all data to be published is collected and ordered in a logical folder structure, e.g. a folder for NMR and another folder for MS data (figure 1). Nested folder structures should be avoided and aspects of [data organisation](/docs/data_organisation), such as file naming, should be taken into account. Researchers should aim for a data package which is as self-explanatory as the supplemental PDFs, they have previously published along scientific articles.
 
 <img align="center" src={useBaseUrl('/img/data_pub/best_practice_generic_folders_content.png')} alt="" width="100%" />
 
 **Figure 1:** Example folder structure and content of the [Lead-by-Example](/docs/lbe_intro) dataset of [Linderazuelene](/docs/datasets/?doi=10.1002/ciuz.201900868).
+
+### Further aspects
 
 For further aspects to consider, we provide a non-exhaustive list of generic best practices on what a chemistry dataset should contain and how the chemical data should be represented and described. Please note, that also [domain-specific](/docs/domain_guide) aspects need to be considered for data publication.
 
@@ -74,7 +83,7 @@ For further aspects to consider, we provide a non-exhaustive list of generic bes
 Does that sound like a lot of manual work? Avoid extra work by using a [smart lab](/docs/smartlab) digital environments for collecting, processing, analysing and publishing research data, such as [Chemotion](/docs/chemotion_eln)! Plus, you may omit the preparation of supplementary PDFs and use the saved work time to prepare your dataset for publication!
 :::
 
-### Best practice examples for generic repositories
+### Best practice examples
 
 - in RADAR4Chem: [Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder](/docs/datasets/?doi=10.1002/ciuz.201900868)
 - in Zenodo: [A data et of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods](/docs/datasets/?doi=10.3390/metabo10040162)
