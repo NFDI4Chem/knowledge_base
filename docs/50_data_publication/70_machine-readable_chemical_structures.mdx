@@ -9,15 +9,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Introduction
 
-Finding relevant articles based on IUPAC names or trivial names of molecules is a challenging task, while chemical identifiers allow for unambiguous identification of compounds. Redrawing of chemical structures is labour and time intensive, while chemical table (CT) files can be used without any additional effort with any common structure drawing software. 
+Finding relevant articles based on IUPAC names or trivial names of molecules is a challenging task, while chemical identifiers allow for unambiguous identification of compounds. Redrawing of chemical structures is labour and time intensive, while chemical table (CT) files or SMILES structure codes can be used without any additional effort with any common structure drawing software. 
 
 Having machine-readable chemical structures as [CT files](/docs/ct_files) such as mol files, [InChI](/docs/inchi) identifiers and [SMILES](/docs/smiles) structure codes as part of a dataset associated with a research article will enhance its [findability](/docs/fair) by making the article easily indexable and structure-searchable. This also improves [interoperability](/docs/fair) and facilitates [reuse](/docs/fair) of scientific work.
 
 The following will provide a tutorial on how to increase the machine-readability of chemistry research articles by providing machine-readable chemical structures as data files within the associated dataset. Moreover, recommendations to provide structure codes and identifiers in a machine-readable supplementary table within the associated dataset are given. 
 
-While such information is not required for structured domain-specific repositories such as Chemotion Reopositoy, since this information is provided by the repository software, datasets in generic repositories benefit from this information. 
+While such information is not required for structured field-specific repositories such as Chemotion Repository, since this information is provided by the repository software, datasets in generic repositories benefit from this information. 
 
-Please note that there are currently limitations with [SMILES](/docs/smiles) and [InChI](/docs/inchi) for inorganic and especially organometallic compounds. 
+Please note that there are currently limitations with [SMILES](/docs/smiles) and [InChI](/docs/inchi) for inorganic and especially organometallic compounds. Please also note that InChI is an identifier, while SMILES is a structure code. Conversion of SMILES to a chemical structure drawing and back to SMILES is possible, while this will not necessarily provide the same SMILES as initially provided, hence, SMILES is not an identifier. On the other hand, InChI is an identifier, while InChI is not designed to be used to regenerate the correct chemical structure drawing.  
 
 ## Get mol files
 
@@ -74,8 +74,8 @@ Alternatively, SMILES, InChI and InChIKey can also be saved as text files by cho
 While the data files can be directly added to the dataset, additional information to enhance machine-readability might be provided as a [supplementary table](https://doi.org/10.1186/s13321-021-00520-4). This table should be also provided in a machine-readable text-based format such as a .csv file.
 
 It is recommended to add the following columns to this table:
-- local chemical structure identifier i.e. numbers of structures in the research article
-- local chemical sample symbol i.e. letter-code and number in your lab journal
+- letter-code and number in your lab journal i.e. local chemical sample symbols
+- numbers of structures in the research article i.e. local chemical structure identifiers
 - SMILES
 - InChI and InChIKey
 
@@ -92,7 +92,7 @@ PubChem compound identifiers (CIDs) as well as CAS registry numbers are easily r
 
 Templates for such a table are provided as [.ods](/assets/Supplementary_table_template.ods), [.xlsx](/assets/Supplementary_table_template.xlsx), and [.csv](/assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/ontology) to unambiguously identify terms for humans and machines. 
 
-If the experimental work is documented in an [ELN](/docs/eln), these information could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured domain-specific repositories such as Chemotion Repository, while datasets in generic repositories will profit from such a table.
+If the experimental work is documented in an [ELN](/docs/eln), these information could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured, field-specific repositories such as Chemotion Repository, while datasets in generic repositories will profit from such a table.
 
 *This article is licensed under a Creative Commons Universal (CC0 1.0) Public Domain Dedication International License.* 
 
