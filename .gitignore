@@ -21,3 +21,5 @@ package-lock.json
 docusaurus.config.js
 .Rproj.user
 knowledge_base.Rproj
+# crowdin
+crowdin.yml
