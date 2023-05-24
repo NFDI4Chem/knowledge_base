@@ -24,7 +24,7 @@ module.exports = {
     announcementBar: {
       id: 'community_survey',
       content:
-        '<strong>We want your experience!</strong> To provide the best resources for chemists we would like to get your input in this <a href="https://www.nfdi4chem.de/index.php/nfdi4chem-chemistry-data-survey/" target="_blank">15 minute questionnaire</a>. &#9989;',
+        '<strong>Find out what is already possible with chemistry data today.</strong> Join us in Mainz on 6/7 June 2023 at the <a href="https://www.nfdi4chem.de/index.php/event/chemistry-data-days-2023/" target="_blank">Chemistry Data Days</a>.',
       isCloseable: true,
     },
     navbar: {
