@@ -2,99 +2,99 @@
 title: "Machine-Readable Chemical Structures"
 slug: "/machine-readable_chemical_structures"
 ---
- # Machine-Readable Chemical Structures
+ # Maschinenlesbare chemische Strukturen
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-## Introduction
+## Einleitung
 
-Finding relevant articles based on IUPAC names or trivial names of molecules is a challenging task, while chemical identifiers allow for unambiguous identification of compounds. Redrawing of chemical structures is labour and time intensive, while chemical table (CT) files can be used without any additional effort with any common structure drawing software. 
+Die Suche nach relevanten Artikeln auf der Grundlage von IUPAC-Namen oder Trivialnamen von Molekülen ist eine schwierige Aufgabe, während chemische Identifikatoren eine eindeutige Identifizierung von Verbindungen ermöglichen. Das Neuzeichnen chemischer Strukturen ist arbeits- und zeitintensiv, während Dateien mit chemischen Tabellen (CT) ohne zusätzlichen Aufwand mit jeder gängigen Strukturzeichnungssoftware verwendet werden können. 
 
-Having machine-readable chemical structures as [CT files](/docs/ct_files) such as mol files, [InChI](/docs/inchi) identifiers and [SMILES](/docs/smiles) structure codes as part of a dataset associated with a research article will enhance its [findability](/docs/fair) by making the article easily indexable and structure-searchable. This also improves [interoperability](/docs/fair) and facilitates [reuse](/docs/fair) of scientific work.
+Die Bereitstellung maschinenlesbarer chemischer Strukturen als [CT-Dateien](/docs/ct_files) wie mol-Dateien, [InChI](/docs/inchi)-Kennungen und [SMILES](/docs/smiles)-Strukturcodes als Teil eines mit einem Forschungsartikel verbundenen Datensatzes verbessert dessen [Auffindbarkeit](/docs/fair), indem der Artikel leicht indizierbar und nach Strukturen durchsuchbar wird. Dies verbessert auch die [Interoperabilität](/docs/fair) und erleichtert die [Wiederverwendung](/docs/fair) der wissenschaftlichen Arbeit.
 
-The following will provide a tutorial on how to increase the machine-readability of chemistry research articles by providing machine-readable chemical structures as data files within the associated dataset. Moreover, recommendations to provide structure codes and identifiers in a machine-readable supplementary table within the associated dataset are given. 
+Im Folgenden wird eine Anleitung gegeben, wie man die Maschinenlesbarkeit von Chemie-Forschungsartikeln erhöhen kann, indem maschinenlesbare chemische Strukturen als Datendateien innerhalb des zugehörigen Datensatzes bereitgestellt werden. Darüber hinaus werden Empfehlungen zur Bereitstellung von Strukturcodes und Identifikatoren in einer maschinenlesbaren Zusatztabelle innerhalb des zugehörigen Datensatzes gegeben. 
 
-While such information is not required for structured domain-specific repositories such as Chemotion Reopositoy, since this information is provided by the repository software, datasets in generic repositories benefit from this information. 
+Während solche Informationen für strukturierte domänenspezifische Repositorien wie Chemotion Reopositoy nicht erforderlich sind, da diese Informationen von der Repository-Software bereitgestellt werden, profitieren Datensätze in allgemeinen Repositorien von diesen Informationen. 
 
-Please note that there are currently limitations with [SMILES](/docs/smiles) and [InChI](/docs/inchi) for inorganic and especially organometallic compounds. 
+Bitte beachten Sie, dass es derzeit Einschränkungen bei [SMILES](/docs/smiles) und [InChI](/docs/inchi) für anorganische und insbesondere metallorganische Verbindungen gibt. 
 
-## Get mol files
+## Mol-Dateien abrufen
 
-All common structure drawing software save mol files. Copy the structure to a new document within your preferred structure drawing software. Then, choose File -> Save As -> choose MDL Molfile from the dropdown menu -> Save.
+Alle gängigen Strukturerstellungsprogramme speichern mol-Dateien. Kopieren Sie die Struktur in ein neues Dokument in Ihrer bevorzugten Strukturierungssoftware. Wählen Sie dann Datei -> Speichern unter -> wählen Sie MDL Molfile aus dem Dropdown-Menü -> Speichern.
 
-The name of the file might be chosen following your lab journal entry and also numbering of the structure in the article.
+Der Name der Datei kann in Anlehnung an Ihren Laborjournaleintrag und die Nummerierung der Struktur im Artikel gewählt werden.
 
-## Get SMILES, InChI and InChIKey
+## SMILES, InChI und InChIKey abrufen
 
 ### ChemDoodle
 
-To retrieve SMILES, InChI and InChIKey in ChemDoodle select a structure, then choose Edit -> Copy As -> Daylight SMILES or IUPAC InChI. 
+Um SMILES, InChI und InChIKey in ChemDoodle abzurufen, markieren Sie eine Struktur und wählen dann Bearbeiten -> Kopieren als -> Daylight SMILES oder IUPAC InChI. 
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_ChemDoodle_SMILES_InChI_InChIKey.png)
 
-(ChemDoodle v11.7.0, iChemLabs, LCC., Chesterfield, VA, United States, 2021.)
+(ChemDoodle v11.7.0, iChemLabs, LCC., Chesterfield, VA, Vereinigte Staaten, 2021.)
 
-You may also select a structure, then choose Structure -> Generate Line Notation -> Daylight SMILES or IUPAC InChI.
+Sie können auch eine Struktur auswählen und dann Struktur -> Zeilennotation generieren -> Daylight SMILES oder IUPAC InChI wählen.
 
-Alternatively, SMILES, InChI and InChIKey can also be saved as text files by choosing File -> Save as -> choose Daylight SMILES or InChI from the dropdown menu -> Save.
+Alternativ können Sie SMILES, InChI und InChIKey auch als Textdateien speichern, indem Sie Datei -> Speichern unter -> Daylight SMILES oder InChI aus dem Dropdown-Menü wählen -> Speichern.
 
-Choosing “IUPAC InChI” will also provide the InChIKey if enabled under Preferences. To include InChIKey, choose Edit -> Preferences -> Files tab -> scroll down and tick Include InChI key. 
+Wenn Sie "IUPAC InChI" wählen, wird auch der InChIKey angezeigt, wenn er in den Voreinstellungen aktiviert ist. Um InChIKey einzuschließen, wählen Sie Bearbeiten -> Voreinstellungen -> Registerkarte Dateien -> scrollen Sie nach unten und markieren Sie InChI-Schlüssel einschließen. 
 
 ### ChemDraw Professional
 
-To retrieve SMILES, InChI and InChIKey in ChemDraw Professional, select a structure, then choose Edit -> Copy As -> SMILES, InChI or InChIKey.
+Um SMILES, InChI und InChIKey in ChemDraw Professional abzurufen, markieren Sie eine Struktur und wählen dann Bearbeiten -> Kopieren als -> SMILES, InChI oder InChIKey.
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_ChemDraw_SMILES_InChI_InChIKey.png)"
 
-(ChemDraw Professional v20.1.0.11, PerkinElmer Informatics, Inc., Waltham, MA, United States, 2021.)
+(ChemDraw Professional v20.1.0.11, PerkinElmer Informatics, Inc., Waltham, MA, Vereinigte Staaten, 2021.)
 
 ### ChemSketch
 
-To retrieve SMILES, InChI and InChIKey in ACD/ChemSketch, select a structure, then choose Tools-> Generate -> SMILES Notation or InChI for Structure.
+Um SMILES, InChI und InChIKey in ACD/ChemSketch abzurufen, markieren Sie eine Struktur und wählen Sie dann Werkzeuge -> Generieren -> SMILES-Notation oder InChI für Struktur.
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_ChemSketch_SMILES_InChI_InChIKey.png)
 
-(ACD/ChemSketch v2021.1.1, Advanced Chemistry Development, Inc., Toronto, ON, Canada, 2021.) 
+(ACD/ChemSketch v2021.1.1, Advanced Chemistry Development, Inc., Toronto, ON, Kanada, 2021). 
 
-Choosing InChI for Structure will also provide the InChIKey, if enabled under InChI Options. To include InChIKey, choose Tools -> Generate -> InChI Options and tick InChI Key. 
+Wenn Sie InChI für Structure auswählen, wird auch der InChIKey angezeigt, wenn er unter InChI Options aktiviert ist. Um den InChIKey einzubeziehen, wählen Sie Extras -> Generieren -> InChI-Optionen und markieren Sie InChI-Schlüssel. 
 
 ### MarvinSketch
 
-To retrieve SMILES, InChI and InChIKey in MarvinSketch select a structure, then choose Edit -> Copy As. In a new windows choose Daylight SMILES, InChI/RInChI or InChIKey/RInChIKey.
+Um SMILES, InChI und InChIKey in MarvinSketch abzurufen, markieren Sie eine Struktur und wählen dann Bearbeiten -> Kopieren als. In einem neuen Fenster wählen Sie Daylight SMILES, InChI/RInChI oder InChIKey/RInChIKey.
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_MarvinSketch_SMILES_InChI_InChIKey.png)
 
-(MarvinSketch v21.18, ChemAxon, Ltd., Budapest, Hungary, 2021.)
+(MarvinSketch v21.18, ChemAxon, Ltd., Budapest, Ungarn, 2021.)
 
-Alternatively, SMILES, InChI and InChIKey can also be saved as text files by choosing File -> Save as -> choose Daylight SMILES, InChI/RInChI or InChIKey/RInChIKey from the dropdown menu -> Save.
+Alternativ können SMILES, InChI und InChIKey auch als Textdateien gespeichert werden, indem Sie Datei -> Speichern unter -> Daylight SMILES, InChI/RInChI oder InChIKey/RInChIKey aus dem Dropdown-Menü wählen -> Speichern.
 
-## Provide Machine-Readable Data as Supplementary Table
+## Maschinenlesbare Daten als ergänzende Tabelle bereitstellen
 
-While the data files can be directly added to the dataset, additional information to enhance machine-readability might be provided as a [supplementary table](https://doi.org/10.1186/s13321-021-00520-4). This table should be also provided in a machine-readable text-based format such as a .csv file.
+Während die Datendateien direkt zum Datensatz hinzugefügt werden können, können zusätzliche Informationen zur Verbesserung der Maschinenlesbarkeit als [supplementary table] (https://doi.org/10.1186/s13321-021-00520-4) bereitgestellt werden. Diese Tabelle sollte auch in einem maschinenlesbaren, textbasierten Format wie z. B. einer .csv-Datei bereitgestellt werden.
 
-It is recommended to add the following columns to this table:
-- local chemical structure identifier i.e. numbers of structures in the research article
-- local chemical sample symbol i.e. letter-code and number in your lab journal
+Es wird empfohlen, diese Tabelle um die folgenden Spalten zu ergänzen:
+- lokaler chemischer Strukturidentifikator, d. h. die Nummern der Strukturen im Forschungsartikel
+- lokales chemisches Probensymbol, d.h. Buchstabencode und Nummer in Ihrem Laborjournal
 - SMILES
-- InChI and InChIKey
+- InChI und InChIKey
 
-The letter-code and number in your lab journal should be included, as analytical data files in a dataset are frequently named following the lab journal entries.
+Der Buchstabencode und die Nummer in Ihrem Laborjournal sollten enthalten sein, da analytische Datendateien in einem Datensatz häufig nach den Einträgen im Laborjournal benannt werden.
 
-Additionally, this table may also include further columns for:
-- IUPAC name
-- synonym i.e. common names of a compound
-- PubChem compound identifier
-- CAS registry number
-- comment (if required)
+Zusätzlich kann diese Tabelle noch weitere Spalten enthalten für:
+- IUPAC-Name
+- Synonyme, d. h. gebräuchliche Namen einer Verbindung
+- PubChem-Verbindungsidentifikator
+- CAS-Registernummer
+- Kommentar (falls erforderlich)
 
-PubChem compound identifiers (CIDs) as well as CAS registry numbers are easily retrieved in [PubChem](https://pubchem.ncbi.nlm.nih.gov/) by searching via SMILES, InChI or InChIKey. 
+PubChem-Verbindungsbezeichner (CIDs) sowie CAS-Registernummern lassen sich in [PubChem](https://pubchem.ncbi.nlm.nih.gov/) leicht durch eine Suche über SMILES, InChI oder InChIKey abrufen. 
 
-Templates for such a table are provided as [.ods](pathname://../../../assets/Supplementary_table_template.ods), [.xlsx](pathname://../../../assets/Supplementary_table_template.xlsx), and [.csv](pathname://../../../assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/ontology) to unambiguously identify terms for humans and machines. 
+Vorlagen für eine solche Tabelle werden als [.ods](Pfadname://../../../assets/Supplementary_table_template.ods), [.xlsx](Pfadname://../../../assets/Supplementary_table_template.xlsx) und [.csv](Pfadname://../../../assets/Supplementary_table_template.csv) Dateien bereitgestellt. Diese Vorlagendateien nutzen auch die Vorteile von [ontologies](/docs/ontology), um Begriffe für Menschen und Maschinen eindeutig zu identifizieren. 
 
-If the experimental work is documented in an [ELN](/docs/eln), these information could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured domain-specific repositories such as Chemotion Repository, while datasets in generic repositories will profit from such a table.
+Wenn die experimentelle Arbeit in einem [ELN](/docs/eln) dokumentiert ist, können diese Informationen auch vom ELN-System bereitgestellt werden. Chemotion ELN generiert [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey sowie RInChI und RInChIKey für Verbindungen und Reaktionen. Diese Informationen sind auch im Chemotion Repository verfügbar, d.h. eine solche Zusatztabelle ist bei strukturierten domänenspezifischen Repositories wie Chemotion Repository nicht erforderlich, während Datensätze in generischen Repositories von einer solchen Tabelle profitieren.
 
-*This article is licensed under a Creative Commons Universal (CC0 1.0) Public Domain Dedication International License.* 
+*Dieser Artikel steht unter einer Creative Commons Universal (CC0 1.0) Public Domain Dedication International License. 
 
 ![CC0 badge](https://licensebuttons.net/l/zero/1.0/88x31.png)
 

@@ -13,59 +13,59 @@ This article applies to core facility managers and heads of analytical service u
 
 <img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" />
 
-In the chemistry data lifecycle, core facilities play an important role as major producers of chemical data. For modern analytical techniques such as mass spectrometry or NMR spectroscopy, data are usually recorded digitally and the challenges lie less in digitalisation but management issues.
+Im Lebenszyklus von Chemiedaten spielen Kerneinrichtungen als Hauptproduzenten von chemischen Daten eine wichtige Rolle. Bei modernen Analysetechniken wie der Massenspektrometrie oder der NMR-Spektroskopie werden die Daten in der Regel digital erfasst, und die Herausforderungen liegen weniger in der Digitalisierung als in Fragen der Verwaltung.
 
-This article reflects some of the most important areas to consider for a core facilities [data storage](/docs/data_storage/) infrastructure and gives perspectives on where [FAIR guiding principles](/docs/fair/) may already be followed today.
+In diesem Artikel werden einige der wichtigsten Bereiche aufgezeigt, die für eine zentrale Infrastruktur zur [Datenspeicherung](/docs/data_storage/) zu berücksichtigen sind, und es werden Perspektiven aufgezeigt, wo die [FAIR-Leitprinzipien](/docs/fair/) bereits heute befolgt werden können.
 
-## Good Research Practice
+## Gute wissenschaftliche Praxis
 
-When thinking about how to store data and make them available, an important starting point are Good Research Practice (GRP) considerations. As funding agencies adhere to GRP guidelines and a breach of such guidelines will effectively preclude any future research funding.
+Wenn man darüber nachdenkt, wie man Daten speichern und verfügbar machen kann, sind Überlegungen zur guten wissenschaftlichen Praxis (GWP) ein wichtiger Ausgangspunkt. Da Förderorganisationen sich an die GWP-Richtlinien halten, schließt ein Verstoß gegen diese Richtlinien eine künftige Forschungsförderung praktisch aus.
 
-### The Situation in Germany
+### Die Situation in Deutschland
 
-The German Research Council ([DFG](https://www.dfg.de)) summarizes the consensus on the *fundamental principles and standards of good practice* in science in their Code fo Conduct *Guidelines for Safeguarding Good Research Practice* [\[1\]](#dfg_code). In guideline 17, a storage of all research data for the period of ten years is demanded, starting from the date of publication. Data storage strategies should therefore contain longterm storage for at least that time.
+Die Deutsche Forschungsgemeinschaft ([DFG](https://www.dfg.de)) fasst den Konsens über die *Grundprinzipien und Standards guter Praxis* in der Wissenschaft in ihrem Verhaltenskodex *Richtlinien zur Sicherung guter Forschungspraxis* [\[1\]](#dfg_code) zusammen. In Leitlinie 17 wird eine Aufbewahrung aller Forschungsdaten für den Zeitraum von zehn Jahren ab dem Datum der Veröffentlichung gefordert. Strategien zur Datenspeicherung sollten daher eine Langzeitspeicherung für mindestens diesen Zeitraum vorsehen.
 
-## How to start
+## Wie man anfängt
 
-From the perspective of a core facility, it usually makes sense to separately consider **data safety** and digestion of [sample metadata](/docs/metadata/).
+Aus der Sicht einer Core Facility ist es in der Regel sinnvoll, die **Datensicherheit** und die Aufbereitung von [Muster-Metadaten](/docs/metadata/) getrennt zu betrachten.
 
-### Data safety
+### Datensicherheit
 
-The most important aspect for core facility managers is to preculde data loss. All recorded data should be saved to a **decentral redundant storage** as soon as possible. The easiest way is to automate this by using the onboard command-line tools of the respective system, like `robocopy.exe` on Windows or `rsync` on most UNIX systems [\[2\]](#sync). Both utilities can be used for automatic incremental synchronisation of local and remote storage.
+Der wichtigste Aspekt für Core Facility Manager ist die Vorbeugung von Datenverlusten. Alle aufgezeichneten Daten sollten so schnell wie möglich auf einem **dezentralen redundanten Speicher** gesichert werden. Am einfachsten ist es, dies mit den integrierten Kommandozeilen-Tools des jeweiligen Systems zu automatisieren, wie z.B. `robocopy.exe` unter Windows oder `rsync` auf den meisten UNIX-Systemen. Beide Dienstprogramme können für die automatische inkrementelle Synchronisierung von lokalem und entferntem Speicher verwendet werden.
 
-At most universities, local computing centres will assist in providing decentral and redudant storage. In many cases, this storage can not also be used to provide instrument data to users without direct access to instrument workstations which is usually undesired. Ideally, the remote storage is versioned so that accidental deletions can be reversed.
+An den meisten Universitäten helfen die lokalen Rechenzentren bei der Bereitstellung von dezentralem und redundantem Speicher. In vielen Fällen kann dieser Speicher nicht auch dazu verwendet werden, Nutzern, die keinen direkten Zugang zu den Arbeitsplätzen an den Instrumenten haben, Daten zur Verfügung zu stellen, was in der Regel unerwünscht ist. Im Idealfall ist der dezentrale Speicher versioniert, so dass versehentliche Löschungen rückgängig gemacht werden können.
 
-In addition, [backup strategies](/docs/data_storage/) for all instrument workstations should be considered. In addition to providing additional data safety, they also can be very useful for disaster recovery which can be invaluable for legacy systems were software components may no longer be available.
+Darüber hinaus sollten [Sicherungsstrategien](/docs/data_storage/) für alle Instrumentenarbeitsplätze in Betracht gezogen werden. Sie bieten nicht nur zusätzliche Datensicherheit, sondern können auch sehr nützlich für die Wiederherstellung im Katastrophenfall sein, was bei Altsystemen, bei denen Softwarekomponenten möglicherweise nicht mehr verfügbar sind, von unschätzbarem Wert sein kann.
 
-### Sample Metadata
+### Probemetadaten
 
-While most of the scientific work still lies ahead, there are already valuable metadata to be harvested and digested at the early stage of sample submission. These can include, among many others:
+Auch wenn die meiste wissenschaftliche Arbeit noch vor uns liegt, gibt es bereits in der frühen Phase der Probeneinreichung wertvolle Metadaten, die gesammelt und ausgewertet werden können. Dazu können unter anderem gehören:
 
-- Date
-- Creator (person, group)
-- Project
-- Sample identifier
-- Molecular structure(s), and derived properties:
-    - Molecular formula
-    - Molecular weight
-    - Elemental composition
-    - Physicochemical properties 
-- Solvent or solubility
-- Purity
-- Experiment information of interest, such as:
-    - Retation time
-    - Polarity
-    - Ionisation method
-    - NMR nuclei and experiments
-    - Chiroptical data
-- Biological properties
+- Datum
+- Ersteller (Person, Gruppe)
+- Projekt
+- Kennung der Probe
+- Molekularstruktur(en) und abgeleitete Eigenschaften:
+    - Molekulare Formel
+    - Molekulargewicht
+    - Elementare Zusammensetzung
+    - Physikalisch-chemische Eigenschaften 
+- Lösungsmittel oder Löslichkeit
+- Reinheit
+- Experimentelle Informationen von Interesse, wie z. B.:
+    - Retationszeit
+    - Polarität
+    - Ionisierungsmethode
+    - NMR-Kerne und Experimente
+    - Chiroptische Daten
+- Biologische Eigenschaften
 
-The challenge of digesting those metadata according to [FAIR guiding principles](/docs/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
+Die Aufbereitung dieser Metadaten gemäß den [FAIR-Leitprinzipien] (/docs/fair/) kann für zentrale Einrichtungen eine Herausforderung darstellen und lässt sich im Wesentlichen auf zwei mögliche Strategien zurückführen:
 
-1. **Parsing of metadata from datasets.** This requires relative little organisation effort in advance but can be difficult depending on the respective data formats. Many instrument vendors use proprietary data formats. If all information, including description, is saved in [binary formats](https://en.wikipedia.org/wiki/Binary_file), the extraction of metadata can be challenging.
-1. **Using a LIMS.** Using a [Laboratory information management system (LIMS)](https://en.wikipedia.org/wiki/Laboratory_information_management_system) allows to efficiently organise all processes connected to sample processing in an electronic fashion. In a way, a LIMS is the core facility counterpart to an [ELN](/docs/eln). If a LIMS is used, the extraction of sample metadata is considerably easier than by hindsight parsing. However, the LIMS requires that the LIMS covers all processes required in the facility. Establishing a LIMS in a core facility may therefore be a complex organisational task.
+1. **Parsing von Metadaten aus Datensätzen.** Dies erfordert relativ wenig organisatorischen Aufwand im Vorfeld, kann aber je nach den jeweiligen Datenformaten schwierig sein. Viele Gerätehersteller verwenden proprietäre Datenformate. Wenn alle Informationen, einschließlich der Beschreibung, in [Binärformaten] (https://en.wikipedia.org/wiki/Binary_file) gespeichert sind, kann die Extraktion von Metadaten eine Herausforderung darstellen.
+1. **Verwendung eines LIMS.** Die Verwendung eines [Labor-Informations-Management-Systems (LIMS)](https://en.wikipedia.org/wiki/Laboratory_information_management_system) ermöglicht es, alle mit der Probenverarbeitung verbundenen Prozesse effizient elektronisch zu organisieren. In gewisser Weise ist ein LIMS das Gegenstück zu einem [ELN](/docs/eln) in der Kerneinrichtung. Wenn ein LIMS verwendet wird, ist die Extraktion von Probenmetadaten wesentlich einfacher als durch nachträgliches Parsen. Das LIMS setzt jedoch voraus, dass es alle in der Einrichtung erforderlichen Prozesse abdeckt. Die Einrichtung eines LIMS in einer Kerneinrichtung kann daher eine komplexe organisatorische Aufgabe darstellen.
 
-## Sources
+## Quellen
 
 1. <a name="dfg_code"></a> Deutsche Forschungsgemeinschaft (DFG), <em>Guidelines for Safeguarding Good Research Practice. Code of Conduct</em>, September 2019, <a href="https://doi.org/10.5281/zenodo.3923602"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3923602.svg" alt="DOI" /></a>
 2. <a name="sync"></a>See <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy" target="_blank">Microsoft documentation</a> for <code>robocopy</code> or <a href="https://linux.die.net/man/1/rsync" target="_blank">manpage</a> for <code>rsync</code>.
