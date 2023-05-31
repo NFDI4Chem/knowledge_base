@@ -1,4 +1,55 @@
 {
+  "Domains": {
+    "message": "Domänen"
+  },
+  "Roles": {
+    "message": "Rollen"
+  },
+  "Handling Data": {
+    "message": "Umgang mit Daten"
+  },
+  "Electronic Lab Notebooks": {
+    "message": "Elektronische Laborjournale"
+  },
+  "Data Publication": {
+    "message": "Datenpublikation"
+  },
+  "Synthetic Chemistry": {
+    "message": "Synthetische Chemie"
+  },
+  "Analytical Chemistry": {
+    "message": "Analytische Chemie"
+  },
+  "Physical Chemistry": {
+    "message": "Physikalische Chemie"
+  },
+  "Polymer Chemistry": {
+    "message": "Polymerchemie"
+  },
+  "Pharmaceutical Chemistry": {
+    "message": "Pharmazeutische Chemie"
+  },
+  "Research Group Leader": {
+    "message": "Gruppenleiter/in"
+  },
+  "Research Group Member": {
+    "message": "Gruppenmitglied"
+  },
+  "Student": {
+    "message": "Studierende"
+  },
+  "Data Steward": {
+    "message": "Daten-Steward"
+  },
+  "Core Facility Manager": {
+    "message": "Core Facility Manager"
+  },
+  "A place for all knowledge regarding Research Data Management (RDM) in Chemistry": {
+    "message": "Ein Platz für alles Wissenswerte zum Forschungsdatenmanagement (FDM) in der Chemie"
+  },
+  "Get started": {
+    "message": "Los geht's"
+  },
   "theme.ErrorPageContent.title": {
     "message": "Die Seite ist abgestürzt.",
     "description": "The title of the fallback page when the page crashed"
@@ -15,37 +66,29 @@
     "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert.",
     "description": "The 2nd paragraph of the 404 page"
   },
-  "theme.admonition.note": {
-    "message": "note",
-    "description": "The default label used for the Note admonition (:::note)"
-  },
-  "theme.admonition.tip": {
-    "message": "tip",
-    "description": "The default label used for the Tip admonition (:::tip)"
-  },
-  "theme.admonition.danger": {
-    "message": "danger",
-    "description": "The default label used for the Danger admonition (:::danger)"
-  },
-  "theme.admonition.info": {
-    "message": "info",
-    "description": "The default label used for the Info admonition (:::info)"
-  },
-  "theme.admonition.caution": {
-    "message": "caution",
-    "description": "The default label used for the Caution admonition (:::caution)"
-  },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Zurück nach oben scrollen",
     "description": "The ARIA label for the back to top button"
   },
-  "theme.blog.archive.title": {
-    "message": "Archiv",
-    "description": "The page & hero title of the blog archive page"
+  "theme.admonition.note": {
+    "message": "Hinweis",
+    "description": "The default label used for the Note admonition (:::note)"
   },
-  "theme.blog.archive.description": {
-    "message": "Archiv",
-    "description": "The page & hero description of the blog archive page"
+  "theme.admonition.tip": {
+    "message": "Tipp",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.danger": {
+    "message": "Gefahr",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "Info",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.caution": {
+    "message": "Vorsicht",
+    "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Navigation der Blog-Listenseite",
@@ -59,8 +102,16 @@
     "message": "Ältere Einträge",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.blog.archive.title": {
+    "message": "Archiv",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archiv",
+    "description": "The page & hero description of the blog archive page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog Post Seiten Navigation",
+    "message": "Blogpost-Seitennavigation",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
@@ -84,7 +135,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Umschalten zwischen dunkler und heller Ansicht (momentan {mode})",
+    "message": "Umschalten zwischen Dunkel- und Hellmodus (derzeit {mode})",
     "description": "The ARIA label for the navbar color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
@@ -116,7 +167,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "Ein doc getaggt|{count} docs getaggt",
+    "message": "Ein getaggtes Dokument|{count} getaggte Dokumente",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
@@ -127,7 +178,7 @@
     "message": "Version: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Das ist die unveröffentlichte Dokumentation für {siteTitle} {versionLabel}.",
+    "message": "Dies ist eine unveröffentlichte Dokumentation für die Version {siteTitle} {versionLabel}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
@@ -191,20 +242,24 @@
     "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word wrap",
+    "message": "Wortumbruch umschalten",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
     "message": "Umschalten der Seitenleiste mit einklappbarer Kategorie '{label}'",
     "description": "The ARIA label to toggle the collapsible sidebar category"
   },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hauptseite",
+    "description": "The ARIA label for the main navigation"
+  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Sprachen",
     "description": "The label for the mobile language switcher dropdown"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Main",
-    "description": "The ARIA label for the main navigation"
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Auf dieser Seite",
+    "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {
     "message": "Mehr lesen",
@@ -214,21 +269,13 @@
     "message": "Mehr lesen über {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
-  "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "Auf dieser Seite",
-    "description": "The label used by the button on the collapsible TOC component"
-  },
   "theme.blog.post.readingTime.plurals": {
     "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Home page",
+    "message": "Hauptseite",
     "description": "The ARIA label for the home page in the breadcrumbs"
-  },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Seitenleiste einklappen",
@@ -238,8 +285,12 @@
     "message": "Seitenleiste einklappen",
     "description": "The title attribute for collapse button of doc sidebar"
   },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs-Seitenleiste",
+    "description": "The ARIA label for the sidebar navigation"
+  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Close navigation bar",
+    "message": "Navigationsleiste schließen",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -247,7 +298,7 @@
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "Navigationsleiste ein-/ausblenden",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -269,56 +320,5 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
-  },
-  "Domains": {
-    "message": "Domänen"
-  },
-  "Roles": {
-    "message": "Rollen"
-  },
-  "Handling Data": {
-    "message": "Umgang mit Daten"
-  },
-  "Electronic Lab Notebooks": {
-    "message": "Elektronische Laborjournale"
-  },
-  "Data Publication": {
-    "message": "Datenpublikation"
-  },
-  "A place for all knowledge regarding Research Data Management (RDM) in Chemistry": {
-    "message": "Ein Platz für alles Wissenswerte zum Forschungsdatenmanagement (FDM) in der Chemie"
-  },
-  "Synthetic Chemistry": {
-    "message": "Synthetische Chemie"
-  },
-  "Analytical Chemistry": {
-    "message": "Analytische Chemie"
-  },
-  "Physical Chemistry": {
-    "message": "Physikalische Chemie"
-  },
-  "Polymer Chemistry": {
-    "message": "Polymerchemie"
-  },
-  "Pharmaceutical Chemistry": {
-    "message": "Pharmaceutical Chemie"
-  },
-  "Research Group Leader": {
-    "message": "Gruppenleiter/in"
-  },
-  "Research Group Member": {
-    "message": "Gruppenmitglied"
-  },
-  "Student": {
-    "message": "Studierende"
-  },
-  "Data Steward": {
-    "message": "Data Steward"
-  },
-  "Core Facility Manager": {
-    "message": "Core Facility Manager"
-  },
-  "Get started": {
-    "message": "Los geht's"
   }
 }

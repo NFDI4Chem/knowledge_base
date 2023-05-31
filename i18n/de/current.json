@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "Weiter",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Introduction": {
+    "message": "Einführung",
+    "description": "The label for category Introduction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Domains": {
+    "message": "Domänen",
+    "description": "The label for category Domains in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Roles": {
+    "message": "Rollen",
+    "description": "The label for category Roles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Handling Data": {
+    "message": "Umgang mit Daten",
+    "description": "The label for category Handling Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.SmartLab": {
+    "message": "Smartlab",
+    "description": "The label for category SmartLab in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Data Publication": {
+    "message": "Datenpublikation",
+    "description": "The label for category Data Publication in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Lead by Example": {
+    "message": "Gute Beispiele",
+    "description": "The label for category Lead by Example in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Topics & Concepts": {
+    "message": "Themen & Konzepte",
+    "description": "The label for category Topics & Concepts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Identifiers": {
+    "message": "Themen & Konzepte",
+    "description": "The label for category Identifiers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Data Formats": {
+    "message": "Datenformate",
+    "description": "The label for category Data Formats in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Data Description & Annotation": {
+    "message": "Datenbeschreibung und Annotation",
+    "description": "The label for category Data Description & Annotation in sidebar tutorialSidebar"
+  }
+}
