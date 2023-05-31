@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Weiter",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Introduction": {
@@ -20,7 +20,7 @@
     "description": "The label for category Handling Data in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.SmartLab": {
-    "message": "SmartLab",
+    "message": "Smartlab",
     "description": "The label for category SmartLab in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Data Publication": {
@@ -32,7 +32,7 @@
     "description": "The label for category Lead by Example in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Topics & Concepts": {
-    "message": "Topics & Concepts",
+    "message": "Themen & Konzepte",
     "description": "The label for category Topics & Concepts in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Identifiers": {
