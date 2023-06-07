@@ -12,12 +12,12 @@ module.exports = {
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
   themeConfig: {
-    announcementBar: {
-      id: 'community_survey',
-      content:
-        '<strong>Find out what is already possible with chemistry data today.</strong> Join us in Mainz on 6/7 June 2023 at the <a href="https://www.nfdi4chem.de/index.php/event/chemistry-data-days-2023/" target="_blank">Chemistry Data Days</a>.',
-      isCloseable: true,
-    },
+//    announcementBar: {
+//      id: 'community_survey',
+//      content:
+//        '<strong>Find out what is already possible with chemistry data today.</strong> Join us in Mainz on 6/7 June 2023 at the <a href="https://www.nfdi4chem.de/index.php/event/chemistry-data-days-2023/" target="_blank">Chemistry Data Days</a>.',
+//      isCloseable: true,
+//    },
     navbar: {
  //     title: 'Home',
       logo: {
