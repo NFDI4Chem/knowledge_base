@@ -1,50 +1,50 @@
 {
   "version.label": {
-    "message": "Weiter",
+    "message": "Next",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Introduction": {
-    "message": "Einführung",
+    "message": "Introduction",
     "description": "The label for category Introduction in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Domains": {
-    "message": "Domänen",
+    "message": "Domains",
     "description": "The label for category Domains in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Roles": {
-    "message": "Rollen",
+    "message": "Roles",
     "description": "The label for category Roles in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Handling Data": {
-    "message": "Umgang mit Daten",
+    "message": "Handling Data",
     "description": "The label for category Handling Data in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.SmartLab": {
-    "message": "Smartlab",
+    "message": "SmartLab",
     "description": "The label for category SmartLab in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Data Publication": {
-    "message": "Datenpublikation",
+    "message": "Data Publication",
     "description": "The label for category Data Publication in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Lead by Example": {
-    "message": "Gute Beispiele",
+    "message": "Lead by Example",
     "description": "The label for category Lead by Example in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Topics & Concepts": {
-    "message": "Themen & Konzepte",
+    "message": "Topics & Concepts",
     "description": "The label for category Topics & Concepts in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Identifiers": {
-    "message": "Themen & Konzepte",
+    "message": "Identifiers",
     "description": "The label for category Identifiers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Data Formats": {
-    "message": "Datenformate",
+    "message": "Data Formats",
     "description": "The label for category Data Formats in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Data Description & Annotation": {
-    "message": "Datenbeschreibung und Annotation",
+    "message": "Data Description & Annotation",
     "description": "The label for category Data Description & Annotation in sidebar tutorialSidebar"
   }
 }

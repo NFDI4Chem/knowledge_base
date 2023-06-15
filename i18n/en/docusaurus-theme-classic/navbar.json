@@ -1,0 +1,26 @@
+{
+  "logo.alt": {
+    "message": "NFDI4Chem Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Knowledge Base": {
+    "message": "Knowledge Base",
+    "description": "Navbar item with label Knowledge Base"
+  },
+  "item.label.NFDI4Chem": {
+    "message": "NFDI4Chem",
+    "description": "Navbar item with label NFDI4Chem"
+  },
+  "item.label.Terminology Service": {
+    "message": "Terminology Service",
+    "description": "Navbar item with label Terminology Service"
+  },
+  "item.label.Search Service": {
+    "message": "Search Service",
+    "description": "Navbar item with label Search Service"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  }
+}

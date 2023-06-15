@@ -4,11 +4,11 @@
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.Resources": {
-    "message": "Ressourcen",
+    "message": "Resources",
     "description": "The title of the footer links column with title=Resources in the footer"
   },
   "link.title.Legal information": {
-    "message": "Rechtliche Informationen",
+    "message": "Legal information",
     "description": "The title of the footer links column with title=Legal information in the footer"
   },
   "link.item.label.LinkedIn": {
@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/NFDI4Chem"
   },
   "link.item.label.NFDI4Chem Website": {
-    "message": "NFDI4Chem-Website",
+    "message": "NFDI4Chem Website",
     "description": "The label of footer link with label=NFDI4Chem Website linking to https://nfdi4chem.de"
   },
   "link.item.label.NFDI4Chem FAQ": {
@@ -32,7 +32,7 @@
     "description": "The label of footer link with label=NFDI4Chem FAQ linking to https://www.nfdi4chem.de/index.php/frequently-asked-questions/"
   },
   "link.item.label.NFDI4Chem Helpdesk": {
-    "message": "NFDI4Chem-Helpdesk",
+    "message": "NFDI4Chem Helpdesk",
     "description": "The label of footer link with label=NFDI4Chem Helpdesk linking to https://nfdi4chem.de/index.php/helpdesk/"
   },
   "link.item.label.NFDI4Chem Terminology Service": {
@@ -48,19 +48,19 @@
     "description": "The label of footer link with label=NFDI4Chem Knowledge Base GitHub Repository linking to https://github.com/NFDI4Chem/knowledge_base"
   },
   "link.item.label.About": {
-    "message": "Über",
+    "message": "About",
     "description": "The label of footer link with label=About linking to about"
   },
   "link.item.label.Legal Notice": {
-    "message": "Impressum",
+    "message": "Legal Notice",
     "description": "The label of footer link with label=Legal Notice linking to https://www.uni-mainz.de/eng/102.php"
   },
   "link.item.label.Privacy": {
-    "message": "Datenschutz",
+    "message": "Privacy",
     "description": "The label of footer link with label=Privacy linking to https://www.uni-mainz.de/eng/144.php"
   },
   "copyright": {
-    "message": "\n        <div class=\"container\" style=\"width: 80%;\">\n          <div class=\"row\">\n            <div class=\"cell\" style=\"padding: 1rem;\" ><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/4.0/88x31.png\"></a>\n            </div>\n            <div class=\"cell\" style=\"padding: 0.1rem; text-align: left;\" >Lizenziert unter der <a class=\"footer__link-item\" rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons BY-SA 4.0 Lizenz</a>, sofern nicht anders angegeben.<br />\n            Copyright © 2021 NFDI4Chem. Built with Docusaurus.\n            </div>\n          </div>\n        </div>\n        ",
+    "message": "\n        <div class=\"container\" style=\"width: 80%;\">\n          <div class=\"row\">\n            <div class=\"cell\" style=\"padding: 1rem;\" ><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/4.0/88x31.png\"></a>\n            </div>\n            <div class=\"cell\" style=\"padding: 0.1rem; text-align: left;\" >Licensed under a <a class=\"footer__link-item\" rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons BY-SA 4.0 License</a>, if not stated otherwise.<br />\n            Copyright © 2023 NFDI4Chem. Built with Docusaurus.\n            </div>\n          </div>\n        </div>\n        ",
     "description": "The footer copyright"
   }
 }
