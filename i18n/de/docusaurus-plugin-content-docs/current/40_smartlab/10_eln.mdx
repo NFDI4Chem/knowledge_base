@@ -1,7 +1,7 @@
 ---
-title: "ELN"
-slug: "/eln"
-id: "eln"
+title: Andere elektronische Labornotizbücher
+slug: /eln
+id: eln
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -59,11 +59,9 @@ Eines der wichtigsten Dinge, die ein ELN von einem weißen Blatt Papier untersch
     </div>
 </div>
 
-
 ## Vorteile eines ELN
 
 ELNs helfen dabei, Versuchsbeschreibungen direkt mit den gesammelten Daten zu verknüpfen, so dass alle Informationen an einer Stelle zu finden sind. Außerdem werden Datenverluste durch sichere Datenspeicherung und Backups vermieden. Die Speicherung aller Daten an einem zentralen Ort hilft auch beim Wissensmanagement, da die Daten leicht auffindbar und zugänglich sind, auch für neue Mitglieder eines Forschungsprojekts. Der größte Vorteil eines ELN ist, dass [Metadaten](/docs/metadata) strukturiert und [standardisiert](/docs/format_standards) gespeichert werden. Dies hilft auch bei der Veröffentlichung von Forschungsergebnissen und der Übertragung von Forschungsdaten in ein Repositorium.
-
 
 <div className='container'>
     <div className='row'>
@@ -112,6 +110,8 @@ ELNs helfen dabei, Versuchsbeschreibungen direkt mit den gesammelten Daten zu ve
     </div>
 </div>
 
+FAIR Image Attribution: SangyaPundir, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+
 ## Das richtige ELN
 
 Bis heute gibt es nicht das eine ELN, das die Anforderungen für alle chemischen Disziplinen erfüllt. Darüber hinaus erfüllen nur wenige ELNs die grundlegenden Anforderungen für die chemischen Wissenschaften. Dies liegt wahrscheinlich an den Herausforderungen, die sich aus dem Zeichnen und Verarbeiten chemischer Strukturen ergeben, ein entscheidender und zentraler Schritt, um Forschungsdaten mit der entsprechenden chemischen Reaktion oder Struktur korrelieren zu können. Die Organisation der Arbeit mit ELNs, die chemiespezifische Funktionen unterstützen, kann mehrere Vorteile bieten, wie z.B. die Verfügbarkeit von [chemischen Strukturbezeichnern](/docs/machine-readable_chemical_structures) und [standardisierten Formaten](/docs/format_standards) sowie die Integration vielfältiger Werkzeuge und Workflows, die die wissenschaftliche Arbeit erleichtern. Die direkte Integration von Werkzeugen ermöglicht eine unmittelbare Unterstützung des Wissenschaftlers ohne die Notwendigkeit, nach zusätzlichen Diensten und Software zu suchen, und bringt so neue Entwicklungen und Informationen direkt in das Bewusstsein der Wissenschaftler. Einige Open-Source-Beispiele für Systeme in der Chemie, die die notwendige Unterstützung für chemische Strukturen bieten, sind [Indigo-ELN](https://lifescience.opensource.epam.com/indigo/eln/index.html), [LabTrove](http://labtrove.org/), [OpenEnventory](http://www.open-enventory.de/) und [Chemotion ELN](https://eln.chemotion.net/home).
@@ -119,72 +119,49 @@ Bis heute gibt es nicht das eine ELN, das die Anforderungen für alle chemischen
 Daher ist die Wahl des richtigen ELN entscheidend für eine erfolgreiche Implementierung eines ELN in einem Labor. Zur Einrichtung eines ELN sollten drei Schritte unternommen werden: 1) Bedarfsanalyse, 2) Testen und 3) Einführung des gewählten ELN.
 
 :::caution Bedarfsanalyse
-- Analyse der aktuellen Situation (Budget, IT-Ressourcen, Softwareumgebung)
-- Definition der wichtigsten Merkmale
-- ELN-Konzept (generisch, disziplinspezifisch)
-- Heranziehen von Erfahrungen anderer Forschungsinstitutionen
-:::
+
+-   Analyse der aktuellen Situation (Budget, IT-Ressourcen, Softwareumgebung)
+-   Definition der wichtigsten Merkmale
+-   ELN-Konzept (generisch, disziplinspezifisch)
+-   Heranziehen von Erfahrungen anderer Forschungsinstitutionen
+    :::
 
 :::info Testen der ausgewählten Produkte
-- Demoversionen oder kostenloser Testzugang für einzelne Nutzer
-- Testen von nicht mehr als 2-3 ELNs
-- Eingehende Tests mit realen Anwendungsfällen aus dem Labor
-:::
+
+-   Demoversionen oder kostenloser Testzugang für einzelne Nutzer
+-   Testen von nicht mehr als 2-3 ELNs
+-   Eingehende Tests mit realen Anwendungsfällen aus dem Labor
+    :::
 
 :::tip Einführung des ausgewählten ELN
-- Durchführung von Schulungen, Schulungsmaterial
-- Benennung von Ansprechpartnern aus dem Testteam
-- Kontinuierliches Mentoring
-:::
 
+-   Durchführung von Schulungen, Schulungsmaterial
+-   Benennung von Ansprechpartnern aus dem Testteam
+-   Kontinuierliches Mentoring
+    :::
 
 ### Kriterien für die Auswahl eines ELN
 
-|Kategorie|Erläuterung|
-|:------------|:------------|
-|Lizenzmodell|Kommerzielle ELNs verwenden meist proprietäre Dateiformate, der Quellcode ist Closed Source und es wird eine Lizenzgebühr erhoben. Open-Source-ELNs sind kostenlos, verwenden offene Standardformate, der Quellcode ist offen zugänglich und wird von einer aktiven Entwicklergemeinde weiterentwickelt. Implementierung und Wartung erfordern entsprechende personelle Ressourcen.
-|Bereitstellungsmodell|Die Software kann entweder in einer Cloud (SaaS - Software as a Service) oder serverbasiert zur lokalen Installation beim Kunden (on-premises) bereitgestellt werden.
-|Es wird die Speicherung der Daten in der Cloud des ELN-Anbieters (oder dessen Dienstleister, z.B. in der EU) oder die Möglichkeit der Speicherung auf eigenen lokalen Servern/der eigenen Cloud angeboten.
-|Das Konzept bezieht sich auf die fachspezifische Ausrichtung. Generische Werkzeuge können in allen Fächern eingesetzt werden, bieten aber in der Regel keine spezifischen Funktionen, wie z.B. Struktur-Editoren für die Chemie.
-|Standardschnittstelle|Standardschnittstellen ermöglichen den Datenaustausch mit externen Programmen, z.B. ChemDraw, Marvin JS, ChemDoodle, MS Office, Libre Office, ImageJ, Slack|
-|Für die Integration in eine bestehende IT-Umgebung, z.B. eigene Speicherlösungen, wird eine API benötigt.
-|Datei-Import/Export|Export/Import von sowohl menschen- als auch maschinenlesbaren Formaten sollte möglich sein (z.B. pdf, zip, csv, json, xml), idealerweise auch größere Einheiten, wie das ELN.|
-|Die Bereitstellung von Metadaten ist ein entscheidender Faktor, um die Auffindbarkeit und das Verständnis der Daten zu gewährleisten. Metadaten sollten in einem strukturierten, maschinen- und menschenlesbaren Format erfasst werden.
-|Kollaboration|Kollaboration vereinfacht den Austausch von Daten und Ergebnissen. Es sollte möglich sein, Rollen zu definieren, z.B. wer in welchem Umfang Zugriff hat (Rollenmanagement).
-|Sharing/Publikation|ELNs ermöglichen den direkten Datenaustausch mit Portalen zum Publizieren/Teilen von Forschungsdaten.
-|Suche|Die Suchfunktion ermöglicht das Auffinden und Filtern von Daten.
-|Vorlagen|Vorlagen dienen der Zeitersparnis und Standardisierung. Ein Vorteil ist die Möglichkeit, Vorlagen nach den eigenen Bedürfnissen zu erstellen.
-|Arbeitsabläufe|Die Dokumentation von Prozessen erhöht die Effizienz und Nachvollziehbarkeit erheblich und trägt zur Transparenz und zum Know-how-Transport bei.
-|Beweissicherheit bedeutet die nachvollziehbare Dokumentation unter Einhaltung gesetzlicher Vorschriften, z.B. Versehen der Einträge mit einem Zeitstempel, elektronische Signatur, Versionierung.
-|Regelkonformität|Das Werkzeug muss die Einhaltung gesetzlicher Vorgaben ermöglichen, z.B. GLP, GCP.
-Tabelle Attribution: ZB MED PUBLISSO ELN-Filter, 2921-06 englisch.
+| Kategorie                                | Erläuterung                                                                                                                                                                                                                                                                                                                                                                         |
+| :--------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lizenzmodell                             | Kommerzielle ELNs verwenden meist proprietäre Dateiformate, der Quellcode ist Closed Source und es wird eine Lizenzgebühr erhoben. Open-Source-ELNs sind kostenlos, verwenden offene Standardformate, der Quellcode ist offen zugänglich und wird von einer aktiven Entwicklergemeinde weiterentwickelt. Implementierung und Wartung erfordern entsprechende personelle Ressourcen. |
+| Bereitstellungsmodell                    | Die Software kann entweder in einer Cloud (SaaS - Software as a Service) oder serverbasiert zur lokalen Installation beim Kunden (on-premises) bereitgestellt werden.                                                                                                                                                                                                               |
+| File storage                             | |Es wird die Speicherung der Daten in der Cloud des ELN-Anbieters (oder dessen Dienstleister, z.B. in der EU) oder die Möglichkeit der Speicherung auf eigenen lokalen Servern/der eigenen Cloud angeboten.                                                                                                                                                                         |
+| Dokumentation, Informationen und Kontakt | Concept refers to the subject-specific orientation. Generic tools can be used in all subjects, but usually do not provide specific features, such as structure editors for chemistry.                                                                                                                                                                                               |
+| Standard interface                       | Standard interfaces enable data exchange with external programs, e.g. ChemDraw, Marvin JS, ChemDoodle, MS Office, Libre Office, ImageJ, Slack                                                                                                                                                                                                                                       |
+| Pragramming interfaces                   | An API is needed for integration into an existing IT environment, e.g. own storage solutions.                                                                                                                                                                                                                                                                                       |
+| File import/export                       | Export/import of both human- and machine-readable formats should be possible (e.g. pdf, zip, csv, json, xml), ideally also larger units, such as the ELN.                                                                                                                                                                                                                           |
+| Metadata                                 | Providing metadata is a crucial factor in ensuring findability and understanding of data. Metadata should be recorded in a structured, machine- and human-readable format.                                                                                                                                                                                                          |
+| Collaboration                            | Collaboration simplifies the exchange of data and results. It should be possible to define roles, e.g. who has access and to what extend (role management).                                                                                                                                                                                                                         |
+| Sharing/Publication                      | ELNs allow direct exchange of data with portals for publishing/sharing research data.                                                                                                                                                                                                                                                                                               |
+| Search                                   | The search function allows data to be retrieved and filtered.                                                                                                                                                                                                                                                                                                                       |
+| ELN                                      | Templates are used for time saving and standardization. One advantage is the option to create templates according to one’s own needs.                                                                                                                                                                                                                                               |
+| Workflows                                | Documenting processes significantly increases efficiency, traceability and contributes to transparency and transporting of know-how.                                                                                                                                                                                                                                                |
+| Security of evidence                     | Evidence security means the traceable documentation in compliance with legal regulations, e.g. providing the entries with a time stamp, electronic signature, versioning.                                                                                                                                                                                                           |
+| Rule compliance                          | The tool must enable compliance with regulatory requirements, e.g. GLP, GCP.                                                                                                                                                                                                                                                                                                        |
 
-## Elektronische Laborjournale (ELNs) in NFDI4Chem
+Table Attribution: ZB MED PUBLISSO ELN-Filter, 2921-06 english.
 
-[NFDI4Chem](https://www.nfdi4chem.de/) wird die ELNs unterstützen, die für die Dokumentation von chemischen Forschungsaktivitäten relevant sind. Diese Unterstützung umfasst das Hosting einer ELN-Instanz für jedes der relevanten ELNs am KIT für Lehr- und Ausbildungszwecke. Dieser Dienst wird im Jahr 2022 eingerichtet, um allen Wissenschaftlern die Möglichkeit zu geben, ELNs und ihre Funktionalitäten zu vergleichen. Der Vergleich und das Testen verschiedener ELNs ist eine Voraussetzung, um die richtige Wahl zu treffen. Darüber hinaus organisiert NFDI4Chem verschiedene Seminare mit dem Ziel, einen ersten Eindruck von verschiedenen ELNs zu vermitteln. Diese Seminare sind eine gute Gelegenheit für ELN-Anbieter, den Nutzen und die Anwendungsmöglichkeiten ihrer ELNs zu demonstrieren. Vergangene und kommende Seminare finden Sie auf der [Stammtisch-Veranstaltungsseite](https://www.nfdi4chem.de/index.php/event/stammtisch-chemotion/).
+### Chemotion ELN
 
-## Chemotion ELN
-
-Chemotion ist die ELN-Referenzinstanz in NFDI4Chem. Das Chemotion ELN wird von mehreren Softwareentwicklern an verschiedenen NFDI4Chem-Standorten entwickelt. Die ELN-Entwicklung begann am [Karlsruher Institut für Technologie (KIT)](https://www.kit.edu/) in Karlsruhe im Rahmen eines von der DFG geförderten Projekts. Die Erweiterung der Software wurde und wird weiterhin durch das [Ministerium für Wissenschaft, Forschung und Kunst Baden-Württemberg](https://mwk.baden-wuerttemberg.de/), das Karlsruher Institut für Technologie und die [Deutsche Forschungsgemeinschaft (DFG)](https://www.dfg.de/) unterstützt.
-
-Das Chemotion ELN wurde für Chemikerinnen und Chemiker konzipiert und an die speziellen Anforderungen der chemischen Laborarbeit und Dokumentation angepasst. Es dient somit als Digitalisierungsinstrument für die Arbeit in der Chemie, das entwickelt wurde, um die derzeitigen Grenzen der vorhandenen Systeme zu überwinden. Um dieses Ziel zu erreichen, ist die Entwicklung, Verbesserung und Erweiterung des ELN eine Gemeinschaftsarbeit. Das ELN wird auch in anderen Disziplinen als der Chemie eingesetzt, da es eine breite generische Funktionalität bietet, um den Bedürfnissen von Wissenschaftlern gerecht zu werden, die in interdisziplinären Umgebungen arbeiten. Diese generischen Funktionen werden ständig erweitert und angepasst.
-
-Chemotion ELN bietet eine spezielle Funktion, die die [Veröffentlichung von Forschungsdaten](/docs/data_publication) erleichtert: Es unterstützt den Transfer von Daten vom ELN-Konto eines Benutzers zu einem Repositorium für Forschungsdaten. Diese Funktion reduziert den Aufwand der Wissenschaftler für den Zugang zu Forschungsdaten, was von vielen Förderorganisationen gefordert wird und für die Veröffentlichung von wissenschaftlichen Texten hilfreich ist. Derzeit unterstützt das ELN die Übertragung von Daten an das [Chemotion Repositorium] (https://www.chemotion-repository.net/welcome). Das NFDI4Chem-Team arbeitet daran, Verbindungen zu weiteren Repositorien herzustellen, insbesondere zu den Repositorien, die von NFDI4Chem unterstützt und empfohlen werden.
-
-Eine kurze Einführung in das Chemotion ELN sowie die Anbindung an das Chemotion Repositorium wird in diesem Video gezeigt:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tZHaP6DW-Dw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Dokumentation, Informationen und Kontakt
-
-Chemotion ELN und seine Funktionen wurden in verschiedenen Publikationen beschrieben (siehe [unten](#Quellen-und-weitere-Informationen)). Für Anwender, Entwickler und Administratoren ist eine Dokumentation auf der [Website](https://www.chemotion.net/chemotionsaurus/docs/intro) des Projekts verfügbar. Chemotion ELN ist eine Open-Source-Entwicklung; der Quellcode ist auf [GitHub](https://github.com/ComPlat/chemotion_ELN) verfügbar.
-
-## Andere elektronische Labornotizbücher
 Es gibt eine Fülle von ELNs, und es ist nicht immer einfach herauszufinden, welches das richtige für Sie ist. Um Ihnen die Auswahl eines ELN zu erleichtern, können Sie den [ELN Finder](https://eln-finder.ulb.tu-darmstadt.de/home) verwenden. Hier stehen mehr als 40 Filterkriterien zur Verfügung. Die Filterkriterien sind übersichtlich in Kategorien eingeteilt und die Ergebnisliste der identifizierten ELN-Tools wird in einer Übersicht neben Kurzbeschreibungen der einzelnen Tools angezeigt.
-
-## Quellen und weitere Informationen
-
-- Chemotion ELN: ein Open Source elektronisches Laborjournal für Chemiker im akademischen Bereich](https://doi.org/10.1186/s13321-017-0240-0)
-- [Chemotion-ELN Teil 2: Anpassung eines eingebetteten Ketcher-Editors an fortgeschrittene Forschungsanwendungen](https://doi.org/10.1186/s13321-018-0292-9)
-- CHEMSCANNER: Extraktion und Wiederverwendung von chemischen Informationen aus wissenschaftlichen Dokumenten, die ChemDraw-Dateien enthalten](https://doi.org/10.1186/s13321-019-0400-5)
-- [Chemotion ELN Dokumentation](https://www.chemotion.net/chemotionsaurus/docs/intro)
-- [Chemotion ELN auf Github](https://github.com/ComPlat/chemotion_ELN)

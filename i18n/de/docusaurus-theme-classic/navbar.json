@@ -12,11 +12,11 @@
     "description": "Navbar item with label NFDI4Chem"
   },
   "item.label.Terminology Service": {
-    "message": "Terminology Service",
+    "message": "Terminologie-Service",
     "description": "Navbar item with label Terminology Service"
   },
   "item.label.Search Service": {
-    "message": "Search Service",
+    "message": "Suchdienst",
     "description": "Navbar item with label Search Service"
   },
   "item.label.FAQ": {

@@ -1,7 +1,7 @@
 {
   "label": "Data Description & Annotation",
   "link": {
-      "type"  : "doc",
-      "id" : "data_description_annotation"
+    "type": "doc",
+    "id": "data_description_annotation"
   }
 }

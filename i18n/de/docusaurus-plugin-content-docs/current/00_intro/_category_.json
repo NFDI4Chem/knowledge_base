@@ -1,7 +1,7 @@
 {
-  "label": "Introduction",
+  "label": "Einführung",
   "link": {
-      "type"  : "doc",
-      "id" : "intro"
+    "type": "doc",
+    "id": "intro"
   }
 }

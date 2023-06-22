@@ -1,7 +1,7 @@
 {
-  "label": "SmartLab",
+  "label": "Smartlab",
   "link": {
-    "type"  : "doc",
-    "id" : "smartlab"
+    "type": "doc",
+    "id": "smartlab"
   }
 }

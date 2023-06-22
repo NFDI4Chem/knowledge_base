@@ -36,15 +36,15 @@
     "description": "The label of footer link with label=NFDI4Chem Helpdesk linking to https://nfdi4chem.de/index.php/helpdesk/"
   },
   "link.item.label.NFDI4Chem Terminology Service": {
-    "message": "NFDI4Chem Terminology Service",
+    "message": "NFDI4Chem Terminologiedienst",
     "description": "The label of footer link with label=NFDI4Chem Terminology Service linking to https://terminology.nfdi4chem.de/"
   },
   "link.item.label.NFDI4Chem Search Service": {
-    "message": "NFDI4Chem Search Service",
+    "message": "NFDI4Chem Suchdienst",
     "description": "The label of footer link with label=NFDI4Chem Search Service linking to https://search.nfdi4chem.de/"
   },
   "link.item.label.NFDI4Chem Knowledge Base GitHub Repository": {
-    "message": "NFDI4Chem Knowledge Base GitHub Repository",
+    "message": "NFDI4Chem Knowledge Base GitHub-Repositorium",
     "description": "The label of footer link with label=NFDI4Chem Knowledge Base GitHub Repository linking to https://github.com/NFDI4Chem/knowledge_base"
   },
   "link.item.label.About": {

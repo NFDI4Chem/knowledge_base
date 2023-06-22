@@ -1,17 +1,62 @@
 ---
-title: "Data Publication"
-slug: "/data_publication"
-id: "data_publication"
+title: Data Publication
+slug: /data_publication
+id: data_publication
 ---
 
-# Datenpublikation
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-<!-- image ideas?-->
+# Data Publication
 
-In der chemischen Forschung versuchen wir, unsere Ergebnisse mit anderen zu teilen, in der Regel durch Artikel in renommierten Fachzeitschriften. Um tatsächlich mit diesen Ergebnissen arbeiten und auf ihnen aufbauen zu können, benötigt die wissenschaftliche Gemeinschaft jedoch auch die Daten, auf denen die Ergebnisse basieren. Die Veröffentlichung und somit die gemeinsame Nutzung dieser Forschungsdaten auf [FAIRer](/docs/fair) Art und Weise, z. B. durch Einbeziehung von [maschinenlesbaren chemischen Strukturen](/docs/machine-readable_chemical_structures), [Standarddatenformaten](/docs/format_standards) und reichhaltigen [Metadaten](/docs/metadata), erhöht den Wert der Forschungsergebnisse und ermöglicht ihre Entdeckung und Wiederverwendung. Die Veröffentlichung von Daten ist wichtig, um sicherzustellen, dass die Ergebnisse transparent und reproduzierbar sind.
+:::info Applies to:
+This article applies to all researchers who want to publish their data.
+:::
 
-[Forschungsdaten-Repositorien](/docs/repositories) dienen als primäre Methode zur Veröffentlichung von Forschungsdaten, während [smart Lab](/docs/smartlab)-Lösungen, wie das [Chemotion ELN], integrierte Workflows bieten können, um Forscher bei der gemeinsamen Nutzung ihrer Forschungsdaten direkt aus dem Labor zu unterstützen. <!-- oder: direkt aus dem ELN? --> Einige Daten können einen eigenen [Datenartikel](/docs/data_articles) rechtfertigen, der zusammen mit den Ergebnissen veröffentlicht wird. 
+## Motivation
 
-Eine [Datenverfügbarkeitserklärung](/docs/data_availability_statement) teilt mit, wie die Daten weitergegeben wurden und wie andere darauf zugreifen können, wobei idealerweise ein Link zum Datensatz über seinen [persistent identifier](/docs/identifiers) gesetzt wird. <!-- Lassen Sie das Wort "idealerweise" weg?--> Diese Erklärung ist normalerweise im Anhang eines veröffentlichten Artikels enthalten. <!-- mehr Informationen über die Verknüpfung von Datensätzen mit veröffentlichten Artikeln einfügen - wir haben Best-Practice-Beispiele (De Gruyter Pilot)-->
+In der chemischen Forschung versuchen wir, unsere Ergebnisse mit anderen zu teilen, in der Regel durch Artikel in renommierten Fachzeitschriften. Um tatsächlich mit diesen Ergebnissen arbeiten und auf ihnen aufbauen zu können, benötigt die wissenschaftliche Gemeinschaft jedoch auch die Daten, auf denen die Ergebnisse basieren. 
 
-NFDI4Chem bietet Datensätze, die von Forschern veröffentlicht wurden, und hilft auch bei der Veröffentlichung von Forschungsdaten. Weitere Informationen finden Sie unter [Lead by Example](/docs/lbe-intro).
+Die Veröffentlichung und somit die gemeinsame Nutzung dieser Forschungsdaten auf [FAIRer](/docs/fair) Art und Weise, z. B. durch Einbeziehung von [maschinenlesbaren chemischen Strukturen](/docs/machine-readable_chemical_structures), [Standarddatenformaten](/docs/format_standards) und reichhaltigen [Metadaten](/docs/metadata), erhöht den Wert der Forschungsergebnisse und ermöglicht ihre Entdeckung und Wiederverwendung. Die Veröffentlichung von Daten ist wichtig, um sicherzustellen, dass die Ergebnisse transparent und reproduzierbar sind. 
+
+Data publication is essential in ensuring findings are transparent and reproducible. Moreover, it prevents duplicate efforts to generate data, hence, data publication is also a measure of sustainability.
+
+## Datenpublikation
+
+There are direct benefits for researchers who publish their data. Data publications increase your career recognition, enable new collaborations, and provide a citation advantage compared to articles without an associated and linked dataset in a research data repository.
+
+<img align="center" src={useBaseUrl('/img/data_pub/data_publication_brian_hole_CC_BY_40.png')} alt="Data Publication Brian Hole CC BY 4.0" width="80%" />
+
+(Source: Brian Hole, CC BY 4.0, [Slideshare](https://www.slideshare.net/brianhole/the-journal-of-open-archaeology-data-and-prime-incentivising-open-data-archiving))
+
+Additionally, the research community benefits here as, for example, new research is made possible and efficiency in research increases. Also the public sector will profit by enhanced public trust in science, as data publication allows for the validation of research results. Nonetheless, there is an economic benefit of data publication if results can be reused by the private sector.
+
+## How to start
+
+There are two main ways to publish research data:
+
+-   publish data in a [research data repository](/docs/repositories/)
+-   publish a separate [data article](/docs/data_articles/) with the corresponding dataset published in a [research data repository](/docs/repositories/)
+
+:::info Info:
+Field-specific repositories should be the first choice as these repositories enhance the FAIRness of data on behalf of the submitters. To retain the same level of FAIRness, data publishing in generic repositories requires manual FAIRification.
+:::
+
+[Forschungsdaten-Repositorien](/docs/repositories) dienen als primäre Methode zur Veröffentlichung von Forschungsdaten, während [smart Lab](/docs/smartlab)-Lösungen, wie das [Chemotion ELN], integrierte Workflows bieten können, um Forscher bei der gemeinsamen Nutzung ihrer Forschungsdaten direkt aus dem Labor zu unterstützen. If the data is already documented in a structured way in Chemtotion ELN, then the data can also be published in this structured way via [Chemotion Repository](https://www.chemotion-repository.net/).
+
+Further information on repositories, including a list of recommended chemistry-friendly repositories, is provided in our article on [repositories](/docs/repositories) and guide on [how to choose the right repository](/docs/choose_repository).
+
+Eine [Datenverfügbarkeitserklärung](/docs/data_availability_statement) teilt mit, wie die Daten weitergegeben wurden und wie andere darauf zugreifen können, wobei idealerweise ein Link zum Datensatz über seinen [persistent identifier](/docs/identifiers) gesetzt wird. Datasets and scientific publications should be interlinked using [persistent identifiers](/docs/pid/).
+
+:::danger Notice:\
+Still confused on what data publication in chemistry may look like? We do provide a consulting and data stewardship service via our [Lead by Example](/docs/lbe_intro/) project. Have a look at Lead by Example [Datasets](/docs/datasets) for inspiration!
+:::
+
+## Sources and further information
+
+-   [The citation advantage of linking publications to research data](https://doi.org/10.1371/journal.pone.0230416)
+-   [NSF Public Access Plan 2.0](https://nsf-gov-resources.nsf.gov/2023-06/NSF23104.pdf)
+-   [DFG Code of Conduct, Guideline 13: Providing public access to research results](https://wissenschaftliche-integritaet.de/en/code-of-conduct/providing-public-access-to-research-results/)
+
+* * *
+
+Main authors: [ORCID:0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840) and [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661)

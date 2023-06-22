@@ -1,80 +1,99 @@
 ---
-title: "How to choose the right repository"
-slug: "/choose_repository"
+title: How to choose the right repository
+slug: /choose_repository
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Wie man das richtige Repositorium auswählt
 
-## Einleitung
+## Introduction to our recommendations
 
-Das Konsortium für Chemie (NFDI4Chem) im NFDI hat sich zum Ziel gesetzt, die Mitglieder der Gemeinschaft (Datenproduzenten und -nutzer) bei der Sammlung, Speicherung, Verarbeitung, Analyse, Offenlegung und Wiederverwendung von Forschungsdaten zu unterstützen, indem es einen Verbund von Repositorien einrichtet. Auf der Website des Konsortiums finden Sie als Einstieg einen Überblick über die ausgewählten Repositorien, den zentralen Suchdienst und gemeinsame Standards.
-Mit dem Ziel, die wichtigsten Repositorien zu identifizieren, die Teil des Verbunds sind und über Entwicklungspotenzial verfügen, wählte das TA3-Team in seinem Vorschlag die folgenden Kriterien aus:
+Das Konsortium für Chemie (NFDI4Chem) im NFDI hat sich zum Ziel gesetzt, die Mitglieder der Gemeinschaft (Datenproduzenten und -nutzer) bei der Sammlung, Speicherung, Verarbeitung, Analyse, Offenlegung und Wiederverwendung von Forschungsdaten zu unterstützen, indem es einen Verbund von Repositorien einrichtet. Mit dem Ziel, die wichtigsten Repositorien zu identifizieren, die Teil des Verbunds sind und über Entwicklungspotenzial verfügen, wählte das TA3-Team in seinem Vorschlag die folgenden Kriterien aus: 
 
-- Das Repositorium ist für die Hinterlegung von molekülbezogenen Daten geeignet
-- Das Repositorium enthält wiederverwendbare Daten oder Funktionen (z. B. Viewer, Editoren oder Analysewerkzeuge), die den Bedürfnissen der NFDI4Chem-Gemeinschaft entsprechen
-- Die Software des Repositoriums ist quelloffen
-- Die Betreiber der Repositorien haben sich bereit erklärt, ihre Dienste an die von NFDI4Chem entwickelten Standards einschließlich der FAIR-Datengrundsätze anzupassen.
-- Die Betreiber der Repositorien können gemäß den Förderrichtlinien der NFDI finanziert werden (d.h. der Hauptbetreiber hat seinen Sitz in Deutschland und ist eine Non-Profit-Organisation)
+-   Das Repositorium ist für die Hinterlegung von molekülbezogenen Daten geeignet
+-   Das Repositorium enthält wiederverwendbare Daten oder Funktionen (z. B. Viewer, Editoren oder Analysewerkzeuge), die den Bedürfnissen der NFDI4Chem-Gemeinschaft entsprechen 
+-   Die Software des Repositoriums ist quelloffen
+-   Die Betreiber der Repositorien haben sich bereit erklärt, ihre Dienste an die von NFDI4Chem entwickelten Standards einschließlich der FAIR-Datengrundsätze anzupassen.
+-   Die Betreiber der Repositorien können gemäß den Förderrichtlinien der NFDI finanziert werden (d.h. der Hauptbetreiber hat seinen Sitz in Deutschland und ist eine Non-Profit-Organisation)
 
 Die Repositorien, die die oben genannten Kriterien erfüllen, werden in der folgenden Liste als Kernrepositorien ausgewiesen. Falls nicht alle Kriterien erfüllt sind, werden sie als assoziierte oder relevante Repositorien aufgeführt:
 
-## Kern-Repositorien
-
-- [Chemotion Repositorium](https://www.chemotion-repository.net/welcome)
-- [MassBank EU](https://massbank.eu/MassBank/)
-- [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/)
-- [STRENDA DB](https://www.beilstein-strenda-db.org/)
-- [SUPRABANK](https://suprabank.org/)
+:::danger Notice:
+Field-specific repositories should be the first choice as these repositories enhance the FAIRness of data on behalf of the submitters. To retain the same level of FAIRness, data publication in generic repositories requires manual FAIRification.
+:::
 
 ## Assoziierte Repositorien
 
-- [CSD](https://www.ccdc.cam.ac.uk/structures/), [ICSD](https://icsd.fiz-karlsruhe.de/) und gemeinsamer [CCDC/FIZ](https://www.ccdc.cam.ac.uk/structures/) Dienst für Zugriffsstrukturen
+-   [Chemotion Repository](https://www.chemotion-repository.net/welcome)<br/>Field-specific sample and reaction-centric repository including analysis data such as NMR, IR, and mass data.
+-   [MassBank EU](https://massbank.eu/MassBank/)<br/>Field-specific ecosystem of databases and tools for mass spectrometry reference spectra.
+-   [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/)<br/>Generic, multi-domain repository that offers a free and reliable home for all chemical research data that do not fulfil the specifications of field-specific repositories. 
+-   Enzymkinetikdaten (derzeit keine) [STRENDA DB](https://www.beilstein-strenda-db.org/strenda//)
+-   [SUPRABANK](https://suprabank.org/)<br/>Field-specific repository for intermolecular interactions data.
 
 ## Andere relevante Repositorien
 
-- [NOMAD](https://nomad-lab.eu/)
+-   [Cambridge Structural Database](https://www.ccdc.cam.ac.uk/structures/)<br/>Field-specific repository for x-ray diffraction data of molecules generally containing at least carbon and hydrogen, operated by the Cambridge Crystallographic Data Centre (CCDC).
+-   [Inorganic Crystal Structure Database](https://icsd.fiz-karlsruhe.de/)<br/>Field-specific repository for x-ray diffraction data of inorganic compounds, elements, minerals, and intermetallic compounds, operated by FIZ Karlsruhe.
+-   [CSD](https://www.ccdc.cam.ac.uk/structures/), [ICSD](https://icsd.fiz-karlsruhe.de/) und gemeinsamer [CCDC/FIZ](https://www.ccdc.cam.ac.uk/structures/) Dienst für Zugriffsstrukturen
+
+## Other relevant repositories
+
+-   [NOMAD](https://nomad-lab.eu/)<br/>Field-specific repository for materials science data.
+-   [ioChem-BD](https://www.iochem-bd.org/)<br/>Field-specific repository for computational chemistry.
+-   [RADAR](https://www.radar-service.eu/radar/en/home)<br/>Generic, multi-disciplinary research data repository.
+-   [Zenodo](https://zenodo.org/)<br/>Generic repository developed under the European OpenAIRE program, operated by CERN.
+-   [EUDAT B2SHARE](https://sp.eudat.eu/catalog/resources/709c053d-3b3f-4c54-8ef4-6efeea387816)<br/>Generic repository operated by a pan-european network consisting of more than 25 research organisations, data and computing centers.
 
 ## Weitere Repositorien (derzeit im Aufbau):
 
-- [nmrXiv](https://docs.nmrxiv.org/) (NMR-Daten)
-- VibSpecDB (Raman- und IR-Spektren)
+-   [nmrXiv](https://docs.nmrxiv.org/) (NMR-Daten)
+-   VibSpecDB (Raman- und IR-Spektren)
 
-Darüber hinaus unterstützt das Konsortium weitere Datenbanken und Repositorien in Fragen der Interoperabilität und ermutigt sie, sich an der Entwicklung von NFDI4Chem Standards und Schnittstellen zu beteiligen.
-Bitte beachten Sie: Es steht Ihnen frei, Ihren Datensatz für das NFDI4Chem-[Umfrageformular] (https://docs.google.com/forms/d/e/1FAIpQLSdd_4oNSM0Q4epJwxNU5zthL_0JroGSYl4ILMLR0G1Xo9YbRw/viewform) zu verpfänden. Sie erhalten Unterstützung in Form eines Beratungsdienstes oder einer intensiveren Datenverwaltung, um die Veröffentlichung Ihrer Forschungsdaten zu erleichtern. Es wird auch ein geeignetes Repositorium vorgeschlagen.
+Darüber hinaus unterstützt das Konsortium weitere Datenbanken und Repositorien in Fragen der Interoperabilität und ermutigt sie, sich an der Entwicklung von NFDI4Chem Standards und Schnittstellen zu beteiligen. 
+
+:::danger Notice: 
+These lists will be continuously updated with further recommendations on trusted and chemistry-friendly repositories.
+:::
+
+Further details of the repositories listed above is provided in the following sections.
 
 ## Mapping Matrix Daten-Repositorium
 
-Dank der Ergebnisse der [Umfrage] (https://doi.org/10.1002/zaac.202000339) des NFDI4Chem-Konsortiums (im Jahr 2020) und der vom TA3-Team durchgeführten Interviews mit den Leitern der Repositorien konnte eine Liste der in dieser Gemeinschaft am häufigsten verwendeten Datentypen und -formate erstellt werden, die in Tabelle 1 aufgeführt ist.
-Tabelle 1 zeigt, welche Datentypen in der Chemiegemeinschaft am häufigsten gesammelt werden, und gibt Hinweise darauf, welches Repositorium sich am besten für die Speicherung Ihres spezifischen Datentyps eignet. Die Empfehlungen in Tabelle 1 helfen Ihnen bei der effizienten und schnellen Auswahl des besten Repositoriums für die Speicherung Ihrer Daten. Die Auswahl der am besten geeigneten Datenbank kann sich erheblich auf die Auffindbarkeit und Zitierfähigkeit der Daten sowie auf die Sichtbarkeit des Wissenschaftlers auswirken.
+Dank der Ergebnisse der [Umfrage] \(https://doi.org/10.1002/zaac.202000339) des NFDI4Chem-Konsortiums (im Jahr 2020) und der vom TA3-Team durchgeführten Interviews mit den Leitern der Repositorien konnte eine Liste der in dieser Gemeinschaft am häufigsten verwendeten Datentypen und -formate erstellt werden, die in Tabelle 1 aufgeführt ist. Tabelle 1 zeigt, welche Datentypen in der Chemiegemeinschaft am häufigsten gesammelt werden, und gibt Hinweise darauf, welches Repositorium sich am besten für die Speicherung Ihres spezifischen Datentyps eignet. Table 1 is also visualised in the following figure:
+
+<img align="center" src={useBaseUrl('/img/data_pub/RADAR4Chem_RepoTrack_ CM3.5_fixed.svg')} alt="" width="100%" />
+
+The recommendations provided in Table 1 will guide you to efficiently and quickly select the best repository for the storage of your data. Selection of the most appropriate database can have a significant impact on the findability and citability of the data as well as the visibility of the scientist.
 
 **Tabelle 1: Datentypen und -formate in der NFDI4Chem-Gemeinschaft **.
 
-| Datentyp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Datenformat                                                                                                                                               | Vorgeschlagenes Repositorium                              | Kriterien für die Auswahl                  |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- | :----------------------------------------- |
-| Kernspinresonanz                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Bruker-Format (zip), jcamp-dx                                                                                                                             | [Chemotion](https://www.chemotion-repository.net/welcome) | Grundlegende Prüfungen bestanden, Kuration |
-| Nuclear Magnetic Resonance (Bruker-Format), JOEL-Format NMReData, nmrML, ISA JSON [nmrXiv](https://docs.nmrxiv.org/)                                                                                                                                                                                                                                                                                                                                                                                                                     | Validierungen / Mindeststandards für die Berichterstattung über Informationen                                                                             |
-| Moleküle und ihre Eigenschaften, Identifizierung, Reaktionen und experimentelle Untersuchungen Massenspektrometrie: jcamp-dx, MzMl, MzXML (offen, visualisierbar und verarbeitbar), RAW für ausgewählte Massendatenarten (verarbeitet und konvertiert in JCAMP-dx), IR und Raman: jcamp-dx, XRD: jcamp-dx, UV-VIS: jcamp-dx, Zyklische Voltammetrie: jcamd-dx. \*Das Repositorium von Chemotion bietet die Möglichkeit, Daten aus verschiedenen Dateiformaten in jcamp-dx zu konvertieren.(https://www.chemotion-repository.net/welcome) | Passing basic checks, curation                                                                                                                            |
-| Anorganische Kristallstrukturen: Crystallographic Information File (CIF)                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | [ICSD](https://icsd.fiz-karlsruhe.de/)                                                                                                                    | Kristallstrukturdaten verfügbar                           |
-| Organische und metallorganische Kristallstrukturen: Crystallographic Information File (CIF), aber auch andere unterstützende Dateiformate werden akzeptiert.[CSD](https://www.ccdc.cam.ac.uk/structures/)                                                                                                                                                                                                                                                                                                                                | Zellparameter (Einkristall), vollständige Koordinaten (Pulver), im CIF-Format                                                                             |
-| Organische, anorganische und metallorganische Kristallstrukturdaten, in erster Linie Crystallographic Information File (CIF), aber auch andere unterstützende Dateiformate werden akzeptiert [joint CCDC/FIZ Access Structures ServiceD](https://www.ccdc.cam.ac.uk/structures//)                                                                                                                                                                                                                                                        | Mindestens eine CIF-Datei muss in der Einreichung enthalten sein und Strukturfaktordaten für alle Strukturen sollten (wenn möglich) bereitgestellt werden |
-| Simulation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | [50 unterstützte Codes](https://nomad-lab.eu/prod/v1/gui/about/information)                                                                               | [NOMAD](https://nomad-lab.eu/)                            | Simulationsdaten Erkennung beim Upload     |
-| Generische Daten aus allen Disziplinen der Chemie, alle Daten, die nicht in die disziplinären Repositorien passen, formatunabhängig[RADAR4Chem](https://www.radar-service.eu/de)                                                                                                                                                                                                                                                                                                                                                         | Validierung gegen MD-Schema                                                                                                                               |
-| Enzymkinetikdaten (derzeit keine) [STRENDA DB](https://www.beilstein-strenda-db.org/strenda//)                                                                                                                                                                                                                                                                                                                                                                                                                                           | Keine; STRENDA-konforme, begutachtete Datenpublikation                                                                                                    |
-| Inter- und supramolekulare Wechselwirkungen molekularer Systeme JSON (DataCite), CDX\* (für 2D/3D-Molekülstruktur), PNG, proprietäre Formate [Suprabank](https://suprabank.org/)                                                                                                                                                                                                                                                                                                                                                         | Unbeurteilte Plausibilität                                                                                                                                |
+| Datentyp                                                                                                                                                                         | Datenformat                                                                                                                                                                                                                                                                                                                                                                                                                           | Vorgeschlagenes Repositorium                                           | Kriterien für die Auswahl                                                                                                                                 |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nuclear Magnetic Resonance                                                                                                                                                       | Bruker-Format (zip), jcamp-dx                                                                                                                                                                                                                                                                                                                                                                                                         | [Chemotion](https://www.chemotion-repository.net/welcome)              | Passing basic checks, curation                                                                                                                            |
+| Nuclear Magnetic Resonance                                                                                                                                                       | Nuclear Magnetic Resonance (Bruker-Format), JOEL-Format NMReData, nmrML, ISA JSON [nmrXiv](https://docs.nmrxiv.org/)                                                                                                                                                                                                                                                                                                                  | [Chemotion Repositorium](https://www.chemotion-repository.net/welcome) | Validierungen / Mindeststandards für die Berichterstattung über Informationen                                                                             |
+| Molecules and their properties, identification, reactions and experimental investigations                                                                                        | **Akzeptierte Datentypen:** Massenspektrometrie: jcamp-dx, MzMl, MzXML (offen, visualisierbar und bearbeitbar), RAW für ausgewählte Massendaten (bearbeitet und konvertiert in JCAMP-dx), NMR: Bruker-Format (zip) und jcamp-dx, IR und Raman: jcamp-dx, XRD: jcamp-dx, UV-VIS: jcamp-dx, Zyklische Voltammetrie: jcamd-dx. Chemotion Repo bietet die Möglichkeit, Daten aus verschiedenen Dateiformaten in jcamp-dx zu konvertieren. | [Chemotion](https://www.chemotion-repository.net/welcome)              | Passing basic checks, curation                                                                                                                            |
+| Kernspinresonanz                                                                                                                                                                 | Anorganische Kristallstrukturen: Crystallographic Information File (CIF)                                                                                                                                                                                                                                                                                                                                                              | [ICSD](https://icsd.fiz-karlsruhe.de/)                                 | Kristallstrukturdaten verfügbar                                                                                                                           |
+| Organic and metal-organic crystal structures                                                                                                                                     | Organische und metallorganische Kristallstrukturen: Crystallographic Information File (CIF), aber auch andere unterstützende Dateiformate werden akzeptiert.[CSD](https://www.ccdc.cam.ac.uk/structures/)                                                                                                                                                                                                                             | [MassBank EU](https://massbank.eu/MassBank/)                           | Zellparameter (Einkristall), vollständige Koordinaten (Pulver), im CIF-Format                                                                             |
+| Organic, inorganic and metal-organic crystal structure data                                                                                                                      | Organische, anorganische und metallorganische Kristallstrukturdaten, in erster Linie Crystallographic Information File (CIF), aber auch andere unterstützende Dateiformate werden akzeptiert [joint CCDC/FIZ Access Structures ServiceD](https://www.ccdc.cam.ac.uk/structures//)                                                                                                                                                     | Gemeinsamer CCDC/FIZ-Zugangsstrukturservice Kurzstatistiken:           | Mindestens eine CIF-Datei muss in der Einreichung enthalten sein und Strukturfaktordaten für alle Strukturen sollten (wenn möglich) bereitgestellt werden |
+| Simulation                                                                                                                                                                       | [50 unterstützte Codes](https://nomad-lab.eu/prod/v1/gui/about/information)                                                                                                                                                                                                                                                                                                                                                           | [NOMAD](https://nomad-lab.eu/)                                         | Simulationsdaten Erkennung beim Upload                                                                                                                    |
+| Generische Daten aus allen Disziplinen der Chemie, alle Daten, die nicht in die disziplinären Repositorien passen, formatunabhängig[RADAR4Chem](https://www.radar-service.eu/de) | format-independent                                                                                                                                                                                                                                                                                                                                                                                                                    | [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/)               | Validierung gegen MD-Schema                                                                                                                               |
+| Enzyme kinetics data                                                                                                                                                             | currently none                                                                                                                                                                                                                                                                                                                                                                                                                        | [STRENDA DB](https://www.beilstein-strenda-db.org/)                    | Keine; STRENDA-konforme, begutachtete Datenpublikation                                                                                                    |
+| Intermolecular and supramolecular interactions of molecular systems                                                                                                              | Inter- und supramolekulare Wechselwirkungen molekularer Systeme JSON (DataCite), CDX\* (für 2D/3D-Molekülstruktur), PNG, proprietäre Formate [Suprabank](https://suprabank.org/)                                                                                                                                                                                                                                                      | [SUPRABANK](https://suprabank.org/)                                    | Unbeurteilte Plausibilität                                                                                                                                |
 
 ## Zusammenfassung der Repositorien
 
-Eine Zusammenfassung mit den wichtigsten Informationen zu jedem Repositorium finden Sie im folgenden Abschnitt:
+A summary from our survey and interviews with repository operators, including the most relevant information for each repository, is reported in the following section.
 
 ### Chemotion - Repositorium für Moleküle und Forschungsdaten
 
-Kurzstatistiken:
+Quick stats:
 
-- **Akzeptierte Datentypen:** Massenspektrometrie: jcamp-dx, MzMl, MzXML (offen, visualisierbar und bearbeitbar), RAW für ausgewählte Massendaten (bearbeitet und konvertiert in JCAMP-dx), NMR: Bruker-Format (zip) und jcamp-dx, IR und Raman: jcamp-dx, XRD: jcamp-dx, UV-VIS: jcamp-dx, Zyklische Voltammetrie: jcamd-dx.
-  Chemotion Repo bietet die Möglichkeit, Daten aus verschiedenen Dateiformaten in jcamp-dx zu konvertieren.
-- **Verwendete Standards/Ontologien:** [DataCite Metadata Schema](https://schema.datacite.org/), InChI, SMILES, molfile V2000 und V3000 [CHMO Ontology](http://www.ontobee.org/ontology/CHMO), [RXNO Ontology](http://www.ontobee.org/ontology/RXNO)
-- **Zugangsrechte/Lizenzinformationen/Embargo:** CC0, CCBY, CCBY-SA; Embargo für Public Domain möglich (unbegrenzt)
-- **Empfohlen von Fachzeitschriften/Gesellschaften:** in Arbeit
+-   Moleküle und ihre Eigenschaften, Identifizierung, Reaktionen und experimentelle Untersuchungen Massenspektrometrie: jcamp-dx, MzMl, MzXML (offen, visualisierbar und verarbeitbar), RAW für ausgewählte Massendatenarten (verarbeitet und konvertiert in JCAMP-dx), IR und Raman: jcamp-dx, XRD: jcamp-dx, UV-VIS: jcamp-dx, Zyklische Voltammetrie: jcamd-dx. 
+    \*Das Repositorium von Chemotion bietet die Möglichkeit, Daten aus verschiedenen Dateiformaten in jcamp-dx zu konvertieren.(https://www.chemotion-repository.net/welcome)
+-   **Verwendete Standards/Ontologien:** [DataCite Metadata Schema](https://schema.datacite.org/), InChI, SMILES, molfile V2000 und V3000 [CHMO Ontology](http://www.ontobee.org/ontology/CHMO), [RXNO Ontology](http://www.ontobee.org/ontology/RXNO)
+-   **Zugangsrechte/Lizenzinformationen/Embargo:** CC0, CCBY, CCBY-SA; Embargo für Public Domain möglich (unbegrenzt)
+-   **Empfehlung von Fachzeitschriften/Gesellschaften:** noch nicht
 
 <details>
   <summary>Klicken Sie, um mehr Details über Chemotion zu erfahren!</summary>
@@ -83,7 +102,7 @@ Kurzstatistiken:
  
 Das Chemotion Repositorium umfasst Forschungsdaten, die Molekülen, deren Eigenschaften und Charakterisierung sowie Reaktionen und experimentellen Untersuchungen zugeordnet sind. Es wird am Karlsruher Institut für Technologie (KIT) gehostet und von mehreren Gruppen in Deutschland und darüber hinaus genutzt. Wissenschaftler im Bereich der molekularen und synthetischen Chemie werden in ihrem Bemühen um einen FAIRen Umgang mit Daten unterstützt: Die Daten werden entsprechend der gängigen Praxis der Wissenschaftler, die Molekülen und Reaktionen zugeordnet sind, gespeichert und das System stellt die erforderlichen <a href="https://www.doi.org/">Digital Object Identifier</a> (DOIs) ohne zusätzlichen Aufwand für den Wissenschaftler bereit. Die vorgegebenen Metadaten werden durch die Implementierung von Ontologiebegriffen unterstützt. Die Suchmöglichkeiten nach Text, Struktur und Identifikatoren sorgen für die Auffindbarkeit der Daten, und die eingereichten Proben und ihre Struktur werden in PubChem referenziert, um eine höhere Sichtbarkeit der Arbeit für die Wissenschaftler zu erreichen. The Repositorium ist interoperabel mit dem Chemotion ELN, was bedeutet, dass die Daten vom ELN zum Repositorium übertragen werden können. Daten werden sorgfältig ausgesucht von <a href="https://www.chemotion-repository.net/home/howto/c40fdb44-8854-46bf-88b3-cc9d6adc3543">automatic checks</a> sowie einem durch eine gegenseitige Begutachtung. Die Einbindung der im Repositorium gespeicherten Daten in Veröffentlichungen wurde anhand mehrerer Beispiele gezeigt, und seine Verwendung wird derzeit von <a href="https://chemistry-europe.onlinelibrary.wiley.com/journal/26289725">Chemiemethoden</a> empfohlen. Autoren können durch <a href="https://orcid.org/">Contributor iD</a> (ORCID iD) referenziert werden. Chemiker und Materialwissenschaftler können Daten für den offenen Zugang (Datenansicht) und den registrierten Zugang (Datensatzbeitrag und Download) veröffentlichen. Die gespeicherten Daten können nach chemischer Struktur, Autor, Datensatztyp, Status, Identifikator und DOI durchsucht werden. Die aktuelle AAI-Lösung basiert auf einer internen Benutzerverwaltung (Administrator, anonymer und registrierter Benutzer, Kurator). Die Metadaten nach DataCite entsprechen dem <a href="http://www.openarchives.org/pmh/">Open Archives Initiative Protocol for Metadata Harvesting</a> (OAI-PMH) Schema. Das Chemotion Repositorium bietet ein internes Stoffregister, einen Spektrenbetrachter (ChemSpectra), einen Struktureditor (Ketcher) und einen eigenen Datenkonverter.
 
-Bitte beachten Sie: Das Chemotion Repositorium akzeptiert alle Datentypen, aber nur wenige davon können in den Viewern verarbeitet und bearbeitet werden.
+Bitte beachten Sie: Das Chemotion Repositorium akzeptiert alle Datentypen, aber nur wenige davon können in den Viewern verarbeitet und bearbeitet werden. 
 
 </details>
 
@@ -91,19 +110,17 @@ Bitte beachten Sie: Das Chemotion Repositorium akzeptiert alle Datentypen, aber 
 
 Quick stats:
 
-- **Akzeptierte Datentypen:** MassBank-Format
-- **Verwendete Standards/Ontologien:** [Internal MassBank Record Format](https://github.com/MassBank/MassBank-web/blob/main/Documentation/MassBankRecordFormat.md)
-- **Zugangsrechte/Lizenzinformationen/Embargo:** Urheberrecht; individuelle Lizenzen basierend auf [creative commons](https://creativecommons.org/); kein Embargo
-- **Empfohlen von Fachzeitschriften/Gesellschaften:** in Arbeitoffizielle Datenbank der [Mass Spectrometry Society of Japan](https://www.mssj.jp/index_en.html)
+-   **Akzeptierte Datentypen:** MassBank-Format
+-   **Verwendete Standards/Ontologien:** [Internal MassBank Record Format](https://github.com/MassBank/MassBank-web/blob/main/Documentation/MassBankRecordFormat.md) 
+-   **Zugangsrechte/Lizenzinformationen/Embargo:** Urheberrecht; individuelle Lizenzen basierend auf [creative commons](https://creativecommons.org/); kein Embargo
+-   **Empfohlen von Fachzeitschriften/Gesellschaften:** in Arbeitoffizielle Datenbank der [Mass Spectrometry Society of Japan](https://www.mssj.jp/index_en.html)
 
 <details>
 	<summary>
-		Klicken Sie, um weitere Details über MassBank EU zu erfahren!
-	</summary>
+		Klicken Sie, um weitere Details über MassBank EU zu erfahren! </summary>
 	<h3>MassBank EU - Hochwertige Massenspektraldatenbank</h3>
 	Die MassBank EU ist das erste öffentliche Repositorium für Massenspektraldaten
-	zur gemeinsamen Nutzung durch die wissenschaftliche Forschungsgemeinschaft.
-	Die Zielgruppen in den Bereichen Chemie und Biowissenschaften sind analytische
+	zur gemeinsamen Nutzung durch die wissenschaftliche Forschungsgemeinschaft. Die Zielgruppen in den Bereichen Chemie und Biowissenschaften sind analytische
 	Chemiker, Metabolomiker, Biochemiker und Bioinformatiker. Ihre Datensätze von
 	Community-Benutzern und -Projekten sind offen zugänglich und stellen die
 	offizielle Datenbank der{" "}
@@ -119,7 +136,7 @@ Quick stats:
 		MassBank Record Validator
 	</a>
 	.Die Datensätze können nach Verbindungs- und Massenspektrometriedaten und
-	Peaks durchsucht werden. MassBank Record ID (Accession) und USI (Universal
+	Peaks durchsucht werden. The datasets can be searched for compound and mass spectrometry information and peaks. MassBank Record ID (Accession) und USI (Universal
 	Spectrum Identifier) werden als dauerhafte Bezeichnungssysteme verwendet. Die
 	MassBank EU-Spektraldaten werden in einem Revisionskontrollsystem gehostet, in
 	dem alle Spektraldaten und die entsprechenden Metadaten in einem für den
@@ -127,20 +144,20 @@ Quick stats:
 	Integration (CI) die Integrität der Datensätze bei jeder Änderung überprüft.
 	Instanzen des Webinterfaces werden am UFZ und am Leibniz-Institut für
 	Pflanzenbiochemie (IPB) (Halle) gehostet, können aber auch lokal installiert
-	werden. Diese bieten Schnittstellen für den Datenimport über Git (MassBank
+	werden. Instances of the web interface are hosted at Helmholtz Centre for Environmental Research (UFZ) (Leipzig) and Leibniz Institute of Plant Biochemistry (IPB) (Halle) and can be installed locally as well. Diese bieten Schnittstellen für den Datenimport über Git (MassBank
 	Record Format) und für den Datenexport (JSON-LD) sowie eine REST-API. Darüber
 	hinaus wird <a href="https://github.com/MassBank/RMassBank">RMassBank</a> als
-	eigenständiges Datenverarbeitungs-/Analysetool bereitgestellt.
+	eigenständiges Datenverarbeitungs-/Analysetool bereitgestellt. </details> 
 </details>
 
 ### RADAR4Chem - Forschungsdaten Repositorium
 
 Quick stats:
 
-- **Akzeptierte Datentypen:** Alle Datentypen/Formate ([Formatempfehlungen](https://radar.products.fiz-karlsruhe.de/en/radarabout/dateiformate) vorhanden)
-- **Verwendete Standards/Ontologien:** [RADAR Metadata Schema](https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema) (basierend auf DataCite Metadata Schema 4.0), Dublin Core, schema.org
-- **Zugangsrechte/Lizenzinformationen/Embargo:** Allgemeine Geschäftsbedingungen für [Datenanbieter](https://radar.products.fiz-karlsruhe.de/sites/default/files/radar/docs/License_and_User_Instructions_for_Data_Providers_RADAR4Chem.pdf) und [Datennutzer](https://radar.products.fiz-karlsruhe.de/sites/default/files/radar/docs/RADAR_Terms_for_Data_Users.pdf), obligatorische Lizenzen für Datensätze (z. B. Creative Commons), Embargofrist (1-12 Monate)
-- **Empfehlung von Fachzeitschriften/Gesellschaften:** noch nicht
+-   **Akzeptierte Datentypen:** Alle Datentypen/Formate ([Formatempfehlungen](https://radar.products.fiz-karlsruhe.de/en/radarabout/dateiformate) vorhanden)
+-   **Verwendete Standards/Ontologien:** [RADAR Metadata Schema](https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema) (basierend auf DataCite Metadata Schema 4.0), Dublin Core, schema.org
+-   **Zugangsrechte/Lizenzinformationen/Embargo:** Allgemeine Geschäftsbedingungen für [Datenanbieter](https://radar.products.fiz-karlsruhe.de/sites/default/files/radar/docs/License_and_User_Instructions_for_Data_Providers_RADAR4Chem.pdf) und [Datennutzer](https://radar.products.fiz-karlsruhe.de/sites/default/files/radar/docs/RADAR_Terms_for_Data_Users.pdf), obligatorische Lizenzen für Datensätze (z. B. Creative Commons), Embargofrist (1-12 Monate)
+-   **Empfohlen von Zeitschriften/Gesellschaften:** noch nicht
 
 <details>
   <summary>Klicken Sie, um weitere Details über RADAR4Chem zu erfahren!</summary>
@@ -150,27 +167,26 @@ Quick stats:
 RADAR4Chem ist ein generisches Repositorium für die Veröffentlichung von Forschungsdaten aus allen Disziplinen der Chemie. Es wurde 2022 eingerichtet und wird bei FIZ Karlsruhe - Leibniz-Institut für Informationsinfrastruktur gehostet. 
 Radar4Chem basiert auf dem etablierten Forschungsdaten-Repositorium RADAR Cloud. RADAR Cloud wird vor allem von akademischen Einrichtungen für das institutionelle Forschungsdatenmanagement (Datenarchivierung und -publikation) genutzt. Die Nutzung von RADAR Cloud ist kostenpflichtig und bedarf einer vertraglichen Vereinbarung. 
 RADAR4Chem, hingegen, richtet sich ausschließlich an Forscher im Bereich der Chemie an öffentlich geförderten Forschungseinrichtungen und Hochschulen in Deutschland. Es ist kein Vertrag erforderlich und es werden keine Gebühren erhoben. RADAR4Chem ermöglicht die disziplin- und formatunabhängige Veröffentlichung und Speicherung (mindestens 25 Jahre) von Forschungsdaten aus allen Disziplinen der Chemie. Es dient als Catch-All Repositorium, das das bereits bestehende Portfolio an disziplinspezifischen Repositorien ergänzt und ist z.B. ideal geeignet für disziplinübergreifende Daten oder Datensätze mit einer Vielzahl unterschiedlicher Datenformate. RADAR4Chem ist einfach und niedrigschwellig zu nutzen. Die Forscher sind für das Hochladen, Organisieren, Annotieren und Kuratieren der Forschungsdaten sowie für den Peer-Review-Prozess (als optionaler Schritt) und schließlich deren Veröffentlichung verantwortlich. Die Nutzung des Dienstes erfordert eine <a href="https://www.nfdi4chem.de/index.php/2650-2/">Beratung durch FIZ Karlsruhe</a>, eine Registrierung bei RADAR4Chem und die Einwilligung in die <a href=" https://radar.products.fiz-karlsruhe.de/sites/default/files/radar/docs/License_and_User_Instructions_for_Data_Providers_RADAR4Chem.pdf">RADAR4Chem Lizenz- und Nutzungshinweise</a>.
-Die Authentifizierung wird nach der Selbstregistrierung und über <a href="https://doku.tid.dfn.de/en:dfnaai:start">DFN-AAI</a> (<a href="https://) unterstützt. www.incommon.org/software/shibboleth/">Shibboleth</a>).Metadaten werden mit dem internen <a href="https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema">RADAR Metadata Schema</a> (basierend auf <a href="https://schema.datacite.org/">DataCite Metadata Schema 4.0</a>) erfasst, das 10 obligatorische und 13 optionale Metadatenfelder unterstützt. Anmerkungen können auf der Ebene des Datensatzes und auf der Ebene der einzelnen Dateien und Ordner gemacht werden. Für jeden Datensatz muss eine <a href="https://radar.products.fiz-karlsruhe.de/en/radarfeatures/lizenzen-fuer-forschungsdaten">Nutzerlizenz</a> definiert werden, die die Wiederverwendung der Daten regelt. Jeder veröffentlichte Datensatz erhält einen DOI, der bei <a href="https://datacite.org/">DataCite</a> registriert wird. RADAR Metadaten verwenden eine Kombination aus kontrollierten Listen und Freitexteinträgen. Die Identifizierung des Autors wird durch die Verwendung von ORCID iD und die Identifizierung des Geldgebers durch <a href="https://www.crossref.org/pdfs/about-funder-registry.pdf">CrossRef Open Funder Registry</a> sichergestellt (weitere Schnittstellenoptionen werden in Zukunft implementiert). Datensätze können über einen "related identifier" leicht mit anderen digitalen Ressourcen (z. B. Textpublikationen) verknüpft werden. Um die Verbreitung und Auffindbarkeit der Daten zu maximieren, werden die Metadaten der veröffentlichten Datensätze in verschiedenen Formaten indexiert (z. B. RADAR und DataCite) und für das öffentliche Metadaten-Harvesting z. B. über einen <a href="https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-oai-provider">OAI-Provider</a> angeboten. Die Forschungsdaten werden dauerhaft auf Magnetbändern redundant in drei Kopien an verschiedenen Standorten im Steinbuch Centre for Computing (SCC) des Karlsruher Instituts für Technologie (KIT, 2 Kopien) und im Zentrum für Informationsdienste und Hochleistungsrechnen (ZIH) der TU Dresden (1 Kopie) gespeichert.
+Die Authentifizierung wird nach der Selbstregistrierung und über <a href="https://doku.tid.dfn.de/en:dfnaai:start">DFN-AAI</a> (<a href="https://) unterstützt. www.incommon.org/software/shibboleth/">Shibboleth</a>).Metadaten werden mit dem internen <a href="https://radar.products.fiz-karlsruhe.de/en/radarfeatures/radar-metadatenschema">RADAR Metadata Schema</a> (basierend auf <a href="https://schema.datacite.org/">DataCite Metadata Schema 4.0</a>) erfasst, das 10 obligatorische und 13 optionale Metadatenfelder unterstützt. Anmerkungen können auf der Ebene des Datensatzes und auf der Ebene der einzelnen Dateien und Ordner gemacht werden. Für jeden Datensatz muss eine <a href="https://radar.products.fiz-karlsruhe.de/en/radarfeatures/lizenzen-fuer-forschungsdaten">Nutzerlizenz</a> definiert werden, die die Wiederverwendung der Daten regelt. Jeder veröffentlichte Datensatz erhält einen DOI, der bei <a href="https://datacite.org/">DataCite</a> registriert wird. RADAR Metadaten verwenden eine Kombination aus kontrollierten Listen und Freitexteinträgen. Die Identifizierung des Autors wird durch die Verwendung von ORCID iD und die Identifizierung des Geldgebers durch <a href="https://www.crossref.org/pdfs/about-funder-registry.pdf">CrossRef Open Funder Registry</a> sichergestellt (weitere Schnittstellenoptionen werden in Zukunft implementiert). Datensätze können über einen "related identifier" leicht mit anderen digitalen Ressourcen (z. B. Textpublikationen) verknüpft werden. Um die Verbreitung und Auffindbarkeit der Daten zu maximieren, werden die Metadaten der veröffentlichten Datensätze in verschiedenen Formaten indexiert (z. B. RADAR und DataCite) und für das öffentliche Metadaten-Harvesting z. B. Die Forschungsdaten werden dauerhaft auf Magnetbändern redundant in drei Kopien an verschiedenen Standorten im Steinbuch Centre for Computing (SCC) des Karlsruher Instituts für Technologie (KIT, 2 Kopien) und im Zentrum für Informationsdienste und Hochleistungsrechnen (ZIH) der TU Dresden (1 Kopie) gespeichert.
 
-Bitte beachten Sie: Die kostenlose Nutzung von RADAR4Chem ist derzeit auf ein maximales Speichervolumen von 10 GB pro Forschungsprojekt beschränkt. Forscher aus der NFDI4Chem-Community, deren Forschungsdatenvolumen dieses kostenlose Kontingent übersteigt und die daran interessiert sind, RADAR-Funktionen institutionell zu nutzen oder Forschungsdaten zu archivieren, können einen <a href="https://radar.products.fiz-karlsruhe.de/en/radaragreementsprices/vertraege-preise">regelmäßigen RADAR-Cloud-Vertrag</a> abschließen.
+Bitte beachten Sie: Die kostenlose Nutzung von RADAR4Chem ist derzeit auf ein maximales Speichervolumen von 10 GB pro Forschungsprojekt beschränkt. Forscher aus der NFDI4Chem-Community, deren Forschungsdatenvolumen dieses kostenlose Kontingent übersteigt und die daran interessiert sind, RADAR-Funktionen institutionell zu nutzen oder Forschungsdaten zu archivieren, können einen <a href="https://radar.products.fiz-karlsruhe.de/en/radaragreementsprices/vertraege-preise">regelmäßigen RADAR-Cloud-Vertrag</a> abschließen. 
 
-RADAR soll den Zugang zu und die langfristige Verfügbarkeit von archivierten und publizierten Datensätzen nach den FAIR-Kriterien sicherstellen. Deshalb ist RADAR als generische Infrastrukturkomponente in mehreren NFDI-Konsortien vorgesehen (z. B. <a href="https://nfdi4culture.de/de/aktuelles/nachrichten/radar4culture-neuer-service-fuer-kulturgueter.html">NFDI4Culture</a> neben NFDI4Chem). Zum Zweck der Interoperabilität berücksichtigt es die von NFDI empfohlenen Datentypen und unterstützt schrittweise disziplinspezifische Metadaten.
+RADAR soll den Zugang zu und die langfristige Verfügbarkeit von archivierten und publizierten Datensätzen nach den FAIR-Kriterien sicherstellen. Deshalb ist RADAR als generische Infrastrukturkomponente in mehreren NFDI-Konsortien vorgesehen (z. B. <a href="https://nfdi4culture.de/de/aktuelles/nachrichten/radar4culture-neuer-service-fuer-kulturgueter.html">NFDI4Culture</a> neben NFDI4Chem). Zum Zweck der Interoperabilität berücksichtigt es die von NFDI empfohlenen Datentypen und unterstützt schrittweise disziplinspezifische Metadaten. 
 
 </details>
 
 ### STRENDA DB - Standards für die Berichterstattung über enzymologische Daten
 
-Kurzstatistiken:
+Quick stats:
 
-- **Akzeptierte Datentypen:** Derzeit keine, EnzymeML (in Entwicklung)
-- **Verwendete Standards/Ontologien:** DataCite, InChI, [EnzymeML (in Entwicklung)](https://enzymeml.org/)
-- **Zugangsrechte/Lizenzinformationen/Embargo:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), [Nutzungsbedingungen](https://www.beilstein-strenda-db.org/strenda/termsConditions.xhtml); kein Embargo
-- **Empfohlen von Fachzeitschriften/Gesellschaften:** [Archives in Biochemistry and Biophysics](https://www.sciencedirect.com/journal/archives-of-biochemistry-and-biophysics), [Beilstein Journal of Organic Chemistry](https://www.beilstein-journals.org/bjoc/home), [eLife](https://elifesciences.org/), [Molecular Catalysis](https://www.sciencedirect. com/journal/molecular-catalysis), [Nature](https://www.nature.com/) (einschließlich Biotechnologie, Chemie, Mikrobiologie, Pharmakologie, Systembiologie), [PLoS](https://plos.org/) (relevante Zeitschriften, z. B. One, Biology, Computational Biology, Medicine), [Scientific Data](https://www.nature.com/sdata/), [The Journal of Biological Chemistry](https://www.jbc.org/)
+-   **Akzeptierte Datentypen:** Derzeit keine, EnzymeML (in Entwicklung)
+-   **Verwendete Standards/Ontologien:** DataCite, InChI, [EnzymeML (in Entwicklung)](https://enzymeml.org/)
+-   **Zugangsrechte/Lizenzinformationen/Embargo:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), [Nutzungsbedingungen](https://www.beilstein-strenda-db.org/strenda/termsConditions.xhtml); kein Embargo
+-   **Empfohlen von Fachzeitschriften/Gesellschaften:** [Archives in Biochemistry and Biophysics](https://www.sciencedirect.com/journal/archives-of-biochemistry-and-biophysics), [Beilstein Journal of Organic Chemistry](https://www.beilstein-journals.org/bjoc/home), [eLife](https://elifesciences.org/), [Molecular Catalysis]\(https://www.sciencedirect. com/journal/molecular-catalysis), [Nature](https://www.nature.com/) (einschließlich Biotechnologie, Chemie, Mikrobiologie, Pharmakologie, Systembiologie), [PLoS](https://plos.org/) (relevante Zeitschriften, z. B. One, Biology, Computational Biology, Medicine), [Scientific Data](https://www.nature.com/sdata/), [The Journal of Biological Chemistry](https://www.jbc.org/)
 
 <details>
 	<summary>
-		Klicken Sie hier, um weitere Details über STRENDA DB zu erhalten!
-	</summary>
+		Klicken Sie hier, um weitere Details über STRENDA DB zu erhalten! </summary>
 	<h3>
 		STRENDA DB - Standards für die Berichterstattung über enzymologische Daten
 	</h3>
@@ -194,17 +210,17 @@ Kurzstatistiken:
 	Autoren verwendet. Die Einsicht in die Daten ist über Open Access möglich und
 	die Einbringung von Daten ist nach einer erforderlichen Registrierung möglich,
 	wobei die aktuelle AAI über eine interne Benutzerverwaltung (User,
-	Administrator) zur Verfügung gestellt wird.
+	Administrator) zur Verfügung gestellt wird. 
 </details>
 
 ### SupraBank
 
-Schnellstatistiken:
+Quick stats:
 
-- **Akzeptierte Datentypen:** JSON (DataCite), CDX (für 2D/3D-Molekülstruktur), PNG, proprietäre Formate
-- **Verwendete Standards/Ontologien:** DataCite 4.0, Dublin Core für Metadaten-Tags
-- **Zugangsrechte/Lizenzinformationen/Embargo:** CC-Lizenzen (CC0, BY, BY-SA), Embargo möglich (unbegrenzt)
-- **Empfohlen von Zeitschriften/Gesellschaften:** noch nicht
+-   **Akzeptierte Datentypen:** JSON (DataCite), CDX (für 2D/3D-Molekülstruktur), PNG, proprietäre Formate
+-   **Verwendete Standards/Ontologien:** DataCite 4.0, Dublin Core für Metadaten-Tags
+-   **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbestimmungen, kein Embargo
+-   **Empfohlen von Fachzeitschriften/Gesellschaften:** in Arbeit
 
 <details>
   <summary>Klicken Sie, um mehr Details über SupraBank zu erfahren!</summary>
@@ -216,28 +232,28 @@ SupraBank wird seit 2019 am KIT (Karlsruhe) betreut und ist eine kuratierte Date
 
 ### CSD, ICSD und gemeinsamer CCDC/FIZ Dienst für Zugangsstrukturen
 
-Schnellstatistiken:
+Quick stats:
 
 ICSD-Kurzstatistiken:
 
-- **Akzeptierte Datentypen:** CIF
-- **Verwendete Standards/Ontologien:** Keine
-- **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbestimmungen, kein Embargo
-- **Empfohlen von Zeitschriften/Gesellschaften:** Liste der [80 wichtigsten Zeitschriften](https://icsd.products.fiz-karlsruhe.de/about/list-80-most-important-journals-covered-icsd), die von ICSD abgedeckt werden
+-   **Akzeptierte Datentypen:** CIF 
+-   **Verwendete Standards/Ontologien:** Keine
+-   **Zugangsrechte/Lizenzinformationen/Embargo:** CC-Lizenzen (CC0, BY, BY-SA), Embargo möglich (unbegrenzt)
+-   **Empfohlen von Zeitschriften/Gesellschaften:** Liste der [80 wichtigsten Zeitschriften](https://icsd.products.fiz-karlsruhe.de/about/list-80-most-important-journals-covered-icsd), die von ICSD abgedeckt werden
 
 CSD-Kurzstatistiken:
 
-- **Akzeptierte Datentypen:** hauptsächlich CIF, aber auch andere unterstützende Dateiformate werden akzeptiert
-- **Verwendete Standards/Ontologien:** CIF, DataCite
-- **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbedingungen, Datenembargo, bis ein zugehöriger Artikel veröffentlicht wird oder ein Forscher die Veröffentlichung veranlasst
-- **Empfohlen von Fachzeitschriften/Gesellschaften:** IUCr, Royal Society of Chemistry, American Chemical Society, Wiley, Elsevier, Springer Nature, Taylor & Francis, Hindawi, Chemical Society of Japan
+-   **Akzeptierte Datentypen:** hauptsächlich CIF, aber auch andere unterstützende Dateiformate werden akzeptiert 
+-   **Verwendete Standards/Ontologien:** CIF, DataCite
+-   **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbedingungen, Datenembargo, bis ein zugehöriger Artikel veröffentlicht wird oder ein Forscher die Veröffentlichung veranlasst
+-   **Empfohlen von Fachzeitschriften/Gesellschaften:** IUCr, Royal Society of Chemistry, American Chemical Society, Wiley, Elsevier, Springer Nature, Taylor & Francis, Hindawi, Chemical Society of Japan
 
-Gemeinsamer CCDC/FIZ-Zugangsstrukturservice Kurzstatistiken:
+Schnellstatistiken:
 
-- **Akzeptierte Datentypen:** hauptsächlich CIF, aber auch andere unterstützende Dateiformate werden akzeptiert.
-- **Verwendete Standards/Ontologien:** CIF, DataCite
-- **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbedingungen, Daten unter Embargo, bis ein zugehöriger Artikel veröffentlicht wird oder der Forscher die Veröffentlichung auslöst
-- **Empfohlen von Fachzeitschriften/Gesellschaften:** IUCr, Royal Society of Chemistry, American Chemical Society, Wiley, Elsevier, Springer Nature, Taylor & Francis, Hindawi, Chemical Society of Japan
+-   **Akzeptierte Datentypen:** hauptsächlich CIF, aber auch andere unterstützende Dateiformate werden akzeptiert. 
+-   **Verwendete Standards/Ontologien:** CIF, DataCite
+-   **Zugriffsrechte/Lizenzinformationen/Embargo:** Nutzungsbedingungen, Daten unter Embargo, bis ein zugehöriger Artikel veröffentlicht wird oder der Forscher die Veröffentlichung auslöst
+-   **Empfohlen von Fachzeitschriften/Gesellschaften:** IUCr, Royal Society of Chemistry, American Chemical Society, Wiley, Elsevier, Springer Nature, Taylor & Francis, Hindawi, Chemical Society of Japan
 
 <details>
   <summary>Klicken Sie hier, um weitere Details über CSD, ICSD und den gemeinsamen CCDC/FIZ Access Structures Service zu erfahren!</summary>
@@ -245,18 +261,21 @@ Gemeinsamer CCDC/FIZ-Zugangsstrukturservice Kurzstatistiken:
 <h3>CSD, ICSD und gemeinsamer CCDC/FIZ-Zugangsstrukturservice</h3>
  
 Die <a href="https://icsd.fiz-karlsruhe.de/">Inorganische Kristallstrukturdatenbank</a> (ICSD) von <a href="https://www.fiz-karlsruhe.de/">FIZ Karlsruhe</a> ist die weltweit größte Datenbank mit vollständig identifizierten anorganischen Kristallstrukturen. Es beinhaltet über 260.000 datenbanken. Ergänzend bietet das CCDC die <a href="https://www.ccdc.cam.ac.uk/structures/">Cambridge Structural Database</a> (CSD), eine <a href="https://www.coretrustseal.org/">zertifizierte vertrauenswürdige</a> Datenbank mit vollständig kuratierten und erweiterten organischen und metallorganischen Kristallstrukturen. Sie wurde vor über fünfzig Jahren eingerichtet und enthält heute über eine Million Einträge. Die ICSD und CSD unterstützen Wissenschaftler aus den Bereichen Kristallographie, Chemie, Materialwissenschaft, Physik und Strukturbiologie. Der <a href="https://www.ccdc.cam.ac.uk/structures/">gemeinsame CCDC/FIZ Access Structures Service</a>, der 2018 ins Leben gerufen wurde, dient dazu, Strukturdaten von anorganischen kristallinen Verbindungen kostenlos zu hinterlegen, zu registrieren und zu erhalten. Kristallstrukturen, die in wissenschaftlichen Publikationen erwähnt werden, werden im Kristallstrukturdepot gespeichert. Bei der Hinterlegung wird jedem Datensatz ein Digital Object Identifier (DOI) zugewiesen, damit die Kristallstruktur eindeutig identifiziert und registriert werden kann. Der DOI ermöglicht es Dritten, die Daten gemäß den Regeln der guten wissenschaftlichen Praxis zu zitieren und zu referenzieren.
+
 Beide Institutionen sind weltweit führende Experten auf dem Gebiet der Strukturdaten. Ihre Datenbanken enthalten zusammen alle veröffentlichten organischen, metallorganischen und anorganischen Kristallstrukturen und sind wichtige Ressourcen für die Strukturchemie. Jeder Datensatz muss strenge Qualitätskontrollen durchlaufen und wird von wissenschaftlichen Experten manuell kuratiert. Diese reichhaltigen, qualitativ hochwertigen Datenressourcen sowie die von den beiden Institutionen bereitgestellte fortschrittliche Software ermöglichen es Wissenschaftlern aus Industrie und Hochschule, neue Erkenntnisse aus den Daten zu gewinnen und neue wissenschaftliche Trends zu entdecken. Forscher in der Strukturchemie verlassen sich auf die Daten, sie sind für die Industrie relevant und werden genutzt, um neuen Generationen von Wissenschaftlern chemische Konzepte zu vermitteln. Insgesamt sind die lizenzierten Datenbanken in über 1 300 Einrichtungen weltweit installiert.
+
 Bevor Daten hinterlegt werden können, muss man sich bei ICSD registrieren, wenn CSD geöffnet ist. Der <a href="https://www.ccdc.cam.ac.uk/structures/">gemeinsame CCDC/FIZ-Zugangsstrukturservice ist offen</a> gemeinsame CCDC/FIZ-Zugangsstrukturservice ist offen für die Hinterlegung von Daten und alle Datensätze sind auf individueller Basis frei verfügbar. Zudem können sich Forscher registrieren, eine Registrierung ist jedoch nicht erforderlich, um Daten zu hinterlegen oder abzurufen. Die DOIs sind in beiden Fällen mit den entsprechenden Veröffentlichungen verknüpft. Die CIF (Crystallographic Information Framework) sind die Metadatenstandards und der akzeptierte Datentyp. Der gemeinsame CCDC/FIZ Access Structures Service und CSD sind CoreTrustSeal-zertifiziert.
+
 </details>
 
 ### NOMAD
 
 Quick stats:
 
-- **Akzeptierte Datentypen:** [50 unterstützte Codes](https://nomad-lab.eu/prod/v1/gui/about/information)
-- **Verwendete Standards/Ontologien:** DataCite; derzeit keine Ontologie (geplant ist die Erstellung von Ontologien für bestimmte Teile der Daten)
-- **Zugriffsrechte/Lizenzinformationen/Embargo:** CC BY 4.0; Embargos bis zu 3 Jahren definierbar
-- **Empfohlen von Zeitschriften/Gesellschaften:** Das Repositorium wird empfohlen von [Scientific Data](https://www.nature.com/sdata/policies/repositories#materials)
+-   **Akzeptierte Datentypen:** [50 unterstützte Codes](https://nomad-lab.eu/prod/v1/gui/about/information)
+-   **Verwendete Standards/Ontologien:** DataCite; derzeit keine Ontologie (geplant ist die Erstellung von Ontologien für bestimmte Teile der Daten)
+-   **Zugriffsrechte/Lizenzinformationen/Embargo:** CC BY 4.0; Embargos bis zu 3 Jahren definierbar
+-   **Empfohlen von Zeitschriften/Gesellschaften:** Das Repositorium wird empfohlen von [Scientific Data](https://www.nature.com/sdata/policies/repositories#materials)
 
 <details>
 	<summary>Klicken Sie, um weitere Details über NOMAD zu erfahren!</summary>
@@ -275,5 +294,9 @@ Quick stats:
 	<a href="https://www.nature.com/sdata/policies/repositories#materials">
 		Scientific Data
 	</a>{" "}
-	der Verlagsgruppe Nature empfohlen.
+	der Verlagsgruppe Nature empfohlen. 
 </details>
+
+* * *
+
+Main author: [ORCID:0000-0001-7696-7662](https://orcid.org/0000-0001-7696-7662), [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661) and [ORCID:0000-0002-5035-7978](https://orcid.org/0000-0002-5035-7978)

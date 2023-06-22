@@ -1,12 +1,11 @@
 ---
-title: "Einführung"
-slug: "/intro"
-id: "intro"
+title: Einführung
+slug: /intro
+id: intro
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import IntroButton from '@site/src/components/IntroButton.js';
-
 
 <img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" vspace="10" hspace="10"/>
 
@@ -14,19 +13,22 @@ Die NFDI4Chem Knowledge Base bietet Informationen und Empfehlungen für die Digi
 
 Maßnahmen zur [Förderung von Open Science und Forschungsdatenmanagement](https://riojournal.com/article/55852/) in Übereinstimmung mit den FAIR-Datenprinzipien werden von alltäglichen Nutzern vorgestellt und reichen von der Planung und Umsetzung bis zur Veröffentlichung und Wiederverwendung.
 
-
 ## Warum ist FDM wichtig für die Chemie?
 
-:::danger Anmerkung:                                
-Das Forschungsdatenmanagement in der Chemie ist derzeit nicht systematisch organisiert und individuelle Lösungen einzelner Institutionen führen zu einer geringen Sichtbarkeit, Zugänglichkeit und Nutzbarkeit von Forschungsergebnissen. Der Mehrwert der Bewahrung und Erforschung wissenschaftlicher Daten in der Chemie ist besonders hoch, da die Bedeutung der Daten oft unsterblich ist und ältere Daten auch für aktuelle Untersuchungen genutzt werden können. In den meisten Fällen ist es sogar zwingend erforderlich, auf ältere Daten zugreifen zu können, da insbesondere experimentelle Daten oder komplexe Simulationsdaten nur mit großem Aufwand generiert werden können. Ein Verlust von früher gewonnenen Daten kann ein [unwiederbringlicher Wissensverlust](https://riojournal.com/article/55852/) sein .
+:::danger Anmerkung:\
+Das Forschungsdatenmanagement in der Chemie ist derzeit nicht systematisch organisiert und individuelle Lösungen einzelner Institutionen führen zu einer geringen Sichtbarkeit, Zugänglichkeit und Nutzbarkeit von Forschungsergebnissen. Der Mehrwert der Bewahrung und Erforschung wissenschaftlicher Daten in der Chemie ist besonders hoch, da die Bedeutung der Daten oft unsterblich ist und ältere Daten auch für aktuelle Untersuchungen genutzt werden können. In den meisten Fällen ist es sogar zwingend erforderlich, auf ältere Daten zugreifen zu können, da insbesondere experimentelle Daten oder komplexe Simulationsdaten nur mit großem Aufwand generiert werden können. 
 :::
 
-- Verhinderung von Datenverlusten und Datensicherheit
-- Überprüfbarkeit, Transparenz und Reproduzierbarkeit
-- schnelleres Auffinden von Daten und Informationen
-- Einsparung von Zeit und Ressourcen
-- langfristige Verfügbarkeit von Forschungsdaten 
-- Wiederverwendung der Daten in neuen Forschungsprojekten
+Die Hauptmotivationen für FDM in der Chemie sind:
+
+-   Verhinderung von Datenverlusten und Datensicherheit
+-   langfristige Verfügbarkeit von Forschungsdaten 
+-   schnelleres Auffinden von Daten und Informationen
+-   Überprüfbarkeit, Transparenz und Reproduzierbarkeit
+-   Einsparung von Zeit und Ressourcen
+-   Wiederverwendung der Daten in neuen Forschungsprojekten
+
+Ein Verlust von früher gewonnenen Daten kann ein [unwiederbringlicher Wissensverlust](https://riojournal.com/article/55852/) sein .
 
 ## Navigation durch die Knowledge Base
 
@@ -40,51 +42,26 @@ Die Domänenseiten stellen einen beispielhaften Arbeitsablauf für verschiedene 
 
 <IntroButton url={"/docs/guide"} imgUrl={"/img/nfdi4chem_Domains.svg"} text={"Domänen"} />
 
-
 ### Rollenspezifische Informationen
 
 Die Rollenseiten konzentrieren sich auf die Motivation für rollenspezifische Anforderungen und beantworten die Fragen, warum FDM wichtig ist und wie es umgesetzt werden kann. Verschaffen Sie sich einen schnellen Überblick über alle wichtigen FDM-Informationen in Bezug auf Ihre Rolle.
 
-
 <IntroButton url={"/docs/guide"} imgUrl={"/img/nfdi4chem_Roles.svg"} text={"Rollen"} />
-
 
 ### Umgang mit Daten
 
-Der Abschnitt über den Umgang mit Daten erläutert allgemeine Probleme und Herausforderungen im Zusammenhang mit FDM. Es werden problematische Aspekte des Umgangs mit Daten betrachtet, angefangen bei der Erstellung von Datenmanagementplänen, der Datenorganisation und der Datendokumentation. Auch die Speicherung und Archivierung von Daten wird behandelt. Hier finden Sie eine detaillierte Beschreibung der folgenden Aspekte:
-
-- allgemeine Grundlagen
-- formale Zuständigkeiten und organisatorische Konventionen
-- technische Umsetzungen
-- weitere Informationen und Literatur
+Der Abschnitt über den Umgang mit Daten erläutert allgemeine Probleme und Herausforderungen im Zusammenhang mit FDM. Es werden problematische Aspekte des Umgangs mit Daten betrachtet, angefangen bei der Erstellung von Datenmanagementplänen, der Datenorganisation und der Datendokumentation. Auch die Speicherung und Archivierung von Daten wird behandelt.
 
 <IntroButton url={"/docs/guide"} imgUrl={"/img/nfdi4chem_Handling_Data.svg"} text={"Umgang mit Daten"} />
-
 
 ### Smartlab
 
 Um vollständig digitalisierte Arbeitsabläufe in der Chemie zu ermöglichen, ist die Entwicklung und Bereitstellung einer modularen virtuellen Laborumgebung mit Konzepten, Diensten und Software (smartlab) unerlässlich. Elektronische Laborjournale sind ein wichtiger Bestandteil des smartlab:
 
-- konzipiert als modulare Plattform
-- Abdeckung des gesamten Datenlebenszyklus
-- Möglichkeit der Integration von Geräten und der Nutzung externer Informationsquellen 
-- nahtloser Datentransfer zu Datenrepositorien
-
 <IntroButton url={"/docs/smartlab"} imgUrl={"/img/nfdi4chem_Smartlab.svg"} text={"Smartlab"} />
-
 
 ### Datenpublikation
 
-In der Rubrik Datenveröffentlichung finden Sie alle wichtigen Informationen zum Thema Datenpublikation:
-
-- Was ist ein Repositorium und wie wähle ich ein geeignetes Repositorium aus?
-- Best Practices für das Management von Forschungsdaten 
-- Erfahren Sie mehr über Datenverfügbarkeitserklärungen
-- Warum sind maschinenlesbare chemische Strukturen sinnvoll?
+In der Rubrik Datenveröffentlichung finden Sie alle wichtigen Informationen zum Thema Datenpublikation: Dazu gehören die Motivation zur Veröffentlichung von Forschungsdaten, Wege zur Veröffentlichung von Daten, Empfehlungen für zu verwendende Repositorien für Forschungsdaten, bewährte Verfahren und Aspekte der maschinellen Verwertbarkeit.  
 
 <IntroButton url={"/docs/data_publication"} imgUrl={"/img/nfdi4chem_Data_Publication.svg"} text={"Datenpublikation"} />
-
-
-:::info Info: 
-NFDI4Chem bietet regelmäßig FDM-Workshops an. Weitere Informationen und die Möglichkeit zur Anmeldung finden Sie auf der [NFDI4Chem-Website](https://www.nfdi4chem.de/index.php/event/workshop-fair-research-data-management-basics-for-chemists/).
-:::
