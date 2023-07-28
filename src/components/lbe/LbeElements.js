@@ -22,8 +22,6 @@ function RepoButton({ name, url }) {
 // Handles text input
 
 function TextSearch({ lbeState, setLbeState, resultOutput }) {
-	console.log(lbeState);
-
 	const handleChange = (e) =>
 		setLbeState(
 			e.target.value === ""
