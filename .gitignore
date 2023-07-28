@@ -3,6 +3,8 @@
 # Production
 /build
 fonts
+# Localisation files
+/i18n
 # Generated files
 .docusaurus
 .cache-loader
