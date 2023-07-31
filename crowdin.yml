@@ -42,5 +42,5 @@ files:
       translation: "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/60_topics/62_data_formats/%original_file_name%"
     - source: "/docs/60_topics/63_data_description_annotation/*"
       translation: "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/60_topics/63_data_description_annotation/%original_file_name%"
-    - source: "/src/pages/*.(md|mdx)"
+    - source: "/src/pages/*.md*"
       translation: "/i18n/%two_letters_code%/docusaurus-plugin-content-pages/%original_file_name%"
