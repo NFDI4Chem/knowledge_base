@@ -3,14 +3,17 @@ module.exports = {
   title: 'NFDI4Chem Knowledge Base',
   tagline: 'A place for all knowledge regarding Research Data Management (RDM) in Chemistry',
   url: 'https://knowledgebase.nfdi4chem.de/',
-//  baseUrl: '/staging/knowledge_base/',
-  baseUrl: '/knowledge_base/',
+  baseUrl: '/staging/knowledge_base_matomo/',
+  // baseUrl: '/knowledge_base/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'NFDI4Chem', // Usually your GitHub org/user name.
   projectName: 'knowledge_base', // Usually your repo name.
   trailingSlash: 'true',
+  plugins: [
+    'docusaurus-plugin-matomo',
+  ],
   themeConfig: {
 //    announcementBar: {
 //      id: 'community_survey',
@@ -18,6 +21,12 @@ module.exports = {
 //        '<strong>Find out what is already possible with chemistry data today.</strong> Join us in Mainz on 6/7 June 2023 at the <a href="https://www.nfdi4chem.de/index.php/event/chemistry-data-days-2023/" target="_blank">Chemistry Data Days</a>.',
 //      isCloseable: true,
 //    },
+    matomo: {
+      matomoUrl: 'https://your.matomo.instance/',
+      siteId: 'ID',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
+    },
     navbar: {
  //     title: 'Home',
       logo: {
