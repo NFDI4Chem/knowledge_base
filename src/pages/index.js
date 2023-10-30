@@ -11,6 +11,8 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="A place for all knowledge regarding Research Data Management (RDM) in Chemistry">
+      <div id="matomo-opt-out"></div>
+      <script src="https://knowledgebase.nfdi4chem.de/matomo/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&showIntro=1"></script>
       <div className="hero">
         <div className="container hero__container">
           <div className="row">
