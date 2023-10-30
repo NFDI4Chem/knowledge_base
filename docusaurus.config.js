@@ -22,8 +22,8 @@ module.exports = {
 //      isCloseable: true,
 //    },
     matomo: {
-      matomoUrl: 'https://your.matomo.instance/',
-      siteId: 'ID',
+      matomoUrl: 'https://knowledgebase.nfdi4chem.de/matomo/',
+      siteId: '99',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
     },
