@@ -15,7 +15,7 @@
     "crowdin": "crowdin"
   },
   "dependencies": {
-    "@crowdin/cli": "^3.13.0",
+    "@crowdin/cli": "^3.15.0",
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
     "@easyops-cn/docusaurus-search-local": "^0.24.1",
