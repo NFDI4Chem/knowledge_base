@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-	title: "NFDI4Chem Knowledge Base (STAGING VERSION)",
+	title: "NFDI4Chem Knowledge Base",
 	// tagline: <Translate>A place for all knowledge regarding Research Data Management (RDM) in Chemistry</Translate>,
 	url: "https://knowledgebase.nfdi4chem.de/",
 	// baseUrl: "/staging_i18n/knowledge_base/",
