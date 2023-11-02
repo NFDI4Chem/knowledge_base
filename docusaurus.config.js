@@ -23,12 +23,6 @@ module.exports = {
 	plugins: [
 		'docusaurus-plugin-matomo',
 	],
-	matomo: {
-		matomoUrl: 'https://knowledgebase.nfdi4chem.de/matomo/',
-		siteId: '2',
-		phpLoader: 'matomo.php',
-		jsLoader: 'matomo.js',
-	},
 	themeConfig: {
 		//    announcementBar: {
 		//      id: 'community_survey',
@@ -36,6 +30,12 @@ module.exports = {
 		//        '<strong>Find out what is already possible with chemistry data today.</strong> Join us in Mainz on 6/7 June 2023 at the <a href="https://www.nfdi4chem.de/index.php/event/chemistry-data-days-2023/" target="_blank">Chemistry Data Days</a>.',
 		//      isCloseable: true,
 		//    },
+		matomo: {
+			matomoUrl: 'https://knowledgebase.nfdi4chem.de/matomo/',
+			siteId: '2',
+			phpLoader: 'matomo.php',
+			jsLoader: 'matomo.js',
+		},	
 		navbar: {
 			//     title: 'Home',
 			logo: {
