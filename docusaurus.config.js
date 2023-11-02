@@ -20,9 +20,12 @@ module.exports = {
 			},
 		},
 	},
+	plugins: [
+		'docusaurus-plugin-matomo',
+	],
 	matomo: {
 		matomoUrl: 'https://knowledgebase.nfdi4chem.de/matomo/',
-		siteId: '1',
+		siteId: '2',
 		phpLoader: 'matomo.php',
 		jsLoader: 'matomo.js',
 	},
