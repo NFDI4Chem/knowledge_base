@@ -20,6 +20,12 @@ module.exports = {
 			},
 		},
 	},
+	matomo: {
+		matomoUrl: 'https://knowledgebase.nfdi4chem.de/matomo/',
+		siteId: '1',
+		phpLoader: 'matomo.php',
+		jsLoader: 'matomo.js',
+	},
 	themeConfig: {
 		//    announcementBar: {
 		//      id: 'community_survey',
