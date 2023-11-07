@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Contribute",
+        "items": [
+            {
+                "label": "Content (GitHub)",
+                "href": "https://github.com/NFDI4Chem/knowledge_base"
+            },
+            {
+                "label": "Localisation (Crowdin)",
+                "href": "https://crowdin.com/project/nfdi4chem-knowledge-base"
+            }
+        ]
+    },
+    {
+        "title": "Resources",
+        "items": [
+            {
+                "label": "NFDI4Chem Website",
+                "href": "https://nfdi4chem.de"
+            },
+            {
+                "label": "NFDI4Chem FAQ",
+                "href": "https://www.nfdi4chem.de/index.php/frequently-asked-questions/"
+            },
+            {
+                "label": "NFDI4Chem Helpdesk",
+                "href": "https://nfdi4chem.de/index.php/helpdesk/"
+            },
+            {
+                "label": "NFDI4Chem Terminology Service",
+                "href": "https://terminology.nfdi4chem.de/"
+            },
+            {
+                "label": "NFDI4Chem Search Service",
+                "href": "https://search.nfdi4chem.de/"
+            }
+        ]
+    },
+    {
+        "title": "Legal information",
+        "items": [
+            {
+                "label": "About",
+                "to": "about"
+            },
+            {
+                "label": "Legal Notice",
+                "href": "https://www.uni-mainz.de/eng/102.php"
+            },
+            {
+                "label": "Privacy",
+                "href": "https://www.uni-mainz.de/eng/144.php"
+            }
+        ]
+    }
+]
