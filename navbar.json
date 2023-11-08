@@ -1,0 +1,34 @@
+{
+    "logo": {
+        "alt": "NFDI4Chem Logo",
+        "src": "img/N4C_logo_navbar_large.svg"
+    },
+    "items": [
+        {
+            "type": "doc",
+            "docId": "intro/intro",
+            "position": "left",
+            "label": "Knowledge Base"
+        },
+        {
+            "label": "NFDI4Chem",
+            "href": "https://www.nfdi4chem.de"
+        },
+        {
+            "label": "Terminology Service",
+            "href": "https://terminology.nfdi4chem.de/"
+        },
+        {
+            "label": "Search Service",
+            "href": "https://search.nfdi4chem.de/"
+        },
+        {
+            "label": "FAQ",
+            "href": "https://www.nfdi4chem.de/index.php/frequently-asked-questions/"
+        },
+        {
+            "type": "localeDropdown",
+            "position": "left"
+        }
+    ]
+}
