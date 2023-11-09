@@ -7,30 +7,15 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 # Best Practices
 
-## Introduction
-
-On this page, we provide best practices for data publication in field-specific as well as generic research data repositories. Additionally, we include best practices on special aspects, such as how to use dataset PIDs to link and cite in academic publishing.
-
-## How to use dataset PIDs in scientific articles
-
-During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
-
-- For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [data availability statement](/docs/data_availability_statement), or a similarly termed section. If you believe that your data publication is as decisive as the article itself, add your dataset to the references as well and cite within the text. <!--Vielleicht eher "In order to specifically reference your data within the text, add your dataset to the refernces as well. -->
-- For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
-
-:::info Notice:
-This distinction is important, because the link to the dataset in the DOI metadata of scientific articles is differently set, depending on whether the dataset is a directly related source of information or a referenced source of other researchers and its information is reused.
+:::info Info:
+On this page, we provide best practices for the publication of data in field-specific as well as generic research data repositories. 
 :::
-
-For a set of reactions, samples, and analyses, to assemble a study, Collection PIDs should be used rather than providing many separate PIDs. Such a study wrapped with a Collection PID can directly correspond to a published scientific article and can be referenced in a bundled manner within the [data availability statement](/docs/data_availability_statement) or references section.
-
-In addition, but second-tier, the PID of a related dataset could also be mentioned in the supplementary PDF, if such a document is generated.
 
 ## Best practices for field-specific repositories
 
 For the field-specific repositories [Chemotion Repository](/docs/choose_repository/#chemotion-repository---repository-for-molecules-and-research-data) in combination with [Chemotion ELN](/docs/chemotion_eln), the data is collected along the scientific workflows, analytical data files are automatically converted to open formats, controlled vocabularies or ontologies are used to describe data, and analysis data is interconnected to reactions and samples, hence, chemical structures. The entire Chemotion package allows researchers to collect, analyse, process, store, and publish various types of analytical data attached to reactions and samples in one [digital environment](/docs/smartlab). FAIRification of data along this [data life cycle](/docs/data_life_cycle) is mainly handled by Chemotion. During the seamless export from the ELN into the repository, [PIDs](/docs/pid) (in this case [DOIs](https://www.doi.org/)) are assigned to the deposited data. Chemotion Repository [provides](https://www.chemotion.net/docs/repo/doi) DOIs for reactions, samples, analysis data, and collections (Collection DOI).
 
-Other field-specific repositories such as [CSD and ICSD](/docs/choose_repository/#csd-icsd---joint-ccdcfiz-access-structures-service), [Strenda DB](/docs/choose_repository/#strenda-db---repository-for-reporting-rnzymology-data), [SupraBank](/docs/choose_repository/#suprabank), [NOMAD](/docs/choose_repository/#nomad), and [Chemotion Repository](/docs/choose_repository/#chemotion-repository---repository-for-molecules-and-research-data), if used independently from Chemotion ELN, offer built-in workflows for the aggregation of structured data along the submission pathways, aligned with the [FAIR Data Principles](/docs/fair). This greatly eases FAIR [data publication](/docs/data_publication).
+Other field-specific repositories such as [CSD and ICSD](/docs/choose_repository/#csd-icsd---joint-ccdcfiz-access-structures-service), [Strenda DB](/docs/choose_repository/#strenda-db---repository-for-reporting-rnzymology-data), [SupraBank](/docs/choose_repository/#suprabank), [NOMAD](/docs/choose_repository/#nomad), and [Chemotion Repository](/docs/choose_repository/#chemotion-repository---repository-for-molecules-and-research-data), if used independently from Chemotion ELN, offer built-in workflows for the aggregation of structured data along the submission pathways, aligned with the [FAIR Data Principles](/docs/fair). This greatly facilitates the publication of FAIR data. 
 
 Further aspects to consider are to provide rich metadata, which could be [domain-independent](/docs/metadata/#domain-independent-metadata) metadata or [domain-specific](/docs/metadata/#domain-specific-metadata) metadata, and should also include [provenance information](/docs/provenance), which previously would have typically been included in the supplemental PDF section on general information and protocols. [Minimum information requirements](/docs/metadata/#minimum-information-standards-mi) should be followed, as set by the chemistry community, and implemented in articles and previously also in supplementary PDFs.
 
@@ -78,7 +63,7 @@ For a better understanding of data publications in generic repositories and how 
 
 - in RADAR4Chem: [Linderazulen aus einer invasiven Pflanze - Delphi und sein violettes Wunder](/docs/datasets/?doi=10.1002/ciuz.201900868).
 - in Zenodo: [A dataset of 255,000 randomly selected and manually classified extracted ion chromatograms for evaluation of peak detection methods](/docs/datasets/?doi=10.3390/metabo10040162).
-- in RADAR: [Synthesis and biological evaluation of highly potent fungicidal deoxy-hygrophorones](/docs/datasets/?doi=10.3390/metabo10040162).
+- in RADAR: [Synthesis and biological evaluation of highly potent fungicidal deoxy-hygrophorones](/docs/datasets/?doi=10.1002/ejoc.202100729).
 - in DaRus: [Predictive design of ordered mesoporous silica with well-defined, ultra-large mesopores](/docs/datasets/?doi=10.1039/D2ME00107A).
 
 <!---
