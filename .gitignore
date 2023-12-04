@@ -25,4 +25,4 @@ docusaurus.config.js
 knowledge_base.Rproj
 .vscode
 # Github
-.github
+/.github
