@@ -89,12 +89,14 @@ Information to enhance machine-readability might be provided within a dataset as
 
 The minimum and recommended columns of such a table are as follows:
 - Letter-code and number in your lab journal, i.e. a local sample identifier
-- Number(s) of structures in the article, i.e. a local structure identifier within your article
+- Number(s) of structures in the article, i.e. a local structure identifier within your (corresponding) article
 - SMILES
 - InChI
 - InChIKey
 
+:::info Info:
 The letter-code and number in your lab journal should be included, as analytical data files in a dataset are frequently named following the lab journal entries.
+:::
 
 Additionally, this table may also include further columns for:
 - CAS registry number
@@ -106,7 +108,7 @@ Additionally, this table may also include further columns for:
 
 Templates for such a table containing the minimum recommended columns are provided as [.ods](pathname://../../assets/Supplementary_table_template.ods), [.xlsx](pathname://../../assets/Supplementary_table_template.xlsx), and [.csv](pathname://../../assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/ontology) to unambiguously identify terms for humans and machines.
 
-:::info Info:
+:::danger Notice:
 If the experimental work is documented in an [ELN](/docs/eln), these information could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured, field-specific repositories such as Chemotion Repository, while datasets in generic repositories will profit from such a table.
 :::
 
