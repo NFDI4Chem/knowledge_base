@@ -30,3 +30,5 @@ jobs:
 
     - name: Upload translations 
       run: npm run crowdin upload
+      env:
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
