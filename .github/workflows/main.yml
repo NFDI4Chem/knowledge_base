@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - localisation
+  pull_request:
+    branches:
+      - localisation
+  workflow_dispatch:
 
 jobs:
   build:
