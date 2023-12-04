@@ -24,5 +24,3 @@ docusaurus.config.js
 .Rproj.user
 knowledge_base.Rproj
 .vscode
-# Github
-/.github
