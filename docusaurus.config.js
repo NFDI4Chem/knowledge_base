@@ -41,9 +41,12 @@ module.exports = {
             announcementBar: announcementBar,
         }),
         metadata: [
-            {name: 'google-site-verification', content: 'wgYVjYSe_T6v6BPPM6fPo1ffl7MYYnuVw-h9RoAYfM0'},
+            {
+                name: "google-site-verification",
+                content: "wgYVjYSe_T6v6BPPM6fPo1ffl7MYYnuVw-h9RoAYfM0",
+            },
         ],
-	matomo: {
+        matomo: {
             matomoUrl: "https://knowledgebase.nfdi4chem.de/matomo/",
             siteId: "1",
             phpLoader: "matomo.php",
