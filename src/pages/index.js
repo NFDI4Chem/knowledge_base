@@ -25,8 +25,7 @@ export default function Home() {
                         <div className="col col--8">
                             <p className="hero__subtitle">
                                 <Translate>
-                                    A place for all knowledge regarding Research
-                                    Data Management (RDM) in Chemistry
+                                    {`${siteConfig.customFields.subtitle}`}
                                 </Translate>
                             </p>
                         </div>
