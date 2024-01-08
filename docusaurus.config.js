@@ -6,6 +6,8 @@ const announcementBar = announcementBarActive
     : {};
 
 const title = "NFDI4Chem Knowledge Base";
+const subtitle =
+    "A place for all knowledge regarding Research Data Management (RDM) in Chemistry";
 const description =
     "Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
 const url = "https://knowledgebase.nfdi4chem.de/";
@@ -23,6 +25,7 @@ module.exports = {
     url: url,
     baseUrl: baseUrl,
     customFields: {
+        subtitle: subtitle,
         description: description,
     },
     onBrokenLinks: "warn",
