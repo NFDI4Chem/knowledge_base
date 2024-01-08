@@ -6,6 +6,8 @@ const announcementBar = announcementBarActive
     : {};
 
 const title = "NFDI4Chem Knowledge Base";
+const description =
+    "Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
 const url = "https://knowledgebase.nfdi4chem.de/";
 const baseUrl = "/knowledge_base/";
 
@@ -20,6 +22,9 @@ module.exports = {
     title: title,
     url: url,
     baseUrl: baseUrl,
+    customFields: {
+        description: description,
+    },
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.png",
@@ -40,6 +45,12 @@ module.exports = {
         ...(Object.keys(announcementBar).length > 0 && {
             announcementBar: announcementBar,
         }),
+        metadata: [
+            {
+                name: "google-site-verification",
+                content: "wgYVjYSe_T6v6BPPM6fPo1ffl7MYYnuVw-h9RoAYfM0",
+            },
+        ],
         matomo: {
             matomoUrl: "https://knowledgebase.nfdi4chem.de/matomo/",
             siteId: "1",
