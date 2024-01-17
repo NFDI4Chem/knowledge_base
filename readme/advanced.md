@@ -3,6 +3,7 @@
 ## Downloadable files
 
 Please place downloadable files, e.g. document templates, in the `assets` folder:
+
 ```
 /static/assets/file.pdf
 /static/assets/template.docx
@@ -15,7 +16,6 @@ In order to link the file in your document, use the following Markdown:
 ```
 
 The example assumes that your Markdown file is located on the third filesystem level, e.g. `/docs/10_domains/`. If not, please adjust the number of `../` pointers accordingly.
-
 
 ## Format images using `img`
 
@@ -34,7 +34,6 @@ Where you wish to reference the image, use the `img` html tag in this way:
 ```
 <img align="center" src={useBaseUrl('/img/topics/myImage.png')} alt="My image" />
 ```
-
 
 ## Dynamic tables
 
@@ -73,3 +72,44 @@ import MethodsTable from '@site/src/components/methods.js';
 You can then generate the table with your set of entries using `<MethodsTable defaultProfile={"magres"} />`, yielding this table:
 
 ![](../static/img/readme/magres_table.png)
+
+## Knowledge Base in numbers
+
+Stuff that's interesting for reporting. Use a local BASH terminal for extracting some numbers about the Knowledge Base.
+
+### Clone the Knowledge Base to your local environment
+
+```
+git clone https://github.com/NFDI4Chem/knowledge_base
+cd knowledge_base
+```
+
+### Number of articles
+
+```
+find docs -name "*.mdx" | wc -l
+```
+
+### Number of words
+
+```
+find docs -name "*.mdx" | xargs wc -w
+```
+
+### Number of commits
+
+```
+git log | grep -c "^commit"
+```
+
+### Number of GitHub contributors
+
+```
+wget -q  -O- 'https://api.github.com/repos/nfdi4chem/knowledge_base/contributors?per_page=999&anon=true' | grep "login" | sort | uniq | wc -l
+```
+
+### Number of "Anonymous" contributors
+
+```
+wget -q  -O- 'https://api.github.com/repos/nfdi4chem/knowledge_base/contributors?per_page=999&anon=true' | grep "email" | sort | uniq | wc -l
+```
