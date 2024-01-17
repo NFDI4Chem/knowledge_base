@@ -73,3 +73,24 @@ import MethodsTable from '@site/src/components/methods.js';
 You can then generate the table with your set of entries using `<MethodsTable defaultProfile={"magres"} />`, yielding this table:
 
 ![](../static/img/readme/magres_table.png)
+
+## Knowledgebase in numbers
+Stuff that's interesting for reporting:
+```
+cd knowledge_base
+
+# Number of articles:
+find docs -name "*.mdx" | wc -l
+
+# Number of words
+find docs -name "*.mdx" | xargs wc -w
+
+# Number of commits:
+git log | grep -c "^commit"
+
+# Number of GitHub contributors
+wget -q  -O- 'https://api.github.com/repos/nfdi4chem/knowledge_base/contributors?per_page=999&anon=true' | grep "login" | sort | uniq | wc -l
+
+# Number of "Anonymous" contributors
+wget -q  -O- 'https://api.github.com/repos/nfdi4chem/knowledge_base/contributors?per_page=999&anon=true' | grep "email" | sort | uniq | wc -l
+```
