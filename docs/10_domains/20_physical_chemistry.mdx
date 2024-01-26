@@ -56,8 +56,23 @@ Herausforderungen (Challenges)
 - Can include methods and data types from SFB 985/RWTH (https://docs.google.com/spreadsheets/d/1gdi5gUH3cy4I2sy055IPqOKvfBDzRouW/edit?usp=drive_link&ouid=109474882186950125832&rtpof=true&sd=true)
 -->
 
+# Introduction 
+
+Physical Chemistry encompasses a variety of sub-dicsiplines, covering vast methodology, which, in turn produce heterogenous data. 
+From spectroscopic measurement data, imaging, to simulation input files and in-house data analysis code, many physical chemists are experienced in handling digital data. 
+They are often well-versed in developing software solutions to support their work. While some work with large data volumes on a regular basis, other methodologies result in small, text-based files. This discipline includes many data-literate members, the expertise of which may be harnessed to implement tools and solutions to manage their research group's data in a unified and streamlined manner. 
+
+# Data Types 
+
+## Methods Data Format Overview
+
+<Methods defaultProfile={"physical"} />
+
+:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
+:::
 
 
+<!-- old content
 # Methods Profiles
 
 ## EPR spectroscopy
@@ -142,10 +157,5 @@ Herausforderungen (Challenges)
 - trajectory files are typically too large to store in commonly used repository environments, even when using compressed file formats. To make this data FAIR, standards for handling large amounts of data must be developed or solutions from other fields applied
 - reproducibility of long time-scale molecular dynamics is unattainable (numerical noise will eventually affect the resulting trajectories, especially in a multicore environment). Depending on the numerical accuracy and the specific implementation, deviations can be observed as soon as in the picosecond range. However, thermodynamic averages or other probabilistic measurements should be achieved within a suitable margin of error. This margin would have to be estimated and provided by the authors of a publication
 
+--> 
 
-# Methods Data Format Overview
-
-<Methods defaultProfile={"physical"} />
-
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
