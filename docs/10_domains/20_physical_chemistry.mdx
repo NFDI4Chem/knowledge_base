@@ -67,10 +67,10 @@ From spectroscopic measurement data, imaging, to simulation input files and in-h
 ## Data Types 
 
 As mentioned, the data produced in physical chemistry and its diverse sub-disciples are varied. One research group may work intensively with imaging data such as superresolution microscopy, while the other may work on method development, and again others may analyze spectroscopic data or conduct numeric simulations—or even any combination of these. The table below provides and overview of typical methods employed along with their data types and recommended formats.
+<!-- should the above be more specific? --->
 
 ### Methods Data Format Overview
-
-<!--need to update-->
+<!--need to update table-->
 
 <Methods defaultProfile={"physical"} />
 
@@ -78,8 +78,26 @@ As mentioned, the data produced in physical chemistry and its diverse sub-discip
 
 ## ELNs and Other Tools
 
+For effective data management, software tools should be selected in a uniform manner within a project or research group with the aim to organize and streamline workflows. This involves establishing clear usage guidelines, including metadata templates drawn from minimum information standards for a given method, where available. These should be outlined in a [data management plan (DMP)](docs/dmp) for each project. Many universities supply tools and templates for DMPs (see the [respective article](doc/dmp) for more information).
 
+An [electronic lab notebooks (ELNs)](docs/eln) helps in the day-to-day planning and structured documentation of experiments, while some also assist in data workflow management. For disciplines with diverse research, ELNs must be flexible and customizable. Examples here are LabIMotion, eLabFTW, and openBIS. Certain universities may have a central option, while each research group may chose what best fits their needs and resources. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) lists many options and the article on [choosing an ELN](docs/chose_eln) provides further assistance.
 
+In addition to ELNs, tools such as [Omero](https://www.openmicroscopy.org/omero/) and [NOMAD Oasis] are local repositories that enable researcher to make manage their data and make them [publication](docs/data_publication) ready. [NOMAD](https://nomad-lab.eu/nomad-lab/index.html) also offers other tools to assist in workflow management.
+
+For those writing scripts and developing research software solutions, git is a highly recommended versioning tool. May universities also have their own instances of [GitLab](https://about.gitlab.com/) to assist in better managing software projects.
+
+Specifically for research data, [DataLad](https://www.datalad.org/), which is built on top of git, can greatly assist in tracking the metadata while processing and analyzing data. While it works for steps carried out with GUI applications, its true power comes in handy for those using script-based analysis and processing steps.
+<!--shoudl extend the table to show which tools (and repos) support which file types-->
+
+- elabftw
+- (openBIS)
+- Omero (Tool, UDE nutzt OME+eLabFTW)
+- NOMAD
+- iochem-bd
+- git (Versionierung Skripte)
+- Datalad ('git für Forschungsdaten/Metadaten') 
+
+## Repositories
 
 
 <!-- old content
