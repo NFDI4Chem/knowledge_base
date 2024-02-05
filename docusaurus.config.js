@@ -1,5 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 
+import { themes as prismThemes } from "prism-react-renderer";
+
 const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
     ? require("./announcementBar.json")
@@ -20,7 +22,7 @@ const footerLinks = require("./footer.json");
 // const baseUrl = '/staging/knowledge_base_matomo/';
 // const baseUrl = '/staging/knowledge_base/';
 
-module.exports = {
+const config = {
     title: title,
     url: url,
     baseUrl: baseUrl,
@@ -121,3 +123,5 @@ module.exports = {
         ],
     ],
 };
+
+export default config;
