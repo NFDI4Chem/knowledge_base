@@ -2,26 +2,26 @@
 title: "Machine-Readable Chemical Structures"
 slug: "/machine-readable_chemical_structures"
 ---
- # Machine-Readable Chemical Structures
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# Machine-Readable Chemical Structures
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 ## Introduction
 
-Finding relevant articles based on IUPAC names or trivial names of molecules is a challenging task, while chemical identifiers allow for unambiguous identification of compounds. Redrawing of chemical structures is labour and time intensive, while chemical table (CT) files or SMILES structure codes can be used without any additional effort with any common structure drawing software. 
+Finding relevant articles based on IUPAC names or trivial names of molecules is a challenging task, while chemical identifiers allow for unambiguous identification of compounds. Redrawing of chemical structures is labour and time intensive, while chemical table (CT) files or SMILES structure codes can be used without any additional effort with any common structure drawing software.
 
 Having machine-readable chemical structures as [CT files](/docs/ct_files), such as mol files, and as [SMILES](/docs/smiles) structure codes plus the [InChI](/docs/inchi) identifiers as part of a dataset associated with a research article will enhance its [findability](/docs/fair) by making the article easily indexable and structure searchable. This also improves [interoperability](/docs/fair) and facilitates [reuse](/docs/fair) of scientific work.
 
 :::info Info:
-While such information is not required for structured field-specific repositories such as Chemotion Repository, as this information is provided by the repository software, datasets in generic repositories benefit from this information. 
+While such information is not required for structured field-specific repositories such as Chemotion Repository, as this information is provided by the repository software, datasets in generic repositories benefit from this information.
 :::
 
-The following will provide a tutorial on how to increase the machine-readability of chemistry research articles by providing machine-readable chemical structures within the associated dataset. Recommendations to provide structure codes and identifiers in a machine-readable supplementary table within the associated dataset are given. 
+The following will provide a tutorial on how to increase the machine-readability of chemistry research articles by providing machine-readable chemical structures within the associated dataset. Recommendations to provide structure codes and identifiers in a machine-readable supplementary table within the associated dataset are given.
 
 :::danger Notice:
-Please note that there are currently limitations with [SMILES](/docs/smiles) and [InChI](/docs/inchi) for inorganic and especially organometallic compounds. 
-:::  
+Please note that there are currently limitations with [SMILES](/docs/smiles) and [InChI](/docs/inchi) for inorganic and especially organometallic compounds.
+:::
 
 ## Get mol files
 
@@ -33,7 +33,7 @@ The name of the file might be chosen following your lab journal entry and also n
 
 ### ChemDoodle
 
-To retrieve SMILES, InChI and InChIKey in ChemDoodle select a structure, then choose Edit -> Copy As -> Daylight SMILES or IUPAC InChI. 
+To retrieve SMILES, InChI and InChIKey in ChemDoodle select a structure, then choose Edit -> Copy As -> Daylight SMILES or IUPAC InChI.
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_ChemDoodle_SMILES_InChI_InChIKey.png)
 
@@ -43,7 +43,7 @@ You may also select a structure, then choose Structure -> Generate Line Notation
 
 Alternatively, SMILES, InChI and InChIKey can also be saved as text files by choosing File -> Save as -> choose Daylight SMILES or InChI from the dropdown menu -> Save.
 
-Choosing “IUPAC InChI” will also provide the InChIKey if enabled under Preferences. To include InChIKey, choose Edit -> Preferences -> Files tab -> scroll down and tick Include InChI key. 
+Choosing “IUPAC InChI” will also provide the InChIKey if enabled under Preferences. To include InChIKey, choose Edit -> Preferences -> Files tab -> scroll down and tick Include InChI key.
 
 ### ChemDraw Professional
 
@@ -59,9 +59,9 @@ To retrieve SMILES, InChI and InChIKey in ACD/ChemSketch, select a structure, th
 
 ![ChemDoodle_SMILES_InChI_InChIKey](/img/topics/Screenshots_ChemSketch_SMILES_InChI_InChIKey.png)
 
-(ACD/ChemSketch v2021.1.1, Advanced Chemistry Development, Inc., Toronto, ON, Canada, 2021.) 
+(ACD/ChemSketch v2021.1.1, Advanced Chemistry Development, Inc., Toronto, ON, Canada, 2021.)
 
-Choosing InChI for Structure will also provide the InChIKey, if enabled under InChI Options. To include InChIKey, choose Tools -> Generate -> InChI Options and tick InChI Key. 
+Choosing InChI for Structure will also provide the InChIKey, if enabled under InChI Options. To include InChIKey, choose Tools -> Generate -> InChI Options and tick InChI Key.
 
 ### MarvinSketch
 
@@ -75,10 +75,10 @@ Alternatively, SMILES, InChI and InChIKey can also be saved as text files by cho
 
 ## What do you need and when?
 
-CT files, SMILES and InChI are different representations of chemical structures. An important feature of CT files is the ability to store 3D data of molecules. CT files are the right choice for describing the 3D structure of molecules in a machine-readable way, e.g. obtained by using single-crystal X-ray diffraction (XRD). For all other use cases, InChI and SMILES are sufficient representations with the additional beauty that they are (simple) line notations. 
+CT files, SMILES and InChI are different representations of chemical structures. An important feature of CT files is the ability to store 3D data of molecules. CT files are the right choice for describing the 3D structure of molecules in a machine-readable way, e.g. obtained by using single-crystal X-ray diffraction (XRD). For all other use cases, InChI and SMILES are sufficient representations with the additional beauty that they are (simple) line notations.
 
 :::danger Notice:
-Please note that InChI is an identifier, while SMILES is a structure code. Conversion of SMILES to a chemical structure graph and back to SMILES is possible, while this will not necessarily give the same SMILES as initially provided, hence, SMILES is not an identifier. On the other hand, InChI is an identifier and is not designed to be used to regenerate the correct chemical structure drawing, as it knows connectivities, not the bond order. 
+Please note that InChI is an identifier, while SMILES is a structure code. Conversion of SMILES to a chemical structure graph and back to SMILES is possible, while this will not necessarily give the same SMILES as initially provided, hence, SMILES is not an identifier. On the other hand, InChI is an identifier and is not designed to be used to regenerate the correct chemical structure drawing, as it knows connectivities, not the bond order.
 :::
 
 SMILES and InChI as well as InChI Key are ideal for describing chemical structures in research articles in a supplementary table. Such a table should be part of a dataset in a generic repository, but could also be submitted with the manuscript to the academic publisher, as required by [ACS Journal of Medicinal Chemistry](https://pubs.acs.org/doi/full/10.1021/jm5002056) for SMILES since 2014.
@@ -88,23 +88,25 @@ SMILES and InChI as well as InChI Key are ideal for describing chemical structur
 Information to enhance machine-readability might be provided within a dataset as a [supplementary table](https://doi.org/10.1186/s13321-021-00520-4), as there aren't open formats for all types of chemistry data available yet that would provide this information. This table should be provided in a machine-readable text-based format, such as a CSV file.
 
 The minimum and recommended columns of such a table in chemistry are as follows:
-- Letter-code and number in your lab journal, i.e. a local sample identifier
-- Number(s) of structures in the article, i.e. a local structure identifier within your (corresponding) article
-- SMILES
-- InChI
-- InChIKey
+
+-   Letter-code and number in your lab journal, i.e. a local sample identifier
+-   Number(s) of structures in the article, i.e. a local structure identifier within your (corresponding) article
+-   SMILES
+-   InChI
+-   InChIKey
 
 :::info Info:
 The letter-code and number in your lab journal should be included, as analytical data files in a dataset are frequently named following the lab journal entries.
 :::
 
 Additionally, this table may also include further columns for:
-- CAS registry number
-- IUPAC name
-- synonym i.e. common names of a compound
-- PubChem compound identifier
-- CAS registry number
-- comment (if required)
+
+-   CAS registry number
+-   IUPAC name
+-   synonym i.e. common names of a compound
+-   PubChem compound identifier
+-   CAS registry number
+-   comment (if required)
 
 Templates for such a table containing the minimum recommended columns are provided as [.ods](pathname://../../assets/Supplementary_table_template.ods), [.xlsx](pathname://../../assets/Supplementary_table_template.xlsx), and [.csv](pathname://../../assets/Supplementary_table_template.csv) files. These template files also take advantage of [ontologies](/docs/ontology) to unambiguously identify terms for humans and machines.
 
@@ -112,9 +114,10 @@ Templates for such a table containing the minimum recommended columns are provid
 If the experimental work is documented in an [ELN](/docs/eln), these information could also be provided by the ELN system. Chemotion ELN generates [SMILES](/docs/smiles), [InChI](/docs/inchi), InChIKey as well as RInChI and RInChIKey for compounds and reactions. These information are also available in Chemotion Repository i.e. such a supplementary table is not required with structured, field-specific repositories such as Chemotion Repository, while datasets in generic repositories will profit from such a table.
 :::
 
-*This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License.*
+_This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License._
 
-![CC0 badge](https://licensebuttons.net/l/zero/1.0/88x31.png)
+![CC0 badge](/img/cc-zero.svg)
 
-----
+---
+
 Main author: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661)

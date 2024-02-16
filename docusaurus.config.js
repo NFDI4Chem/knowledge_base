@@ -1,4 +1,6 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
+/** @type {import('@docusaurus/types').Config} */
+
+import { themes as prismThemes } from "prism-react-renderer";
 
 const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
@@ -20,7 +22,7 @@ const footerLinks = require("./footer.json");
 // const baseUrl = '/staging/knowledge_base_matomo/';
 // const baseUrl = '/staging/knowledge_base/';
 
-module.exports = {
+const config = {
     title: title,
     url: url,
     baseUrl: baseUrl,
@@ -88,25 +90,29 @@ module.exports = {
 					</div>
 					<div class="cell" style="padding: 0.1rem; text-align: left;" >
 						Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>, if not stated otherwise.<br />
-						Copyright © 2023 NFDI4Chem. Built with Docusaurus.
+						Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.
 					</div>
 				</div>
         	`,
         },
         colorMode: { disableSwitch: true },
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
+        },
     },
     presets: [
         [
-            "@docusaurus/preset-classic",
+            "classic",
+            /** @type {import('@docusaurus/preset-classic').Options} */
             {
                 docs: {
-                    sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
+                    sidebarPath: "./sidebars.js",
                     editUrl:
                         "https://github.com/NFDI4Chem/knowledge_base/tree/main/",
                 },
                 theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
+                    customCss: "./src/css/custom.css",
                 },
             },
         ],
@@ -121,3 +127,5 @@ module.exports = {
         ],
     ],
 };
+
+export default config;
