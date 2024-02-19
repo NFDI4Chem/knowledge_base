@@ -9,7 +9,9 @@ slug: "/publishing_standards"
 This page is under construction, while you are welcome to read the already existing paragraphs. On this page we will summarise the standards for the publication of data, formulated as principles, developed within the NFDI4Chem project on Publication Standards. These standards should streamline the publication workflows. Authors, publishers and infrastructure operators are the audience for these standards.
 :::
 
-## How to use dataset PIDs in scientific articles
+## For Authors
+
+### How to use dataset PIDs in scientific articles
 
 During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
 
@@ -36,9 +38,9 @@ For a set of reactions, samples, and analyses, to assemble a study, Collection P
 In addition, but second-tier, the PID of a related dataset could also be mentioned in the supplementary PDF, if such a document is generated.
 
 
-## More Standards in Scientific Publication with Respect to Research Data
+## For Research Data Repositories
 
-The below outlines a collection of standards for scientific publishing. It serves as a resource for journal editors and publishers as well as infrastructure providers, e.g. research data repositories.
+The below outlines a collection of standards for research data repositories. 
 
 :::tip Standard
 *Research data repositories should provide a Collection DOI to wrap datasets corresponding to one study.*
@@ -55,23 +57,10 @@ Scholix provides the framework for improving the links between scientific litera
 <!--scholix.org links funktionieren alle momentan (bei mir zumindest) nicht-->
 
 :::tip Standard
-*Journals should add data availability statements to their submission system.*
-:::
-
-During manuscript submission, editable templates should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data, enabling the FAIR principles.
-
-:::tip Standard
 *Datasets published with an embargo period should have inaccessible data but accessible metadata.*
 :::
 
 While an embargo period restricts access to a published dataset, the metadata should still be accessible. This allows relevant information on the dataset to be retrieved, while guaranteeing first rights to the data to the authors.
-
-
-:::tip Standard
-*Articles should be linked in their DOI metadata with dataset(s) with relationship_type IsSupplementedBy and the dataset(s) should link with relationType IsSupplementTo.*
-:::
-
-This agrees with Crossref's documentation on linking datasets to published items. This establishes a structured link between both DOIs and ensures humans and machine's alike can interpret the relationship between the published objects.
 
 <!--Standard on how to publish NMR data, tbd-->
 
@@ -88,10 +77,6 @@ Review links for datasets should have the access credentials encoded in the URL,
 
 This ensures that journals may carry out automated quality control steps upon manuscript submission. Further details within the dataset's metadata and content may still be adjusted and updated before final publication.
 
-:::tip Standard
-*Author guidelines of journals should explicitly encourage pre-submission of datasets.*
-:::
-<!--was genau ist hiermit gemeint-->
 
 :::tip Standard
 *Research data repositories should provide the repository name as publisher in a dataset's metadata.*
@@ -109,12 +94,6 @@ In the case of RADAR4Chem the relationship would be described as follows:
 > relatedIdentifier ->  relatedIdentifierType:DOI -> relationType:IsPublishedIn -> http://doi.org/10.17616/R3ZX96
 
 This ensures humans as well as machines can trace and interpret where the data has been published.
-
-:::tip Standard
-*Journals should recommend trusted, chemistry-friendly research data repositories.*
-:::
-
-To assist authors in selecting well-established and community-specific repositories for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals.  
 
 :::tip Standard
 *Research data repositories should allow researchers to update the metadata of the PID with their dataset.*
@@ -149,6 +128,33 @@ In line with grouping licenses between software and datasets, pointing authors t
 :::
 
 Licenses can be confusing to authors. Shared data should be as open as possible, as closed as necessary with the intend of allowing and enabling others to reuse and build upon the work. Thus, encouraging rather open licences such as [CC0](https://creativecommons.org/public-domain/cc0/) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) as opposed to more restrictive licenses such as [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) or [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+## For Publishers and Journals
+
+:::tip Standard
+*Articles should be linked in their DOI metadata with dataset(s) with relationship_type IsSupplementedBy and the dataset(s) should link with relationType IsSupplementTo.*
+:::
+
+<!--add another for repo side or pull apart (find datacite doc info)-->
+
+This agrees with Crossref's documentation on linking datasets to published items. This establishes a structured link between both DOIs and ensures humans and machine's alike can interpret the relationship between the published objects.
+
+:::tip Standard
+*Journals should recommend trusted, chemistry-friendly research data repositories.*
+:::
+
+To assist authors in selecting well-established and community-specific repositories for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals.  
+
+:::tip Standard
+*Journals should add data availability statements to their submission system.*
+:::
+
+During manuscript submission, editable templates should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data, enabling the FAIR principles.
+
+:::tip Standard
+*Author guidelines of journals should explicitly encourage pre-submission of datasets.*
+:::
+<!--was genau ist hiermit gemeint-->
 
 
 *This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License.*
