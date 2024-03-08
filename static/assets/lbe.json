@@ -30,16 +30,24 @@
             {
                 "name": "RADAR4Chem",
                 "url": "https://dx.doi.org/10.22000/786"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/LMVGRKPOXLBIFQ-UHFFFAOYSA-N.1"
+            },
+            {
+                "name": "nmrXiv",
+                "url": "https://doi.org/10.57992/nmrxiv.p2"
             }
         ],
         "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
-        "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and IR data. NMR data are provided in vendor format, as JCAMP-DX (MNova) and NMRium format including NMReDATA (SDfile). MS data are available in vendor formats and open format mzML. IR and UV/VIS data are accessible in tabular files and in JCAMP-DX format. The structure information on Linderazulene and Charmazulene and further supplementary information are provided as tables and SDfiles.  The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
+        "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV-VIS and IR data. NMR data are provided in vendor format, as JCAMP-DX (MNova) and NMRium format including NMReDATA (SDfile). MS data are available in vendor formats and open format mzML. IR and UV-VIS data are accessible in tabular files and in JCAMP-DX format. The structure information on Linderazulene and Charmazulene and further supplementary information are provided as tables and SDfiles.  The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
         "subdiscipline": [
             "organic chemistry",
             "analytical chemistry"
         ],
         "tags": [
-            "natural producs",
+            "natural products",
             "NMR spectroscopy"
         ]
     },
@@ -53,16 +61,24 @@
             {
                 "name": "RADAR4Chem",
                 "url": "https://dx.doi.org/10.22000/785"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/NZGWDASTMWDZIW-MRVPVSSYSA-N.1"
+            },
+            {
+                "name": "nmrXiv",
+                "url": "https://doi.org/10.57992/nmrxiv.p16"
             }
         ],
         "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
-        "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR4Chem, contains NMR, MS and UV/VIS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX for NMR and UV/VIS data and mzML for MS data. Analytical data of CD spectroscopy and MS spectrometry were exported as tabular files and are also provided as CSV files. The structure information on (R)-+-Pulegon and supplementary information are provided as tabular files and as as SDfiles. The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
+        "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR4Chem, contains NMR, MS and UV-VIS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX for NMR and UV-VIS data and mzML for MS data. Analytical data of CD spectroscopy and MS spectrometry were exported as tabular files and are also provided as CSV files. The structure information on (R)-+-Pulegon and supplementary information are provided as tabular files and as as SDfiles. The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
         "subdiscipline": [
             "organic chemistry",
             "analytical chemistry"
         ],
         "tags": [
-            "natural producs",
+            "natural products",
             "NMR spectroscopy"
         ]
     },
@@ -76,16 +92,24 @@
             {
                 "name": "RADAR4Chem",
                 "url": "https://dx.doi.org/10.22000/795"
+            },
+            {
+                "name": "Chemotion Repository",
+                "url": "https://dx.doi.org/10.14272/DGQLVPJVXFOQEV-JNVSTXMASA-N.1"
+            },
+            {
+                "name": "nmrXiv",
+                "url": "https://doi.org/10.57992/nmrxiv.p17"
             }
         ],
         "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
-        "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV/VIS and CD data. NMR data was previously published in NMRShiftDB2 and are provided in vendor format together with NMReDATA (SDfile). MS data were converted in several different formats including mzML. UV/VIS data are available as tabular files and in JCAMP-DX format. The structure information on carminic acid and further supplementary information are provided in tabular files and as SDfile. The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
+        "description": "The dataset, prepared for publication under the NFDI4Chem stewardship and published in RADAR4Chem contains NMR, MS, UV-VIS and CD data. NMR data was previously published in NMRShiftDB2 and are provided in vendor format together with NMReDATA (SDfile). MS data were converted in several different formats including mzML. UV-VIS data are available as tabular files and in JCAMP-DX format. The structure information on carminic acid and further supplementary information are provided in tabular files and as SDfile. The corresponding article does not contain a reference to the dataset, as published some years before the dataset was published.",
         "subdiscipline": [
             "organic chemistry",
             "analytical chemistry"
         ],
         "tags": [
-            "natural producs",
+            "natural products",
             "NMR spectroscopy"
         ]
     },
@@ -344,7 +368,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, published in heiData, contains data of NMR, MS, IR in the instrument manufacturers formats.The IR data is also available in TSV format. Elemental analysis data is provided as JPG. Crystallographic data as CIF are available from CCDC. References to a dataset in CCDC is given in the supporting information PDF of the corresponding scientific publication.",
+        "description": "The datasets, curated by the publishing authors, published in heiData, contains data of NMR, MS, IR in the instrument manufacturers formats.The IR data is also available in TSV format. Elemental analysis data is provided as JPG. Crystallographic data as CIF are available from CSD. References to a dataset in CSD is given in the supporting information PDF of the corresponding scientific publication.",
         "subdiscipline": [
             "organic chemistry"
         ],
@@ -366,7 +390,7 @@
             {
                 "name": "MetaboLights",
                 "url": "https://www.ebi.ac.uk/metabolights/editor/MTBLS1455"
-            }       
+            }
         ],
         "linkcomment": "curated by the publishing authors",
         "description": "The dataset, curated by the publishing authors, contains 255.000 extracted ion chromatograms (EICs or XICs) of 5000 peaks randomly sampled from across 51 environmental water samples for the evaluation on peak detection and gap filling algorithms. The scientific publication references the dataset in Zenodo in its data availability statement.",
@@ -399,7 +423,7 @@
             "physical chemistry"
         ],
         "tags": [
-            "raman spectrsocopy",
+            "raman spectroscopy",
             "biomedical diagnostics"
         ]
     },
@@ -421,7 +445,7 @@
             "analytical chemistry"
         ],
         "tags": [
-            "raman spectrsocopy"
+            "raman spectroscopy"
         ]
     },
     {
@@ -445,7 +469,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain NMR, MS and IR data in the instrument manufacturers formats. The IR data is also availabe as data point table (DPT) files. Data of elemental analysis was added to the dataset as scans of analysis reports. Crystallographic data as CIF files are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article, while the dataset in heiDATA is not referenced in the scientific publication or supporting information.",
+        "description": "The datasets, curated by the publishing authors, contain NMR, MS and IR data in the instrument manufacturers formats. The IR data is also availabe as data point table (DPT) files. Data of elemental analysis was added to the dataset as scans of analysis reports. Crystallographic data as CIF files are available from CSD. References to datasets in CSD are given in the supporting information PDF of the corresponding article, while the dataset in heiDATA is not referenced in the scientific publication or supporting information.",
         "subdiscipline": [
             "organic chemistry"
         ],
@@ -494,7 +518,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contains NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF are available from CCDC. References to datasets in CCDC are given in the supporting information PDF of the corresponding article via CCDC numbers.",
+        "description": "The datasets, curated by the publishing authors, contains NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF are available from CSD. References to datasets in CSD are given in the supporting information PDF of the corresponding article via CSD numbers.",
         "subdiscipline": [
             "organic chemistry",
             "analytical chemistry"
@@ -603,7 +627,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CCDC and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
+        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as CIF files are available from CSD and computational data was deposited in ioChem-DB. References to the crystallographic data is given in the section on supporting information in the corresponding publication. References on NMR data can be retrieved from the supplementary information PDF. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
@@ -612,7 +636,7 @@
         ]
     },
     {
-        "title": "Exceptional substrate diversity in oxygenation reactions catalyzed by a bis(µ-oxo) copper comple",
+        "title": "Exceptional substrate diversity in oxygenation reactions catalyzed by a bis(µ-oxo) copper complex",
         "authors": "Melanie Paul, Melissa Teubner, Benjamin Grimm-Lebsanft, Christiane Golchert, Yannick Meiners, Laura Senft, Kristina Keisers, Patricia Liebhäuser, Thomas Rösener, Florian Biebl, Sören Buchenau, Maria Naumova, Vadim Murzin, Roxanne Krug, Alexander Hoffmann, Jörg Pietruszka, Ivana Ivanovic-Burmazovic, Michael Rübhausen, Sonja Herres-Pawlis ",
         "journal": "Chemistry – A European Journal",
         "pubyear": 2020,
@@ -692,7 +716,7 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CCDC. References to datasets in Chemotion Repository are given in the supporting information PDF of the corresponding article via DOIs, while datasets in CCDC were referenced with their CCDC number. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
+        "description": "The datasets, curated by the publishing authors, contain NMR data in the instrument manufacturers formats and is also provided by Chemotion Repository in the open format JCAMP-DX. Crystallographic data as .cif files are available from CSD. References to datasets in Chemotion Repository are given in the supporting information PDF of the corresponding article via DOIs, while datasets in CSD were referenced with their CCDC accession number. Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
         "subdiscipline": [
             "inorganic chemistry"
         ],
@@ -710,6 +734,10 @@
             {
                 "name": "RADAR",
                 "url": "https://dx.doi.org/10.22000/451"
+            },
+            {
+                "name": "nmrXiv",
+                "url": "https://doi.org/10.57992/nmrxiv.p57"
             }
         ],
         "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
@@ -719,7 +747,7 @@
             "natural product chemistry"
         ],
         "tags": [
-            "natural producs"
+            "natural products"
         ]
     },
     {
@@ -741,7 +769,7 @@
             "natural product chemistry"
         ],
         "tags": [
-            "natural producs",
+            "natural products",
             "NMR spectroscopy"
         ]
     },
@@ -850,12 +878,34 @@
             }
         ],
         "linkcomment": "curated by the publishing authors",
-        "description": "Please note that there were no Collection DOIs at the time of publication. Therefore, many dataset DOIs are reported.",
+        "description": "The datasets, curated by the publishing authors, were published in CSD and Chemotion Repository. Please note, that Collection DOIs did not exist at the time of publication. Hence, many dataset DOIs are reported.",
         "subdiscipline": [
             "organic chemistry"
         ],
         "tags": [
             "porphyrins"
+        ]
+    },
+    {
+        "title": "Antimicrobial Prenylated Isoflavones from the Leaves of the Amazonian Medicinal Plant Vatairea guianensis Aubl.",
+        "authors": "Serhat S. Çiçek, Mayra Galarza Pérez, Arlette Wenzel-Storjohann, Roberto M. Bezerra, Jorge F. O. Segovia, Ulrich Girreser, Isamu Kanzaki, and Deniz Tasdemir",
+        "journal": "Journal of Natural Products",
+        "pubyear": 2022,
+        "linkpub": "https://doi.org/10.1021/acs.jnatprod.1c01035",
+        "linkdata": [
+            {
+                "name": "RADAR4Chem",
+                "url": "https://dx.doi.org/10.22000/1865"
+            },
+            {
+                "name": "nmrXiv",
+                "url": "https://doi.org/10.57992/nmrxiv.p55"
+            }
+        ],
+        "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
+        "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR4Chem as well as nmrXiv, includes NMR, IR and MS data in the instrument manufacturers' formats as well as in open formats such as JCAMP-DX (TopSpin 4.3) for NMR data and mzML for MS data. UV-VIS spectra are only available as PDF format, due to challenges with data export, and all chemical structures are provided as Molfiles and listed in a CSV according to their numbering in the publication, including local sample identifiers, SMILES structure codes, and InChI and InChIKey identifiers. A markdown README and a rendered HTML version provide an entry point for human readers. The corresponding scientific article does not reference the dataset as it was published one year before the dataset was published.",
+        "subdiscipline": [
+            "organic chemistry"
         ]
     }
 ]
