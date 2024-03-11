@@ -327,7 +327,7 @@
         "linkpub": "https://doi.org/10.1021/acs.analchem.1c00972",
         "linkdata": [
             {
-                "name": "Metabolights",
+                "name": "MetaboLights",
                 "url": "https://www.ebi.ac.uk/metabolights/MTBLS2402/descriptors"
             },
             {
