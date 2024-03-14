@@ -26,9 +26,9 @@ const features = {
       "link": "/docs/smartlab"
     },
     {
-      "title": <Translate>Data Publication</Translate>,
+      "title": <Translate>Data Publishing</Translate>,
       "svg": "/img/nfdi4chem_Data_Publication_white.svg",
-      "link": "/docs/data_publication"
+      "link": "/docs/data_publishing"
     }
   ],
   domains: [
