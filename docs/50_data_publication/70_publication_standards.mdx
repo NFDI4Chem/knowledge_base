@@ -38,6 +38,11 @@ For a set of reactions, samples, and analyses, to assemble a study, Collection P
 
 In addition, but second-tier, the PID of a related dataset could also be mentioned in the supplementary PDF, if such a document is generated.
 
+### How to link scientific articles to thier corresponding dataset(s)
+
+Many data repositories will offer the option to add a related identifier. According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. As stressed [above](#how-to-use-dataset-pids-in-scientific-articles), while datasets _may_ be cited within the article, the data availability statement should include them, first and foremost. Hence, to ensure the correct linking on the side of the datset, the relation type `IsSupplementTo` should primarily used, while `IsCitedBy` can be used in addition if the dataset is indeed referenced. 
+
+<!-- ^ We're all in agreement here, correct?-->
 
 ## For Research Data Repositories
 
