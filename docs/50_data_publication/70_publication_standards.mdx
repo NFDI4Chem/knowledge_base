@@ -164,29 +164,41 @@ Licenses can be confusing to authors. Shared data should be as **open as possibl
 
 ## For Publishers and Journals
 
+The below outlines a collection of standards for publishers and journals.
+
+---
+
 :::tip Standard
-*Articles should be linked within their DOI metadata to dataset(s) with the `relation` `type` `is-supplemented-by` and the dataset(s) should link with `relationType` `IsSupplementTo`.*
+*Articles should be linked within their DOI metadata to dataset(s) with the `relation` `type` `is-supplemented-by` and the dataset(s) should link to the article using the `relationType` `IsSupplementTo`.*
 :::
 
-This agrees with Crossref's documentation on linking datasets to published items. This establishes a structured link between both DOIs and ensures humans and machine's alike can interpret the relationship between the published objects.
+This agrees with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/). It establishes a structured **link** between both PIDs and ensures humans and machines alike can interpret the relationship between the published objects.
+
+---
 
 :::tip Standard
 *Journals should recommend trusted, chemistry-friendly research data repositories.*
 :::
 
-To assist authors in selecting well-established and community-specific repositories for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals.  
+To assist authors in selecting **well-established and community-specific repositories** for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals. These should be included within the author guidelines or the data policies.
+
+---
 
 :::tip Standard
 *Journals should add data availability statements to their submission system.*
 :::
 
-During manuscript submission, editable templates should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data, enabling the FAIR principles.
+During manuscript submission, editable [templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availabilty statements**](/docs/data_availability_statement) should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by inlcuding the DOI or other PID, enabling the FAIR principles (e.g., [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)).
+
+---
 
 :::tip Standard
 *Journal author guidelines should explicitly encourage pre-submission of datasets.*
 :::
 
+To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets should be published prior to the publication of the article**. Thus, once an article is accepted, the authors should publish the underlying data, ensuring that data is avilable when the article is published and that the journal editors can run quality control checks on the provided DOI. This process must be explicitely communicated with authors through the author guidelines, yet can also be in included within other communication upon acceptance. At this point, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to publication.
 
+---
 
 *This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License.*
 
