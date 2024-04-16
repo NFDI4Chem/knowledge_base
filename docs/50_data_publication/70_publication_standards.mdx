@@ -54,7 +54,7 @@ The below outlines a collection of standards for research data repositories.
 *Research data repositories should provide a Collection DOI to wrap datasets corresponding to one study.*
 :::
 
-Research data repositories may use individual DOIs to reference individual chemical reactions, molecules, or analytical datasets. Thus, many DOIs will then be relevant to the published study results. In order to facilitate the manuscript submission process, a single DOI that wraps all relevant data should be available. Furthermore, this ensure all data underlying a published manuscript can be viewed and referenced as a single collection.
+Research data repositories may use individual DOIs to reference individual chemical reactions, molecules, or analytical datasets. Thus, many DOIs will then be relevant to the published study results. In order to facilitate the manuscript submission process, a **single DOI** that wraps all relevant data should be available. Furthermore, this ensure all data underlying a published manuscript can be viewed and referenced as a single **collection**.
 
 ---
 
@@ -70,7 +70,7 @@ Research data repositories may use individual DOIs to reference individual chemi
 *Datasets published with an embargo period should have inaccessible data but accessible metadata.*
 :::
 
-While an embargo period restricts access to a published dataset, the **metadata should still be accessible**. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. 
+While an **embargo** period restricts access to a published dataset, the **metadata should still be accessible**. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. 
 
 ---
 <!--Standard on how to publish NMR data, tbd-->
@@ -96,7 +96,7 @@ This ensures that journals may carry out automated **quality control steps upon 
 *Research data repositories should provide the repository name as `publisher` in a dataset's metadata.*
 :::
 
-As stated by [**DataCite's documenation on the publisher field**](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/publisher/#publisher), this field is used to formulate the citation of the data and thus should be the repository name. 
+As stated by [**DataCite's documenation on the publisher field**](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/publisher/#publisher), this `publisher` field is used to formulate the citation of the data and thus should be the repository name. 
 
 ---
 
@@ -104,17 +104,17 @@ As stated by [**DataCite's documenation on the publisher field**](https://dataci
 *Research data repositories should provide their repository identifier by re3data.org as a `publisherIdentifier`.*
 :::
 
-To uniquely and persistently identify themselves within the dataset's metadata, repositories should provide **repository identifier from re3data.org**. These should be automatically populated metadata fields. If data has originally been published in another repository, the respective repository identifier should be used.
+To uniquely and persistently identify themselves within the dataset's metadata, repositories should provide their **repository identifier from re3data.org**. These should be automatically populated metadata fields. If data has originally been published in another repository, the respective repository identifier should be used.
 
 In the case of RADAR4Chem the relationship would be described as follows (see also [DataCite's documenation on the publisher field](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/publisher/#publisher)):
 
->Publisher:RADAR4Chem
+>Publisher: RADAR4Chem
 >
->publisherIdentifier:http://doi.org/10.17616/R3ZX96
+>publisherIdentifier: http://doi.org/10.17616/R3ZX96
 >
->publisherIdentifierScheme:re3data 
+>publisherIdentifierScheme: re3data 
 >
->schemeURI:https://re3data.org/
+>schemeURI: https://re3data.org/
 
 ```xml
 <publisher xml:lang="en" publisherIdentifier="http://doi.org/10.17616/R3ZX96" publisherIdentifierScheme="re3data" schemeURI="https://re3data.org/">RADAR4Chem</publisher>
