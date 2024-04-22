@@ -8,4 +8,4 @@ curl -o eln-finder.json "https://eln-finder.ulb.tu-darmstadt.de/server/api/disco
 
 # add current date and time to the json
 
-jq ". + {date: \"$(date -u)\" }" eln-finder.json > $targetDir/eln-finder-dated.json
+jq ". + {date: \"$(date -u)\" }" eln-finder.json > $targetDir/elnData.json
