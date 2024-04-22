@@ -32,8 +32,6 @@ function ElnFinder() {
     const dateDownloaded = moment(elnData.date);
     const relativeDate = moment(dateDownloaded).fromNow();
 
-    console.log(relativeDate);
-
     try {
         const chemElns = elnData["_embedded"].searchResult["_embedded"].objects;
 
