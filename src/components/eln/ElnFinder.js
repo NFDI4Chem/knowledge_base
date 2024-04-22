@@ -85,7 +85,13 @@ function ElnFinder() {
                             <td>
                                 <Link to={eln.url}>{eln.name}</Link>
                             </td>
-                            <td>{eln.license}</td>
+                            <td>
+                                {eln.license === "Open Source" ? (
+                                    <strong>{eln.license}</strong>
+                                ) : (
+                                    eln.license
+                                )}
+                            </td>
                             <td>
                                 <ShortenDesc desc={eln.desc} length={200} />
                             </td>
