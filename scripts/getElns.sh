@@ -1,6 +1,7 @@
 #!/bin/bash
 
-targetDir="/git/n4c-kb_jl/build/assets"
+targetDir="/var/www/html/staging/knowledge_base/assets"
+# targetDir="/var/www/html/knowledge_base/assets"
 
 # get the data from the eln-finder
 
