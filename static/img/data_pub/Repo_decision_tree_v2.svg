@@ -276,7 +276,7 @@
 
 <g
    id="g240"
-   transform="matrix(1.1554646,0,0,1.2326678,-93.61629,-61.141123)">
+   transform="matrix(1.1554646,0,0,1.0296744,-93.61629,-9.4894608)">
 	<defs
    id="defs229">
 		<path
@@ -809,25 +809,21 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle">structures</tspan></text><text
    xml:space="preserve"
    style="font-size:16.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
-   x="603.11688"
-   y="243.27234"
+   x="604.4679"
+   y="249.97418"
    id="text252"><tspan
-     id="tspan250"
-     x="603.11688"
-     y="243.27234"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle">crystal structures of</tspan><tspan
-     x="603.11688"
-     y="264.12711"
-     id="tspan254"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle">organic, metal-organic,</tspan><tspan
-     x="603.11688"
-     y="284.98187"
-     id="tspan258"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle">and organometallic </tspan><tspan
-     x="605.28162"
-     y="305.83664"
-     id="tspan256"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle">molecules </tspan></text><path
+     x="604.4679"
+     y="249.97418"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle"
+     id="tspan216">crystal structures of </tspan><tspan
+     x="604.4679"
+     y="270.82895"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle"
+     id="tspan220">organic and molecular </tspan><tspan
+     x="604.4679"
+     y="291.68372"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';text-align:center;text-anchor:middle"
+     id="tspan222">inorganic compounds</tspan></text><path
    class="st6"
    d="m 658.47317,341.01706 h 146 c 5.5,0 10,4.5 10,10 v 47 c 0,5.5 -4.5,10 -10,10 h -146 c -5.5,0 -10,-4.5 -10,-10 v -47 c 0,-5.5 4.5,-10 10,-10 z"
    id="path242-5"
