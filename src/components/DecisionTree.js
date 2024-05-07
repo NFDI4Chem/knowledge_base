@@ -168,14 +168,17 @@ const DecisionTree = () => {
                                     className={styles.cls3}
                                     transform="translate(562.8 229.2)"
                                 >
-                                    <tspan x="0" y="0">
+                                    <tspan x="0" y="-13">
                                         crystal structures of{" "}
                                     </tspan>
-                                    <tspan x="-9" y="21.6">
+                                    <tspan x="-9" y="8.6">
                                         molecular organic and{" "}
                                     </tspan>
-                                    <tspan x="-6.1" y="43.2">
-                                        inorganic compounds
+                                    <tspan x="0" y="30.6">
+                                        molecular inorganic{" "} 
+                                    </tspan>
+                                    <tspan x="32" y="51.8">
+                                        compounds 
                                     </tspan>
                                 </text>
                             </g>
