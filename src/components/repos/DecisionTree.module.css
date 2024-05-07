@@ -2,11 +2,11 @@
 
 .cls1,
 .cls2 {
-    fill: #f2f2f2;
+    fill: var(--repo-data-box);
 }
 
 .cls3 {
-    fill: #000;
+    fill: black;
     font-size: 18px;
 }
 
@@ -40,12 +40,12 @@
 .cls9,
 .cls11,
 .cls4 {
-    fill: #fff;
+    fill: white;
 }
 
 .cls5,
 .cls10 {
-    fill: #00617c;
+    fill: var(--ifm-color-primary);
 }
 
 .cls12 {
@@ -61,7 +61,7 @@
 }
 
 .cls11 {
-    stroke: #7f7f7f;
+    stroke: var(--repo-line);
 }
 
 .cls14 {
@@ -83,16 +83,16 @@
 
 .cls6,
 .cls17 {
-    fill: #00617c;
+    fill: var(--ifm-color-primary);
 }
 
 .cls7 {
-    fill: #f0f0f0;
+    fill: var(--repo-data-box);
 }
 
 .svglink:hover > * {
-    fill: #e30613;
-    transition-duration: 0.5s;
+    fill: var(--ifm-color-danger);
+    transition-duration: 0.4s;
 }
 
 .svglink:hover > text {
