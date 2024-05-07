@@ -1,92 +1,40 @@
 /********** Repo decision tree ************/
 
-.cls1,
-.cls2 {
+svg > * {
+    transition-duration: 0.4s;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.svgBlueBox {
+    fill: var(--ifm-color-primary);
+}
+
+.svgBlueBoxText,
+.svgHeadBoxText {
+    fill: white;
+}
+
+.svgHeadBoxText {
+    font-size: 30px;
+}
+
+.svgLine {
+    stroke: var(--repo-line);
+    stroke-width: 1px;
+}
+
+.svgDescBox {
     fill: var(--repo-data-box);
 }
 
-.cls3 {
+.svgDescText {
     fill: black;
     font-size: 18px;
 }
 
-.cls3,
-.cls4 {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 300;
-}
-
-.cls2,
-.cls5,
-.cls6,
-.cls7 {
-    stroke-width: 0px;
-}
-
-.cls8 {
-    clip-path: url(#clippath-2);
-}
-
-.cls9 {
-    font-size: 21px;
-}
-
-.cls9,
-.cls10 {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 600;
-}
-
-.cls9,
-.cls11,
-.cls4 {
-    fill: white;
-}
-
-.cls5,
-.cls10 {
-    fill: var(--ifm-color-primary);
-}
-
-.cls12 {
-    clip-path: url(#clippath-1);
-}
-
-.cls13 {
-    clip-path: url(#clippath-4);
-}
-
-.cls10 {
-    font-size: 48px;
-}
-
-.cls11 {
-    stroke: var(--repo-line);
-}
-
-.cls14 {
-    clip-path: url(#clippath);
-}
-
-.cls15 {
-    fill: none;
-    stroke: #717171;
-}
-
-.cls16 {
-    clip-path: url(#clippath-3);
-}
-
-.cls4 {
-    font-size: 30px;
-}
-
-.cls6,
-.cls17 {
-    fill: var(--ifm-color-primary);
-}
-
-.cls7 {
+.svgDescBox {
     fill: var(--repo-data-box);
 }
 
@@ -101,4 +49,20 @@
 
 svg > a:hover {
     text-decoration: none;
+}
+
+g.hoverGroup:hover > * {
+    fill: var(--ifm-color-secondary);
+    transition-duration: 0.4s;
+    text-decoration: none;
+}
+
+g.hoverGroup:hover > line {
+    stroke: var(--ifm-color-secondary);
+    stroke-width: 3px;
+}
+
+g.hoverGroup:hover > .svgDescText {
+    fill: white;
+    transition-duration: 0.4s;
 }
