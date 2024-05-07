@@ -11,7 +11,7 @@ const DecisionTree = () => {
                 data-name="Ebene 1"
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
-                viewBox="0 0 1280 584"
+                viewBox="0 85 1280 500"
             >
                 <defs>
                     <clipPath id="clippath">
@@ -169,10 +169,10 @@ const DecisionTree = () => {
                                     transform="translate(562.8 229.2)"
                                 >
                                     <tspan x="0" y="0">
-                                        crystal structures of{" "}
+                                        crystal structures of
                                     </tspan>
                                     <tspan x="-9" y="21.6">
-                                        molecular organic and{" "}
+                                        molecular organic and
                                     </tspan>
                                     <tspan x="-6.1" y="43.2">
                                         inorganic compounds
@@ -189,7 +189,7 @@ const DecisionTree = () => {
                 />
                 <text className={styles.cls3} transform="translate(840.1 240)">
                     <tspan x="0" y="0">
-                        inorganic crystal{" "}
+                        inorganic crystal
                     </tspan>
                     <tspan x="25" y="21.6">
                         structures
@@ -202,16 +202,16 @@ const DecisionTree = () => {
                 />
                 <text className={styles.cls3} transform="translate(931 355.2)">
                     <tspan x="0" y="0">
-                        molecules and their{" "}
+                        molecules and their
                     </tspan>
                     <tspan x="35.6" y="21.6">
-                        properties,{" "}
+                        properties,
                     </tspan>
                     <tspan x="-15.2" y="43.2">
-                        identification, reactions{" "}
+                        identification, reactions
                     </tspan>
                     <tspan x="9" y="64.8">
-                        and experimental{" "}
+                        and experimental
                     </tspan>
                     <tspan x="23.8" y="86.4">
                         investigations
@@ -244,7 +244,7 @@ const DecisionTree = () => {
                 />
                 <text className={styles.cls3} transform="translate(1099.7 240)">
                     <tspan x="0" y="0">
-                        nuclear magnetic{" "}
+                        nuclear magnetic
                     </tspan>
                     <tspan x="0" y="21.6">
                         resonance (NMR)
@@ -276,27 +276,19 @@ const DecisionTree = () => {
                         transform="translate(32.9 218.4)"
                     >
                         <tspan x="0" y="0">
-                            intermolecular and{" "}
+                            intermolecular and
                         </tspan>
                         <tspan x="13.2" y="21.6">
-                            supramolecular{" "}
+                            supramolecular
                         </tspan>
                         <tspan x="18.4" y="43.2">
-                            interactions of{" "}
+                            interactions of
                         </tspan>
                         <tspan x=".3" y="64.8">
                             molecular systems
                         </tspan>
                     </text>
                 </g>
-                <text
-                    className={styles.cls10}
-                    transform="translate(278.4 71.6)"
-                >
-                    <tspan x="0" y="0">
-                        Deposit your data in a repository
-                    </tspan>
-                </text>
                 <g id="g220-2" data-name="g220">
                     <g>
                         <path
@@ -328,7 +320,7 @@ const DecisionTree = () => {
                     transform="translate(697.1 387.6)"
                 >
                     <tspan x="0" y="0">
-                        mass spectrometry{" "}
+                        mass spectrometry
                     </tspan>
                     <tspan x="6.5" y="21.6">
                         reference spectra
@@ -346,7 +338,7 @@ const DecisionTree = () => {
                         transform="translate(184.3 531.7)"
                     >
                         <tspan x="0" y="0">
-                            STRENDA{" "}
+                            STRENDA
                         </tspan>
                         <tspan x="33.4" y="25.2">
                             DB
@@ -448,7 +440,7 @@ const DecisionTree = () => {
                         transform="translate(1003.9 531.7)"
                     >
                         <tspan x="0" y="0">
-                            Chemotion{" "}
+                            Chemotion
                         </tspan>
                         <tspan x=".3" y="25.2">
                             Repository
