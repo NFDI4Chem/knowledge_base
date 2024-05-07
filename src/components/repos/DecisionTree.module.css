@@ -1,0 +1,68 @@
+/********** Repo decision tree ************/
+
+svg > * {
+    transition-duration: 0.4s;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.svgBlueBox {
+    fill: var(--ifm-color-primary);
+}
+
+.svgBlueBoxText,
+.svgHeadBoxText {
+    fill: white;
+}
+
+.svgHeadBoxText {
+    font-size: 30px;
+}
+
+.svgLine {
+    stroke: var(--repo-line);
+    stroke-width: 1px;
+}
+
+.svgDescBox {
+    fill: var(--repo-data-box);
+}
+
+.svgDescText {
+    fill: black;
+    font-size: 18px;
+}
+
+.svgDescBox {
+    fill: var(--repo-data-box);
+}
+
+.svglink:hover > * {
+    fill: var(--ifm-color-danger);
+    transition-duration: 0.4s;
+}
+
+.svglink:hover > text {
+    fill: white;
+}
+
+svg > a:hover {
+    text-decoration: none;
+}
+
+g.hoverGroup:hover > * {
+    fill: var(--ifm-color-secondary);
+    transition-duration: 0.4s;
+    text-decoration: none;
+}
+
+g.hoverGroup:hover > line {
+    stroke: var(--ifm-color-secondary);
+    stroke-width: 3px;
+}
+
+g.hoverGroup:hover > .svgDescText {
+    fill: white;
+    transition-duration: 0.4s;
+}
