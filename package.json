@@ -15,23 +15,23 @@
         "crowdin": "crowdin"
     },
     "dependencies": {
-        "@crowdin/cli": "^3.18.0",
-        "@docusaurus/core": "^3.1.1",
-        "@docusaurus/preset-classic": "^3.1.1",
+        "@crowdin/cli": "^3.19.3",
+        "@docusaurus/core": "^3.3.2",
+        "@docusaurus/preset-classic": "^3.3.2",
         "@easyops-cn/docusaurus-search-local": "^0.40.1",
-        "@fontsource/ibm-plex-sans": "^5.0.18",
+        "@fontsource/ibm-plex-sans": "^5.0.20",
         "@mdx-js/react": "^3.0.1",
-        "clsx": "^2.1.0",
+        "clsx": "^2.1.1",
         "docusaurus-plugin-matomo": "^0.0.8",
         "i": "^0.3.7",
         "prism-react-renderer": "^2.3.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
         "react-tagcloud": "^2.3.3"
     },
     "devDependencies": {
-        "@docusaurus/module-type-aliases": "^3.1.1",
-        "@docusaurus/types": "3.1.1"
+        "@docusaurus/module-type-aliases": "^3.3.2",
+        "@docusaurus/types": "3.3.2"
     },
     "browserslist": {
         "production": [
