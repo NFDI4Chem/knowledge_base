@@ -210,7 +210,8 @@ const DecisionTree = () => {
 
                     <text
                         className={styles.svgDescText}
-                        transform="translate(562.8 229.2)"
+                        transform="translate(562.8 218.4)"
+
                     >
                         <tspan x="0" y="0">
                             crystal structures of
@@ -218,8 +219,11 @@ const DecisionTree = () => {
                         <tspan x="-9" y="21.6">
                             molecular organic and
                         </tspan>
-                        <tspan x="-6.1" y="43.2">
-                            inorganic compounds
+                        <tspan x="1" y="43.2">
+                            molecular inorganic 
+                        </tspan>
+                        <tspan x="32" y="64.8">
+                             compounds
                         </tspan>
                     </text>
 
