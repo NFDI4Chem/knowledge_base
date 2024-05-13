@@ -28,7 +28,8 @@
         },
         {
             "type": "localeDropdown",
-            "position": "right"
+            "position": "right",
+            "queryString": "?userLocale=true"
         }
     ]
 }
