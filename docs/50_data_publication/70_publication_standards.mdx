@@ -48,11 +48,15 @@ See also: [Crossref's documentation on **linking datasets** to published items](
 
 ## For Research Data Infrastructure and Resource Providers
 
+### Collection DOIs
+
 :::tip Standard
 *Research data repositories should provide a Collection DOI to wrap research data objects that are relevant to an article to be published.*
 :::
 
 Field-specific research data repositories may provide DOIs to reference individual chemical reactions, molecules, and their analytical data. Generic, multidisciplinary research data repositories provide DOIs for a whole datasets published, while more than one published dataset may be relevant to study results published via an article. In other words, many DOIs may be relevant to a published article, whereas **a data availability statement may provide some DOIs but not many DOIs**. To facilitate the process of manuscript submission and article publication, each repository should provide a **Collection DOI** that wraps relevant data that should be referenced in the data availability statement. This will ensure that all data underlying a published manuscript can be linked to an article in the data availability statement and the CrossRef metadata of that article.
+
+### Embargo Periode and Metadata Accessibility
 
 :::tip Standard
 *Datasets published with an embargo period should have inaccessible data but accessible metadata.*
@@ -60,17 +64,23 @@ Field-specific research data repositories may provide DOIs to reference individu
 
 While an **embargo** period restricts access to a published dataset, the **metadata should be accessible**. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. Findable and accesible metadata is required to link articles and datasets, as DOIs to datasets need to be **validated** before the metadata record of articles gets updated.
 
+### Scholix.org
+
 :::tip Standard
 *Research data repositories should contribute to Scholix.org.*
 :::
 
 [**Scholix**](https://doi.org/10.1045/january2017-burton) provides the framework for improving the links between scientific literature and research data as well as between data and data with the goal of providing an **high-level interoperability framework for exchanging information about these links**. Thus, Scholix hubs, such as [DataCite](https://datacite.org/) or [OpenAire](https://www.openaire.eu/), contribute information on their metadata records, which contain information on connected digital objects. This information is used by academic publishers to discover datasets that correspond to an article but were published after the article was published, which allows the metadata of the article to be updated with links to the dataset.
 
+### Datasets under Review
+
 :::tip Standard
 *Research data repositories should provide access to datasets under review.*
 :::
 
 In order to include datasets in the review process of manuscripts, repositories should provide access to reviewers. It is strongly encouraged that repositories provide a status *in review* beside of the statuses *draft* and *published*. **A dataset under review should not be editable but should be accessible** via an URL, while the DOI is not yet discoverable and the DOI metadata is not yet accessible as the dataset is not yet published.
+
+### Reviewer Access to Datasets under Review
 
 :::tip Standard
 *URLs to access datasets under review should have the access credentials encoded in the URL.*
@@ -89,6 +99,8 @@ This ensures that journals may carry out automated **quality control steps upon 
 I commented this out, as the DOI should be registered when something gets published. One idea to address the chicken and egg problem for linking is that article DOIs get registered as soon as an manuscript is accepted. Only a minimum of metadata may be providede such as author and publisher names. Then, authors need to add the DOI of their article to the metadata of the dataset before the galleys and the dataset should get published and a DOI is registered. After the galley i.e. directly before the article gets published the academic publisher should also add the DOI of the dataset to their DOI (CrossRef) metadata and update all other metadate field with information already providede today.  
 
 -->
+
+### Publisher and PublisherIdentifier in DataCite Metadata
 
 :::tip Standard
 *Research data repositories should provide the repository name as 'publisher' as well as a 'publisherIdentifier' in a dataset's DataCite metadata.*
@@ -113,11 +125,15 @@ In XML:
 
 This ensures humans as well as machines can trace and interpret where the data has been published.
 
+### Metadata Corrections and Updates
+
 :::tip Standard
-*Research data repositories should allow researchers to update the metadata of datasets.*
+*Research data repositories should allow researchers to correct and update the metadata of datasets.*
 :::
 
 As the process of adding metadata via a metadata editor can be error-prone, creators should be allowed to **correct and update** the PID metadata as well as any other metadata. For full transparency, metadata may be **versioned**. The record may indicate to viewers that changes were made. Updating of metadata contributes to [FAIR](/docs/fair) ([F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below)) by enhancing the richness of metadata, and also allows creators to add additional related identifiers for recently published related datasets and articles. 
+
+### Legal Issues on Dataset Abstract 
 
 :::tip Standard
 *Research data repositories should inform authors and data curators about possible rights conflicts for the abstract field in the datasets DataCite metadata.*
@@ -125,17 +141,23 @@ As the process of adding metadata via a metadata editor can be error-prone, crea
 
 Dataset's should have their **own description as an abstract**. Copying the related article abstract can results in a **rights conflict** with the respective acedemic publisher. This is particularly the case in German law. Authors and data curators should be informed of this conflict, e.g. via a **tooltip** when adding metadata using a metadata editor.
 
+### Group Licenes
+
 :::tip Standard
 *In research data repositories, licences should be grouped into research data licenses and software licenses.*
 :::
 
 Repositories often tend to provide confusingly long lists of licences. Furthermore, **licenses** differ for datasets and software. Providing a **grouping** will greatly assit authors in selecting from the correct set. 
 
+### Encourage Creative Commons Licences
+
 :::tip Standard
 *Research data repositories should encourage researchers to choose a Creative Commons licence to simplify the landscape of licences and their choice.*
 :::
 
 In line with grouping licences between software and datasets, pointing authors towards the selection of [**Creative Commons (CC)**](https://creativecommons.org/) license alleviates the selection process. When publishing research data, Creative Commons licences that are no more restrictive than CC BY are strongly recommended.
+
+### Promote Least Restrictive Creative Commons Licences
 
 :::tip Standard
 *Research data repositories should suggest licences such as CC0 or CC BY by pre-selecting such a licence rather than more restrictive licences such as CC BY-SA or even CC BY-NC-ND, which can make reuse very difficult.*
