@@ -16,7 +16,7 @@ This page is under construction, while you are welcome to read the already exist
 ### How to use dataset PIDs in scientific articles
 
 <!--Standard on how to publish NMR data, tbd-->
-
+<!--RelationTypes of Datasets to link to articles-->
 
 During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
 
@@ -167,41 +167,89 @@ Shared data should be as **open as possible, as closed as necessary** with the i
 
 ## For Publishers and Journals
 
-<!---Add Scholix!--->
-
-The below outlines a collection of standards for publishers and journals.
-
----
-
-:::tip Standard
-*Articles should be linked within their DOI metadata to dataset(s) with the `relation` `type` `is-supplemented-by` and the dataset(s) should link to the article using the `relationType` `IsSupplementTo`.*
-:::
-
-This agrees with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/). It establishes a structured **link** between both PIDs and ensures humans and machines alike can interpret the relationship between the published objects.
-
----
+### Recommendations for Trusted, Chemistry-friendly Repositories
 
 :::tip Standard
 *Journals should recommend trusted, chemistry-friendly research data repositories.*
 :::
 
-To assist authors in selecting **well-established and community-specific repositories** for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals. These should be included within the author guidelines or the data policies.
+To assist authors in selecting **well-established and community-specific [repositories](/docs/repositories/)** for their research data, [trusted chemistry friendly repositories](/docs/choose_repository/) should be recommended by journals. These should be included within the author guidelines or the data policies.
 
----
+### Recommendations to Include Data Availability Statements
 
 :::tip Standard
-*Journals should add data availability statements to their submission system.*
+Journals should recommend that authors provide a data availability statement. Author guidelines should also provide templates for illustration.*
 :::
 
-During manuscript submission, editable [templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availabilty statements**](/docs/data_availability_statement) should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by inlcuding the DOI or other PID, enabling the FAIR principles (e.g., [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)).
+[Templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availability statements**](/docs/data_availability_statement) or similarly termed section should be made available to authors in author guidelines of journals. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by including the DOI or other PID, enabling the FAIR principles (e.g. [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)). It should also be mentioned if templates are selectable and information should be provided via the manuscript submission system.
 
----
+### Data Availability Statements and Manuscript Submission Systems 
+
+:::tip Standard
+*Journals should add a data availability statement to published articles and collect the necessary information through their submission systems.*
+:::
+
+[Templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for data [**availability statements**](/docs/data_availability_statement) or similarly termed section should also be added to the manuscript submission system. Once a template has been selected by the submitter, the data availability statement should be editable to allow authors to add additional information, such as what data are included in the dataset, similar to what is currently often mentioned in the section on supporting information PDF files. The submission system should then require the submitter to provide the necessary information, such as the DOI (specified as [DOI name](https://www.doi.org/doi-handbook/HTML/doi-name-syntax2.html) e.g. `10.1000/182` or as a URL i.e. including a resolver e.g `https://doi.org/10.1000/182` ), repository name, third party name and contact information, or reasons for restricted access and information on how to access a dataset, depending on the template used.
+
+### Link Datasets to Articles in CrossRef DOI Metadata
+
+:::tip Standard
+*Journals should use the information available in data availability statements to enhance CrossRef DOI metadata by linking articles to datasets.*
+:::
+
+With the DOI and repository name in hand, journals should enrich CrossRef DOI metadata of articles published following the [FAIR](/docs/fair/) principles (e.g [F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below), [I3](/docs/fair/#i3-metadata-include-qualified-references-to-other-metadata)). This establishes a structured **link** between the DOI of the article and the  DOI of the dataset and ensures humans and machines alike can interpret the relationship between the published objects. For CrossRef metadata, a `related_item` should be added to mention the name of the repository (equal to `publisher` in the corresponding dataset DataCite DOI metadata). 
+
+In XML:
+```xml
+<rel:program name="relations">
+	<rel:related_item>
+		<rel:description>
+		Dataset in <repository name>.		
+		</rel:description>
+		<rel:inter_work_relation relationship-type="isSupplementedBy" 
+identifier-type="doi">10.prefix/suffix
+		</rel:inter_work_relation>
+	</rel:related_item>
+</rel:program>
+```
+
+In agreement with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/), the relationship type `isSupplementedBy` should be used.
+
+### Add Data Publications to Prior Publication Policy
 
 :::tip Standard
 *Journal author guidelines should explicitly encourage pre-submission of datasets.*
 :::
 
-To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets should be published prior to the publication of the article**. Thus, once an article is accepted, the authors should publish the underlying data, ensuring that data is avilable when the article is published and that the journal editors can run quality control checks on the provided DOI. This process must be explicitely communicated with authors through the author guidelines, yet can also be in included within other communication upon acceptance. At this point, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to publication.
+Similar to the publication of preprints, journal author guidelines should allow for the pre-submission of datasets, as this is already the case for many journals for crystallographic data published in CSD with CCDC. Datasets published prior to manuscript submission facilitate manuscript submission workflows as DOIs of dataset are registered, DOIs can be validated and datasets can be included in the review process.
+
+:::danger Danger
+A disadvantage of pre-submission is that researchers cannot link the dataset to the manuscript, as the manuscript has not yet been published and no DOI has been registered. The metadata of the dataset need to be manually updated by the authors after the article got published. Datasets with status *under review* are one way to overcome this disadvantage (see below).
+:::
+
+### Recommendations to Include Research Data in the Review Process
+
+:::tip Standard
+*Journal author guidelines should explicitly encourage to include research data in the review process.*
+:::
+
+Some repositories have an *under review* status alongside the *draft* and *published* statuses. A dataset *under review* is not editable and not published, i.e. it does not have a DOI registered, which can be validated. Nonetheless, the dataset has an internally reserved DOI and is accessible via a URL to provide access to editors and reviewers. This allows research data to be included in the review process. The URL to access the dataset should be requested by the submission system so that it can be forwarded to editors and reviewers.
+
+### Encourage to Publish Datasets prio Publishing Articles
+
+:::tip Standard
+*Journal author guidelines should require that datasets under review get published prior an article gets published.*
+:::
+
+To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets *under review* should be published prior to the publication of the article**. Once a manuscript is accepted, the authors should be informed to publish their dataset *under review*. This ensures that the data has a registered DOI when the article gets published. Consequently, journal can run quality control checks on the provided DOI such as validation. This process must be explicitly communicated with authors through the author guidelines, yet can also be included within other communication upon acceptance. Contemporaneous, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to the publication of the dataset. Finally, the article gets published, and its DOI gets registered.
+
+### Scholix.org
+
+:::tip Standard
+*Journals and publishers should use Scholix.org.*
+:::
+
+[**Scholix**](https://doi.org/10.1045/january2017-burton) provides the framework for improving the links between scientific literature and research data as well as between data and data with the goal of providing a **high-level interoperability framework for exchanging information about these links**. Thus, Scholix hubs, such as [DataCite](https://datacite.org/) or [OpenAire](https://www.openaire.eu/), contribute information on their metadata records, which contain information on connected digital objects. This information should be used academic publishers to discover datasets that correspond to an article but were published after the article was published, which allows the metadata of the article to be updated with links to the dataset (see above).
 
 ----
 Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661), [ORCID: 0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840)
