@@ -102,7 +102,7 @@ In agreement with [Crossref's documentation on **linking datasets** to published
 *Journal author guidelines should explicitly encourage pre-submission of datasets.*
 :::
 
-Similar to the publication of preprints, journal author guidelines should allow for the pre-submission of datasets, as this is already the case for many journals for crystallographic data published in CSD with CCDC. Datasets published prior to manuscript submission facilitate manuscript submission workflows as DOIs of dataset are registered, DOIs can be validated and datasets can be included in the review process.
+Similar to the publication of preprints, journal author guidelines should allow for the pre-submission of datasets, as this is also already the case for many journals for crystallographic data published in CSD with CCDC. Datasets published prior to manuscript submission facilitate manuscript submission workflows as DOIs of dataset are registered, DOIs can be validated and datasets can be included in the review process.
 
 :::danger Danger
 A disadvantage of pre-submission is that researchers cannot link the dataset to the manuscript, as the manuscript has not yet been published and no DOI has been registered. The metadata of the dataset need to be manually updated by the authors after the article got published. Datasets with status *under review* are one way to overcome this disadvantage (see below).
@@ -173,18 +173,6 @@ In order to include datasets in the review process of manuscripts, repositories 
 :::
 
 **Review links** for datasets *under review* should have the **access credentials** encoded in the URL, rather than having separate login and password. This avoids having to forward these details to the reviewer via the submission system. 
-
-<!--
-
-:::tip Standard
-*Repositories should register a DOI and populate main fields such as creator and contributor, if a dataset is under review.*
-:::
-
-This ensures that journals may carry out automated **quality control steps upon manuscript submission**. Further details within the dataset's metadata and content may still be adjusted and updated prior to final publication.
-
-I commented this out, as the DOI should be registered when something gets published. One idea to address the chicken and egg problem for linking is that article DOIs get registered as soon as an manuscript is accepted. Only a minimum of metadata may be providede such as author and publisher names. Then, authors need to add the DOI of their article to the metadata of the dataset before the galleys and the dataset should get published and a DOI is registered. After the galley i.e. directly before the article gets published the academic publisher should also add the DOI of the dataset to their DOI (CrossRef) metadata and update all other metadate field with information already providede today.  
-
--->
 
 ### Publisher and PublisherIdentifier in DataCite Metadata
 
