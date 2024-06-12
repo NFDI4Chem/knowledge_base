@@ -3,7 +3,9 @@ title: "Publishing Standards"
 slug: "/publishing_standards"
 ---
 
-On this page we collect a non-exhaustive list of standards for data publication, formulated as principles, developed within the NFDI4Chem Publication Standards project. These standards are intended to streamline publication workflows, including the review process of manuscripts with corresponding datasets published in research data repositories. 
+On this page we collect a non-exhaustive list of data publication standards, formulated as principles, that have been developed within the NFDI4Chem Publication Standards project. These standards are intended to improve the quality of metadata and streamline publication workflows, including the review process of manuscripts with corresponding datasets published in research data repositories. 
+
+For more generic information for authors on publishing in field-specific and generic, multidisciplinary repositories such as publishing data in open formats or providing machine-readable chemical structures alongside the analytical data, please have a look to our page on [Best-Practices](/docs/best_practice/).
 
 :::info Applies to:
 Authors, publishers and infrastructure operators are the target audiences for these standards.
@@ -11,6 +13,13 @@ Authors, publishers and infrastructure operators are the target audiences for th
 
 ## For Authors
 
+### Use ORCID iD to Identifiy Authors and ROR to Identifiy Institutions
+
+:::tip Standard
+*Authors should provide their ORCID iD to identify the authors/creators and contributors, and their ROR identifier to identify the institution to which they are affiliated.*
+::: 
+
+ORCID iDs allow authors to be uniquely identified, whereas author names may not be unique, may change, or may have different ordering conventions depending on cultural differences. Similarly, affiliations can vary according to style and granularity. In order to uniquely identify the institutions to which authors are affiliated, the ROR identifier should be provided. Please note that the ROR identifier is not intended to resolve down to the departmental level. Nevertheless, both identifiers improve findability.
 
 ### How to use Dataset PIDs in Scientific Articles
 
@@ -156,6 +165,26 @@ To assist in automated workflows, such as linking the datasets to the published 
 
 ## For Research Data Infrastructure and Resource Providers
 
+### Metadata Should be Part of a Dataset 
+
+:::tip Standard
+*Research data repositories should include the metadata in datasets downloaded by researchers.*
+:::
+
+While researchers upload their data, metadata is attached. For generic, multidisciplinary repositories, additional metadata is provided via a metadata editor. For field-specific repositories, the metadata is extracted from the analytical data files and provided by researcher along their lab workflows, as this is the case for Chemotion ELN. Once data is retrieved from a repository, this metadata should not be lost but should be included in the downloaded package. The minimum to include is the descriptive DataCite metadata. 
+
+[BagIt](https://www.rfc-editor.org/rfc/rfc8493.html), a set of hierarchical file system conventions, is one solution for including metadata in downloaded dataset.
+
+### Structured Domain-Specific Metadata Should be Part of a Dataset
+
+:::tip Standard
+*Research data repositories should include structured, domain-specific metadata in datasets downloaded by researchers.*
+:::
+
+Beside of metadata following generic schemes such as DataCite's metadata scheme, domain-specific metadata should be part of each dataset. This metadata should also be provided in datasets downloaded by researchers for reuse. 
+
+One solution to this is to include Schema.org metadata by [combining RO-Crate and BagIt](https://www.researchobject.org/ro-crate/specification/1.1/appendix/implementation-notes.html#adding-ro-crate-to-bagit).
+
 ### Collection DOIs
 
 :::tip Standard
@@ -170,7 +199,7 @@ Field-specific research data repositories may provide DOIs to reference individu
 *Datasets published with an embargo period should have inaccessible data but accessible metadata.*
 :::
 
-While an **embargo** period restricts access to a published dataset, the **metadata should be accessible**. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. Findable and accessible metadata is required to link articles and datasets, as DOIs to datasets need to be **validated** before the metadata record of articles gets updated.
+While an **embargo** period restricts access to a published dataset, the **metadata should be accessible** – *publish* with embargo. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. Findable and accessible metadata is required to link articles and datasets, as DOIs to datasets need to be **validated** before the metadata record of articles gets updated.
 
 ### Scholix.org
 
@@ -260,6 +289,14 @@ In line with grouping licences between software and datasets, pointing authors t
 :::
 
 Shared data should be as **open as possible, as closed as necessary** with the intent of allowing and enabling others to reuse and build upon the work. Thus, encouraging rather open licences such as **[CC0](https://creativecommons.org/public-domain/cc0/)** and **[CC BY](https://creativecommons.org/licences/by/4.0/)** as opposed to more restrictive licences such as [CC BY-SA](https://creativecommons.org/licences/by-sa/4.0/) or even [CC BY-NC-ND](https://creativecommons.org/licences/by-nc-nd/4.0/).
+
+### Creators and Contributors
+
+:::tip Standard
+*Research data repositories should label fields for creators in their (DataCite) metadata editor as authors/creators.*
+:::
+
+Researchers are used to talking about authors when it comes to the publication of results with one of the scientific publishers. On the other hand, DataCite distinguishes between authors and contributors, with the latter also being assigned a role. To avoid confusion for researchers who want to publish their data, metadata editors of repositories should guide researchers when adding metadata by labelling the field for creators in their (DataCite) metadata editors as authors/creators. 
 
 ----
 Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661), [ORCID: 0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840)
