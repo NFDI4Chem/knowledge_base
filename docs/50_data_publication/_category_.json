@@ -1,7 +1,7 @@
 {
-  "label": "Data Publishing",
-  "link": {
-    "type"  : "doc",
-    "id" : "data_publishing"
-  }
+    "label": "Data Publishing",
+    "link": {
+        "type": "doc",
+        "id": "data_publishing"
+    }
 }
