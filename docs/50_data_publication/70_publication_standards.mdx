@@ -1,10 +1,7 @@
 ---
-title: "Publication Standards"
-slug: "/publication_standards"
+title: "Publishing Standards"
+slug: "/publishing_standards"
 ---
-
-<!--Note: see collection of standards: https://docs.google.com/document/d/1hcQb3A41twrY3mt5vF_axm5AQr2tdDsRnOjnQfw-rSo/edit?usp=sharing-->
-
 
 ![Under Construction](/img/Constr_2bl.png)
 
@@ -18,17 +15,10 @@ This page is under construction, while you are welcome to read the already exist
 
 During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their article for interlinking in two main ways:
 
-:::tip Standard
-*Authors should add the PID of the corresponding dataset(s) to the data availability statement. In addition, authors should add corresponding datasets to the references, making them citable within the text of the article.* 
-::: 
+-   For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [data availability statement](/docs/data_availability_statement), or a similarly termed section. If you believe that your data publication is as decisive as the article itself, add your dataset to the references as well and cite within the text. <!--Vielleicht eher "In order to specifically reference your data within the text, add your dataset to the refernces as well. -->
+-   For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
 
-For corresponding data, i.e. data directly underlying the results reported in the article, add the PID to the article's [data availability statement](/docs/data_availability_statement), or a similarly termed section. If you believe that your data publication is as decisive as the article itself, add your dataset to the references as well and cite within the text.
-
-:::tip Standard
-*Authors should add PIDs to datasets by other researchers, which have been reused to the references rather than citing the corresponding article*
-:::
-
-For datasets published by other researchers and reused within a study, add the PID to the reference section of the manuscript and cite within the text accordingly.
+<!--Add note on relationType IsSupplementTo and IsSupplementedBy -->
 
 :::info Notice:
 This distinction is important, because the link to the dataset in the DOI metadata of scientific articles is differently set, depending on whether the dataset is a directly related source of information or a referenced source by other researchers and its information has been reused.
@@ -38,171 +28,10 @@ For a set of reactions, samples, and analyses, to assemble a study, **Collection
 
 In addition, but second-tier, the PID of a related dataset could also be mentioned in the supplementary PDF, if such a document is generated.
 
-### How to link scientific articles to thier corresponding dataset(s)
+_This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License._
 
-Many data repositories will offer the option to add a related identifier. According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. As stressed [above](#how-to-use-dataset-pids-in-scientific-articles), while datasets _may_ be cited within the article, the data availability statement should include them, first and foremost. Hence, to ensure the correct linking on the side of the datset, the relation type `IsSupplementTo` should primarily used, while `IsCitedBy` can be used in addition if the dataset is indeed referenced. 
-
-See also: [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/)
-
-## For Research Data Repositories
-
-The below outlines a collection of standards for research data repositories. 
+![CC0 badge](/img/cc-zero.svg)
 
 ---
 
-:::tip Standard
-*Research data repositories should provide a Collection DOI to wrap datasets corresponding to one study.*
-:::
-
-Research data repositories may use individual DOIs to reference individual chemical reactions, molecules, or analytical datasets. Thus, many DOIs will then be relevant to the published study results. In order to facilitate the manuscript submission process, a **single DOI** that wraps all relevant data should be available. Furthermore, this ensure all data underlying a published manuscript can be viewed and referenced as a single **collection**.
-
----
-
-:::tip Standard
-*NFDI4Chem-supported research data repositories should contribute to Scholix.org (or a similar solution).*
-:::
-
-[**Scholix**](https://doi.org/10.1045/january2017-burton) provides the framework for improving the links between scientific literature and research data as well as between data and data with the goal of providing **high-level interoperability framework for exchanging information about these links**. Thus, Scholix hubs, such as [DataCite](https://datacite.org/) or [OpenAire](https://www.openaire.eu/), contribute information on their metadata records, which contain information on connected digital objects.
-
----
-
-:::tip Standard
-*Datasets published with an embargo period should have inaccessible data but accessible metadata.*
-:::
-
-While an **embargo** period restricts access to a published dataset, the **metadata should still be accessible**. This allows relevant information on the dataset to be retrieved and enables [FAIR](/docs/fair) ([A2](/docs/fair/#a2-metadata-are-accessible-even-when-the-data-are-no-longer-available)), while guaranteeing first rights to the data to the authors. 
-
----
-<!--Standard on how to publish NMR data, tbd-->
-
-
-:::tip Standard
-*URLs to access datasets under review should have the access credentials encoded in the URL.*
-:::
-
-**Review links** for datasets should have the **access credentials** encoded in the URL, rather than having separate login and password. This avoids having to forward these details to the reviewer via the submission system. 
-
----
-
-:::tip Standard
-*Repositories should register a DOI and populate main fields such as creator and contributor, if a dataset is under review.*
-:::
-
-This ensures that journals may carry out automated **quality control steps upon manuscript submission**. Further details within the dataset's metadata and content may still be adjusted and updated prior to final publication.
-
----
-
-:::tip Standard
-*Research data repositories should provide the repository name as `publisher` in a dataset's metadata.*
-:::
-
-As stated by [**DataCite's documenation on the publisher field**](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/publisher/#publisher), this `publisher` field is used to formulate the citation of the data and thus should be the repository name. 
-
----
-
-:::tip Standard
-*Research data repositories should provide their repository identifier by re3data.org as a `publisherIdentifier`.*
-:::
-
-To uniquely and persistently identify themselves within the dataset's metadata, repositories should provide their **repository identifier from re3data.org**. These should be automatically populated metadata fields. If data has originally been published in another repository, the respective repository identifier should be used.
-
-In the case of RADAR4Chem the relationship would be described as follows (see also [DataCite's documenation on the publisher field](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/publisher/#publisher)):
-
->Publisher: RADAR4Chem
->
->publisherIdentifier: http://doi.org/10.17616/R3ZX96
->
->publisherIdentifierScheme: re3data 
->
->schemeURI: https://re3data.org/
-
-```xml
-<publisher xml:lang="en" publisherIdentifier="http://doi.org/10.17616/R3ZX96" publisherIdentifierScheme="re3data" schemeURI="https://re3data.org/">RADAR4Chem</publisher>
-```
-
-This ensures humans as well as machines can trace and interpret where the data has been published.
-
----
-
-:::tip Standard
-*Research data repositories should allow researchers to update the research data's metadata.*
-:::
-
-This pertains to **corrections and updates** made both to the PID metadata as well as any other metadata. For full transparency, metadata may be **versioned**. The record may indicate to viewers that changes were made. 
-
----
-
-:::tip Standard
-*Research data repositories should inform authors and data curators about possible rights conflicts for the abstract field in the DataCite schema*
-:::
-
-Dataset's should have their **own description as an abstract**. Copying the related text publication abstract can results in a **rights conflict** with the respective publisher. Authors and data curators should be informed about this conflict when filling out a dataset's metadata.
-
----
-
-:::tip Standard
-*In research data repositories, licenses should be grouped in licenses for research data vs. licences for software.*
-:::
-
-**Licenses** differ for datasets and software. Thus, providing a **grouping** greatly aids authors in selecting from the correct set. 
-
----
-
-:::tip Standard
-*Research data repositories should guide users to choose a creative commons license while not making the overall landscape too complicated*
-:::
-
-In line with grouping licenses between software and datasets, pointing authors towards the selection of [**creative commons (CC)**](https://creativecommons.org/) license alleviates the selection process.  
-
----
-
-:::tip Standard
-*Research data repositories should pre-select licenses such as CC0 or CC BY 4.0 instead of more restrictive licenses such as CC BY-SA 4.0, which might highly complicate reuse.*
-:::
-
-Licenses can be confusing to authors. Shared data should be as **open as possible, as closed as necessary** with the intent of allowing and enabling others to reuse and build upon the work. Thus, encouraging rather open licences such as **[CC0](https://creativecommons.org/public-domain/cc0/) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** as opposed to more restrictive licenses such as [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) or [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
-
-## For Publishers and Journals
-
-The below outlines a collection of standards for publishers and journals.
-
----
-
-:::tip Standard
-*Articles should be linked within their DOI metadata to dataset(s) with the `relation` `type` `is-supplemented-by` and the dataset(s) should link to the article using the `relationType` `IsSupplementTo`.*
-:::
-
-This agrees with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/). It establishes a structured **link** between both PIDs and ensures humans and machines alike can interpret the relationship between the published objects.
-
----
-
-:::tip Standard
-*Journals should recommend trusted, chemistry-friendly research data repositories.*
-:::
-
-To assist authors in selecting **well-established and community-specific repositories** for the research data, [trusted chemistry friendly repositories](docs/choose_repository) should be recommended by journals. These should be included within the author guidelines or the data policies.
-
----
-
-:::tip Standard
-*Journals should add data availability statements to their submission system.*
-:::
-
-During manuscript submission, editable [templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availabilty statements**](/docs/data_availability_statement) should be provided to authors. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by inlcuding the DOI or other PID, enabling the FAIR principles (e.g., [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)).
-
----
-
-:::tip Standard
-*Journal author guidelines should explicitly encourage pre-submission of datasets.*
-:::
-
-To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets should be published prior to the publication of the article**. Thus, once an article is accepted, the authors should publish the underlying data, ensuring that data is avilable when the article is published and that the journal editors can run quality control checks on the provided DOI. This process must be explicitely communicated with authors through the author guidelines, yet can also be in included within other communication upon acceptance. At this point, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to publication.
-
----
-
-*This page is licensed under a Creative Commons Universal ([CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)) Public Domain Dedication International License.*
-
-![CC0 badge](https://licensebuttons.net/l/zero/1.0/88x31.png)
-
-----
-Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661), [ORCID: 0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840)
+Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661)

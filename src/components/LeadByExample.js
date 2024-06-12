@@ -115,6 +115,10 @@ function Lbe() {
 		}
 	}
 
+	if (lbeState.switch !== "search") {
+		result.sort((a, b) => b.pubyear - a.pubyear);
+	  }
+
 	return (
 		<div className="lbe">
 			<FilterSection {...{repos, subdiscs, journals, lbeState, setLbeState, resultOutput}} />

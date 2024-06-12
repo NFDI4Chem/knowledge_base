@@ -1,4 +1,6 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
+/** @type {import('@docusaurus/types').Config} */
+
+import { themes as prismThemes } from "prism-react-renderer";
 
 const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
@@ -6,8 +8,6 @@ const announcementBar = announcementBarActive
     : {};
 
 const title = "NFDI4Chem Knowledge Base";
-const subtitle =
-    "A place for all knowledge regarding Research Data Management (RDM) in Chemistry";
 const description =
     "Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
 const url = "https://knowledgebase.nfdi4chem.de/";
@@ -20,12 +20,11 @@ const footerLinks = require("./footer.json");
 // const baseUrl = '/staging/knowledge_base_matomo/';
 // const baseUrl = '/staging/knowledge_base/';
 
-module.exports = {
+const config = {
     title: title,
     url: url,
     baseUrl: baseUrl,
     customFields: {
-        subtitle: subtitle,
         description: description,
     },
     onBrokenLinks: "warn",
@@ -87,26 +86,30 @@ module.exports = {
 						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 					</div>
 					<div class="cell" style="padding: 0.1rem; text-align: left;" >
-						Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>, if not stated otherwise.<br />
-						Copyright © 2023 NFDI4Chem. Built with Docusaurus.
+						Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0</a> License, if not stated otherwise.<br />
+						Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.
 					</div>
 				</div>
         	`,
         },
         colorMode: { disableSwitch: true },
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
+        },
     },
     presets: [
         [
-            "@docusaurus/preset-classic",
+            "classic",
+            /** @type {import('@docusaurus/preset-classic').Options} */
             {
                 docs: {
-                    sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
+                    sidebarPath: "./sidebars.js",
                     editUrl:
                         "https://github.com/NFDI4Chem/knowledge_base/tree/main/",
                 },
                 theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
+                    customCss: "./src/css/custom.css",
                 },
             },
         ],
@@ -121,3 +124,5 @@ module.exports = {
         ],
     ],
 };
+
+export default config;

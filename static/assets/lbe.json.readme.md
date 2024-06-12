@@ -1,0 +1,3 @@
+# Please read before updating jbe.json directly
+
+NFDI4Chem provides an entry point to add data to lbe.json via a sheet. This should allow users who are not familiar with GitHub to add data. If you make updates directly to lbe.json, please also provide the updated information in the corresponding sheet https://t1p.de/0lbfk. If you need access, please get in contact via our helpdesk helpdesk@nfdi4chem.de.
