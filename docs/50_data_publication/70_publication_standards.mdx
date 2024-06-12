@@ -5,7 +5,7 @@ slug: "/publishing_standards"
 
 On this page we collect a non-exhaustive list of data publication standards, formulated as principles, that have been developed within the NFDI4Chem Publication Standards project. These standards are intended to improve the quality of metadata and streamline publication workflows, including the review process of manuscripts with corresponding datasets published in research data repositories. 
 
-For more generic information on publishing in field-specific and generic, multidisciplinary repositories such as publishing data in open formats or providing machine-readable chemical structures alongside the analytical data, please have a look to our page on [Best-Practices](/docs/best_practice/).
+For more generic information for authors on publishing in field-specific and generic, multidisciplinary repositories such as publishing data in open formats or providing machine-readable chemical structures alongside the analytical data, please have a look to our page on [Best-Practices](/docs/best_practice/).
 
 :::info Applies to:
 Authors, publishers and infrastructure operators are the target audiences for these standards.
@@ -165,15 +165,25 @@ To assist in automated workflows, such as linking the datasets to the published 
 
 ## For Research Data Infrastructure and Resource Providers
 
-### Metadata Should be Part of the Dataset Downloaded
+### Metadata Should be Part of a Dataset 
 
 :::tip Standard
 *Research data repositories should include the metadata in datasets downloaded by researchers.*
 :::
 
+While researchers upload their data, metadata is attached. For generic, multidisciplinary repositories, additional metadata is provided via a metadata editor. For field-specific repositories, the metadata is extracted from the analytical data files and provided by researcher along their lab workflows, as this is the case for Chemotion ELN. Once data is retrieved from a repository, this metadata should not be lost but should be included in the downloaded package. The minimum to include is the descriptive DataCite metadata. 
 
+[BagIt](https://www.rfc-editor.org/rfc/rfc8493.html), a set of hierarchical file system conventions, is one solution for including metadata in downloaded dataset.
 
+### Structured Domain-Specific Metadata Should be Part of a Dataset
 
+:::tip Standard
+*Research data repositories should include structured, domain-specific metadata in datasets downloaded by researchers.*
+:::
+
+Beside of metadata following generic schemes such as DataCite's metadata scheme, domain-specific metadata should be part of each dataset. This metadata should also be provided in datasets downloaded by researchers for reuse. 
+
+One solution to this is to include Schema.org metadata by [combining RO-Crate and BagIt](https://www.researchobject.org/ro-crate/specification/1.1/appendix/implementation-notes.html#adding-ro-crate-to-bagit).
 
 ### Collection DOIs
 
