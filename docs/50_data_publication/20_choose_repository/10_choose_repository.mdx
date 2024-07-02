@@ -4,14 +4,15 @@ slug: "/choose_repository"
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import DecisionTree from "@site/src/components/repos/DecisionTree";
 
 # Choose a Repository
 
 The NFDI4Chem aims to support researchers in collecting, storing, processing, analysing, publishing, and reusing research data. Based on the [NFDI4Chem Community Survey](https://doi.org/10.1002/zaac.202000339), a list of the most [common data types and formats](/docs/pub_data_types_formats) of the community has been compiled to suggests suitable trusted chemistry-friendly repositories.
 
-This decision tree will guide users to quickly select a suitable repository for publishing their research data!
+This decision tree will guide users to quickly select a suitable repository for publishing their research data. Click on the repositories to learn more!
 
-![Choose a Repository - Decision Tree](/img/data_pub/Repo_decision_tree_v2.svg)
+<DecisionTree />
 
 :::danger Notice:
 Choosing the most appropriate repository can make data easier to find and cite. Field-specific repositories should be the first choice as these repositories enhance the FAIRness of specific types of chemistry data on behalf of the submitters. To retain the same level of FAIRness, data publishing in generic, multidisciplinary repositories requires manual, time-consuming and labour-intensive FAIRification.
