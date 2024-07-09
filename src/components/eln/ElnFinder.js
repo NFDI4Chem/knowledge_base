@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Link from "@docusaurus/Link";
 import moment from "moment";
 
-import ShortenDesc from "./ShortenDesc";
+import ElnStack from "./ElnStack";
+import ElnStatus from "./ElnStatus";
 
 // const elnData = require("@site/static/assets/eln_test.json");
 
@@ -28,6 +28,7 @@ function ElnFinder() {
     }
 
     let elnTable = [];
+    let allSubDisc = [];
 
     const dateDownloaded = moment(elnData.date);
     const relativeDate = moment(dateDownloaded).fromNow();
@@ -36,6 +37,14 @@ function ElnFinder() {
         const chemElns = elnData["_embedded"].searchResult["_embedded"].objects;
 
         chemElns.map((eln) => {
+            let subDisc = [];
+            eln["_embedded"].indexableObject.metadata["dc.subject"].map(
+                (discipline) =>
+                    discipline.value.startsWith("Chemistry:")
+                        ? subDisc.push(discipline.value.split(":")[1])
+                        : null
+            );
+
             elnTable.push({
                 name: eln["_embedded"].indexableObject.name,
                 url: eln["_embedded"].indexableObject.metadata[
@@ -48,55 +57,23 @@ function ElnFinder() {
                 desc: eln["_embedded"].indexableObject.metadata[
                     "dc.description.abstract"
                 ][0].value,
+                subDisc: subDisc,
             });
+            allSubDisc.push(subDisc);
+            console.log(elnTable);
         });
+
+        allSubDisc = [...new Set(allSubDisc.flat())];
+        console.log(allSubDisc);
     } catch (error) {
-        return <em>Failed to process ELN data</em>;
+        console.error(error);
+        return <em>Failed to process ELN data.</em>;
     }
 
     return (
         <React.Fragment>
-            <p>
-                <em>
-                    Data kindly provided by{" "}
-                    <Link to="https://eln-finder.ulb.tu-darmstadt.de/">
-                        ELN Finder
-                    </Link>{" "}
-                    (
-                    {relativeDate !== "Invalid date"
-                        ? "last updated " + relativeDate
-                        : "last update unknown"}
-                    ).
-                </em>
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>License</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {elnTable.map((eln) => (
-                        <tr>
-                            <td>
-                                <Link to={eln.url}>{eln.name}</Link>
-                            </td>
-                            <td>
-                                {eln.license === "Open Source" ? (
-                                    <strong>{eln.license}</strong>
-                                ) : (
-                                    eln.license
-                                )}
-                            </td>
-                            <td>
-                                <ShortenDesc desc={eln.desc} length={200} />
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            <ElnStatus {...{ relativeDate }} />
+            <ElnStack {...{ elnTable }} />
         </React.Fragment>
     );
 }
