@@ -11,14 +11,14 @@ const title = "NFDI4Chem Knowledge Base";
 const description =
     "Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
 const url = "https://knowledgebase.nfdi4chem.de/";
-const baseUrl = "/knowledge_base/";
+// const baseUrl = "/knowledge_base/";
 
 const navbar = require("./navbar.json");
 const footerLinks = require("./footer.json");
 
 // Use for stagging:
 // const baseUrl = '/staging/knowledge_base_matomo/';
-// const baseUrl = '/staging/knowledge_base/';
+const baseUrl = "/staging_eln/knowledge_base/";
 
 const config = {
     title: title,
