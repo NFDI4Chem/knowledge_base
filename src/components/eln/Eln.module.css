@@ -1,0 +1,60 @@
+/********** ELN-Finder ************/
+
+.eln {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Search / Filter section */
+
+.eln__searchfilter {
+    padding: 0;
+    width: 100%;
+}
+
+.eln__card {
+    width: 48%;
+    margin: 0.1rem;
+    padding: 0.75rem;
+    border: 1px dashed var(--ifm-color-primary);
+    margin-bottom: 0.75rem;
+    transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.eln__card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eln__card__desc {
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .eln {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .eln__card {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px dashed var(--ifm-color-primary);
+        margin-bottom: 0.75rem;
+        transition: all var(--n4c-transform-time) ease-in-out;
+    }
+}
+
+.eln__card__link {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.eln__licenseChip--opensource {
+    background-color: var(--ifm-color-primary);
+    color: white;
+    font-weight: bold;
+}

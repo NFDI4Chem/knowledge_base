@@ -649,7 +649,7 @@ table thead tr {
     color: var(--ifm-color-primary);
 }
 
-.lbe__filterbutton.lbe__chip {
+.lbe__chip {
     background: var(--ifm-breadcrumb-item-background-active);
     color: var(--ifm-color-primary);
     font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));
