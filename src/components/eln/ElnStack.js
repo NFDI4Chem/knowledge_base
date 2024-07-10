@@ -1,13 +1,14 @@
-import ElnCard from "./ElnCard";
-import styles from "./Eln.module.css";
+import React from "react";
 
-function ElnStack({ elnTable }) {
+import ElnCard from "./ElnCard";
+
+function ElnStack({ filteredTable }) {
     return (
-        <div className={styles.eln}>
-            {elnTable.map((eln, idx) => (
+        <React.Fragment>
+            {filteredTable.map((eln, idx) => (
                 <ElnCard {...{ eln }} key={idx} />
             ))}
-        </div>
+        </React.Fragment>
     );
 }
 
