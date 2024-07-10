@@ -10,11 +10,33 @@
 /* Search / Filter section */
 
 .eln__searchfilter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: calc(96% + 0.75rem);
     margin: 0.1rem;
     padding: 0.75rem;
     border: 1px dashed var(--ifm-color-primary);
     margin-bottom: 0.75rem;
+}
+
+.eln__searchfilter__text {
+    width: 30%;
+}
+
+.eln__searchfilter__buttons {
+    width: 70%;
+}
+
+.eln__searchfilter__search {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    padding: 0.5rem;
+}
+
+.eln__searchfilter__search > em {
+    color: var(--ifm-color-primary);
 }
 
 .eln__card {
@@ -36,17 +58,32 @@
     padding: 0.5rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .eln {
         display: flex;
         flex-direction: column;
     }
 
     .eln__searchfilter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         padding: 0.75rem;
         border: 1px dashed var(--ifm-color-primary);
         margin-bottom: 0.75rem;
+    }
+
+    .eln__searchfilter__text,
+    .eln__searchfilter__buttons {
+        width: 100%;
+    }
+
+    .eln__searchfilter__search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5rem 0;
     }
 
     .eln__card {
