@@ -3,18 +3,26 @@ import moment from "moment";
 import { useImmer } from "use-immer";
 
 import ElnStatus from "./ElnStatus";
-import ElnFilter from "./ElnFilter";
+import ElnFilter from "./elnFilter/ElnFilter";
 import ElnStack from "./ElnStack";
 
 import styles from "./Eln.module.css";
 
 // const elnData = require("@site/static/assets/eln_test.json");
 
-function ElnFinder() {
+function ElnFinder(props) {
+    // State for ELN data
+
     const [elnData, setElnData] = useState(null);
     const [error, setError] = useState(null);
 
-    const [filter, setFilter] = useImmer({});
+    // State for filtering
+
+    const [filter, setFilter] = useImmer(
+        props.subDisc ? { subDisc: props.subDisc } : {}
+    );
+
+    // Fetch ELN data
 
     useEffect(() => {
         fetch("../../assets/elnData.json")
@@ -29,16 +37,24 @@ function ElnFinder() {
             });
     }, []);
 
+    // Catch if fetch is still loading
+
     if (!elnData) {
         return <em>Loading...</em>;
     }
+
+    // Define working variables
 
     let elnTable = [];
     let allSubDisc = [];
     let allLicenses = [];
 
+    // Parse timestamp of ELN data
+
     const dateDownloaded = moment(elnData.date);
     const relativeDate = moment(dateDownloaded).fromNow();
+
+    // Assemble essential ELN data
 
     try {
         const chemElns = elnData["_embedded"].searchResult["_embedded"].objects;
@@ -71,33 +87,43 @@ function ElnFinder() {
                 eln["_embedded"].indexableObject.metadata["K.lizenzmodell"][0]
                     .value
             );
-            console.log(elnTable);
         });
 
         allSubDisc = [...new Set(allSubDisc.flat())];
         allLicenses = [...new Set(allLicenses)];
-        console.log(allSubDisc);
-        console.log(allLicenses);
     } catch (error) {
         console.error(error);
         return <em>Failed to process ELN data.</em>;
     }
 
+    // Filter ELN data based on filter state
+
     const filteredTable = elnTable.filter((eln) => {
-        if (filter.text) {
-            return JSON.stringify(eln).toLowerCase().includes(filter.text);
-        }
-
-        if (filter.subDisc) {
-            return eln.subDisc.includes(filter.subDisc);
-        }
-
-        if (filter.license) {
-            return eln.license.includes(filter.license);
-        } else {
+        if (Object.keys(filter).length === 0) {
             return true;
         }
+
+        if (filter.subDisc && !eln.subDisc.includes(filter.subDisc)) {
+            return false;
+        }
+
+        if (filter.license && eln.license !== filter.license) {
+            return false;
+        }
+
+        if (
+            filter.text &&
+            !JSON.stringify(eln)
+                .toLowerCase()
+                .includes(filter.text.toLowerCase())
+        ) {
+            return false;
+        }
+
+        return true;
     });
+
+    // Determine number of results and generate output
 
     const numberOfResults = filteredTable.length;
 
@@ -117,6 +143,8 @@ function ElnFinder() {
             resultOutput = numberOfResults + " results found.";
             break;
     }
+
+    // Render ELN Finder component
 
     return (
         <React.Fragment>
