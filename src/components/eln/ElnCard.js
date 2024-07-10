@@ -1,14 +1,11 @@
 import RepoButton from "@site/src/components/repos/RepoButton";
 
-import LicenseChip from "./LicenseChip.js";
+import { LicenseChip, SubdiscChip } from "./ElnChips.js";
 import ShortenDesc from "./ShortenDesc.js";
-import SubdiscChip from "./SubdiscChip.js";
 
 import styles from "./Eln.module.css";
 
 function ElnCard({ eln }) {
-    console.log(eln);
-
     return (
         <div className={styles.eln__card}>
             <div className={styles.eln__card__header}>
