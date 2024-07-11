@@ -14,7 +14,7 @@ function ElnCard({ eln }) {
             </div>
             <RepoButton url={eln.url} name="Profile Page" />
             <div className={styles.eln__card__desc}>
-                <ShortenDesc desc={eln.desc} length={200} />
+                <ShortenDesc desc={eln.desc} length={100} />
             </div>
             <div className={styles.eln__card__desc}>
                 {eln.subDisc.length > 0
