@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+
+import clsx from "clsx";
+
 import styles from "../Eln.module.css";
 
 function TextSearch({ resultOutput, filter, setFilter }) {
@@ -10,15 +14,15 @@ function TextSearch({ resultOutput, filter, setFilter }) {
 
     return (
         <div className={styles.eln__searchfilter__search}>
-            <span>
+            <span className="navbar__search">
                 <input
-                    type="search"
                     className="navbar__search-input"
+                    type="search"
                     placeholder="Type to search"
                     value={filter.text ? filter.text : ""}
                     onChange={handleChange}
                 />
-                &nbsp;
+                &ensp;
             </span>
             <em>{resultOutput}</em>
         </div>

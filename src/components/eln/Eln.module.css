@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /* Search / Filter section */
@@ -12,39 +12,41 @@
 .eln__searchfilter {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: calc(96% + 0.75rem);
-    margin: 0.1rem;
+    width: 100%;
     padding: 0.75rem;
     border: 1px dashed var(--ifm-color-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .eln__searchfilter__text {
-    width: 30%;
+    translate: 0 20%;
+    min-width: 240px;
 }
 
 .eln__searchfilter__buttons {
-    width: 70%;
+    flex-grow: 1;
 }
 
 .eln__searchfilter__search {
     display: flex;
     flex-direction: column;
-    justify-items: left;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.eln__searchfilter__search > span {
+    text-align: center;
 }
 
 .eln__searchfilter__search > em {
     color: var(--ifm-color-primary);
+    text-align: center;
 }
 
 .eln__card {
-    width: 48%;
-    margin: 0.1rem;
+    width: 49.5%;
     padding: 0.75rem;
     border: 1px dashed var(--ifm-color-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     transition: all var(--n4c-transform-time) ease-in-out;
 }
 
@@ -77,13 +79,13 @@
     .eln__searchfilter__text,
     .eln__searchfilter__buttons {
         width: 100%;
+        translate: 0;
     }
 
     .eln__searchfilter__search {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0.5rem 0;
     }
 
     .eln__card {
