@@ -1,3 +1,7 @@
+import clsx from "clsx";
+
+import styles from "../Eln.module.css";
+
 function FilterButton(props) {
     const handleClick = () => {
         if (props.label === "All") {
@@ -11,10 +15,12 @@ function FilterButton(props) {
         }
     };
 
-    let buttonClass = "lbe__filterbutton";
-    if (props.active) {
-        buttonClass += " lbe__filterbutton--active";
-    }
+    // Conditional styling for button
+
+    let buttonClass = clsx("lbe__filterbutton", {
+        [styles["eln__filterbutton--secondary"]]: props.secondary,
+        "lbe__filterbutton--active": props.active,
+    });
 
     return (
         <button className={buttonClass} onClick={handleClick}>

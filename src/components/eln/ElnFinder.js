@@ -159,7 +159,7 @@ function ElnFinder(props) {
                         resultOutput,
                     }}
                 />
-                <ElnStack {...{ filteredTable }} />
+                <ElnStack {...{ filteredTable, filter, setFilter }} />
             </div>
         </React.Fragment>
     );

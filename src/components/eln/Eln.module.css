@@ -107,3 +107,9 @@
     color: white;
     font-weight: bold;
 }
+
+.eln__filterbutton--secondary {
+    background-color: var(--ifm-breadcrumb-item-background-active);
+    color: var(--ifm-color-primary);
+    font-weight: unset;
+}
