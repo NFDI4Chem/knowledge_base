@@ -35,7 +35,7 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
     return (
         <React.Fragment>
             <div className="lbe__searchfilter__section">
-                <h4>Filter by subdisciplines</h4>
+                <h5>Filter by subdisciplines</h5>
                 <p>
                     {subDiscButtons.map((subDisc, idx) => (
                         <FilterButton
@@ -50,7 +50,7 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
                 </p>
             </div>
             <div className="lbe__searchfilter__section">
-                <h4>Filter by license</h4>
+                <h5>Filter by license</h5>
                 <p>
                     {licenseButtons.map((license, idx) => (
                         <FilterButton
