@@ -22,6 +22,18 @@ function TextSearch({ resultOutput, filter, setFilter }) {
                     value={filter.text ? filter.text : ""}
                     onChange={handleChange}
                 />
+                {filter.text ? (
+                    <button
+                        className={styles.eln__searchfilter__search__button}
+                        onClick={() =>
+                            setFilter((draft) => {
+                                delete draft.text;
+                            })
+                        }
+                    >
+                        &#x2715;
+                    </button>
+                ) : null}
                 &ensp;
             </span>
             <em>{resultOutput}</em>
