@@ -10,8 +10,6 @@ function TextSearch({ resultOutput, filter, setFilter }) {
             draft.text = e.target.value;
         });
 
-    console.log(filter);
-
     return (
         <div className={styles.eln__searchfilter__search}>
             <span className="navbar__search">
@@ -22,7 +20,7 @@ function TextSearch({ resultOutput, filter, setFilter }) {
                     value={filter.text ? filter.text : ""}
                     onChange={handleChange}
                 />
-                {filter.text ? (
+                {filter.text && (
                     <button
                         className={styles.eln__searchfilter__search__button}
                         onClick={() =>
@@ -33,7 +31,7 @@ function TextSearch({ resultOutput, filter, setFilter }) {
                     >
                         &#x2715;
                     </button>
-                ) : null}
+                )}
                 &ensp;
             </span>
             <em>{resultOutput}</em>
