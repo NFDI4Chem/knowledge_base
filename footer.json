@@ -42,11 +42,11 @@
         "items": [
             {
                 "label": "About",
-                "to": "about"
+                "to": "/about"
             },
             {
                 "label": "Legal Notice",
-                "href": "imprint"
+                "href": "/imprint"
             },
             {
                 "label": "Privacy",
