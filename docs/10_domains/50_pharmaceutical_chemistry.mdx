@@ -8,48 +8,27 @@ import {LbeChip} from '@site/src/components/lbe/LbeElements.js';
 
 <LbeChip title="medicinal chemistry" /><LbeChip title="epidemiology" />
 
+## Welche Art von Daten?
 
-:::info Summary:
+Die häufigsten Arten von Daten in der pharmazeutischen/medizinischen Chemie lassen sich in drei Kategeorien einteilen: Synthese-Daten, analytische Daten und (Bio)Assay-Daten. Während die ersten beiden Typen von Daten (Synthese- und analytische Daten) in breiten Bereichen der Chemie eine Rolle spielen, sind (Bio)Assay-Daten, um etwa die biologische Aktivität einer Substanz zu untersuchen, eine Besonderheit der pharmazeutischen/medizinischen Chemie. 
 
-Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification, and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level, and the metabolism of the active compounds.
-The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro, and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety.
-Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimise these leads ideally result in promising candidates for preclinical studies in drug development, potentially followed by clinical studies.
+## Welche ELNs/Tools bieten sich an?
 
-:::
+Zur Planung des Forschungsdatenmanagements und der Erstellung von Datenmanagementplänen eignen sich Tools wie RDMO und DMP-Online. Viele Universitäten verfügen über eigene Instanzen von einer dieser Lösungen. 
 
-## Type of experiments
+Um die Ansprüche an ein FAIRes Datenmanagement umzusetzen, eignen sich im Besonderen elektronische Laborbücher, da diese den Forschenden viele Aufgaben der Dokumentation abnehmen können.  In der Community werden zum Beispiel die folgenden ELNs verwendet:
+Chemotion ELN, Sicformation, eLabFTW, eLabJournal, labfolder, Benchling. Der [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) hat noch weitere Optionen. Wie das richtige ELN für die Arbeitsgruppe ausgesucht werden kann, kann hier nachgelesen werden (Link zum Knowledge Base Artikel). 
 
-- Synthesis:
-  - Preparation of compounds including combinatorial approaches for biological evaluation in suitable test systems
-- Analysis:
-  - Characterisation of intermediate and final products
-  - Analysis of (quantitative) structure-activity relationships, molecular modelling studies
-  - Biological evaluation, activity assays
+## Wie und wo können Daten publiziert werden?
 
-## Planning of experiments
+Das Publizieren von Forschungsdaten ist wichtig, um anderen Forschenden die Möglichkeit zu geben, diese nachzunutzen. Um möglichst viele Forschende zu erreichen, kann die Auswahl des richtigen Repositoriums entscheidend sein (mehr dazu im Artikel zur Auswahl des richtigen Repositoriums). 
 
-Test systems are established, either target-oriented or phenotypic assays, to identify hit compounds. Alternatively, (potential) hit compounds can be selected from available data (e.g. publications) or by virtual screening.
-Starting from promising hit compounds, optimisation cycles are performed to improve the properties of the starting compounds. Suitable assay systems are required to obtain the necessary data to assess the compounds’ properties. These include potency efficacy, selectivity, potential bias, water solubility, lipophilicity, pharmacokinetic properties, e.g. bioavailability and metabolic stability, interaction with liver cytochrome P450 enzymes, hERG channel interaction, cell toxicity, potential genotoxicity, etc. The required properties depend e.g. on the indication and the application route of the drug.
+Für Synthese-Daten sowie analytische Daten empfehlen sich spezifische Repositorien wie z. B. Chemotion Repositorium (Synthese-Daten), MassBankEU (Massenspektren) oder nmrXiv (für NMR-Daten). Für die dritte Kategorie an Daten ((Bio)Assay-Daten) ist zurzeit kein optimales Repositorium bekannt, daher empfiehlt sich hier das generische Repositorium RADAR4Chem.
 
-## Documentation of experiments
+## Herausforderungen
 
-[Documentation](/docs/data_documentation) of research data and [metadata](/docs/metadata) is carried out, preferably digitally, using a suitable [ELN](/docs/eln) and/or a manual laboratory notebook in paper form.
+Im Vergleich zu vielen anderen Bereichen der Chemie, findet in der pharmazeutischen/medizinischen Chemie häufig eine sehr anwendungsbezogene Forschung statt, welche zu Patenten und Produktentwicklungen führen können. Daher sind besonders an die verwendeten elektronischen Laborbücher höhere Ansprüche im Bereich von Prüfprotokollen (audit trials) gestellt. Dies muss bei der Auswahl der verwendeten Tools von Anfang an berücksichtigt werden. Ebenso kann dies zu besonderen Auflagen bei der Veröffentlichung von Forschungsdaten führen.
 
-Using an ELN:
+Die Diversität der verwendeten Datenformate sowie der Analyseverfahren stellen zusätzlich eine Herausforderung für ein gutes FDM dar. Besonders wenn Labor/Analysegeräte verwendet werden, welche aufgrund ihrer Software nicht mehr oder nur über Umwege in ein Netzwerk integriert werden können. 
 
-- Experimental conditions and measurement parameters are noted in the ELN.
-- Observations, deviations from planned measurement protocols, or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN experiment entry.
-- Obtained data from analytical instruments (e.g. NMR, MS, or IR data) are uploaded to the ELN in open file formats and directly attached to the respective experiment entry, including instrumental setup metadata.
-- Metadata related to the obtained data follow common metadata standards.
-
-## Data producing methods
-
-- Data can be collected during or after the experiment by analysing the obtained product.
-- Manually determined data: Experimental observations, appearance, yield, melting/boiling point, optical rotation, TLC Rf values, refraction index, etc.
-- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in proprietary file formats should be saved alongside interoperable [open file formats](/docs/format_standards) by using converters or the analytical device software. If no specific open format is currently available, an export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
-
-<Methods defaultProfile={"pharma"} />
-
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
+Bei diesen Herausforderungen unterstützt NFDI4Chem gern, und Sie können uns jederzeit über den Helpdesk kontaktieren. 
