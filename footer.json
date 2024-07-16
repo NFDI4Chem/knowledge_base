@@ -42,11 +42,11 @@
         "items": [
             {
                 "label": "About",
-                "to": "about"
+                "to": "/about"
             },
             {
                 "label": "Legal Notice",
-                "href": "https://www.uni-mainz.de/en/legal-notice/"
+                "href": "/imprint"
             },
             {
                 "label": "Privacy",
