@@ -8,48 +8,31 @@ import {LbeChip} from '@site/src/components/lbe/LbeElements.js';
 
 <LbeChip title="medicinal chemistry" /><LbeChip title="epidemiology" />
 
+## Introduction
 
-:::info Summary:
+Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification, and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level, and the metabolism of the active compounds. The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro, and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety. Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimise these leads ideally result in promising candidates for preclinical studies in drug development, potentially followed by clinical studies.
 
-Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification, and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level, and the metabolism of the active compounds.
-The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro, and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety.
-Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimise these leads ideally result in promising candidates for preclinical studies in drug development, potentially followed by clinical studies.
 
-:::
+## Data Types
 
-## Type of experiments
+The most common types of data in pharmaceutical/medicinal chemistry can be divided into three categories: synthesis data, analytical data, and (bio)assay data. While the first two types of data (synthesis and analytical data) play a role in broad areas of chemistry, (bio)assay data, which is used to investigate the biological activity of a substance, is a particular feature of pharmaceutical/medicinal chemistry. 
 
-- Synthesis:
-  - Preparation of compounds including combinatorial approaches for biological evaluation in suitable test systems
-- Analysis:
-  - Characterisation of intermediate and final products
-  - Analysis of (quantitative) structure-activity relationships, molecular modelling studies
-  - Biological evaluation, activity assays
+## ELNs and Other Tools
 
-## Planning of experiments
+To meet the requirements for FAIR data management, electronic lab notebooks (ELNs) are particularly useful as they can take over many documentation tasks for researchers. The following ELNs are used in the community, for example: Chemotion ELN, Sicformation, eLabFTW, eLabJournal, labfolder, Benchling. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) offers additional options. How to choose the right ELN for the research group can be read [here](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_eln/). 
 
-Test systems are established, either target-oriented or phenotypic assays, to identify hit compounds. Alternatively, (potential) hit compounds can be selected from available data (e.g. publications) or by virtual screening.
-Starting from promising hit compounds, optimisation cycles are performed to improve the properties of the starting compounds. Suitable assay systems are required to obtain the necessary data to assess the compounds’ properties. These include potency efficacy, selectivity, potential bias, water solubility, lipophilicity, pharmacokinetic properties, e.g. bioavailability and metabolic stability, interaction with liver cytochrome P450 enzymes, hERG channel interaction, cell toxicity, potential genotoxicity, etc. The required properties depend e.g. on the indication and the application route of the drug.
+For the planning of research data management and the creation of data management plans, tools such as RDMO and DMP-Online are suitable. Many universities have their own instances of one of these solutions.
 
-## Documentation of experiments
+## Publishing Data
 
-[Documentation](/docs/data_documentation) of research data and [metadata](/docs/metadata) is carried out, preferably digitally, using a suitable [ELN](/docs/eln) and/or a manual laboratory notebook in paper form.
+Publishing research data is important to allow other researchers to reuse it. To reach as many researchers as possible, choosing the right repository can be crucial (check the [Choose a Repository](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_repository/) article for more information).
 
-Using an ELN:
+For synthesis data and analytical data, specific repositories such as [Chemotion Repository](https://www.chemotion-repository.net/welcome) (synthesis data), [MassBankEU](https://massbank.eu/MassBank/) (mass spectra), or [nmrXiv](https://nmrxiv.org/) (for NMR data) are recommended. For the third category of data ((bio)assay data), no optimal repository is currently known, so the generic repository [RADAR4Chem](https://radar.products.fiz-karlsruhe.de/de/radarabout/radar4chem) is recommended.
 
-- Experimental conditions and measurement parameters are noted in the ELN.
-- Observations, deviations from planned measurement protocols, or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the ELN experiment entry.
-- Obtained data from analytical instruments (e.g. NMR, MS, or IR data) are uploaded to the ELN in open file formats and directly attached to the respective experiment entry, including instrumental setup metadata.
-- Metadata related to the obtained data follow common metadata standards.
+## Challenges
 
-## Data producing methods
+Compared to many other areas of chemistry, pharmaceutical/medicinal chemistry often involves highly application-oriented research that can lead to patents and product developments. Therefore, the electronic lab notebooks used must meet higher standards in the area of audit trails. This must be considered from the outset when selecting the tools to be used. Additionally, this can lead to special requirements for publishing research data.
 
-- Data can be collected during or after the experiment by analysing the obtained product.
-- Manually determined data: Experimental observations, appearance, yield, melting/boiling point, optical rotation, TLC Rf values, refraction index, etc.
-- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in proprietary file formats should be saved alongside interoperable [open file formats](/docs/format_standards) by using converters or the analytical device software. If no specific open format is currently available, an export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+The diversity of data formats and analytical methods used also poses a challenge for good research data management (RDM). This is particularly true when laboratory/analytical instruments are used that can no longer be integrated into a network or can only be integrated via detours due to their software.
 
-<Methods defaultProfile={"pharma"} />
-
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
+NFDI4Chem is happy to assist with these challenges, and you can contact us anytime through the Helpdesk.
