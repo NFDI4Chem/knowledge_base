@@ -3,7 +3,7 @@ title: "Core facility manager"
 slug: "/core_facility_manager"
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 :::info Applies to:
 This article applies to core facility managers and heads of analytical service units.
@@ -11,7 +11,12 @@ This article applies to core facility managers and heads of analytical service u
 
 ## Motivation
 
-<img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" />
+<img
+    alt="Data LifeCycle"
+    src={useBaseUrl("/img/Intro/DataLifeCycle_KB.svg")}
+    width="500"
+    align="right"
+/>
 
 In the chemistry data lifecycle, core facilities play an important role as major producers of chemical data. For modern analytical techniques such as mass spectrometry or NMR spectroscopy, data are usually recorded digitally and the challenges lie less in digitalisation but management issues.
 
@@ -23,7 +28,7 @@ When thinking about how to store data and make them available, an important star
 
 ### The Situation in Germany
 
-The German Research Council ([DFG](https://www.dfg.de)) summarizes the consensus on the *fundamental principles and standards of good practice* in science in their Code fo Conduct *Guidelines for Safeguarding Good Research Practice* [\[1\]](#dfg_code). In guideline 17, a storage of all research data for the period of ten years is demanded, starting from the date of publication. Data storage strategies should therefore contain longterm storage for at least that time.
+The German Research Council ([DFG](https://www.dfg.de)) summarizes the consensus on the _fundamental principles and standards of good practice_ in science in their Code fo Conduct _Guidelines for Safeguarding Good Research Practice_ [\[1\]](#dfg_code). In guideline 17, a storage of all research data for the period of ten years is demanded, starting from the date of publication. Data storage strategies should therefore contain longterm storage for at least that time.
 
 ## How to start
 
@@ -41,24 +46,24 @@ In addition, [backup strategies](/docs/data_storage/) for all instrument worksta
 
 While most of the scientific work still lies ahead, there are already valuable metadata to be harvested and digested at the early stage of sample submission. These can include, among many others:
 
-- Date
-- Creator (person, group)
-- Project
-- Sample identifier
-- Molecular structure(s), and derived properties:
-    - Molecular formula
-    - Molecular weight
-    - Elemental composition
-    - Physicochemical properties 
-- Solvent or solubility
-- Purity
-- Experiment information of interest, such as:
-    - Retation time
-    - Polarity
-    - Ionisation method
-    - NMR nuclei and experiments
-    - Chiroptical data
-- Biological properties
+-   Date
+-   Creator (person, group)
+-   Project
+-   Sample identifier
+-   Molecular structure(s), and derived properties:
+    -   Molecular formula
+    -   Molecular weight
+    -   Elemental composition
+    -   Physicochemical properties
+-   Solvent or solubility
+-   Purity
+-   Experiment information of interest, such as:
+    -   Retation time
+    -   Polarity
+    -   Ionisation method
+    -   NMR nuclei and experiments
+    -   Chiroptical data
+-   Biological properties
 
 The challenge of digesting those metadata according to [FAIR guiding principles](/docs/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
 
@@ -67,5 +72,10 @@ The challenge of digesting those metadata according to [FAIR guiding principles]
 
 ## Sources
 
-1. <a name="dfg_code"></a> Deutsche Forschungsgemeinschaft (DFG), <em>Guidelines for Safeguarding Good Research Practice. Code of Conduct</em>, September 2019, <a href="https://doi.org/10.5281/zenodo.3923602"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3923602.svg" alt="DOI" /></a>
-2. <a name="sync"></a>See <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy" target="_blank">Microsoft documentation</a> for <code>robocopy</code> or <a href="https://linux.die.net/man/1/rsync" target="_blank">manpage</a> for <code>rsync</code>.
+1. <span id="dfg_code" />
+   Deutsche Forschungsgemeinschaft (DFG), *Guidelines for Safeguarding Good Research
+   Practice. Code of Conduct*, September 2019, [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3923602.svg)](https://doi.org/10.5281/zenodo.3923602)
+
+2. <span id="sync" />
+   See [Microsoft documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy)
+   for `robocopy` or [manpage](https://linux.die.net/man/1/rsync) for `rsync`.

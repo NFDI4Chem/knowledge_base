@@ -4,6 +4,7 @@ slug: "/chemotion_eln"
 id: "chemotion_eln"
 ---
 
+import VideoPrivacy from "video-privacy";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 # Chemotion ELN
@@ -22,14 +23,22 @@ Chemotion ELN offers a specific function that facilitates the [publication of re
 
 A short introduction to the Chemotion ELN as well as the connection to the Chemotion repository is demonstrated in this video:
 
-<iframe
-	width="860"
-	height="370"
-	src="https://www.youtube.com/embed/tZHaP6DW-Dw"
-	frameborder="0"
-	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-	allowfullscreen
-></iframe>
+<VideoPrivacy
+    imageUrl={useBaseUrl("/img/smartlab/chemotion_preview.jpg")}
+    width={800}
+    info="YouTube uses cookies and stores personal data. To view embedded videos from YouTube, please indicate your consent to load this video from an external source."
+    buttonText="I agree"
+    customButtonClass="button button--primary"
+>
+    <iframe
+        width="860"
+        height="484"
+        src="https://www.youtube.com/embed/tZHaP6DW-Dw"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    ></iframe>
+</VideoPrivacy>
 
 ### Documentation, information, and contact
 
