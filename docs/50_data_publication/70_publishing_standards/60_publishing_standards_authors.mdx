@@ -1,0 +1,73 @@
+---
+title: "Authors"
+slug: "/publishing_standards_authors"
+---
+
+## For Authors
+
+### Use ORCID iD to Identifiy Authors and ROR to Identifiy Institutions
+
+:::tip Standard
+*Authors should provide their ORCID iD to identify the authors/creators and contributors, and their ROR identifier to identify the institution to which they are affiliated.*
+::: 
+
+ORCID iDs allow authors to be uniquely identified, whereas author names may not be unique, may change, or may have different ordering conventions depending on cultural differences. Similarly, affiliations can vary according to style and granularity. In order to uniquely identify the institutions to which authors are affiliated, the ROR identifier should be provided. Please note that the ROR identifier is not intended to resolve down to the departmental level. Nevertheless, both identifiers improve findability.
+
+### How to use Dataset PIDs in Scientific Articles
+
+During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their scientific article for interlinking and referencing in **two main ways**:
+
+#### How to use Dataset PIDs of own Datasets in Scientific Articles
+
+
+:::tip Standard
+*Authors should add the PID of their corresponding dataset(s) to the data availability statement and should add PIDs of dataset(s) to the reference section in order to specifically cite dataset(s).*
+::: 
+
+For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [data availability statement](/docs/data_availability_statement), or a similarly termed section. In order to specifically reference and cite your data within the text, add your dataset to the references as well.
+
+:::danger Notice:
+This distinction is important, because **the link** to the dataset in CrossRef's DOI metadata of scientific articles **is differently set**, depending on whether the dataset is a directly related source of information or a specifically referenced resource.
+:::
+
+#### How to use Dataset PIDs for Datasets by other Researchers in Scientific Articles
+
+
+:::tip Standard
+*Authors should include PIDs for datasets published by other researchers that have been reused in the references, rather than citing the corresponding article.*
+:::
+
+For datasets published by other researchers and reused in a study, include the dataset PID in the reference section of the manuscript and cite within the text accordingly.
+
+### How to Link Datasets to their Corresponding Scientific Article
+
+:::tip Standard
+*Researchers should link their datasets to be published to their corresponding articles by adding the article DOI to the dataset's DataCite metadata as a related identifier.*
+:::
+
+Research data repositories offer the option to add a related identifier to link datasets to related resources, such as a corresponding article. This considerably enhances the [FAIRness](/docs/fair/) of datasets, mainly the findability ([F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below)) as well as the interoperability ([I3](/docs/fair/#i3-metadata-include-qualified-references-to-other-metadata)).
+
+### Usage of Relation Type for Linking Datasets with Scientific Articles
+
+:::tip Standard
+*Researchers should link their datasets to be published to their corresponding articles using the relation type `IsSupplementTo`.*
+:::
+
+According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. For published articles, [CrossRef's documentation on relationships](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) recommends that `isSupplmenetTo` should be used to link datasets generated as part of research results. 
+
+### Usage of Collection DOIs
+
+:::tip Standard
+*Researchers should use the Collection DOI provided by a repository in the data availability statements of their corresponding manuscript to wrap research data objects that are relevant to that of an article to be published.*
+:::
+
+Field-specific research data repositories may provide DOIs to reference individual chemical reactions, molecules, and their analytical data. Generic, multidisciplinary research data repositories provide DOIs for a whole published datasets, while more than one published dataset may be relevant to study results published via an article. In other words, many DOIs may be relevant to a published article, whereas **a data availability statement may provide some DOIs but not many DOIs**. 
+
+To facilitate the process of manuscript submission and article publication, researchers should add the **Collection DOI** provided by the repository to the data availability statement. This will ensure that all data underlying a published manuscript can be linked to an article in the data availability statement and the CrossRef metadata of that article. 
+
+If individual reactions, molecules, or analytical data should be referenced, add the DOIs of these individual research objects to the reference section and cite within the text accordingly.
+
+<!--Standard on how to publish NMR data, tbd-->
+
+----
+Main authors: [ORCID:0000-0003-4480-8661](https://orcid.org/0000-0003-4480-8661), [ORCID: 0000-0002-6243-2840](https://orcid.org/0000-0002-6243-2840)
