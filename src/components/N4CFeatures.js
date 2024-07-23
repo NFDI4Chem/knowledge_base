@@ -84,6 +84,23 @@ const features = {
       "svg": "/img/nfdi4chem_Core_Facility_Manager.svg",
       "link": "/docs/core_facility_manager"
     }
+  ],
+  stakeholders_data_publishing: [
+    {
+      "title": <Translate>Authors</Translate>,
+      "svg": "/img/nfdi4chem_Research_Group_Member.svg",
+      "link": "/docs/publishing_standards_authors"
+    },
+    {
+      "title": <Translate>Academic Publishers</Translate>,
+      "svg": "/img/nfdi4chem_Data_Publication.svg",
+      "link": "/docs/publishing_standards_publishers"
+    },
+    {
+      "title": <Translate>Infrastructure Providers</Translate>,
+      "svg": "/img/nfdi4chem_Core_Facility_Manager.svg",
+      "link": "/docs/publishing_standards_infrastructure"
+    }
   ]
 };
 
