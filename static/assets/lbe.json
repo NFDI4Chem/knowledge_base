@@ -29,11 +29,11 @@
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/786"
+                "url": "https://doi.org/10.22000/786"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/LMVGRKPOXLBIFQ-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/LMVGRKPOXLBIFQ-UHFFFAOYSA-N.1"
             },
             {
                 "name": "nmrXiv",
@@ -60,11 +60,11 @@
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/785"
+                "url": "https://doi.org/10.22000/785"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/NZGWDASTMWDZIW-MRVPVSSYSA-N.1"
+                "url": "https://doi.org/10.14272/NZGWDASTMWDZIW-MRVPVSSYSA-N.1"
             },
             {
                 "name": "nmrXiv",
@@ -91,11 +91,11 @@
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/795"
+                "url": "https://doi.org/10.22000/795"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/DGQLVPJVXFOQEV-JNVSTXMASA-N.1"
+                "url": "https://doi.org/10.14272/DGQLVPJVXFOQEV-JNVSTXMASA-N.1"
             },
             {
                 "name": "nmrXiv",
@@ -122,11 +122,11 @@
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/604"
+                "url": "https://doi.org/10.22000/604"
             },
             {
                 "name": "ILL Data Portal",
-                "url": "http://dx.doi.org/10.5291/ILL-DATA.9-11-2067"
+                "url": "http://doi.org/10.5291/ILL-DATA.9-11-2067"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -151,115 +151,115 @@
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JHIAOWGCGN-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JHIAOWGCGN-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XNDIRRNFWB-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XNDIRRNFWB-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YLBKXSDEWV-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YLBKXSDEWV-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-MTPUXEIATO-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-MTPUXEIATO-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DYIBODSCVM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DYIBODSCVM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YSUUDYJLPD-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YSUUDYJLPD-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-BRNGTXITIQ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-BRNGTXITIQ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-ACOFZHHYLN-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-ACOFZHHYLN-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-QLLLYNCAUW-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-QLLLYNCAUW-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YKNRUBPOGQ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-YKNRUBPOGQ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-ZJSFNHZUYT-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-ZJSFNHZUYT-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-HXVOLPKNEJ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-HXVOLPKNEJ-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-FYZDDQVKLM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-FYZDDQVKLM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-AOATVJLAFL-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-AOATVJLAFL-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XTTRESRELV-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XTTRESRELV-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-MCYXBNUZMI-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-MCYXBNUZMI-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-NNDILYOKJA-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-NNDILYOKJA-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DMWOEMCLSH-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DMWOEMCLSH-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JZHZQROLCJ-UHFFFADPSC-NUHFF-MUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JZHZQROLCJ-UHFFFADPSC-NUHFF-MUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-FNFSJYCLRP-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-FNFSJYCLRP-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UMMQIWZYOP-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UMMQIWZYOP-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-GCLZBRQZKM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-GCLZBRQZKM-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XYXSWFSTLI-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-XYXSWFSTLI-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JBXRXORXEO-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JBXRXORXEO-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-GQFHEVHUGU-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-GQFHEVHUGU-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UMXPYYQOWK-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UMXPYYQOWK-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JQDGMCVIMF-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JQDGMCVIMF-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DRQHCTISPL-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DRQHCTISPL-UHFFFADPSC-NUHFF-LUHFF-NUHFF-ZZZ"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -276,11 +276,11 @@
         "authors": "Steffen Bochenek, Fabrizio Camerin, Emanuela Zaccarelli, Armando Maestro, Maximilian M. Schmidt, Walter Richtering, Andrea Scotti",
         "journal": "Nature Communications",
         "pubyear": 2022,
-        "linkpub": "https://dx.doi.org/10.1038/s41467-022-31209-3",
+        "linkpub": "https://doi.org/10.1038/s41467-022-31209-3",
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/603"
+                "url": "https://doi.org/10.22000/603"
             },
             {
                 "name": "ILL Data Portal",
@@ -461,11 +461,11 @@
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc25b961"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc25b961"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc25b972"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc25b972"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -486,35 +486,35 @@
         "linkdata": [
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hkz5"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hkz5"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl07"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl07"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl18"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl18"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl29"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl29"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl3b"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl3b"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl4c"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl4c"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl5d"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl5d"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23hl6f"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23hl6f"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -575,51 +575,51 @@
         "linkdata": [
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/UFNYJPFRGDSKSE-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/UFNYJPFRGDSKSE-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/LSGGPBYVWWQPOY-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/LSGGPBYVWWQPOY-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/AXGNYRCNCNZKKZ-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/AXGNYRCNCNZKKZ-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/ZXFVPDKZHCLOHM-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/ZXFVPDKZHCLOHM-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/MHRJPVSEKXPPCE-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/MHRJPVSEKXPPCE-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/FONYBVKTMVEXPM-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/FONYBVKTMVEXPM-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/BJUATVHTJTTWSW-UHFFFAOYSA-H.1"
+                "url": "https://doi.org/10.14272/BJUATVHTJTTWSW-UHFFFAOYSA-H.1"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7mw"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23w7mw"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7nx"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23w7nx"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7py"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23w7py"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7qz"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23w7qz"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23w7r0"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23w7r0"
             },
             {
                 "name": "ioChemDB",
@@ -644,75 +644,75 @@
         "linkdata": [
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/FCAMUPIRWKNASD-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/FCAMUPIRWKNASD-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/XQWHZHODENELCJ-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/XQWHZHODENELCJ-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/WYPRQDLUGJFJCG-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/WYPRQDLUGJFJCG-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/SXYROFUQPFOADI-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/SXYROFUQPFOADI-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/NLACLAPNGFWSTA-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/NLACLAPNGFWSTA-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/WOMQOOHUINDJRV-UHFFFAOYSA-M.1"
+                "url": "https://doi.org/10.14272/WOMQOOHUINDJRV-UHFFFAOYSA-M.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/WOMQOOHUINDJRV-UHFFFAOYSA-M.1"
+                "url": "https://doi.org/10.14272/WOMQOOHUINDJRV-UHFFFAOYSA-M.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/SQELSYLGCLCOLU-UHFFFAOYSA-M.1"
+                "url": "https://doi.org/10.14272/SQELSYLGCLCOLU-UHFFFAOYSA-M.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/SEXRCKWGFSXUOO-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/SEXRCKWGFSXUOO-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/JJGCDLVZJZGHBZ-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/JJGCDLVZJZGHBZ-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/ODJOHIWKLOPSFF-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/ODJOHIWKLOPSFF-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/AEFJLSGXOWZNJZ-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/AEFJLSGXOWZNJZ-UHFFFAOYSA-N.1"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/BMNLXKVRGRRHKW-UHFFFAOYSA-N.1"
+                "url": "https://doi.org/10.14272/BMNLXKVRGRRHKW-UHFFFAOYSA-N.1"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtbr"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23gtbr"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtcs"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23gtcs"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtdt"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23gtdt"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23gtfv"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23gtfv"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc23wtb5"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc23wtb5"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -733,7 +733,7 @@
         "linkdata": [
             {
                 "name": "RADAR",
-                "url": "https://dx.doi.org/10.22000/451"
+                "url": "https://doi.org/10.22000/451"
             },
             {
                 "name": "nmrXiv",
@@ -826,55 +826,55 @@
         "linkdata": [
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-PBTPREHATA-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ.4"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-PBTPREHATA-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ.4"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-BHYVHYPBRY-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-BHYVHYPBRY-UHFFFADPSC-NUHFF-NUHFF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-QKHPYPUCYC-UHFFFADPSC-NUHFF-NHYOA-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-QKHPYPUCYC-UHFFFADPSC-NUHFF-NHYOA-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJGWMTKKMO-UHFFFADPSC-NUHFF-NNYHH-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJGWMTKKMO-UHFFFADPSC-NUHFF-NNYHH-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-CQICNQVIXS-UHFFFADPSC-NUHFF-NKDHF-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-CQICNQVIXS-UHFFFADPSC-NUHFF-NKDHF-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UYKMRQXETK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-UYKMRQXETK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DVNRJSFZLK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DVNRJSFZLK-UHFFFADPSC-NUHFF-NWLSV-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LVGOHACWPD-UHFFFADPSC-NUHFF-NUVBP-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LVGOHACWPD-UHFFFADPSC-NUHFF-NUVBP-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JQQMHNZHWI-UHFFFADPSC-NUHFF-NNSBK-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-JQQMHNZHWI-UHFFFADPSC-NUHFF-NNSBK-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJCDFXZBRU-UHFFFADPSC-NUHFF-NOCLW-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-DJCDFXZBRU-UHFFFADPSC-NUHFF-NOCLW-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LLIFZWKYAN-UHFFFADPSC-NUHFF-NHDGP-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LLIFZWKYAN-UHFFFADPSC-NUHFF-NHDGP-NUHFF-ZZZ"
             },
             {
                 "name": "Chemotion Repository",
-                "url": "https://dx.doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LHQKMJBXIU-UHFFFADPSC-NUHFF-NLTSL-NUHFF-ZZZ"
+                "url": "https://doi.org/10.14272/reaction/SA-FUHFF-UHFFFADPSC-LHQKMJBXIU-UHFFFADPSC-NUHFF-NLTSL-NUHFF-ZZZ"
             },
             {
                 "name": "CSD/CCDC",
-                "url": "https://dx.doi.org/10.5517/ccdc.csd.cc216k3y"
+                "url": "https://doi.org/10.5517/ccdc.csd.cc216k3y"
             }
         ],
         "linkcomment": "curated by the publishing authors",
@@ -895,7 +895,7 @@
         "linkdata": [
             {
                 "name": "RADAR4Chem",
-                "url": "https://dx.doi.org/10.22000/1865"
+                "url": "https://doi.org/10.22000/1865"
             },
             {
                 "name": "nmrXiv",
