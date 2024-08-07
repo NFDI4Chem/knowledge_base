@@ -3,7 +3,7 @@ title: "For Academic Publishers"
 slug: "/publishing_standards_publishers"
 ---
 
-### Recommendations for Trusted, Chemistry-friendly Repositories
+### Recommendations for trusted, chemistry-friendly repositories
 
 :::tip Standard
 *Journals should recommend trusted, chemistry-friendly research data repositories.*
@@ -11,15 +11,15 @@ slug: "/publishing_standards_publishers"
 
 To assist authors in selecting **well-established and community-specific [repositories](/docs/repositories/)** for their research data, [trusted chemistry friendly repositories](/docs/choose_repository/) should be recommended by journals. These should be included within the author guidelines or the data policies.
 
-### Recommendations to Include Data Availability Statements
+### Recommendations to include data availability statements
 
 :::tip Standard
 *Journals should recommend that authors provide a data availability statement. Author guidelines should also provide templates for illustration.*
 :::
 
-[Templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availability statements**](/docs/data_availability_statement) or a similarly termed section should be made available to authors in the journal's author guidelines. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by including the DOI or other PID, enabling the FAIR principles (e.g. [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)). It should also be mentioned whether templates are selectable and information should be provided via the manuscript submission system.
+[Templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availability statements**](/docs/data_availability_statement) or a similarly termed section should be made available to authors in the journal's author guidelines. This guides authors in correctly submitting underlying data with their manuscript and effectively communicating how to find and access the data by including the DOI or other PID, enabling the FAIR principles (e.g. [A1](docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)). It should also be mentioned whether the templates are selectable and the information should be provided via the manuscript submission system or whether this information should be manually inserted into the initially submitted manuscript by the authors.
 
-### Data Availability Statements and Manuscript Submission Systems 
+### Data availability statements and manuscript submission systems 
 
 :::tip Standard
 *Journals should add a data availability statement to published articles and collect the necessary information through their submission systems.*
@@ -27,7 +27,7 @@ To assist authors in selecting **well-established and community-specific [reposi
 
 [Templates](/docs/data_availability_statement/#templates-for-data-availability-statements) for [**data availability statements**](/docs/data_availability_statement) or a similarly termed section should also be added to the manuscript submission system. Once a template has been selected by the submitter, the data availability statement should be editable to allow authors to add additional information, such as what data are included in the dataset, similar to what is currently often mentioned in the section on supporting information PDF files. The submission system should then require the submitter to provide the necessary information, such as the DOI (specified as [DOI name](https://www.doi.org/doi-handbook/HTML/doi-name-syntax2.html) e.g. `10.1000/182` or as a URL i.e. including a resolver e.g. `https://doi.org/10.1000/182` ), repository name, third party name and contact information, or reasons for restricted access and information on how to access a dataset, depending on the template used.
 
-### Link Datasets to Articles in CrossRef DOI Metadata
+### Link datasets to articles in CrossRef DOI metadata
 
 :::tip Standard
 *Journals should use the information available in data availability statements to enhance CrossRef DOI metadata by linking articles to datasets.*
@@ -40,7 +40,7 @@ In XML:
 <rel:program name="relations">
 	<rel:related_item>
 		<rel:description>
-		Dataset in <repository name>.		
+		Dataset in <<<repository name>>>.		
 		</rel:description>
 		<rel:inter_work_relation relationship-type="isSupplementedBy" 
 identifier-type="doi">10.prefix/suffix
@@ -51,7 +51,7 @@ identifier-type="doi">10.prefix/suffix
 
 In agreement with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/), the relationship type `isSupplementedBy` should be used.
 
-### Add Data Publications to Prior Publication Policy
+### Add data publications to prior publication policy
 
 :::tip Standard
 *Journal author guidelines should explicitly encourage pre-submission of datasets.*
@@ -63,7 +63,7 @@ Similar to the publication of preprints, journal author guidelines should allow 
 A disadvantage of pre-submission is that researchers cannot link the dataset to the manuscript, as the manuscript has not yet been published and no DOI has been registered. The metadata of the dataset must then be manually updated by the authors after the article has been published. Datasets with status *under review* are one way to overcome this disadvantage (see below).
 :::
 
-### Recommendations to Include Research Data in the Review Process
+### Recommendations to include research data in the review process
 
 :::tip Standard
 *Journal author guidelines should explicitly encourage research data to be included in the review process.*
@@ -71,13 +71,13 @@ A disadvantage of pre-submission is that researchers cannot link the dataset to 
 
 Some repositories have an *under review* status alongside the *draft* and *published* statuses. A dataset *under review* is not editable and not yet published, i.e. it does not have a DOI registered. Therefore, the DOI cannot be validated. Nonetheless, the dataset has an internally reserved DOI and is accessible via a URL to provide access to editors and reviewers. This allows research data to be included in the review process. The URL to access the dataset should be requested by the submission system so that it can be forwarded to editors and reviewers.
 
-### Encourage Authors to Publish Datasets prior Publishing Articles
+### Encourage authors to publish datasets *under review* prior the articles gets published
 
 :::tip Standard
-*Journal author guidelines should require that datasets under review to be published prior to the publication of the associated article.*
+*Journal author guidelines should require that datasets with status under review to be published prior to the publication of the associated article.*
 :::
 
-To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets *under review* should be published prior to the publication of the article**. Once a manuscript has been accepted, the authors should be informed to publish their dataset *under review*. This ensures that the data has a registered DOI when the article gets published. Consequently, journals can run quality control checks on the provided DOI such as validation. This process must be explicitly communicated with authors through the author guidelines, yet, can also be included within other communication upon acceptance. Contemporaneous, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to the publication of the dataset. Finally, the article is published, and its DOI is registered.
+To assist in automated workflows, such as linking the datasets to the published article through their respective PIDs, **datasets *under review* should be published before the article gets published**. Once a manuscript has been accepted, the authors should be informed to publish their dataset *under review*. This ensures that the data has a registered DOI when the article gets published. Consequently, journals can run quality control checks on the provided DOI such as validation. This process must be explicitly communicated with authors through the author guidelines, yet, can also be included within other communication upon acceptance. Contemporaneous, the DOI for the article should be provided so that authors can include this information in their dataset's metadata prior to the publication of the dataset. Finally, the article is published, and its DOI is registered.
 
 ### Scholix.org
 
