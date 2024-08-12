@@ -3,25 +3,25 @@ title: "For Infrastructure Providers"
 slug: "/publishing_standards_infrastructure"
 ---
 
-### Metadata Should be Part of a Dataset 
+### Metadata should be part of a dataset 
 
 :::tip Standard
-*Research data repositories should include the metadata in datasets downloaded by researchers.*
+*Research data repositories should include the metadata in datasets downloaded by researchers and exchanged with other resources.*
 :::
 
-While researchers upload their data, metadata is attached. For generic, multidisciplinary repositories, additional metadata is provided via a metadata editor. For field-specific repositories, the metadata is extracted from the analytical data files and provided by researchers along their lab workflows, as this is the case for Chemotion ELN. Once data is retrieved from a repository, this metadata should not be lost but should be included in the downloaded package. The minimum to include is the descriptive DataCite metadata. 
+While researchers upload their data, metadata is attached. For generic, multidisciplinary repositories, additional metadata is provided by researchers via a metadata editor. For field-specific repositories, the metadata is extracted from the analytical data files and provided by researchers along their lab workflows, as this is the case for Chemotion ELN. Once data is retrieved from a repository, this metadata should not be lost but should be included in the downloaded package. The minimum to include is the descriptive DataCite metadata. 
 
-[BagIt](https://www.rfc-editor.org/rfc/rfc8493.html), a set of hierarchical file system conventions, is one solution for including metadata in downloaded dataset. 
+[BagIt](https://www.rfc-editor.org/rfc/rfc8493.html), a set of hierarchical file system conventions, is one solution to enable reliable file transfer and to include metadata in downloaded dataset, as this is already the case for RADAR. 
 
-### Structured Domain-Specific Metadata Should be Part of a Dataset
+### Structured domain-specific metadata should be part of a dataset
 
 :::tip Standard
-*Research data repositories should include structured, domain-specific metadata in datasets downloaded by researchers.*
+*Research data repositories should include structured, domain-specific metadata in datasets downloaded by researchers and exchanged with other resources.*
 :::
 
-Beside of metadata following generic schemes such as DataCite's metadata scheme, domain-specific metadata should be part of each dataset. This metadata should also be provided in datasets downloaded by researchers for reuse. 
+Beside of metadata following generic schemes such as DataCite's metadata scheme, domain-specific metadata should be part of each dataset. This metadata should also be provided in datasets downloaded by researchers for reuse or exchanged with other resources. 
 
-One solution to this is to include Schema.org metadata by [combining RO-Crate and BagIt](https://www.researchobject.org/ro-crate/specification/1.1/appendix/implementation-notes.html#adding-ro-crate-to-bagit).
+One solution to this is to include Schema.org metadata making use of [RO-Crate](https://www.researchobject.org/) or by even [combining RO-Crate and BagIt](https://www.researchobject.org/ro-crate/specification/1.1/appendix/implementation-notes.html#adding-ro-crate-to-bagit). While BagIt focusses on reliable transfer, RO-Crate is about rich metadata. 
 
 ### Collection DOIs
 
@@ -29,9 +29,9 @@ One solution to this is to include Schema.org metadata by [combining RO-Crate an
 *Research data repositories should provide a Collection DOI to wrap research data objects that are relevant to a single article that is to be published.*
 :::
 
-Field-specific research data repositories may provide DOIs to reference individual chemical reactions, molecules, and their analytical data. Generic, multidisciplinary research data repositories provide DOIs for whole published datasets, while more than one published dataset may be relevant to study results published via an article. In other words, many DOIs may be relevant to a published article, whereas **a data availability statement may provide some DOIs but not many DOIs**. To facilitate the process of manuscript submission and article publication, each repository should provide a **Collection DOI** that wraps relevant data that should be referenced in the data availability statement. This will ensure that all data underlying a published manuscript can be linked to an article in the data availability statement and the CrossRef metadata of that article.
+Field-specific research data repositories may provide DOIs to reference individual chemical reactions, molecules, and their analytical data. Generic, multidisciplinary research data repositories provide DOIs for whole published datasets, while more than one published dataset may be relevant to study results published via an article. In other words, many DOIs may be relevant to a published article, whereas **a data availability statement may provide some DOIs but not many DOIs**. To facilitate the process of manuscript submission and article publication, each repository should allow authors to generate a **Collection DOI** that wraps relevant data that should be referenced in the data availability statement.
 
-### Embargo Period and Metadata Accessibility
+### Embargo period and metadata accessibility
 
 :::tip Standard
 *Datasets published with an embargo period should have inaccessible data but accessible metadata.*
@@ -42,26 +42,26 @@ While an **embargo** period restricts access to a published dataset, the **metad
 ### Scholix.org
 
 :::tip Standard
-*Research data repositories should contribute to Scholix.org.*
+*Research data repositories should contribute and use to Scholix.org.*
 :::
 
-[**Scholix**](https://doi.org/10.1045/january2017-burton) provides the framework for improving the links between scientific literature and research data as well as between data and data with the goal of providing a **high-level interoperability framework for exchanging information about these links**. Thus, Scholix hubs, such as [DataCite](https://datacite.org/) or [OpenAire](https://www.openaire.eu/), contribute information on their metadata records, which contain information on connected digital objects. This information is used by academic publishers to discover datasets that correspond to an article but were published after the article was published, which allows the metadata of the article to be updated with links to the dataset.
+[**Scholix**](https://doi.org/10.1045/january2017-burton) provides the framework for improving the links between scientific literature and research data as well as between data and data with the goal of providing a **high-level interoperability framework for exchanging information about these links**. Thus, Scholix hubs, such as [DataCite](https://datacite.org/) or [OpenAire](https://www.openaire.eu/), contribute information on their metadata records, which contain information on connected digital objects. This information is used by academic publishers to discover datasets that correspond to an article but were published after the article was published, which allows the metadata of the article to be updated with links to the dataset. Vice versa, repositories should use Scholix.org to find related datasets and articles and to set links to datasets published in their own infrastructure by updating the metadata of such datasets with related identifiers.
 
-### Datasets under Review
+### Datasets under review
 
 :::tip Standard
 *Research data repositories should provide access to datasets under review.*
 :::
 
-In order to include datasets in the review process of manuscripts, repositories should provide access to reviewers. It is strongly encouraged that repositories provide a status *in review* in addition to the statuses *draft* and *published*. **A dataset under review should not be editable but should be accessible** via a URL, while the DOI is not yet discoverable and the DOI metadata is not yet accessible as the dataset has not yet been published.
+In order to include datasets in the review process of manuscripts, repositories should provide access to reviewers. It is strongly encouraged that repositories provide a status *in review* in addition to the statuses *draft* and *published*. **A dataset under review should not be editable but should be accessible** via a URL, while the DOI is not yet discoverable and the DOI metadata is not yet accessible as the dataset has not yet been published. Such datasets *under review* might be assigned with an (internally) reserved DOI.
 
-### Reviewer Access to Datasets under Review
+### Reviewer access to datasets under review
 
 :::tip Standard
 *URLs to access datasets under review should have the access credentials encoded within the URL.*
 :::
 
-**Review links** for datasets *under review* should have the **access credentials** encoded in the URL, rather than having separate login and password. This avoids having to forward these details to the reviewer via the submission system. 
+**Review links** for datasets *under review* should have the **access credentials** encoded in the URL, rather than having separate login and password. This avoids the need to send this information to the reviewer via the submission system or letter to the editor, which has already been shown to be an error-prone process.  
 
 ### Publisher and PublisherIdentifier in DataCite Metadata
 
@@ -88,7 +88,7 @@ In XML:
 
 This ensures humans as well as machines can trace and interpret where the data has been published.
 
-### Metadata Corrections and Updates
+### Metadata corrections and updates
 
 :::tip Standard
 *Research data repositories should allow researchers to correct and update the metadata of datasets.*
@@ -96,7 +96,7 @@ This ensures humans as well as machines can trace and interpret where the data h
 
 As the process of adding metadata via a metadata editor can be error-prone, creators should be allowed to **correct and update** the PID metadata as well as any other metadata. For full transparency, metadata may be **versioned**. The record may indicate to viewers that changes were made. Updating metadata contributes to [FAIR](/docs/fair) ([F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below)) by enhancing the richness of metadata, and also allows creators to add additional related identifiers for recently published related datasets and articles. 
 
-### Legal Issues on Dataset Abstract 
+### Legal issues on dataset abstracts 
 
 :::tip Standard
 *Research data repositories should inform authors and data curators about possible rights conflicts for the abstract field in the datasets DataCite metadata.*
@@ -104,7 +104,7 @@ As the process of adding metadata via a metadata editor can be error-prone, crea
 
 Dataset's should have their **own description as an abstract**. Copying the related article abstract can result in a **rights conflict** with the respective academic publisher. This is particularly the case in German law. Authors and data curators should be informed of this conflict, e.g. via a **tooltip** when adding metadata using a metadata editor.
 
-### Group Licences
+### Group licences
 
 :::tip Standard
 *In research data repositories, licences should be grouped into research data licences and software licences.*
@@ -112,7 +112,7 @@ Dataset's should have their **own description as an abstract**. Copying the rela
 
 Repositories often tend to provide confusingly long lists of licences. Furthermore, **licences** differ for datasets and software. Providing a **grouping** will greatly assist authors in selecting from the correct set. 
 
-### Encourage Creative Commons Licences
+### Encourage Creative Commons licences
 
 :::tip Standard
 *Research data repositories should encourage researchers to choose a Creative Commons licence to simplify the landscape of licences and their choice.*
@@ -120,15 +120,15 @@ Repositories often tend to provide confusingly long lists of licences. Furthermo
 
 In line with grouping licences between software and datasets, pointing authors towards the selection of a [**Creative Commons (CC)**](https://creativecommons.org/) licence alleviates the selection process. When publishing research data, Creative Commons licences that are no more restrictive than CC BY are strongly recommended.
 
-### Promote the least Restrictive Creative Commons Licences
+### Promote the least restrictive Creative Commons licences
 
 :::tip Standard
 *Research data repositories should suggest licences such as CC0 or CC BY by pre-selecting such a licence rather than more restrictive licences such as CC BY-SA or even CC BY-NC-ND, which can inhibit reuse.*
 :::
 
-Shared data should be as **open as possible, as closed as necessary** with the intent of allowing and enabling others to reuse and build upon the work. Thus, encouraging rather open licences such as **[CC0](https://creativecommons.org/public-domain/cc0/)** and **[CC BY](https://creativecommons.org/licences/by/4.0/)** as opposed to more restrictive licences such as [CC BY-SA](https://creativecommons.org/licences/by-sa/4.0/) or even [CC BY-NC-ND](https://creativecommons.org/licences/by-nc-nd/4.0/). Such restrictive licenses can make data reuse difficult.
+Shared data should be as **open as possible, as closed as necessary** with the intent of allowing and enabling others to reuse and build upon the work. Thus, encouraging rather open licences such as **[CC0](https://creativecommons.org/public-domain/cc0/)** and **[CC BY](https://creativecommons.org/licences/by/4.0/)** as opposed to more restrictive licences such as [CC BY-SA](https://creativecommons.org/licences/by-sa/4.0/) or even [CC BY-NC-ND](https://creativecommons.org/licences/by-nc-nd/4.0/). Such restrictive licences can make data reuse difficult.
 
-### Creators and Contributors
+### Creators and contributors
 
 :::tip Standard
 *Research data repositories should label fields for creators in their (DataCite) metadata editor as* Authors/Creators.
