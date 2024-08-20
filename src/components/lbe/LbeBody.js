@@ -33,7 +33,7 @@ function LbeBlock( { title, authors, journal, pubyear, linkpub, linkdata, linkco
             )}
             </p>
 
-            <details className="lbe__details">
+            <details className="lbe__details" open={true}>
                 <summary>Details</summary>
                 <div className="lbe__details--collapsible">
                     <h4>Description</h4>
