@@ -84,7 +84,7 @@ git clone https://github.com/NFDI4Chem/knowledge_base
 cd knowledge_base
 ```
 
-### Number of articles
+### Number of pages
 
 ```
 find docs -name "*.mdx" | wc -l
