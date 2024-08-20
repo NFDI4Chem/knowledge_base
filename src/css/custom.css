@@ -706,8 +706,10 @@ table thead tr {
     justify-content: right;
 }
 
+.lbe__block > h4,
 .lbe__block > p {
-    padding: 0 0.3rem;
+    margin: 0.5rem;
+    margin-top: 0.8rem;
 }
 
 .lbe__block p:nth-of-type(-n + 2),
