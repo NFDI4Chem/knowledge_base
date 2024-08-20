@@ -4,6 +4,8 @@ import React from "react";
 
 import { RepoButton, FilterButton } from "./LbeElements.js";
 import Authors from "./Authors.js";
+import ShortenDesc from "../commons/ShortenDesc.js";
+import ShortenButtons from "./ShortenButtons.js";
 
 // Function for single lbe dataset block
 
@@ -65,13 +67,16 @@ function LbeBlock({
             </p>
 
             <h4>Description</h4>
-            <p>{description}</p>
+            <p>
+                <ShortenDesc desc={description} length={200} />
+            </p>
 
             <h4>Links to datasets</h4>
             <p>
-                {linkdata.map((props, idx) => (
+                <ShortenButtons items={linkdata} number={3} />
+                {/* {linkdata.map((props, idx) => (
                     <RepoButton key={idx} {...props} />
-                ))}
+                ))} */}
             </p>
             <p>
                 <em>{linkcomment}</em>
