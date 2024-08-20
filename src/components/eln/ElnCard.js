@@ -1,7 +1,7 @@
 import RepoButton from "@site/src/components/repos/RepoButton";
 
 import FilterButton from "./elnFilter/FilterButton.js";
-import ShortenDesc from "./ShortenDesc.js";
+import ShortenDesc from "../commons/ShortenDesc.js";
 
 import styles from "./Eln.module.css";
 
