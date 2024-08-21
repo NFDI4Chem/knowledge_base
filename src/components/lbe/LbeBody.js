@@ -68,23 +68,26 @@ function LbeBlock({
 
             <hr className="lbe__block__hr" />
 
-            <h4>Description</h4>
-            <p>
-                <ShortenDesc desc={description} length={200} />
-            </p>
+            <details className="lbe__details" open={description.length <= 100}>
+                <summary>Description</summary>
+                <p>{description}</p>
+            </details>
+
+            {/* <LbeDescription description={description} length={100} /> */}
 
             <hr className="lbe__block__hr" />
 
-            <h4>Links to datasets</h4>
-            <p>
-                <ShortenButtons items={linkdata} number={3} />
-                {/* {linkdata.map((props, idx) => (
-                    <RepoButton key={idx} {...props} />
-                ))} */}
-            </p>
-            <p>
-                <em>{linkcomment}</em>
-            </p>
+            <details className="lbe__details" open={linkdata.length <= 3}>
+                <summary>Links to datasets</summary>
+                <p>
+                    {linkdata.map((props, idx) => (
+                        <RepoButton key={idx} {...props} />
+                    ))}
+                </p>
+                <p>
+                    <em>{linkcomment}</em>
+                </p>
+            </details>
         </div>
     );
 }
