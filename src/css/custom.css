@@ -731,6 +731,12 @@ table thead tr {
     }
 }
 
+.lbe__block__hr {
+    border-top: 1px solid var(--ifm-color-primary);
+    background-color: unset;
+    margin: 0.8rem 0.4rem;
+}
+
 .lbe__details {
     display: flex;
     overflow: hidden;

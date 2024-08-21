@@ -66,10 +66,14 @@ function LbeBlock({
                 ))}
             </p>
 
+            <hr className="lbe__block__hr" />
+
             <h4>Description</h4>
             <p>
                 <ShortenDesc desc={description} length={200} />
             </p>
+
+            <hr className="lbe__block__hr" />
 
             <h4>Links to datasets</h4>
             <p>
