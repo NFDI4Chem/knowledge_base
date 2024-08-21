@@ -73,8 +73,6 @@ function LbeBlock({
                 <p>{description}</p>
             </details>
 
-            {/* <LbeDescription description={description} length={100} /> */}
-
             <hr className="lbe__block__hr" />
 
             <details className="lbe__details" open={linkdata.length <= 3}>
