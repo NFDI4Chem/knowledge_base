@@ -740,8 +740,9 @@ table thead tr {
 .lbe__details {
     display: flex;
     overflow: hidden;
-    border: 1px solid var(--ifm-color-primary);
-    padding: 1rem;
+    border: none;
+    /* border: 1px solid var(--ifm-color-primary); */
+    padding: 0 1rem;
     transition: all var(--n4c-transform-time) ease-in-out;
 }
 
@@ -751,9 +752,17 @@ table thead tr {
     transition: all var(--n4c-transform-time) ease-in-out;
 }
 
+.lbe__details summary {
+    font-size: var(--ifm-h4-font-size);
+    color: var(--ifm-heading-color);
+    font-family: var(--ifm-heading-font-family);
+    font-weight: var(--ifm-heading-font-weight);
+    line-height: var(--ifm-heading-line-height);
+    cursor: pointer;
+}
+
 .lbe__details[open] summary {
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--ifm-color-primary);
 }
 
 .lbe__details summary::marker {
