@@ -61,6 +61,8 @@ function LbeBlock({
                         name={m}
                         type="repo"
                         numbered={false}
+                        funnel
+                        title={"Filter datasets from " + m}
                         {...{ lbeState, setLbeState }}
                     />
                 ))}
