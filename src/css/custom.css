@@ -626,6 +626,8 @@ table thead tr {
 /* Filter buttons */
 
 .lbe__filterbutton {
+    display: grid;
+    align-items: center;
     border-radius: var(--ifm-breadcrumb-border-radius);
     color: white;
     display: inline-block;
@@ -670,6 +672,16 @@ table thead tr {
     transition: transform var(--lbe-transform-time) ease-in-out;
 }
 
+.lbe__filterbutton__content {
+    display: flex;
+    align-items: center;
+}
+
+.lbe__filterbutton__funnel {
+    height: calc(var(--ifm-font-size-base) * 0.6);
+    fill: white;
+}
+
 /* LBE blocks */
 
 .lbe__block {
@@ -706,8 +718,10 @@ table thead tr {
     justify-content: right;
 }
 
+.lbe__block > h4,
 .lbe__block > p {
-    padding: 0 0.3rem;
+    margin: 0.5rem;
+    margin-top: 0.8rem;
 }
 
 .lbe__block p:nth-of-type(-n + 2),
@@ -729,11 +743,18 @@ table thead tr {
     }
 }
 
+.lbe__block__hr {
+    border-top: 1px solid var(--ifm-color-primary);
+    background-color: unset;
+    margin: 0.8rem 0.4rem;
+}
+
 .lbe__details {
     display: flex;
     overflow: hidden;
-    border: 1px solid var(--ifm-color-primary);
-    padding: 1rem;
+    border: none;
+    /* border: 1px solid var(--ifm-color-primary); */
+    padding: 0 1rem;
     transition: all var(--n4c-transform-time) ease-in-out;
 }
 
@@ -743,9 +764,17 @@ table thead tr {
     transition: all var(--n4c-transform-time) ease-in-out;
 }
 
+.lbe__details summary {
+    font-size: var(--ifm-h4-font-size);
+    color: var(--ifm-heading-color);
+    font-family: var(--ifm-heading-font-family);
+    font-weight: var(--ifm-heading-font-weight);
+    line-height: var(--ifm-heading-line-height);
+    cursor: pointer;
+}
+
 .lbe__details[open] summary {
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--ifm-color-primary);
 }
 
 .lbe__details summary::marker {
