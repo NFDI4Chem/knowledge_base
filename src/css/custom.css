@@ -626,6 +626,8 @@ table thead tr {
 /* Filter buttons */
 
 .lbe__filterbutton {
+    display: grid;
+    align-items: center;
     border-radius: var(--ifm-breadcrumb-border-radius);
     color: white;
     display: inline-block;
@@ -668,6 +670,16 @@ table thead tr {
     cursor: pointer;
     transform: scale(var(--lbe-hover-scale));
     transition: transform var(--lbe-transform-time) ease-in-out;
+}
+
+.lbe__filterbutton__content {
+    display: flex;
+    align-items: center;
+}
+
+.lbe__filterbutton__funnel {
+    height: calc(var(--ifm-font-size-base) * 0.6);
+    fill: white;
 }
 
 /* LBE blocks */
