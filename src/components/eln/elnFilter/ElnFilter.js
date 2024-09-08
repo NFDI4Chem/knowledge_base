@@ -8,7 +8,11 @@ import styles from "../Eln.module.css";
 // Assemble buttons for filtering section
 
 function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
-    let subDiscButtons = ["All", ...allSubDisc];
+    let subDiscButtons = [];
+
+    if (allSubDisc) {
+        subDiscButtons = ["All", ...allSubDisc];
+    }
     let licenseButtons = ["All", ...allLicenses];
 
     // Check if active prop should be handed to FilterButton
@@ -34,21 +38,23 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
 
     return (
         <React.Fragment>
-            <div className="lbe__searchfilter__section">
-                <h5>Filter by subdisciplines</h5>
-                <p>
-                    {subDiscButtons.map((subDisc, idx) => (
-                        <FilterButton
-                            key={idx}
-                            label={subDisc}
-                            type="subDisc"
-                            active={isActive("subDisc", subDisc)}
-                            numbered={true}
-                            {...{ filter, setFilter }}
-                        />
-                    ))}
-                </p>
-            </div>
+            {subDiscButtons.length > 0 && (
+                <div className="lbe__searchfilter__section">
+                    <h5>Filter by subdisciplines</h5>
+                    <p>
+                        {subDiscButtons.map((subDisc, idx) => (
+                            <FilterButton
+                                key={idx}
+                                label={subDisc}
+                                type="subDisc"
+                                active={isActive("subDisc", subDisc)}
+                                numbered={true}
+                                {...{ filter, setFilter }}
+                            />
+                        ))}
+                    </p>
+                </div>
+            )}
             <div className="lbe__searchfilter__section">
                 <h5>Filter by license</h5>
                 <p>
