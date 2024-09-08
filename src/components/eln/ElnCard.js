@@ -22,22 +22,22 @@ function ElnCard({ eln, filter, setFilter }) {
             <div className={styles.eln__card__desc}>
                 <ShortenDesc desc={eln.desc} length={100} />
             </div>
-            <div className={styles.eln__card__desc}>
-                {eln.subDisc.length > 0
-                    ? eln.subDisc.map((subdisc, idx) => {
-                          let isActive = filter.subDisc === subdisc;
-                          return (
-                              <FilterButton
-                                  active={isActive}
-                                  type="subDisc"
-                                  label={subdisc}
-                                  key={idx}
-                                  {...{ filter, setFilter }}
-                              />
-                          );
-                      })
-                    : null}
-            </div>
+            {eln.subDisc && eln.subDisc.length > 0 && (
+                <div className={styles.eln__card__desc}>
+                    {eln.subDisc.map((subdisc, idx) => {
+                        let isActive = filter.subDisc === subdisc;
+                        return (
+                            <FilterButton
+                                active={isActive}
+                                type="subDisc"
+                                label={subdisc}
+                                key={idx}
+                                {...{ filter, setFilter }}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 }
