@@ -35,6 +35,8 @@ To assist authors in selecting **well-established and community-specific [reposi
 
 With the DOI and repository name in hand, journals should enrich Crossref DOI metadata of articles published following the [FAIR](/docs/fair/) principles (e.g [F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below), [I3](/docs/fair/#i3-metadata-include-qualified-references-to-other-metadata)). This establishes a structured **link** between the DOI of the article and the  DOI of the dataset and ensures humans and machines alike can interpret the relationship between the published objects. For Crossref metadata, a `related_item` should be added to mention the name of the repository (equal to `publisher` in the corresponding dataset DataCite DOI metadata). 
 
+In agreement with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/), the relationship type `isSupplementedBy` should be used.
+
 In XML:
 ```xml
 <rel:program name="relations">
@@ -48,8 +50,6 @@ identifier-type="doi">10.prefix/suffix
 	</rel:related_item>
 </rel:program>
 ```
-
-In agreement with [Crossref's documentation on **linking datasets** to published items](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/), the relationship type `isSupplementedBy` should be used.
 
 ### Add data publications to prior publication policy
 
