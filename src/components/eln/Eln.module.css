@@ -1,0 +1,126 @@
+/********** ELN-Finder ************/
+
+.eln {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Search / Filter section */
+
+.eln__searchfilter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px dashed var(--ifm-color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.eln__searchfilter__text {
+    translate: 0 20%;
+    min-width: 240px;
+}
+
+.eln__searchfilter__buttons {
+    flex-grow: 1;
+}
+
+.eln__searchfilter__search {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.eln__searchfilter__search > span {
+    text-align: center;
+}
+
+.eln__searchfilter__search > em {
+    color: var(--ifm-color-primary);
+    text-align: center;
+}
+
+.eln__searchfilter__search__button {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0;
+    background: none;
+    border: none;
+    line-height: 1rem;
+}
+
+.eln__card {
+    width: 49.5%;
+    padding: 0.75rem;
+    border: 1px dashed var(--ifm-color-primary);
+    margin-bottom: 0.5rem;
+    transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.eln__card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eln__card__desc {
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .eln {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .eln__searchfilter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px dashed var(--ifm-color-primary);
+        margin-bottom: 0.75rem;
+    }
+
+    .eln__searchfilter__text,
+    .eln__searchfilter__buttons {
+        width: 100%;
+        translate: 0;
+    }
+
+    .eln__searchfilter__search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .eln__card {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px dashed var(--ifm-color-primary);
+        margin-bottom: 0.75rem;
+        transition: all var(--n4c-transform-time) ease-in-out;
+    }
+}
+
+.eln__card__link {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.eln__licenseChip--opensource {
+    background-color: var(--ifm-color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.eln__filterbutton--secondary {
+    background-color: var(--ifm-breadcrumb-item-background-active);
+    color: var(--ifm-color-primary);
+    font-weight: unset;
+}

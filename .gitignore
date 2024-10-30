@@ -5,6 +5,9 @@
 fonts
 # Localisation files
 /i18n
+# API data
+elnData.json
+elnDataPharm.json
 # Generated files
 .docusaurus
 .cache-loader
