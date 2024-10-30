@@ -3,6 +3,10 @@
         "title": "Contribute",
         "items": [
             {
+                "label": "Getting Started",
+                "href": "/docs/contributing"
+            },
+            {
                 "label": "Content (GitHub)",
                 "href": "https://github.com/NFDI4Chem/knowledge_base"
             },
