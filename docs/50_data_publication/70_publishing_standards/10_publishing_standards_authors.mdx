@@ -5,6 +5,8 @@ slug: "/publishing_standards_authors"
 
 ### Use ORCID iD to identifiy authors and ROR to identifiy institutions
 
+<!--image "order of operations" needed (flowchart)-->
+
 :::tip Standard
 _Authors should provide their ORCID iD to identify the authors/creators and contributors, and their ROR identifier to identify the institution to which they are affiliated._
 :::
@@ -49,7 +51,7 @@ Research data repositories offer the option to add a related identifier to link 
 _Researchers should link their datasets to be published to their corresponding articles using the relation type `IsSupplementTo`._
 :::
 
-According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. For published articles, [Crossref's documentation on relationships](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) recommends that `isSupplmenetTo` should be used to link datasets generated as part of research results. Please note that some repositories automatically detect whether the linked object is an article or some other dataset published in another repository, and therefore don't require authors to specify a relation(ship) type.
+According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. For published articles, [Crossref's documentation on relationships](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) recommends that `isSupplmentTo` should be used to link datasets generated as part of research results. Please note that some repositories automatically detect whether the linked object is an article or some other dataset published in another repository, and therefore don't require authors to specify a relation(ship) type.
 
 ### Usage of Collection DOIs
 
