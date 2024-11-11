@@ -1,8 +1,7 @@
 #!/bin/bash
 
-targetDir="/var/www/html/staging_eln/knowledge_base/assets"
-# targetDir="/var/www/html/knowledge_base/assets"
-# targetDir="/git/n4c-kb_jl/static/assets"
+# targetDir="/var/www/html/staging_eln/knowledge_base/assets"
+targetDir="/var/www/html/knowledge_base/assets"
 
 # get the data from the eln-finder
 
