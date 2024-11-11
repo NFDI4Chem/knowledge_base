@@ -3,105 +3,50 @@ title: "Physical and Computational Chemistry"
 slug: "/physical_chemistry"
 ---
 
-import Methods from '@site/src/components/Methods.js';
-import {LbeChip} from '@site/src/components/lbe/LbeElements.js';
+import { LbeChip } from "@site/src/components/lbe/LbeElements.js";
+import ElnFinder from "@site/src/components/eln/ElnFinder.js";
 
-<LbeChip title="physical chemistry" /><LbeChip title="cheminformatics" />
+<LbeChip title="physical chemistry" />
+<LbeChip title="cheminformatics" />
 
-
-:::info Summary:
-
+{/* prettier-ignore */}
+{/* :::info Summary:
 Physical chemistry is an interdisciplinary science at the frontier between chemistry and physics, whose topics go beyond the classical areas of the respective individual sciences. While preparative chemistry focuses on questions of the methodology of chemical synthesis of known and new substances, physical chemistry attempts to describe the properties of substances and their transformation by applying concepts of physics to objects of chemistry by means of theoretical and experimental methods. Along with organic and inorganic chemistry, physical chemistry therefore represents one of the three key disciplines of "classical" chemistry, since it provides the theoretical basis for technical chemistry and process engineering. Its knowledge is also an integral part of many other disciplines and is used, for example, for description and understanding in biology and medicine, meteorology as well as the earth sciences. Due to this great interdisciplinarity and the use of numerous physicochemical methods in almost all areas of chemistry, a complete description of physical chemistry as profile is hardly possible, which is why this article explicitly makes no claim to do so.
-:::
+::: \*/}
 
-# Methods Profiles
+## Introduction
 
-## EPR spectroscopy
+Physical Chemistry encompasses a variety of sub-disciplines, covering vast methodology, which, in turn, produce heterogenous data.
+From spectroscopic measurement data, imaging, to simulation input files and in-house data analysis code, many physical chemists are experienced in handling digital data. They are often well-versed in developing software solutions to support their work. While some work with large data volumes on a regular basis, other methodologies result in small, text-based files. This discipline includes many data-literate members, the expertise of which may be harnessed to implement tools and solutions to manage their research group's data in a unified and streamlined manner.
 
-### What is it?
-- **E**lectron **P**aramagnetic **R**esonance spectroscopy belongs together with NMR (**N**uclear **M**agnetic **R**esonance) spectroscopy to the group of magnetic resonance methods
-- measures the resonant microwave absorption of a paramagnetic sample in an external magnetic field (i.e measurement needs unpaired electrons)
+## Data Types
 
-### For what?
-- provides information about the electronic/atomic structure and the chemical environment (e.g. local environmental polarity) of the sample
-- for the characterisation of molecular dynamics on the time scale of approx. 10 ps-1 μs (allows e.g. conclusions to be drawn about local nanoviscosity)
-- for distance measurements in the range of about 1-8 nm
+As mentioned, the data produced in physical chemistry and its diverse sub-disciples are varied. One research group may work intensively with imaging data such as superresolution microscopy, while the other may work on method development, and again others may analyze spectroscopic data or conduct numeric simulations—or even any combination of these.
 
-### What kind of data is generated?
-- almost exclusively [proprietary file formats](/docs/format_standards) (e.g. .spe or .DTA/.DSC) of the "Bruker Corporation" company
-- transfer into [open file formats](/docs/format_standards) (e.g. .txt or .csv) either via Bruker software on the measuring device itself or via tools like [SpinToolbox](https://www.spintoolbox.com/en/)
-- analysis of data using Bruker software or e.g. [EasySpin](https://www.easyspin.org/) as open-source toolbox for MATLAB
+## ELNs and Other Tools
 
-### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using an suitable [ELN](/docs/eln) (possibly in addition to a manual laboratory notebook in paper form)
-- experimental conditions (e.g. sample concentration, solvent etc.) and measurement parameters (e.g. frequency, temperature) are noted in the [ELN](/docs/eln)
-- observations, deviations from planned measurement protocol or other peculiarities during measurement with no digital output (i.e. no data files) are added manually to the [ELN](/docs/eln) entry of the experiment
-- obtained unprocessed raw files from measurements are uploaded to [ELN](/docs/eln) in open file formats and attached directly to the respective [ELN](/docs/eln) experiment entry, including metadata with data on the instrument (e.g. manufacturer, type, etc.), measurement conditions & parameters
-- [metadata](/docs/metadata) related to the obtained data, such as temperature or solvent of measurement, follow common [metadata standards](/docs/metadata)
-- research data are processed, analysed and compared with open non-proprietary software tools
-- simultaneously with [publication](/docs/data_publishing) as a research article in a scientific journal, the underlying research data is published in an open data [repository](/docs/repositories) and linked to the article (incl. semantically richly annotated raw and processed data in open data formats for reuse)
-- an unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
+For effective data management, software tools should be selected in a uniform manner within a project or research group with the aim to [organize](docs/data_organisation) and streamline workflows. This involves establishing clear usage guidelines, including metadata templates drawn from minimum information standards for a given method, where available. These should be outlined in a [data management plan (DMP)](docs/dmp) for each project. Many universities supply tools and templates for DMPs (see the [respective article](doc/dmp) for more information).
 
-## Quantum Mechanical (QM) calculations
+An [electronic lab notebooks (ELNs)](docs/eln) helps in the day-to-day planning and structured documentation of experiments, while some also assist in data workflow management. For disciplines with diverse research, ELNs must be flexible and customizable. Certain universities may have a central option, while each research group may chose what best fits their needs and resources if they are able to host or procure their own solution. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) lists many options and the article on [choosing an ELN](docs/chose_eln) provides further assistance:
 
-### What is it?
-- **Q**uantum **M**echanical calculations are one of the major computational tools to elucidate molecular properties on a first-principles basis
-- solving the Schrödinger equation provides the electronic energy of a molecule/molecular system, from which properties can be derived as higher-order derivatives. Descriptors can also be computed from orbital/density data which is equally available
+<ElnFinder subDisc="Physical chemistry" />
 
-### For what?
-- calculated molecular properties include e.g. molecular structures (usually local minima and transition states), energies, spectroscopic parameters/properties, dipole moments, polarizabilities and non-observables such as atomic charges and topological analysis
-- properties can be calculated prior to conducting experimental measurements to guide synthesis (computational screening) or a posteriori to help interpret experimental results atomistically
-- the application range depends on the level of theory used. Correlated wave function methods are commonly applied to systems with less than 100 atoms, density functional theory (DFT) up to 500 atoms, semiempirical methods can be routinely applied in the range of thousands
+In addition to ELNs, tools such as local repository and research dat management tools can assist in making data publication ready.
 
-### What kind of data is generated?
-- data formats depend strongly on the program that is used for the QM calculations, e.g. Gaussian, ORCA, Molpro, TURBOMOLE or Jaguar, but generally formatted text files are used as input and log files. Compressed data formats are used to store wavefunction, density information and operators. Molecular structures are provided in human-readable format
-- data analysis is carried out using custom scripts. A few programs provide their own scripts for common tasks (such as plotting of molecular orbitals) and dedicated GUIs
+For those writing scripts and developing research software solutions, [Git](https://git-scm.com/) is a highly recommended versioning tool. May universities also have their own instances of [GitLab](https://about.gitlab.com/) to assist in managing software projects.
 
-### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using a suitable repository (e.g. NOMAD, ioChem-BD or a general-purpose repository) to store the input files, main log and structures files (if not included in the log)
-- reproducibility of calculations to within numerical accuracy can be ensured by storing the input files and adding the program and its version (ideally even the compiler version and any compiler flags) as metadata. Numerical thresholds are well defined but reproducibility of calculations across different programs and versions is not guaranteed. This warrants the safekeeping of version specific source files for the same time period as the stored data
-- data analysis scripts should be uploaded to the repository in open file formats, attached directly to the corresponding data entry and accompanied with appropriate documentation
-- if possible, analysis and evaluation of calculations should be conducted with open, non-proprietary software tools
-- simultaneously with [publication](/docs/data_publishing) as a research article in a scientific journal, the data in the [repository](/docs/repositories) is linked to the article (incl. semantically richly annotated raw and processed data, if possible in open data formats for reuse)
-- a unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for the dataset as well as for the journal publication
-- XML and CML (Chemical Markup Language) is used by a few software packages but this is not common practice
+Specifically for research data, [DataLad](https://www.datalad.org/), which is built on top of git, can greatly assist in tracking the metadata while processing and analyzing data. While it works for steps carried out with GUI applications, its true power comes in handy for those using script-based analysis and processing steps.
 
-### Challenges to make data FAIR
-- no standardised transfer into [open file formats](/docs/format_standards). All repositories of quantum chemical calculations to date make use of in-house parsers to extract the calculation data from uploaded logs. This trend hinders the improvement of FAIR practices since new developers are not provided with a template for log files. Any new software can only be featured in repositories after a unique parser is developed
-- lack of open meta-input and output file formats that are necessary to enable full interoperability of different programs and tools used for QM calculations. Particularly concerning is the lack of standards for: z-matrix and xyz file formats, trajectory files in molecular dynamics or structure optimisations, definition of isotopes, potential energy surfaces as well as equations used in the derivation of properties including thermodynamic quantities
+As many physical chemists may establish their own workflows or develop their own tools to acquire, process, and analyze their data, it is highly recommended to adhere to community-specific standards for file formats and metadata, where available. A bare mininum is to establish documentation and format standards within a research group, ensuring an efficient knowledge transfer from one generation of researchers to the next. An ELN can greatly assist in providing templates for documentation, while a DMP should be used to record the format standards. Employing automated workflows, e.g., from device to ELN and data storage systems, can greatly reduce manual steps in day-to-day work and can automatically ensure data and documentation are complete and formatted correctly. Some tools provide out-of-the-box solutions, such as device integration, while others provide options such as REST APIs to build custom methods.
 
-## Molecular Mechanical (MM) simulations
+## Publishing Data
 
-### What is it?
-- **M**olecular **M**echanical simulations approximate intra- and intermolecular interactions using simple Newtonian mechanics and neglect quantum effects
-- the system is parametrised with a suitable force field and propagated in time by solving the system’s Newtonian equations of motion. Potentials or modifications of the force field parameters can be applied to extract thermodynamic/kinetic data
+[Publishing research data](docs/data_publication), especially that underlying a published article, is an important aspect that allows others in the research community to replicate and build upon a researchers work. [Research data repositories](docs/repositories) serve as platforms for data publication and can greatly assist in [FAIR](docs/fair) data publication. Such repositories range from subject-specific to general and institutional. For many in physical chemistry and its varied data, general repositories such as [RADAR4Chem](https://radar.products.fiz-karlsruhe.de/de/radarabout/radar4chem) presents an option for publishing data for which now (sub-)discipline-specific repository has been established. [ioChem-BD](https://www.iochem-bd.org/) serves as a computational chemistry repository and includes a conversion service for many common data types to ensure interoperability. The [Image Data Resource (IDR)](https://idr.openmicroscopy.org/) makes biological imaging data available to the community, while self-hosted Omero repositoy can assist those working with other types of imaging data. {/* <!--Nikki: as far as I know--> */} For more information on choices, head [here](docs/choose_repository).
 
-### For what?
-- systems can be as large as millions of atoms, allowing for the investigation of protein dynamics and protein-ligand interactions on a microsecond timescale. More complex systems such as protein-protein interactions or proteins embedded in a biomembrane can also be simulated
-- simulations of pure liquids, mixtures or interfaces between liquids and solids or gases enable the investigation of such systems
-- explaining and interpreting the behaviour of macroscopic systems by investigating them at a microscopic level
+For work that includes developing in-house research software solutions: **software is data and an integral part of research and should be published as such**. While only GitHub currently offers an automatic workflow for publishing software releases to [zenodo](https://zenodo.org/), there are methods to assign the [software a DOI, therefore making it citable](https://open.win.ox.ac.uk/pages/open-science/community/Open-WIN-Community/docs/gitlab/repo-doi/).
 
-### What kind of data is generated?
-- data formats depend strongly on the program that is used for the MM calculations, e.g. AMBER, CHARMM, GROMACS, LAMMPS or NAMD but in general specifically formatted text files are used as input and log files, and a binary representation for checkpoint and trajectory files
-- analysis of data using tools provided by the software’s manufacturer or custom scripts
+## Challenges
 
-### How to do it [FAIR](/docs/fair)?
-- [documentation of all research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using a suitable repository to store the data
-- reproducibility of calculations can be ensured by storing the input file and adding the program and its version (ideally including the compiler and any compiler flags) as metadata
-- if possible, analysis and evaluation of calculations should be conducted with open non-proprietary software tools
-- simultaneously with [publication](/docs/data_publishing) as a research article in a scientific journal, the data in the [repository](/docs/repositories) is linked to the article (incl. semantically richly annotated raw and processed data, if possible in open data formats for reuse)
-- a unique [persistent identifier](/docs/pid) (e.g. DOI) is generated for each dataset as well as for the journal publication
+Common challenges in physical chemistry and FAIR data often go hand-in-hand with the large variety of sub-disciplines, methodology, and thus diverse data types. Many working in physical chemistry labs may have established their own personal workflows. Working within a group streamline and unify common steps and to establish reusable templates for metadata, be it in ELNs or in the local file system, can provide structured information not just for fellow researchers, but also for those working on FAIR data infrastructure, such as ELNs and research data repositories.
 
-### Challenges to make data FAIR
-- no standardised transfer into [open file formats](/docs/format_standards) for different simulation packages
-- development of open meta-input and output file formats is required to handle the multitude of different programs and tools used in MM calculations in accordance with the FAIR principles. Tools such as PLUMED can help users with this problem
-- trajectory files are typically too large to store in commonly used repository environments, even when using compressed file formats. To make this data FAIR, standards for handling large amounts of data must be developed or solutions from other fields applied
-- reproducibility of long time-scale molecular dynamics is unattainable (numerical noise will eventually affect the resulting trajectories, especially in a multicore environment). Depending on the numerical accuracy and the specific implementation, deviations can be observed as soon as in the picosecond range. However, thermodynamic averages or other probabilistic measurements should be achieved within a suitable margin of error. This margin would have to be estimated and provided by the authors of a publication
-
-
-# Methods Data Format Overview
-
-<Methods defaultProfile={"physical"} />
-
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
+Especially in imaging, large data volume can strain the local [storage](docs/data_storage) resources. Central storage solution can provide assistance and should be used in combination with best research data management practices to ensure the data's re-usability and avoid unorganized and inefficient use of large storage systems.
