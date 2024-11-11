@@ -15,10 +15,10 @@ jobs:
         if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             - name: Set up Node.js
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v4
               with:
                   node-version: "lts/*"
 
