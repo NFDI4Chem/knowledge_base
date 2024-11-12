@@ -4,65 +4,62 @@ nfdi4chem-id: dsoic
 slug: "/synthetic_chemistry"
 ---
 
-import Methods from '@site/src/components/Methods.js';
-import {LbeChip} from '@site/src/components/lbe/LbeElements.js';
+import { LbeChip } from "@site/src/components/lbe/LbeElements.js";
+import ElnFinder from "@site/src/components/eln/ElnFinder.js";
 
-<LbeChip title="inorganic chemistry" /><LbeChip title="organic chemistry" />
+<LbeChip title="inorganic chemistry" />
+<LbeChip title="organic chemistry" />
 
-:::info Summary:
+## Introduction
 
-The main goal of a synthetic organic or inorganic chemist is to synthesise desired compounds. Established methods are applied, or new synthetic methods are developed. A typical workflow starts with the planning of the experiments and methods. These are then conducted and research data as well as accompanying metadata are collected along the way. Once the final product is obtained, it is analysed with suitable methods to identify properties of the synthesised material or to ascertain the efficacy of the selected synthetic method. Processing and interpretation of the obtained research data will lead to a proof of concept for a given reaction, optimised conditions for future experiments or upscaling.
-:::
+During the synthesis of a desired compound, all steps, such as planning, realisation and documentation of an experiment, or characterisation of the obtained product, provide research data. These data are synthetic procedures, experimental conditions, as well as manually and digital data collected with analytical devices. Processing and interpretation of the obtained research data will lead to a proof of concept for a given reaction, optimised conditions for future experiments or upscaling.
 
-## Type of experiments
+## Data Types
 
-- Synthesis: 
-    - Preparation of organic/inorganic substances.
-    - Small-scale experiments for screening/optimisation of reaction conditions.
-    - Upscaling of reactions to obtain sufficient product for comprehensive characterisation or as starting material for subsequent synthesis steps.
+In synthetic chemistry different types of research data can be obtained. In general, this data is not limited to characterisation of synthesised products. A typical experiment starts with its design and planning, followed by carrying out the procedure in a laboratory setting. During realisation of an experiment, observations, experimental conditions, and yields are documented. Ideally, this manually collected research data is recorded digitally in an [Electronic Lab Notebooks (ELN)](/docs/eln/).
 
+The synthesis of a specific product is followed by analysing its properties. Regarding data collection, both manually determined and digital data can be obtained. Observations and results of analytical methods with no digital output (i.e., no data files) can be added manually to the ELN entry of the experiment, which include for example melting/boiling point, optical rotation, TLC Rf values, or refraction index. Digital data are obtained from analytical instruments, e.g., NMR, IR, MS. These data can be uploaded seamlessly from the analytical devices to an ELN and analysed therein. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below. It is recommended to save raw data files in [proprietary file formats](/docs/format_standards/) alongside interoperable [open file formats](/docs/format_standards/) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended.
 
-- Analysis:
-    - Product characterisation with feasible methods (e.g. NMR spectroscopy, mass spectrometry, IR spectroscopy, UV/vis spectroscopy, elemental analysis).
-    - to assess screening/optimisation conditions.
-    - to investigate desired product properties.
-    - to characterise materials’ properties comprehensively.
+Overall, [metadata](/docs/metadata/) should always be included when collecting and [storing](/docs/data_storage/) data to allow understanding of the research data in the long term.
 
-## Planning of experiments
+# ELNs and Other Tools
 
-- The implementation of newly inspired ideas is supported by previous work stored in the local instance of the electronic lab notebook (e.g. [Chemotion ELN](https://www.chemotion.net/chemotionsaurus/index.html)) of the own research group ([overview of ELNs for synthetic chemists](/docs/eln)), scientific literature or datasets published in [repositories](/docs/repositories) (discipline-specific repositories such as the [Chemotion repository](https://www.chemotion-repository.net/welcome)).
-- Experimental design follows a logical order to achieve a specific goal, such as increasing yield or purity.
-- Planning is concluded by adding the experimental details (e.g. quantities and scheduling procedures). All metadata is documented in an ELN (e.g. Chemotion ELN) including references.
+For planning research data management and creating data management plans, tools such as [RDMO](https://rdmorganiser.github.io/) and [DMP-Online](https://dmponline.dcc.ac.uk/) are suitable. Many universities have their own instances of these solutions.
 
-## Documentation of experiments
+If you want your data to comply with the [FAIR principles](/docs/fair/) it can be very tedious and extremely time consuming if you try to apply the FAIR principles to your data retrospectively if your existing workflows involve a large degree of analogue documentation (e.g. paper lab notebooks). The reality is that you need tools to take care of certain aspects of the FAIR principles automatically so you don’t have to apply them manually each time. [Electronic Lab Notebooks (ELNs)](/docs/eln/) are very powerful tools that can help you with this. Depending on what ELN you use, the [metadata](/docs/metadata/) can be automatically assigned in both human and [machine-readable formats](/docs/format_standards/). Furthermore, some ELNs can automatically generate interoperable [open file formats](/docs/format_standards/#format-standards-in-chemistry) for your analytical data. Choosing the right ELN can be challenging and this process should be thought about and carried out carefully. You can find out more on [how to choose the right ELN here](/docs/choose_eln/):
 
-- [Documentation of research data](/docs/data_documentation) and [metadata](/docs/metadata) is carried out digitally using an ELN.
-- Experimental conditions (e.g. solvents, temperature, duration, pressure) are noted in the ELN.
-- Observations and results of analytical methods with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment, which may include appearance, yield, melting point, optical rotation or TLC Rf values (with metadata where applicable).
-- Obtained data from analytical instruments (e.g. NMR, MS or IR data) are uploaded to the Chemotion ELN in open file formats and directly attached to the respective ELN experiment entry including instrumental setup metadata.
-- Metadata related to the obtained data, such as temperature or solvent of measurement, have to be provided according to metadata standards, e.g. x.
+<ElnFinder subDisc="Synthetic chemistry" />
 
-## Data producing methods
+A tool to help you find the right ELN is the so-called [ELN finder](https://eln-finder.ulb.tu-darmstadt.de/home) which is a searchable online repository for many different ELNs. It is important to note that not one size fits all and that one ELN may be appropriate for one research group, another ELN may be more appropriate for a different research group. Within NFDI4Chem, Chemotion ELN is the reference instance (find out more here in our [knowledge base article overview of Chemotion](/docs/chemotion_eln/)). This means that our developments in automatically applying the FAIR data principles to research data are implemented in Chemotion first.
 
-- Data can be collected during the experiment or after the experiment by analysing the obtained product.
-- Manually determined data: Experimental observations, appearance, yield, melting/boiling point, optical rotation, TLC Rf values, refraction index, etc.
-- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- Raw data files in [proprietary file formats](/docs/format_standards) should be saved alongside interoperable [open file formats](/docs/format_standards) by using converters or the software of the analytical device. If no specific open format is currently available, export as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+Chemotion is especially suitable for synthetic chemistry as it originally started out as an ELN for synthetic chemistry but has now been extended to a wider array of scientific disciplines through its [LabIMotion extension](https://chemotion.net/docs/labimotion).
 
-<Methods defaultProfile={"synthetic"} />
+## Publishing Data
 
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
+[Publishing research data](/docs/data_publishing/) is important in order to allow for the reuse of data by other researchers or for machine learning. Especially for machine learning, it is crucial that the data is published in a structured and standardised way. Where can you publish your data? Open access [data repositories](/docs/repositories/) are a good solution to provide your data for reuse by others. Choosing the right repository is crucial and as a general rule of thumb it is better to deposit your data in data-specific or discipline-specific repositories as these enforce more standardisation in how the data are published thus allowing for better machine-readability.
 
-## Data analysis
+In order to reach as many researchers as possible, choosing the right repository can be crucial (more on this in the [article on choosing the right repository](/docs/choose_repository/)).
 
-- Research data are processed, analysed and compared (also to data of other experiments) within the Chemotion ELN.
-- Optionally, preprocessing of digital data with software of analytical device before data are transferred to the Chemotion ELN (cf. data producing methods).
-- A detailed view, evaluation and interpretation of results is carried out with the Chemotion ELN features.
+Above you can see a modified version of our decision tree from our guide how to choose the right repository. Here is a table giving an overview of what data fits into what repository:
 
-## Publishing research data
+{/* prettier-ignore-start */}
+| Data type | Data format | Suggested Repository | Criteria for selection |
+| :---- | :---- | :---- | :---- |
+| Nuclear Magnetic Resonance | Bruker XWIN-NMR format (zip), [JCAMP-DX](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/JCAMP-DX/) | [**Chemotion**](https://www.chemotion-repository.net/welcome) | Passing basic checks, curation |
+| Nuclear Magnetic Resonance | Bruker XWIN-NMR format, JOEL format NMReData, nmrML, ISA JSON | [**nmrXiv**](https://docs.nmrxiv.org/) | Validations / Minimum information reporting standards |
+| Molecules and their properties, identification, reactions and experimental investigations | mass spectrometry: JCAMP-DX, [mzMl](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/mzML/), mzXML (open, visualisable and processable), RAW for selected mass data types (processed and converted in JCAMP-DX), IR and Raman: JCAMP-DX, XRD: JCAMP-DX, UV/VIS: JCAMP-DX, Cyclic voltammetry: JCAMP-DX. \*Chemotion repo offers the option to convert data from different file formats into JCAMP-DX. | [**Chemotion**](https://www.chemotion-repository.net/welcome) | Passing basic checks, curation |
+| Inorganic crystal structures | Crystallographic Information File (CIF) | [**ICSD**](https://icsd.fiz-karlsruhe.de/) | Crystal structure data available |
+| Organic and metal-organic crystal structures | Crystallographic Information File (CIF) but other supporting file formats accepted | [**CSD**](https://www.ccdc.cam.ac.uk/structures/) | Cell parameters (single crystal), full coordinates (powder), in CIF format |
+| Organic, inorganic and metal-organic crystal structure data | primarily Crystallographic Information File (CIF) but other supporting file formats accepted | [**joint CCDC/FIZ Access Structures ServiceD**](https://www.ccdc.cam.ac.uk/structures//) | At least one CIF file must be included in the submission and structure factor data for all structures should be provided (if possible) |
+| Generic data from all disciplines of chemistry, all data that do not fit in the disciplinary repositories | format-independent | [**RADAR4Chem**](https://www.radar-service.eu/de) | Validation against metadata schema |
+{/* prettier-ignore-end */}
 
-- In addition to a research article in a scientific journal, the underlying research data are published in a repository and linked to the article to realise research data management according to the [FAIR data principles](/docs/fair) ([Best practice examples](/docs/best_practice)).
-- Data publications in repositories include raw and processed data for reuse.
-- The use of the Chemotion ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. [PubChem](https://pubchem.ncbi.nlm.nih.gov/). For the publication of research data in other discipline-specific repositories, such as the [CCDC](https://www.ccdc.cam.ac.uk/) for crystallographic data, data have to be exported from the Chemotion ELN and uploaded into the respective database.
-- A [persistent identifier](/docs/pid) (e.g. DOI) is generated for a dataset by a repository (via [DataCite](https://datacite.org/) for the Chemotion Repository), which is given in the journal article or corresponding supporting information to link the data publication with the manuscript.
+Your own institution may also have additional guidelines & resources for publishing data, therefore it is always worth consulting the research data management experts of your local institution.
+
+# Challenges
+
+While for some data types & workflows it may be obvious how to comply with the FAIR principles, for others it is not as no community standards have been set and/or no appropriate open data formats are available. This is especially true for more niche analytical methods. Remember though: FAIR is a spectrum not an absolute. Therefore even if one of your workflows may not be as FAIR as the other, if it is as FAIR as is currently possible then it is still worth doing.
+
+Many old devices do not put out open-data formats and some devices have no digital output at all which makes good RDM more challenging though not impossible given the right tools (e.g. Chemotion’s [ChemConverter](https://chemotion.net/docs/services/chemconverter) which automatically generates open file formats from analytical devices which are not capable of outputting them).
+
+One of the biggest challenges to RDM in Chemistry at the moment is the lack of inter-ELN interoperability. This means that it is very challenging if not impossible to transfer data between different ELNs. This makes it especially challenging for interdisciplinary collaborations where collaborating groups use different ELNs. There are, however, efforts underway to establish inter-ELN interoperability such as the [ELN consortium](https://github.com/TheELNConsortium/) of which Chemotion is a member.

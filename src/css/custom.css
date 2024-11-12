@@ -585,7 +585,8 @@ table thead tr {
     margin: unset;
 }
 
-.lbe__searchfilter__section h4 {
+.lbe__searchfilter__section h4,
+h5 {
     margin: 0.5rem 0;
 }
 
@@ -651,7 +652,7 @@ table thead tr {
     color: var(--ifm-color-primary);
 }
 
-.lbe__filterbutton.lbe__chip {
+.lbe__chip {
     background: var(--ifm-breadcrumb-item-background-active);
     color: var(--ifm-color-primary);
     font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));

@@ -18,7 +18,7 @@ const footerLinks = require("./footer.json");
 
 // Use for stagging:
 // const baseUrl = '/staging/knowledge_base_matomo/';
-// const baseUrl = '/staging/knowledge_base/';
+// const baseUrl = "/staging_eln/knowledge_base/";
 
 const config = {
     title: title,
@@ -123,6 +123,9 @@ const config = {
             },
         ],
     ],
+    future: {
+        experimental_faster: true,
+    },
 };
 
 export default config;
