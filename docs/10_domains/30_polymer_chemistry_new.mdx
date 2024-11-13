@@ -12,25 +12,13 @@ import ElnFinder from "@site/src/components/eln/ElnFinder.js";
 
 ## Introduction
 
-Polymer chemistry is focused on the synthesis and characterization of monomer units, macromolecules and resultant materials for applications in e.g. optics, electronics and energy, packaging and containers, coatings and adhesives, catalysis or medicine. Polymeric materials can be subdivided by their origin into synthetic, inorganic and biopolymers, where the latter is a significant subject of recent research as they can be derived from renewable resources and therefore are deemed to be part of the solution for a sustainable future. 
-The toolbox for monomer synthesis and modification, their polymerization as well as post-functionalization are often translated form organic chemistry, yet for cutting-edge materials new experimental strategies have to be developed. Many characterization methods, especially for monomers or small polymers, can also be adapted from established organic chemistry. However, since macromolecules can feature highly complex structures, e.g. brushes, dendrimers, rings and star shapes, advanced methods such as (2D) SEC, LCCC, DOSY NMR, or electron microscopy need to be applied in order to obtain an exhaustive structure determination (for abbreviations see table below). For their subsequent application as high-tech material, their mechanical and physical properties play an important role as well, where cyclic voltammetry or rheological characterization are just a few examples for the vast array of techniques that are available. A standard approach for the development of new polymeric materials can be described as follows:
-
-- Preparation of organic/inorganic monomer units.
-- Small-scale experiments for screening/optimization of reaction conditions.
-- Upscaling of reactions to obtain sufficient product for subsequent polymerization steps.
-- (Co)polymerization of monomers in different ratios/chain lengths as well as optimization of reaction conditions.
-- Post-polymerization functionalization.
-- Synthesis of macroscopic materials through 3D printing, moulding etc.
+The toolbox for monomer synthesis and modification, their polymerization as well as post-functionalization are often translated form organic chemistry, yet for cutting-edge materials new experimental strategies have to be developed. Many characterization methods, especially for monomers or small polymers, can also be adapted from established organic chemistry. However, since macromolecules can feature highly complex structures, e.g. brushes, dendrimers, rings and star shapes, advanced methods such as (2D) SEC, LCCC, DOSY NMR, or electron microscopy need to be applied in order to obtain an exhaustive structure determination (for abbreviations see table below). For their subsequent application as high-tech material, their mechanical and physical properties play an important role as well, where cyclic voltammetry or rheological characterization are just a few examples for the vast array of techniques that are available. 
 
 ## Data Types:
 
-In order to collect comprehensive analytical data to characterize the synthesized materials the following steps can be taken:
+Data can be collected during the experiment through online methods, drawing samples on a specific schedule, or after the experiment by analyzing the obtained product. This leads to manually determined data: Experimental observations such as colour change or precipitants, appearance, yield and consistency of the product, solubility etc.
 
-- Data can be collected during the experiment through online methods, drawing samples on a specific schedule, or after the experiment by analyzing the obtained product.
-- Manually determined data: Experimental observations such as colour change or precipitants, appearance, yield and consistency of the product, solubility etc.
-- Digital data are obtained with analytical devices. An overview on file extensions, file sizes and converters for several analytical methods is given in the table below.
-- When necessary, pre-processing of digital data with software of analytical device before data are transferred to the Chemotion-ELN.
-- Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the software of the analytical device. If no specific open format is currently available, exporting as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
+Digital data are obtained with analytical devices. Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the software of the analytical device. If no specific open format is currently available, exporting as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
 
 ## ELN
 General chemistry ELNs can typically be used for analytical chemistry data and may be well suited to your research topic. However, there are also specialised tools that are tailored to the needs of analytical chemists. These tools often include features for managing instrument data, processing raw data files and visualising results. They may also include tools for chemometric analysis.
@@ -38,18 +26,33 @@ General chemistry ELNs can typically be used for analytical chemistry data and m
 <ElnFinder subDisc="Polymer chemistry" />
 
 
-## Documentation and publication of research data
+## Publishing Data
 
-The Chemotion-ELN was initially developed for organic chemistry and is now adapted for other disciplines in chemistry as well. The adaption for polymer chemistry and the integration of analytical methods are now ongoing, therefore the individual methods in the table below are marked respectively. Generally, the documentation of research data is conducted as follows:
+In an effort to realize research data management in line with the FAIR principles, the data can be published in a repository including raw and processed data for reuse. ELN offer an export interface to some repositories. E.g. the use of the Chemotion-ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. PubChem. 
+For the publication of research data in other discipline-specific repositories, data have to be exported from the ELN and uploaded into the respective database.
 
-- Documentation of research data  is carried out digitally using an ELN.
-- Experimental conditions (e.g. solvents, temperature, duration, pressure) are noted in the ELN.
-- Observations and results of analytical methods with no digital output (i.e. no data files) are added manually to the ELN entry of the experiment, including colour change or precipitants, appearance, yield and consistency of the product, solubility etc.
-- Obtained data from analytical instruments (e.g. NMR, SEC, MS or IR data) are uploaded to the Chemotion-ELN in open file formats and directly attached to the respective ELN experiment entry including instrumental setup metadata.
+In order to reach as many researchers as possible, choosing the right repository can be crucial (more on this in the [article on choosing the right repository](/docs/choose_repository/)).
 
-In an effort to realize research data management in line with the FAIR principles, the data can be published in a repository including raw and processed data for reuse, directly from the Chemotion-ELN. The use of the Chemotion-ELN enables a direct transfer of research data and the respective metadata into the Chemotion Repository. Subsequently, these data are automatically shared with other repositories, e.g. PubChem. For the publication of research data in other discipline-specific repositories, data have to be exported from the Chemotion-ELN and uploaded into the respective database.
+Here is a table giving an overview of what data fits into what repository:
 
-<Methods defaultProfile={"polymer"} />
+{/* prettier-ignore-start */}
+| Data type | Data format | Suggested Repository | Criteria for selection |
+| :---- | :---- | :---- | :---- |
+| Nuclear Magnetic Resonance | Bruker XWIN-NMR format (zip), [JCAMP-DX](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/JCAMP-DX/) | [**Chemotion**](https://www.chemotion-repository.net/welcome) | Passing basic checks, curation |
+| Nuclear Magnetic Resonance | Bruker XWIN-NMR format, JOEL format NMReData, nmrML, ISA JSON | [**nmrXiv**](https://docs.nmrxiv.org/) | Validations / Minimum information reporting standards |
+| Molecules and their properties, identification, reactions and experimental investigations | mass spectrometry: JCAMP-DX, [mzMl](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/mzML/), mzXML (open, visualisable and processable), RAW for selected mass data types (processed and converted in JCAMP-DX), IR and Raman: JCAMP-DX, XRD: JCAMP-DX, UV/VIS: JCAMP-DX, Cyclic voltammetry: JCAMP-DX. \*Chemotion repo offers the option to convert data from different file formats into JCAMP-DX. | [**Chemotion**](https://www.chemotion-repository.net/welcome) | Passing basic checks, curation |
+| Inorganic crystal structures | Crystallographic Information File (CIF) | [**ICSD**](https://icsd.fiz-karlsruhe.de/) | Crystal structure data available |
+| Organic and metal-organic crystal structures | Crystallographic Information File (CIF) but other supporting file formats accepted | [**CSD**](https://www.ccdc.cam.ac.uk/structures/) | Cell parameters (single crystal), full coordinates (powder), in CIF format |
+| Organic, inorganic and metal-organic crystal structure data | primarily Crystallographic Information File (CIF) but other supporting file formats accepted | [**joint CCDC/FIZ Access Structures ServiceD**](https://www.ccdc.cam.ac.uk/structures//) | At least one CIF file must be included in the submission and structure factor data for all structures should be provided (if possible) |
+| Generic data from all disciplines of chemistry, all data that do not fit in the disciplinary repositories | format-independent | [**RADAR4Chem**](https://www.radar-service.eu/de) | Validation against metadata schema |
+{/* prettier-ignore-end */}
 
-:::note *This table will be continuously updated with new recommendations on interoperable open file formats.
-:::
+Your own institution may also have additional guidelines & resources for publishing data, therefore it is always worth consulting the research data management experts of your local institution.
+
+## Challenges
+
+While for some data types & workflows it may be obvious how to comply with the FAIR principles, for others it is not as no community standards have been set and/or no appropriate open data formats are available. This is especially true for more niche analytical methods. Remember though: FAIR is a spectrum not an absolute. Therefore even if one of your workflows may not be as FAIR as the other, if it is as FAIR as is currently possible then it is still worth doing.
+
+Many old devices do not put out open-data formats and some devices have no digital output at all which makes good RDM more challenging though not impossible given the right tools (e.g. Chemotion’s ChemConverter which automatically generates open file formats from analytical devices which are not capable of outputting them).
+
+One of the biggest challenges to RDM in Chemistry at the moment is the lack of inter-ELN interoperability. This means that it is very challenging if not impossible to transfer data between different ELNs. This makes it especially challenging for interdisciplinary collaborations where collaborating groups use different ELNs. There are, however, efforts underway to establish inter-ELN interoperability such as the ELN consortium of which Chemotion is a member.
