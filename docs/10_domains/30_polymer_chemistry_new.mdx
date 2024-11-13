@@ -1,10 +1,14 @@
 ---
 title: "Polymer Chemistry"
+nfdi4chem-id: dac
 slug: "/polymer_chemistry"
 ---
 
+import { LbeChip } from "@site/src/components/lbe/LbeElements.js";
+import ElnFinder from "@site/src/components/eln/ElnFinder.js";
 
-import Methods from '@site/src/components/Methods.js';
+<LbeChip title="polymer chemistry" />
+<LbeChip title="chemometric" />
 
 ## Introduction
 
@@ -29,8 +33,9 @@ In order to collect comprehensive analytical data to characterize the synthesize
 - Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the software of the analytical device. If no specific open format is currently available, exporting as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
 
 ## ELN
+General chemistry ELNs can typically be used for analytical chemistry data and may be well suited to your research topic. However, there are also specialised tools that are tailored to the needs of analytical chemists. These tools often include features for managing instrument data, processing raw data files and visualising results. They may also include tools for chemometric analysis.
 
-<ElnFinder subDisc="Synthetic chemistry" />
+<ElnFinder subDisc="Polymer chemistry" />
 
 
 ## Documentation and publication of research data
