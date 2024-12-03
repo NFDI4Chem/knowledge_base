@@ -57,6 +57,11 @@ const features = {
             svg: "/img/nfdi4chem_Medicinal-Pharmaceutical_Chemistry.svg",
             link: "/docs/pharmaceutical_chemistry",
         },
+        {
+            title: <Translate>Electrochemistry</Translate>,
+            svg: "/img/nfdi4chem_Physial_Chemistry.svg",
+            link: "/docs/electro_chemistry",
+        },
     ],
     roles: [
         {
