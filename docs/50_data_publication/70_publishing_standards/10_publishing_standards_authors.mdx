@@ -5,35 +5,35 @@ slug: "/publishing_standards_authors"
 
 # A Simple Guide to Publishing Your Research Data
 
-As a researcher in chemistry, sharing your data is crucial for advancing science and ensuring your work is accessible to others. This guide will walk you through the essential steps and considerations for publishing your research data effectively.
+As a researcher in chemistry, sharing the data underlying your published results is crucial for advancing science and ensuring your work is accessible to und can be understood by others. This guide will walk you through the essential steps and considerations for publishing your research data alongside a published paper effectively.
 
-This guide is based on our standards for data publishing for authors. You can view the full list of standards [at the end of this article](#standards-authors-list)
+This guide is based on our **standards for data publishing for authors**. You can view the full list of standards [at the end of this article](#standards-authors-list)
 
-## 1. Upload your Data
+## 1. Upload your Dataset
 
-Once you've ensured your data is [well-organized](/data_organisation) and you have chosen appropiate [data formats](/format_standards), you can upload your files. Depending on the [repository you have chosen](/choose_repository), it may be easiest to directly upload your data when creating the dataset. For example, [RADAR4Chem](https://radar4chem.radar-service.eu/) will automatically extract all files from a zip file at this point and replicate the directory structure, while this is not the case if the data is uploaded at a later point in time and an empty dataset is created first.
+Once you have ensured your data is [well-organized](/data_organisation) and you have chosen appropiate [data formats](/format_standards), you can upload your files. Depending on the [repository you have chosen](/choose_repository), it may be easiest to directly upload your data when creating the dataset. For example, [RADAR4Chem](https://radar4chem.radar-service.eu/) will automatically extract all files from a zip file at this point and replicate the directory structure, while this is not the case if the data is uploaded at a later point in time and an empty dataset is created first.
 
-Including a plain-text README file within your dataset can give more human-readable contect to your dataset. You may also include additional metadata files if you feel the options offered by the repository are insufficient to give the full context to your dataset.
+Including a plain-text README file within your dataset can give more human-readable context to your data. You may also include additional metadata files if you feel the options offered by the repository are insufficient to give the full context to your dataset.
 
 ## 2. Identify Yourself and Your Institution
 
-Before you publish, make sure to provide your [**ORCID iD**](https://info.orcid.org/researchers/)—a unique identifier that helps distinguish you from other researchers. Similarly to article submission systems, most research data repository provide fields for this information. To get your identifier, simply register yourself through [ORCID's registration site](https://orcid.org/register).
+Before you publish, make sure to provide your [**ORCID iD**](https://info.orcid.org/researchers/)—a unique identifier that helps distinguish you from other researchers. Similarly to article submission systems, most research data repositories provide fields for this information. To get your identifier, simply register yourself through [ORCID's registration site](https://orcid.org/register).
 
-Additionally, use the [**ROR identifier** (Research Organization Registry)](https://ror.org/about/) to clearly identify your institution. Many research data repositories already provide search functionality to autofill this information. Otherwise, find your instition's identifier at [ror.org](https://ror.org/).
+Additionally, use the [**ROR identifier** (Research Organization Registry)](https://ror.org/about/) to clearly identify your affiliated institution. Many research data repositories already provide search functionality to autofill this information. Otherwise, find your instition's identifier at [ror.org](https://ror.org/).
 
 These identifiers help improve the visibility of your work.
 
 ## 3. Use Persistent Identifiers (PIDs)
 
-When you deposit your research data, it will be assigned a [**persistent identifier (PID)**](/pid), similarly to how your article is designed a DOI (Digital Object Identifier). Here’s how to use it:
+When you deposit your research data, it will be assigned a [**persistent identifier (PID)**](/pid), similarly to how your article is designated a DOI (Digital Object Identifier). In many cases, the dataset's PID will be a [DataCite](https://datacite.org/) DOI. Here’s how to use it:
 
-- **For Your Own Datasets:** Include the PID in the data availability statement of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically.
+- **For Your Own Datasets:** Include the PID in the data availability statement of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
   
 - **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
 
 :::danger Notice:
-  This distinction is important, because **the link** to the dataset in Crossref's DOI metadata of scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
-  :::
+  This distinction is important, because **the link** to the dataset in [Crossref](https://www.crossref.org/)'s DOI metadata for scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
+:::
 
 ## 4. Link Your Datasets with Corresponding Articles
 
@@ -43,7 +43,7 @@ To enhance discoverability, link your datasets directly to their corresponding a
   
 - Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
 
-Many repository will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information. 
+Many repositories will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information. 
 
 ## 5. Utilize Collection DOIs
 
@@ -55,7 +55,7 @@ If you are working with multiple datasets relevant to one article, consider usin
 
 ## 6. Choose a License for Your Data
 
-When publishing your research data, it's essential to choose an appropriate [license](/licences). A license outlines how others can use, share, and build upon your work. Here are some key points to consider when selecting a license:
+When publishing your research data, it is essential to choose an appropriate [license](/licences). A license outlines how others can use, share, and build upon your work. Here are some key points to consider when selecting a license:
 
 ### Why Licensing Matters
 
@@ -73,9 +73,11 @@ Licensing is crucial because it sets the rules for how others can interact with 
 
 - **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
   
-- **Understand Legal Implications**: Make sure you're comfortable with what rights you're granting by choosing a particular license.
+- **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
 
 - **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
+
+
 
 ### Communicate Your License Clearly
 
@@ -91,13 +93,13 @@ Deciding when to publish your dataset is an important consideration that can imp
 
 ### 1. Include Dataset Review in Manuscript Review
 
-Some repositories may offer a "review status" option. Here, a dataset is set to read only and a provided URL can be given to reviewers in the article submission to allow access to your dataset. This allows reviewers to assess both your findings and the underlying data simultaneously, enhancing transparency and reproducibility in your research. By sharing your data during this stage, you provide reviewers with a complete picture of your work, which may lead to more constructive feedback.
+Some repositories may offer a "review status" option. Here, a dataset is set to read only and a provided URL can be given to reviewers in the article submission to allow access to your dataset. This allows reviewers to assess both your reported findings and the underlying data simultaneously, enhancing transparency and reproducibility in your research. By sharing your data during this stage, you provide reviewers with a complete picture of your work, which may lead to more constructive feedback.
 
-If possible, ensure you have reserved a DOI for your dataset so you can provide this during the submission process, as well, while clearly communicating that this is not yet active. 
+If possible, ensure you have reserved a DOI for your dataset so you can provide this during the submission process, as well, while clearly communicating that it is not yet active. 
 
 This option allows you to review your dataset and make any requested changes prior to data publication.
 
-In this case, the dataset should be published once the manuscript has been accepted—at the latest once the journal has provided you with a DOI for the manuscript so you can [add it to your dataset](#4-link-your-datasets-with-articles).
+In this case, the dataset **should be published once the manuscript has been accepted**—at the latest once the journal has provided you with a DOI for the manuscript so you can [add it to your dataset](#4-link-your-datasets-with-articles).
 
 ### 2. Publish Data Prior to Manuscript Submission
 
@@ -119,7 +121,7 @@ By carefully considering these factors when deciding on the timing for publishin
 
 ## Conclusion
 
-Publishing research data might seem daunting at first, but by following these straightforward guidelines tailored for chemists, you’ll contribute positively to scientific discourse while ensuring that others can benefit from and verify your work.
+Publishing research data might seem daunting at first, but by following these straightforward guidelines tailored for chemists, you will contribute positively to scientific discourse while ensuring that others can benefit from and verify your work.
 
 ## Standards {#standards-authors-list}
 
