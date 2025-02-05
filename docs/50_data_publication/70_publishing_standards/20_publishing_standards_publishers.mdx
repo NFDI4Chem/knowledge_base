@@ -16,7 +16,7 @@ To assist authors in selecting **well-established and community-specific [reposi
 
 ## 2. Include Data Availability Statements
 
-Journals should encourage authors to provide a [**data availability statement**](/docs/data_availability_statement) in their manuscripts. To facilitate this, [templates](/docs/data_availability_statement/#templates-for-data-availability-statements) or similar sections should be made available in the journal's author guidelines. These templates help authors correctly submit underlying data with their manuscript while effectively communicating how to find and access the data by including DOIs or other PIDs, thereby enabling adherence to FAIR principles (e.g., [A1](/docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)).
+Journals should encourage authors to provide a [**data availability statement**](/docs/data_availability_statement) in their manuscripts. To facilitate this, [templates](/docs/data_availability_statement/#templates-for-data-availability-statements) should be made available in the journal's author guidelines or similar sections. These templates help authors correctly submit underlying data with their manuscript while effectively communicating how to find and access the data by including DOIs or other [PIDs](/pid), thereby enabling adherence to [FAIR principles]((/docs/fair/)) (e.g., [A1](/docs/fair#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), [I3](/docs/fair#i3-metadata-include-qualified-references-to-other-metadata)).
 
 ## 3. Integrate Data Availability Statements into Submission Systems
 
@@ -24,7 +24,7 @@ Journals should incorporate a [**data availability statement**](/docs/data_avail
 
 ## 4. Link Datasets to Articles in Crossref DOI Metadata
 
-Journals should enhance Crossref DOI metadata by linking articles to datasets using information from data availability statements. By incorporating DOIs and repository names into Crossref metadata according to [FAIR principles](/docs/fair/), journals establish **structured links between article DOIs and dataset DOIs**—ensuring both humans and machines can interpret these relationships effectively.
+Journals should enhance [Crossref](https://www.crossref.org/) DOI metadata by linking articles to datasets using information from data availability statements. By incorporating DOIs and repository names into Crossref metadata according to [FAIR principles](/docs/fair/), journals establish **structured links between article DOIs and dataset DOIs**—ensuring both humans and machines can interpret these relationships effectively.
 
 In agreement with [Crossref's documentation on linking datasets](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/), use the relationship type `isSupplementedBy`.
 
@@ -42,10 +42,10 @@ In agreement with [Crossref's documentation on linking datasets](https://www.cro
 
 ## 5. Encourage Pre-submission of Datasets
 
-Journal author guidelines should explicitly encourage pre-submission of datasets prior to manuscript submission—similar to current practices for crystallographic data published in CSD with CCDC. Early publication facilitates manuscript workflows as DOIs are registered beforehand.
+Journal author guidelines should explicitly encourage pre-submission of datasets prior to manuscript submission—similar to current practices for crystallographic data published in CSD with [CCDC](https://www.ccdc.cam.ac.uk/). Early publication facilitates manuscript workflows as DOIs are registered beforehand. This can, for example, enable automated DOI quality checks.
 
 :::danger Notice:
-A potential drawback is that researchers cannot link their dataset directly to an unpublished manuscript until after its publication when a DOI has been assigned; thus requiring manual updates post-publication.
+A potential drawback is that researchers cannot link their dataset directly to an unpublished manuscript until a DOI has been assigned, usually after its publication, thus requiring manual updates to the dataset metadata post-publication.
 :::
 
 ## 6. Include Research Data in Review Processes
@@ -54,10 +54,10 @@ Journals should encourage inclusion of research data during peer review processe
 
 ## 7. Require Publication of Datasets Under Review Prior to Article Publication
 
-To streamline automated workflows linking datasets with published articles through respective PIDs, journals must require that datasets marked _under review_ be published before associated articles are released. Authors should receive clear communication regarding this process upon acceptance of their manuscripts.
+As mentioned [above](#5-encourage-pre-submission-of-datasets), to streamline automated workflows linking datasets with published articles through respective PIDs, journals must require that datasets marked _under review_ be published before associated articles are released. Authors should receive **clear communication** regarding this process upon acceptance of their manuscripts.
 
 ### Communication Tips:
-Alongside acceptance notifications, journals should inform authors about acquiring corresponding article DOIs so they can include this metadata prior to dataset publication.
+Alongside acceptance notifications, journals should provide authors with corresponding article DOIs so they can include this metadata prior to dataset publication.
 
 ## 8. Utilize Scholix.org Framework
 
