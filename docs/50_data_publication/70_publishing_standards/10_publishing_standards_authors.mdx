@@ -3,65 +3,136 @@ title: "For Authors"
 slug: "/publishing_standards_authors"
 ---
 
-### Use ORCID iD to identifiy authors and ROR to identifiy institutions
+# A Simple Guide to Publishing Your Research Data
 
-:::tip Standard
-_Authors should provide their ORCID iD to identify the authors/creators and contributors, and their ROR identifier to identify the institution to which they are affiliated._
-:::
+As a researcher in chemistry, sharing the data underlying your published results is crucial for advancing science and ensuring your work is accessible to und can be understood by others. This guide will walk you through the essential steps and considerations for publishing your research data alongside a published paper effectively.
 
-ORCID iDs allow authors to be uniquely identified, whereas author names may not be unique, may change, or may have different ordering conventions depending on cultural differences. Similarly, affiliations can vary according to style and granularity. In order to uniquely identify the institutions to which authors are affiliated, the ROR identifier should be provided. Please note that the ROR identifier is not intended to resolve down to the department level, as the stability of institutional units decrease, the finer the granularity. Both identifiers improve findability as well as traceability of your scientific work.
+This guide is based on our **standards for data publishing for authors**. You can view the full list of standards [at the end of this article](#standards-authors-list).
 
-### How to use dataset PIDs in scientific articles
+## 1. Upload your Dataset
 
-During deposition of research data, a [persistent identifier (PID)](/docs/pid) is assigned to the data. Authors should use PIDs in their scientific article for interlinking and referencing in **two main ways**:
+Once you have ensured your data is [well-organized](/docs/data_organisation) and you have chosen appropriate [data formats](/docs/format_standards), you can upload your files. Depending on the [repository you have chosen](/docs/choose_repository), it may be easiest to directly upload your data when creating the dataset. For example, [RADAR4Chem](https://radar4chem.radar-service.eu/) will automatically extract all files from a zip file at this point and replicate the directory structure, while this is not the case if the data is uploaded at a later point in time and an empty dataset is created first.
 
-#### How to use dataset PIDs of own datasets in scientific articles
+Including a plain-text README file within your dataset can give more human-readable context to your data. You may also include additional metadata files if you feel the options offered by the repository are insufficient to give the full context to your dataset.
 
-:::tip Standard
-_Authors should add the PID of their corresponding dataset(s) to the data availability statement and should add PIDs of dataset(s) to the reference section in order to specifically cite dataset(s)._
-:::
+## 2. Identify Yourself and Your Institution
 
-For corresponding data, i.e. directly underlying the results reported in the article, add the PID to the article's [data availability statement](/docs/data_availability_statement), or a similarly termed section. In order to specifically reference and cite your data within the text, add your dataset to the references as well.
+Before you publish, make sure to provide your [**ORCID iD**](https://info.orcid.org/researchers/)—a unique identifier that helps distinguish you from other researchers. Similarly to article submission systems, most research data repositories provide fields for this information. To get your identifier, simply register yourself through [ORCID's registration site](https://orcid.org/register).
+
+Additionally, use the [**ROR identifier** (Research Organization Registry)](https://ror.org/about/) to clearly identify your affiliated institution. Many research data repositories already provide search functionality to autofill this information. Otherwise, find your instition's identifier at [ror.org](https://ror.org/).
+
+These identifiers help improve the visibility of your work.
+
+## 3. Use Persistent Identifiers (PIDs)
+
+When you deposit your research data, it will be assigned a [**persistent identifier (PID)**](/docs/pid), similarly to how your article is designated a DOI (Digital Object Identifier). In many cases, the dataset's PID will be a [DataCite](https://datacite.org/) DOI. Here’s how to use it:
+
+- **For Your Own Datasets:** Include the PID in the [data availability statement](/docs/data_availability_statement) of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
+  
+- **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
 
 :::danger Notice:
-This distinction is important, because **the link** to the dataset in Crossref's DOI metadata of scientific articles **is differently set**, depending on whether the dataset is a directly related source of information or a specifically referenced resource.
+  This distinction is important, because **the link** to the dataset in [Crossref](https://www.crossref.org/)'s DOI metadata for scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
 :::
 
-#### How to use dataset PIDs for datasets by other researchers in scientific articles
+## 4. Link Your Datasets with Corresponding Articles
 
-:::tip Standard
-_Authors should include PIDs for datasets published by other researchers that have been reused in the references, rather than citing the corresponding article._
-:::
+To enhance discoverability, link your datasets directly to their corresponding articles:
 
-For datasets published by other researchers and reused in a study, include the dataset PID in the reference section of the manuscript and cite within the text accordingly.
+- Add the article's DOI as a related identifier in the metadata of your dataset when submitting it to a repository.
+  
+- Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
 
-### How to link datasets to their corresponding scientific article
+Many repositories will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information. 
 
-:::tip Standard
-_Researchers should link their datasets to be published to their corresponding articles by adding the article DOI to the dataset's DataCite metadata as a related identifier._
-:::
+## 5. Utilize Collection DOIs
 
-Research data repositories offer the option to add a related identifier to link datasets to related resources, such as a corresponding article. This considerably enhances the [FAIRness](/docs/fair/) of datasets, mainly the findability ([F2](/docs/fair/#f2-data-are-described-with-rich-metadata-defined-by-r1-below)) as well as the interoperability ([I3](/docs/fair/#i3-metadata-include-qualified-references-to-other-metadata)).
+If you are working with multiple datasets relevant to one article, consider using a **Collection DOI** provided by repositories:
 
-### Usage of relation type for linking datasets with scientific articles
+- Include this Collection DOI in the data availability statement of your manuscript so all related research objects are connected.
+  
+- For individual reactions or specific analytical data within those collections, cite them separately with their respective DOIs in both text and reference sections.
 
-:::tip Standard
-_Researchers should link their datasets to be published to their corresponding articles using the relation type `IsSupplementTo`._
-:::
+## 6. Choose a License for Your Data
 
-According to the [DataCite Metadata Schema](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/), [`IsCitedBy`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#iscitedby) and [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) are both recommended for discovery. For published articles, [Crossref's documentation on relationships](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) recommends that `isSupplementTo` should be used to link datasets generated as part of research results. Please note that some repositories automatically detect whether the linked object is an article or some other dataset published in another repository, and therefore don't require authors to specify a relation(ship) type.
+When publishing your research data, it is essential to choose an appropriate [license](/docs/licences). A license outlines how others can use, share, and build upon your work. Here are some key points to consider when selecting a license:
 
-### Usage of Collection DOIs
+### Why Licensing Matters
 
-:::tip Standard
-_Researchers should use the Collection DOI provided by a repository in the data availability statements of their corresponding manuscript to wrap research data objects that are relevant to that of an article to be published._
-:::
+Licensing is crucial because it sets the rules for how others can interact with your data. A clear license helps prevent misuse and ensures that you receive proper credit for your contributions. Many repositories will offer a drop-down list of selectable licenses.
 
-Field-specific research data repositories may provide DOIs to reference individual chemical reactions, molecules, and their analytical data. Generic, multidisciplinary research data repositories provide DOIs for a whole published datasets, while more than one published dataset may be relevant to study results published via an article. In other words, many DOIs may be relevant to a published article, whereas **a data availability statement may provide some DOIs but not many DOIs**.
+### Creative Commons Licenses
 
-To facilitate the process of manuscript submission and article publication, researchers should add the **Collection DOI** provided by the repository to the data availability statement. This will ensure that all data underlying a published manuscript can be linked to an article in the data availability statement and the Crossref metadata of that article.
+[Creative Commons licenses](https://creativecommons.org/share-your-work/cclicenses/) are widely used for sharing research data and come in various forms:
+  - **[CC BY](https://creativecommons.org/licenses/by/4.0/)**: Allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you.
+  - **[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)**: Similar to CC BY but requires new creations to carry the same license.
+  - **[CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)**: Allows others to use your work non-commercially while still requiring attribution.
 
-If individual reactions, molecules, or analytical data should be referenced, add the DOIs of these individual research objects to the reference section and cite within the text accordingly.
+
+### How to Choose a License
+
+- **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
+  
+- **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
+
+- **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
+
+
+
+### Communicate Your License Clearly
+
+Once you've chosen a license, make sure it's clearly stated alongside your dataset when submitting it to repositories. This transparency will help users understand their rights and responsibilities regarding your work. In many cases, this will be handled by the repository itself and you only have to select your chosen license. 
+
+## 7. Ensure Findability and Interoperability
+
+By following these steps—using ORCID iDs and ROR identifiers, employing PIDs correctly, linking datasets appropriately, utilizing Collection DOIs, and selecting a license—you significantly enhance the findability and interoperability of your research data, while communicating how other's may use your work. This means others can easily access and build upon your findings!
+
+## When to Publish the Dataset
+
+Deciding when to publish your dataset is an important consideration that can impact both your research and its accessibility. Here are some key points to help you determine the best timing:
+
+### 1. Include Dataset Review in Manuscript Review
+
+Some repositories may offer a "review status" option. Here, a dataset is set to read only and a provided URL can be given to reviewers in the article submission to allow access to your dataset. This allows reviewers to assess both your reported findings and the underlying data simultaneously, enhancing transparency and reproducibility in your research. By sharing your data during this stage, you provide reviewers with a complete picture of your work, which may lead to more constructive feedback.
+
+If possible, ensure you have reserved a DOI for your dataset so you can provide this during the submission process, as well, while clearly communicating that it is not yet active. 
+
+This option allows you to review your dataset and make any requested changes prior to data publication.
+
+In this case, the dataset **should be published once the manuscript has been accepted**—at the latest once the journal has provided you with a DOI for the manuscript so you can [add it to your dataset](#4-link-your-datasets-with-articles).
+
+### 2. Publish Data Prior to Manuscript Submission
+
+In some cases, it might be beneficial to publish your dataset before submitting your manuscript. This approach can establish a clear record of your data and its availability, allowing other researchers to reference or build upon it even before the formal publication of your article. 
+
+This allwos you to provide a registered and functioning DOI for the dataset. Many repositories will allow you to alter the dataset metadata, thus [adding the article DOI](#4-link-your-datasets-with-articles) at a later point in time. 
+
+If you have placed an embargo on your published dataset, you must ensure that reviewers are given access to the full data. An embargo limits access to the data, while the metadata remains publicly accessible. 
+
+### Consider Journal Policies
+
+Be aware of any specific policies from the journal you intend to submit to regarding data sharing and publication timelines. Some journals encourage or require authors to make their datasets publicly available prior to or at the time of article submission, while others may have different guidelines.
+
+### Ensure Data Quality and Completeness
+
+Before publishing, make sure that your dataset is well-organized, complete, and adequately documented. Providing sufficient metadata will enhance discoverability and usability for other researchers who may want to access or cite your work.
+
+By carefully considering these factors when deciding on the timing for publishing your dataset, you can maximize its impact and facilitate collaboration within the scientific community.
+
+## Conclusion
+
+Publishing research data might seem daunting at first, but by following these straightforward guidelines tailored for chemists, you will contribute positively to scientific discourse while ensuring that others can benefit from and verify your work.
+
+## Standards {#standards-authors-list}
+
+1. _Authors should provide their ORCID iD to identify the authors/creators and contributors, and their ROR identifier to identify the institution to which they are affiliated._
+2. _Authors should add the PID of their corresponding dataset(s) to the data availability statement and should add PIDs of dataset(s) to the reference section in order to specifically cite dataset(s)._
+3. _Authors should include PIDs for datasets published by other researchers that have been reused in the references, rather than citing the corresponding article._
+4. _Researchers should link their datasets to be published to their corresponding articles by adding the article DOI to the dataset's DataCite metadata as a related identifier._
+5. _Researchers should link their datasets to be published to their corresponding articles using the relation type `IsSupplementTo`._
+6. _Researchers should use the Collection DOI provided by a repository in the data availability statements of their corresponding manuscript to wrap research data objects that are relevant to that of an article to be published._
+
+
 
 ---
 
