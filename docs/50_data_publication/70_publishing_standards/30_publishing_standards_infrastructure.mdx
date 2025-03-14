@@ -9,6 +9,8 @@ As an infrastructure provider, facilitating data sharing is vital for enhancing 
 
 This guide is based on our standards for data publishing for infrastructure providers. You can view the full list of standards [at the end of this article](#standards-infrastructure-list).
 
+![a flowchart for data publishing for infrastructure providers](/img/data_pub/infrastructure_providers.png)
+
 ## 1. Metadata Should Be Part of a Dataset
 
 Research data repositories should include standardised, machine-readable metadata in datasets downloaded by researchers and exchanged with other resources. Generic and technical metadata are  associated with the dataset during its upload process, while domain-specific repositories extract metadata from analytical data files provided by researchers along their lab workflows (e.g., [Chemotion ELN](https://chemotion.net/)). Once data is retrieved, this metadata should remain intact in the downloaded package, with descriptive [DataCite](https://datacite.org/) metadata as a minimum requirement. One solution to ensure reliable file transfer is to use [BagIt](https://www.rfc-editor.org/rfc/rfc8493.html), which enables inclusion of metadata in downloaded datasets.
