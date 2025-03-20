@@ -4,113 +4,95 @@ slug: "/eln"
 id: "eln"
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import { BulletContainer, BulletBox } from "@site/src/components/BulletBox";
 
 # Electronic Lab Notebooks (ELNs)
 
 ## Introduction
 
-The world around us is constantly evolving. For example, the smartphones in our pockets are much faster than an 80s supercomputer that could barely fit in an average bedroom. Unfortunately, this development has not yet reached our laboratories. The paper lab notebook is as common as it was 100 years ago, and the way chemical research data is documented - literally with pen and paper - has made little progress in the last century. 
+The world around us is constantly evolving. For example, the smartphones in our pockets are much faster than an 80s supercomputer that could barely fit in an average bedroom. Unfortunately, this development has not yet reached our laboratories. The paper lab notebook is as common as it was 100 years ago, and the way chemical research data is documented - literally with pen and paper - has made little progress in the last century.
 
 Bringing advances in information technology to our labs (smartlab) does not necessarily mean tablets & touchscreens everywhere in your lab. The term smartlab is more about the interconnectivity of the entire workflow and the handling of research data according to the [FAIR principles](/docs/fair). ELNs help assign rich [metadata](/docs/metadata) to experiments and make the data collected traceable and reusable. With the ability to transfer data from instrumentation directly into the ELN, the ELN has all the data in one place. From the ELN, data can be easily published to repositories and transferred to long-term [archiving](/docs/data_storage).
 
 One of the most important things that distinguishes an ELN from a blank piece of paper is the ability to document [metadata](/docs/metadata) in a structured and ideally human- and machine-readable way. For more information on the differences between simple systems, ELNs and Laboratory Information Management Systems (LIMS), see the following overview.
 
-<div className='container'>
-    <div className='row'>
-        <div className="col" style={{ width: 300, padding: 10, }}>
-            <div className="button button--lg button--primary" style={{ width: 300,  height: 480, padding: 20, }}>
-            <h3>Simple system</h3>
-            <ul>
-                <li>Enter text</li>
-                <li>Add notes</li>
-                <li>Add files as attachments</li>
-                <li>Sharing</li>
-                <li>Searching</li>
-            </ul>
-            <em>e.g., Evernote GoogleDrive, Dropbox, MS Sharepoint</em>
-            </div>
-        </div>
-        <div className="col" style={{ width: 300, padding: 10, }}>
-            <div className="button button--lg button--secondary" style={{ width: 300,  height: 480, padding: 20, }}>
-            <h3>Electronic Lab Notebook (ELN)</h3>
-            <ul>
-                <li>Structured metadata in human and machine-readable formats</li>
-                <li>Discipline-specific functions / editors</li>
-                <li>Rights management</li>
-                <li>Audit trail</li>
-                <li>API</li>
-            </ul>
-            <em>e.g., Labfolder, RSpace, eLabFTW, Labguru</em>
-            </div>
-        </div>
-        <div className="col" style={{ width: 300, padding: 10, }}>
-            <div className="button button--lg button--primary" style={{ width: 300,  height: 480, padding: 20, }}>
-            <h3>Laboratory Information Management System</h3>
-            <ul>
-                <li>Sample management</li>
-                <li>Instrument integration</li>
-                <li>Electronic signatures</li>
-                <li>Reporting or statistics modules</li>
-            </ul>
-            <em>e.g., Benchling, Starlims, Limesophy</em>
-            </div>
-        </div>
-    </div>
-</div>
-
+<BulletContainer>
+    <BulletBox>
+        <h3>Simple system</h3>
+        <ul>
+            <li>Enter text</li>
+            <li>Add notes</li>
+            <li>Add files as attachments</li>
+            <li>Sharing</li>
+            <li>Searching</li>
+        </ul>
+        <em>e.g., Evernote GoogleDrive, Dropbox, MS Sharepoint</em>
+    </BulletBox>
+    <BulletBox secondary>
+        <h3>Electronic Lab Notebook (ELN)</h3>
+        <ul>
+            <li>Structured metadata in human and machine-readable formats</li>
+            <li>Discipline-specific functions / editors</li>
+            <li>Rights management</li>
+            <li>Audit trail</li>
+            <li>API</li>
+        </ul>
+        <em>e.g., Labfolder, RSpace, eLabFTW, Labguru</em>
+    </BulletBox>
+    <BulletBox>
+        <h3>Laboratory Information Management System</h3>
+        <ul>
+            <li>Sample management</li>
+            <li>Instrument integration</li>
+            <li>Electronic signatures</li>
+            <li>Reporting or statistics modules</li>
+        </ul>
+        <em>e.g., Benchling, Starlims, Limesophy</em>
+    </BulletBox>
+</BulletContainer>
 
 ## Advantages of an ELN
 
 ELNs help to link experimental descriptions directly to the collected data so that all information can be found in one place. Furthermore, data loss is avoided by secure data storage and backups. Storing all the data in one central place helps also with knowledge management because the data is easily findable and accessible, even for new members in a research project. The biggest advantage of an ELN is that [metadata](/docs/metadata) is stored in a structured and [standardised](/docs/format_standards) way. This also helps with publishing research results and transferring research data to a repository.
 
-
-<div className='container'>
-    <div className='row'>
-        <div className="col" style={{ width: 400, padding: 10, }}>
-            <div className="button button--lg button--primary" style={{ width: 400, height: 250, padding: 20, }}>
-            <h3>Avoid Data Loss</h3>
-            <ul>
-                <li>Linking experimental descriptions to collected data (analogue and digital)</li>
-                <li>Secure data storage, backups</li>
-            </ul>
-            </div>
-        </div>
-        <div className="col" style={{ width: 400, padding: 10, }}>
-            <div className="button button--lg button--secondary" style={{ width: 400, height: 250, padding: 20, }}>
-            <h3>Knowledge Management</h3>
-            <ul>
-                <li>Data is findable</li>
-                <li>Data is accessible</li>
-                <li>Data is available, even after change of personnel</li>
-            </ul>
-            </div>
-        </div>
+<BulletContainer>
+    <BulletBox>
+        <h3>Avoid Data Loss</h3>
+        <ul>
+            <li>Linking experimental descriptions to collected data (analogue and digital)</li>
+            <li>Secure data storage, backups</li>
+        </ul>
+    </BulletBox>
+    <BulletBox secondary>
+        <h3>Knowledge Management</h3>
+        <ul>
+            <li>Data is findable</li>
+            <li>Data is accessible</li>
+            <li>Data is available, even after change of personnel</li>
+        </ul>
+    </BulletBox>
+    <div className="row buttons">
+        <img
+            alt="Data LifeCycle"
+            width="80%"
+            src={useBaseUrl("/img/topics/FAIR_data_principles.png")}
+        />
     </div>
-    <div className='row'>
-        <img className='col col--6 col--offset-3' alt="Data LifeCycle" src={useBaseUrl('/img/topics/FAIR_data_principles.png')} vspace="10" hspace="10"/>
-    </div>
-    <div className='row'>
-        <div className="col" style={{ width: 400, padding: 10, }}>
-            <div className="button button--lg button--secondary" style={{ width: 400, height: 250, padding: 20, }}>
-            <h3>Standardised Documentation</h3>
-            <ul>
-                <li>Structured and standardised collection of metadata</li>
-                <li>Generation of interoperable (meta)data</li>
-            </ul>
-            </div>
-        </div>
-        <div className="col" style={{ width: 400, padding: 10, }}>
-            <div className="button button--lg button--primary" style={{ width: 400, height: 250, padding: 20, }}>
-            <h3>Publication</h3>
-            <ul>
-                <li>Data provision for publication of research results</li>
-                <li>Simple transfer of data to repositories</li>
-            </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
+    <BulletBox secondary>
+        <h3>Standardised Documentation</h3>
+        <ul>
+            <li>Structured and standardised collection of metadata</li>
+            <li>Generation of interoperable (meta)data</li>
+        </ul>
+    </BulletBox>
+    <BulletBox >
+        <h3>Publication</h3>
+        <ul>
+            <li>Data provision for publication of research results</li>
+            <li>Simple transfer of data to repositories</li>
+        </ul>
+    </BulletBox>
+</BulletContainer>
 
 FAIR Image Attribution: SangyaPundir, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).

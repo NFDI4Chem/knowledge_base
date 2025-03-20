@@ -93,7 +93,7 @@ const features = {
         },
         {
             title: <Translate>Academic Publishers</Translate>,
-            svg: "/img/nfdi4chem_Data_Publication.svg",
+            svg: "/img/nfdi4chem_Student.svg",
             link: "/docs/publishing_standards_publishers",
         },
         {
