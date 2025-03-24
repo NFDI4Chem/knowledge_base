@@ -40,7 +40,7 @@ const features = {
         {
             title: <Translate>Electrochemistry</Translate>,
             svg: "/img/nfdi4chem_Electrochemistry.svg",
-            link: "/docs/electro_chemistry",
+            link: "/docs/electrochemistry",
         },
         {
             title: <Translate>Pharmaceutical Chemistry</Translate>,

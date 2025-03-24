@@ -9,7 +9,6 @@ As a researcher in chemistry, sharing the data underlying your published results
 
 This guide is based on our **standards for data publishing for authors**. You can view the full list of standards [at the end of this article](#standards-authors-list).
 
-
 ![a flowchart for data publishing for authors](/img/data_pub/authors.png)
 
 ## 1. Upload your Dataset
@@ -30,31 +29,28 @@ These identifiers help improve the visibility of your work.
 
 When you deposit your research data, it will be assigned a [**persistent identifier (PID)**](/docs/pid), similarly to how your article is designated a DOI (Digital Object Identifier). In many cases, the dataset's PID will be a [DataCite](https://datacite.org/) DOI. Here’s how to use it:
 
-- **For Your Own Datasets:** Include the PID in the [data availability statement](/docs/data_availability_statement) of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
-  
-- **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
+-   **For Your Own Datasets:** Include the PID in the [data availability statement](/docs/data_availability_statement) of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
+-   **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
 
 :::danger Notice:
-  This distinction is important, because **the link** to the dataset in [Crossref](https://www.crossref.org/)'s DOI metadata for scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
+This distinction is important, because **the link** to the dataset in [Crossref](https://www.crossref.org/)'s DOI metadata for scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
 :::
 
-## 4. Link Your Datasets with Corresponding Articles
+## 4. Link Your Datasets with Corresponding Articles {#link_datasets}
 
 To enhance discoverability, link your datasets directly to their corresponding articles:
 
-- Add the article's DOI as a related identifier in the metadata of your dataset when submitting it to a repository.
-  
-- Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
+-   Add the article's DOI as a related identifier in the metadata of your dataset when submitting it to a repository.
+-   Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
 
-Many repositories will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information. 
+Many repositories will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information.
 
 ## 5. Utilize Collection DOIs
 
 If you are working with multiple datasets relevant to one article, consider using a **Collection DOI** provided by repositories:
 
-- Include this Collection DOI in the data availability statement of your manuscript so all related research objects are connected.
-  
-- For individual reactions or specific analytical data within those collections, cite them separately with their respective DOIs in both text and reference sections.
+-   Include this Collection DOI in the data availability statement of your manuscript so all related research objects are connected.
+-   For individual reactions or specific analytical data within those collections, cite them separately with their respective DOIs in both text and reference sections.
 
 ## 6. Choose a License for Your Data
 
@@ -67,24 +63,21 @@ Licensing is crucial because it sets the rules for how others can interact with 
 ### Creative Commons Licenses
 
 [Creative Commons licenses](https://creativecommons.org/share-your-work/cclicenses/) are widely used for sharing research data and come in various forms:
-  - **[CC BY](https://creativecommons.org/licenses/by/4.0/)**: Allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you.
-  - **[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)**: Similar to CC BY but requires new creations to carry the same license.
-  - **[CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)**: Allows others to use your work non-commercially while still requiring attribution.
 
+-   **[CC BY](https://creativecommons.org/licenses/by/4.0/)**: Allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you.
+-   **[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)**: Similar to CC BY but requires new creations to carry the same license.
+-   **[CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)**: Allows others to use your work non-commercially while still requiring attribution.
 
 ### How to Choose a License
 
-- **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
-  
-- **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
+-   **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
+-   **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
 
-- **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
-
-
+-   **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
 
 ### Communicate Your License Clearly
 
-Once you've chosen a license, make sure it's clearly stated alongside your dataset when submitting it to repositories. This transparency will help users understand their rights and responsibilities regarding your work. In many cases, this will be handled by the repository itself and you only have to select your chosen license. 
+Once you've chosen a license, make sure it's clearly stated alongside your dataset when submitting it to repositories. This transparency will help users understand their rights and responsibilities regarding your work. In many cases, this will be handled by the repository itself and you only have to select your chosen license.
 
 ## 7. Ensure Findability and Interoperability
 
@@ -98,19 +91,19 @@ Deciding when to publish your dataset is an important consideration that can imp
 
 Some repositories may offer a "review status" option. Here, a dataset is set to read only and a provided URL can be given to reviewers in the article submission to allow access to your dataset. This allows reviewers to assess both your reported findings and the underlying data simultaneously, enhancing transparency and reproducibility in your research. By sharing your data during this stage, you provide reviewers with a complete picture of your work, which may lead to more constructive feedback.
 
-If possible, ensure you have reserved a DOI for your dataset so you can provide this during the submission process, as well, while clearly communicating that it is not yet active. 
+If possible, ensure you have reserved a DOI for your dataset so you can provide this during the submission process, as well, while clearly communicating that it is not yet active.
 
 This option allows you to review your dataset and make any requested changes prior to data publication.
 
-In this case, the dataset **should be published once the manuscript has been accepted**—at the latest once the journal has provided you with a DOI for the manuscript so you can [add it to your dataset](#4-link-your-datasets-with-articles).
+In this case, the dataset **should be published once the manuscript has been accepted**—at the latest once the journal has provided you with a DOI for the manuscript so you can [add it to your dataset](#link_datasets).
 
 ### 2. Publish Data Prior to Manuscript Submission
 
-In some cases, it might be beneficial to publish your dataset before submitting your manuscript. This approach can establish a clear record of your data and its availability, allowing other researchers to reference or build upon it even before the formal publication of your article. 
+In some cases, it might be beneficial to publish your dataset before submitting your manuscript. This approach can establish a clear record of your data and its availability, allowing other researchers to reference or build upon it even before the formal publication of your article.
 
-This allwos you to provide a registered and functioning DOI for the dataset. Many repositories will allow you to alter the dataset metadata, thus [adding the article DOI](#4-link-your-datasets-with-articles) at a later point in time. 
+This allwos you to provide a registered and functioning DOI for the dataset. Many repositories will allow you to alter the dataset metadata, thus [adding the article DOI](#link_datasets) at a later point in time.
 
-If you have placed an embargo on your published dataset, you must ensure that reviewers are given access to the full data. An embargo limits access to the data, while the metadata remains publicly accessible. 
+If you have placed an embargo on your published dataset, you must ensure that reviewers are given access to the full data. An embargo limits access to the data, while the metadata remains publicly accessible.
 
 ### Consider Journal Policies
 
@@ -134,7 +127,6 @@ Publishing research data might seem daunting at first, but by following these st
 4. _Researchers should link their datasets to be published to their corresponding articles by adding the article DOI to the dataset's DataCite metadata as a related identifier._
 5. _Researchers should link their datasets to be published to their corresponding articles using the relation type `IsSupplementTo`._
 6. _Researchers should use the Collection DOI provided by a repository in the data availability statements of their corresponding manuscript to wrap research data objects that are relevant to that of an article to be published._
-
 
 ---
 
