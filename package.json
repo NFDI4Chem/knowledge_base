@@ -27,11 +27,11 @@
         "i": "^0.3.7",
         "moment": "^2.30.1",
         "prism-react-renderer": "^2.4.1",
-        "react": "^18",
-        "react-dom": "^18",
+        "react": "^19",
+        "react-dom": "^19",
         "react-tagcloud": "^2.3.3",
         "use-immer": "^0.11.0",
-        "video-privacy": "^1.1.0"
+        "video-privacy": "^1.1.2"
     },
     "devDependencies": {
         "@docusaurus/module-type-aliases": "^3.7.0",
