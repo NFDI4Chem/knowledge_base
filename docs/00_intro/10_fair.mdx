@@ -36,7 +36,7 @@ A common example of a citable PID is the Digital Object Identifier, or [DOI](htt
 
 ### F2. data are described with rich metadata (defined by R1 below) {#f2}
 
-Data need to be sufficiently described in order to make them both findable and reusable. Hence, the specific focus here lies on making the (meta)data findable by using rich discovery [metadata](/docs/metadata) in a standardized format and allowing computers and humans to quickly understand the dataset’s contents. This is an essential component in the plurality of metadata described by [R1](#r1-metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes) below. This information may include, but is not limited to:
+Data need to be sufficiently described in order to make them both findable and reusable. Hence, the specific focus here lies on making the (meta)data findable by using rich discovery [metadata](/docs/metadata) in a standardized format and allowing computers and humans to quickly understand the dataset’s contents. This is an essential component in the plurality of metadata described by [R1](#r1) below. This information may include, but is not limited to:
 
 -   the context on what the dataset is, how it was generated, and how it can be interpreted,
 -   the data quality,
@@ -48,18 +48,18 @@ Repositories should provide researchers with a fillable [application profile](ht
 
 ### F3. metadata clearly and explicitly include the identifier of the data it describes {#f3}
 
-While [F1](#f1-metadata-are-assigned-a-globally-unique-and-persistent-identifier) stipulates the assignment of an identifier, F3 underlines the importance of including this identifier in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifier in the metadata directly links the information to the associated dataset.
+While [F1](#f1) stipulates the assignment of an identifier, F3 underlines the importance of including this identifier in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifier in the metadata directly links the information to the associated dataset.
 
 Furthermore, the dataset may not be published alongside the metadata. For example, in the case of unpublished archived datasets, the PID can lead to a method (e.g. a landing page) to contact those responsible for the data instead of to the dataset itself.
-Researchers must be aware of this importance, while repositories must not only assign a PID as described in [F2](#f2-data-are-described-with-rich-metadata-defined-by-r1-below) above, but should also ensure that this PID is a required property of the metadata.
+Researchers must be aware of this importance, while repositories must not only assign a PID as described in [F2](#f2) above, but should also ensure that this PID is a required property of the metadata.
 
 ### F4. (meta)data are registered or indexed in a searchable resource {#f4}
 
-Metadata are used to set up indices, enabling machines to efficiently search for and find datasets. For this process to work successfully, metadata must be complete as outlined [above](#f2-data-are-described-with-rich-metadata-defined-by-r1-below). Repositories should ensure the metadata entered for a deposited dataset is available in a machine-readable format to facilitate the assignment of indices.
+Metadata are used to set up indices, enabling machines to efficiently search for and find datasets. For this process to work successfully, metadata must be complete as outlined [above](#f2). Repositories should ensure the metadata entered for a deposited dataset is available in a machine-readable format to facilitate the assignment of indices.
 
 ## Accessible
 
-Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equate to open, as further explained in [A1.2](#a12-the-protocol-allows-for-an-authentication-and-authorization-procedure-where-necessary).
+Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equate to open, as further explained in [A1.2](#a1_2).
 
 ### A1. (meta)data are retrievable by their identifier using a standardized communications protocol {#a1}
 
@@ -67,7 +67,7 @@ To guarantee access to datasets, persistent identifiers, such as DOIs, are sugge
 
 #### A1.1 the protocol is open, free, and universally implementable {#a1_1}
 
-Repositories should only use protocols that allow any computer to access at least the metadata. Not only does this refer to the use of standard communication protocols, as stated in [A1](#a1-metadata-are-retrievable-by-their-identifier-using-a-standardized-communications-protocol), these protocols must also be freely available and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
+Repositories should only use protocols that allow any computer to access at least the metadata. Not only does this refer to the use of standard communication protocols, as stated in [A1](#a1), these protocols must also be freely available and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
 
 #### A1.2 the protocol allows for an authentication and authorization procedure, where necessary {#a1_2}
 
@@ -85,14 +85,14 @@ Data need to be integrated with and/or compared to other datasets, while compute
 
 ### I1. (meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation {#i1}
 
-Machines need to be able to understand how to exchange and interpret information. Similar to humans, a uniform and standard language aids in this understanding. In chemistry, a great typical example of such an information exchange standard is the [crystallographic information (CIF)](https://doi.org/10.1107/97809553602060000107). This standard also adheres to the aspects described in [I2](#i2-metadata-use-vocabularies-that-follow-fair-principles) and [R1.3](#r13-metadata-meet-domain-relevant-community-standards) below. Simply put, [standard file formats](/docs/format_standards) for a given analytical method ensure the data and the associated metadata, which typically include measurement details, for example, follows a prescribed format. This ensures both humans and machines receive the information required to interpret the data.
+Machines need to be able to understand how to exchange and interpret information. Similar to humans, a uniform and standard language aids in this understanding. In chemistry, a great typical example of such an information exchange standard is the [crystallographic information (CIF)](https://doi.org/10.1107/97809553602060000107). This standard also adheres to the aspects described in [I2](#i2) for a given analytical method ensure the data and the associated metadata, which typically include measurement details, for example, follows a prescribed format. This ensures both humans and machines receive the information required to interpret the data.
 
 Especially when looking at metadata, effective and efficient machine readability greatly depends on being able to reduce ambiguity. Metadata provides context to datasets. However, machines need to be able to interpret this context. Therefore, the structured schemas chosen by the repositories should include universally applied [ontologies](https://terminology.nfdi4chem.de/ts/ontologies) and controlled vocabularies to define relationships and avoid ambiguity. For example, chemistry-specific repositories should be designed to include [ontologies](/docs/ontology) such as the [Chemical Methods Ontology](https://terminology.nfdi4chem.de/ts/ontologies/chmo) (CHMO) or the [Chemical Information Ontology](https://terminology.nfdi4chem.de/ts/ontologies/cheminf) (CHEMINF) to accurately describe the (meta)data provided. Such ontologies should be based on widely-applied data models, for instance, the
 [Resource Description Framework (RDF)](https://www.w3.org/RDF/).
 
 ### I2. (meta)data use vocabularies that follow FAIR principles {#i2}
 
-The applied vocabularies or ontologies should be well-documented and resolvable using a PID. For instance, CHMO mentioned [above](#i1-metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation) uses a [persistent URL (PURL)](https://en.wikipedia.org/wiki/Persistent_uniform_resource_locator), resolvable using a standard web browser through `http`, while the [documentation](https://github.com/rsc-ontologies/rsc-cmo) is publicly available on Github.
+The applied vocabularies or ontologies should be well-documented and resolvable using a PID. For instance, CHMO mentioned [above](#i1) is publicly available on Github.
 
 ### I3. (meta)data include qualified references to other (meta)data {#i3}
 
@@ -104,7 +104,7 @@ Many of the previous points lead to one key aspect of data sharing: data reusabi
 
 ### R1. (meta)data are richly described with a plurality of accurate and relevant attributes {#r1}
 
-Related to [F2](#f2-data-are-described-with-rich-metadata-defined-by-r1-below) above, the focus here lies on whether the data, once found, is useable to the person or computer searching. It also stresses giving the data as many attributes as possible. Researchers should not assume the person—or that person’s computer—looking to re(use) their data is completely familiar with the discipline. Examples of information to assign here include (non-exhaustive list):
+Related to [F2](#f2):
 
 -   What the dataset contains, including whether the data is raw and/or processed
 -   How the data was processed
@@ -128,14 +128,14 @@ The metadata should include human and machine-readable use conditions, such as a
 
 #### R1.2. (meta)data are associated with detailed provenance {#r1_2}
 
-In simple terms: metadata include any relevant history. If the dataset is related to other datasets or based on another researcher’s data, these should be linked via their PID as described in I3. This includes citing or acknowledging others for their work, which also takes their licensing or use agreements into consideration (see [R1.1](#r11-metadata-are-released-with-a-clear-and-accessible-data-usage-license)). Furthermore, metadata should contain machine-readable information on how the data was generated or processed.
+In simple terms: metadata include any relevant history. If the dataset is related to other datasets or based on another researcher’s data, these should be linked via their PID as described in I3. This includes citing or acknowledging others for their work, which also takes their licensing or use agreements into consideration (see [R1.1](#r1_1)). Furthermore, metadata should contain machine-readable information on how the data was generated or processed.
 
 #### R1.3. (meta)data meet domain-relevant community standards {#r1_3}
 
 As research data management and, as such, [data publishing](/docs/data_publishing) becomes more and more prevalent across research areas, [best practices](/docs/best_practice) in the individual communities will arise. This should encompass metadata templates for proper documentation of datasets, how the data should be [organized](/docs/data_organisation), which vocabularies or [ontologies](/docs/ontology) to use, and [file formats](/docs/format_standards). NFDI4Chem is working to establish [metadata and data standards](https://www.nfdi4chem.de/index.php/task-areas/) for the various communities in chemistry.
 
 Where available, community standards and best practices should be followed when those publishing prepare their datasets and relevant metadata for publication. [Repositories](/docs/repositories), especially domain-specific service providers, should adhere to the standards set forth by the community by requiring files and metadata to follow format specifications.
-As noted in [I1](#i1-metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation) above, the CIF format represents a community-specific standard associated with the chemical community. Furthermore, [NMReDATA](https://doi.org/10.1002/mrc.4737) represents a possible [standard](/docs/format_standards) for publishing and archiving (meta)data of Nuclear Magnetic Resonance (NMR) experiments.
+As noted in [I1](#i1) experiments.
 
 Where required, format converters should be linked in the dataset’s metadata.
 
