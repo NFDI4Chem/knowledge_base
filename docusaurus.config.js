@@ -2,7 +2,7 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-const announcementBarActive = true; // set to true to activate the announcement bar
+const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
     ? require("./announcementBar.json")
     : {};
