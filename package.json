@@ -17,7 +17,6 @@
     "dependencies": {
         "@crowdin/cli": "^4.7.1",
         "@docusaurus/core": "^3.8.0",
-        "@docusaurus/faster": "^3.8.0",
         "@docusaurus/preset-classic": "^3.8.0",
         "@easyops-cn/docusaurus-search-local": "^0.50.0",
         "@fontsource/ibm-plex-sans": "^5.2.5",
