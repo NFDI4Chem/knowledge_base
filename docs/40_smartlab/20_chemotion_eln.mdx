@@ -70,10 +70,15 @@ For seamless workflows, *analytical devices* can be connected and directly acces
 
 <img alt="Placeholder" src={useBaseUrl('/img/ChemotionELN_Logo.png')} width="200" align="left" vspace="30" hspace="10"/>
 
+Besides the connection of analytical devices to the Chemotion ELN, data of these devices can be automatically transferred, file formats converted, and metadata mapped.
 <details>
   <summary>Detailed information</summary>
 
-  This is the detailed content
+  When analytical devices are connected to the Chemotion ELN, data can easily be transferred to the ELN. By using the naming conventions of experimental entries in the ELN for analytical data to be transferred, these will be automatically deposited in the corresponding ELN entry. Thus, analytical data are seamlessly connected to experiments.
+
+  Data of analytical devices might be stored in proprietary file formats depending on the devices used. For compliance with the [FAIR data principles](docs/fair), Chemotion is able to convert such files to the text-based, open source file format *JCAMP-DX*. The conversion is automatically performed after the transfer of data from analytical devices by the Chemotion tool [*ChemConverter*](https://chemotion.net/docs/services/chemconverter) whereupon both the proprietary file format and the converted file format are stored within the ELN.
+
+  Generally, Chemotion supports researchers with their data collection by semi-automated metadata mapping. Here, Chemotion identifies and extracts metadata from analytical data files and writes them into the corresponding, standardized input fields.
 
 </details>
 
