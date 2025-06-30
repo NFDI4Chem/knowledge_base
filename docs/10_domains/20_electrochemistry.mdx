@@ -1,0 +1,64 @@
+---
+title: "Electrochemistry"
+slug: "/electrochemistry"
+---
+
+import { LbeChip } from "@site/src/components/lbe/LbeElements.js";
+import ElnFinder from "@site/src/components/eln/ElnFinder.js";
+
+<LbeChip title="physical chemistry" />
+
+## Introduction
+
+Electrochemistry plays a significant role in very different research areas, such as organic chemistry, analytical chemistry, life sciences, engineering and material science.
+Research is therefore often highly interdisciplinary, and the number of techniques and measurement procedures available are vast.
+
+## Data Types
+
+Conceptually, the main data type in electrochemistry consists of time series data containing fundamental electrical parameters such as voltage (potential)
+and current (current density), including the measurement time.
+For AC methods also the frequency, the impedance and the phase angle are relevant.
+These data are most simply stored as CSV, but are often only available in non-standard file formats.
+Often additional techniques are employed _operando_ to gain more detailed insights into the origin of the measured charge transfer
+processes and other non-measurable (chemical) processes occurring concomitantly at the electrodes, in the electrolyte, or the interfaces,
+such as IR-spectroscopy, mass spectrometry or diffraction methods.
+This data is often stored along with the values from the electrochemical measurements.
+
+Additionally, imaging data can be obtained from purely electrochemical techniques such as scanning electrochemical microscopy (SECM) or indirectly,
+when combined with other methods such as _in situ_ electrochemical scanning tunneling microscopy (_in situ_ STM).
+Further data evaluation can yield any kind of time series data or imaging data.
+
+## ELNs and Other Tools
+
+For effective data management, software tools should be selected in a uniform manner within a project or research group with the aim to [organize](/docs/data_organisation)
+and streamline workflows. This involves establishing clear usage guidelines, including metadata templates drawn from minimum information standards for a given method, where available.
+These should be outlined in a [data management plan (DMP)](/docs/dmp) for each project. Many universities supply tools and templates for DMPs (see the [respective article](/docs/dmp) for more information).
+
+An [electronic lab notebook (ELN)](/docs/eln) helps in the day-to-day planning and structured documentation of experiments,
+while some also assist in data workflow management.
+For electrochemical data, ELNs must be flexible and customizable, to meet the requirements of the diverse research topics.
+As such, there exists to date no ELN that meets the requirements of electrochemistry alone and researchers are may choose an ELN that fits best their research scope.
+The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1)
+lists many options and the article on [choosing an ELN](/docs/choose_eln) provides further assistance.
+General purpose ELNs can be found with the keyword "Physical chemistry":
+
+<ElnFinder subDisc="Physical chemistry" />
+
+For specific domains, such as "electrosynthesis" the Chemotion ELN might be an appropriate choice.
+
+Tools presented for [other domains](/docs/domain_guide/) might also be applicable.
+
+## Publishing Data
+
+[Publishing research data](/docs/data_publishing), especially that underlying a published article,
+is an important aspect that allows others in the research community to replicate and build upon a researchers work.
+[Research data repositories](/docs/repositories) serve as platforms for data publication and can greatly assist in [FAIR](/docs/fair) data publication.
+So far repositories specific for electrochemical data, such as [BatteryArchive.org](https://www.batteryarchive.org/), are scarce.
+
+## Challenges
+
+Common challenges in electrochemistry and FAIR data often go hand-in-hand with the large variety of sub-disciplines, methodology, and thus diverse data types,
+for which no standards exist to date.
+A few groups working in electrochemistry labs have established their own personal workflows.
+To establish a FAIR reporting culture, large community projects such as [Battery2030+](https://battery2030.eu/),
+are required and must be established for different domains.

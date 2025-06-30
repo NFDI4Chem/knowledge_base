@@ -33,29 +33,29 @@ const features = {
     ],
     domains: [
         {
-            title: <Translate>Synthetic Chemistry</Translate>,
-            svg: "/img/nfdi4chem_Synthetic_Chemistry.svg",
-            link: "/docs/synthetic_chemistry",
-        },
-        {
             title: <Translate>Analytical Chemistry</Translate>,
             svg: "/img/nfdi4chem_Analytical_Chemistry.svg",
             link: "/docs/analytical_chemistry",
+        },
+        {
+            title: <Translate>Electrochemistry</Translate>,
+            svg: "/img/nfdi4chem_Electrochemistry.svg",
+            link: "/docs/electrochemistry",
+        },
+        {
+            title: <Translate>Pharmaceutical Chemistry</Translate>,
+            svg: "/img/nfdi4chem_Medicinal-Pharmaceutical_Chemistry.svg",
+            link: "/docs/pharmaceutical_chemistry",
         },
         {
             title: <Translate>Physical Chemistry</Translate>,
             svg: "/img/nfdi4chem_Physial_Chemistry.svg",
             link: "/docs/physical_chemistry",
         },
-        // {
-        //   "title": <Translate>Polymer Chemistry</Translate>,
-        //   "svg": "/img/nfdi4chem_Polymer_Chemistry.svg",
-        //   "link":  "/docs/polymer_chemistry"
-        // },
         {
-            title: <Translate>Pharmaceutical Chemistry</Translate>,
-            svg: "/img/nfdi4chem_Medicinal-Pharmaceutical_Chemistry.svg",
-            link: "/docs/pharmaceutical_chemistry",
+            title: <Translate>Synthetic Chemistry</Translate>,
+            svg: "/img/nfdi4chem_Synthetic_Chemistry.svg",
+            link: "/docs/synthetic_chemistry",
         },
     ],
     roles: [
@@ -93,7 +93,7 @@ const features = {
         },
         {
             title: <Translate>Academic Publishers</Translate>,
-            svg: "/img/nfdi4chem_Data_Publication.svg",
+            svg: "/img/nfdi4chem_Student.svg",
             link: "/docs/publishing_standards_publishers",
         },
         {
