@@ -123,10 +123,12 @@ const config = {
             },
         ],
     ],
-    // future: {
-    //     v4: true,
-    //     experimental_faster: true,
-    // },
+    future: {
+        experimental_faster: {
+            rspackBundler: true,
+            rspackPersistentCache: true,
+        },
+    },
 };
 
 export default config;
