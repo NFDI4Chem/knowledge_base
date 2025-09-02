@@ -129,7 +129,8 @@
   );
 } */
 
-div[class^="announcementBar_"] {
+.theme-announcement-bar {
+    font-size: 20px;
     --site-announcement-bar-stripe-color1: rgba(227, 6, 19, 0.15);
     --site-announcement-bar-stripe-color2: white;
     background: repeating-linear-gradient(
