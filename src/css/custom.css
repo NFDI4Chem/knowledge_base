@@ -36,6 +36,7 @@
     --ifm-color-secondary-light: var(--ifm-color-secondary);
     --ifm-color-secondary-lighter: var(--ifm-color-secondary);
     --ifm-color-secondary-lightest: var(--ifm-color-secondary);
+    --ifm-announcement-bar: rgba(135, 53, 147, 0.15);
     --ifm-color-danger: #e30613;
     --ifm-color-danger-dark: var(--ifm-color-danger);
     --ifm-color-danger-darker: var(--ifm-color-danger);
@@ -131,7 +132,7 @@
 
 .theme-announcement-bar {
     font-size: 20px;
-    --site-announcement-bar-stripe-color1: rgba(227, 6, 19, 0.15);
+    --site-announcement-bar-stripe-color1: var(--ifm-announcement-bar);
     --site-announcement-bar-stripe-color2: white;
     background: repeating-linear-gradient(
         -35deg,
