@@ -124,7 +124,10 @@ const config = {
         ],
     ],
     future: {
-        experimental_faster: true,
+        experimental_faster: {
+            rspackBundler: true,
+            rspackPersistentCache: true,
+        },
     },
 };
 
