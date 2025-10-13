@@ -28,7 +28,12 @@ const config = {
         description: description,
     },
     onBrokenLinks: "warn",
-    onBrokenMarkdownLinks: "warn",
+    markdown: {
+        hooks: {
+            onBrokenMarkdownLinks: "warn",
+            onBrokenMarkdownImages: "warn",
+        },
+    },
     favicon: "img/favicon.png",
     organizationName: "NFDI4Chem", // Usually your GitHub org/user name.
     projectName: "knowledge_base", // Usually your repo name.
