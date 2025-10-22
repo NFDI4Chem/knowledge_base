@@ -1,0 +1,21 @@
+---
+title: "Experiment Design"
+slug: "/chemotion_eln_experimentDesign"
+id: "chemotion_eln_experimentDesign"
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+# Chemotion ELN: Experiment Design
+
+<img alt="Placeholder for an illustration of a laptop and arrows showing info being pulled from databases. The screen shows InChI Ids and SMILES codes, as well as chem. sructures" src={useBaseUrl('/img/ChemotionELN_Logo.png')} width="200" align="left" vspace="30" hspace="50"/>
+ 
+{/* COMMENT (Nikki): What about planning in terms of importing data from repositories; literature management; what about rights responsiblities */}
+
+In the Chemotion ELN, various entry types can be generated for planning various experimental setups. Generally, all entry types offer the possibility to draw chemical structures directly within the ELN. This is realized by embedded structure editors: *ketcher-rails* and *Ketcher 2* are integrated as default structure editors, while *ChemDraw JS* and *Marvin JS* can be integrated when the needed licences are available.
+
+All structure editors directly convert the chemical structures into common chemical identifiers such as [*InChI*](https://www.inchi-trust.org/) and notations such as [*SMILES*](https://doi.org/10.1021%2Fci00057a005) code and automatically generate a MOL file of the chemical structure. Conversely, chemical structures can be generated in the ELN by importing the codes and files mentioned above as well as by [*CAS numbers*](https://www.cas.org/cas-data/cas-registry).
+
+{/* COMMENT (Nikki): there aren't any other identifiers or notations used, are there? If no, "such as" doesn't make much sense since it implies further options. */}
+
+The Chemotion ELN directly pulls information from and links entries to databases such as [*PubChem*](https://pubchem.ncbi.nlm.nih.gov/) and [*CAS SciFinder*](https://www.cas.org/solutions/cas-scifinder-discovery-platform/cas-scifinder). Thus, the planning of experiments is facilitated as all relevant information is automatically integrated into the ELN entries.

@@ -1,0 +1,21 @@
+---
+title: "Data Collection"
+slug: "/chemotion_eln_dataCollection"
+id: "chemotion_eln_dataCollection"
+---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+# Chemotion: Data Collection
+
+<img alt="Chemotion ELN Logo" src={useBaseUrl('/img/ChemotionELN_Logo.png')} width="200" align= "left" vspace="30" hspace="50"/>
+
+
+Analytical data are typically generated and stored in a fully digital format. However, there is often a disconnect between these data, the associated analytical devices, and the laboratory notebook documenting the experiments. Chemotion ELN addresses this issue by enabling the integration of analytical devices with the ELN through [device integration](https://doi.org/10.1016/j.acax.2019.100007). This feature not only facilitates linking devices to the ELN and experiments but also allows for remote control of the devices. As a result, users can manage device operations, initiate measurements, and monitor progress directly within the ELN from any location.
+
+When analytical devices are connected to the Chemotion ELN, data is easily transferred to the ELN. The transfer maps generated data to experiment entries by employing the experiment naming conventions. Thus, analytical data are seamlessly connected to experiments.
+
+In many cases, analytical devices might store data in proprietary file formats. To enable the [FAIR data principles](docs/fair), Chemotion is able to convert such files to the text-based, open source file format *JCAMP-DX*. This conversion occurs automatically once data has been transferred from the analytical device. The Chemotion tool [*ChemConverter*](https://chemotion.net/docs/services/chemconverter) carries out this process and stores both the proprietary file format and the converted file format within the ELN.
+
+Generally, Chemotion supports researchers with their data collection by semi-automated metadata mapping. Here, Chemotion identifies and extracts metadata from analytical data files and writes them into the corresponding, standardized input fields.
+
+
