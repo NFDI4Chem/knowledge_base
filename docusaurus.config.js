@@ -2,7 +2,7 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-const announcementBarActive = false; // set to true to activate the announcement bar
+const announcementBarActive = true; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
     ? require("./announcementBar.json")
     : {};
@@ -28,7 +28,12 @@ const config = {
         description: description,
     },
     onBrokenLinks: "warn",
-    onBrokenMarkdownLinks: "warn",
+    markdown: {
+        hooks: {
+            onBrokenMarkdownLinks: "warn",
+            onBrokenMarkdownImages: "warn",
+        },
+    },
     favicon: "img/favicon.png",
     organizationName: "NFDI4Chem", // Usually your GitHub org/user name.
     projectName: "knowledge_base", // Usually your repo name.
@@ -123,10 +128,12 @@ const config = {
             },
         ],
     ],
-    // future: {
-    //     v4: true,
-    //     experimental_faster: true,
-    // },
+    future: {
+        experimental_faster: {
+            rspackBundler: true,
+            rspackPersistentCache: true,
+        },
+    },
 };
 
 export default config;
