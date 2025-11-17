@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-
-import clsx from "clsx";
-
 import styles from "../Eln.module.css";
 
 function TextSearch({ resultOutput, filter, setFilter }) {
