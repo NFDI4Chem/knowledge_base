@@ -26,18 +26,18 @@ jobs:
               uses: actions/setup-java@v4
               with:
                   distribution: temurin
-                  java-version: '17'
+                  java-version: "17"
 
             - name: Install dependencies
-              run: npm ci || npm install
+              run: npm install
 
             - name: Write translations
               run: npm run write-translations
 
             - name: Clear jdeploy cache
               run: |
-                rm -rf ~/.jdeploy || true
-                mkdir -p ~/.jdeploy
+                  rm -rf ~/.jdeploy || true
+                  mkdir -p ~/.jdeploy
 
             - name: Upload translations
               run: npm run crowdin upload
