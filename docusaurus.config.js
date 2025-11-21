@@ -18,7 +18,7 @@ const footerLinks = require("./footer.json");
 
 // Use for stagging:
 // const baseUrl = '/staging/knowledge_base_matomo/';
-// const baseUrl = "/staging_eln/knowledge_base/";
+// const baseUrl = "/staging/knowledge_base/";
 
 const config = {
     title: title,
@@ -96,6 +96,18 @@ const config = {
 					</div>
 				</div>
         	`,
+        },
+        algolia: {
+            appId: "K32QMEOD1G",
+            apiKey: "6ba494183b866a52e3dfd54388379f77",
+            indexName: "NFDI4Chem Knowledge Base",
+            contextualSearch: true,
+            // replaceSearchResultPathname: {
+            //     from: "/knowledge_base/",
+            //     to: "/",
+            // },
+            // Optional: whether you want to use the new Ask AI feature (undefined by default)
+            // askAi: "YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID",
         },
         colorMode: { disableSwitch: true },
         prism: {
