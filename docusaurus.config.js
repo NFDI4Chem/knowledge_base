@@ -103,10 +103,10 @@ const config = {
             apiKey: "6ba494183b866a52e3dfd54388379f77",
             indexName: "NFDI4Chem Knowledge Base",
             contextualSearch: true,
-            replaceSearchResultPathname: {
-                from: "/knowledge_base/",
-                to: "/",
-            },
+            // replaceSearchResultPathname: {
+            //     from: "/knowledge_base/",
+            //     to: "/",
+            // },
             // Optional: whether you want to use the new Ask AI feature (undefined by default)
             // askAi: "YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID",
         },
