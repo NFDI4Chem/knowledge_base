@@ -57,6 +57,7 @@ const config = {
                 name: "google-site-verification",
                 content: "wgYVjYSe_T6v6BPPM6fPo1ffl7MYYnuVw-h9RoAYfM0",
             },
+            { name: "algolia-site-verification", content: "B25EB725467B8CC6" },
         ],
         matomo: {
             matomoUrl: "https://knowledgebase.nfdi4chem.de/matomo/",
@@ -97,6 +98,14 @@ const config = {
 				</div>
         	`,
         },
+        algolia: {
+            appId: "K32QMEOD1G",
+            apiKey: "6ba494183b866a52e3dfd54388379f77",
+            indexName: "NFDI4Chem Knowledge Base",
+            contextualSearch: true,
+            // Optional: whether you want to use the new Ask AI feature (undefined by default)
+            askAi: "YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID",
+        },
         colorMode: { disableSwitch: true },
         prism: {
             theme: prismThemes.github,
@@ -119,15 +128,15 @@ const config = {
             },
         ],
     ],
-    themes: [
-        [
-            require.resolve("@easyops-cn/docusaurus-search-local"),
-            {
-                hashed: true,
-                highlightSearchTermsOnTargetPage: true,
-            },
-        ],
-    ],
+    // themes: [
+    //     [
+    //         require.resolve("@easyops-cn/docusaurus-search-local"),
+    //         {
+    //             hashed: true,
+    //             highlightSearchTermsOnTargetPage: true,
+    //         },
+    //     ],
+    // ],
     future: {
         experimental_faster: {
             rspackBundler: true,
