@@ -131,15 +131,15 @@ const config = {
             },
         ],
     ],
-    themes: [
-        [
-            require.resolve("@easyops-cn/docusaurus-search-local"),
-            {
-                hashed: true,
-                highlightSearchTermsOnTargetPage: true,
-            },
-        ],
-    ],
+    // themes: [
+    //     [
+    //         require.resolve("@easyops-cn/docusaurus-search-local"),
+    //         {
+    //             hashed: true,
+    //             highlightSearchTermsOnTargetPage: true,
+    //         },
+    //     ],
+    // ],
     future: {
         experimental_faster: {
             rspackBundler: true,
