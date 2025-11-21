@@ -57,7 +57,6 @@ const config = {
                 name: "google-site-verification",
                 content: "wgYVjYSe_T6v6BPPM6fPo1ffl7MYYnuVw-h9RoAYfM0",
             },
-            { name: "algolia-site-verification", content: "B25EB725467B8CC6" },
         ],
         matomo: {
             matomoUrl: "https://knowledgebase.nfdi4chem.de/matomo/",
@@ -132,15 +131,15 @@ const config = {
             },
         ],
     ],
-    // themes: [
-    //     [
-    //         require.resolve("@easyops-cn/docusaurus-search-local"),
-    //         {
-    //             hashed: true,
-    //             highlightSearchTermsOnTargetPage: true,
-    //         },
-    //     ],
-    // ],
+    themes: [
+        [
+            require.resolve("@easyops-cn/docusaurus-search-local"),
+            {
+                hashed: true,
+                highlightSearchTermsOnTargetPage: true,
+            },
+        ],
+    ],
     future: {
         experimental_faster: {
             rspackBundler: true,
