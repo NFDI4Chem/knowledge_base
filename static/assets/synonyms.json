@@ -1,0 +1,18 @@
+[
+    {
+        "type": "synonym",
+        "synonyms": [
+            "eln",
+            "electronic lab notebook",
+            "elektronisches laborjournal"
+        ]
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["ms", "mass spectrometry", "massenspektrometrie"]
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["ir", "infrared", "infrarot"]
+    }
+]
