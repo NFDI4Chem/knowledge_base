@@ -100,7 +100,7 @@ const config = {
         algolia: {
             appId: "K32QMEOD1G",
             apiKey: "6ba494183b866a52e3dfd54388379f77",
-            indexName: "NFDI4Chem Knowledge Base",
+            indexName: "nfdi4chem_knowledge_base",
             contextualSearch: true,
             // replaceSearchResultPathname: {
             //     from: "/knowledge_base/",
