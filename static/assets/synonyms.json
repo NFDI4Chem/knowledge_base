@@ -14,5 +14,9 @@
     {
         "type": "synonym",
         "synonyms": ["ir", "infrared", "infrarot"]
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["dmp", "data management plan", "datenmanagementplan"]
     }
 ]
