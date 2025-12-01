@@ -2,6 +2,15 @@
     {
         "type": "synonym",
         "synonyms": [
+            "rdm",
+            "research data management",
+            "forschungsdatenmanagement"
+        ],
+        "objectID": "0"
+    },
+    {
+        "type": "synonym",
+        "synonyms": [
             "eln",
             "electronic lab notebook",
             "elektronisches laborjournal"
