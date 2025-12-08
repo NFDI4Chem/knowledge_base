@@ -2,7 +2,7 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-const announcementBarActive = true; // set to true to activate the announcement bar
+const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
     ? require("./announcementBar.json")
     : {};
@@ -18,7 +18,7 @@ const footerLinks = require("./footer.json");
 
 // Use for stagging:
 // const baseUrl = '/staging/knowledge_base_matomo/';
-// const baseUrl = "/staging_eln/knowledge_base/";
+// const baseUrl = "/staging/knowledge_base/";
 
 const config = {
     title: title,
@@ -97,6 +97,18 @@ const config = {
 				</div>
         	`,
         },
+        algolia: {
+            appId: "K32QMEOD1G",
+            apiKey: "6ba494183b866a52e3dfd54388379f77",
+            indexName: "nfdi4chem_knowledge_base",
+            contextualSearch: true,
+            // replaceSearchResultPathname: {
+            //     from: "/knowledge_base/",
+            //     to: "/",
+            // },
+            // Optional: whether you want to use the new Ask AI feature (undefined by default)
+            // askAi: "YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID",
+        },
         colorMode: { disableSwitch: true },
         prism: {
             theme: prismThemes.github,
@@ -116,18 +128,29 @@ const config = {
                 theme: {
                     customCss: "./src/css/custom.css",
                 },
+                sitemap: {
+                    lastmod: "datetime",
+                    ignorePatterns: ["/tags/**"],
+                    createSitemapItems: async (params) => {
+                        const { defaultCreateSitemapItems, ...rest } = params;
+                        const items = await defaultCreateSitemapItems(rest);
+                        return items.filter(
+                            (item) => !item.url.includes("/page/")
+                        );
+                    },
+                },
             },
         ],
     ],
-    themes: [
-        [
-            require.resolve("@easyops-cn/docusaurus-search-local"),
-            {
-                hashed: true,
-                highlightSearchTermsOnTargetPage: true,
-            },
-        ],
-    ],
+    // themes: [
+    //     [
+    //         require.resolve("@easyops-cn/docusaurus-search-local"),
+    //         {
+    //             hashed: true,
+    //             highlightSearchTermsOnTargetPage: true,
+    //         },
+    //     ],
+    // ],
     future: {
         experimental_faster: {
             rspackBundler: true,
