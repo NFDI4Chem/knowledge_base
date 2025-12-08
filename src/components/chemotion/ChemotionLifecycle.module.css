@@ -1,0 +1,39 @@
+/********** Repo decision tree ************/
+
+.svgIcons {
+	fill: var(--ifm-color-primary);
+}
+
+.svgIconText {
+	font-size: 120px;
+	fill: var(--ifm-color-primary);
+	font-weight: 300;
+	transform: scale(1);
+	transform-origin: center;
+	transition:
+		transform 0.4s ease,
+		fill 0.4s ease;
+}
+
+g.svgLifecycle * {
+	stroke-width: 30px;
+	stroke: black;
+	stroke-opacity: 0;
+}
+
+g.svgLifecycle:hover * {
+	transition-duration: 0.4s;
+	fill: grey;
+	text-decoration: none;
+}
+
+g.hoverGroup:hover * {
+	fill: var(--ifm-color-secondary);
+	transition-duration: 0.4s;
+}
+
+g.hoverGroup:hover .svgIconText {
+	font-weight: 700;
+	transform: scale(1.02);
+	transition-duration: 0.4s;
+}

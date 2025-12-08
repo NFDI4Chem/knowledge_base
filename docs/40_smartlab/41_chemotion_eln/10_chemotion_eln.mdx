@@ -7,16 +7,16 @@ id: "chemotion_eln"
 import VideoPrivacy from "video-privacy";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import ChemotionLifecycle from "@site/src/components/chemotion/ChemotionLifecycle";
 
 # Chemotion ELN
 
-![](/img/smartlab/chemotion/chemotion_dataLifecycle_banner.png)
+<ChemotionLifecycle />
 
 :::info
 To find out about choosing an ELN, head to the [Choose the right ELN
 article](docs/choose_eln) and test demo instances [here](https://demo.chemotion.scc.kit.edu/).
 :::
-
 
 The Chemotion ELN has been specifically designed for chemists, taking into account the unique requirements of chemical laboratory work and documentation. It serves as a powerful digitalization tool for chemistry, aimed at creating seamless workflows throughout the [reseach data life cycle](docs/data_life_cycle). Achieving this vision is a collaborative effort involving continuous development, enhancement, and expansion of the ELN.
 
@@ -24,11 +24,7 @@ To get an overview on how and with which tools Chemotion ELN supports you throug
 
 ## Data Life Cycle Support
 
-{/* Placeholder
-
-### Data Reuse
-
-{" "}
+### Data Reuse {#reuse}
 
 <img
     alt="chemotion icon for data reuse"
@@ -38,32 +34,36 @@ To get an overview on how and with which tools Chemotion ELN supports you throug
     vspace="0"
     hspace="40"
 /> What about planning in terms of importing data from repositories --> reuse [Find
-out more](/docs/chemotion_eln_dataReuse) */}
+out more](/docs/chemotion_eln_dataReuse)
 
-### Experiment Design
+### Experiment Design {#experiment_design}
 
 <img
-    alt="chemotion icon for experiment in data lifecacle"
-    src={useBaseUrl("/img/smartlab/chemotion/chemotion_icons/chemotion_DoE.png")}
-    width="150"
-    align="left"
-    vspace="0"
-    hspace="40"
+	alt="chemotion icon for experiment in data lifecacle"
+	src={useBaseUrl(
+		"/img/smartlab/chemotion/chemotion_icons/chemotion_DoE.png",
+	)}
+	width="150"
+	align="left"
+	vspace="0"
+	hspace="40"
 />
 
 Chemotion assists in experiment design and planning research by offering embedded _structure editors_, reading and generating _chemical identifiers_, and pulling information from relevant _databases_.
 
 [Find out more](/docs/chemotion_eln_experimentDesign)
 
-### Experiment
+### Experiment {#experiment}
 
 <img
-    alt="chemotion icon for experiment in data lifecacle"
-    src={useBaseUrl("/img/smartlab/chemotion/chemotion_icons/chemotion_experiment.png")}
-    width="150"
-    align="left"
-    vspace="0"
-    hspace="40"
+	alt="chemotion icon for experiment in data lifecacle"
+	src={useBaseUrl(
+		"/img/smartlab/chemotion/chemotion_icons/chemotion_experiment.png",
+	)}
+	width="150"
+	align="left"
+	vspace="0"
+	hspace="40"
 />
 
 During experiments, Chemotion supports researchers with _automated calculations_, _structured documentation_, and a _concise overview_ of experimental information.
@@ -72,30 +72,34 @@ During experiments, Chemotion supports researchers with _automated calculations_
 
 <br />
 
-### Data Collection and Processing
+### Data Collection and Processing {#collection_processing}
 
 <img
-    alt="chemotion icon for experiment in data lifecacle"
-    src={useBaseUrl("/img/smartlab/chemotion/chemotion_icons/chemotion_dataCollection_Processing.png")}
-    width="150"
-    align="left"
-    vspace="0"
-    hspace="40"
+	alt="chemotion icon for experiment in data lifecacle"
+	src={useBaseUrl(
+		"/img/smartlab/chemotion/chemotion_icons/chemotion_dataCollection_Processing.png",
+	)}
+	width="150"
+	align="left"
+	vspace="0"
+	hspace="40"
 />
 
 For seamless workflows, _analytical devices_ can be connected and directly accessed within the Chemotion ELN. Besides this connection, data from these devices can be automatically transferred, file formats are converted, and metadata is mapped.
 
 [Find out more](/docs/chemotion_eln_dataCollection)
 
-### Analysis
+### Analysis {#analysis}
 
 <img
-    alt="chemotion icon for experiment in data lifecacle"
-    src={useBaseUrl("/img/smartlab/chemotion/chemotion_icons/chemotion_analysis.png")}
-    width="150"
-    align="left"
-    vspace="0"
-    hspace="40"
+	alt="chemotion icon for experiment in data lifecacle"
+	src={useBaseUrl(
+		"/img/smartlab/chemotion/chemotion_icons/chemotion_analysis.png",
+	)}
+	width="150"
+	align="left"
+	vspace="0"
+	hspace="40"
 />
 
 Analyses can be performed directly in the Chemotion ELN by utilizing one of the embedded _spectra editors_.
@@ -104,17 +108,18 @@ Analyses can be performed directly in the Chemotion ELN by utilizing one of the 
 
 <br />
 
-### Data Publication
+### Data Publication {#publication}
 
 <img
-    alt="chemotion icon for experiment in data lifecacle"
-    src={useBaseUrl("/img/smartlab/chemotion/chemotion_icons/chemotion_dataPublication.png")}
-    width="150"
-    align="left"
-    vspace="0"
-    hspace="40"
+	alt="chemotion icon for experiment in data lifecacle"
+	src={useBaseUrl(
+		"/img/smartlab/chemotion/chemotion_icons/chemotion_dataPublication.png",
+	)}
+	width="150"
+	align="left"
+	vspace="0"
+	hspace="40"
 />
-
 
 The Chemotion ELN is connected to several _data repositories_. Incorperated publishing workflows allow for simple and fast publication of research data.
 
@@ -124,7 +129,6 @@ The Chemotion ELN is connected to several _data repositories_. Incorperated publ
 
 ## LabIMotion
 
-
 In addition to its primary focus on chemistry, the ELN is also utilized in various other disciplines due to its versatile functionality that caters to the needs of scientists operating in interdisciplinary environments. These generic elements are continually being refined and adapted. The latest extension, introduced in November 2023, is [LabIMotion](https://www.chemotion.net/docs/labimotion), which enables users to incorporate entirely non-chemical functionalities by designing new modules.
 
 ## Chemotion Introductory Video
@@ -132,35 +136,31 @@ In addition to its primary focus on chemistry, the ELN is also utilized in vario
 A short introduction to the Chemotion ELN as well as the connection to the Chemotion repository is demonstrated in this video:
 
 <VideoPrivacy
-    cookie
-    cookieName="n4cVideoPrivacy"
-    imageUrl={useBaseUrl("/img/smartlab/chemotion_preview.jpg")}
-    width={800}
-    info="YouTube uses cookies and stores personal data. To view embedded videos from YouTube, please indicate your consent to load this video from an external source. Your decision will be saved for this session."
-    buttonText="I agree"
-    customButtonClass="button button--primary"
+	cookie
+	cookieName="n4cVideoPrivacy"
+	imageUrl={useBaseUrl("/img/smartlab/chemotion_preview.jpg")}
+	width={800}
+	info="YouTube uses cookies and stores personal data. To view embedded videos from YouTube, please indicate your consent to load this video from an external source. Your decision will be saved for this session."
+	buttonText="I agree"
+	customButtonClass="button button--primary"
 >
-    <iframe
-        width="860"
-        height="484"
-        src="https://www.youtube.com/embed/tZHaP6DW-Dw"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-    ></iframe>
+	<iframe
+		width="860"
+		height="484"
+		src="https://www.youtube.com/embed/tZHaP6DW-Dw"
+		frameborder="0"
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen
+	></iframe>
 </VideoPrivacy>
 
 ## Documentation, Information, and Contact
 
 Chemotion ELN and its functionalities are described in various publications (see [below](#sources)). For users, developers, and admins, a documentation is available via the project's [website](https://www.chemotion.net/docs). Chemotion ELN is an Open Source development; the source code is available on [GitHub](https://github.com/ComPlat/chemotion_ELN).
 
-
 Chemotion is the ELN reference instance in [NFDI4Chem](https://www.nfdi4chem.de/). The software is developed by several developers at different NFDI4Chem sites. The development started at the [Karlsruhe institute of Technology (KIT)](https://www.kit.edu/) as part of a DFG-funded project. The extension of the software was and is further supported by the [State Ministry of Baden-Wuerttemberg for Sciences, Research and Arts](https://mwk.baden-wuerttemberg.de/), the Karlsruhe Institute of Technology, and the [German Research Foundation (DFG)](https://www.dfg.de/).
 
-
 NFDI4Chem offers hands-on workshop and Q&A sessions for Chemotion ELN and the LabIMotion extension. Visit the [workshop overview page](https://www.nfdi4chem.de/workshops/) for more information.
-
-
 
 ### Getting Started
 
@@ -168,26 +168,26 @@ NFDI4Chem offers hands-on workshop and Q&A sessions for Chemotion ELN and the La
 
 There are various ways for newcomers to begin using Chemotion and get to know the software:
 
--   Check out the [Chemotion Docs](https://chemotion.net/docs): instructions on both the Chemotion ELN and the Chemotion Repo
--   Check out the [Chemotion Tutorial Videos](https://chemotion.net/docs/eln/videos): familiarize yourself with the user interface and the features
--   Attend an online [Live Demo & Q&A Session](https://www.nfdi4chem.de/event/chemotion-demo-qa-session/)
--   Attend a [Chemotion ELN Hands-on Workshop](https://www.nfdi4chem.de/event/chemotion-eln-hands-on-workshop/)
+- Check out the [Chemotion Docs](https://chemotion.net/docs): instructions on both the Chemotion ELN and the Chemotion Repo
+- Check out the [Chemotion Tutorial Videos](https://chemotion.net/docs/eln/videos): familiarize yourself with the user interface and the features
+- Attend an online [Live Demo & Q&A Session](https://www.nfdi4chem.de/event/chemotion-demo-qa-session/)
+- Attend a [Chemotion ELN Hands-on Workshop](https://www.nfdi4chem.de/event/chemotion-eln-hands-on-workshop/)
 - Sign up for the [chemotion mailing list for users and admins](https://www.lists.kit.edu/sympa/subscribe/chemotion_eln) to stay up to date
 
 #### Establishing Chemotion ELN in your Group
 
--   Before you start rolling out Chemotion ELN in your research group, setup a sharing policy. See [Sharing is Caring: Guidelines for Sharing in the Electronic Laboratory Notebook (ELN) Chemotion as applied by a Synthesis-oriented Working Group](https://doi.org/10.1002/cmtd.202200026) for guidance.
--   Install [ChemConverter profiles](https://chemotion.net/docs/services/chemconverter/profiles) for any file types that need conversion.
--   Establish internal processes for data publication, such as [approval workflows for groups leads](https://chemotion.net/docs/repo/workflow/group_lead_review). See also the [workflow for publishing to the Chemotion Repo](https://chemotion.net/docs/repo/workflow).
--   Clearly communicate the above policies and workflows to new group members during the onboarding process.
--   Establish clear offboarding policies and workflows to ensure the necessary measures are [taken to revoke access](https://chemotion.net/docs/eln/admin/user_management#de-activating-vs-un-locking-an-account) and ensure others in the group maintain access, where needed.
--   Setup your chemical [Inventory](https://chemotion.net/docs/eln/ui/inventory) for your group and ensure correct access to it. You can [import and export](https://chemotion.net/docs/eln/ui/inventory#import-and-export-chemicals) chemical lists, as well.
--   Setup [LabIMotion templates](https://chemotion.net/docs/labimotion/design-principles) to expand and customize the ELN to fit your needs. You may also visit a [LabIMotion Online Hands-on Workshop](https://www.nfdi4chem.de/event/labimotion-online-hands-on-workshop/) to familiarize yourself with this feature.
+- Before you start rolling out Chemotion ELN in your research group, setup a sharing policy. See [Sharing is Caring: Guidelines for Sharing in the Electronic Laboratory Notebook (ELN) Chemotion as applied by a Synthesis-oriented Working Group](https://doi.org/10.1002/cmtd.202200026) for guidance.
+- Install [ChemConverter profiles](https://chemotion.net/docs/services/chemconverter/profiles) for any file types that need conversion.
+- Establish internal processes for data publication, such as [approval workflows for groups leads](https://chemotion.net/docs/repo/workflow/group_lead_review). See also the [workflow for publishing to the Chemotion Repo](https://chemotion.net/docs/repo/workflow).
+- Clearly communicate the above policies and workflows to new group members during the onboarding process.
+- Establish clear offboarding policies and workflows to ensure the necessary measures are [taken to revoke access](https://chemotion.net/docs/eln/admin/user_management#de-activating-vs-un-locking-an-account) and ensure others in the group maintain access, where needed.
+- Setup your chemical [Inventory](https://chemotion.net/docs/eln/ui/inventory) for your group and ensure correct access to it. You can [import and export](https://chemotion.net/docs/eln/ui/inventory#import-and-export-chemicals) chemical lists, as well.
+- Setup [LabIMotion templates](https://chemotion.net/docs/labimotion/design-principles) to expand and customize the ELN to fit your needs. You may also visit a [LabIMotion Online Hands-on Workshop](https://www.nfdi4chem.de/event/labimotion-online-hands-on-workshop/) to familiarize yourself with this feature.
 
 ### Publications, Sources, and Further Information {#sources}
 
--   [Chemotion ELN: an Open Source electronic lab notebook for chemists in academia](https://doi.org/10.1186/s13321-017-0240-0)
--   [Chemotion-ELN part 2: adaption of an embedded Ketcher editor to advanced research applications](https://doi.org/10.1186/s13321-018-0292-9)
--   [CHEMSCANNER: extraction and re-use(ability) of chemical information from common scientific documents containing ChemDraw files](https://doi.org/10.1186/s13321-019-0400-5)
--   [Chemotion ELN documentation](https://chemotion.net/docs/eln)
--   [Chemotion ELN on Github](https://github.com/ComPlat/chemotion_ELN)
+- [Chemotion ELN: an Open Source electronic lab notebook for chemists in academia](https://doi.org/10.1186/s13321-017-0240-0)
+- [Chemotion-ELN part 2: adaption of an embedded Ketcher editor to advanced research applications](https://doi.org/10.1186/s13321-018-0292-9)
+- [CHEMSCANNER: extraction and re-use(ability) of chemical information from common scientific documents containing ChemDraw files](https://doi.org/10.1186/s13321-019-0400-5)
+- [Chemotion ELN documentation](https://chemotion.net/docs/eln)
+- [Chemotion ELN on Github](https://github.com/ComPlat/chemotion_ELN)
