@@ -1,7 +1,7 @@
 {
-  "label": "Chemotion ELN",
-  "link": {
-    "type"  : "doc",
-    "id" : "chemotion_eln"
-  }
+	"label": "Chemotion ELN",
+	"link": {
+		"type": "doc",
+		"id": "chemotion"
+	}
 }
