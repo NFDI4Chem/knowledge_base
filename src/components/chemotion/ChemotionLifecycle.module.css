@@ -2,6 +2,7 @@
 
 :root {
 	--svgLifecycle-duration: 0.2s;
+	--svgGrayedOut: #c0c0c0;
 }
 
 .svgIcons {
@@ -30,7 +31,7 @@ g.svgLifecycle * {
 
 g.svgLifecycle:hover *,
 g.svgLifecycle:hover + * {
-	fill: grey;
+	fill: var(--svgGrayedOut);
 	text-decoration: none;
 }
 
