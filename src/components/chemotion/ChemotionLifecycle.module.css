@@ -20,7 +20,7 @@ g.svgLifecycle {
 }
 
 g.svgLifecycle * {
-	stroke-width: 25px;
+	stroke-width: 30px;
 	stroke: black;
 	stroke-opacity: 0;
 	transform: scale(1);
@@ -28,7 +28,8 @@ g.svgLifecycle * {
 	transition-duration: var(--svgLifecycle-duration);
 }
 
-g.svgLifecycle:hover * {
+g.svgLifecycle:hover *,
+g.svgLifecycle:hover + * {
 	fill: grey;
 	text-decoration: none;
 }
