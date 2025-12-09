@@ -6,17 +6,18 @@ nfdi4chem-tags: [data_organisation, data_storage, repositories]
 slug: "/data_organisation"
 ---
 
-After [documentation of your research data](/docs/data_documentation), more detailed descriptions of how your information is saved is required - a quick look at files and folders, but when working with many or large data sets, the advantages of databases can become relevant. Consider whether this applies to your project and whether only files exported from the database might be useful. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data_storage).
-
+Besides [documentation of your research data](/docs/data_documentation), another aspect which requires attention is the way how data are named, organised, shared, and referenced during a research activity. Small amounts of data can be just organised in files and folders; when working with many or large data sets, it can be convenient to organise them in a database. For an idea about storage locations and storage methods see [Data Storage and Archiving](/docs/data_storage).
 
 ## Files: naming conventions
 
 Human users benefit from file names that allow for easy sorting and a notion of the content at first glance. However, file names such as the following are not helpful:
 
-    mydata.csv
-    mydata_final.csv
-    myfinaldata_V2.csv
-    myfinaldata_V2_ready.csv
+```
+mydata.csv
+mydata_final.csv
+myfinaldata_V2.csv
+myfinaldata_V2_ready.csv
+```
 
 We need short and descriptive file names as an identifier for a document. Useful names give information on what the files contain and helps in sorting them. Pay attention to your naming scheme when working with others: It is important to follow the same file naming convention, so develop an adapted scheme when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation).
 
@@ -25,111 +26,110 @@ Try to think about the different statuses (raw data, draft, temporary, finished,
 Find a balanced set of elements: Too many make it difficult to grasp quickly, while too few elements rapidly exhaust the possible namespace. Be aware of the maximum number of characters for path names, which is usually 255 characters.
 
 :::note General basics for naming files:
-* Order the elements from general to specific.
-* Use meaningful abbreviations instead of long identifiers.
-* Use underscore (_), hypen (-) or capitalized letters to separate elements in the name. Don’t use spaces or special characters: ?!& , * % # ; * ( ) @$ ^ ~ ‘ { } [ ] < >.
-* Use date format ISO8601: YYYYMMDD, and time if needed HHMMSS.
-* Include a version number if appropriate: minimum two digits (V02) and extend it, if needed for minor corrections (V02-03). The leading zeros, will ensure the files are sorted correctly.
+
+-   Order the elements from general to specific.
+-   Use meaningful abbreviations instead of long identifiers.
+-   Use underscore `_`, hyphen `-` or capitalized letters to separate elements in the name. Don’t use spaces or special characters: `?!&,_%#;_()@$^~‘{}[]<>`.
+-   Use date format ISO8601: `YYYYMMDD`, and time if needed `HHMMSS`.
+-   Include a version number if appropriate: minimum two digits (V02) and extend it, if needed for minor corrections (V02-03). The leading zeros, will ensure the files are sorted correctly.
 
 (by [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file))
 :::
 
 #### Example elements to include in the file name
-* Date of creation
-* Project number / experiment / acronym
-* Type of data (sample ID, analysis, conditions, modifications etc.)
-* Device / location / coordinates
-* Name / Initials of the creator
-* Version number
-* Reserve the last 3-letters for file format (e.g. .csv, .odt, .tif, .jpg)
 
+-   Date of creation
+-   Project number / experiment / acronym
+-   Type of data (sample ID, analysis, conditions, modifications etc.)
+-   Device / location / coordinates
+-   Name / Initials of the creator
+-   Version number
+-   Reserve the last 3-letters for file format (e.g. .csv, .odt, .tif, .jpg)
 
 A good file name such as `20180211_ELI5_TEMP_BH01_RAW_03.csv` can easily be sorted by date and tells you:
 
-    date of file:                 11 February 2018
-    project acronym:              ELI5 = Explain like I’m 5 (years old)
-    measured value type:          TEMP = temperature values
-    measuring point / location:   BH01 = beehive # 01
-    type of data:                 RAW = raw data from measuring device
-    number of file containing data for that measurement series
-
+-   **date of file:** 11 February 2018
+-   **project acronym:** ELI5 = Explain like I'm 5 (years old)
+-   **measured value type:** TEMP = temperature values
+-   **measuring point / location:** BH01 = beehive # 01
+-   **type of data:** RAW = raw data from measuring device
+-   **number of file:** containing data for that measurement series
 
 If you need to rename a multiple files, take a look at:
-- [Thunar Bulk Rename](https://docs.xfce.org/xfce/thunar/bulk-renamer/start) (Linux, GUI)
-- [command line: mv, mmv, rename](https://linuxconfig.org/how-to-rename-multiple-files-on-linux) (Linux, CLI)
-- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) (Windows, free)
-- [TotalCommander](https://www.ghisler.com/advanced.htm#tutorial_rename) (windows, Shareware)
-- [Renamer4Mac](https://renamer.com/) (Mac).
+
+-   [Thunar Bulk Rename](https://docs.xfce.org/xfce/thunar/bulk-renamer/start) (Linux, GUI)
+-   [command line: mv, mmv, rename](https://linuxconfig.org/how-to-rename-multiple-files-on-linux) (Linux, CLI)
+-   [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) (Windows, free)
+-   [TotalCommander](https://www.ghisler.com/advanced.htm#tutorial_rename) (windows, Shareware)
+-   [Renamer4Mac](https://renamer.com/) (Mac).
 
 For some special file formats there are tools for adapting the file name to metadata. For example, to create a file name that fits your scheme and takes date and time information from the EXIF data of a jpg file. Some also allow adding an offset - this helps sort photos into timestamps that run on different clocks.
-
 
 ## Files: versioning
 
 Stash snapshots or simply track changes and allow to find something that existed in a previous version but was later deleted or changed. With a clear chronological processing one after the other, normally no further tools are required. But even if this often seems so at first, supporting tools quickly proved to be useful and quickly are established in cooperation.
 
 #### Possible Solutions
-* Low number of requirements: manage manually e.g. by keeping a log where the changes for each respective file is documented, version by version.
-* For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted by e.g. [GitHub](https://github.com/) or your home institution. Very strong with uncompressed, readable and comparable files such as text files or csv.
-* Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
 
+-   Low number of requirements: manage manually e.g. by keeping a log where the changes for each respective file is documented, version by version.
+-   For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted by e.g. [GitHub](https://github.com/) or your home institution. Very strong with uncompressed, readable and comparable files such as text files or csv.
+-   Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
 
 ## Files: types of metadata
 
 Consider the way data and [Metadata](/docs/metadata/) can be stored together as FDOs (Fair Digital Objects). For example, metadata can be divided into the following four categories:
-* descriptive metadata
-* administrative metadata
-* technical metadata
-* structural metadata
+
+-   descriptive metadata
+-   administrative metadata
+-   technical metadata
+-   structural metadata
 
 An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/format_standards/) for more information.
 
 ## Files: formats
 
 Different disciplines use established standards, see [Data Format Standard](/docs/format_standards/). Also consider beyond the duration of the project:
-- usage of proprietary or open file formats
-- exchange within and outside of the working group
-- short term and long term storage, [Data Storage and Archiving](/docs/data_storage)
-- special workflows and procedures (e.g. for data collection, documentation and evaluation)
-- shared or separate storage (e.g. SPSS file for data; XML file for metadata)
-- suitable procedures for preserving the consistency of data and metadata
 
+-   usage of proprietary or open file formats
+-   exchange within and outside of the working group
+-   short term and long term storage, [Data Storage and Archiving](/docs/data_storage)
+-   special workflows and procedures (e.g. for data collection, documentation and evaluation)
+-   shared or separate storage (e.g. SPSS file for data; XML file for metadata)
+-   suitable procedures for preserving the consistency of data and metadata
 
 ## Folder structure
 
 Everything should be immediately intuitively understandable. The folder structure helps you to navigate through the individual pieces of information. Develop a convention when the project starts and write it down including explaination of abbreviations in your [data documentation](/docs/data_documentation). Try to consistently apply the same strategy in every project within the research group.
 
 Folders should:
-* follow a structure with folders and subfolders that correspond to the project design and workflow
-* have a self-explanatory name that is only as long as is necessary
-* have a unique name – avoid assigning the same name to a folder and a subfolder
+
+-   follow a structure with folders and subfolders that correspond to the project design and workflow
+-   have a self-explanatory name that is only as long as is necessary
+-   have a unique name – avoid assigning the same name to a folder and a subfolder
 
 The top folder should have a README.txt file describing the folder structure and what files are contained within the folders. This file should also contain explanation of the file naming convention.
 
 #### An example by [RDMKit](https://rdmkit.elixir-europe.org/data_organisation.html#what-is-the-best-way-to-name-a-file):
 
-    project/  
-      code/                 code needed to go from input files to final results   
-      data/                 raw and primary data (never edit!)   
-         raw_external/  
+    project/
+      code/                 code needed to go from input files to final results
+      data/                 raw and primary data (never edit!)
+         raw_external/
          raw_internal/
-         meta/  
-      doc/                  documentation of the study  
-      intermediate/         output files from intermediate analysis steps  
-      logs/                 logs from the different analysis steps  
-      notebooks/            notebooks that document your day-to-day work  
-      results/              output from workflows and analyses  
-         figures/  
-         reports/  
-         tables/  
-      scratch/              temporary files that can safely be deleted or lost  
-      README.txt            file and folder description  
-
+         meta/
+      doc/                  documentation of the study
+      intermediate/         output files from intermediate analysis steps
+      logs/                 logs from the different analysis steps
+      notebooks/            notebooks that document your day-to-day work
+      results/              output from workflows and analyses
+         figures/
+         reports/
+         tables/
+      scratch/              temporary files that can safely be deleted or lost
+      README.txt            file and folder description
 
 ## Sources and further information
-- https://rdmkit.elixir-europe.org/data_organisation.html
-- https://www.data.cam.ac.uk/data-management-guide/organising-your-data
-- https://libguides.vu.nl/rdm/data-documentation
 
-
-
+-   https://rdmkit.elixir-europe.org/data_organisation.html
+-   https://www.data.cam.ac.uk/data-management-guide/organising-your-data
+-   https://libguides.vu.nl/rdm/data-documentation

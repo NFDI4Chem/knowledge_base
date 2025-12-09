@@ -3,87 +3,82 @@ title: "Data Management Plan"
 slug: "/dmp"
 ---
 
-import KbTagCloud from "@site/src/components/KbTagCloud.js";
-
 # Data Management Plan (DMP)
 
 ## Introduction
 
-Data management plans (DMP) help to outline how research data will be handled during and after a project to ensure preservation of the data and their [metadata](/docs/metadata). DMPs are particularly helpful when created prior to data collection to guarantee consistent [organisation](/docs/data_organisation), annotation, and formatting of the data. They can be used as part of quality and project management.
+A data management plan is a document that outlines how data will be handled during and after a research project to secure the preservation of the data and their metadata. Ideally, a DMP is created before the data collection begins. This ensures that file structures, formats, metadata standards, and access controls are planned consistently and transparently from the outset. DMPs can be used as part of quality and project management, and should be updated whenever changes in handling research data are made.
 
-A DMP, like an [electronic laboratory notebook](/docs/eln) or even a laboratory information management system in chemistry, represents a type of documentation. These different types of documentation must be considered at different levels. A DMP answers the W-questions for documentation.
+A DMP answers the W-questions for documentation:
 
 > "In a DMP a researcher or research team describes **What** data goes into a project (reuse) and comes out of it (potential reuse), **How** the team takes care of the data, and **Who** is allowed to do **What** with the data **When**."<sup>[1](https://www.openaire.eu/blogs/why-is-this-a-good-data-management-plan)</sup>
 
-In addition, the data management plan also addresses cross-cutting issues such as standards, ethics, responsibilities, and so on. The following [elements](https://www.icpsr.umich.edu/web/pages/datamanagement/dmp/elements.html) are included in a DMP:
+In addition, the data management plan also addresses cross-cutting issues such as standards, ethics, responsibilities, and so on.
 
-<KbTagCloud
-	cloudTags={[
-		"Existing data",
-		"Format",
-		"Metadata",
-		"Storage and backup",
-		"Security",
-		"Responsibility",
-		"Intellectual property rights",
-		"Access and sharing",
-		"Audience",
-		"Selection and retention periods",
-		"Archiving and preservation",
-		"Ethics and privacy",
-		"Budget",
-		"Data organization",
-		"Quality Assurance",
-		"Legal requirements",
-	]}
-	min={20}
-	max={35}
-	shuffle={false}
-/>
+:::info Goal:
+A structured, sustainable, and accessible approach to handling research data in line with the FAIR principles.
+:::
 
-## Benefits of a DMP
+## Why is a DMP important?
 
-In addition to funder compliance, there should be an intrinsic motivation for a DMP. The benefits of a data management plan are obvious in this process. A DMP
+A good DMP offers many practical benefits for everyday research:
 
--   supports your research, because the data is findable and understandable. It is clearly described in a DMP.
--   supports the data to be [FAIR](/docs/fair). In a DMP not only the findability is reflected, but also the accessibility, interoperability and reusability is described.
--   saves you time in the long-term, because all necessary information is summarised in a DMP.
--   helps you to think in advance and to consider issues connected with confidentiality, ethics, security and copyright directly from the project start.
--   offers continuity of knowledge and its transmission when new project members join.
+**Scientific & organisational benefits**
 
-## DMP from funders' perspective
+-   Structured data documentation: Supports consistent workflows
+-   Facilitates collaboration: Especially useful in interdisciplinary or multi-site projects
+-   Knowledge transfer: Helps new team members get up to speed faster
+-   Reduces data loss: By planning backups and secure storage strategies early
 
-A number of research funders require DMPs at different stages of the project. It depends on the funder. For example, the EU expects a DMP after 6 months of the project start, in the middle as well as at the end of the project. In its Horizon Europe programme, the EU has been offering a new [DMP template](https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf) to support DMP creation since May 2021.
+**Visibility & reproducibility**
 
-The German funding agencies do not regulate it as strictly as it is by the EU. For example, in certain projects the BMBF requires a so-called exploitation plan or information on the use of the results as part of the application. This requirement is already included in the funding guidelines, for instance in the funding programme of ["Coastal Sea Research in the North Sea and Baltic Sea - Coasts in Transition"](https://www.bmbf.de/bmbf/shareddocs/bekanntmachungen/de/2019/06/2463_bekanntmachung).
+-   Increases reusability: Clear metadata and standardized formats improve data usability for others
+-   Enhances research integrity: Transparent documentation enables reproducibility and trust
 
-The DFG has been offering a [checklist](https://www.dfg.de/en/research_funding/principles_dfg_funding/research_data/index.html) for assistance in handling research data since June 2021. This checklist includes the same topics as a DMP template, which are data description, documentation and data quality, storage and technical archiving the project, legal obligations and conditions, data exchange and long-term data accessibility as well as responsibilities and resources. The DFG also emphasises the use of subject-specific recommendations on standards, methods and infrastructures. Furthermore, the DFG makes a clear statement on its website. "… so it must be handled just as carefully and consideration must be given to a technically adequate option for subsequent reuse whenever appropriate and possible. The same applies if software is required for the creation or processing of research data. For this reason, the DFG expects research projects to include a description of how research data is handled. The description should be based on the checklist for handling research data."
+**Compliance with funders**
 
-## DMP Tools
+-   A DMP or considerations of handling research data are often required by funding agencies (e.g., EU, DFG, BMFTR)
+-   It supports Open Science practices, compliance with the FAIR data principles and long-term data accessibility
 
-The creation of a DMP can be supported by various tools. Some of the most common tools are:
+## What topics should a DMP cover?
 
-[DMPOnline](https://dmponline.dcc.ac.uk/) was developed by the UK Digital Curation Centre (DCC). It includes a template for Horizon Europe projects as well as from the main UK funders. It also provides short general explanations for every single question. DMPOnline and DMPTool are based on the software DMPRoadmap.
+In chemistry, a DMP typically addresses the following questions:
 
-[DMPTool](https://dmptool.org/) is run by the California Digital Library. Due to the different funding landscape in the US, the tool is only of limited use for German/European projects. One advantage is that DMPTool provides DMP examples on the website. It can be used without using the tool.
+-   What kind of data will be generated?
+    e.g., spectra, chromatograms, reaction parameters, synthesis steps
+-   How will the data be documented?
+    Including metadata standards and tools (e.g., ELNs, repositories, guidelines)
+-   Where and how will the data be stored?
+    Local infrastructure, institutional servers, cloud services
+-   Who will have access to the data?
+    Access rights, handling of sensitive data, role-based access control
+-   How will the data be shared, published and/or archived?
+    Repositories like RADAR4Chem and Zenodo, DOI assignment, long-term availability
+-   What about legal, ethical, or copyright issues?
+    Especially relevant in collaborative or industrial research settings
+    Includes e.g., the selection of licenses and compliance with contractual or institutional requirements
 
-[Research Data Management Organiser (RDMO)](https://rdmo.aip.de/) is run at 45 research institutions in Germany and abroad (as of January 2022). It was developed in a DFG-funded project (2015–2020) and is now further maintained by the RDMO working group as an open source software. It offers several "question catalogs" for specific funding programs, disciplines, or research consortia. They enable researchers to organise their data management with the help of precisely formulated questions, help texts, multiple-choice answers. User-created catalogs may be reused and are available for download in a [central repository](https://github.com/rdmorganiser/rdmo-catalog).
+## Which tool can I use to write a DMP?
 
-To further support researchers in answering the questions, working groups have been formed, e.g. in Science Europe or the Research Data Alliance (RDA). The Science Europe Group is focusing on improving the general help texts, while the working group in the RDA focuses on [discipline-specific guidance](https://www.rd-alliance.org/groups/discipline-specific-guidance-data-management-plans-wg). Science Europe set up a new version of the [practical guide](https://www.scienceeurope.org/our-resources/practical-guide-to-the-international-alignment-of-research-data-management/) in January 2021.
+The Research Data Management Organizer (RDMO) is a free online tool that is specifically designed to support the creation and management of DMPs.
 
-A comparison of commonly used DMP tools can be found in the [DMP-Toolguide](https://zenodo.org/record/4632308).
+**Benefits of using RDMO:**
+
+-   Supports your project throughout its entire life cycle, from planning to data publication and beyond
+-   Centralizes all relevant data management tasks and information in one place
+-   Available in both English and German
+-   Includes multiple DMP templates adaptable to different funder requirements
+-   Enables collaboration by assigning tasks to project partners and team members
+-   Offers import/export functions and supports a variety of download formats for further processing
+
+## How do I get support in writing my DMP?
+
+NFDI4Chem offers a chemistry-specific Data Management Plan (DMP) template designed to guide researchers through the process of writing a DMP by answering structured questions. This template is based on a checklist provided by the German Research Foundation (DFG), enriched with chemistry-relevant content and supplemented with additional questions to ensure clarity and completeness.
+The catalogue of questions is available as a downloadable text document or can be used directly within the Research Data Management Organizer (RDMO).
 
 ## Sources and further information
 
--   [Elements of a Data Management Plan](https://www.icpsr.umich.edu/web/pages/datamanagement/dmp/elements.html)
--   [DFG guidelines on research data](https://www.dfg.de/en/research_funding/principles_dfg_funding/research_data/index.html)
+-   [Publication: Road to a Chemistry-Specific Data Management Plan](https://datascience.codata.org/articles/10.5334/dsj-2024-021)
 -   [Practical Guide to the International Alignment of Research Data Management - Extended Edition](https://doi.org/10.5281/zenodo.4915862)
--   [RDA workgroup on discipline specific guidance on DMPs](https://www.rd-alliance.org/groups/discipline-specific-guidance-data-management-plans-wg)
 -   [Horizon Europe DMP Template](https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf)
--   German: [Indications from the Federal Ministery of Education](https://www.bmbf.de/bmbf/shareddocs/bekanntmachungen/de/2019/06/2463_bekanntmachung)
--   German: [Data Management Plans at forschungsdaten.info](https://www.forschungsdaten.info/themen/informieren-und-planen/datenmanagementplan/)
--   German: [Comparison of DMP tools at forschungsdaten.org](https://www.forschungsdaten.org/index.php/Data_Management_Pl%C3%A4ne#Tools)
--   [DMP-Toolguide (1.0)](https://doi.org/10.5281/zenodo.4632308)
--   [DMPOnline](https://dmponline.dcc.ac.uk/)
--   [DMPTool](https://dmptool.org/)
--   [RDMO](https://rdmo.aip.de/)
+-   https://rdmkit.elixir-europe.org/data_management_plan

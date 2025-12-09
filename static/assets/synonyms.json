@@ -1,0 +1,36 @@
+[
+    {
+        "type": "synonym",
+        "synonyms": [
+            "rdm",
+            "fdm",
+            "research data management",
+            "forschungsdatenmanagement"
+        ],
+        "objectID": "0"
+    },
+    {
+        "type": "synonym",
+        "synonyms": [
+            "eln",
+            "electronic lab notebook",
+            "elektronisches laborjournal"
+        ],
+        "objectID": "1"
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["ms", "mass spectrometry", "massenspektrometrie"],
+        "objectID": "2"
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["ir", "infrared", "infrarot"],
+        "objectID": "3"
+    },
+    {
+        "type": "synonym",
+        "synonyms": ["dmp", "data management plan", "datenmanagementplan"],
+        "objectID": "4"
+    }
+]

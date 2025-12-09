@@ -23,12 +23,9 @@
             "href": "https://search.nfdi4chem.de/"
         },
         {
-            "label": "FAQ",
-            "href": "https://www.nfdi4chem.de/index.php/frequently-asked-questions/"
-        },
-        {
             "type": "localeDropdown",
-            "position": "left"
+            "position": "right",
+            "queryString": "?userLocale=true"
         }
     ]
 }

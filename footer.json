@@ -3,6 +3,10 @@
         "title": "Contribute",
         "items": [
             {
+                "label": "Getting Started",
+                "href": "/docs/contributing"
+            },
+            {
                 "label": "Content (GitHub)",
                 "href": "https://github.com/NFDI4Chem/knowledge_base"
             },
@@ -18,10 +22,6 @@
             {
                 "label": "NFDI4Chem Website",
                 "href": "https://nfdi4chem.de"
-            },
-            {
-                "label": "NFDI4Chem FAQ",
-                "href": "https://www.nfdi4chem.de/index.php/frequently-asked-questions/"
             },
             {
                 "label": "NFDI4Chem Helpdesk",
@@ -42,11 +42,11 @@
         "items": [
             {
                 "label": "About",
-                "to": "about"
+                "to": "/about"
             },
             {
                 "label": "Legal Notice",
-                "href": "https://www.uni-mainz.de/en/legal-notice/"
+                "href": "/imprint"
             },
             {
                 "label": "Privacy",

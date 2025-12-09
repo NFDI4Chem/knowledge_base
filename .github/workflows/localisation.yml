@@ -15,18 +15,29 @@ jobs:
         if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             - name: Set up Node.js
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v4
               with:
                   node-version: "lts/*"
+
+            - name: Set up Java 17 (Temurin)
+              uses: actions/setup-java@v4
+              with:
+                  distribution: temurin
+                  java-version: "17"
 
             - name: Install dependencies
               run: npm install
 
             - name: Write translations
               run: npm run write-translations
+
+            - name: Clear jdeploy cache
+              run: |
+                  rm -rf ~/.jdeploy || true
+                  mkdir -p ~/.jdeploy
 
             - name: Upload translations
               run: npm run crowdin upload
