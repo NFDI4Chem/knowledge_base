@@ -10,7 +10,7 @@ const announcementBar = announcementBarActive
 const title = "NFDI4Chem Knowledge Base";
 
 // Use for staging:
-// const title "NFDI4Chem Knowledge Base (STAGING)";
+// const title = "NFDI4Chem Knowledge Base (STAGING)";
 
 const description =
 	"Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
