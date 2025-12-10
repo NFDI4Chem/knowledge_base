@@ -14,6 +14,7 @@
 	align-items: center;
 	margin: 1em;
 	position: relative;
+	box-shadow: 0.6em 0.6em 0.5em -0.75em;
 }
 
 .chemotionCarouselImage {
