@@ -1,6 +1,6 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-function ChemotionIcon({url, alt}) {
+function ChemotionIcon({url, alt, ...props}) {
 	return (
 		<img
 			alt={alt}
@@ -8,7 +8,7 @@ function ChemotionIcon({url, alt}) {
 			width="200"
 			style={{
 				width: "min(120px, 50%)",
-				float: "right",
+				float: props.float ?? "right",
 				margin: "0px 0px 0px 40px",
 			}}
 		/>
