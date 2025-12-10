@@ -7,19 +7,19 @@ const announcementBar = announcementBarActive
 	? require("./announcementBar.json")
 	: {};
 
-const title = "NFDI4Chem Knowledge Base";
+let title = "NFDI4Chem Knowledge Base";
 
-// Use for staging:
-// const title = "NFDI4Chem Knowledge Base (STAGING)";
+// Uncomment for staging:
+// title += " (STAGING)";
 
 const description =
 	"Supporting scientists to digitalise all steps of chemical research: to collect, store, process, analyse, publish, and reuse research data";
 const url = "https://knowledgebase.nfdi4chem.de/";
 
-const baseUrl = "/knowledge_base/";
+let baseUrl = "/knowledge_base/";
 
-// Use for stagging:
-// const baseUrl = "/staging/knowledge_base/";
+// Uncomment for stagging:
+// baseUrl = "/staging" + baseUrl;
 
 const navbar = require("./navbar.json");
 const footerLinks = require("./footer.json");
