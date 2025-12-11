@@ -23,21 +23,19 @@
 
 .chemotionCarouselDots {
 	position: absolute;
-	bottom: 5%;
+	bottom: 0.1em;
 }
 
 .chemotionCarouselDot {
-	background-color: rgba(146, 148, 151);
-	border-radius: 25px;
-	border: 0;
+	font-size: 1.5em;
+	color: rgba(146, 148, 151);
+	border: none;
+	cursor: pointer;
 	opacity: 0.5;
-	height: 10px;
-	width: 10px;
-	margin-inline: 0.1em;
 }
 
 .chemotionCarouselDotActive {
-	background-color: var(--ifm-color-primary);
+	color: var(--ifm-color-primary);
 }
 
 .chemotionCarouselDot:hover {

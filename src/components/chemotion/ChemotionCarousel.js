@@ -16,11 +16,13 @@ export const CustomDots = () => {
 	return (
 		<div className={style.chemotionCarouselDots}>
 			{[...Array(totalPages)].map((_, index) => (
-				<button
+				<span
 					key={index}
 					onClick={() => goToPage(index)}
 					className={className(index)}
-				/>
+				>
+					&#8226;
+				</span>
 			))}
 		</div>
 	);
@@ -39,7 +41,7 @@ function ChemotionCarousel({icon, images}) {
 					showDots
 					showArrows
 					autoplay
-					wrapAround
+					wrapMode="wrap"
 					dots={<CustomDots />}
 				>
 					{images.map((image, index) => (
