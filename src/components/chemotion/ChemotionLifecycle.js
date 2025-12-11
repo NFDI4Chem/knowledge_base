@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 
@@ -6,7 +5,7 @@ import styles from "./ChemotionLifecycle.module.css";
 
 const ChemotionLifecycle = () => {
 	return (
-		<React.Fragment>
+		<div className={styles.svgLifecycleContainer}>
 			<svg
 				viewBox="0 0 525 440"
 				version="1.1"
@@ -195,7 +194,7 @@ const ChemotionLifecycle = () => {
 					</g>
 				</g>
 			</svg>
-		</React.Fragment>
+		</div>
 	);
 };
 

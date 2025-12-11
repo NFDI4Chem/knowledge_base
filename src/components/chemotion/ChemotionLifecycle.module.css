@@ -1,8 +1,11 @@
-/********** Repo decision tree ************/
-
 :root {
 	--svgLifecycle-duration: 0.2s;
 	--svgGrayedOut: #c0c0c0;
+}
+
+.svgLifecycleContainer {
+	display: flex;
+	max-height: 560px;
 }
 
 .svgIcons {
@@ -18,6 +21,7 @@
 g.svgLifecycle {
 	scale: 0.9;
 	transform-origin: 50% 50%;
+	max-height: 100%;
 }
 
 g.svgLifecycle * {
