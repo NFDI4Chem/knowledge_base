@@ -1,6 +1,6 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-function ChemotionIcon({url, alt, ...props}) {
+function FloatImage({url, alt, ...props}) {
 	return (
 		<img
 			alt={alt}
@@ -13,4 +13,4 @@ function ChemotionIcon({url, alt, ...props}) {
 		/>
 	);
 }
-export default ChemotionIcon;
+export default FloatImage;
