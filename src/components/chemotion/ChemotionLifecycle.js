@@ -72,8 +72,6 @@ const ChemotionLifecycle = () => {
 					>
 						<Link to="#data_collection_processing">
 							<text
-								x="300px"
-								y="328px"
 								className={styles.svgIconText}
 								x="300px"
 								y="328px"
@@ -81,8 +79,6 @@ const ChemotionLifecycle = () => {
 								<Translate>Data Collection &amp;</Translate>
 							</text>
 							<text
-								x="321px"
-								y="343px"
 								className={styles.svgIconText}
 								x="321px"
 								y="343px"
