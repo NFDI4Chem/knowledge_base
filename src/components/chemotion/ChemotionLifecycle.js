@@ -70,7 +70,7 @@ const ChemotionLifecycle = () => {
 						className={styles.hoverGroup}
 						id="svg_collection_processing"
 					>
-						<Link to="#data_collection_processing">
+						<Link to="#collection_processing">
 							<text
 								className={styles.svgIconText}
 								x="300px"
