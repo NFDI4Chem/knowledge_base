@@ -2,14 +2,53 @@
 title: "Analysis"
 slug: "/chemotion_analysis"
 ---
-import useBaseUrl from "@docusaurus/useBaseUrl";
 
 # Chemotion: Analysis
 
-![icon and screenshots for data analysis in Chemotion ELN](/img/smartlab/chemotion/chemotion_analysis_banner.png)
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ChemotionCarousel from "@site/src/components/chemotion/ChemotionCarousel";
+import ChemotionIcon from "@site/src/components/chemotion/ChemotionIcon";
 
-<img alt="NMRium logo" src={useBaseUrl('/img/nmrium-logo.svg')} width="200" align= "right" vspace="50" hspace="50"/>After the [transfer and potential conversion of analytical data](/docs/chemotion_dataCollection), the next step is to analyze these raw data. In Chemotion, this can be done seamlessly using one of the integrated spectra editors. [*NMRium*](https://www.nmrium.org/) is an online tool designed for processing both one-dimensional and two-dimensional NMR spectra. In addition to processing NMR spectra, NMRium allows users to directly link chemical structures to their corresponding NMR signals, facilitating the creation of [FAIR](/docs/fair) and machine-readable, actionable analytical data.
+<ChemotionCarousel
+	icon={{
+		src: useBaseUrl(
+			"/img/smartlab/chemotion/chemotion_icons/chemotion_analysis.svg",
+		),
+		alt: "chemotion icon for analysis in data lifecycle",
+	}}
+	images={[
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/analysis1.png"),
+			alt: "Analyses in Reaction View",
+		},
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/analysis2.png"),
+			alt: "Analyses of IR Spectrum",
+		},
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/analysis3.png"),
+			alt: "Analyses of NMR Spectrum",
+		},
+	]}
+/>
 
-Alternatively, spectra can be analyzed with [*ChemSpectra*](https://doi.org/10.1186/s13321-020-00481-0). This software, developed within Chemotion, supports a wide range of analytical techniques including NMR, IR, MS, UV/VIS, GC, HPLC, CV, XRD, and more. Depending on the specific analytical method employed, ChemSpectra offers various processing options such as peak picking, signal integration, and multiplicity setting.
+<ChemotionIcon
+	url={useBaseUrl("/img/nmrium-logo.svg")}
+	alt="NMRium icon"
+	float="left"
+	width="min(200px, 50%)"
+	margin="20px"
+/>
+
+After the [transfer and potential conversion of analytical
+data](/docs/chemotion_dataCollection), the next step is to analyze these raw
+data. In Chemotion, this can be done seamlessly using one of the integrated
+spectra editors. [_NMRium_](https://www.nmrium.org/) is an online tool designed
+for processing both one-dimensional and two-dimensional NMR spectra. In addition
+to processing NMR spectra, NMRium allows users to directly link chemical
+structures to their corresponding NMR signals, facilitating the creation of
+[FAIR](/docs/fair) and machine-readable, actionable analytical data.
+
+Alternatively, spectra can be analyzed with [_ChemSpectra_](https://doi.org/10.1186/s13321-020-00481-0). This software, developed within Chemotion, supports a wide range of analytical techniques including NMR, IR, MS, UV/VIS, GC, HPLC, CV, XRD, and more. Depending on the specific analytical method employed, ChemSpectra offers various processing options such as peak picking, signal integration, and multiplicity setting.
 
 Once analyses are completed, the processed analytical data are stored alongside the raw data within ELN entries, establishing a direct connection to the experiments conducted. Since the processed data are saved in open file formats, they remain interoperable and can be easily reused.
