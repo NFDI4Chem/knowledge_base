@@ -2,7 +2,7 @@ import {Carousel} from "nuka-carousel";
 import style from "./ChemotionCarousel.module.css";
 import {useCarousel} from "nuka-carousel";
 
-export const CustomDots = () => {
+function CustomDots() {
 	const {totalPages, currentPage, goToPage} = useCarousel();
 
 	const className = (index) => {
@@ -26,7 +26,7 @@ export const CustomDots = () => {
 			))}
 		</div>
 	);
-};
+}
 
 function ChemotionCarousel({icon, images}) {
 	return (
