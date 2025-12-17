@@ -1,9 +1,5 @@
 /********** Lead by Example ************/
 
-.lbe-intro {
-	margin: 1rem 0;
-}
-
 .lbe {
 	display: flex;
 	flex-direction: row-reverse;

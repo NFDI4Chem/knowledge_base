@@ -6,6 +6,10 @@ import {useLocation} from "react-router-dom";
 import FilterSection from "./FilterSection.js";
 import LbeBody from "./LbeBody.js";
 
+// Import CSS
+
+import styles from "./lbe.module.css";
+
 // Import global data
 
 import {lbeTable} from "./Data.js";
@@ -133,7 +137,7 @@ function Lbe() {
 	}
 
 	return (
-		<div className="lbe">
+		<div className={styles.lbe}>
 			<FilterSection
 				{...{
 					repos,
