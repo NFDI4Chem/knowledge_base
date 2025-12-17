@@ -1,11 +1,7 @@
-import React from "react";
-
 // Custom functions
 
 import { RepoButton, FilterButton } from "./LbeElements.js";
 import Authors from "./Authors.js";
-import ShortenDesc from "../commons/ShortenDesc.js";
-import ShortenButtons from "./ShortenButtons.js";
 
 // Function for single lbe dataset block
 
