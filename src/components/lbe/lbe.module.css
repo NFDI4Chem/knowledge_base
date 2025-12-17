@@ -43,7 +43,7 @@ h5 {
 		width: 100%;
 	}
 
-	.lbe__body {
+	.lbeBody {
 		padding: 0;
 		width: 100%;
 	}
@@ -82,11 +82,6 @@ h5 {
 	border: none;
 	margin: 0.2em;
 	background: var(--ifm-color-primary);
-}
-
-.lbeFilterbuttonSecondary {
-	background: var(--ifm-breadcrumb-item-background-active);
-	color: var(--ifm-color-primary);
 }
 
 .lbeChip {
