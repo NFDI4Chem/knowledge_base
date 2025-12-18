@@ -1,233 +1,233 @@
 /********** Lead by Example ************/
 
 .lbe {
-	display: flex;
-	flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 /* Search / Filter section */
 
 .lbeSearchfilter {
-	padding-left: 0.5rem;
-	width: 35%;
+  padding-left: 0.5rem;
+  width: 35%;
 }
 
 .lbeSearchfilterContainer {
-	padding: 0.75rem;
-	border: 1px dashed var(--ifm-color-primary);
-	margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
 }
 
 .lbeSearchfilterSection p {
-	margin: unset;
+  margin: unset;
 }
 
 .lbeSearchfilterSection h4,
 h5 {
-	margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .lbeBody {
-	padding-right: 0.5rem;
-	width: 65%;
+  padding-right: 0.5rem;
+  width: 65%;
 }
 
 @media screen and (max-width: 1200px) {
-	.lbe {
-		display: flex;
-		flex-direction: column;
-	}
+  .lbe {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.lbeSearchfilter {
-		padding: 0;
-		width: 100%;
-	}
+  .lbeSearchfilter {
+    padding: 0;
+    width: 100%;
+  }
 
-	.lbeBody {
-		padding: 0;
-		width: 100%;
-	}
+  .lbeBody {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .lbeSearchfilter input:focus {
-	width: calc(5 / 12 * 100%);
+  width: calc(5 / 12 * 100%);
 }
 
 .lbeSearchfilterSearch {
-	padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .lbeSearchfilterSearch > em {
-	color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
 }
 
 /* Filter buttons */
 
 .lbeFilterbutton {
-	display: grid;
-	align-items: center;
-	border-radius: var(--ifm-breadcrumb-border-radius);
-	color: white;
-	display: inline-block;
-	font-size: calc(0.6rem * var(--ifm-breadcrumb-size-multiplier));
-	font-weight: 600;
-	padding: calc(
-			var(--ifm-breadcrumb-padding-vertical) *
-				var(--ifm-breadcrumb-size-multiplier)
-		)
-		calc(
-			var(--ifm-breadcrumb-padding-horizontal) *
-				var(--ifm-breadcrumb-size-multiplier)
-		);
-	border: none;
-	margin: 0.2em;
-	background: var(--ifm-color-primary);
+  display: grid;
+  align-items: center;
+  border-radius: var(--ifm-breadcrumb-border-radius);
+  color: white;
+  display: inline-block;
+  font-size: calc(0.6rem * var(--ifm-breadcrumb-size-multiplier));
+  font-weight: 600;
+  padding: calc(
+      var(--ifm-breadcrumb-padding-vertical) *
+        var(--ifm-breadcrumb-size-multiplier)
+    )
+    calc(
+      var(--ifm-breadcrumb-padding-horizontal) *
+        var(--ifm-breadcrumb-size-multiplier)
+    );
+  border: none;
+  margin: 0.2em;
+  background: var(--ifm-color-primary);
 }
 
 .lbeChip {
-	background: var(--ifm-breadcrumb-item-background-active);
-	color: var(--ifm-color-primary);
-	font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));
-	font-weight: 300;
-	justify-self: left;
-	margin-bottom: 1rem;
+  background: var(--ifm-breadcrumb-item-background-active);
+  color: var(--ifm-color-primary);
+  font-size: calc(0.8rem * var(--ifm-breadcrumb-size-multiplier));
+  font-weight: 300;
+  justify-self: left;
+  margin-bottom: 1rem;
 }
 
 .lbeFilterbuttonActive {
-	background: var(--ifm-color-danger);
-	color: white;
+  background: var(--ifm-color-danger);
+  color: white;
 }
 
 .lbeFilterbutton:hover,
 .lbeFilterbuttonActive:hover {
-	cursor: pointer;
-	transform: scale(var(--lbe-hover-scale));
-	transition: transform var(--lbe-transform-time) ease-in-out;
+  cursor: pointer;
+  transform: scale(var(--lbe-hover-scale));
+  transition: transform var(--lbe-transform-time) ease-in-out;
 }
 
 .lbeFilterbuttonContent {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .lbeFilterbuttonFunnel {
-	height: calc(var(--ifm-font-size-base) * 0.6);
-	fill: white;
+  height: calc(var(--ifm-font-size-base) * 0.6);
+  fill: white;
 }
 
 /* LBE blocks */
 
 .lbeBlock {
-	padding: 0.75rem;
-	border: 1px dashed var(--ifm-color-primary);
-	margin-bottom: 0.75rem;
-	transition: all var(--n4c-transform-time) ease-in-out;
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .lbeBlockHeader {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .lbeBlockHeaderTitle {
-	width: 85%;
-	padding: 0.3rem;
-	display: flex;
-	align-items: center;
+  width: 85%;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .lbeBlockAuthorTrigger {
-	border: none;
-	background: none;
-	scale: 90%;
-	color: var(--ifm-color-primary);
-	padding: 0 0.5em;
-	margin: 0;
+  border: none;
+  background: none;
+  scale: 90%;
+  color: var(--ifm-color-primary);
+  padding: 0 0.5em;
+  margin: 0;
 }
 
 .lbeBlockHeaderLink {
-	width: 15%;
-	display: flex;
-	justify-content: right;
+  width: 15%;
+  display: flex;
+  justify-content: right;
 }
 
 .lbeBlock > h4,
 .lbeBlock > p {
-	margin: 0.5rem;
-	margin-top: 0.8rem;
+  margin: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 .lbeBlock p:nth-of-type(-n + 2),
 .lbeBlockHeaderTitle h3 {
-	margin-bottom: calc(0.5 * var(--ifm-leading));
-	text-align: left;
+  margin-bottom: calc(0.5 * var(--ifm-leading));
+  text-align: left;
 }
 
 @media screen and (max-width: 966px) {
-	.lbeBlockHeader {
-		display: flex;
-		flex-wrap: wrap-reverse;
-	}
+  .lbeBlockHeader {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
 
-	.lbeBlockHeaderTitle,
-	.lbeBlockHeaderLink {
-		width: 100%;
-		justify-content: left;
-	}
+  .lbeBlockHeaderTitle,
+  .lbeBlockHeaderLink {
+    width: 100%;
+    justify-content: left;
+  }
 }
 
 .lbeBlockHr {
-	border-top: 1px solid var(--ifm-color-primary);
-	background-color: unset;
-	margin: 0.8rem 0.4rem;
+  border-top: 1px solid var(--ifm-color-primary);
+  background-color: unset;
+  margin: 0.8rem 0.4rem;
 }
 
 .lbeDetails {
-	display: flex;
-	overflow: hidden;
-	border: none;
-	/* border: 1px solid var(--ifm-color-primary); */
-	padding: 0 1rem;
-	transition: all var(--n4c-transform-time) ease-in-out;
+  display: flex;
+  overflow: hidden;
+  border: none;
+  /* border: 1px solid var(--ifm-color-primary); */
+  padding: 0 1rem;
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .lbeDetails h4 {
-	color: var(--ifm-color-primary);
-	padding-top: 15px;
-	transition: all var(--n4c-transform-time) ease-in-out;
+  color: var(--ifm-color-primary);
+  padding-top: 15px;
+  transition: all var(--n4c-transform-time) ease-in-out;
 }
 
 .lbeDetails summary {
-	font-size: var(--ifm-h4-font-size);
-	color: var(--ifm-heading-color);
-	font-family: var(--ifm-heading-font-family);
-	font-weight: var(--ifm-heading-font-weight);
-	line-height: var(--ifm-heading-line-height);
-	cursor: pointer;
+  font-size: var(--ifm-h4-font-size);
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  cursor: pointer;
 }
 
 .lbeDetails[open] summary {
-	padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .lbeDetails summary::marker {
-	color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
 }
 
 .lbeBlockLink {
-	border: 0.5px solid var(--ifm-color-primary);
-	padding: 0.5em;
-	border-radius: 5px;
-	margin: 0.2em;
-	font-size: 11pt;
-	background: none;
+  border: 0.5px solid var(--ifm-color-primary);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0.2em;
+  font-size: 11pt;
+  background: none;
 }
 
 .lbeBlockLink:hover {
-	transform: scale(var(--lbe-hover-scale));
-	transition: all var(--lbe-transform-time) ease-in-out;
+  transform: scale(var(--lbe-hover-scale));
+  transition: all var(--lbe-transform-time) ease-in-out;
 }
 
 .lbeBlockLink a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
