@@ -100,7 +100,7 @@ const config = {
         algolia: {
             appId: "K32QMEOD1G",
             apiKey: "6ba494183b866a52e3dfd54388379f77",
-            indexName: "NFDI4Chem Knowledge Base",
+            indexName: "nfdi4chem_knowledge_base",
             contextualSearch: true,
             // replaceSearchResultPathname: {
             //     from: "/knowledge_base/",
@@ -127,6 +127,17 @@ const config = {
                 },
                 theme: {
                     customCss: "./src/css/custom.css",
+                },
+                sitemap: {
+                    lastmod: "datetime",
+                    ignorePatterns: ["/tags/**"],
+                    createSitemapItems: async (params) => {
+                        const { defaultCreateSitemapItems, ...rest } = params;
+                        const items = await defaultCreateSitemapItems(rest);
+                        return items.filter(
+                            (item) => !item.url.includes("/page/")
+                        );
+                    },
                 },
             },
         ],
