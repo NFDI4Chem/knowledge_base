@@ -309,6 +309,8 @@
   }
 }
 
+/********** Buttons ************/
+
 .buttons {
   display: flex;
   align-items: center;
@@ -409,11 +411,6 @@
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
-}
-
-.n4c-logo {
-  margin-top: -5;
-  padding: 0;
 }
 
 /********** Links ************/
