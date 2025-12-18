@@ -142,18 +142,6 @@
 
 /********** General and Landing page ************/
 
-/* div[class^='announcementBar_'] {
-  --site-announcement-bar-stripe-color1: rgba(0, 156, 188, 0.15);
-  --site-announcement-bar-stripe-color2: white;
-  background: repeating-linear-gradient(
-    -35deg,
-    var(--site-announcement-bar-stripe-color1),
-    var(--site-announcement-bar-stripe-color1) 20px,
-    var(--site-announcement-bar-stripe-color2) 10px,
-    var(--site-announcement-bar-stripe-color2) 40px
-  );
-} */
-
 .theme-announcement-bar {
   font-size: 20px;
   --site-announcement-bar-stripe-color1: rgba(227, 6, 19, 0.15);
