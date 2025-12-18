@@ -3,7 +3,7 @@
 import { RepoButton, FilterButton } from "./LbeElements.js";
 import Authors from "./Authors.js";
 
-import { Details } from "@site/src/theme/Details";
+import { Details } from "@site/src/theme/common/Details";
 
 // Import CSS
 
