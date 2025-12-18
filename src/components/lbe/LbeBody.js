@@ -76,7 +76,6 @@ function LbeBlock({
         className={styles.lbeDetails}
         contentClassName={styles.lbeDetailsCollapsible}
         summary="Description"
-        open={description.length <= 100}
       >
         <p>{description}</p>
       </Details>
@@ -87,7 +86,6 @@ function LbeBlock({
         className={styles.lbeDetails}
         contentClassName={styles.lbeDetailsCollapsible}
         summary="Links to datasets"
-        open={linkdata.length <= 3}
       >
         <p>
           {linkdata.map((props, idx) => (
