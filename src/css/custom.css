@@ -75,8 +75,6 @@
   --ifm-table-head-background: var(--ifm-color-primary);
   --ifm-table-head-color: white;
 
-  --ifm-hero-text-color: white;
-
   --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
 
   --ifm-font-size-base: 13pt;
@@ -167,49 +165,6 @@
 
 .main-wrapper {
   display: flex;
-}
-
-.hero {
-  display: flex;
-  flex-grow: 1;
-  padding: 2rem 0;
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-  --ifm-hero-background-color: var(--ifm-color-primary);
-  --ifm-hero-text-color: var(--ifm-color-white);
-  background-image:
-    url("/img/Background.png"), url("/img/Background_right.png");
-  background-repeat: no-repeat;
-  background-position:
-    left top,
-    right top;
-}
-
-@media screen and (max-width: 966px) {
-  .hero {
-    padding: 2rem;
-    background-image: url("/img/Background.png");
-    background-repeat: no-repeat;
-    background-position:
-      left top,
-      right top;
-  }
-}
-
-.hero__container {
-  position: center;
-  width: 100%;
-}
-
-.hero__title {
-  color: var(--ifm-hero-text-color);
-  text-align: left;
-  font-size: 2.5rem;
-}
-
-.hero__subtitle {
-  font-size: 1.2rem;
 }
 
 .footer__link-item {

@@ -5,6 +5,8 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import N4CFeatures from "../components/N4CFeatures";
 import Translate from "@docusaurus/Translate";
 
+import styles from "./index.module.css";
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -12,16 +14,16 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.customFields.description}`}
     >
-      <div className="hero">
-        <div className="container hero__container">
+      <div className={styles.hero}>
+        <div className={styles.heroContainer}>
           <div className="row">
             <div className="col">
-              <h1 className="hero__title text">{siteConfig.title}</h1>
+              <h1 className={styles.heroTitle + " text"}>{siteConfig.title}</h1>
             </div>
           </div>
           <div className="row">
             <div className="col col--8">
-              <p className="hero__subtitle">
+              <p className={styles.heroSubtitle}>
                 <Translate>
                   A place for all knowledge regarding Research Data Management
                   (RDM) in Chemistry
