@@ -1,0 +1,53 @@
+/* N4C Feature styles */
+
+.features {
+  align-items: center;
+  padding: 2px;
+  width: 100%;
+}
+
+.featureSvg {
+  padding: 2px;
+  width: 110px;
+  height: 110px;
+  margin-top: 5px;
+}
+
+.featureCol {
+  display: flex;
+  width: var(--n4c-col-width);
+  /* height: var(--n4c-button-height); */
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  align-items: center;
+  justify-content: center;
+}
+
+.introCol {
+  display: flex;
+  width: var(--n4c-col-width);
+  /* height: var(--n4c-button-height); */
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  align-items: center;
+  justify-content: left;
+}
+
+.featureButton {
+  background-color: unset;
+  border: none;
+  width: var(--n4c-button-width);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  font-size: 1.1rem;
+}
+
+.featureButtonSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--n4c-button-secondary-width);
+  font-size: 13pt;
+}
+
+.featureButtonSecondary > * {
+  text-align: center;
+  word-wrap: break-word;
+}

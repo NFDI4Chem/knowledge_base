@@ -2,6 +2,8 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Translate from "@docusaurus/Translate";
 
+import styles from "./N4CFeatures.module.css";
+
 const features = {
   entry: [
     {
@@ -105,7 +107,7 @@ const features = {
 
 function Feature({ title, svg, link, style }) {
   return (
-    <div className="col feature__col">
+    <div className={"col " + styles.featureCol}>
       <div className="text--center">
         {link ? (
           <Link
@@ -113,7 +115,11 @@ function Feature({ title, svg, link, style }) {
             // ? <Link className={clsx('')}
             to={link}
           >
-            <img className="featureSvg" alt={title} src={useBaseUrl(svg)} />
+            <img
+              className={styles.featureSvg}
+              alt={title}
+              src={useBaseUrl(svg)}
+            />
             <br />
             {title}
           </Link>
@@ -130,13 +136,13 @@ export default function N4CFeatures({ feature }) {
   const featureList = features[feature];
 
   if (feature == "entry") {
-    style = "button button--primary feature__button";
+    style = "button button--primary " + styles.featureButton;
   } else {
-    style = "button button--secondary feature__button--secondary";
+    style = "button button--secondary " + styles.featureButtonSecondary;
   }
 
   return (
-    <section className="features">
+    <section className={styles.features}>
       <div className="container">
         <div className="row">
           {featureList.map((props, idx) => (
