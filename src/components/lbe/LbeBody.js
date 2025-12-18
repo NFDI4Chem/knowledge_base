@@ -3,6 +3,8 @@
 import { RepoButton, FilterButton } from "./LbeElements.js";
 import Authors from "./Authors.js";
 
+import { Details } from "@site/src/theme/Details";
+
 // Import CSS
 
 import styles from "./lbe.module.css";
@@ -70,15 +72,23 @@ function LbeBlock({
 
       <hr className={styles.lbeBlockHr} />
 
-      <details className={styles.lbeDetails} open={description.length <= 100}>
-        <summary>Description</summary>
+      <Details
+        className={styles.lbeDetails}
+        contentClassName={styles.lbeDetailsCollapsible}
+        summary="Description"
+        open={description.length <= 100}
+      >
         <p>{description}</p>
-      </details>
+      </Details>
 
       <hr className={styles.lbeBlockHr} />
 
-      <details className={styles.lbeDetails} open={linkdata.length <= 3}>
-        <summary>Links to datasets</summary>
+      <Details
+        className={styles.lbeDetails}
+        contentClassName={styles.lbeDetailsCollapsible}
+        summary="Links to datasets"
+        open={linkdata.length <= 3}
+      >
         <p>
           {linkdata.map((props, idx) => (
             <RepoButton key={idx} {...props} />
@@ -87,7 +97,7 @@ function LbeBlock({
         <p>
           <em>{linkcomment}</em>
         </p>
-      </details>
+      </Details>
     </div>
   );
 }

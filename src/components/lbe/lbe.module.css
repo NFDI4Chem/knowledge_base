@@ -183,18 +183,18 @@ h5 {
 }
 
 .lbeDetails {
+  --docusaurus-details-transition: transform 200ms ease;
+  --docusaurus-details-decoration-color: var(--ifm-color-primary);
   display: flex;
-  overflow: hidden;
-  border: none;
-  /* border: 1px solid var(--ifm-color-primary); */
+  flex-direction: column;
   padding: 0 1rem;
-  transition: all var(--n4c-transform-time) ease-in-out;
+  margin: unset;
+  border: none;
 }
 
-.lbeDetails h4 {
-  color: var(--ifm-color-primary);
-  padding-top: 15px;
-  transition: all var(--n4c-transform-time) ease-in-out;
+.lbeDetailsCollapsible {
+  margin-top: unset;
+  border-top: none;
 }
 
 .lbeDetails summary {
@@ -208,10 +208,6 @@ h5 {
 
 .lbeDetails[open] summary {
   padding-bottom: 15px;
-}
-
-.lbeDetails summary::marker {
-  color: var(--ifm-color-primary);
 }
 
 .lbeBlockLink {
