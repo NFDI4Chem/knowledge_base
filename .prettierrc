@@ -1,0 +1,43 @@
+{
+  "editor.defaultFormatter": "prettier.prettier-vscode",
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "prettier.useTabs": true,
+  "prettier.tabWidth": 4,
+  "prettier.bracketSpacing": true,
+  "json.schemas": [],
+  "files.eol": "\n",
+
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.defaultFormatter": "unifiedjs.vscode-remark"
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+
+  "[mdx]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
+}
