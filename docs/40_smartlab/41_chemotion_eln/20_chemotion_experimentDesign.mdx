@@ -1,0 +1,38 @@
+---
+title: "Experiment Design"
+slug: "/chemotion_experimentDesign"
+---
+
+# Chemotion ELN: Experiment Design
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ChemotionCarousel from "@site/src/components/chemotion/ChemotionCarousel";
+
+<ChemotionCarousel
+	icon={{
+		src: useBaseUrl(
+			"/img/smartlab/chemotion/chemotion_icons/chemotion_DoE.svg",
+		),
+		alt: "chemotion icon for experiment design in data lifecycle",
+	}}
+	images={[
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/experimentDesign1.png"),
+			alt: "Experiment Design Structure Editor",
+		},
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/experimentDesign2.png"),
+			alt: "Experiment Design References",
+		},
+	]}
+/>
+
+In the Chemotion ELN, various entry types can be generated for planning various experimental setups. Generally, all entry types offer the possibility to draw chemical structures directly within the ELN. This is realized by embedded structure editors: _ketcher-rails_ and _Ketcher 2_ are integrated as default structure editors, while _ChemDraw JS_ and _Marvin JS_ can be integrated when the needed licences are available.
+
+All structure editors directly convert the chemical structures into common chemical identifiers such as [_InChI_](https://www.inchi-trust.org/) and notations such as [_SMILES_](https://doi.org/10.1021%2Fci00057a005) code and automatically generate a MOL file of the chemical structure. Conversely, chemical structures can be generated in the ELN by importing the codes and files mentioned above as well as by [_CAS numbers_](https://www.cas.org/cas-data/cas-registry).
+
+The Chemotion ELN directly pulls information from and links entries to databases such as [_PubChem_](https://pubchem.ncbi.nlm.nih.gov/) and [_CAS SciFinder_](https://www.cas.org/solutions/cas-scifinder-discovery-platform/cas-scifinder). Thus, the planning of experiments is facilitated as all relevant information is automatically integrated into the ELN entries.
+
+Furthermore, the Chemotion ELN offers the possibility to link (text) publications directly to the ELN entries as references using [persistant identifiers](/docs/pid) such as DOIs. With this, the ELN allows you to directly connect corresponding literature to experiments so you can cite and reference your own published work, experiments performed by others, or related publications.
+
+Oftentimes, projects or experiments require collaboration and exchange with other scientists. The Chemotion ELN allows for a simple sharing of ELN entries and corresponding data. Depending on the selected permission and detail levels, collaborators can access and edit shared data in the ELN. If you want to find out more about sharing in the Chemotion ELN and exemplarily sharing guidelines, have a look at this [publication](https://doi.org/10.1002/cmtd.202200026).

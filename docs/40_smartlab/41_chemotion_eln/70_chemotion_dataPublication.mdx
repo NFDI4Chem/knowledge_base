@@ -1,0 +1,73 @@
+---
+title: "Data Publication"
+slug: "/chemotion_dataPublication"
+---
+
+# Chemotion: Data Publication
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ChemotionCarousel from "@site/src/components/chemotion/ChemotionCarousel";
+import FloatImage from "@site/src/components/commons/FloatImage";
+
+<ChemotionCarousel
+	icon={{
+		src: useBaseUrl(
+			"/img/smartlab/chemotion/chemotion_icons/chemotion_dataPublication.svg",
+		),
+		alt: "chemotion icon for data publication in data lifecycle",
+	}}
+	images={[
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/dataPublication1.png"),
+			alt: "Data publication workflow",
+		},
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/dataPublication2.png"),
+			alt: "Data publications in Chemotion Repository",
+		},
+
+    ]}
+
+/>
+
+<FloatImage
+	url={useBaseUrl("/img/ChemotionRepo_Logo.svg")}
+	alt="Chemotion Repository badge"
+	float="left"
+	width="min(170px, 50%)"
+	margin="20px"
+/>
+
+{/* prettier-ignore-start */}
+
+Chemotion ELN provides a dedicated functionality that facilitates the [publication of research data](/docs/data_publishing) by enabling seamless transfer from a user's ELN account to a [research data repository](/docs/repositories). Currently, the ELN supports data transfers to the [_Chemotion Repository_](https://www.chemotion-repository.net/welcome) and [_RADAR4Chem_](https://radar4chem.radar-service.eu/radar/en/home).
+<FloatImage
+	url={useBaseUrl("/img/radar4chem_Logo.svg")}
+	alt="RADAR4Chem Repository badge"
+	width="min(150px, 50%)"
+	margin="20px"
+/>
+This feature allows researchers to easily transfer their research data,
+including semantic metadata, into a repository, thereby reducing their workload
+and helping meet the requirements set by funding agencies, while making their
+work available to their research community.
+
+{/* prettier-ignore-end */}
+
+<FloatImage
+	url={useBaseUrl("/img/nmrXiv.svg")}
+	alt="nmrXiv Repository badge"
+	float="left"
+	width="min(150px, 50%)"
+	margin="20px"
+/>
+
+Furthermore, Chemotion ELN is connected to other repositories such as
+[_nmrXiv_](https://nmrxiv.org/) to ensure optimal visibility and facilitate
+user-friendly searches for original research data. The NFDI4Chem team is
+actively working on establishing connections to additional repositories,
+particularly those [supported and recommended by
+NFDI4Chem](/docs/choose_repository/). This ongoing effort aims to enhance
+accessibility and interoperability within the research community.
+
+Chemotion ELN also provides researchers with the option to automatically generate supplemental information (SI) for their manuscripts. This includes direct references to the published datasets via their DOI.

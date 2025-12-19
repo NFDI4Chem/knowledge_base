@@ -1,0 +1,56 @@
+:root {
+	--svgLifecycle-duration: 0.2s;
+	--svgGrayedOut: #c0c0c0;
+}
+
+.svgLifecycleContainer {
+	display: flex;
+	max-height: 560px;
+}
+
+.svgIcons {
+	fill: var(--ifm-color-primary);
+}
+
+.svgIconText {
+	font-size: 15px;
+	fill: var(--ifm-color-primary);
+	font-weight: 300;
+}
+
+g.svgLifecycle {
+	scale: 0.9;
+	transform-origin: 50% 50%;
+	max-height: 100%;
+}
+
+g.svgLifecycle * {
+	stroke-width: 30px;
+	stroke: black;
+	stroke-opacity: 0;
+	transform: scale(1);
+	transform-origin: 50% 50%;
+	transition-duration: var(--svgLifecycle-duration);
+}
+
+g.svgLifecycle:hover *,
+g.svgLifecycle:hover + * {
+	fill: var(--svgGrayedOut);
+	text-decoration: none;
+}
+
+g.hoverGroup:hover * {
+	fill: var(--ifm-color-secondary);
+	transform: scale(1.02);
+	transform-origin: 50% 50%;
+	transition-duration: var(--svgLifecycle-duration);
+}
+
+g.hoverGroup:hover .svgIconText {
+	font-weight: 700;
+}
+
+.chemotionLogo {
+	scale: 0.75;
+	transform-origin: 50% 50%;
+}
