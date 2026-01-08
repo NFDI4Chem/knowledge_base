@@ -4,7 +4,7 @@
   margin: 0px 20px 0px 20px;
 }
 
-Link > .FloatImage:hover {
+a > .FloatImage:hover {
   transform: scale(var(--n4c-hover-scale));
   transition: transform var(--n4c-transform-time) ease-in-out;
 }
