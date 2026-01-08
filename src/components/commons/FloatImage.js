@@ -1,16 +1,44 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+
+import styles from "./FloatImage.module.css";
 
 function FloatImage({ url, alt, ...props }) {
-  return (
-    <img
-      alt={alt}
-      src={useBaseUrl(url)}
-      style={{
-        width: props.width ?? "min(120px, 50%)",
-        float: props.float ?? "right",
-        margin: props.margin ?? "0px 20px 0px 20px",
-      }}
-    />
-  );
+  // Object for custom styles
+
+  let style = {};
+
+  // Populate style object with all props except 'link'
+
+  Object.keys(props).forEach((key) => {
+    if (key !== "link") {
+      style[key] = props[key];
+    }
+  });
+
+  // Component for image
+
+  const ThisImg = () => {
+    return (
+      <img
+        className={styles.FloatImage}
+        alt={alt}
+        src={useBaseUrl(url)}
+        style={style}
+      />
+    );
+  };
+
+  // If link prop is given, wrap image in link
+
+  if (props.link && props.link.length > 0) {
+    return (
+      <Link href={props.link}>
+        <ThisImg />
+      </Link>
+    );
+  }
+
+  return <ThisImg />;
 }
 export default FloatImage;
