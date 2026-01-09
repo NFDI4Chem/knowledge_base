@@ -1,0 +1,18 @@
+.videoInfo {
+  color: white;
+  font: bold var(--ifm-h3-font-size) / var(--ifm-heading-line-height)
+    var(--ifm-font-family-base);
+  margin-bottom: var(--ifm-heading-margin-bottom);
+  text-align: center;
+}
+
+@media screen and (max-width: 1350px) {
+  .videoInfo {
+    color: white;
+
+    font: bold var(--ifm-h5-font-size) / var(--ifm-heading-line-height)
+      var(--ifm-font-family-base);
+    margin-bottom: var(--ifm-heading-margin-bottom);
+    text-align: center;
+  }
+}

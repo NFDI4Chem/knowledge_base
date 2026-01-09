@@ -4,6 +4,7 @@ slug: "/ontology"
 ---
 
 import VideoPrivacy from "video-privacy";
+import styles from "@site/src/css/video.module.css";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 :::info Summary:
@@ -20,6 +21,7 @@ The term ontology, as used in our context, refers to a formally specified concep
   info="YouTube uses cookies and stores personal data. To view embedded videos from YouTube, please indicate your consent to load this video from an external source. Your decision will be saved for this session."
   buttonText="I agree"
   customButtonClass="button button--primary"
+  customInfoClass={styles.videoInfo}
 >
   <iframe
     width="800"

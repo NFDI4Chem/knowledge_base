@@ -9,6 +9,8 @@ sidebar_position: "99"
 import VideoPrivacy from "video-privacy";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import styles from "@site/src/css/video.module.css";
+
 import FloatImage from "@site/src/components/commons/FloatImage";
 
 import ChemotionLifecycle from "@site/src/components/chemotion/ChemotionLifecycle";
@@ -141,6 +143,7 @@ A short introduction to the Chemotion ELN as well as the connection to the Chemo
   info="YouTube uses cookies and stores personal data. To view embedded videos from YouTube, please indicate your consent to load this video from an external source. Your decision will be saved for this session."
   buttonText="I agree"
   customButtonClass="button button--primary"
+  customInfoClass={styles.videoInfo}
 >
   <iframe
     width="860"
