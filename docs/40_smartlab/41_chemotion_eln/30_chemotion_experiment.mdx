@@ -1,0 +1,32 @@
+---
+title: "Experiment"
+slug: "/chemotion_experiment"
+---
+
+# Chemotion: Experiment
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ChemotionCarousel from "@site/src/components/chemotion/ChemotionCarousel";
+
+<ChemotionCarousel
+	icon={{
+		src: useBaseUrl(
+			"/img/smartlab/chemotion/chemotion_icons/chemotion_experiment.svg",
+		),
+		alt: "chemotion icon for experiment in data lifecycle",
+	}}
+	images={[
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/experiment1.png"),
+			alt: "Experiment Reaction Browser",
+		},
+		{
+			src: useBaseUrl("/img/smartlab/chemotion/experiment2.png"),
+			alt: "Experiment Description and Properties",
+		},
+	]}
+/>
+
+As relevant information on chemical compounds such as molar mass, density, and purity are stored within the ELN, Chemotion automatically calculates all relevant amounts saving a researcher's time and preventing miscalculations and typos. Furthermore, predefined text snippets and the transfer of reaction information to the description of experiments allow for a fast and facile documentation.
+
+Due to structured and standardized input fields, the documentation takes place in an uniform and [metadata](/docs/metadata)-enriched way. Thus, entries in the Chemotion ELN always give a full but still concise overview on all experimental information facilitating to conduct and document experiments in the laboratory.
