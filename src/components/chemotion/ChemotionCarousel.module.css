@@ -1,0 +1,56 @@
+.chemotionCarousel {
+	display: flex;
+	flex-direction: row;
+}
+
+.chemotionCarouselIcon {
+	margin-inline: 1em;
+	width: 180px;
+}
+
+.chemotionCarouselContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2em;
+	position: relative;
+	box-shadow: 0.6em 0.6em 0.5em -0.75em;
+}
+
+.chemotionCarouselImage {
+	align-self: center;
+}
+
+.chemotionCarouselDots {
+	position: absolute;
+	bottom: 0.1em;
+}
+
+.chemotionCarouselDot {
+	font-size: 1.5em;
+	color: rgba(146, 148, 151);
+	border: none;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.chemotionCarouselDotActive {
+	color: var(--ifm-color-primary);
+}
+
+.chemotionCarouselDot:hover {
+	opacity: 0.65;
+}
+
+@media screen and (max-width: 968px) {
+	.chemotionCarousel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.chemotionCarouselIcon {
+		margin: 0.5em;
+		width: 25%;
+	}
+}
