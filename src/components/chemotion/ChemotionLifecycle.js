@@ -106,7 +106,7 @@ const ChemotionLifecycle = () => {
 								x="78px"
 								y="235px"
 							>
-								Publication
+								<Translate>Publication</Translate>
 							</text>
 							<path
 								className={styles.svgIcons}
