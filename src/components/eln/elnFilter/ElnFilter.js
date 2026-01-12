@@ -3,7 +3,7 @@ import React from "react";
 import TextSearch from "./TextSearch";
 import FilterButton from "./FilterButton";
 
-import styles from "../styles";
+import styles from "@site/src/components/eln/ElnStyles.js";
 
 // Assemble buttons for filtering section
 

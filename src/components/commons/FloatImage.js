@@ -1,7 +1,7 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Link from "@docusaurus/Link";
 
-import styles from "./FloatImage.module.css";
+import styles from "@site/src/css/FloatImage.module.css";
 
 function FloatImage({ url, alt, ...props }) {
   // Object for custom styles

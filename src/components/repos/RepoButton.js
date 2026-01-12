@@ -3,7 +3,7 @@ import Link from "@docusaurus/Link";
 
 import IconExternalLink from "@theme/Icon/ExternalLink";
 
-import styles from "../lbe/lbe.module.css";
+import styles from "@site/src/css/lbe.module.css";
 import clsx from "clsx";
 
 function RepoButton(props) {

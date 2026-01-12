@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./ShortenDesc.module.css";
+import styles from "@site/src/css/ShortenDesc.module.css";
 
 // shorten the description of the experiment up to the next blank, comma or period after 100 characters
 

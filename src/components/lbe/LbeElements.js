@@ -6,7 +6,7 @@ import Funnel from "@site/static/img/funnel.svg";
 
 // Import CSS
 
-import styles from "./lbe.module.css";
+import styles from "@site/src/css/lbe.module.css";
 import clsx from "clsx";
 
 // Import global data

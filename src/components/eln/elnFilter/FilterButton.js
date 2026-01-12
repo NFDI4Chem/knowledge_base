@@ -1,6 +1,5 @@
+import styles from "@site/src/components/eln/ElnStyles.js";
 import clsx from "clsx";
-
-import styles from "../styles";
 
 function FilterButton(props) {
   const handleClick = () => {

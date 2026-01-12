@@ -1,6 +1,6 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import styles from "./N4CFeatures.module.css";
+import styles from "@site/src/css/N4CFeatures.module.css";
 import clsx from "clsx";
 
 export default function IntroButton(props) {

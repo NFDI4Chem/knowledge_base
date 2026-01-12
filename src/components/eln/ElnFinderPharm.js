@@ -6,7 +6,7 @@ import ElnStatus from "./ElnStatus";
 import ElnFilter from "./elnFilter/ElnFilter";
 import ElnStack from "./ElnStack";
 
-import styles from "./styles";
+import styles from "@site/src/components/eln/ElnStyles.js";
 
 // const elnData = require("@site/static/assets/eln_test.json");
 

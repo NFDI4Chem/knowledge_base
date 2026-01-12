@@ -1,20 +1,20 @@
 import { Carousel } from "nuka-carousel";
-import style from "./ChemotionCarousel.module.css";
+import styles from "@site/src/css/ChemotionCarousel.module.css";
 import { useCarousel } from "nuka-carousel";
 
 function CustomDots() {
   const { totalPages, currentPage, goToPage } = useCarousel();
 
   const className = (index) => {
-    let value = style.chemotionCarouselDot;
+    let value = styles.chemotionCarouselDot;
     if (currentPage === index) {
-      value += " " + style.chemotionCarouselDotActive;
+      value += " " + styles.chemotionCarouselDotActive;
     }
     return value;
   };
 
   return (
-    <div className={style.chemotionCarouselDots}>
+    <div className={styles.chemotionCarouselDots}>
       {[...Array(totalPages)].map((_, index) => (
         <span
           key={index}
@@ -30,13 +30,13 @@ function CustomDots() {
 
 function ChemotionCarousel({ icon, images }) {
   return (
-    <div className={style.chemotionCarousel}>
+    <div className={styles.chemotionCarousel}>
       <img
-        className={style.chemotionCarouselIcon}
+        className={styles.chemotionCarouselIcon}
         src={icon.src}
         alt={icon.alt}
       />
-      <div className={style.chemotionCarouselContainer}>
+      <div className={styles.chemotionCarouselContainer}>
         <Carousel
           showDots
           showArrows
@@ -46,7 +46,7 @@ function ChemotionCarousel({ icon, images }) {
         >
           {images.map((image, index) => (
             <img
-              className={style.chemotionCarouselImage}
+              className={styles.chemotionCarouselImage}
               key={index}
               src={image.src}
               alt={image.alt}
