@@ -1,4 +1,4 @@
-import styles from "@site/src/components/eln/ElnStyles.js";
+import styles from "@site/src/components/eln/ElnStyles";
 import clsx from "clsx";
 
 function FilterButton(props) {

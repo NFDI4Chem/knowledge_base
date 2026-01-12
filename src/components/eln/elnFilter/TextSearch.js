@@ -1,4 +1,4 @@
-import styles from "@site/src/components/eln/ElnStyles.js";
+import styles from "@site/src/components/eln/ElnStyles";
 
 function TextSearch({ resultOutput, filter, setFilter }) {
   const handleChange = (e) =>
