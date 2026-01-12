@@ -1,17 +1,19 @@
-import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import styles from "./N4CFeatures.module.css";
+import styles from "@site/src/css/N4CFeatures.module.css";
+import clsx from "clsx";
 
 export default function IntroButton(props) {
   return (
-    <div className={"col " + styles.introCol}>
+    <div className={clsx("col", styles.introCol)}>
       <div>
         <a
           href={useBaseUrl(props.url)}
-          className={
-            "button button--secondary " + styles.featureButtonSecondary
-          }
+          className={clsx(
+            "button",
+            "button--secondary",
+            styles.featureButtonSecondary,
+          )}
         >
           <div>
             <img src={useBaseUrl(props.imgUrl)} width="120px" />

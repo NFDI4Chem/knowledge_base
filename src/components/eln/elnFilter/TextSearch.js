@@ -1,38 +1,38 @@
-import styles from "../Eln.module.css";
+import styles from "@site/src/components/eln/ElnStyles.js";
 
 function TextSearch({ resultOutput, filter, setFilter }) {
-    const handleChange = (e) =>
-        setFilter((draft) => {
-            draft.text = e.target.value;
-        });
+  const handleChange = (e) =>
+    setFilter((draft) => {
+      draft.text = e.target.value;
+    });
 
-    return (
-        <div className={styles.eln__searchfilter__search}>
-            <span className="navbar__search">
-                <input
-                    className="navbar__search-input"
-                    type="search"
-                    placeholder="Type to search"
-                    value={filter.text ? filter.text : ""}
-                    onChange={handleChange}
-                />
-                {filter.text && (
-                    <button
-                        className={styles.eln__searchfilter__search__button}
-                        onClick={() =>
-                            setFilter((draft) => {
-                                delete draft.text;
-                            })
-                        }
-                    >
-                        &#x2715;
-                    </button>
-                )}
-                &ensp;
-            </span>
-            <em>{resultOutput}</em>
-        </div>
-    );
+  return (
+    <div className={styles.elnSearchfilterSearch}>
+      <span className="navbar__search">
+        <input
+          className="navbar__search-input"
+          type="search"
+          placeholder="Type to search"
+          value={filter.text ? filter.text : ""}
+          onChange={handleChange}
+        />
+        {filter.text && (
+          <button
+            className={styles.elnSearchfilterSearchButton}
+            onClick={() =>
+              setFilter((draft) => {
+                delete draft.text;
+              })
+            }
+          >
+            &#x2715;
+          </button>
+        )}
+        &ensp;
+      </span>
+      <em>{resultOutput}</em>
+    </div>
+  );
 }
 
 export default TextSearch;

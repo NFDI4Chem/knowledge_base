@@ -2,7 +2,8 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Translate from "@docusaurus/Translate";
 
-import styles from "./N4CFeatures.module.css";
+import styles from "@site/src/css/N4CFeatures.module.css";
+import clsx from "clsx";
 
 const features = {
   entry: [
@@ -107,7 +108,7 @@ const features = {
 
 function Feature({ title, svg, link, style }) {
   return (
-    <div className={"col " + styles.featureCol}>
+    <div className={clsx("col", styles.featureCol)}>
       <div className="text--center">
         {link ? (
           <Link

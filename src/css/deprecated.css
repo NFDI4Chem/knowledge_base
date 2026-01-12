@@ -1,0 +1,35 @@
+/********** Methods Table ************/
+
+/* .methods__searchfilter {
+  padding: 10px;
+  margin: 15px 0px;
+  border: 1px dashed var(--ifm-color-primary);
+  display: flex;
+}
+
+.methods__searchfilter__row {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.methods__searchfilter__filter {
+  width: calc(8 / 12 * 100%);
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.methods__searchfilter__search {
+  width: calc(4 / 12 * 100%);
+  padding: 0var (--ifm-spacing-horizontal);
+}
+
+@media screen and (max-width: 1350px) {
+  .methods__searchfilter__filter {
+    width: unset;
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
+
+  .methods__searchfilter__search {
+    width: unset;
+    padding: var(--ifm-spacing-horizontal);
+  }
+} */

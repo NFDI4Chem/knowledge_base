@@ -1,0 +1,128 @@
+@import "@site/src/css/lbe.module.css";
+
+/********** ELN-Finder ************/
+
+.eln {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Search / Filter section */
+
+.elnSearchfilter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.elnSearchfilterText {
+  translate: 0 20%;
+  min-width: 240px;
+}
+
+.elnSearchfilterButtons {
+  flex-grow: 1;
+}
+
+.elnSearchfilterSearch {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.elnSearchfilterSearch > span {
+  text-align: center;
+  display: flex;
+}
+
+.elnSearchfilterSearch > em {
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.elnSearchfilterSearchButton {
+  position: relative;
+  right: 1.5rem;
+  align-self: center;
+  padding: 0;
+  background: none;
+  border: none;
+  line-height: 1rem;
+}
+
+.elnCard {
+  width: 49.5%;
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+  transition: all var(--n4c-transform-time) ease-in-out;
+}
+
+.elnCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.elnCardDesc {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .eln {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .elnSearchfilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px dashed var(--ifm-color-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .elnSearchfilterText,
+  .elnSearchfilterButtons {
+    width: 100%;
+    translate: 0;
+  }
+
+  .elnSearchfilterSearch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .elnCard {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px dashed var(--ifm-color-primary);
+    margin-bottom: 0.75rem;
+    transition: all var(--n4c-transform-time) ease-in-out;
+  }
+}
+
+.elnCardLink {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.elnLicenseChipOpensource {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-weight: bold;
+}
+
+.elnFilterbuttonSecondary {
+  background-color: var(--ifm-breadcrumb-item-background-active);
+  color: var(--ifm-color-primary);
+  font-weight: unset;
+}

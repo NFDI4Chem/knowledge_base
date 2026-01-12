@@ -7,7 +7,7 @@ import { Details } from "@site/src/theme/common/Details";
 
 // Import CSS
 
-import styles from "./lbe.module.css";
+import styles from "@site/src/css/lbe.module.css";
 
 // Function for single lbe dataset block
 

@@ -1,0 +1,8 @@
+.authorTrigger {
+  border: none;
+  background: none;
+  scale: 90%;
+  color: var(--ifm-color-primary);
+  padding: 0 0.5em;
+  margin: 0;
+}
