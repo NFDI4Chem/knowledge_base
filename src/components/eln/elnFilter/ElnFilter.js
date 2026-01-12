@@ -3,7 +3,7 @@ import React from "react";
 import TextSearch from "./TextSearch";
 import FilterButton from "./FilterButton";
 
-import styles from "../Eln.module.css";
+import styles from "../styles";
 
 // Assemble buttons for filtering section
 
@@ -39,7 +39,7 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
   return (
     <React.Fragment>
       {subDiscButtons.length > 0 && (
-        <div className="lbe__searchfilter__section">
+        <div className={styles.lbeSearchfilterSection}>
           <h5>Filter by subdisciplines</h5>
           <p>
             {subDiscButtons.map((subDisc, idx) => (
@@ -55,7 +55,7 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
           </p>
         </div>
       )}
-      <div className="lbe__searchfilter__section">
+      <div className={styles.lbeSearchfilterSection}>
         <h5>Filter by license</h5>
         <p>
           {licenseButtons.map((license, idx) => (
@@ -82,11 +82,11 @@ function ElnFilter({
   resultOutput,
 }) {
   return (
-    <div className={styles.eln__searchfilter}>
-      <div className={styles["eln__searchfilter__text"]}>
+    <div className={styles.elnSearchfilter}>
+      <div className={styles.elnSearchfilterText}>
         <TextSearch {...{ resultOutput, filter, setFilter }} />
       </div>
-      <div className={styles["eln__searchfilter__buttons"]}>
+      <div className={styles.elnSearchfilterButtons}>
         <ButtonFilters {...{ allSubDisc, allLicenses, filter, setFilter }} />
       </div>
     </div>

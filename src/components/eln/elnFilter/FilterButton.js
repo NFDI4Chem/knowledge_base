@@ -18,7 +18,7 @@ function FilterButton(props) {
   // Conditional styling for button
 
   let buttonClass = clsx(styles.lbeFilterbutton, {
-    [styles["eln__filterbutton--secondary"]]: props.secondary,
+    [styles.elnFilterbuttonSecondary]: props.secondary,
     [styles.lbeFilterbuttonActive]: props.active,
   });
 

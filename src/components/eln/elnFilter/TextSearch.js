@@ -7,7 +7,7 @@ function TextSearch({ resultOutput, filter, setFilter }) {
     });
 
   return (
-    <div className={styles.eln__searchfilter__search}>
+    <div className={styles.elnSearchfilterSearch}>
       <span className="navbar__search">
         <input
           className="navbar__search-input"
@@ -18,7 +18,7 @@ function TextSearch({ resultOutput, filter, setFilter }) {
         />
         {filter.text && (
           <button
-            className={styles.eln__searchfilter__search__button}
+            className={styles.elnSearchfilterSearchButton}
             onClick={() =>
               setFilter((draft) => {
                 delete draft.text;

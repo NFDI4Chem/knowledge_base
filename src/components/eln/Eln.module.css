@@ -9,7 +9,7 @@
 
 /* Search / Filter section */
 
-.eln__searchfilter {
+.elnSearchfilter {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -18,31 +18,31 @@
   margin-bottom: 0.5rem;
 }
 
-.eln__searchfilter__text {
+.elnSearchfilterText {
   translate: 0 20%;
   min-width: 240px;
 }
 
-.eln__searchfilter__buttons {
+.elnSearchfilterButtons {
   flex-grow: 1;
 }
 
-.eln__searchfilter__search {
+.elnSearchfilterSearch {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
 }
 
-.eln__searchfilter__search > span {
+.elnSearchfilterSearch > span {
   text-align: center;
 }
 
-.eln__searchfilter__search > em {
+.elnSearchfilterSearch > em {
   color: var(--ifm-color-primary);
   text-align: center;
 }
 
-.eln__searchfilter__search__button {
+.elnSearchfilterSearchButton {
   position: absolute;
   right: 1.5rem;
   top: 50%;
@@ -53,7 +53,7 @@
   line-height: 1rem;
 }
 
-.eln__card {
+.elnCard {
   width: 49.5%;
   padding: 0.75rem;
   border: 1px dashed var(--ifm-color-primary);
@@ -61,13 +61,13 @@
   transition: all var(--n4c-transform-time) ease-in-out;
 }
 
-.eln__card__header {
+.elnCardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.eln__card__desc {
+.elnCardDesc {
   padding: 0.5rem;
 }
 
@@ -77,7 +77,7 @@
     flex-direction: column;
   }
 
-  .eln__searchfilter {
+  .elnSearchfilter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,19 +87,19 @@
     margin-bottom: 0.75rem;
   }
 
-  .eln__searchfilter__text,
-  .eln__searchfilter__buttons {
+  .elnSearchfilterText,
+  .elnSearchfilterButtons {
     width: 100%;
     translate: 0;
   }
 
-  .eln__searchfilter__search {
+  .elnSearchfilterSearch {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .eln__card {
+  .elnCard {
     width: 100%;
     padding: 0.75rem;
     border: 1px dashed var(--ifm-color-primary);
@@ -108,18 +108,18 @@
   }
 }
 
-.eln__card__link {
+.elnCardLink {
   display: flex;
   padding: 0.5rem;
 }
 
-.eln__licenseChip--opensource {
+.elnLicenseChipOpensource {
   background-color: var(--ifm-color-primary);
   color: white;
   font-weight: bold;
 }
 
-.eln__filterbutton--secondary {
+.elnFilterbuttonSecondary {
   background-color: var(--ifm-breadcrumb-item-background-active);
   color: var(--ifm-color-primary);
   font-weight: unset;
