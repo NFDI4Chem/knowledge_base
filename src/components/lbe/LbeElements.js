@@ -7,6 +7,7 @@ import Funnel from "@site/static/img/funnel.svg";
 // Import CSS
 
 import styles from "./lbe.module.css";
+import clsx from "clsx";
 
 // Import global data
 
@@ -98,7 +99,7 @@ function FilterButton({
   // Styling of active button
 
   if (name === lbeState[type]) {
-    buttonClass = styles.lbeFilterbutton + " " + styles.lbeFilterbuttonActive;
+    buttonClass = clsx(styles.lbeFilterbutton, styles.lbeFilterbuttonActive);
   }
 
   // Determine number (when needed)
@@ -138,7 +139,7 @@ function FilterButton({
 function LbeChip({ title }) {
   return (
     <Link to={useBaseUrl("/docs/datasets/?subd=" + title)}>
-      <button className={styles.lbeFilterbutton + " " + styles.lbeChip}>
+      <button className={clsx(styles.lbeFilterbutton, styles.lbeChip)}>
         Lead by Example &#9654;<strong>{title}</strong>
       </button>
     </Link>

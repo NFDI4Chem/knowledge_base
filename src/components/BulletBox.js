@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 function BulletContainer({ children }) {
   return <div className="container row">{children}</div>;
 }
@@ -7,7 +9,7 @@ function BulletBox({ children, secondary }) {
 
   return (
     <div
-      className={"col button button--lg " + boxStyle}
+      className={clsx("col", "button", "button--lg", boxStyle)}
       style={{ padding: "0.75em", margin: "0.4em", flexGrow: 1 }}
     >
       {children}

@@ -6,6 +6,7 @@ import N4CFeatures from "../components/N4CFeatures";
 import Translate from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
+import clsx from "clsx";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -18,11 +19,13 @@ export default function Home() {
         <div className={styles.heroContainer}>
           <div className="row">
             <div className="col">
-              <h1 className={styles.heroTitle + " text"}>{siteConfig.title}</h1>
+              <h1 className={clsx(styles.heroTitle, "text")}>
+                {siteConfig.title}
+              </h1>
             </div>
           </div>
           <div className="row">
-            <div className="col col--8">
+            <div className={clsx("col", "col--8")}>
               <p className={styles.heroSubtitle}>
                 <Translate>
                   A place for all knowledge regarding Research Data Management
@@ -30,10 +33,10 @@ export default function Home() {
                 </Translate>
               </p>
             </div>
-            <div className="col col--2">
+            <div className={clsx("col", "col--2")}>
               <div className="buttons">
                 <Link
-                  className="button button--negative button--lg"
+                  className={clsx("button", "button--negative", "button--lg")}
                   to="/docs/intro"
                 >
                   <Translate>Get started</Translate>
