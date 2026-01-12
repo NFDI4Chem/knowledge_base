@@ -6,7 +6,7 @@ import ElnStatus from "./ElnStatus";
 import ElnFilter from "./elnFilter/ElnFilter";
 import ElnStack from "./ElnStack";
 
-import styles from "@site/src/components/eln/ElnStyles.js";
+import styles from "@site/src/components/eln/ElnStyles";
 
 // const elnData = require("@site/static/assets/eln_test.json");
 
@@ -14,7 +14,6 @@ function ElnFinderPharm(props) {
   // State for ELN data
 
   const [elnData, setElnData] = useState(null);
-  const [error, setError] = useState(null);
 
   // State for filtering
 
@@ -32,7 +31,6 @@ function ElnFinderPharm(props) {
         console.log(data);
       })
       .catch((error) => {
-        setError(error);
         console.error(error);
       });
   }, []);
