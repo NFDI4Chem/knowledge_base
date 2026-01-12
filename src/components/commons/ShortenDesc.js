@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import styles from "./ShortenDesc.module.css";
+
 // shorten the description of the experiment up to the next blank, comma or period after 100 characters
 
 function ShortenDesc({ desc, length }) {
@@ -21,7 +23,7 @@ function ShortenDesc({ desc, length }) {
             desc.slice(length).split(/[\s,\.]/)[0] +
             " ..."}
 
-          <button className="lbe__block__author-trigger">expand &#9660;</button>
+          <button className={styles.authorTrigger}>expand &#9660;</button>
         </span>
       ) : (
         <span
@@ -29,9 +31,7 @@ function ShortenDesc({ desc, length }) {
           style={{ cursor: "pointer" }}
         >
           {desc}
-          <button className="lbe__block__author-trigger">
-            collapse &#9650;
-          </button>
+          <button className={styles.authorTrigger}>collapse &#9650;</button>
         </span>
       )}
     </React.Fragment>
