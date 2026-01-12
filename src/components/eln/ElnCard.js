@@ -3,7 +3,7 @@ import RepoButton from "@site/src/components/repos/RepoButton";
 import FilterButton from "./elnFilter/FilterButton.js";
 import ShortenDesc from "../commons/ShortenDesc.js";
 
-import styles from "./Eln.module.css";
+import styles from "./styles";
 
 function ElnCard({ eln, filter, setFilter }) {
   return (
