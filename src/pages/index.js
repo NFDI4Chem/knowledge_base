@@ -17,13 +17,7 @@ export default function Home() {
     >
       <div className={styles.hero}>
         <div className={styles.heroContainer}>
-          <div className="row">
-            <div className="col">
-              <h1 className={clsx(styles.heroTitle, "text")}>
-                {siteConfig.title}
-              </h1>
-            </div>
-          </div>
+          <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <div className="row">
             <div className={clsx("col", "col--8")}>
               <p className={styles.heroSubtitle}>
@@ -33,15 +27,13 @@ export default function Home() {
                 </Translate>
               </p>
             </div>
-            <div className={clsx("col", "col--2")}>
-              <div className="buttons">
-                <Link
-                  className={clsx("button", "button--negative", "button--lg")}
-                  to="/docs/intro"
-                >
-                  <Translate>Get started</Translate>
-                </Link>
-              </div>
+            <div className={clsx("col", "col--4", "buttons")}>
+              <Link
+                className={clsx("button", "button--negative", "button--lg")}
+                to="/docs/intro"
+              >
+                <Translate>Get started</Translate>
+              </Link>
             </div>
           </div>
           <N4CFeatures feature="entry" />
