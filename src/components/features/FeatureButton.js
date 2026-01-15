@@ -11,8 +11,8 @@ function FeatureButton({ url, imgUrl, text, ...props }) {
     { "button--primary": props.index },
     { "button--secondary": !props.index },
     props.classes,
-    { [styles.featureButton]: props.index },
-    { [styles.featureButtonSecondary]: !props.index },
+    styles.featureButton,
+    { [styles.featureButtonIndex]: props.index },
   );
 
   const width = props?.width ?? "120px";
