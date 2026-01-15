@@ -2,11 +2,40 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import N4CFeatures from "../components/N4CFeatures";
+import Features from "@site/src/components/features/Features";
+
 import Translate from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
 import clsx from "clsx";
+
+const features = [
+  {
+    text: <Translate>Domains</Translate>,
+    imgUrl: "/img/nfdi4chem_Domains_white.svg",
+    url: "/docs/domain_guide",
+  },
+  {
+    text: <Translate>Roles</Translate>,
+    imgUrl: "/img/nfdi4chem_Roles_white.svg",
+    url: "/docs/role_guide",
+  },
+  {
+    text: <Translate>Handling Data</Translate>,
+    imgUrl: "/img/nfdi4chem_Handling_Data_white.svg",
+    url: "/docs/data_guide",
+  },
+  {
+    text: <Translate>Electronic Lab Notebooks</Translate>,
+    imgUrl: "/img/nfdi4chem_SmartLab_white.svg",
+    url: "/docs/smartlab",
+  },
+  {
+    text: <Translate>Data Publishing</Translate>,
+    imgUrl: "/img/nfdi4chem_Data_Publication_white.svg",
+    url: "/docs/data_publishing",
+  },
+];
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -36,7 +65,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <N4CFeatures feature="entry" />
+          <Features featureList={features} classes={clsx("button--primary")} />
         </div>
       </div>
     </Layout>
