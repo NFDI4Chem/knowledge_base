@@ -27,3 +27,5 @@ docusaurus.config.js
 .Rproj.user
 knowledge_base.Rproj
 .vscode
+
+article_count.md
