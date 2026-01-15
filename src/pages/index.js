@@ -65,7 +65,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Features featureList={features} classes={clsx("button--primary")} />
+          <Features featureList={features} index />
         </div>
       </div>
     </Layout>

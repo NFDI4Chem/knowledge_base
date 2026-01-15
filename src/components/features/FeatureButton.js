@@ -6,11 +6,14 @@ import styles from "@site/src/css/Features.module.css";
 import clsx from "clsx";
 
 function FeatureButton({ url, imgUrl, text, ...props }) {
-  let classes = clsx("button", props.classes, styles.featureButton);
-
-  console.log(props);
-
-  console.log(classes);
+  let classes = clsx(
+    "button",
+    { "button--primary": props.index },
+    { "button--secondary": !props.index },
+    props.classes,
+    { [styles.featureButton]: props.index },
+    { [styles.featureButtonSecondary]: !props.index },
+  );
 
   const width = props?.width ?? "120px";
 

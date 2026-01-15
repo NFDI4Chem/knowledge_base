@@ -1,7 +1,7 @@
 import ButtonContainer from "./ButtonContainer";
 import FeatureButton from "./FeatureButton";
 
-function Features({ featureList, classes }) {
+function Features({ featureList, classes, index }) {
   return (
     <ButtonContainer>
       {featureList.map((feature, idx) => (
@@ -11,6 +11,7 @@ function Features({ featureList, classes }) {
           imgUrl={feature.imgUrl}
           text={feature.text}
           classes={classes}
+          index={index}
         />
       ))}
     </ButtonContainer>
