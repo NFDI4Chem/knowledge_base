@@ -27,6 +27,13 @@ for file in $(find $DOCS_DIR -name "*.mdx" -o -name "*.md"); do
 
     # Count words in the file
     word_count=$(wc -w < "$file")
+
+    # Remove linebreaks
+
+    title=$(echo $title | tr -d '\n' | tr -s ' ')
+    slug=$(echo $slug | tr -d '\n' | tr -s ' ')
+    relative_path=$(echo $relative_path | tr -d '\n' | tr -s ' ')
+    word_count=$(echo $word_count | tr -d '\n' | tr -s ' ')
     
     # Append to output file
     echo "| $title | $slug | $relative_path | $word_count |" >> $OUTPUT_FILE
