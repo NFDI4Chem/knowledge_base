@@ -1,0 +1,29 @@
+/* N4C Feature styles */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2px;
+  width: 100%;
+}
+
+.featureButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: unset;
+  border: none;
+  width: var(--n4c-button-width);
+  padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
+  font-size: 1.1rem;
+}
+
+.featureSvg {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  width: 110px;
+  height: 110px;
+  margin-top: 5px;
+}
