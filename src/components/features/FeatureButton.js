@@ -20,7 +20,7 @@ function FeatureButton({ url, imgUrl, text, ...props }) {
   return (
     <Link to={url} className={classes}>
       <div className={styles.featureSvg}>
-        <img src={useBaseUrl(imgUrl)} width={width} />
+        <img src={useBaseUrl(imgUrl)} width={width} alt={text} />
       </div>
       <div>{text}</div>
     </Link>
