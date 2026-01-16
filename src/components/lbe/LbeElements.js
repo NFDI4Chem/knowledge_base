@@ -136,14 +136,4 @@ function FilterButton({
   );
 }
 
-function LbeChip({ title }) {
-  return (
-    <Link to={useBaseUrl("/docs/datasets/?subd=" + title)}>
-      <button className={clsx(styles.lbeFilterbutton, styles.lbeChip)}>
-        Lead by Example &#9654;<strong>{title}</strong>
-      </button>
-    </Link>
-  );
-}
-
-export { RepoButton, TextSearch, FilterButton, LbeChip };
+export { RepoButton, TextSearch, FilterButton };
