@@ -6,14 +6,12 @@ id: "intro"
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import FeatureButton from "@site/src/components/features/FeatureButton.js";
+import FloatImage from "@site/src/components/commons/FloatImage.js";
 
-<img
+<FloatImage
   alt="Data LifeCycle"
-  src={useBaseUrl("/img/Intro/DataLifeCycle_KB.svg")}
-  width="500"
-  align="right"
-  vspace="10"
-  hspace="10"
+  url="/img/Intro/DataLifeCycle_KB.svg"
+  width="max(500px, 50%)"
 />
 
 The NFDI4Chem knowledge base provides information and recommendations to digitalise all key steps of chemical research to support scientists in their efforts to collect, store, process, analyse, publish, and reuse research data. This knowledge base is inspired by [RDMkit](https://rdmkit.elixir-europe.org/index.html) but has been tailored specifically towards Chemists as end-users.
