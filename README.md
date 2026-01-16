@@ -4,14 +4,15 @@
 
 This repo is the core of the [NFDI4Chem knowledge base](https://knowledgebase.nfdi4chem.de).
 
+[![Crowdin](https://badges.crowdin.net/nfdi4chem-knowledge-base/localized.svg)](https://crowdin.com/project/nfdi4chem-knowledge-base) [![Localisation Workflow](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/localisation.yml/badge.svg)](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/localisation.yml)
+
 ## Documentation
 
--   [Getting started](./readme/getting_started.md)
--   [Localisation](./readme/localisation.md)
--   [Advanced stuff](./readme/advanced.md)
--   [Local testing](./readme/testing.md)
-
-[![Crowdin](https://badges.crowdin.net/nfdi4chem-knowledge-base/localized.svg)](https://crowdin.com/project/nfdi4chem-knowledge-base) [![Localisation Workflow](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/localisation.yml/badge.svg)](https://github.com/NFDI4Chem/knowledge_base/actions/workflows/localisation.yml)
+* [Getting started](./readme/getting_started.md)
+* [Localisation](./readme/localisation.md)
+* [Advanced stuff](./readme/advanced.md)
+* [Custom components](./readme/custom.md)
+* [Local testing](./readme/testing.md)
 
 ## Acknowledgments
 

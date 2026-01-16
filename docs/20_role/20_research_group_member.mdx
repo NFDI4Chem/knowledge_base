@@ -5,7 +5,7 @@ slug: "/research_group_member"
 
 # Research Group Member
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import FloatImage from "@site/src/components/commons/FloatImage.js";
 
 :::info Applies to:
 This article applies to research group members (PhD students, Postdocs and other scientists), who are generating scientific data.
@@ -17,13 +17,10 @@ As a research group member, you are the one who is doing the actual research. Th
 
 ## Data handling
 
-<img
-    alt="Data LifeCycle"
-    src={useBaseUrl("/img/Intro/DataLifeCycle_KB.svg")}
-    width="500"
-    align="right"
-    vspace="10"
-    hspace="10"
+<FloatImage
+  alt="Data LifeCycle"
+  url="/img/Intro/DataLifeCycle_KB.svg"
+  width="max(500px, 50%)"
 />
 
 In recent years, many new digital tools have been developed to support researchers with their RDM needs. The technical possibilities are briefly explained below. For more details, please refer to the linked related chapters. If you want to learn more about domain-specific data production methods, have a look at the [domain-specific profiles](/docs/role_guide).
@@ -36,16 +33,16 @@ The use of an ELN for data handling has clear advantages (see [above](#data-hand
 
 :::tip Advantages of Chemotion
 
--   [Data life cycle](/docs/data_life_cycle) fully covered—from experiment planning to publication
--   Drawing chemical structures—automatic calculation of quantities and yields
--   Many spectra can be directly analysed in the Chemotion environment using ChemSpectra
--   Experimental information for the experimental section of theses or publications can be generated and exported by the software—no manual peak listing required
--   A plausibility check is available for NMR spectra
--   SciFinder search is directly integrated
--   Building an internal database—advancing collaboration and data exchange in the group.
--   Seamless export from ELN to repository as a FAIR data deposit with a [persistent identifier (DOI)](/docs/pid) for each molecule
--   User management—access rights, sharing, and syncing.
--   Academic version is free of charge
+- [Data life cycle](/docs/data_life_cycle) fully covered—from experiment planning to publication
+- Drawing chemical structures—automatic calculation of quantities and yields
+- Many spectra can be directly analysed in the Chemotion environment using ChemSpectra
+- Experimental information for the experimental section of theses or publications can be generated and exported by the software—no manual peak listing required
+- A plausibility check is available for NMR spectra
+- SciFinder search is directly integrated
+- Building an internal database—advancing collaboration and data exchange in the group.
+- Seamless export from ELN to repository as a FAIR data deposit with a [persistent identifier (DOI)](/docs/pid) for each molecule
+- User management—access rights, sharing, and syncing.
+- Academic version is free of charge
 
 **When running your own Chemotion instance, you keep control of your data.**
 

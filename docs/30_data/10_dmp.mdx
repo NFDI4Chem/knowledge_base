@@ -3,6 +3,9 @@ title: "Data Management Plan"
 slug: "/dmp"
 ---
 
+import Features from "@site/src/components/features/Features";
+import Translate from "@docusaurus/Translate";
+
 # Data Management Plan (DMP)
 
 ## Introduction
@@ -25,38 +28,38 @@ A good DMP offers many practical benefits for everyday research:
 
 **Scientific & organisational benefits**
 
--   Structured data documentation: Supports consistent workflows
--   Facilitates collaboration: Especially useful in interdisciplinary or multi-site projects
--   Knowledge transfer: Helps new team members get up to speed faster
--   Reduces data loss: By planning backups and secure storage strategies early
+- Structured data documentation: Supports consistent workflows
+- Facilitates collaboration: Especially useful in interdisciplinary or multi-site projects
+- Knowledge transfer: Helps new team members get up to speed faster
+- Reduces data loss: By planning backups and secure storage strategies early
 
 **Visibility & reproducibility**
 
--   Increases reusability: Clear metadata and standardized formats improve data usability for others
--   Enhances research integrity: Transparent documentation enables reproducibility and trust
+- Increases reusability: Clear metadata and standardized formats improve data usability for others
+- Enhances research integrity: Transparent documentation enables reproducibility and trust
 
 **Compliance with funders**
 
--   A DMP or considerations of handling research data are often required by funding agencies (e.g., EU, DFG, BMFTR)
--   It supports Open Science practices, compliance with the FAIR data principles and long-term data accessibility
+- A DMP or considerations of handling research data are often required by funding agencies (e.g., EU, DFG, BMFTR)
+- It supports Open Science practices, compliance with the FAIR data principles and long-term data accessibility
 
 ## What topics should a DMP cover?
 
 In chemistry, a DMP typically addresses the following questions:
 
--   What kind of data will be generated?
-    e.g., spectra, chromatograms, reaction parameters, synthesis steps
--   How will the data be documented?
-    Including metadata standards and tools (e.g., ELNs, repositories, guidelines)
--   Where and how will the data be stored?
-    Local infrastructure, institutional servers, cloud services
--   Who will have access to the data?
-    Access rights, handling of sensitive data, role-based access control
--   How will the data be shared, published and/or archived?
-    Repositories like RADAR4Chem and Zenodo, DOI assignment, long-term availability
--   What about legal, ethical, or copyright issues?
-    Especially relevant in collaborative or industrial research settings
-    Includes e.g., the selection of licenses and compliance with contractual or institutional requirements
+- What kind of data will be generated?
+  e.g., spectra, chromatograms, reaction parameters, synthesis steps
+- How will the data be documented?
+  Including metadata standards and tools (e.g., ELNs, repositories, guidelines)
+- Where and how will the data be stored?
+  Local infrastructure, institutional servers, cloud services
+- Who will have access to the data?
+  Access rights, handling of sensitive data, role-based access control
+- How will the data be shared, published and/or archived?
+  Repositories like RADAR4Chem and Zenodo, DOI assignment, long-term availability
+- What about legal, ethical, or copyright issues?
+  Especially relevant in collaborative or industrial research settings
+  Includes e.g., the selection of licenses and compliance with contractual or institutional requirements
 
 ## Which tool can I use to write a DMP?
 
@@ -64,21 +67,37 @@ The Research Data Management Organizer (RDMO) is a free online tool that is spec
 
 **Benefits of using RDMO:**
 
--   Supports your project throughout its entire life cycle, from planning to data publication and beyond
--   Centralizes all relevant data management tasks and information in one place
--   Available in both English and German
--   Includes multiple DMP templates adaptable to different funder requirements
--   Enables collaboration by assigning tasks to project partners and team members
--   Offers import/export functions and supports a variety of download formats for further processing
+- Supports your project throughout its entire life cycle, from planning to data publication and beyond
+- Centralizes all relevant data management tasks and information in one place
+- Available in both English and German
+- Includes multiple DMP templates adaptable to different funder requirements
+- Enables collaboration by assigning tasks to project partners and team members
+- Offers import/export functions and supports a variety of download formats for further processing
 
 ## How do I get support in writing my DMP?
 
 NFDI4Chem offers a chemistry-specific Data Management Plan (DMP) template designed to guide researchers through the process of writing a DMP by answering structured questions. This template is based on a checklist provided by the German Research Foundation (DFG), enriched with chemistry-relevant content and supplemented with additional questions to ensure clarity and completeness.
-The catalogue of questions is available as a downloadable text document or can be used directly within the Research Data Management Organizer (RDMO).
+
+The catalogue of questions is available as a [downloadable text document](https://doi.org/10.5281/zenodo.10948510) or can be used directly within the [Research Data Management Organizer (RDMO)](https://rdmo.nfdi4chem.de/).
+
+<Features
+  featureList={[
+    {
+      url: "https://rdmo.nfdi4chem.de/",
+      imgUrl: "/img/nfdi4chem_Data_Management_Plan.svg",
+      text: <Translate>NFDI4Chem RDMO instance</Translate>,
+    },
+    {
+      url: "https://doi.org/10.5281/zenodo.10948510",
+      imgUrl: "/img/nfdi4chem_Data_Documentation.svg",
+      text: <Translate>Chemistry-specific DMP Template</Translate>,
+    },
+  ]}
+/>
 
 ## Sources and further information
 
--   [Publication: Road to a Chemistry-Specific Data Management Plan](https://datascience.codata.org/articles/10.5334/dsj-2024-021)
--   [Practical Guide to the International Alignment of Research Data Management - Extended Edition](https://doi.org/10.5281/zenodo.4915862)
--   [Horizon Europe DMP Template](https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf)
--   https://rdmkit.elixir-europe.org/data_management_plan
+- [Publication: Road to a Chemistry-Specific Data Management Plan](https://datascience.codata.org/articles/10.5334/dsj-2024-021)
+- [Practical Guide to the International Alignment of Research Data Management - Extended Edition](https://doi.org/10.5281/zenodo.4915862)
+- [Horizon Europe DMP Template](https://ec.europa.eu/research/participants/data/ref/h2020/other/gm/reporting/h2020-tpl-oa-data-mgt-plan-annotated_en.pdf)
+- https://rdmkit.elixir-europe.org/data_management_plan
