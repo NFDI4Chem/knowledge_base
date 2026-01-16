@@ -3,13 +3,17 @@ title: "Data Life Cycle"
 slug: "/data_life_cycle"
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import FloatImage from "@site/src/components/commons/FloatImage.js";
 
 # Research Data Life Cycle
 
 ## Introduction
 
-<img alt="Data LifeCycle" src={useBaseUrl('/img/Intro/DataLifeCycle_KB.svg')} width="500" align="right" vspace="50" hspace="10"/>
+<FloatImage
+  alt="Data LifeCycle"
+  url="/img/Intro/DataLifeCycle_KB.svg"
+  width="max(500px, 50%)"
+/>
 
 In scientific work, the assurance of [good research practice](https://doi.org/10.5281/zenodo.3923602) is the highest imperative.
 
@@ -33,17 +37,16 @@ Moreover, **quality assurance** is important at this phase. Check, validate and 
 
 ## Phase 4: Analysis
 
-In the 4th phase, as the name suggests, the focus is on the **analysis and interpretation of the data**. After analysing the data, the data should be evaluated. You should also consider **sharing the data** with colleagues in a closed and secure environment like on a project or working group level. Secure environments for sharing data are often provided by universities or federal states through Sync&share solutions. Consult your local research data team about this. 
+In the 4th phase, as the name suggests, the focus is on the **analysis and interpretation of the data**. After analysing the data, the data should be evaluated. You should also consider **sharing the data** with colleagues in a closed and secure environment like on a project or working group level. Secure environments for sharing data are often provided by universities or federal states through Sync&share solutions. Consult your local research data team about this.
 
-Before sharing data, you should check whether the data is subject to **copyright protection or other protective rights**. 
-
+Before sharing data, you should check whether the data is subject to **copyright protection or other protective rights**.
 
 ## Phase 5: Disclosure/ Publication
 
-During this exchange and the associated reflections on the data, you should think about archiving and using the data in scientific publications. If you are not aware of any **criteria for archiving** and no criteria are specified in your working group or institute, decision-making guides such as the [“5 steps to decide what data to keep”](https://www.dcc.ac.uk/guidance/how-guides/five-steps-decide-what-data-keep)  outlined by the DCC can help. Based on the established criteria, it is determined which of the collected raw data should be archived and which should be deliberately deleted.
+During this exchange and the associated reflections on the data, you should think about archiving and using the data in scientific publications. If you are not aware of any **criteria for archiving** and no criteria are specified in your working group or institute, decision-making guides such as the [“5 steps to decide what data to keep”](https://www.dcc.ac.uk/guidance/how-guides/five-steps-decide-what-data-keep) outlined by the DCC can help. Based on the established criteria, it is determined which of the collected raw data should be archived and which should be deliberately deleted.
 
 In addition to the criteria, the migration of the data into **suitable [formats](/docs/format_standards) and onto suitable media** is important for archiving the data. In this step, the data should again be enriched with metadata so that it can be understood in the future without further knowledge about the data.
-In addition to archiving, the [publication](/docs/data_publishing) of the data plays a special role. Many research funders expect the data to be published if there are no special reasons not to do so, such as a non-disclosure agreement or the inclusion of personal data. A **chemistry-specific or chemistry-related [repository](/docs/repositories)** such as the [Chemotion Repository](https://www.chemotion-repository.net/), [NOMAD](https://nomad-lab.eu/services/repo-arch), or [MassBank](https://massbank.eu/MassBank/)  is recommended for the publication of data. An overview of repositories can be found, for example, at [re3data.org](https://www.re3data.org/) or [fairsharing.org](https://fairsharing.org/). re3data.org allows you to filter repositories according to certain criteria such as the assignment of a persistent identifier or access.
+In addition to archiving, the [publication](/docs/data_publishing) of the data plays a special role. Many research funders expect the data to be published if there are no special reasons not to do so, such as a non-disclosure agreement or the inclusion of personal data. A **chemistry-specific or chemistry-related [repository](/docs/repositories)** such as the [Chemotion Repository](https://www.chemotion-repository.net/), [NOMAD](https://nomad-lab.eu/services/repo-arch), or [MassBank](https://massbank.eu/MassBank/) is recommended for the publication of data. An overview of repositories can be found, for example, at [re3data.org](https://www.re3data.org/) or [fairsharing.org](https://fairsharing.org/). re3data.org allows you to filter repositories according to certain criteria such as the assignment of a persistent identifier or access.
 Data publishing often takes place at certain milestones, for example, in combination with a text publication or at the end of a project. The **final version of the data management plan** is also required at the end of a project.
 
 ## Phase 6: Re-use
@@ -52,7 +55,7 @@ In the re-use phase, you or others conduct further research on how the data can 
 
 In order to return these data to the cycle, it is important that these data are described in detail with metadata, that proper documentation has been carried out in the form of a DMP, and that the data are citable.
 
-What is the potential of your data?  
+What is the potential of your data?
 
 ## Sources and further information
 
@@ -61,4 +64,4 @@ What is the potential of your data?
 - [Review of data management lifecycle models](https://researchportal.bath.ac.uk/en/publications/review-of-data-management-lifecycle-models)
 - [DCC: 5 steps to decide what data to keep](https://www.dcc.ac.uk/guidance/how-guides/)
 - German: [Überblick zum Management von Forschungsdaten (FDM I) = Research Data Management - An Overview](https://doi.org/10.18154/RWTH-2019-06489)
-- German: [Forschungsdaten.info: Informieren und Planen](https://www.forschungsdaten.info/themen/informieren-und-planen/datenlebenszyklus/ )
+- German: [Forschungsdaten.info: Informieren und Planen](https://www.forschungsdaten.info/themen/informieren-und-planen/datenlebenszyklus/)
