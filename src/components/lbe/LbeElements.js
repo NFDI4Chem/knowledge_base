@@ -1,7 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import Funnel from "@site/static/img/funnel.svg";
 
 // Import CSS
