@@ -1,6 +1,8 @@
 import React from "react";
 import Funnel from "@site/static/img/funnel.svg";
 
+import Link from "@docusaurus/Link";
+
 // Import CSS
 
 import styles from "@site/src/css/lbe.module.css";
@@ -14,11 +16,9 @@ import { lbeTable, filterAttr } from "./Data.js";
 
 function RepoButton({ name, url }) {
   return (
-    <button className={styles.lbeBlockLink}>
-      <a href={url} target="_blank">
-        {name}
-      </a>
-    </button>
+    <Link to={url} target="_blank" className={styles.lbeBlockLink}>
+      {name}
+    </Link>
   );
 }
 
