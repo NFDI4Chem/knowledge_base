@@ -1,5 +1,22 @@
 [
   {
+    "title": "Allantofuranone Biosynthesis and Precursor-Directed Mutasynthesis of Hydroxylated Analogues",
+    "authors": "Carsten Wieder, Claudia Simon-Sánchez, Johannes C. Liermann, Rainer Wiechert, Karsten Andresen, Eckhard Thines, Till Opatz, Anja Schüffler",
+    "journal": "Journal of Natural Products",
+    "pubyear": 2025,
+    "linkpub": "https://doi.org/10.1021/acs.jnatprod.5c00197",
+    "linkdata": [
+      {
+        "name": "Chemotion Repository",
+        "url": "https://doi.org/10.14272/collection/JCL_2025-02-05"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "The publication deals with genome mining and heterologous biosynthesis experiments in Aspergillus oryzae, elucidating the biosynthetic pathway of allantofuranone and related compounds. The dataset, curated by the authors, published in Chemotion Repository includes analytical data of natural products and pathway intermediates obtained through biosynthetic reconstitution and precursor-directed mutasynthesis, demonstrating the production of hydroxylated analogues including the new natural products deoxyascocorynin, hydroxyterferol, and hydroxyallantofuranone.",
+    "subdiscipline": ["organic chemistry", "natural products chemistry"],
+    "tags": ["biosynthesis", "natural products", "genome mining"]
+  },
+  {
     "title": "Hydrogen bond redistribution effects in mixtures of protic ionic liquids sharing the same cation: non-ideal mixing with large negative mixing enthalpies",
     "authors": "Benjamin Golub, Daniel Ondo, Viviane Overbeck, Ralf Ludwig, Dietmar Paschek",
     "journal": "Physical Chemistry Chemical Physics",
@@ -668,7 +685,7 @@
     ],
     "linkcomment": "curated by Tillmann G. Fischer (IPB/NFDI4Chem)",
     "description": "The dataset, prepared for publication under NFDI4Chem stewardship and published in RADAR, contains NMR and MS data in the instrument manufacturers formats as well as in open formats such as JCAMP-DX, NMReDATA (Mnova 14.1.1) for NMR data and mzML for MS data. Results from the bioassay are available as tabular files and as CSV. Additionally, all structures are provided as CTfiles and are listed, corresponding to their numbering in the publication, in a CSV also including IPB 3LC lab journal entries, SMILES structure codes and InChI and InChIKey identifiers. The corresponding scientific article references the dataset in the section on supporting information.",
-    "subdiscipline": ["organic chemistry", "natural product chemistry"],
+    "subdiscipline": ["organic chemistry", "natural products chemistry"],
     "tags": ["natural products"]
   },
   {
@@ -685,7 +702,7 @@
     ],
     "linkcomment": "curated by the publishing authors",
     "description": "The dataset, curated by the publishing authors, is published in NMRShiftDB2 and also available from the publisher as supporting material. References to the dataset is given via DOI in the supporting information MS word document.",
-    "subdiscipline": ["organic chemistry", "natural product chemistry"],
+    "subdiscipline": ["organic chemistry", "natural products chemistry"],
     "tags": ["natural products", "NMR spectroscopy"]
   },
   {
