@@ -1,5 +1,144 @@
 [
   {
+    "title": "Adsorption of light gases in covalent organic frameworks: comparison of classical density functional theory and grand canonical Monte Carlo simulations",
+    "authors": "Christopher Keßler, Johannes Eller, Joachim Gross, Niels Hansen",
+    "journal": "Microporous and Mesoporous Materials",
+    "pubyear": 2021,
+    "linkpub": "https://doi.org/10.1016/j.micromeso.2021.111263",
+    "linkdata": [
+      {
+        "name": "DaRUS",
+        "url": "https://doi.org/10.18419/darus-1775"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "This dataset was the winner of the FAIR4Chem Award 2022. Curated by the publishing authors, it contains PC-SAFT-based classical DFT calculations and grand canonical Monte Carlo simulations for adsorption of methane, ethane, n-butane, nitrogen, and their binary mixtures in the COFs TpPa-1 and 2,3-DhaTph up to 50 bar, showing excellent agreement and selective enrichment of longer hydrocarbons.",
+    "subdiscipline": [
+      "physical chemistry",
+      "materials science",
+      "chemical engineering"
+    ],
+    "tags": [
+      "covalent organic frameworks",
+      "adsorption",
+      "classical DFT",
+      "GCMC",
+      "PC-SAFT"
+    ]
+  },
+  {
+    "title": "Electronic Structure of a Diiron Complex",
+    "authors": "Mario Winkler, Marc Schnierle, Felix Ehrlich, Kim-Isabelle Mehnert, David Hunger, Alena M. Sheveleva, Lukas Burkhardt, Matthias Bauer, Floriana Tuna, Mark R. Ringenberg, Joris van Slageren",
+    "journal": "Inorganic Chemistry",
+    "pubyear": 2021,
+    "linkpub": "https://doi.org/10.1021/acs.inorgchem.0c03259",
+    "linkdata": [
+      {
+        "name": "DaRUS",
+        "url": "https://doi.org/10.18419/darus-1410"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "The dataset, curated by the publishing authors, accompanies a multitechnique study of the diiron complex [(dppf)Fe(CO)3]0/+ using magnetic circular dichroism, X-ray absorption/emission, high-frequency EPR, and Mössbauer spectroscopy to pinpoint oxidation at the carbonyl iron center and characterize low-spin iron(I) with slow spin dynamics.",
+    "subdiscipline": [
+      "inorganic chemistry",
+      "physical chemistry",
+      "spectroscopy"
+    ],
+    "tags": [
+      "diiron complex",
+      "EPR",
+      "Mössbauer",
+      "X-ray spectroscopy",
+      "spin dynamics"
+    ]
+  },
+  {
+    "title": "Dynamic Modelling of Phosphorolytic Cleavage Catalyzed by Pyrimidine-Nucleoside Phosphorylase",
+    "authors": "Robert T. Giessmann, Niels Krausch, Felix Kaspar, Mariano Nicolas Cruz Bournazou, Anke Wagner, Peter Neubauer, Matthias Gimpel",
+    "journal": "Processes",
+    "pubyear": 2019,
+    "linkpub": "https://doi.org/10.3390/pr7060380",
+    "linkdata": [
+      {
+        "name": "Zenodo",
+        "url": "https://doi.org/10.5281/zenodo.3243352"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "This dataset was the winner of the FAIR4Chem Award 2022. Curated by the publishing authors, it contains UV/Vis time-course measurements used to build an ODE-based dynamic model for phosphorolytic cleavage of deoxythymidine by pyrimidine-nucleoside phosphorylase. It captures full reaction trajectories to equilibrium for substrate/product pairs and underpins kinetic parameterization and validation of the reversible enzymatic model.",
+    "subdiscipline": [
+      "biochemical engineering",
+      "enzymology",
+      "process modeling"
+    ],
+    "tags": [
+      "pyrimidine-nucleoside phosphorylase",
+      "dynamic modeling",
+      "UV/Vis",
+      "enzyme kinetics",
+      "ODE model"
+    ]
+  },
+  {
+    "title": "FAIR and scalable management of small-angle X-ray scattering data",
+    "authors": "Torsten Giess, Selina Itzigehl, Jan Range, Richard Schömig, Johanna R. Bruckner, Jürgen Pleiss",
+    "journal": "Journal of Applied Crystallography",
+    "pubyear": 2023,
+    "linkpub": "https://doi.org/10.1107/S1600576723001577",
+    "linkdata": [
+      {
+        "name": "DaRUS",
+        "url": "https://doi.org/10.18419/darus-2842"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/FAIRChemistry/SAS_toolbox/releases/tag/v1.0.0"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "The dataset, curated by the publishing authors, packages the SAS-tools Python workflow (pyAnIML, easyDataverse, Jupyter) for FAIR management of small-angle X-ray scattering data, including raw SAXS measurements, AnIML metadata, OMEX archives, and analysis scripts applied to alkyltrimethylammonium surfactant phase diagrams varying chain length and counterions.",
+    "subdiscipline": [
+      "physical chemistry",
+      "analytical chemistry",
+      "research data management"
+    ],
+    "tags": [
+      "SAXS",
+      "FAIR data",
+      "AnIML",
+      "Dataverse",
+      "surfactant phase diagrams"
+    ]
+  },
+  {
+    "title": "Axial Diffusion in Liquid-Saturated Cylindrical Silica Pore Models",
+    "authors": "Hamzeh Kraus, Marc Högler, Niels Hansen",
+    "journal": "The Journal of Physical Chemistry C",
+    "pubyear": 2023,
+    "linkpub": "https://doi.org/10.1021/acs.jpcc.3c01974",
+    "linkdata": [
+      {
+        "name": "DaRUS",
+        "url": "https://doi.org/10.18419/darus-3067"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "The dataset, curated by the publishing authors, contains molecular dynamics simulations of 5 nm cylindrical silica mesopores saturated with 14 solvents. It provides trajectories and analyses for self-diffusion via Einstein MSD fits and discretized Smoluchowski diffusion, quantifying bulk-to-pore diffusion ratios of ~2–3 and assessing confinement effects for crystalline vs. amorphous silica pores.",
+    "subdiscipline": [
+      "physical chemistry",
+      "materials science",
+      "computational chemistry"
+    ],
+    "tags": [
+      "mesoporous silica",
+      "molecular dynamics",
+      "self-diffusion",
+      "confinement",
+      "Smoluchowski diffusion"
+    ]
+  },
+  {
     "title": "Diiminium Nucleophile Adducts Are Stable and Convenient Strong Lewis Acids",
     "authors": "Niklas Bormann, Jas S. Ward, Ann Kathrin Bergmann, Paula Wenz, Kari Rissanen, Yiwei Gong, Wolf-Benedikt Hatz, Alexander Burbaum, Florian F. Mulks",
     "journal": "Chemistry – A European Journal",
@@ -13,7 +152,7 @@
     ],
     "linkcomment": "curated by the publishing authors",
     "description": "The dataset, curated by the publishing authors, contains synthesis and characterization data of diiminium nucleophile adducts as stable and convenient strong Lewis acids. The study includes X-ray crystallographic data, spectroscopic analysis, and reactivity studies demonstrating applications in fluoride, hydride, and oxide abstraction reactions.",
-    "subdiscipline": ["organic chemistry", "inorganic chemistry"],
+    "subdiscipline": ["organic chemistry", "catalysis"],
     "tags": ["Lewis acids", "fluoride abstraction", "synthetic chemistry"]
   },
   {
