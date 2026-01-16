@@ -139,6 +139,38 @@
     ]
   },
   {
+    "title": "Database of Raman and ATR-FTIR spectra of weathered and biofouled polymers",
+    "authors": "Robin Lenz, Franziska Fischer, Melinda Arnold, Verónica Fernández-González, Carmen María Moscoso Pérez, José Manuel Andrade-Garda, Soledad Muniategui-Lorenzo, Dieter Fischer",
+    "journal": "Zenodo",
+    "pubyear": 2023,
+    "linkpub": "https://doi.org/10.5281/zenodo.8314801",
+    "linkdata": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/robna/MPX_specDB"
+      },
+      {
+        "name": "RADAR4Chem",
+        "url": "https://doi.org/10.22000/1820"
+      }
+    ],
+    "linkcomment": "curated by the publishing authors",
+    "description": "This dataset was the winner of the FAIR4Chem Award 2024. Curated by the publishing authors, it is a spectroscopic library containing Raman and ATR-FTIR spectra of weathered and biofouled polymers collected from the marine environment. Spectroscopic data derived from in situ experiments with 10 different polymers deployed across five geographical locations and immersed for varying intervals over four seasons. Metadata and individual spectra are accessible via an interactive web application and as downloadable files.",
+    "subdiscipline": [
+      "analytical chemistry",
+      "polymer science",
+      "environmental chemistry"
+    ],
+    "tags": [
+      "Raman spectroscopy",
+      "ATR-FTIR",
+      "microplastics",
+      "weathering",
+      "biofouling",
+      "polymers"
+    ]
+  },
+  {
     "title": "Diiminium Nucleophile Adducts Are Stable and Convenient Strong Lewis Acids",
     "authors": "Niklas Bormann, Jas S. Ward, Ann Kathrin Bergmann, Paula Wenz, Kari Rissanen, Yiwei Gong, Wolf-Benedikt Hatz, Alexander Burbaum, Florian F. Mulks",
     "journal": "Chemistry – A European Journal",
