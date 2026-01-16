@@ -4,6 +4,8 @@ slug: "/pid"
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import FloatImage from "@site/src/components/commons/FloatImage.js";
+import ButtonContainer from "@site/src/components/features/ButtonContainer.js";
 
 # Persistent Identifiers (PIDs)
 
@@ -15,13 +17,11 @@ The main benefits of PIDs for chemistry researchers are increased findability, v
 
 ## DOIs
 
-<img
-  align="left"
-  src={useBaseUrl("/img/topics/DOI_logo.svg")}
-  width="80"
+<FloatImage
   alt="DOI logo"
-  vspace="15"
-  hspace="20"
+  url="/img/topics/DOI_logo.svg"
+  float="left"
+  width="max(80px, 10%)"
 />
 
 Digital Object Identifiers are PIDs for objects such as publications and datasets, but also physical objects. DOIs are resolved based on the [Handle System](https://www.handle.net/)to lead to the corresponding landing page and are assigned by members of the [International DOI Foundation](https://datascience.codata.org/articles/abstract/353/). Most well-recognised [DOI registration agencies](https://www.doi.org/the-community/existing-registration-agencies/) include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on [datasets](https://doi.org/10.1109/COINFO.2009.66).
@@ -30,24 +30,21 @@ A DOI consists of a character string divided into two parts by a slash. The pref
 
 DOIs are most frequently displayed as an URL such as `https://doi.org/10.1000/182` and include a resolver as HTTP proxy server to redirect to the linked object. DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
 
-<div class="text--center">
-  <img
-    align="center"
-    src={useBaseUrl("/img/topics/crossref-logo-landscape-200.svg")}
-    width="200"
+<ButtonContainer>
+  <FloatImage
     alt="Crossref logo"
-    hspace="50"
+    url="/img/topics/crossref-logo-landscape-200.svg"
+    width="200px"
+    float="unset"
   />
-  <img
-    align="center"
-    src={useBaseUrl("/img/topics/datacite.svg")}
-    class="align-center"
-    width="200"
+
+  <FloatImage
     alt="DataCite logo"
-    hspace="50"
+    url="/img/topics/datacite.svg"
+    width="200px"
+    float="unset"
   />
-</div>
-<br></br>
+</ButtonContainer>
 
 :::danger Notice:
 Most importantly, domain-independent [metadata](/docs/metadata) also including [provenance information](/docs/provenance) is attached to the DOI. This metadata follows the metadata schemes provided by registration agencies such as the [CrossRef Metadata Schema](https://www.crossref.org/documentation/schema-library/) and the [DataCite Metadata Schema](https://schema.datacite.org/).
@@ -57,13 +54,11 @@ Registrants are [liable](https://support.datacite.org/docs/doi-registration-poli
 
 ## ORCID iDs
 
-<img
-  align="left"
-  src={useBaseUrl("/img/topics/ORCIDiD_iconvector.svg")}
-  width="80"
+<FloatImage
   alt="ORCiD logo"
-  vspace="30"
-  hspace="20"
+  url="/img/topics/ORCIDiD_iconvector.svg"
+  width="80"
+  float="left"
 />
 
 [ORCID iDs](https://orchid.org/) are open and non-proprietary PIDs for authors also described as unique author identifiers and can be retrieved and used by any author free of charge. They are provided by the non-profit organization ORCID Inc., formerly called Open Research and Contributors ID organisation, and sustained by fees of member organisations, providing extended application program interfaces (API) for their members to integrate ORCID services.
@@ -76,13 +71,11 @@ In addition to ORCID iDs as non-proprietary PIDs for authors, there are also pro
 
 ## Resarch Organisation Registry
 
-<img
-  align="left"
-  src={useBaseUrl("/img/topics/ROR_logo.svg")}
-  width="80"
+<FloatImage
   alt="ROR logo CC BY 4.0"
-  vspace="30"
-  hspace="20"
+  url="/img/topics/ROR_logo.svg"
+  width="80"
+  float="left"
 />
 
 The Research Organisation Registry ([ROR](https://ror.org/)) provides persistent identifiers for research organisations, while names might not be unique, may change and organisations might be merged, split, shut down or re-emerge. ROR enables to connect research organisations to research outputs and their researchers by identifying their affiliations.
@@ -93,13 +86,12 @@ ROR does support parent-child hierarchies as well as lateral relationships betwe
 
 ## ePICs
 
-<img
-  align="left"
-  src={useBaseUrl("/img/topics/ePIC-head.png")}
-  width="200"
+<FloatImage
   alt="ePIC Header logo"
-  vspace="12"
-  hspace="20"
+  url="/img/topics/ePIC-head.png"
+  height="80px"
+  width="auto"
+  float="left"
 />
 
 The Persistent Identifier for eResearch ([ePICs](https://www.pidconsortium.net/)) are based on the [Handle.Net Registry (HNR)](https://www.handle.net/) and are intended to be used for unpublished digital research objects. To this end, ePICs can be assigned at early stages of research to locate research data and may be used by various research data management or archiving systems. Upon publication of a dataset, the full research data can be linked via the ePIC, for example, in cases that include proprietary or sensitive information.
@@ -108,13 +100,11 @@ This type of PID will commonly lead to a landing page, the content of which is m
 
 ## ARK
 
-<img
-  align="left"
-  src={useBaseUrl("/img/topics/arka_logo.svg")}
-  width="200"
+<FloatImage
   alt="ARK logo"
-  vspace="12"
-  hspace="20"
+  url="/img/topics/arka_logo.svg"
+  width="200"
+  float="left"
 />
 
 The Archival Research Key ([ARK](https://arks.org/about/ark-overview/)) are open identifiers hich are assigned to physical and digital information objects, mostly in the cultural studies.

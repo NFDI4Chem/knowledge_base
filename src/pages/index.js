@@ -2,11 +2,40 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import N4CFeatures from "../components/N4CFeatures";
+import Features from "@site/src/components/features/Features";
+
 import Translate from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
 import clsx from "clsx";
+
+const features = [
+  {
+    text: <Translate>Domains</Translate>,
+    imgUrl: "/img/nfdi4chem_Domains_white.svg",
+    url: "/docs/domain_guide",
+  },
+  {
+    text: <Translate>Roles</Translate>,
+    imgUrl: "/img/nfdi4chem_Roles_white.svg",
+    url: "/docs/role_guide",
+  },
+  {
+    text: <Translate>Handling Data</Translate>,
+    imgUrl: "/img/nfdi4chem_Handling_Data_white.svg",
+    url: "/docs/data_guide",
+  },
+  {
+    text: <Translate>Electronic Lab Notebooks</Translate>,
+    imgUrl: "/img/nfdi4chem_SmartLab_white.svg",
+    url: "/docs/smartlab",
+  },
+  {
+    text: <Translate>Data Publishing</Translate>,
+    imgUrl: "/img/nfdi4chem_Data_Publication_white.svg",
+    url: "/docs/data_publishing",
+  },
+];
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -17,13 +46,7 @@ export default function Home() {
     >
       <div className={styles.hero}>
         <div className={styles.heroContainer}>
-          <div className="row">
-            <div className="col">
-              <h1 className={clsx(styles.heroTitle, "text")}>
-                {siteConfig.title}
-              </h1>
-            </div>
-          </div>
+          <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <div className="row">
             <div className={clsx("col", "col--8")}>
               <p className={styles.heroSubtitle}>
@@ -33,18 +56,16 @@ export default function Home() {
                 </Translate>
               </p>
             </div>
-            <div className={clsx("col", "col--2")}>
-              <div className="buttons">
-                <Link
-                  className={clsx("button", "button--negative", "button--lg")}
-                  to="/docs/intro"
-                >
-                  <Translate>Get started</Translate>
-                </Link>
-              </div>
+            <div className={clsx("col", "col--4", "buttons")}>
+              <Link
+                className={clsx("button", "button--negative", "button--lg")}
+                to="/docs/intro"
+              >
+                <Translate>Get started</Translate>
+              </Link>
             </div>
           </div>
-          <N4CFeatures feature="entry" />
+          <Features featureList={features} index />
         </div>
       </div>
     </Layout>

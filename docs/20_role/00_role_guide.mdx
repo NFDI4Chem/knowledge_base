@@ -4,7 +4,8 @@ slug: "/role_guide"
 id: "role_guide"
 ---
 
-import N4CFeatures from '/src/components/N4CFeatures.js';
+import Features from "@site/src/components/features/Features";
+import roles from "@site/src/data/roles";
 
 Looking for information on managing research data in chemistry? Choose your role and find solutions for role-specific data management issues.
 
@@ -14,8 +15,8 @@ The role pages provide an overview of the individual RDM steps. The following to
 - motivation
 - how to start
 - what RDM aspects are particularly relevant to your role
-:::
+  :::
 
 Click on a button below to get started with your role.
 
-<N4CFeatures feature="roles" />
+<Features featureList={roles} />

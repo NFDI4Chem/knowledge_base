@@ -1,7 +1,8 @@
 import clsx from "clsx";
+import styles from "@site/src/css/BulletBox.module.css";
 
 function BulletContainer({ children }) {
-  return <div className="container row">{children}</div>;
+  return <div className={styles.bulletContainer}>{children}</div>;
 }
 
 function BulletBox({ children, secondary }) {

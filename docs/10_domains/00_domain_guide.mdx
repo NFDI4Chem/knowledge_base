@@ -4,7 +4,8 @@ slug: "/domain_guide"
 id: "domains_guide"
 ---
 
-import N4CFeatures from '/src/components/N4CFeatures.js';
+import Features from "@site/src/components/features/Features";
+import domains from "@site/src/data/domains";
 
 Looking for information on managing research data in chemistry? Choose your chemical domain and find discipline-specific help on research data management.
 
@@ -18,8 +19,8 @@ The domain-specific profiles provide an overview of the individual RDM steps. Th
 - data producing methods (including a table with recommendations on interoperable open file formats)
 - data analysis
 - publication of research data
-:::
+  :::
 
 Click on a button below to get started with your chemical domain. The domain-specific profiles will be continuously updated based on new developments and feedback.
 
-<N4CFeatures feature="domains" />
+<Features featureList={domains} />
