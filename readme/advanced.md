@@ -17,23 +17,40 @@ In order to link the file in your document, use the following Markdown:
 
 The example assumes that your Markdown file is located on the third filesystem level, e.g. `/docs/10_domains/`. If not, please adjust the number of `../` pointers accordingly.
 
-## Format images using `img`
+## Format images
 
-In some cases, the image markdown might be too limited and it might be better to use the `img` html tag. To do so, add the following line at the beginning (but after the [front matter](https://docusaurus.io/docs/create-doc#doc-front-matter)):
+In some cases, the image markdown might be too limited. For that case, we provide a custom `<FloatImage />` component.
 
-```
+**Important:** In MDX files, import the component after the frontmatter section:
+
+```mdx
 ---
-title: "Title of my page"
+title: My Page Title
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import FloatImage from "@site/src/components/commons/FloatImage";
+
+# Page content starts here
+
+<FloatImage 
+  url="/img/example.png" 
+  alt="Example image"
+  width="300px"
+/>
 ```
 
-Where you wish to reference the image, use the `img` html tag in this way:
+You can also make the image clickable by adding a `link` prop:
 
+```mdx
+<FloatImage 
+  url="/img/logo.png" 
+  alt="NFDI4Chem logo"
+  width="200px"
+  link="https://nfdi4chem.de"
+/>
 ```
-<img align="center" src={useBaseUrl('/img/topics/myImage.png')} alt="My image" />
-```
+
+For more details, refer to the [Custom Components documentation](./custom.md).
 
 ## Dynamic tables
 
