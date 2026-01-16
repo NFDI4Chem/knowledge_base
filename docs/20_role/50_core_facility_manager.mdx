@@ -3,7 +3,7 @@ title: "Core facility manager"
 slug: "/core_facility_manager"
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import FloatImage from "@site/src/components/commons/FloatImage.js";
 
 :::info Applies to:
 This article applies to core facility managers and heads of analytical service units.
@@ -11,11 +11,10 @@ This article applies to core facility managers and heads of analytical service u
 
 ## Motivation
 
-<img
-    alt="Data LifeCycle"
-    src={useBaseUrl("/img/Intro/DataLifeCycle_KB.svg")}
-    width="500"
-    align="right"
+<FloatImage
+  alt="Data LifeCycle"
+  url="/img/Intro/DataLifeCycle_KB.svg"
+  width="max(500px, 50%)"
 />
 
 In the chemistry data lifecycle, core facilities play an important role as major producers of chemical data. For modern analytical techniques such as mass spectrometry or NMR spectroscopy, data are usually recorded digitally and the challenges lie less in digitalisation but management issues.
@@ -46,24 +45,24 @@ In addition, [backup strategies](/docs/data_storage/) for all instrument worksta
 
 While most of the scientific work still lies ahead, there are already valuable metadata to be harvested and digested at the early stage of sample submission. These can include, among many others:
 
--   Date
--   Creator (person, group)
--   Project
--   Sample identifier
--   Molecular structure(s), and derived properties:
-    -   Molecular formula
-    -   Molecular weight
-    -   Elemental composition
-    -   Physicochemical properties
--   Solvent or solubility
--   Purity
--   Experiment information of interest, such as:
-    -   Retation time
-    -   Polarity
-    -   Ionisation method
-    -   NMR nuclei and experiments
-    -   Chiroptical data
--   Biological properties
+- Date
+- Creator (person, group)
+- Project
+- Sample identifier
+- Molecular structure(s), and derived properties:
+  - Molecular formula
+  - Molecular weight
+  - Elemental composition
+  - Physicochemical properties
+- Solvent or solubility
+- Purity
+- Experiment information of interest, such as:
+  - Retation time
+  - Polarity
+  - Ionisation method
+  - NMR nuclei and experiments
+  - Chiroptical data
+- Biological properties
 
 The challenge of digesting those metadata according to [FAIR guiding principles](/docs/fair/) can be a challenge for core facilities and essentially come down to two possible strategies:
 
