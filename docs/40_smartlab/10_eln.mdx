@@ -4,8 +4,11 @@ slug: "/eln"
 id: "eln"
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { BulletContainer, BulletBox } from "@site/src/components/BulletBox";
+import FloatImage from "@site/src/components/commons/FloatImage.js";
+import {
+  BulletContainer,
+  BulletBox,
+} from "@site/src/components/commons/BulletBox";
 
 # Electronic Lab Notebooks (ELNs)
 
@@ -75,13 +78,12 @@ ELNs help to link experimental descriptions directly to the collected data so th
       <li>Data is available, even after change of personnel</li>
     </ul>
   </BulletBox>
-  <div className="row buttons">
-    <img
-      alt="FAIR_data_principles"
-      width="80%"
-      src={useBaseUrl("/img/topics/FAIR_data_principles.png")}
-    />
-  </div>
+  <FloatImage
+    alt="FAIR data principles"
+    url="/img/topics/FAIR_data_principles.png"
+    float="unset"
+    width="min(100%, 640px)"
+  />
   <BulletBox secondary>
     <h3>Standardised Documentation</h3>
     <ul>
