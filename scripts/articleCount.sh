@@ -9,8 +9,7 @@ OUTPUT_FILE="article_count.md"
 echo "# Article Count" > $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 echo "| Title | Slug | MD/MDX file path |Word Count |" >> $OUTPUT_FILE
-echo "|-------|------|------------|" >> $OUTPUT_FILE
-
+echo "|-------|------|------------|-----------|" >> $OUTPUT_FILE
 for file in $(find $DOCS_DIR -name "*.mdx" -o -name "*.md"); do
     # Extract title from the first line (assuming it's in the format: # Title)
     # If no # header is given, try to find the title from frontmatter
