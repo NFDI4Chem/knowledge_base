@@ -8,14 +8,14 @@ import clsx from "clsx";
 
 function RepoButton(props) {
   return (
-    <React.Fragment>
-      <Link to={props.url} target="_blank">
-        <button className={clsx(styles.lbeFilterbutton, styles.lbeChip)}>
-          {props.intro ? props.intro + " " : null}
-          <strong>{props.name}</strong> <IconExternalLink />
-        </button>
-      </Link>
-    </React.Fragment>
+    <Link
+      to={props.url}
+      target="_blank"
+      className={clsx(styles.lbeFilterbutton, styles.lbeChip)}
+    >
+      {props.intro ? props.intro + " " : null}
+      <strong>{props.name}</strong> <IconExternalLink />
+    </Link>
   );
 }
 
