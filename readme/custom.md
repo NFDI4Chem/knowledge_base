@@ -106,6 +106,35 @@ import FeatureButton from "@site/src/components/features/FeatureButton";
 
 ***
 
+## Features
+
+Renders a responsive array of `FeatureButton` components.
+
+**Import:**
+
+```jsx
+import Features from "@site/src/components/features/Features";
+```
+
+**Usage:**
+
+```jsx
+const features = [
+  { url: "/docs/overview", imgUrl: "/img/overview.svg", text: "Overview" },
+  { url: "/docs/start", imgUrl: "/img/start.svg", text: "Get Started" },
+];
+
+<Features featureList={features} index width="140px" />
+```
+
+**Props:**
+
+* `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
+* `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
+* `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
+
+***
+
 ## BulletBox
 
 A styled box component designed to display content in a responsive card-like button format.
