@@ -196,12 +196,14 @@
 .footer__copyright--text {
   margin: 0.1rem;
   text-align: left;
-  max-width: 100%;
+  max-width: min(720px, 100%);
 }
 
 .footer__copyright--text p {
   text-align: left;
   text-wrap: balance;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .footer__copyright--text a {
