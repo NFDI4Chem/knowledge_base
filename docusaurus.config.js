@@ -79,7 +79,7 @@ const config = {
 						{
 							html:
 								`
-								<a href="https://www.dfg.de" target="_blank">
+								<a href="https://www.dfg.de" target="_blank" alt="DFG Logo">
 									<img src="` +
 								baseUrl +
 								`img/dfg_logo_schriftzug_weiss_foerderung_en.png" />

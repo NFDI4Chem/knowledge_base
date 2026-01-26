@@ -13,26 +13,31 @@ const features = [
   {
     text: <Translate>Domains</Translate>,
     imgUrl: "/img/nfdi4chem_Domains_white.svg",
+    alt: "Domains Icon",
     url: "/docs/domain_guide",
   },
   {
     text: <Translate>Roles</Translate>,
     imgUrl: "/img/nfdi4chem_Roles_white.svg",
+    alt: "Roles Icon",
     url: "/docs/role_guide",
   },
   {
     text: <Translate>Handling Data</Translate>,
     imgUrl: "/img/nfdi4chem_Handling_Data_white.svg",
+    alt: "Handling Data Icon",
     url: "/docs/data_guide",
   },
   {
     text: <Translate>Electronic Lab Notebooks</Translate>,
     imgUrl: "/img/nfdi4chem_SmartLab_white.svg",
+    alt: "Electronic Lab Notebooks Icon",
     url: "/docs/smartlab",
   },
   {
     text: <Translate>Data Publishing</Translate>,
     imgUrl: "/img/nfdi4chem_Data_Publication_white.svg",
+    alt: "Data Publishing Icon",
     url: "/docs/data_publishing",
   },
 ];
