@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').Config} */
 
-import {themes as prismThemes} from "prism-react-renderer";
+import { themes as prismThemes } from "prism-react-renderer";
 
 const announcementBarActive = false; // set to true to activate the announcement bar
 const announcementBar = announcementBarActive
@@ -8,6 +8,8 @@ const announcementBar = announcementBarActive
 	: {};
 
 let title = "NFDI4Chem Knowledge Base";
+
+const copyright = require("./copyright.js");
 
 // Uncomment for staging:
 // title += " (STAGING)";
@@ -89,17 +91,7 @@ const config = {
 				},
 				...footerLinks,
 			],
-			copyright: `
-				<div class="footer__copyright row" style="justify-content: center">
-					<div class="cell" style="padding: 1rem;" >
-						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-					</div>
-					<div class="cell" style="padding: 0.1rem; text-align: left;" >
-						Licensed under a <a class="footer__link-item" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0</a> License, if not stated otherwise.<br />
-						Copyright © ${new Date().getFullYear()} NFDI4Chem. Built with Docusaurus.
-					</div>
-				</div>
-        	`,
+			copyright: copyright,
 		},
 		algolia: {
 			appId: "K32QMEOD1G",
@@ -113,7 +105,7 @@ const config = {
 			// Optional: whether you want to use the new Ask AI feature (undefined by default)
 			// askAi: "YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID",
 		},
-		colorMode: {disableSwitch: true},
+		colorMode: { disableSwitch: true },
 		prism: {
 			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
@@ -136,7 +128,7 @@ const config = {
 					lastmod: "datetime",
 					ignorePatterns: ["/tags/**"],
 					createSitemapItems: async (params) => {
-						const {defaultCreateSitemapItems, ...rest} = params;
+						const { defaultCreateSitemapItems, ...rest } = params;
 						const items = await defaultCreateSitemapItems(rest);
 						return items.filter(
 							(item) => !item.url.includes("/page/"),
