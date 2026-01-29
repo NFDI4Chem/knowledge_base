@@ -7,20 +7,25 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import FloatImage from "@site/src/components/commons/FloatImage.js";
 import ButtonContainer from "@site/src/components/features/ButtonContainer.js";
 
-#JCAMP-DX
+# JCAMP-DX
 
-##Definition
+
+## Definition
 JCAMP-DX is an open, text-based data format family developed by the Joint Committee on Atomic and Molecular Physical Data (JCAMP) for storing and exchanging spectroscopic data; standardisation and further development are carried out under the responsibility of International Union of Pure and Applied Chemistry ([IUPAC](https://iupac.org)), which coordinates standardization and extensions of the format . It was developed to enable instrument-independent data sharing and long-term accessibility of spectral measurements. 
 Although IUPAC formally oversees the standard, active development of JCAMP-DX has largely slowed since the mid-2000s, and the format now functions primarily as a de facto standard for spectroscopic data exchange."
 
-##Scope and Supported Techniques
+
+## Scope and Supported Techniques
 Originally introduced for infrared (IR) spectroscopy, JCAMP-DX has been extended to support a wide range of analytical techniques. These include nuclear magnetic resonance (NMR), ultraviolet/visible (UV/Vis) spectroscopy, Raman spectroscopy, mass spectrometry, and partly chromatographic data. Technique-specific recommendations define how axes, units, and experimental parameters are encoded while preserving a shared core structure across all JCAMP-DX files.
 
-##Format and Structure
+
+## Format and Structure
 JCAMP-DX files are plain ASCII text files designed to be both human-readable and machine-processable. Information is organized as labeled data records (LDRs), each beginning with a double hash symbol (##). Common LDRs describe metadata such as title, origin, sample information, instrument settings, and axis units, followed by the numerical spectral data. Several data compression schemes are supported to reduce file size without compromising the integrity of the measurement.
 
-##Metadata and Interoperability
+
+## Metadata and Interoperability
 A central design goal of JCAMP-DX is the inclusion of rich, self-describing metadata within the data file itself. This facilitates interoperability between instruments, software tools, repositories, and publishers. Though beeing historically older than FAIR, the format supports data reuse and long-term preservation and is well aligned with the [FAIR data principles](/docs/fair) — Findable, Accessible, Interoperable, and Reusable—widely adopted in research data management.
 
-##Use Cases and Limitations
+
+## Use Cases and Limitations
 JCAMP-DX is widely used for data exchange between laboratories, instrument vendors, journals, and databases, as well as in teaching and electronic laboratory notebooks. While robust and broadly supported, the linear text-based structure can be less suitable for very large or highly complex datasets compared to newer hierarchical formats. Nevertheless, JCAMP-DX remains a stable and widely accepted standard for spectroscopic data exchange.
