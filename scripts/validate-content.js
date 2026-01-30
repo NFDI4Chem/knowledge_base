@@ -89,10 +89,10 @@ function validateFrontmatter(filePath, content) {
                 errors.push(`Slug enthält Leerzeichen. Nutze Bindestriche (-) oder Unterstriche (_): "${slug}"`);
             }
 
-            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, 0-9, -, _)
-            const validSlugPattern = /^[a-z0-9_-]+$/;
+            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, 0-9, /, -, _)
+            const validSlugPattern = /^[a-z0-9/_-]+$/;
             if (!validSlugPattern.test(slug)) {
-                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, 0-9, -, _: "${slug}"`);
+                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, 0-9, /, -, _: "${slug}"`);
             }
         }
 
