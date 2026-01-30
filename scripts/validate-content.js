@@ -3,32 +3,32 @@
 /**
  * Content Validation Script
  * 
- * Validiert:
- * 1. Frontmatter vorhanden und gültig YAML mit mindestens einem Slug
- * 2. Gültige Seitentitel (h1 oder title im Frontmatter)
- * 3. Keine identischen h1 und title Werte
+ * Validates:
+ * 1. Frontmatter present and valid YAML with at least one slug
+ * 2. Valid page titles (h1 or title in frontmatter)
+ * 3. No identical h1 and title values
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// Versuche glob zu laden, sonst fallback
+// Try to load glob, otherwise exit
 let glob;
 try {
     glob = require('glob');
 } catch (e) {
-    console.error('❌ Fehler: glob-Paket nicht installiert!');
-    console.error('Bitte führe aus: npm install');
+    console.error('❌ Error: glob package not installed!');
+    console.error('Please run: npm install');
     process.exit(1);
 }
 
-// Versuche gray-matter zu laden, sonst fallback
+// Try to load gray-matter, otherwise exit
 let matter;
 try {
     matter = require('gray-matter');
 } catch (e) {
-    console.error('❌ Fehler: gray-matter-Paket nicht installiert!');
-    console.error('Bitte führe aus: npm install');
+    console.error('❌ Error: gray-matter package not installed!');
+    console.error('Please run: npm install');
     process.exit(1);
 }
 
@@ -36,26 +36,26 @@ const DOCS_DIR = path.join(__dirname, '../docs');
 const ERRORS = [];
 const WARNINGS = [];
 
-// Prüfe ob docs-Verzeichnis existiert
+// Check if docs directory exists
 if (!fs.existsSync(DOCS_DIR)) {
-    console.error(`❌ Fehler: Verzeichnis nicht gefunden: ${DOCS_DIR}`);
+    console.error(`❌ Error: Directory not found: ${DOCS_DIR}`);
     process.exit(1);
 }
 
 /**
- * Sucht alle md/mdx Dateien rekursiv
+ * Finds all md/mdx files recursively
  */
 function findContentFiles() {
     try {
         return glob.sync('**/*.{md,mdx}', { cwd: DOCS_DIR });
     } catch (error) {
-        console.error(`❌ Fehler beim Suchen von Dateien: ${error.message}`);
+        console.error(`❌ Error searching for files: ${error.message}`);
         process.exit(1);
     }
 }
 
 /**
- * Validiert Frontmatter einer Datei
+ * Validates frontmatter of a file
  */
 function validateFrontmatter(filePath, content) {
     const errors = [];
@@ -64,35 +64,35 @@ function validateFrontmatter(filePath, content) {
     try {
         const { data, matter: frontmatterContent } = matter(content);
 
-        // Prüfe, ob Frontmatter leer ist
+        // Check if frontmatter is empty
         if (Object.keys(data).length === 0) {
-            errors.push(`Kein Frontmatter vorhanden`);
+            errors.push(`No frontmatter present`);
             return { hasErrors: true, errors, warnings };
         }
 
-        // Prüfe auf Slug
+        // Check for slug
         if (!data.slug) {
-            errors.push(`Slug im Frontmatter fehlt`);
+            errors.push(`Slug missing in frontmatter`);
         } else if (typeof data.slug !== 'string' || data.slug.trim() === '') {
-            errors.push(`Slug muss ein nicht-leerer String sein (erhalten: ${JSON.stringify(data.slug)})`);
+            errors.push(`Slug must be a non-empty string (received: ${JSON.stringify(data.slug)})`);
         } else {
-            // Validiere Slug-Format (URL Best Practices)
+            // Validate slug format (URL best practices)
             const slug = data.slug;
 
-            // Prüfe auf Großbuchstaben (Warnung, aber erlaubt)
+            // Check for uppercase letters (warning, but allowed)
             if (slug !== slug.toLowerCase()) {
-                warnings.push(`Slug enthält Großbuchstaben. Best Practice: nur Kleinbuchstaben verwenden: "${slug}"`);
+                warnings.push(`Slug contains uppercase letters. Best practice: use only lowercase: "${slug}"`);
             }
 
-            // Prüfe auf Leerzeichen
+            // Check for spaces
             if (/\s/.test(slug)) {
-                errors.push(`Slug enthält Leerzeichen. Nutze Bindestriche (-) oder Unterstriche (_): "${slug}"`);
+                errors.push(`Slug contains spaces. Use hyphens (-) or underscores (_): "${slug}"`);
             }
 
-            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, A-Z, 0-9, /, -, _)
+            // Check for invalid characters (allowed: a-z, A-Z, 0-9, /, -, _)
             const validSlugPattern = /^[a-zA-Z0-9/_-]+$/;
             if (!validSlugPattern.test(slug)) {
-                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, A-Z, 0-9, /, -, _: "${slug}"`);
+                errors.push(`Slug contains invalid characters. Only allowed: a-z, A-Z, 0-9, /, -, _: "${slug}"`);
             }
         }
 
@@ -106,14 +106,14 @@ function validateFrontmatter(filePath, content) {
     } catch (error) {
         return {
             hasErrors: true,
-            errors: [`Fehler beim Parsen des Frontmatters: ${error.message}`],
+            errors: [`Error parsing frontmatter: ${error.message}`],
             warnings: []
         };
     }
 }
 
 /**
- * Validiert den Seitentitel
+ * Validates page title
  */
 function validateTitle(filePath, frontmatter, content) {
     const errors = [];
@@ -123,15 +123,15 @@ function validateTitle(filePath, frontmatter, content) {
     const h1Title = h1Match ? h1Match[1].trim() : null;
     const fmTitle = frontmatter.title || null;
 
-    // Prüfe mindestens einen Titel
+    // Check for at least one title
     if (!h1Title && !fmTitle) {
-        errors.push(`Kein gültiger Titel gefunden (weder h1 noch title im Frontmatter)`);
+        errors.push(`No valid title found (neither h1 nor title in frontmatter)`);
     }
 
-    // Wenn beide vorhanden, dürfen sie nicht identisch sein
+    // If both present, they must not be identical
     if (h1Title && fmTitle) {
         if (h1Title === fmTitle) {
-            warnings.push(`h1 und Frontmatter-title sind identisch ("${h1Title}"). Sollten unterschiedlich sein`);
+            warnings.push(`h1 and frontmatter title are identical ("${h1Title}"). Should be different`);
         }
     }
 
@@ -139,7 +139,7 @@ function validateTitle(filePath, frontmatter, content) {
 }
 
 /**
- * Validiert eine einzelne Datei
+ * Validates a single file
  */
 function validateFile(relPath) {
     const filePath = path.join(DOCS_DIR, relPath);
@@ -150,20 +150,20 @@ function validateFile(relPath) {
     } catch (error) {
         return {
             file: relPath,
-            errors: [`Fehler beim Lesen der Datei: ${error.message}`],
+            errors: [`Error reading file: ${error.message}`],
             warnings: []
         };
     }
 
     const fileErrors = { file: relPath, errors: [], warnings: [] };
 
-    // Schritt 1: Frontmatter validieren
+    // Step 1: Validate frontmatter
     const fmValidation = validateFrontmatter(relPath, content);
     fileErrors.errors.push(...fmValidation.errors);
     fileErrors.warnings.push(...fmValidation.warnings);
 
     if (!fmValidation.hasErrors && fmValidation.frontmatter) {
-        // Schritt 2: Titel validieren
+        // Step 2: Validate title
         const titleValidation = validateTitle(relPath, fmValidation.frontmatter, fmValidation.content);
         fileErrors.errors.push(...titleValidation.errors);
         fileErrors.warnings.push(...titleValidation.warnings);
@@ -173,13 +173,13 @@ function validateFile(relPath) {
 }
 
 /**
- * Hauptfunktion
+ * Main function
  */
 function main() {
-    console.log('🔍 Validiere Dokumente...\n');
+    console.log('🔍 Validating documents...\n');
 
     const files = findContentFiles();
-    console.log(`📁 Gefundene Dateien: ${files.length}\n`);
+    console.log(`📁 Files found: ${files.length}\n`);
 
     let fileCount = 0;
     let errorCount = 0;
@@ -192,7 +192,7 @@ function main() {
             console.log(`📄 ${validation.file}`);
 
             if (validation.errors.length > 0) {
-                console.log('  ❌ Fehler:');
+                console.log('  ❌ Errors:');
                 validation.errors.forEach(err => {
                     console.log(`     - ${err}`);
                     errorCount++;
@@ -200,7 +200,7 @@ function main() {
             }
 
             if (validation.warnings.length > 0) {
-                console.log('  ⚠️  Warnungen:');
+                console.log('  ⚠️  Warnings:');
                 validation.warnings.forEach(warn => {
                     console.log(`     - ${warn}`);
                     warningCount++;
@@ -213,17 +213,17 @@ function main() {
         fileCount++;
     });
 
-    // Zusammenfassung
-    console.log('\n📊 Zusammenfassung:');
-    console.log(`   Dateien geprüft: ${fileCount}`);
-    console.log(`   Fehler: ${errorCount}`);
-    console.log(`   Warnungen: ${warningCount}`);
+    // Summary
+    console.log('\n📊 Summary:');
+    console.log(`   Files checked: ${fileCount}`);
+    console.log(`   Errors: ${errorCount}`);
+    console.log(`   Warnings: ${warningCount}`);
 
     if (errorCount > 0) {
-        console.log('\n❌ Validierung fehlgeschlagen!');
+        console.log('\n❌ Validation failed!');
         process.exit(1);
     } else {
-        console.log('\n✅ Validierung erfolgreich!');
+        console.log('\n✅ Validation successful!');
         process.exit(0);
     }
 }
