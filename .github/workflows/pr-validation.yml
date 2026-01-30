@@ -41,7 +41,7 @@ jobs:
         run: npm run crowdin download
         env:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-        continue-on-error: false
+        continue-on-error: true
 
       - name: "�📋 Validate Frontmatter & Titles"
         run: node scripts/validate-content.js
