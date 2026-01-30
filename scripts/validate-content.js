@@ -75,6 +75,25 @@ function validateFrontmatter(filePath, content) {
             errors.push(`Slug im Frontmatter fehlt`);
         } else if (typeof data.slug !== 'string' || data.slug.trim() === '') {
             errors.push(`Slug muss ein nicht-leerer String sein (erhalten: ${JSON.stringify(data.slug)})`);
+        } else {
+            // Validiere Slug-Format (URL Best Practices)
+            const slug = data.slug;
+
+            // Prüfe auf Großbuchstaben
+            if (slug !== slug.toLowerCase()) {
+                errors.push(`Slug enthält Großbuchstaben. Nutze nur Kleinbuchstaben: "${slug}"`);
+            }
+
+            // Prüfe auf Leerzeichen
+            if (/\s/.test(slug)) {
+                errors.push(`Slug enthält Leerzeichen. Nutze Bindestriche (-) oder Unterstriche (_): "${slug}"`);
+            }
+
+            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, 0-9, -, _)
+            const validSlugPattern = /^[a-z0-9_-]+$/;
+            if (!validSlugPattern.test(slug)) {
+                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, 0-9, -, _: "${slug}"`);
+            }
         }
 
         return {
