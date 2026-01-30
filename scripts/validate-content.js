@@ -131,7 +131,7 @@ function validateTitle(filePath, frontmatter, content) {
     // If both present, they must not be identical
     if (h1Title && fmTitle) {
         if (h1Title === fmTitle) {
-            warnings.push(`h1 and frontmatter title are identical ("${h1Title}"). Should be different`);
+            warnings.push(`h1 and frontmatter title are identical ("${h1Title}") and thus redundant. Both fields should only be used if different strings are required for page and navigation titles.`);
         }
     }
 
