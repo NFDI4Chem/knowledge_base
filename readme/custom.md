@@ -72,6 +72,69 @@ import LbeChip from "@site/src/components/commons/LbeChip";
 
 ***
 
+## FeatureButton
+
+A clickable button component that displays an image with text, designed for feature navigation.
+
+**Import:**
+
+```jsx
+import FeatureButton from "@site/src/components/features/FeatureButton";
+```
+
+**Usage:**
+
+```jsx
+<FeatureButton 
+  url="/docs/example"
+  imgUrl="/img/icon.svg"
+  text="Feature Name"
+  width="150px"
+  alt="Feature icon"
+/>
+```
+
+**Props:**
+
+* `url` (string, required) - The link destination URL
+* `imgUrl` (string, required) - Path to the image/icon (relative to static folder)
+* `text` (string, required) - Button text displayed below the image
+* `width` (string, optional) - Width of the image (default: "120px")
+* `alt` (string, optional) - Alternative text for the image (defaults to `text` if not provided)
+* `index` (boolean, optional) - If true, applies primary button styling; otherwise uses secondary styling
+* `classes` (string, optional) - Additional CSS classes to apply to the button
+
+***
+
+## Features
+
+Renders a responsive array of `FeatureButton` components.
+
+**Import:**
+
+```jsx
+import Features from "@site/src/components/features/Features";
+```
+
+**Usage:**
+
+```jsx
+const features = [
+  { url: "/docs/overview", imgUrl: "/img/overview.svg", text: "Overview" },
+  { url: "/docs/start", imgUrl: "/img/start.svg", text: "Get Started" },
+];
+
+<Features featureList={features} index width="140px" />
+```
+
+**Props:**
+
+* `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
+* `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
+* `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
+
+***
+
 ## BulletBox
 
 A styled box component designed to display content in a responsive card-like button format.

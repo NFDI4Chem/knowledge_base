@@ -11,10 +11,8 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap'); */
 
-@import "@fontsource/ibm-plex-sans/400.css";
-@import "@fontsource/ibm-plex-sans/600.css";
-@import "@fontsource/ibm-plex-sans/400-italic.css";
-@import "@fontsource/ibm-plex-sans/600-italic.css";
+/* Self-hosted subsetted fonts from /static/fonts */
+@import "./fonts.css";
 
 /********** Global variables ************/
 
@@ -182,6 +180,56 @@
   font: bold var(--ifm-h3-font-size) / var(--ifm-heading-line-height)
     var(--ifm-font-family-base);
   margin-bottom: var(--ifm-heading-margin-bottom);
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright--image {
+  margin: 1rem;
+}
+
+.footer__copyright--text {
+  margin: 0.1rem;
+  text-align: left;
+  max-width: min(720px, 100%);
+}
+
+.footer__copyright--text p {
+  text-align: left;
+  text-wrap: balance;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer__copyright--text a {
+  color: var(--ifm-footer-link-color);
+  font-weight: unset;
+}
+
+@media screen and (max-width: 1400px) {
+  .footer__copyright {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__copyright--image {
+    margin: 0.5rem;
+  }
+
+  .footer__copyright--text {
+    margin: 0.1rem;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .footer__copyright--text p {
+    text-align: center;
+  }
 }
 
 /********** Buttons ************/

@@ -10,6 +10,7 @@ function Features({ featureList, index, ...props }) {
           url={feature.url}
           imgUrl={feature.imgUrl}
           text={feature.text}
+          alt={feature.alt}
           index={index}
           {...props}
         />
