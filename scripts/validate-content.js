@@ -79,9 +79,9 @@ function validateFrontmatter(filePath, content) {
             // Validiere Slug-Format (URL Best Practices)
             const slug = data.slug;
 
-            // Prüfe auf Großbuchstaben
+            // Prüfe auf Großbuchstaben (Warnung, aber erlaubt)
             if (slug !== slug.toLowerCase()) {
-                errors.push(`Slug enthält Großbuchstaben. Nutze nur Kleinbuchstaben: "${slug}"`);
+                warnings.push(`Slug enthält Großbuchstaben. Best Practice: nur Kleinbuchstaben verwenden: "${slug}"`);
             }
 
             // Prüfe auf Leerzeichen
@@ -89,10 +89,10 @@ function validateFrontmatter(filePath, content) {
                 errors.push(`Slug enthält Leerzeichen. Nutze Bindestriche (-) oder Unterstriche (_): "${slug}"`);
             }
 
-            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, 0-9, /, -, _)
-            const validSlugPattern = /^[a-z0-9/_-]+$/;
+            // Prüfe auf unerlaubte Zeichen (erlaubt: a-z, A-Z, 0-9, /, -, _)
+            const validSlugPattern = /^[a-zA-Z0-9/_-]+$/;
             if (!validSlugPattern.test(slug)) {
-                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, 0-9, /, -, _: "${slug}"`);
+                errors.push(`Slug enthält ungültige Zeichen. Erlaubt sind nur: a-z, A-Z, 0-9, /, -, _: "${slug}"`);
             }
         }
 
