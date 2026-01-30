@@ -81,7 +81,7 @@ function validateFrontmatter(filePath, content) {
 
             // Check for uppercase letters (warning, but allowed)
             if (slug !== slug.toLowerCase()) {
-                warnings.push(`Slug contains uppercase letters. Best practice: use only lowercase: "${slug}"`);
+                warnings.push(`Slug contains uppercase letters. The use of case-sensitive slugs is allowed but not recommended: "${slug}"`);
             }
 
             // Check for spaces
