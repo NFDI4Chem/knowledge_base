@@ -1,0 +1,57 @@
+name: "PR Validation"
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/pr-validation.yml"
+
+jobs:
+  validate:
+    name: "Content & Build Validation"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ["18.x"]
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: "Install dependencies"
+        run: npm ci
+
+      - name: "� Write translations"
+        run: npm run write-translations
+        continue-on-error: false
+
+      - name: "📥 Download translations from Crowdin"
+        run: npm run crowdin download
+        continue-on-error: false
+
+      - name: "�📋 Validate Frontmatter & Titles"
+        run: node scripts/validate-content.js
+        continue-on-error: false
+
+      - name: "🏗️  Build Documentation"
+        run: npm run build
+        continue-on-error: false
+
+      - name: "✅ All checks passed"
+        if: success()
+        run: |
+          echo "✨ Alle Validierungen erfolgreich!"
+          echo "- ✅ Frontmatter validiert"
+          echo "- ✅ Titel validiert"
+          echo "- ✅ Build erfolgreich"
