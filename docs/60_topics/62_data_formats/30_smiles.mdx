@@ -3,6 +3,22 @@ title: "SMILES"
 slug: "/smiles"
 ---
  
-![Under Construction](/img/Constr_2bl.png)
+## SMILES (Simplified Molecular Input Line Entry System)
 
-This article is under construction.
+SMILES (Simplified Molecular Input Line Entry System) is a compact, text-based notation for representing chemical structures. It encodes molecules as linear strings using ASCII characters and is widely applied in cheminformatics for data exchange, database storage, and computational modeling. SMILES was introduced in the late 1980s and has since become a de facto standard for molecular line notation in many chemical software environments.
+
+## Basic syntax and examples
+
+In SMILES, atoms are denoted by their atomic symbols (e.g., C, O, N), and bonds are either implicit or explicitly specified using characters such as "=", "#", or ":". Single bonds are typically omitted. Branching is expressed with parentheses, and ring closures are indicated by matching digits. For example, ethanol can be written as CCO, while cyclohexane is represented as C1CCCCC1. Aromatic atoms are commonly written in lowercase letters (e.g., c1ccccc1 for benzene). SMILES also allows specification of stereochemistry through chiral flags (such as the @ symbol for tetrahedral stereocenters) and double-bond geometry markers (/, \), following defined conventions so that the relative three-dimensional arrangement of substituents can be reconstructed from the linear string. 
+
+## Canonical and isomeric SMILES
+
+Two related concepts are important in practice: canonical SMILES and isomeric SMILES. Canonical SMILES provide a unique string representation for a given molecular connectivity according to a defined algorithm, facilitating database indexing and comparison. Isomeric SMILES additionally encode isotopic substitution and stereochemical information, enabling different isomers of the same connectivity to be distinguished. Explicit charge annotation, however, is a general feature of SMILES and is not restricted to isomeric forms, so charge can be specified in both canonical and non-canonical, as well as in isomeric and non-isomeric SMILES. 
+
+## Uniqueness and limitations
+
+Despite its widespread use, SMILES is not intrinsically unique unless canonicalized, and the canonical form produced can depend on the implementation and algorithm used. Nevertheless, its simplicity, human readability, and compatibility with text-based workflows make SMILES a foundational format in modern computational chemistry and chemical data management, and a natural partner for other identifier systems. 
+
+## Tool support and InChI
+
+Several cheminformatics toolkits, including RDKit and Open Babel, support SMILES parsing, generation, and canonicalization. Extensions such as SMARTS (for substructure searching) and SMIRKS (for reaction transformations) build upon the SMILES syntax. For persistent and standardized identification, the IUPAC International Chemical Identifier (InChI) was later developed as a complementary approach. 
