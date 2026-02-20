@@ -10,109 +10,48 @@ import ElnFinder from "@site/src/components/eln/ElnFinder.js";
 
 ## Introduction
 
-Polymer chemistry is focused on the synthesis and characterization of monomer units, macromolecules and resulting materials for specific applications. Polymeric materials can be subdivided by their origin into synthetic, inorganic and biopolymers. The toolbox for monomer synthesis and modification, their polymerization as well as post-functionalization are often derived from organic chemistry, as well as many characterization methods, especially for monomers or small polymers. However, since macromolecules can feature highly complex structures, e.g. brushes, dendrimers, rings and star shapes, advanced methods such as (2D) SEC, LCCC, DOSY NMR, or electron microscopy need to be applied in order to obtain an exhaustive structure determination. For their subsequent application as high-tech material, their mechanical and physical properties play an important role as well, where cyclic voltammetry or rheological characterization are just a few examples for the vast array of techniques that are available.
+Polymer chemistry involves the synthesis, characterization, and application of macromolecules. The toolbox for monomer synthesis and modification, their polymerization as well as post-functionalization are often derived from organic chemistry, as well as many characterization methods, especially for monomers or small polymers. Due to the structural complexity of polymers (e.g., brushes, dendrimers, stars), specialized analytical methods — such as 2D-SEC, LCCC, DOSY-NMR, or electron microscopy — are essential for structural elucidation. Additionally, mechanical and physical properties (e.g., rheology, DSC, TGA) are critical for evaluating performance in high-tech applications.
 
-Due to the complexity of macromolecular architectures, many different polymerization methods are available, each with their own advantages and disadvantages, which are briefly described in the following. Generally, the standards for monomer synthesis can be adapted from organic chemistry (link). However, each polymerization method has individual requirements that are described in the respective section.
+## Data Types
 
-Step growth polymerization
+Polymer research generates diverse data types, each requiring specific documentation and format standards:
 
-Monomers:
-For step-growth polymerization many different functional groups can be used, depending on whether it is a polyaddition or polycondensation reaction. Most common groups are hydroxyl, carboxyl, amines, thiols, isocyanides.
-Required information is: chemical structure from NMR and IR, molar mass from mass spectrometry, absorbance/fluorescence from UV/Vis.
+- **Synthesis Data**: Monomer structure (NMR, IR), molar mass (MS), optical properties (UV/Vis), reaction conditions (initiator, solvent, temperature, atmosphere).
+- **Characterization Data**: Molecular weight and dispersity (SEC, MS), thermal properties (DSC, TGA), rheological behavior, end-group analysis (NMR), and functional group identification (IR, Raman).
+- **Post-Polymerization Modification Data**: Quantification of introduced functionalities, comparative analysis before/after modification (SEC, NMR, DSC, TGA).
 
-Polymerization:
+### Recommended file formats
 
-Materials required:
-Monomers: bi-functional monomers for homo polymerization (e.g. hydroxyl- and carboxyl-groups), two or more bi-functional monomers with two different reactive groups (e.g. di-isocyanide and diamine) for AB-type copolymers.
-catalyst depending on type of reaction and solubility (acids, bases, transition metals etc.)
-optional materials:
-solvents
-emulsifiers
-relevant information: bulk, solution or emulsion polymerization with respective concentrations of monomers, emulsifiers, catalysts and type of solvent.
-
-Chain growth polymerization
-
-Monomers:
-A successful radical polymerization requires monomers with unsaturated carbon-carbon double bonds (C=C). Also, functional groups must be compatible with radicals (thiols, halogenides etc. have to be avoided or introduced in post-polymerization functionalization). Therefore, monomer synthesis has to be planned carefully. In controlled radical polymerization techniques, small molecule initiators can also be functionalized individually.
-required information: chemical structure from NMR and IR, molar mass from mass spectroscopy, absorbance/fluorescence from UV/Vis.
-
-Polymerization:
-Materials required:
-monomers: vinylic molecules such as methylmethacrylate, styrene, ethylene etc.
-radical initiator (depending on solubility and mode of initiation): thermal initiator (azo- or peroxi-based initiators depending on temperature range), photo-initiator (depending on wavelength), redox-initiator etc. Common initiators are AIBN, VA055, BPO.
-optional materials:
-solvents: liquid monomers can be polymerized in bulk, but to avoid thermal runaway of the reaction often solvents are added, they also have to be stable towards radicals, elevated temperatures or light irradiation. Common solvents are DCM, toluene, dioxane, DMF, DMSO.
-chain transfer agents: the resulting chain length of the polymer can be controlled with chain transfer agents to achieve short polymers and oligomers such as thiols and halogenides.
-for controlled radical polymerization techniques additional reactants such as nitroxides (for NMP), transition metal complex (for ATRP) or RAFT-initiators may be required
-for emulsion polymerization the type and amount of emulsifier
-relevant information: bulk, solution or emulsion polymerization with respective concentrations of monomers, initiator, emulsifier, chain transfer agent and type of solvent.
-
-Polymerization process:
-
-The process is usually described in a free text including the information on materials (amount and type). Variation of parameters can be displayed in tables.
-relevant information are reaction conditions such as temperature, wavelength, reaction vessel, inert atmosphere, stirring etc. Further observations such as precipitants, color change, viscosity change, solubility, yield.
-Information on the purification such as precipitation in a non-solvent (what kind of solvent, how much, warm/cold, how often precipitated, redissolved in which solvent), dialysis (against which solvent, how long, how many times solvent changed, solvent gradients)
-
-resulting polymer description:
-appearance of the material: sticky/not sticky, solubility, color
-chemical information: monomer composition and if possible end-groups from NMR, functionality from IR or Raman, absorbance or fluorescence from UV/Vis, molecular weight and dispersity from SEC or MS
-physical properties: glass transition temperature and melting point from DSC, thermal decomposition from TGA
-rheological properties: flexibility, toughness, elasticity
-
-Post-polymerization functionalization:
-
-Since radicals are highly reactive, many functional groups or biological materials are not compatible with these harsh reaction conditions. These moieties can be introduced in post-polymerization modifications.
-here relevant information includes:
-type and amount of functional group that is introduced (if separately synthesized NMR, IR, MS data), calculation of the ratios between polymer and functional groups.
-Comparative polymer data before and after functionalization: change in molecular weight and dispersion from SEC or MS, change in chemical functionality from NMR, IR, Raman, UV/Vis, physical and mechanical changes from DSC, TGA, rheological measurements, change in color, solubility etc.
-
-## Documentation in detail
-
-An overview on file extensions, standards, potential converters for several digital data types is given in the table below.
-
-Datatype
-proprietary extensions
-common open extensions
-recommended/standard
-links/hints
-NMR
-.zip
-.dx,
-jcamp-dx (.dx), nmrium
-https://chemotion.net/docs/repo/details_standards/analysis_test/nmr
-TGA
-???, .xlsx
-.csv
-jcamp-dx
-https://chemotion.net/docs/repo/details_standards/analysis_test/tga
-…..
-
-General data format/data representation handling
-Raw data files in proprietary file formats should be saved alongside interoperable open file formats by using converters or the software of the analytical device. If no specific open format is currently available, exporting as .txt or .csv is recommended. Please be aware that metadata included in the header of .txt or .csv files may not follow a defined (open) format and metadata should be additionally also added into the ELN.
-:::
+Store raw data alongside open, interoperable formats (e.g., .txt, .csv, .dx, jcamp-dx). Metadata should be embedded in the ELN to ensure FAIR compliance.
 
 ## ELNs and Other Tools
 
-For effective data management, software tools should be selected in a uniform manner within a project or research group with the aim to organize and streamline workflows. This involves establishing clear usage guidelines, including metadata templates drawn from minimum information standards for a given method, where available. These should be outlined in a data management plan (DMP) for each project. NFDI4Chem provides an RDMO template specifically tailored to the needs of chemists.
+Electronic lab notebooks (ELNs) are strongly recommended for structured documentation and FAIR data preservation. A selection of suitable ELNs can be found in the ELN-Finder:
 
-An electronic lab notebooks (ELN) helps in the day-to-day planning and structured documentation of experiments, while some also assist in data workflow management. The use of an electronic lab notebook is strongly recommended to ensure the proper preservation of data and metadata in a FAIR manner For scientists not sure about the choice of the right ELN, the ELN-Finder (https://eln-finder.ulb.tu-darmstadt.de/) lists many options and the article on choosing an ELN provides further assistance.
+<ElnFinder subDisc={"Polymer chemistry"} />
 
-<ElnFinder />
-NFDI4chem developed, in collaboration with polymer scientists, polymer chemistry
-entities in the Chemotion ELN, they support in particular the documentation of
-polymer properties and the storage and conversion of analytical data for polymer
-chemists. The templates can be retrieved from the template hub
-(https://www.chemotion-repository.net/home/genericHub?type=segment) and
-dedicated support for installation and use can be gained from the team of the
-helpdesk (info here). Further support for polymer chemists in Chemotion ELN is
-under active development - to figure out what will come next, please get in
-contact to us (email helpdesk)
+NFDI4Chem provides polymer-specific templates in the Chemotion ELN, supporting documentation of polymer properties and analytical data conversion in the [Template Hub](https://www.chemotion-repository.net/home/genericHub?type=segment).
+
+For additional support, please feel free to contact the [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/).
 
 ## Publishing Data
 
-For synthesis data and analytical data, specific repositories such as [Chemotion Repository](https://www.chemotion-repository.net/welcome) (synthesis data, analytical data, sample registration), [MassBankEU](https://massbank.eu/MassBank/) (mass spectra), or [nmrXiv](https://nmrxiv.org/) (for NMR data) are recommended. For other types of data the generic repository [RADAR4Chem](https://radar.products.fiz-karlsruhe.de/de/radarabout/radar4chem) is recommended.
-Publishing research data is important to allow other researchers to reuse it. To reach as many researchers as possible, choosing the right repository can be crucial (check the [Choose a Repository](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_repository/) article for more information).
+To maximize reusability, publish data in domain-specific repositories:
+
+- **Chemotion Repository**: Synthesis and analytical data, sample registration
+- **MassBankEU**: Mass spectra
+- **nmrXiv**: NMR data
+- **RADAR4Chem**: General or interdisciplinary data
+
+For guidance on repository selection, consult our [repository guide](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_repository/).
 
 ## Challenges
 
-[has to be added]
+While polymer chemistry benefits from a growing ecosystem of tools and standards, challenges remain:
+
+- **Metadata standardization**: No universally adopted schema for polymer-specific metadata across all analytical techniques.
+- **Format interoperability**: Proprietary instrument formats still dominate; conversion to open formats (e.g., jcamp-dx) is not always seamless.
+- **Workflow integration**: ELNs and repositories are not yet fully interoperable across all polymer synthesis and characterization steps.
+- **Community adoption**: Widespread use of FAIR-compliant tools and templates requires continued training and support.
+
+Ongoing development within NFDI4Chem aims to address these gaps — researchers are encouraged to engage with the helpdesk for feedback and collaboration.
