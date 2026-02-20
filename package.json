@@ -37,7 +37,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
-    "glob": "^10.3.10",
+    "glob": "^13.0.6",
     "gray-matter": "^4.0.3"
   },
   "browserslist": {
