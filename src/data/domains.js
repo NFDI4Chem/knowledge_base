@@ -21,9 +21,15 @@ const domains = [
   },
   {
     text: <Translate>Physical Chemistry</Translate>,
-    imgUrl: "/img/nfdi4chem_Physial_Chemistry.svg",
+    imgUrl: "/img/nfdi4chem_Physical_Chemistry.svg",
     alt: "Physical Chemistry Icon",
     url: "/docs/physical_chemistry",
+  },
+  {
+    text: <Translate>Polymer Chemistry</Translate>,
+    imgUrl: "/img/nfdi4chem_Polymer_Chemistry.svg",
+    alt: "Polymer Chemistry Icon",
+    url: "/docs/polymer_chemistry",
   },
   {
     text: <Translate>Synthetic Chemistry</Translate>,
