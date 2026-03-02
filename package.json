@@ -17,7 +17,6 @@
     "test:ci": "npm run write-translations && npm run crowdin download && npm run validate-content && npm run build"
   },
   "dependencies": {
-    "@crowdin/cli": "^4.13.0",
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/faster": "^3.9.2",
     "@docusaurus/plugin-sitemap": "^3.9.2",
@@ -35,9 +34,10 @@
     "video-privacy": "^1.2.0"
   },
   "devDependencies": {
+    "@crowdin/cli": "^4.14.0",
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
-    "glob": "^10.3.10",
+    "glob": "^13.0.6",
     "gray-matter": "^4.0.3"
   },
   "browserslist": {
