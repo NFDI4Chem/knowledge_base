@@ -16,23 +16,23 @@ Physical chemistry includes many sub-disciplines and methods that generate highl
 
 ## Data Types
 
-As mentioned, the data produced in physical chemistry and its diverse sub-disciples are varied. One research group may work intensively with imaging data such as superresolution microscopy, while the other may work on method development, and again others may analyze spectroscopic data or conduct numeric simulations—or even any combination of these.
+Physical chemistry produces diverse data across sub-disciplines. Research groups may focus on imaging (e.g., super-resolution microscopy), method development, spectroscopic analysis, numeric simulations, or combinations of these.
 
 ## ELNs and Other Tools
 
-For effective data management, software tools should be selected in a project or research group with data workflows in mind. Workflows can be very specific to the research topic and may require usage guidelines or metadata templates drawn from minimum information standards for a given method. These guidelines should be outlined in a [data management plan (DMP)](/docs/dmp) for each project. NFDI4Chem provides an [RDMO template](https://rdmo.nfdi4chem.de/) specifically tailored to the needs of chemists.
+For effective data management, tools should be selected at project or group level based on existing workflows. Because workflows are often method-specific, usage guidelines and metadata templates should be defined and documented in a [data management plan (DMP)](/docs/dmp). NFDI4Chem provides an [RDMO template](https://rdmo.nfdi4chem.de/) tailored to chemistry.
 
-An [electronic lab notebooks (ELN)](/docs/eln) helps in the day-to-day planning and structured documentation of experiments, while some also assist in data workflow management. For disciplines with diverse research, ELNs must be flexible and customizable. Certain universities may have a central option, while each research group may chose what best fits their needs and resources if they are able to host or procure their own solution. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) lists many options and the article on [choosing an ELN](/docs/choose_eln) provides further assistance:
+An [electronic lab notebook (ELN)](/docs/eln) supports day-to-day planning, structured experiment documentation, and sometimes workflow management. In this diverse field, ELNs should be flexible and customizable. Universities may provide central solutions, but research groups often choose tools that match their needs and resources. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) lists options, and [choosing an ELN](/docs/choose_eln) provides further guidance:
 
 <ElnFinder subDisc="Physical chemistry" />
 
-In addition to ELNs, tools such as local repository and research dat management tools can assist in making data publication ready.
+In addition to ELNs, local repositories and research data management tools can help prepare data for publication.
 
 For those writing scripts and developing research software solutions, [Git](https://git-scm.com/) is a highly recommended versioning tool. Many universities also have their own instances of [GitLab](https://about.gitlab.com/) to assist in managing software projects.
 
-Specifically for research data, [DataLad](https://www.datalad.org/), which is built on top of git, can greatly assist in tracking the metadata while processing and analyzing data. While it works for steps carried out with GUI applications, its true power comes in handy for those using script-based analysis and processing steps.
+For research data, [DataLad](https://www.datalad.org/) (built on git) helps track metadata during processing and analysis. It also works with GUI-based steps, but is especially powerful in script-based workflows.
 
-Because many physical chemists build their own workflows and tools, community standards for file formats and metadata should be used whenever possible. At minimum, research groups should define shared documentation and format standards to support efficient knowledge transfer. ELNs can provide documentation templates, DMPs can record standards, and automated workflows (e.g., from instruments to ELN and storage) can reduce manual work and improve data quality; this can be implemented via built-in integrations or REST APIs.
+Because many physical chemists build their own workflows and tools, community standards for file formats and metadata should be used whenever possible. At minimum, research groups should define shared documentation and format standards to support knowledge transfer. ELNs can provide templates, DMPs can record standards, and automated workflows (e.g., from instruments to ELN and storage) can reduce manual work and improve data quality via built-in integrations or REST APIs.
 
 ## Publishing Data
 
@@ -42,6 +42,6 @@ For in-house research software, **software is data and should be published accor
 
 ## Challenges
 
-Common challenges in physical chemistry and FAIR data often go hand-in-hand with the large variety of sub-disciplines, methodology, and thus diverse data types. Many working in physical chemistry labs may have established their own personal workflows. Working within a group streamline and unify common steps and to establish reusable templates for metadata, be it in ELNs or in the local file system, can provide structured information not just for fellow researchers, but also for those working on FAIR data infrastructure, such as ELNs and research data repositories.
+In physical chemistry, FAIR data challenges are closely linked to diverse methods and data types. Labs often have individual workflows, so groups should streamline common steps and define reusable metadata templates in ELNs or file systems to support both researchers and FAIR data infrastructures.
 
-Especially in imaging, large data volume can strain the local [storage](/docs/data_storage) resources. Central storage solution can provide assistance and should be used in combination with best research data management practices to ensure the data's re-usability and avoid unorganized and inefficient use of large storage systems.
+Especially in imaging, large data volumes can strain local [storage](/docs/data_storage). Central storage solutions can help when combined with good research data management practices to ensure reusability and avoid inefficient data organization.
