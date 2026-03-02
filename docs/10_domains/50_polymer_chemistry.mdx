@@ -1,0 +1,57 @@
+---
+title: "Polymer Chemistry"
+slug: "/polymer_chemistry"
+---
+
+import LbeChip from "@site/src/components/commons/LbeChip.js";
+import ElnFinder from "@site/src/components/eln/ElnFinder.js";
+
+<LbeChip title="polymer chemistry" />
+
+## Introduction
+
+Polymer chemistry involves the synthesis, characterisation, and application of macromolecules. The toolbox for monomer synthesis and modification, their polymerisation, and post-functionalisation is often derived from organic chemistry, as are many characterisation methods, especially for monomers or small polymers. Due to the structural complexity of polymers (e.g., brushes, dendrimers, stars), specialised analytical methods, such as 2D-SEC, LCCC, DOSY-NMR, or electron microscopy, are essential for structural elucidation. Additionally, mechanical and physical properties (e.g., rheology, DSC, TGA) are critical for evaluating performance in high-tech applications.
+
+## Data Types
+
+Polymer research generates diverse data types, each requiring specific documentation and format standards:
+
+- **Synthesis Data**: Monomer structure (NMR, IR), molar mass (MS), optical properties (UV/Vis), reaction conditions (initiator, solvent, temperature, atmosphere).
+- **Characterisation Data**: Molecular weight and dispersity (SEC, MS), thermal properties (DSC, TGA), rheological behaviour, end-group analysis (NMR), and functional group identification (IR, Raman).
+- **Post-Polymerisation Modification Data**: Quantification of introduced functionalities, comparative analysis before/after modification (SEC, NMR, DSC, TGA).
+
+### Recommended file formats
+
+Store raw data alongside open, interoperable formats (e.g., .txt, .csv, .dx, JCAMP-DX). Metadata should be embedded in the ELN to ensure FAIR compliance.
+
+## ELNs and Other Tools
+
+Electronic lab notebooks (ELNs) are strongly recommended for structured documentation and FAIR data preservation. A selection of suitable ELNs can be found in the ELN-Finder:
+
+<ElnFinder subDisc={"Polymer chemistry"} />
+
+NFDI4Chem provides polymer-specific templates in the Chemotion ELN, supporting documentation of polymer properties and analytical data conversion in the [Template Hub](https://www.chemotion-repository.net/home/genericHub?type=segment).
+
+For additional support, please feel free to contact the [NFDI4Chem helpdesk](https://www.nfdi4chem.de/helpdesk/).
+
+## Publishing Data
+
+To maximise reusability, publish data in domain-specific repositories:
+
+- **Chemotion Repository**: Synthesis and analytical data, sample registration
+- **MassBankEU**: Mass spectra
+- **nmrXiv**: NMR data
+- **RADAR4Chem**: General or interdisciplinary data
+
+For guidance on repository selection, consult our [repository guide](/docs/choose_repository/).
+
+## Challenges
+
+While polymer chemistry benefits from a growing ecosystem of tools and standards, challenges remain:
+
+- **Metadata standardisation**: No universally adopted schema for polymer-specific metadata across all analytical techniques.
+- **Format interoperability**: Proprietary instrument formats still dominate; conversion to open formats (e.g., jcamp-dx) is not always seamless.
+- **Workflow integration**: ELNs and repositories are not yet fully interoperable across all polymer synthesis and characterisation steps.
+- **Community adoption**: Widespread use of FAIR-compliant tools and templates requires continued training and support.
+
+Ongoing development within NFDI4Chem aims to address these gaps — researchers are encouraged to engage with the helpdesk for feedback and collaboration.

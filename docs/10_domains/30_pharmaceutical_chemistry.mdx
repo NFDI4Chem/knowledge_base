@@ -12,34 +12,32 @@ import ElnFinderPharm from "@site/src/components/eln/ElnFinderPharm.js";
 
 ## Introduction
 
-Medicinal chemistry is a chemistry-based, strongly interdisciplinary discipline. It deals with the discovery, development, identification, and synthesis of biologically active compounds, the interpretation of their mechanism of action at the molecular level, and the metabolism of the active compounds. The interactions of active compounds with their biological target(s) are analysed in silico (chemoinformatics), in vitro, and in vivo to determine selectivity and potential in terms of their therapeutic efficacy and safety. Medicinal chemists prepare and/or select suitable compounds for biological evaluation that, if found to be active, could serve as lead compounds. Chemical modifications to optimise these leads ideally result in promising candidates for preclinical studies in drug development, potentially followed by clinical studies.
+Medicinal chemistry is an interdisciplinary field focused on discovering, developing, identifying, and synthesising biologically active compounds. It studies their molecular mechanisms, metabolism, and interactions with biological targets using in silico (chemoinformatics), in vitro, and in vivo methods to assess selectivity, efficacy, and safety. Promising active compounds are optimised into lead structures that can advance to preclinical and clinical drug development.
 
 ## Data Types
 
-The most common types of data in pharmaceutical/medicinal chemistry can be divided into three categories: synthesis data, analytical data, and (bio)assay data. While the first two types of data (synthesis and analytical data) play a role in broad areas of chemistry, (bio)assay data, which is used to investigate the biological activity of a substance, is a particular feature of pharmaceutical/medicinal chemistry.
+Data in pharmaceutical/medicinal chemistry can be grouped into three main categories: synthesis data, analytical data, and (bio)assay data. While synthesis and analytical data are common across chemistry, (bio)assay data for evaluating biological activity is particularly central to this field.
 
 ## ELNs and Other Tools
 
-For effective data management, software tools should be selected in a uniform manner within a project or research group with the aim to [organize](/docs/data_organisation)
-and streamline workflows. This involves establishing clear usage guidelines, including metadata templates drawn from minimum information standards for a given method, where available.
-These should be outlined in a [data management plan (DMP)](/docs/dmp) for each project. NFDI4Chem provides an [RDMO template](https://rdmo.nfdi4chem.de/) specifically tailored to the needs of chemists.
+For effective data management, tools should be selected at project or group level based on workflows. Because workflows are often method-specific, usage guidelines and metadata templates should be defined and documented in a [data management plan (DMP)](/docs/dmp). NFDI4Chem provides an [RDMO template](https://rdmo.nfdi4chem.de/) tailored to chemistry.
 
-To meet the requirements for FAIR data management, electronic lab notebooks (ELNs) are particularly useful as they can take over many documentation tasks for researchers. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) offers a selection of pharmacy-specific ELNs. How to choose the right ELN for the research group can be read [here](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_eln/).
+For FAIR data management, electronic lab notebooks (ELNs) are especially useful for structured documentation. The [ELN-Finder](https://eln-finder.ulb.tu-darmstadt.de/search?f.K03=Pharmacy,equals&spc.page=1) lists pharmacy-specific options, and guidance on selecting an ELN is available [here](/docs/choose_eln/).
 
 <ElnFinderPharm />
 
-For the planning of research data management and the creation of data management plans, tools such as RDMO and DMP-Online are suitable. Many universities have their own instances of one of these solutions.
+For RDM planning and creating DMPs, tools such as RDMO and DMP-Online are suitable; many universities provide local instances.
 
 ## Publishing Data
 
-Publishing research data is important to allow other researchers to reuse it. To reach as many researchers as possible, choosing the right repository can be crucial (check the [Choose a Repository](https://knowledgebase.nfdi4chem.de/knowledge_base/docs/choose_repository/) article for more information).
+Publishing research data enables reuse by other researchers. Choosing an appropriate repository is crucial; see [Choose a Repository](/docs/choose_repository/) for guidance.
 
 For synthesis data and analytical data, specific repositories such as [Chemotion Repository](https://www.chemotion-repository.net/welcome) (synthesis data), [MassBankEU](https://massbank.eu/MassBank/) (mass spectra), or [nmrXiv](https://nmrxiv.org/) (for NMR data) are recommended. For the third category of data ((bio)assay data), no optimal repository is currently known, so the generic repository [RADAR4Chem](https://radar.products.fiz-karlsruhe.de/de/radarabout/radar4chem) is recommended.
 
 ## Challenges
 
-Compared to many other areas of chemistry, pharmaceutical/medicinal chemistry often involves highly application-oriented research that can lead to patents and product developments. Therefore, the electronic lab notebooks used must meet higher standards in the area of audit trails. This must be considered from the outset when selecting the tools to be used. Additionally, this can lead to special requirements for publishing research data.
+Compared with many other chemistry domains, pharmaceutical/medicinal chemistry is often application-oriented and may lead to patents and product development. ELNs therefore need robust audit trails, which should be considered early during tool selection and data-publication planning.
 
-The diversity of data formats and analytical methods used also poses a challenge for good research data management (RDM). This is particularly true when laboratory/analytical instruments are used that can no longer be integrated into a network or can only be integrated via detours due to their software.
+Diverse data formats and analytical methods also challenge good research data management (RDM), especially when legacy instruments cannot be integrated into networks or only via workarounds.
 
-NFDI4Chem is happy to assist with these challenges, and you can contact us anytime through the Helpdesk.
+NFDI4Chem is happy to assist with these challenges, and you can contact us anytime through the [helpdesk](https://nfdi4chem.de/helpdesk/).

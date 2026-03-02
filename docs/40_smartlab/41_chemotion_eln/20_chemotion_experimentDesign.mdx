@@ -1,6 +1,6 @@
 ---
 title: "Experiment Design"
-slug: "/chemotion_experimentDesign"
+slug: "/chemotion_experiment-design"
 ---
 
 # Chemotion ELN: Experiment Design
@@ -9,22 +9,22 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import ChemotionCarousel from "@site/src/components/chemotion/ChemotionCarousel";
 
 <ChemotionCarousel
-	icon={{
-		src: useBaseUrl(
-			"/img/smartlab/chemotion/chemotion_icons/chemotion_DoE.svg",
-		),
-		alt: "chemotion icon for experiment design in data lifecycle",
-	}}
-	images={[
-		{
-			src: useBaseUrl("/img/smartlab/chemotion/experimentDesign1.png"),
-			alt: "Experiment Design Structure Editor",
-		},
-		{
-			src: useBaseUrl("/img/smartlab/chemotion/experimentDesign2.png"),
-			alt: "Experiment Design References",
-		},
-	]}
+  icon={{
+    src: useBaseUrl(
+      "/img/smartlab/chemotion/chemotion_icons/chemotion_DoE.svg",
+    ),
+    alt: "chemotion icon for experiment design in data lifecycle",
+  }}
+  images={[
+    {
+      src: useBaseUrl("/img/smartlab/chemotion/experimentDesign1.png"),
+      alt: "Experiment Design Structure Editor",
+    },
+    {
+      src: useBaseUrl("/img/smartlab/chemotion/experimentDesign2.png"),
+      alt: "Experiment Design References",
+    },
+  ]}
 />
 
 In the Chemotion ELN, various entry types can be generated for planning various experimental setups. Generally, all entry types offer the possibility to draw chemical structures directly within the ELN. This is realized by embedded structure editors: _ketcher-rails_ and _Ketcher 2_ are integrated as default structure editors, while _ChemDraw JS_ and _Marvin JS_ can be integrated when the needed licences are available.
