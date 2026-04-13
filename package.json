@@ -17,10 +17,10 @@
     "test:ci": "npm run write-translations && npm run crowdin download && npm run validate-content && npm run build"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.9.2",
-    "@docusaurus/faster": "^3.9.2",
-    "@docusaurus/plugin-sitemap": "^3.9.2",
-    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/core": "^3.10.0",
+    "@docusaurus/faster": "^3.10.0",
+    "@docusaurus/plugin-sitemap": "^3.10.0",
+    "@docusaurus/preset-classic": "^3.10.0",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
     "docusaurus-plugin-matomo": "^0.0.8",
@@ -34,9 +34,9 @@
     "video-privacy": "^1.2.0"
   },
   "devDependencies": {
-    "@crowdin/cli": "^4.14.0",
-    "@docusaurus/module-type-aliases": "^3.9.2",
-    "@docusaurus/types": "^3.9.2",
+    "@crowdin/cli": "^4.14.1",
+    "@docusaurus/module-type-aliases": "^3.10.0",
+    "@docusaurus/types": "^3.10.0",
     "glob": "^13.0.6",
     "gray-matter": "^4.0.3"
   },
