@@ -60,10 +60,11 @@ If you need to rename a multiple files, take a look at:
 -   [Thunar Bulk Rename](https://docs.xfce.org/xfce/thunar/bulk-renamer/start) (Linux, GUI)
 -   [command line: mv, mmv, rename](https://linuxconfig.org/how-to-rename-multiple-files-on-linux) (Linux, CLI)
 -   [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) (Windows, free)
+-   [A.F.5 Rename your files](http://fauland.com/download.htm) (Windows, free)
 -   [TotalCommander](https://www.ghisler.com/advanced.htm#tutorial_rename) (windows, Shareware)
 -   [Renamer4Mac](https://renamer.com/) (Mac).
 
-For some special file formats there are tools for adapting the file name to metadata. For example, to create a file name that fits your scheme and takes date and time information from the EXIF data of a jpg file. Some also allow adding an offset - this helps sort photos into timestamps that run on different clocks.
+For some special file formats there are tools for adapting the file name to the metadata. For example, to create a file name that fits your scheme and takes date and time information from the EXIF data of a jpg file. Some also allow adding an offset - this helps sort photos into timestamps that run on different clocks.
 
 ## Files: versioning
 
@@ -72,7 +73,7 @@ Stash snapshots or simply track changes and allow to find something that existed
 #### Possible Solutions
 
 -   Low number of requirements: manage manually e.g. by keeping a log where the changes for each respective file is documented, version by version.
--   For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted by e.g. [GitHub](https://github.com/) or your home institution. Very strong with uncompressed, readable and comparable files such as text files or csv.
+-   For automatic management of versioning, conflict resolution and back-tracing capabilities, use a proper version control software such as [Git](https://git-scm.com/), hosted either remotely on a portal such as Codeberg, Forgejo, SourceHut, or at your home institution (most usually GitLab). Very strong with uncompressed, readable and comparable files such as text files or csv.
 -   Use a Cloud Storage service (see [Data Storage and Archiving](/docs/data_storage)) that provides automatic file versioning. Very strong on spreadsheets, text files and slides.
 
 ## Files: types of metadata
@@ -84,11 +85,11 @@ Consider the way data and [Metadata](/docs/metadata/) can be stored together as 
 -   technical metadata
 -   structural metadata
 
-An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standard](/docs/format_standards/) for more information.
+An FDO encapsulates data and metadata in one file and can be saved as an [HDF5](https://www.hdfgroup.org/solutions/hdf5/), for example. See [Data Format Standards](/docs/format_standards/) for more information.
 
 ## Files: formats
 
-Different disciplines use established standards, see [Data Format Standard](/docs/format_standards/). Also consider beyond the duration of the project:
+Different disciplines use established standards, see [Data Format Standards](/docs/format_standards/). Also consider beyond the duration of the project:
 
 -   usage of proprietary or open file formats
 -   exchange within and outside of the working group
