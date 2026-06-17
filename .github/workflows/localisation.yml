@@ -1,45 +1,45 @@
 name: Localisation Workflow
 
 on:
-    push:
-        branches:
-            - localisation
-    pull_request:
-        branches:
-            - localisation
-    workflow_dispatch:
+  push:
+    branches:
+      - localisation
+  pull_request:
+    branches:
+      - localisation
+  workflow_dispatch:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "lts/*"
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "lts/*"
 
-            - name: Set up Java 17 (Temurin)
-              uses: actions/setup-java@v4
-              with:
-                  distribution: temurin
-                  java-version: "17"
+      - name: Set up Java 17 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
 
-            - name: Install dependencies
-              run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-            - name: Write translations
-              run: npm run write-translations
+      - name: Write translations
+        run: npm run write-translations
 
-            - name: Clear jdeploy cache
-              run: |
-                  rm -rf ~/.jdeploy || true
-                  mkdir -p ~/.jdeploy
+      - name: Clear jdeploy cache
+        run: |
+          rm -rf ~/.jdeploy || true
+          mkdir -p ~/.jdeploy
 
-            - name: Upload translations
-              run: npm run crowdin upload
-              env:
-                  CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+      - name: Upload translations
+        run: npm run crowdin upload
+        env:
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
