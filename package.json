@@ -34,7 +34,7 @@
     "video-privacy": "^1.2.0"
   },
   "devDependencies": {
-    "@crowdin/cli": "^4.14.1",
+    "@crowdin/cli": "^4.14.2",
     "@docusaurus/module-type-aliases": "^3.10.0",
     "@docusaurus/types": "^3.10.0",
     "glob": "^13.0.6",

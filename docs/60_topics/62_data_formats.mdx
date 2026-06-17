@@ -1,0 +1,73 @@
+---
+title: "Data Formats"
+slug: "/data_formats"
+---
+
+# Data formats
+
+Choosing the right data format makes your research data easier to share, understand, and reuse. For [FAIR](/docs/fair) practice, use formats that are open, well documented, and accepted by your community.
+
+## Why this matters
+
+In chemistry, data can include spectra, structures, reactions, and [metadata](/docs/metadata). The chosen format influences whether:
+
+- others can open your files,
+- repositories accept your submission,
+- your data remain usable in the long term.
+
+## Quick guidance for everyday work
+
+- Prefer open formats whenever possible.
+- Keep both raw data and processed data.
+- Add clear metadata, including units and context.
+- Check repository requirements early.
+- If instruments produce proprietary files, export an open exchange format as well.
+- For structure data, store both an exchange file (e.g. [SDF](https://en.wikipedia.org/wiki/Chemical_table_file#SDF)) and identifiers ([SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System), [InChI](https://en.wikipedia.org/wiki/International_Chemical_Identifier)).
+- For spectroscopy, use [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) for exchange when available.
+
+## Recommendations by use case
+
+- General table-like data exchange: CSV (with clear headers and units).
+- NMR data exchange: [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/), [nmrML](https://nmrml.org/schema/), [NMReDATA](https://nmredatainitiative.github.io/).
+- Mass spectrometry exchange and archiving: [mzML](https://en.wikipedia.org/wiki/Mass_spectrometry_data_format#mzML)).
+- Crystallography deposition: [CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File).
+- Structure exchange: [SDF](https://en.wikipedia.org/wiki/Chemical_table_file#SDF), [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System), [InChI](https://en.wikipedia.org/wiki/International_Chemical_Identifier).
+- [Chemical table files](https://en.wikipedia.org/wiki/Chemical_table_file) ([Molfile](https://en.wikipedia.org/wiki/Chemical_table_file#Molfile), rxnfile, [SDF](https://en.wikipedia.org/wiki/Chemical_table_file#SDF)): use V2000 for broad interoperability; use V3000 if you need advanced features and tool support is confirmed.
+- Spectral exchange: [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/) is widely supported across techniques; for very large or complex datasets, check whether a more suitable format is required.
+
+When possible, select formats with broad software support and active community maintenance.
+
+## Common pitfalls
+
+- Keeping only proprietary instrument files without an open export.
+- Comparing [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System) strings without canonicalization.
+- Omitting stereochemistry in [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System) when isomers matter.
+- Sharing table files without clear units or column meaning.
+
+## Common chemistry formats
+
+| Format                                                                   | Data type         | Maintainer            | Parent Format                                                | Specification    |
+| ------------------------------------------------------------------------ | ----------------- | --------------------- | ------------------------------------------------------------ | ---------------- |
+| [JCAMP-DX](https://iupac.org/what-we-do/digital-standards/jcamp-dx/)     | multiple          | IUPAC                 | ASCII, Text                                                  | open             |
+| AnIML                                                                    | multiple          | ASTM                  | XML                                                          | open             |
+| netCDF                                                                   | multiple          | UCAR                  | CDF                                                          | open             |
+| CSV                                                                      | multiple          | IETF-RFC              | ASCII, Text                                                  | open             |
+| ASCII                                                                    | multiple          | (open)                |                                                              | self explanatory |
+| ISA                                                                      | multiple          | ISA Commons Community | TSV or JSON                                                  | open             |
+| UDM                                                                      | multiple          | Pistoia Alliance      | XML                                                          | open             |
+| ADF                                                                      | multiple          | Allotrope             | HDF5+RDF                                                     | for members      |
+| [mzML](https://en.wikipedia.org/wiki/Mass_spectrometry_data_format#mzML) | mass spectrometry | HUPO/PSI              | XML                                                          | open             |
+| ANDI-MS                                                                  | mass spectrometry | ASTM International    | netCDF                                                       | open             |
+| [nmrML](https://nmrml.org/schema/)                                       | NMR               | COSMOS                | XML                                                          | open             |
+| [NMReDATA](https://nmredatainitiative.github.io/)                        | NMR               | NMReDATA Initiative   | [SDF](https://en.wikipedia.org/wiki/Chemical_table_file#SDF) | open             |
+| Bruker FID                                                               | NMR               | Bruker                | (binary)                                                     | proprietary      |
+| mnova                                                                    | NMR               | Mestrelab             | (binary)                                                     | proprietary      |
+| Bruker OPUS                                                              | spectroscopy      | Bruker                | (binary)                                                     | proprietary      |
+| Perkin Elmer                                                             | spectroscopy      | Perkin Elmer          | ASCII, Text                                                  | proprietary      |
+| ThermofFisher Grams                                                      | spectroscopy      | ThermoFisher          | binary                                                       | proprietary      |
+
+## Sources and further information
+
+- [The value of universally available raw NMR data for transparency, reproducibility, and integrity in natural product research](https://doi.org/10.1039/C7NP00064B)
+- [Dissemination of original NMR data enhances reproducibility and integrity in chemical research](https://doi.org/10.1039/C6NP00022C)
+- [NMReDATA: Tools and applications](https://doi.org/10.1002/mrc.5146)

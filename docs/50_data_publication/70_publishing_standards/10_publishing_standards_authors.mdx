@@ -13,7 +13,7 @@ This guide is based on our **standards for data publishing for authors**. You ca
 
 ## 1. Upload your Dataset
 
-Once you have ensured your data is [well-organized](/docs/data_organisation) and you have chosen appropriate [data formats](/docs/format_standards), you can upload your files. Depending on the [repository you have chosen](/docs/choose_repository), it may be easiest to directly upload your data when creating the dataset. For example, [RADAR4Chem](https://radar4chem.radar-service.eu/) will automatically extract all files from a zip file at this point and replicate the directory structure, while this is not the case if the data is uploaded at a later point in time and an empty dataset is created first.
+Once you have ensured your data is [well-organized](/docs/data_organisation) and you have chosen appropriate [data formats](/docs/data_formats), you can upload your files. Depending on the [repository you have chosen](/docs/choose_repository), it may be easiest to directly upload your data when creating the dataset. For example, [RADAR4Chem](https://radar4chem.radar-service.eu/) will automatically extract all files from a zip file at this point and replicate the directory structure, while this is not the case if the data is uploaded at a later point in time and an empty dataset is created first.
 
 Including a plain-text README file within your dataset can give more human-readable context to your data. You may also include additional metadata files if you feel the options offered by the repository are insufficient to give the full context to your dataset.
 
@@ -29,8 +29,8 @@ These identifiers help improve the visibility of your work.
 
 When you deposit your research data, it will be assigned a [**persistent identifier (PID)**](/docs/pid), similarly to how your article is designated a DOI (Digital Object Identifier). In many cases, the dataset's PID will be a [DataCite](https://datacite.org/) DOI. Here’s how to use it:
 
--   **For Your Own Datasets:** Include the PID in the [data availability statement](/docs/data_availability_statement) of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
--   **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
+- **For Your Own Datasets:** Include the PID in the [data availability statement](/docs/data_availability_statement) of your article, which informs readers where they can find your underlying data. Also, add this PID in the references section of your manuscript to cite it specifically within the text.
+- **For Others’ Datasets:** If you reuse datasets published by other researchers, include their PIDs in your references instead of just citing their articles. This not only gives proper credit but also helps others locate those datasets easily.
 
 :::danger Notice:
 This distinction is important, because **the link** to the dataset in [Crossref](https://www.crossref.org/)'s DOI metadata for scientific articles **varies** depending on whether the dataset is a directly related source of information or a specifically referenced resource.
@@ -40,8 +40,8 @@ This distinction is important, because **the link** to the dataset in [Crossref]
 
 To enhance discoverability, link your datasets directly to their corresponding articles:
 
--   Add the article's DOI as a related identifier in the metadata of your dataset when submitting it to a repository.
--   Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
+- Add the article's DOI as a related identifier in the metadata of your dataset when submitting it to a repository.
+- Use the relation type [`IsSupplementTo`](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/#issupplementto) when linking datasets with articles, as recommended by [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) and [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) guidelines.
 
 Many repositories will guide you here, offering dropdown menus to select the appropriate relation and identifier type or even automatically detect this information.
 
@@ -49,8 +49,8 @@ Many repositories will guide you here, offering dropdown menus to select the app
 
 If you are working with multiple datasets relevant to one article, consider using a **Collection DOI** provided by repositories:
 
--   Include this Collection DOI in the data availability statement of your manuscript so all related research objects are connected.
--   For individual reactions or specific analytical data within those collections, cite them separately with their respective DOIs in both text and reference sections.
+- Include this Collection DOI in the data availability statement of your manuscript so all related research objects are connected.
+- For individual reactions or specific analytical data within those collections, cite them separately with their respective DOIs in both text and reference sections.
 
 ## 6. Choose a License for Your Data
 
@@ -64,16 +64,16 @@ Licensing is crucial because it sets the rules for how others can interact with 
 
 [Creative Commons licenses](https://creativecommons.org/share-your-work/cclicenses/) are widely used for sharing research data and come in various forms:
 
--   **[CC BY](https://creativecommons.org/licenses/by/4.0/)**: Allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you.
--   **[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)**: Similar to CC BY but requires new creations to carry the same license.
--   **[CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)**: Allows others to use your work non-commercially while still requiring attribution.
+- **[CC BY](https://creativecommons.org/licenses/by/4.0/)**: Allows others to distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you.
+- **[CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)**: Similar to CC BY but requires new creations to carry the same license.
+- **[CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)**: Allows others to use your work non-commercially while still requiring attribution.
 
 ### How to Choose a License
 
--   **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
--   **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
+- **Consider Your Goals**: Think about how you want others to use your data. If you encourage widespread use and adaptation, opt for more permissive licenses like [CC BY](https://creativecommons.org/licenses/by/4.0/).
+- **Understand Legal Implications**: Make sure you are comfortable with what rights you are granting by choosing a particular license.
 
--   **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
+- **Seek Guidance if Needed**: If you're unsure which license is best suited for your data, consult with colleagues, contact your local open science or research data management offices, or contact [NFDI4Chem's helpdesk](https://www.nfdi4chem.de/helpdesk/). Creative Commons also provides a [license chooser](https://chooser-beta.creativecommons.org/) to help you here.
 
 ### Communicate Your License Clearly
 
