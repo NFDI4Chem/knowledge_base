@@ -15,7 +15,7 @@ jobs:
     if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -23,7 +23,7 @@ jobs:
           node-version: "lts/*"
 
       - name: Set up Java 17 (Temurin)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
