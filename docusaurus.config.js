@@ -47,11 +47,6 @@ const config = {
 	i18n: {
 		defaultLocale: "en",
 		locales: ["en", "de"],
-		localeConfigs: {
-			en: {
-				htmlLang: "en-GB",
-			},
-		},
 	},
 	plugins: ["docusaurus-plugin-matomo"],
 	themeConfig: {
@@ -148,7 +143,7 @@ const config = {
 	//     ],
 	// ],
 	future: {
-		experimental_faster: {
+		faster: {
 			rspackBundler: true,
 			rspackPersistentCache: true,
 		},
