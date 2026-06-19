@@ -12,6 +12,7 @@ Some exemplary metadata fields are: title, keywords, acquisition method / analyt
 Metadata gets more specialized as the domain it describes does, where the hierarchy of domains can correspond to a hierarchical metadata structure: from more generic, completely domain-independent metadata layer, to the most method- and application-specific ones.
 
 ### Domain-Independent Metadata:
+
 Metadata can be domain-independent, focusing mostly on citation details, such as the title, the keywords, the people and institutions involved, or references to other data. Domain-independent metadata standards can be complemented by more domain-specific metadata.
 
 * [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dces/) is a more general set of fifteen elements describing networked resources. This set has been adapted and extended by other standards since its first publication in 1995.
@@ -35,13 +36,14 @@ Due to the increasing amount of data produced by biology and related disciplines
 
 Although the explored part of the chemical space along with the chemical data produced is increasing rapidly, there are only a few attempts to define guidelines for minimum information in chemistry, e.g. the [Metabolomics Standards Initiative (MSI)](https://dx.doi.org/10.1007%2Fs11306-007-0082-2) or the [Collaboratory for the Multi-scale Chemical Sciences (CMCS)](https://www.researchgate.net/publication/228602526_Metadata_in_the_collaboratory_for_multi-scale_chemical_science). NFDI4Chem will address this issue by preparing recommendations on **Minimum Information for Chemical Investigations (MIChI)**, which include standards for methods such as mass spectrometry, nuclear magnetic resonance and optical spectroscopic methods. International workshops are already being carried out in order to start the needed discussion about the MIChI.
 
-Software projects such as [electronic lab notebooks](/docs/eln) or [repositories](/docs/repositories) often define their own layer of specific minimum metadata for chemical experiments which are based on existing standards, e.g. for metabolomics, or defined by the [data formats](/docs/format_standards) they import.
+Software projects such as [electronic lab notebooks](/docs/eln) or [repositories](/docs/repositories) often define their own layer of specific minimum metadata for chemical experiments which are based on existing standards, e.g. for metabolomics, or defined by the [data formats](/docs/data_formats) they import.
 
 Existing [ontologies](/docs/ontology) are a good starting point to identify the information necessary to describe a method, results, samples, or other entities. Furthermore, controlled vocabularies and ontologies define what additional metadata is allowed in order to create rich metadata, in turn improving the data's FAIRness. Examples for formats with corresponding ontologies or a controlled vocabularies are [mzML](https://www.psidev.info/mzML), [CIF](https://www.iucr.org/resources/cif), [NeXus](https://www.nexusformat.org/), and the [Allotrope Data Format (ADF)](https://docs.allotrope.org/Allotrope%20Data%20Format.html).
 
 [The Chemical Analysis Metadata Platform (ChAMP)](https://champ.stuchalk.domains.unf.edu/) is a project which focuses on defining a framework for chemical analysis methods.
 
 ## Metadata and the FAIR Principles
+
 The [FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18) do not only apply to data but also the associated metadata. More information can be found in the [FAIR article](/docs/fair) or on [GoFair](https://www.go-fair.org/how-to-go-fair/).
 
 Metadata, as well as the data itself, should be assigned unique [persistent identifiers (PID)](/docs/pid) to be referenced in publications and other datasets. By organizing these PIDs hierarchically, each parameter in the metadata can be referenced individually.
