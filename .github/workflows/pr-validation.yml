@@ -48,7 +48,26 @@ jobs:
         continue-on-error: false
 
       - name: "🏗️  Build Website"
-        run: npm run build
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log
+
+          WARNINGS=$(grep -E "^\[WARNING\]" build.log || true)
+
+          if [ -n "$WARNINGS" ]; then
+            WARNING_DETAILS=$(awk 'BEGIN {capture=0} /^\[WARNING\]/{capture=1} capture && /^\[[^]]+\]/ && $0 !~ /^\[WARNING\]/{exit} capture {print}' build.log)
+
+            echo "## Build warnings" >> "$GITHUB_STEP_SUMMARY"
+            echo "Detected build warnings and related output:" >> "$GITHUB_STEP_SUMMARY"
+            echo '```text' >> "$GITHUB_STEP_SUMMARY"
+            echo "$WARNING_DETAILS" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+            while IFS= read -r line; do
+              echo "::warning title=Build warning::$line"
+            done <<< "$WARNINGS"
+          fi
         continue-on-error: false
 
       - name: "✅ All checks passed"
