@@ -47,7 +47,7 @@ jobs:
         run: node scripts/validate-content.js
         continue-on-error: false
 
-      - name: "🏗️  Build Documentation"
+      - name: "🏗️  Build Website"
         run: npm run build
         continue-on-error: false
 
