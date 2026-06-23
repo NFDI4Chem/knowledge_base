@@ -120,7 +120,7 @@ const config = {
 					customCss: "./src/css/custom.css",
 				},
 				sitemap: {
-					lastmod: "datetime",
+					// lastmod: "datetime",
 					ignorePatterns: ["/tags/**"],
 					createSitemapItems: async (params) => {
 						const { defaultCreateSitemapItems, ...rest } = params;
