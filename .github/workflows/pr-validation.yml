@@ -81,6 +81,15 @@ jobs:
               echo "::warning title=Build warning::$line"
             done <<< "$WARNINGS"
           fi
+
+          BROKEN_REFERENCES=$(grep -Ei "Docusaurus found broken (links|anchors)" build.log || true)
+
+          if [ -n "$BROKEN_REFERENCES" ]; then
+            echo "::error title=Broken references detected::Docusaurus reported broken links or anchors during build."
+            echo "## Broken references policy" >> "$GITHUB_STEP_SUMMARY"
+            echo "Build failed because broken links or broken anchors were detected." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
         continue-on-error: false
 
       - name: "✅ All checks passed"
