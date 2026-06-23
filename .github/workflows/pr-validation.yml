@@ -53,10 +53,23 @@ jobs:
           set -o pipefail
           npm run build 2>&1 | tee build.log
 
-          WARNINGS=$(grep -E "^\[WARNING\]" build.log || true)
+          WARNINGS=$(grep -Ei "^\[WARNING\]|^Warning:" build.log || true)
 
           if [ -n "$WARNINGS" ]; then
-            WARNING_DETAILS=$(awk 'BEGIN {capture=0} /^\[WARNING\]/{capture=1} capture && /^\[[^]]+\]/ && $0 !~ /^\[WARNING\]/{exit} capture {print}' build.log)
+            WARNING_DETAILS=$(awk '
+              BEGIN {capture=0; printed=0}
+              /^\[WARNING\]|^Warning:/ {
+                capture=1
+                if (printed++) print ""
+                print
+                next
+              }
+              capture && /^\[[^]]+\]/ {
+                capture=0
+                next
+              }
+              capture {print}
+            ' build.log)
 
             echo "## Build warnings" >> "$GITHUB_STEP_SUMMARY"
             echo "Detected build warnings and related output:" >> "$GITHUB_STEP_SUMMARY"
