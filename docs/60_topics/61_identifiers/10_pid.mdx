@@ -11,11 +11,13 @@ import ButtonContainer from "@site/src/components/features/ButtonContainer.js";
 
 [Persistent identifiers](https://doi.org/10.5334/dsj-2017-009) (PIDs) are unique, long-lasting references to identified sources, such as publications, datasets, institutions, persons or analytical instrumentation, and allow to reliably locate, identify, and verify the references.
 
-The two main PIDs employed within the chemistry community are Digital Object Identifiers ([DOIs](https://www.doi.org/)) as PIDs for objects such as publications, datasets, or software as well as [Open Research and Contributor iDs](https://doi.org/10.1087/20120404) ([ORCID iDs](https://orchid.org/)) for people. Additionally, the [Research Organization Registry](https://doi.org/10.6087/kcse.192) ([ROR](https://ror.org/)) is used to identify research institutions. Current development also includes [Persistent Identification of Instruments](https://doi.org/10.5334/dsj-2020-018) ([PIDINST](https://docs.pidinst.org/)) as PIDs for the instrumentation used to obtain research data. The Persistent Identifiers for eResearch ([ePIC](https://www.pidconsortium.net/)) is specifically designated for digital research data storage.
+The two main PIDs employed within the chemistry community are Digital Object Identifiers ([DOIs](https://www.doi.org/)) as PIDs for objects such as publications, datasets, or software as well as [Open Research and Contributor iDs](https://doi.org/10.1087/20120404) ([ORCID iDs](https://orchid.org/)) for people. Additionally, the [Research Organization Registry](https://doi.org/10.6087/kcse.192) ([ROR](https://ror.org/)) is used to identify research institutions. ([InChI](https://www.inchi-trust.org/)) and ([CAS](https://www.cas.org/) are technical identifier for chemical compounds and substances. Current development also includes [Persistent Identification of Instruments](https://doi.org/10.5334/dsj-2020-018) ([PIDINST](https://docs.pidinst.org/)) as PIDs for the instrumentation used to obtain research data. The Persistent Identifiers for eResearch ([ePIC](https://www.pidconsortium.net/)) is specifically designated for digital research data storage.
 
-The main benefits of PIDs for chemistry researchers are increased findability, visibility, and ease of access of their scientific work. In the context of research data, PIDs are especially useful to interconnect publications and datasets in repositories.
+The main benefits of PIDs are increased findability, visibility, and ease of access of their scientific work. In the context of research data, PIDs are especially useful to interconnect publications and datasets in repositories.
 
-## DOIs
+## About the individual PIDs
+
+### DOIs {#doi}
 
 <FloatImage
   alt="DOI logo"
@@ -26,9 +28,7 @@ The main benefits of PIDs for chemistry researchers are increased findability, v
 
 Digital Object Identifiers are PIDs for objects such as publications and datasets, but also physical objects. DOIs are resolved based on the [Handle System](https://www.handle.net/)to lead to the corresponding landing page and are assigned by members of the [International DOI Foundation](https://datascience.codata.org/articles/abstract/353/). Most well-recognised [DOI registration agencies](https://www.doi.org/the-community/existing-registration-agencies/) include [CrossRef](https://www.crossref.org/) for publications and [DataCite](https://datacite.org/) focusing on [datasets](https://doi.org/10.1109/COINFO.2009.66).
 
-A DOI consists of a character string divided into two parts by a slash. The prefix always starts with a `10.` and identifies the registrant, who retrieves a DOI from a DOI registration agency. Every registrant has its own unique prefix. The suffix identifies a specific object registered by a registrant via a registration agency.
-
-DOIs are most frequently displayed as an URL such as `https://doi.org/10.1000/182` and include a resolver as HTTP proxy server to redirect to the linked object. DOIs are standardised by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) in [ISO 26324](https://www.iso.org/standard/43506.html).
+A DOI consists of a character string divided into two parts by a slash. The prefix always starts with a `10.` and identifies the registrant. Every registrant has its own unique prefix. The suffix identifies a specific object. DOIs are most frequently displayed as an URL such as `https://doi.org/10.1000/182`.
 
 <ButtonContainer>
   <FloatImage
@@ -52,7 +52,7 @@ Most importantly, domain-independent [metadata](/docs/metadata) also including p
 
 Registrants are [liable](https://support.datacite.org/docs/doi-registration-policy) to update the URL connected to the DOI if the object is moved.
 
-## ORCID iDs
+### ORCID iDs {#orcid}
 
 <FloatImage
   alt="ORCiD logo"
@@ -61,15 +61,15 @@ Registrants are [liable](https://support.datacite.org/docs/doi-registration-poli
   float="left"
 />
 
-[ORCID iDs](https://orchid.org/) are open and non-proprietary PIDs for authors also described as unique author identifiers and can be retrieved and used by any author free of charge. They are provided by the non-profit organization ORCID Inc., formerly called Open Research and Contributors ID organisation, and sustained by fees of member organisations, providing extended application program interfaces (API) for their members to integrate ORCID services.
+[ORCID iDs](https://orchid.org/) are open and non-proprietary PIDs for authors that can be used by any author free of charge. They are provided by the non-profit organization ORCID Inc., providing application program interfaces (API) for their members to integrate ORCID services.
 
-An ORCID iD is a [16-digit alphanumerical code](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier) to unambiguously identify authors, whille author names might not be unique, may change, or may have different ordering conventions depending on cultural differences. ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` but are also typically depicted without the resolver as an URN, e.g. `ORCID:0000-0000-0000-0000`. ORCID iDs are a subset of International Standards Name Identifiers (ISNI) provided by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) as [ISO 27729](https://www.iso.org/standard/44292.html).
+An ORCID iD is a [16-digit alphanumerical code](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier) to unambiguously identify authors, whille author names might not be unique, may change, or may have different ordering conventions depending on cultural differences. ORCID iDs can be depicted as an URL, e.g. `https://orcid.org/0000-0000-0000-0000` and typically as an URN, e.g. `ORCID:0000-0000-0000-0000`. ORCID iDs are a subset of International Standards Name Identifiers (ISNI) provided by the [International Organisation for Standardisation](https://www.iso.org/) (ISO) as [ISO 27729](https://www.iso.org/standard/44292.html).
 
-The [ORCID record](https://doi.org/10.1038/462825a) connected to ORCID iDs includes the bibliographic output and may also provide information on employment, education and qualification, invited positions and distinctions, memberships as well as service and funding, depending on the privacy setting made by the author.
+The [ORCID record](https://doi.org/10.1038/462825a) connected to ORCID iDs includes the bibliographic output and may also provide information on employment, education and qualification, invited positions and distinctions, memberships as well as service and funding.
 
-In addition to ORCID iDs as non-proprietary PIDs for authors, there are also proprietary author identifiers such as Thomson Reuters’ [Web of Science ResearcherID](https://www.researcherid.com/#rid-for-researchers) and Elsevier’s [Scopus Author ID](https://www.scopus.com/freelookup/form/author.uri).
+In addition to non-proprietary ORCID iD, there are also proprietary author identifiers such as Thomson Reuters’ [Web of Science ResearcherID](https://www.researcherid.com/#rid-for-researchers) and Elsevier’s [Scopus Author ID](https://www.scopus.com/freelookup/form/author.uri).
 
-## Resarch Organisation Registry
+### Research Organisation Registry {#ror}
 
 <FloatImage
   alt="ROR logo CC BY 4.0"
@@ -84,7 +84,35 @@ ROR should be provided in affiliations of researchers in scientific publications
 
 ROR does support parent-child hierarchies as well as lateral relationships between organisations. An example might include a university having a child organisation such as a research institute [German: Fakultät] and related organisations such as a university hospital. However, ROR focuses on fundamental affiliations and is not focused on all subdivisions of an organisations such as departments [German: Institut] as high-level institutional information is more stable.
 
-## ePICs
+### InChI (International Chemical Identifier) {#inchi}
+
+<FloatImage
+  alt="InChI Header logo"
+  url="/img/topics/InChITrust-padded.jpg"
+  height="80px"
+  width="auto"
+  float="left"
+/>
+
+The InChI ([International Chemical Identifier](https://www.inchi-trust.org/)) is a standardised, text-based identification system for chemical compounds. It was developed under the auspices of ([IUPAC](https://iupac.org/)) to represent chemical structures unambiguously and in a machine-readable format. The aim of the system is to facilitate the exchange of chemical information between databases, scientific publications and software applications.
+
+An InChI describes the structure of a chemical compound using a defined character string, e.g. InChI=1S/CH4/h1H4 for CH4 (methane). Information on the molecular formula, atomic bonding, hydrogen atoms, charges, stereochemistry and isotopic compositions is encoded across several successive levels (‘layers’). This standardised representation enables identical chemical structures to be reliably recognised even when they are stored in different databases or programmes.
+
+The InChIKey is a shortened form of the InChI. It is a compact hash code consisting of letters, generated from the InChI. The InChIKey is particularly suitable for internet searches and for the rapid indexing of large datasets.
+
+The key advantages of InChI include its openness, its international standardisation and its high level of interoperability. Unlike proprietary identification systems, the standard can be used freely.
+
+### CAS-Number {#cas}
+
+The CAS number (Chemical Abstracts Service Registry Number, ([CAS](https://www.cas.org/) RN®) is a globally recognised identification system for chemical substances. It is assigned by the Chemical Abstracts Service and is used to uniquely identify chemical compounds, polymers, alloys, biomolecules and other substances. The use of CAS numbers allows substances to be uniquely identified, regardless of their name or the language used.
+
+A CAS number consists of three blocks of numbers separated by hyphens, for example 7732-18-5 for water. The last block of numbers contains a check digit. The number itself does not contain any information about the chemical structure or properties of a substance, but serves solely as a unique identifier.
+
+The register comprises many millions of substances and is continually being expanded. CAS numbers are used in safety data sheets, scientific publications, patent documents, substance databases and regulatory frameworks. They facilitate the search for chemical substances and help to avoid confusion that may arise from different common names, trade names or systematic names.
+
+Due to its uniqueness and widespread use, the CAS number is regarded as one of the most important identifiers for chemical substances. However, unlike structure-based identifiers such as InChI, the CAS number does not provide any information about the molecular structure of a compound.
+
+### ePICs {#epics}
 
 <FloatImage
   alt="ePIC Header logo"
@@ -98,7 +126,7 @@ The Persistent Identifier for eResearch ([ePICs](https://www.pidconsortium.net/)
 
 This type of PID will commonly lead to a landing page, the content of which is maintained by the PID owner and includes the dataset's metadata or a method of contacting those responsible for the dataset.
 
-## ARK
+## ARK {#ark}
 
 <FloatImage
   alt="ARK logo"
@@ -108,7 +136,7 @@ This type of PID will commonly lead to a landing page, the content of which is m
 />
 
 The Archival Research Key ([ARK](https://arks.org/about/ark-overview/)) are open identifiers hich are assigned to physical and digital information objects, mostly in the cultural studies.
-ARK prefixes are centrally assigned on request by the ARK Alliance and can be resolved centrally on services like [N2T](https://n2t.net/). More information is provided on the [ARK overview page](https://arks.org/about/ark-overview/#resolvers).  
+ARK prefixes are centrally assigned on request by the ARK Alliance and can be resolved centrally on services like [N2T](https://n2t.net/).
 The single ARKs are assigned and managed by the single institutions on an own server. Other that DOIs, they are free of charge.  
 An ARK usually has the form `ark:12148/btv1b8449691v/f29` and can be combined with different ARK URI prefixes leading to different resolving servers.
 Attaching a `?` at the end of an ARK allows adding a structured description of the resource.
