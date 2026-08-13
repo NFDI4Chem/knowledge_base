@@ -2,11 +2,16 @@
 title: "Choose a Repository"
 slug: "/choose_repository"
 ---
-import FloatImage from "@site/src/components/commons/FloatImage.js";
 
+import FloatImage from "@site/src/components/commons/FloatImage.js";
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import DecisionTree from "@site/src/components/repos/DecisionTree";
+
+import {
+  BulletContainer,
+  BulletBox,
+} from "@site/src/components/commons/BulletBox";
 
 The NFDI4Chem aims to support researchers in collecting, storing, processing, analysing, publishing, and reusing research data. Based on the [NFDI4Chem Community Survey](https://doi.org/10.1002/zaac.202000339), a list of the most [common data types and formats](/docs/pub_data_types_formats) of the community has been compiled to suggests suitable trusted chemistry-friendly repositories.
 
@@ -22,21 +27,128 @@ Based on the [criteria](https://doi.org/10.3897/rio.6.e55852) chosen by Task Are
 
 ## Core Repositories
 
+<BulletContainer>
+  <BulletBox
+    secondary
+    {...{
+      "--ifm-button-size-multiplier": "1",
+      flexBasis: "250px",
+      fontWeight: "unset",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-evenly",
+    }}
+  >
+    <FloatImage
+      url="/img/ChemotionRepo_Logo.svg"
+      alt="Chemotion Repository Logo"
+      float="none"
+    />
+    Field-specific sample and reaction-centric repository including analysis
+    data such as NMR, UV-VIS, IR, and MS data.
+  </BulletBox>
 
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/ChemotionRepo_Logo.svg")} alt="Chemotion Repository Logo" width="100" style={{display: "block"}} /><span style={{margin: 10, lineHeight: 1.2}}>Field-specific sample and reaction-centric repository including analysis data such as NMR, UV-VIS, IR, and MS data.</span></div>
-<br/>
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/Massbank_logo.svg")} alt="Massbank Logo" width="100" style={{display: "block", marginTop: "15px"}} /><span style={{margin: 10, lineHeight: 1.2}}>Field-specific ecosystem of databases and tools for mass spectrometry reference spectra.\*</span></div>
-<br/>
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/nmrXiv.svg")} alt="nmrXiv Logo" width="100" style={{display: "block", marginTop: "8px"}} /><span style={{margin: 10, lineHeight: 1.2}}>Field-specific repository for NMR data.</span></div>
-<br/>
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/radar4chem_Logo.svg")} alt="RADAR4Chem Logo" width="100" style={{display: "block", marginTop: "8px"}} /><span style={{margin: 10, lineHeight: 1.2}}>Generic, multidisciplinary repository that offers a free and reliable home for all chemical research data that do not fulfil the specifications of field-specific repositories.</span></div>
-<br/>
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/Logo_Beilstein_STRENDA_sRGB.jpg")} alt="Strenda DB Logo" width="100" style={{display: "block", marginTop: "8px"}} /><span style={{margin: 10, lineHeight: 1.2}}>Field-specific repository for enzymology data, which incorporates the STRENDA Guidelines for reporting enzymology data.</span></div>
-<br/>
-<div style={{display: "flex", alignItems: "flex-start", gap: "10px"}}><img src={useBaseUrl("/img/Suprabank_logo.svg")} alt="Suprabank Logo" width="100" style={{display: "block", marginTop: "4px"}} /><span style={{margin: 10, lineHeight: 1.2}}>Field-specific repository for intermolecular interactions data.</span></div>
-<br/>
+<BulletBox
+  secondary
+  {...{
+    "--ifm-button-size-multiplier": "1",
+    flexBasis: "250px",
+    fontWeight: "unset",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <FloatImage url="/img/Massbank_logo.svg" alt="Massbank Logo" float="none" />
+  Field-specific ecosystem of databases and tools for mass spectrometry
+  reference spectra.\*
+</BulletBox>
 
-<small><em>\*Resource which does not accept direct submission of MS data in vendor or mzML format, but data in MassBank format, see [RMassBank](https://bioconductor.org/packages/release/bioc/html/RMassBank.html).</em></small>
+<BulletBox
+  secondary
+  {...{
+    "--ifm-button-size-multiplier": "1",
+    flexBasis: "250px",
+    fontWeight: "unset",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <FloatImage url="/img/nmrXiv.svg" alt="nmrXiv Logo" float="none" />
+  Field-specific repository for NMR data.
+</BulletBox>
+
+<BulletBox
+  secondary
+  {...{
+    "--ifm-button-size-multiplier": "1",
+    flexBasis: "250px",
+    fontWeight: "unset",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <FloatImage
+    url="/img/radar4chem_Logo.svg"
+    alt="RADAR4Chem Logo"
+    float="none"
+  />
+  Generic, multidisciplinary repository that offers a free and reliable home for
+  all chemical research data that do not fulfil the specifications of
+  field-specific repositories.
+</BulletBox>
+
+<BulletBox
+  secondary
+  {...{
+    "--ifm-button-size-multiplier": "1",
+    flexBasis: "250px",
+    fontWeight: "unset",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+  }}
+>
+  <FloatImage
+    url="/img/Logo_Beilstein_STRENDA_sRGB.jpg"
+    alt="Strenda DB Logo"
+    float="none"
+  />
+  Field-specific repository for enzymology data, which incorporates the STRENDA
+  Guidelines for reporting enzymology data.
+</BulletBox>
+
+  <BulletBox
+    secondary
+    {...{
+      "--ifm-button-size-multiplier": "1",
+      flexBasis: "250px",
+      fontWeight: "unset",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-evenly",
+    }}
+  >
+    <FloatImage url="/img/Suprabank_logo.svg" alt="Suprabank Logo" float="none" />
+    Field-specific repository for intermolecular interactions data.
+  </BulletBox>
+</BulletContainer>
+
+<small>
+  <em>
+    \*Resource which does not accept direct submission of MS data in vendor or
+    mzML format, but data in MassBank format, see
+    [RMassBank](https://bioconductor.org/packages/release/bioc/html/RMassBank.html).
+  </em>
+</small>
 
 ## Associated repositories
 
