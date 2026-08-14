@@ -29,8 +29,8 @@ Based on the [criteria](https://doi.org/10.3897/rio.6.e55852) chosen by Task Are
 ## Core Repositories
 
 <BulletContainer>
-  {repositoryData.map((repo) => (
-    <BulletBox key={repo.name} secondary {...repositoryStyle}>
+  {repositoryData.map((repo, index) => (
+    <BulletBox key={index} secondary {...repositoryStyle}>
       <FloatImage url={repo.url} alt={repo.name} float="none" />
       {repo.description}
     </BulletBox>
