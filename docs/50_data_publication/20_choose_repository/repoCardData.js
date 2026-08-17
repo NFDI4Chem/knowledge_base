@@ -28,7 +28,7 @@ export const repositoryData = [
     },
     {
         name: "STRENDA",
-        url: "/img/data_pub/repos/Logo_Beilstein_STRENDA_sRGB.jpg",
+        url: "/img/data_pub/repos/Logo_Beilstein_STRENDA_sRGB.png",
         alt: "Strenda DB Logo",
         description:
             "Field-specific repository for enzymology data, which incorporates the STRENDA Guidelines for reporting enzymology data.",
