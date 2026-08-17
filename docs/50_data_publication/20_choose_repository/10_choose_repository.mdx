@@ -12,7 +12,7 @@ import {
   BulletContainer,
   BulletBox,
 } from "@site/src/components/commons/BulletBox";
-import { repositoryData, repositoryStyle } from "./repoCardData";
+import { repositoryData, repositoryStyle, RepoDiv } from "./repoCardData";
 
 The NFDI4Chem aims to support researchers in collecting, storing, processing, analysing, publishing, and reusing research data. Based on the [NFDI4Chem Community Survey](https://doi.org/10.1002/zaac.202000339), a list of the most [common data types and formats](/docs/pub_data_types_formats) of the community has been compiled to suggests suitable trusted chemistry-friendly repositories.
 
@@ -31,13 +31,10 @@ Based on the [criteria](https://doi.org/10.3897/rio.6.e55852) chosen by Task Are
 <BulletContainer>
   {repositoryData.map((repo, index) => (
     <BulletBox key={index} secondary {...repositoryStyle}>
-      <FloatImage
-        url={repo.url}
-        alt={repo.name}
-        float="none"
-        margin="0.5rem 0"
-      />
-      {repo.description}
+      <RepoDiv img>
+        <FloatImage url={repo.url} alt={repo.name} />
+      </RepoDiv>
+      <RepoDiv>{repo.description}</RepoDiv>
     </BulletBox>
   ))}
 </BulletContainer>

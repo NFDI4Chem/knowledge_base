@@ -44,10 +44,22 @@ export const repositoryData = [
 
 export const repositoryStyle = {
     "--ifm-button-size-multiplier": "1",
-    flexBasis: "250px",
+    flex: "250px",
     fontWeight: "unset",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-evenly",
 };
+
+const imgStyle = { display: "flex", flex: "50%", width: "100%", padding: "0.5rem 0", alignItems: "end", justifyContent: "center" }
+
+const descStyle = {
+    display: "flex", flexGrow: 1, flex: "50%", width: "100%", padding: "0.5rem", alignItems: "start", justifyContent: "center"
+}
+
+export function RepoDiv(props) {
+    return (
+        <div style={props.img ? imgStyle : descStyle}>{props.children}</div>
+    )
+}
