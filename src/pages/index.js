@@ -32,7 +32,7 @@ const features = [
     text: <Translate>Electronic Lab Notebooks</Translate>,
     imgUrl: "/img/nfdi4chem_SmartLab_white.svg",
     alt: "Electronic Lab Notebooks Icon",
-    url: "/docs/smartlab",
+    url: "/docs/eln",
   },
   {
     text: <Translate>How to Publish Your Data</Translate>,
