@@ -42,6 +42,7 @@
 		"@crowdin/cli": "^4.15.1",
 		"@docusaurus/module-type-aliases": "^3.10.2",
 		"@docusaurus/types": "^3.10.2",
+		"@playwright/test": "^1.62.1",
 		"glob": "^13.0.6",
 		"gray-matter": "^4.0.3",
 		"lint": "^1.2.2",
