@@ -24,6 +24,7 @@ yarn.lock
 # Playwright artifacts
 playwright-report/
 test-results/
+tests/e2e/**/*.spec.ts-snapshots/
 # config for staging
 docusaurus.config.js
 .Rproj.user
