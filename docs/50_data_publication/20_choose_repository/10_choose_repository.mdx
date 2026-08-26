@@ -9,13 +9,13 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import DecisionTree from "@site/src/components/repos/DecisionTree";
 
 import {
-  BulletContainer,
-  BulletBox,
+	BulletContainer,
+	BulletBox,
 } from "@site/src/components/commons/BulletBox";
 import {
-  repositoryData,
-  repositoryStyle,
-  RepoDiv,
+	repositoryData,
+	repositoryStyle,
+	RepoDiv,
 } from "@site/src/components/repos/repoCardData";
 
 The NFDI4Chem aims to support researchers in collecting, storing, processing, analysing, publishing, and reusing research data. Based on the [NFDI4Chem Community Survey](https://doi.org/10.1002/zaac.202000339), a list of the most [common data types and formats](/docs/pub_data_types_formats) of the community has been compiled to suggests suitable trusted chemistry-friendly repositories.
@@ -33,22 +33,22 @@ Based on the [criteria](https://doi.org/10.3897/rio.6.e55852) chosen by Task Are
 ## Core Repositories
 
 <BulletContainer>
-  {repositoryData.map((repo, index) => (
-    <BulletBox key={index} secondary {...repositoryStyle}>
-      <RepoDiv img>
-        <FloatImage url={repo.url} alt={repo.name} />
-      </RepoDiv>
-      <RepoDiv>{repo.description}</RepoDiv>
-    </BulletBox>
-  ))}
+	{repositoryData.map((repo, index) => (
+		<BulletBox key={index} secondary {...repositoryStyle}>
+			<RepoDiv img>
+				<FloatImage url={repo.url} alt={repo.name} />
+			</RepoDiv>
+			<RepoDiv>{repo.description}</RepoDiv>
+		</BulletBox>
+	))}
 </BulletContainer>
 
 <small>
-  <em>
-    \*Resource which does not accept direct submission of MS data in vendor or
-    mzML format, but data in MassBank format, see
-    [RMassBank](https://bioconductor.org/packages/release/bioc/html/RMassBank.html).
-  </em>
+	<em>
+		\*Resource which does not accept direct submission of MS data in vendor
+		or mzML format, but data in MassBank format, see
+		[RMassBank](https://bioconductor.org/packages/release/bioc/html/RMassBank.html).
+	</em>
 </small>
 
 ## Associated repositories

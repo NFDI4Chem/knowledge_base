@@ -1,37 +1,37 @@
 /* N4C Feature styles */
 
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1em;
-  width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1em;
+	width: 100%;
 }
 
 .featureButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: unset;
-  width: var(--n4c-button-width);
-  margin: var(--n4c-button-vpad);
-  font-size: 1.1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: unset;
+	width: var(--n4c-button-width);
+	margin: var(--n4c-button-vpad);
+	font-size: 1.1rem;
 }
 
 .featureButtonIndex {
-  border: none;
+	border: none;
 }
 
 .featureSvg {
-  display: flex;
-  justify-content: center;
-  padding: 2px;
-  width: 110px;
-  height: 110px;
-  margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	padding: 2px;
+	width: 110px;
+	height: 110px;
+	margin-top: 5px;
 }
 
 .featureButton * {
-  text-align: center;
-  white-space: normal;
+	text-align: center;
+	white-space: normal;
 }
