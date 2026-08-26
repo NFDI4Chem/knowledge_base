@@ -15,15 +15,15 @@ After approval, the changed sources will be forwarded for [localisation](./local
 
 ## Conventions
 
--   Use british english
--   headings with: # (primary), ## (secondary), ### (tertiary etc)
+- Use british english
+- headings with: # (primary), ## (secondary), ### (tertiary etc)
 
 ## Source information
 
--   Citations (e.g. for journal articles): only cite the name of the article and doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote which contains a citation, use a superscripted number.
--   For references, sources and/or further information/reading, please always use the heading "Sources and further information".
--   Use bullet points
--   Indicate if a source is written in German (e.g. - German: Article about ...)
+- Citations (e.g. for journal articles): only cite the name of the article and doi (if available) and add link to doi - as opposed to a citation standard such as Angewandte, RSC etc. To cite to a footnote which contains a citation, use a superscripted number.
+- For references, sources and/or further information/reading, please always use the heading "Sources and further information".
+- Use bullet points
+- Indicate if a source is written in German (e.g. - German: Article about ...)
 
 ## Adding images
 

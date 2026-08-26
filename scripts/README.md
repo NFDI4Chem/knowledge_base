@@ -8,9 +8,9 @@ Dieses Verzeichnis enthält automatisierte Validierungs-Tools für die Knowledge
 
 Validiert alle Markdown-Dateien auf:
 
-* Gültiges Frontmatter mit Slug
-* Gültige Seitentitel
-* Keine doppelten Titel
+- Gültiges Frontmatter mit Slug
+- Gültige Seitentitel
+- Keine doppelten Titel
 
 **Verwendung:**
 
@@ -20,8 +20,8 @@ npm run validate-content
 
 ## Dokumentation
 
-* **[VALIDATION\_SETUP.md](VALIDATION_SETUP.md)** - Detaillierte Setup-Anleitung
-* **[EXAMPLES.md](EXAMPLES.md)** - Beispiele für gültige und ungültige Dateien
+- **[VALIDATION\_SETUP.md](VALIDATION_SETUP.md)** - Detaillierte Setup-Anleitung
+- **[EXAMPLES.md](EXAMPLES.md)** - Beispiele für gültige und ungültige Dateien
 
 ## GitHub Actions Integration
 

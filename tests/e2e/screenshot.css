@@ -1,0 +1,22 @@
+/* Hide known flaky elements for deterministic screenshots */
+iframe,
+.avatar__photo,
+img[src$=".gif"],
+.DocSearch-Button-Keys > kbd,
+.theme-last-updated,
+.docusaurus-mermaid-container,
+[class*="playgroundPreview"] {
+	display: none !important;
+}
+
+/* Video consent placeholders can shift layout */
+[class*="videoInfo"],
+button[aria-label*="agree" i],
+button[class*="agree" i] {
+	visibility: hidden !important;
+}
+
+/* Reduce animated caret/cursor artifacts */
+* {
+	caret-color: transparent !important;
+}
