@@ -12,104 +12,104 @@ import styles from "@site/src/css/lbe.module.css";
 // Function for single lbe dataset block
 
 function LbeBlock({
-  title,
-  authors,
-  journal,
-  pubyear,
-  linkpub,
-  linkdata,
-  linkcomment,
-  description,
-  lbeState,
-  setLbeState,
+	title,
+	authors,
+	journal,
+	pubyear,
+	linkpub,
+	linkdata,
+	linkcomment,
+	description,
+	lbeState,
+	setLbeState,
 }) {
-  // Extract DOI from link by cutting right of "doi.org"
-  var doi = linkpub.slice(linkpub.indexOf("doi.org") + 8);
+	// Extract DOI from link by cutting right of "doi.org"
+	var doi = linkpub.slice(linkpub.indexOf("doi.org") + 8);
 
-  // Define set of repos in this dataset
-  var myRepos = Array.from(new Set(linkdata.map((obj) => obj.name)))
-    .flat()
-    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+	// Define set of repos in this dataset
+	var myRepos = Array.from(new Set(linkdata.map((obj) => obj.name)))
+		.flat()
+		.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 
-  return (
-    <div className={styles.lbeBlock}>
-      <div className={styles.lbeBlockHeader}>
-        <div className={styles.lbeBlockHeaderTitle}>
-          <h3>{title}</h3>
-        </div>
-        <div className={styles.lbeBlockHeaderLink}>
-          <RepoButton name="Permalink" url={"./?doi=".concat(doi)} />
-        </div>
-      </div>
+	return (
+		<div className={styles.lbeBlock}>
+			<div className={styles.lbeBlockHeader}>
+				<div className={styles.lbeBlockHeaderTitle}>
+					<h3>{title}</h3>
+				</div>
+				<div className={styles.lbeBlockHeaderLink}>
+					<RepoButton name="Permalink" url={"./?doi=".concat(doi)} />
+				</div>
+			</div>
 
-      <p>
-        <em>
-          <Authors {...{ authors }} length={10} />
-        </em>
-      </p>
+			<p>
+				<em>
+					<Authors {...{ authors }} length={10} />
+				</em>
+			</p>
 
-      <p>
-        <em>{journal}</em> <strong>{pubyear}</strong>, DOI:{" "}
-        <a href={linkpub} target="_blank">
-          {doi}
-        </a>
-        .
-      </p>
+			<p>
+				<em>{journal}</em> <strong>{pubyear}</strong>, DOI:{" "}
+				<a href={linkpub} target="_blank">
+					{doi}
+				</a>
+				.
+			</p>
 
-      <p>
-        {myRepos.map((m, idx) => (
-          <FilterButton
-            key={idx}
-            name={m}
-            type="repo"
-            numbered={false}
-            funnel
-            title={"Filter datasets from " + m}
-            {...{ lbeState, setLbeState }}
-          />
-        ))}
-      </p>
+			<p>
+				{myRepos.map((m, idx) => (
+					<FilterButton
+						key={idx}
+						name={m}
+						type="repo"
+						numbered={false}
+						funnel
+						title={"Filter datasets from " + m}
+						{...{ lbeState, setLbeState }}
+					/>
+				))}
+			</p>
 
-      <hr className={styles.lbeBlockHr} />
+			<hr className={styles.lbeBlockHr} />
 
-      <Details
-        className={styles.lbeDetails}
-        contentClassName={styles.lbeDetailsCollapsible}
-        summary="Description"
-      >
-        <p>{description}</p>
-      </Details>
+			<Details
+				className={styles.lbeDetails}
+				contentClassName={styles.lbeDetailsCollapsible}
+				summary="Description"
+			>
+				<p>{description}</p>
+			</Details>
 
-      <hr className={styles.lbeBlockHr} />
+			<hr className={styles.lbeBlockHr} />
 
-      <Details
-        className={styles.lbeDetails}
-        contentClassName={styles.lbeDetailsCollapsible}
-        summary="Links to datasets"
-      >
-        <p>
-          {linkdata.map((props, idx) => (
-            <RepoButton key={idx} {...props} />
-          ))}
-        </p>
-        <p>
-          <em>{linkcomment}</em>
-        </p>
-      </Details>
-    </div>
-  );
+			<Details
+				className={styles.lbeDetails}
+				contentClassName={styles.lbeDetailsCollapsible}
+				summary="Links to datasets"
+			>
+				<p>
+					{linkdata.map((props, idx) => (
+						<RepoButton key={idx} {...props} />
+					))}
+				</p>
+				<p>
+					<em>{linkcomment}</em>
+				</p>
+			</Details>
+		</div>
+	);
 }
 
 // Render LBE entry list
 
 function LbeBody({ list, lbeState, setLbeState }) {
-  return (
-    <div className={styles.lbeBody}>
-      {list.map((props, idx) => (
-        <LbeBlock key={idx} {...props} {...{ lbeState, setLbeState }} />
-      ))}
-    </div>
-  );
+	return (
+		<div className={styles.lbeBody}>
+			{list.map((props, idx) => (
+				<LbeBlock key={idx} {...props} {...{ lbeState, setLbeState }} />
+			))}
+		</div>
+	);
 }
 
 export default LbeBody;

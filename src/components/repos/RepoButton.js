@@ -7,16 +7,16 @@ import styles from "@site/src/css/lbe.module.css";
 import clsx from "clsx";
 
 function RepoButton(props) {
-  return (
-    <Link
-      to={props.url}
-      target="_blank"
-      className={clsx(styles.lbeFilterbutton, styles.lbeChip)}
-    >
-      {props.intro ? props.intro + " " : null}
-      <strong>{props.name}</strong> <IconExternalLink />
-    </Link>
-  );
+	return (
+		<Link
+			to={props.url}
+			target="_blank"
+			className={clsx(styles.lbeFilterbutton, styles.lbeChip)}
+		>
+			{props.intro ? props.intro + " " : null}
+			<strong>{props.name}</strong> <IconExternalLink />
+		</Link>
+	);
 }
 
 export default RepoButton;
