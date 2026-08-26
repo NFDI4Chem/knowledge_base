@@ -1,7 +1,7 @@
 {
-  "label": "Electronic Lab Notebooks",
-  "link": {
-    "type": "doc",
-    "id": "eln"
-  }
+	"label": "Electronic Lab Notebooks",
+	"link": {
+		"type": "doc",
+		"id": "eln"
+	}
 }
