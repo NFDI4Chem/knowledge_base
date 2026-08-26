@@ -1,58 +1,65 @@
 {
-  "name": "nfdi-4-chem-knowledge-base",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "crowdin": "crowdin",
-    "validate-content": "node scripts/validate-content.js",
-    "test:ci": "npm run write-translations && npm run crowdin download && npm run validate-content && npm run build"
-  },
-  "dependencies": {
-    "@docusaurus/core": "^3.10.2",
-    "@docusaurus/faster": "^3.10.2",
-    "@docusaurus/plugin-sitemap": "^3.10.2",
-    "@docusaurus/preset-classic": "^3.10.2",
-    "@mdx-js/react": "^3.1.1",
-    "clsx": "^2.1.1",
-    "docusaurus-plugin-matomo": "^0.0.8",
-    "moment": "^2.30.1",
-    "nuka-carousel": "^8.2.0",
-    "prism-react-renderer": "^2.4.1",
-    "react": "^19",
-    "react-dom": "^19",
-    "react-tagcloud": "^2.3.3",
-    "use-immer": "^0.11.0",
-    "video-privacy": "^1.2.0"
-  },
-  "devDependencies": {
-    "@crowdin/cli": "^4.15.0",
-    "@docusaurus/module-type-aliases": "^3.10.2",
-    "@docusaurus/types": "^3.10.2",
-    "glob": "^13.0.6",
-    "gray-matter": "^4.0.3"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=18.0"
-  }
+	"name": "nfdi-4-chem-knowledge-base",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"docusaurus": "docusaurus",
+		"start": "docusaurus start",
+		"build": "docusaurus build",
+		"lint": "npm run lint:content",
+		"lint:all": "npm run lint:format && npm run lint:content",
+		"lint:format": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,json,css,yml,yaml}\"",
+		"lint:content": "npm run validate-content",
+		"lint:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,css,yml,yaml}\"",
+		"swizzle": "docusaurus swizzle",
+		"deploy": "docusaurus deploy",
+		"clear": "docusaurus clear",
+		"serve": "docusaurus serve",
+		"write-translations": "docusaurus write-translations",
+		"write-heading-ids": "docusaurus write-heading-ids",
+		"crowdin": "crowdin",
+		"validate-content": "node scripts/validate-content.js",
+		"test:ci": "npm run write-translations && npm run crowdin download && npm run validate-content && npm run build"
+	},
+	"dependencies": {
+		"@docusaurus/core": "^3.10.2",
+		"@docusaurus/faster": "^3.10.2",
+		"@docusaurus/plugin-sitemap": "^3.10.2",
+		"@docusaurus/preset-classic": "^3.10.2",
+		"@mdx-js/react": "^3.1.1",
+		"clsx": "^2.1.1",
+		"docusaurus-plugin-matomo": "^0.0.8",
+		"moment": "^2.30.1",
+		"nuka-carousel": "^8.2.0",
+		"prism-react-renderer": "^2.4.1",
+		"react": "^19",
+		"react-dom": "^19",
+		"react-tagcloud": "^2.3.3",
+		"use-immer": "^0.11.0",
+		"video-privacy": "^1.2.0"
+	},
+	"devDependencies": {
+		"@crowdin/cli": "^4.15.1",
+		"@docusaurus/module-type-aliases": "^3.10.2",
+		"@docusaurus/types": "^3.10.2",
+		"glob": "^13.0.6",
+		"gray-matter": "^4.0.3",
+		"lint": "^1.2.2",
+		"prettier": "^3.9.6"
+	},
+	"browserslist": {
+		"production": [
+			">0.5%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 3 chrome version",
+			"last 3 firefox version",
+			"last 5 safari version"
+		]
+	},
+	"engines": {
+		"node": ">=18.0"
+	}
 }

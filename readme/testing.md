@@ -23,12 +23,24 @@ To (re-)build the KB files after a content update, run:
 npm run build
 ```
 
+To run the default lint checks (content validation), run:
+
+```console
+npm run lint
+```
+
+To run the full lint checks (formatting + content validation), run:
+
+```console
+npm run lint:all
+```
+
 To run a local testing instance of the knowledge base, run:
 
 ```console
 npm run start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server. Press ```Ctrl + C``` to stop.
+This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server. Press `Ctrl + C` to stop.
 
 For further details please refer to the [Docusaurus documentation](https://docusaurus.io/docs/).

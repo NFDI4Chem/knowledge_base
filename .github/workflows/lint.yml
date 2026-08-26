@@ -1,0 +1,88 @@
+name: Lint
+
+on:
+    pull_request:
+        paths:
+            - "docs/**"
+            - "src/**"
+            - "i18n/**"
+            - "scripts/**"
+            - "static/**"
+            - "*.json"
+            - "*.js"
+            - "*.ts"
+            - "*.tsx"
+            - "*.md"
+            - "*.mdx"
+            - "package.json"
+            - "package-lock.json"
+            - ".prettierignore"
+            - ".github/workflows/lint.yml"
+    push:
+        branches:
+            - main
+            - localisation
+        paths:
+            - "docs/**"
+            - "src/**"
+            - "i18n/**"
+            - "scripts/**"
+            - "static/**"
+            - "*.json"
+            - "*.js"
+            - "*.ts"
+            - "*.tsx"
+            - "*.md"
+            - "*.mdx"
+            - "package.json"
+            - "package-lock.json"
+            - ".prettierignore"
+            - ".github/workflows/lint.yml"
+    workflow_dispatch:
+
+jobs:
+    lint:
+        name: Format & Content Lint
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v6
+              with:
+                  node-version: "lts/*"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run content lint
+              run: npm run lint
+
+            - name: Detect changed lintable files
+              id: changed-files
+              uses: tj-actions/changed-files@v47
+              with:
+                  files: |
+                      **/*.js
+                      **/*.jsx
+                      **/*.ts
+                      **/*.tsx
+                      **/*.md
+                      **/*.mdx
+                      **/*.json
+                      **/*.css
+                      **/*.yml
+                      **/*.yaml
+                  files_ignore: |
+                      package-lock.json
+
+            - name: Run format lint on changed files
+              if: steps.changed-files.outputs.any_changed == 'true'
+              run: npx prettier --check ${{ steps.changed-files.outputs.all_changed_files }}
+
+            - name: No changed lintable files
+              if: steps.changed-files.outputs.any_changed != 'true'
+              run: echo "No lintable files changed."
