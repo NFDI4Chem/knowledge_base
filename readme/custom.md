@@ -13,42 +13,42 @@ import FloatImage from "@site/src/components/commons/FloatImage";
 **Usage:**
 
 ```jsx
-<FloatImage 
-  url="/img/example.png" 
-  alt="Example image"
-  width="300px"
-  link="https://example.com"
+<FloatImage
+	url="/img/example.png"
+	alt="Example image"
+	width="300px"
+	link="https://example.com"
 />
 ```
 
 **Props:**
 
-* `url` (string, required) - Path to the image file (relative to static folder)
-* `alt` (string, required) - Alternative text for the image
-* `link` (string, optional) - URL to wrap the image in a clickable link
-* `...props` (any CSS properties) - Any additional props are applied as inline styles (e.g., `width`, `float`, `margin`)
+- `url` (string, required) - Path to the image file (relative to static folder)
+- `alt` (string, required) - Alternative text for the image
+- `link` (string, optional) - URL to wrap the image in a clickable link
+- `...props` (any CSS properties) - Any additional props are applied as inline styles (e.g., `width`, `float`, `margin`)
 
 **Default Styling:**
 
 The component has the following default styling:
 
-* `width: min(120px, 50%)` - Responsive width with 120px maximum
-* `float: right` - Floats to the right by default
-* `margin: 0px 20px 0px 20px` - 20px left and right margin
+- `width: min(120px, 50%)` - Responsive width with 120px maximum
+- `float: right` - Floats to the right by default
+- `margin: 0px 20px 0px 20px` - 20px left and right margin
 
 Any of these can be overriden by passing props:
 
 ```jsx
-<FloatImage 
-  url="/img/chart.png" 
-  alt="Data visualization"
-  width="400px"
-  float="left"
-  margin="1em 0"
+<FloatImage
+	url="/img/chart.png"
+	alt="Data visualization"
+	width="400px"
+	float="left"
+	margin="1em 0"
 />
 ```
 
-***
+---
 
 ## LbeChip
 
@@ -68,9 +68,9 @@ import LbeChip from "@site/src/components/commons/LbeChip";
 
 **Props:**
 
-* `title` (string, required) - The subdiscipline name used for filtering datasets
+- `title` (string, required) - The subdiscipline name used for filtering datasets
 
-***
+---
 
 ## FeatureButton
 
@@ -85,26 +85,26 @@ import FeatureButton from "@site/src/components/features/FeatureButton";
 **Usage:**
 
 ```jsx
-<FeatureButton 
-  url="/docs/example"
-  imgUrl="/img/icon.svg"
-  text="Feature Name"
-  width="150px"
-  alt="Feature icon"
+<FeatureButton
+	url="/docs/example"
+	imgUrl="/img/icon.svg"
+	text="Feature Name"
+	width="150px"
+	alt="Feature icon"
 />
 ```
 
 **Props:**
 
-* `url` (string, required) - The link destination URL
-* `imgUrl` (string, required) - Path to the image/icon (relative to static folder)
-* `text` (string, required) - Button text displayed below the image
-* `width` (string, optional) - Width of the image (default: "120px")
-* `alt` (string, optional) - Alternative text for the image (defaults to `text` if not provided)
-* `index` (boolean, optional) - If true, applies primary button styling; otherwise uses secondary styling
-* `classes` (string, optional) - Additional CSS classes to apply to the button
+- `url` (string, required) - The link destination URL
+- `imgUrl` (string, required) - Path to the image/icon (relative to static folder)
+- `text` (string, required) - Button text displayed below the image
+- `width` (string, optional) - Width of the image (default: "120px")
+- `alt` (string, optional) - Alternative text for the image (defaults to `text` if not provided)
+- `index` (boolean, optional) - If true, applies primary button styling; otherwise uses secondary styling
+- `classes` (string, optional) - Additional CSS classes to apply to the button
 
-***
+---
 
 ## Features
 
@@ -120,20 +120,20 @@ import Features from "@site/src/components/features/Features";
 
 ```jsx
 const features = [
-  { url: "/docs/overview", imgUrl: "/img/overview.svg", text: "Overview" },
-  { url: "/docs/start", imgUrl: "/img/start.svg", text: "Get Started" },
+	{ url: "/docs/overview", imgUrl: "/img/overview.svg", text: "Overview" },
+	{ url: "/docs/start", imgUrl: "/img/start.svg", text: "Get Started" },
 ];
 
-<Features featureList={features} index width="140px" />
+<Features featureList={features} index width="140px" />;
 ```
 
 **Props:**
 
-* `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
-* `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
-* `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
+- `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
+- `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
+- `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
 
-***
+---
 
 ## BulletBox
 
@@ -149,17 +149,17 @@ import { BulletBox } from "@site/src/components/commons/BulletBox";
 
 ```jsx
 <BulletBox secondary>
-  <h3>Feature Title</h3>
-  <p>Feature description goes here.</p>
+	<h3>Feature Title</h3>
+	<p>Feature description goes here.</p>
 </BulletBox>
 ```
 
 **Props:**
 
-* `children` (ReactNode, required) - Content to display inside the box
-* `secondary` (boolean, optional) - If true, applies secondary button styling; otherwise uses primary styling
+- `children` (ReactNode, required) - Content to display inside the box
+- `secondary` (boolean, optional) - If true, applies secondary button styling; otherwise uses primary styling
 
-***
+---
 
 ## BulletContainer
 
@@ -175,17 +175,17 @@ import { BulletContainer } from "@site/src/components/commons/BulletBox";
 
 ```jsx
 <BulletContainer>
-  <BulletBox>
-    <h3>Feature 1</h3>
-    <p>Description 1</p>
-  </BulletBox>
-  <BulletBox secondary>
-    <h3>Feature 2</h3>
-    <p>Description 2</p>
-  </BulletBox>
+	<BulletBox>
+		<h3>Feature 1</h3>
+		<p>Description 1</p>
+	</BulletBox>
+	<BulletBox secondary>
+		<h3>Feature 2</h3>
+		<p>Description 2</p>
+	</BulletBox>
 </BulletContainer>
 ```
 
 **Props:**
 
-* `children` (ReactNode, required) - Typically contains multiple BulletBox components
+- `children` (ReactNode, required) - Typically contains multiple BulletBox components

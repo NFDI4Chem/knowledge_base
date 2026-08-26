@@ -32,21 +32,17 @@ import FloatImage from "@site/src/components/commons/FloatImage";
 
 # Page content starts here
 
-<FloatImage 
-  url="/img/example.png" 
-  alt="Example image"
-  width="300px"
-/>
+<FloatImage url="/img/example.png" alt="Example image" width="300px" />
 ```
 
 You can also make the image clickable by adding a `link` prop:
 
 ```mdx
-<FloatImage 
-  url="/img/logo.png" 
-  alt="NFDI4Chem logo"
-  width="200px"
-  link="https://nfdi4chem.de"
+<FloatImage
+	url="/img/logo.png"
+	alt="NFDI4Chem logo"
+	width="200px"
+	link="https://nfdi4chem.de"
 />
 ```
 

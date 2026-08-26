@@ -7,16 +7,16 @@ Dieses Dokument erklärt den automatischen Test-Setup für Pull Requests.
 Das System validiert bei jedem PR automatisch:
 
 1. **Frontmatter-Validierung** (`scripts/validate-content.js`)
-   * Alle md/mdx-Dateien müssen gültiges YAML-Frontmatter haben
-   * Mindestens ein `slug` muss im Frontmatter vorhanden sein
+    - Alle md/mdx-Dateien müssen gültiges YAML-Frontmatter haben
+    - Mindestens ein `slug` muss im Frontmatter vorhanden sein
 2. **Titel-Validierung** (`scripts/validate-content.js`)
-   * Jede Seite muss einen gültigen Titel haben (mindestens eine der folgenden Optionen):
-     * Eine `h1`-Überschrift (`# Titel`)
-     * Ein `title` im Frontmatter
-   * Falls beide vorhanden sind, dürfen sie nicht identisch sein
+    - Jede Seite muss einen gültigen Titel haben (mindestens eine der folgenden Optionen):
+        - Eine `h1`-Überschrift (`# Titel`)
+        - Ein `title` im Frontmatter
+    - Falls beide vorhanden sind, dürfen sie nicht identisch sein
 3. **Build-Validierung** (`GitHub Actions Workflow`)
-   * Der Docusaurus-Build muss fehlerfrei laufen
-   * Keine Warnings oder Errors beim Build
+    - Der Docusaurus-Build muss fehlerfrei laufen
+    - Keine Warnings oder Errors beim Build
 
 ## Komponenten
 
@@ -61,11 +61,11 @@ node scripts/validate-content.js
 
 Der Workflow läuft automatisch bei Pull Requests:
 
-* Triggert bei PRs mit Änderungen in `docs/`, `package.json`, oder dem Workflow selbst
-* Installiert Dependencies
-* Führt Frontmatter/Titel-Validierung durch
-* Führt Docusaurus-Build durch
-* Meldet Ergebnisse im PR
+- Triggert bei PRs mit Änderungen in `docs/`, `package.json`, oder dem Workflow selbst
+- Installiert Dependencies
+- Führt Frontmatter/Titel-Validierung durch
+- Führt Docusaurus-Build durch
+- Meldet Ergebnisse im PR
 
 ## Anforderungen für Dokumente
 
@@ -111,7 +111,6 @@ slug: /page/
 slug: /page/
 title: Page Title
 ---
-
 Inhalt ohne h1...
 ```
 
@@ -141,7 +140,6 @@ title: Same Title
 ---
 slug: /page/
 ---
-
 Nur Inhalt, kein Titel...
 ```
 
@@ -151,10 +149,10 @@ Für das Validierungsskript werden zwei neue devDependencies hinzugefügt:
 
 ```json
 {
-  "devDependencies": {
-    "glob": "^10.3.10",
-    "gray-matter": "^4.0.3"
-  }
+	"devDependencies": {
+		"glob": "^10.3.10",
+		"gray-matter": "^4.0.3"
+	}
 }
 ```
 
@@ -167,20 +165,22 @@ npm install
 ## Installation & Setup
 
 1. **Dependencies installieren:**
-   ```bash
-   npm install
-   ```
+
+    ```bash
+    npm install
+    ```
 
 2. **Lokal testen:**
-   ```bash
-   npm run validate-content
-   npm run build
-   ```
+
+    ```bash
+    npm run validate-content
+    npm run build
+    ```
 
 3. **Beide Tests zusammen:**
-   ```bash
-   npm run test:ci
-   ```
+    ```bash
+    npm run test:ci
+    ```
 
 ## CI/CD Integration
 
@@ -200,8 +200,8 @@ Der Workflow `pr-validation.yml` läuft automatisch bei jedem PR. Die Prüfungen
 
 **Status in GitHub:**
 
-* 🟢 Grün = Alle Checks bestanden
-* 🔴 Rot = Ein oder mehrere Checks fehlgeschlagen
+- 🟢 Grün = Alle Checks bestanden
+- 🔴 Rot = Ein oder mehrere Checks fehlgeschlagen
 
 ## Fehlerbehebung
 
@@ -234,11 +234,9 @@ Lösung: Nutze mindestens eine der beiden Optionen:
 ```yaml
 ---
 slug: /page/
-title: Page Title  # Option 1
+title: Page Title # Option 1
 ---
-
 # oder Option 2
-
 ---
 slug: /page/
 ---
@@ -247,21 +245,21 @@ slug: /page/
 
 ### Build-Fehler
 
-* Prüfe auf broken links
-* Prüfe auf broken images
-* Prüfe MDX-Syntax
-* Schau in die Build-Logs
+- Prüfe auf broken links
+- Prüfe auf broken images
+- Prüfe MDX-Syntax
+- Schau in die Build-Logs
 
 ## Erwiterungsmöglichkeiten
 
 Das System lässt sich leicht erweitern um:
 
-* Maximal erlaubte Dateigröße
-* Link-Validierung
-* Image-Validierung
-* SEO-Checks (Meta-Description, etc.)
-* Linting (Remark, MDLint)
-* Spellchecking
+- Maximal erlaubte Dateigröße
+- Link-Validierung
+- Image-Validierung
+- SEO-Checks (Meta-Description, etc.)
+- Linting (Remark, MDLint)
+- Spellchecking
 
 ## Support
 
