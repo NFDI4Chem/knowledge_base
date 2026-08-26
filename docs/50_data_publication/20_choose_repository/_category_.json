@@ -1,7 +1,7 @@
 {
-    "label": "Choose a Repository",
-    "link": {
-        "type": "doc",
-        "id": "choose_repository"
-    }
+	"label": "Choose a Repository",
+	"link": {
+		"type": "doc",
+		"id": "choose_repository"
+	}
 }
