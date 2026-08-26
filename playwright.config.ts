@@ -6,13 +6,14 @@ export default defineConfig({
 	retries: process.env.CI ? 1 : 0,
 	fullyParallel: true,
 	reporter: [["html", { open: "never" }]],
-	snapshotPathTemplate: "{testDir}/{testFilePath}-snapshots/{arg}-{projectName}{ext}",
+	snapshotPathTemplate:
+		"{testDir}/{testFilePath}-snapshots/{arg}-{projectName}{ext}",
 	expect: {
 		toHaveScreenshot: {
 			animations: "disabled",
 			caret: "hide",
-			scale: "css"
-		}
+			scale: "css",
+		},
 	},
 	use: {
 		baseURL: "http://127.0.0.1:3000",
@@ -21,18 +22,19 @@ export default defineConfig({
 		colorScheme: "light",
 		locale: "en-US",
 		timezoneId: "UTC",
-		reducedMotion: "reduce"
+		reducedMotion: "reduce",
 	},
 	webServer: {
-		command: "npm run build && npm run serve -- --host 127.0.0.1 --port 3000",
+		command:
+			"npm run build && npm run serve -- --host 127.0.0.1 --port 3000",
 		url: "http://127.0.0.1:3000",
 		reuseExistingServer: !process.env.CI,
-		timeout: 300_000
+		timeout: 300_000,
 	},
 	projects: [
 		{
 			name: "chromium",
-			use: { ...devices["Desktop Chrome"] }
-		}
-	]
+			use: { ...devices["Desktop Chrome"] },
+		},
+	],
 });
