@@ -4,16 +4,16 @@ import path from "node:path";
 
 const PAGE_EXTENSIONS = new Set([".js", ".jsx", ".ts", ".tsx", ".md", ".mdx"]);
 
-function normalizeRoute(route: string): string {
-	if (!route || route === "/") {
+function normalizePathname(pathname: string): string {
+	if (!pathname || pathname === "/") {
 		return "/";
 	}
 
-	return route.replace(/\/$/, "");
+	return pathname.replace(/\/$/, "");
 }
 
 function routeToSnapshotName(route: string): string {
-	const normalized = normalizeRoute(route);
+	const normalized = normalizePathname(route);
 	if (normalized === "/") {
 		return "root.png";
 	}
@@ -21,9 +21,9 @@ function routeToSnapshotName(route: string): string {
 	return `${normalized.replace(/^\//, "").replace(/\//g, "__")}.png`;
 }
 
-function joinRoutePrefix(prefix: string, route: string): string {
-	const normalizedPrefix = normalizeRoute(prefix);
-	const normalizedRoute = normalizeRoute(route);
+function joinPathPrefix(prefix: string, route: string): string {
+	const normalizedPrefix = normalizePathname(prefix);
+	const normalizedRoute = normalizePathname(route);
 
 	if (normalizedRoute === "/") {
 		return normalizedPrefix || "/";
@@ -33,23 +33,7 @@ function joinRoutePrefix(prefix: string, route: string): string {
 		return normalizedRoute;
 	}
 
-	return normalizeRoute(`${normalizedPrefix}${normalizedRoute}`);
-}
-
-function extractRuntimeRoutes(routesFileContent: string): { routes: string[]; routePrefix: string } {
-	const rawPaths = [...routesFileContent.matchAll(/path:\s*'([^']+)'/g)].map((match) => match[1]);
-
-	const docsPathSample = rawPaths.find((route) => route.includes("/docs/")) ?? "/docs/";
-	const routePrefix = normalizeRoute(docsPathSample.split("/docs/")[0] || "");
-	const normalizedRoutes = rawPaths
-		.map((route) => normalizeRoute(route))
-		.filter((route) => route.startsWith("/"))
-		.filter((route) => !route.includes("*"));
-
-	return {
-		routes: [...new Set(normalizedRoutes)],
-		routePrefix
-	};
+	return normalizePathname(`${normalizedPrefix}${normalizedRoute}`);
 }
 
 async function collectPageFileRoutes(rootDir: string, relativeDir = ""): Promise<string[]> {
@@ -87,10 +71,20 @@ async function collectPageFileRoutes(rootDir: string, relativeDir = ""): Promise
 			route = route.slice(0, -"/index".length) || "/";
 		}
 
-		routes.push(normalizeRoute(route));
+		routes.push(normalizePathname(route));
 	}
 
 	return routes;
+}
+
+function extractSitemapPathnames(sitemapXml: string): string[] {
+	const locMatches = [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)];
+
+	return [...new Set(locMatches.map((match) => normalizePathname(new URL(match[1]).pathname)))];
+}
+
+function waitForDocusaurusHydration(): boolean {
+	return document.documentElement.dataset.hasHydrated === "true";
 }
 
 test("visual regression for docs and src/pages routes", async ({ page, baseURL }) => {
@@ -100,19 +94,22 @@ test("visual regression for docs and src/pages routes", async ({ page, baseURL }
 		throw new Error("Playwright baseURL is not configured.");
 	}
 
-	const routesFilePath = path.join(process.cwd(), ".docusaurus", "routes.js");
-	const routesFileContent = await readFile(routesFilePath, "utf8");
-	const { routes: docusaurusRoutes, routePrefix } = extractRuntimeRoutes(routesFileContent);
-	const docusaurusRouteSet = new Set(docusaurusRoutes);
+	const screenshotStyles = await readFile(path.join(process.cwd(), "tests", "e2e", "screenshot.css"), "utf8");
+	const sitemapPath = path.join(process.cwd(), "build", "sitemap.xml");
+	const sitemapXml = await readFile(sitemapPath, "utf8");
+	const sitemapPathnames = extractSitemapPathnames(sitemapXml);
+	const sitemapPathnameSet = new Set(sitemapPathnames);
 
-	const docsBase = joinRoutePrefix(routePrefix, "/docs");
-	const docsRoutes = docusaurusRoutes.filter(
-		(route) => route === docsBase || route.startsWith(`${docsBase}/`)
+	const docsPathSample = sitemapPathnames.find((pathname) => pathname.includes("/docs/")) ?? "/docs";
+	const routePrefix = normalizePathname(docsPathSample.split("/docs/")[0] || "");
+	const docsBase = joinPathPrefix(routePrefix, "/docs");
+	const docsRoutes = sitemapPathnames.filter(
+		(pathname) => pathname === docsBase || pathname.startsWith(`${docsBase}/`)
 	);
 	const srcPagesCandidates = await collectPageFileRoutes(path.join(process.cwd(), "src", "pages"));
 	const srcPagesRoutes = srcPagesCandidates
-		.map((route) => joinRoutePrefix(routePrefix, route))
-		.filter((route) => docusaurusRouteSet.has(route));
+		.map((route) => joinPathPrefix(routePrefix, route))
+		.filter((route) => sitemapPathnameSet.has(route));
 	const allRoutes = [...new Set([...docsRoutes, ...srcPagesRoutes])].sort((a, b) => a.localeCompare(b));
 
 	expect(allRoutes.length, "No routes discovered for docs/src pages visual test.").toBeGreaterThan(0);
@@ -123,6 +120,9 @@ test("visual regression for docs and src/pages routes", async ({ page, baseURL }
 			expect(response, `No response for route ${route}`).toBeTruthy();
 			expect(response?.ok(), `Route failed: ${route} (HTTP ${response?.status()})`).toBeTruthy();
 
+			await page.waitForFunction(waitForDocusaurusHydration);
+			await page.addStyleTag({ content: screenshotStyles });
+
 			const notFoundHeading = page.getByRole("heading", {
 				name: /404|page not found/i
 			});
@@ -131,19 +131,9 @@ test("visual regression for docs and src/pages routes", async ({ page, baseURL }
 				`Route rendered 404 content: ${route}`
 			).toBeFalsy();
 
-			// Warm up lazy-loaded content before taking full-page screenshots.
-			await page.evaluate(async () => {
-				window.scrollTo({ top: document.body.scrollHeight, behavior: "auto" });
-				await new Promise((resolve) => setTimeout(resolve, 250));
-				window.scrollTo({ top: 0, behavior: "auto" });
-			});
-
-			await page.waitForTimeout(300);
-
 			await expect(page).toHaveScreenshot(routeToSnapshotName(route), {
 				fullPage: true,
-				animations: "disabled",
-				caret: "hide"
+				timeout: 20_000
 			});
 		});
 	}
