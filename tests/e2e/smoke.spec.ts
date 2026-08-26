@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 
-const ASSET_FILE_EXTENSIONS = /\.(?:png|jpe?g|gif|webp|svg|ico|pdf|zip|gz|mp4|webm|css|js|json|xml|txt)$/i;
+const ASSET_FILE_EXTENSIONS =
+	/\.(?:png|jpe?g|gif|webp|svg|ico|pdf|zip|gz|mp4|webm|css|js|json|xml|txt)$/i;
 const EXCLUDED_PATH_PREFIXES = ["/search"];
 
 function normalizePath(url: URL): string {
@@ -31,12 +32,14 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 		visited.add(currentPath);
 
 		const response = await page.goto(currentPath, {
-			waitUntil: "commit"
+			waitUntil: "commit",
 		});
 		await page.waitForLoadState("domcontentloaded");
 
 		if (!response || !response.ok()) {
-			failures.push(`${currentPath}: HTTP ${response?.status() ?? "NO_RESPONSE"}`);
+			failures.push(
+				`${currentPath}: HTTP ${response?.status() ?? "NO_RESPONSE"}`,
+			);
 			continue;
 		}
 
@@ -47,19 +50,29 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 		}
 
 		const notFoundHeading = page.getByRole("heading", {
-			name: /404|page not found/i
+			name: /404|page not found/i,
 		});
 
-		if ((await notFoundHeading.count()) > 0 && (await notFoundHeading.first().isVisible())) {
+		if (
+			(await notFoundHeading.count()) > 0 &&
+			(await notFoundHeading.first().isVisible())
+		) {
 			failures.push(`${currentPath}: rendered 404 page`);
 		}
 
 		const hrefs = await page
 			.locator("a[href]")
-			.evaluateAll((anchors) => anchors.map((a) => a.getAttribute("href") ?? ""));
+			.evaluateAll((anchors) =>
+				anchors.map((a) => a.getAttribute("href") ?? ""),
+			);
 
 		for (const href of hrefs) {
-			if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+			if (
+				!href ||
+				href.startsWith("#") ||
+				href.startsWith("mailto:") ||
+				href.startsWith("tel:")
+			) {
 				continue;
 			}
 
@@ -75,7 +88,11 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 				continue;
 			}
 
-			if (EXCLUDED_PATH_PREFIXES.some((prefix) => resolvedUrl.pathname.startsWith(prefix))) {
+			if (
+				EXCLUDED_PATH_PREFIXES.some((prefix) =>
+					resolvedUrl.pathname.startsWith(prefix),
+				)
+			) {
 				continue;
 			}
 
@@ -91,9 +108,12 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 		}
 	}
 
-	expect(visited.size, "No pages were discovered during crawl.").toBeGreaterThan(0);
+	expect(
+		visited.size,
+		"No pages were discovered during crawl.",
+	).toBeGreaterThan(0);
 	expect(
 		failures,
-		`The following pages failed:\n${failures.map((f) => `- ${f}`).join("\n")}`
+		`The following pages failed:\n${failures.map((f) => `- ${f}`).join("\n")}`,
 	).toEqual([]);
 });
