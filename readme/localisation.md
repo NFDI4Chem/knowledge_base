@@ -2,6 +2,8 @@
 
 [![Crowdin](https://badges.crowdin.net/nfdi4chem-knowledge-base/localized.svg)](https://crowdin.com/project/nfdi4chem-knowledge-base)
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 The NFDI4Chem Knowledge Base is currently offered in [English](https://knowledgebase.nfdi4chem.de/knowledge_base/) and [German](https://knowledgebase.nfdi4chem.de/knowledge_base/de/).
 
 ## How does it work?
