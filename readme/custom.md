@@ -1,5 +1,7 @@
 # Custom Components
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 ## FloatImage
 
 A responsive image component with optional linking and custom styling capabilities.
@@ -23,18 +25,18 @@ import FloatImage from "@site/src/components/commons/FloatImage";
 
 **Props:**
 
-- `url` (string, required) - Path to the image file (relative to static folder)
-- `alt` (string, required) - Alternative text for the image
-- `link` (string, optional) - URL to wrap the image in a clickable link
-- `...props` (any CSS properties) - Any additional props are applied as inline styles (e.g., `width`, `float`, `margin`)
+* `url` (string, required) - Path to the image file (relative to static folder)
+* `alt` (string, required) - Alternative text for the image
+* `link` (string, optional) - URL to wrap the image in a clickable link
+* `...props` (any CSS properties) - Any additional props are applied as inline styles (e.g., `width`, `float`, `margin`)
 
 **Default Styling:**
 
 The component has the following default styling:
 
-- `width: min(120px, 50%)` - Responsive width with 120px maximum
-- `float: right` - Floats to the right by default
-- `margin: 0px 20px 0px 20px` - 20px left and right margin
+* `width: min(120px, 50%)` - Responsive width with 120px maximum
+* `float: right` - Floats to the right by default
+* `margin: 0px 20px 0px 20px` - 20px left and right margin
 
 Any of these can be overriden by passing props:
 
@@ -48,7 +50,7 @@ Any of these can be overriden by passing props:
 />
 ```
 
----
+***
 
 ## LbeChip
 
@@ -68,9 +70,9 @@ import LbeChip from "@site/src/components/commons/LbeChip";
 
 **Props:**
 
-- `title` (string, required) - The subdiscipline name used for filtering datasets
+* `title` (string, required) - The subdiscipline name used for filtering datasets
 
----
+***
 
 ## FeatureButton
 
@@ -96,15 +98,15 @@ import FeatureButton from "@site/src/components/features/FeatureButton";
 
 **Props:**
 
-- `url` (string, required) - The link destination URL
-- `imgUrl` (string, required) - Path to the image/icon (relative to static folder)
-- `text` (string, required) - Button text displayed below the image
-- `width` (string, optional) - Width of the image (default: "120px")
-- `alt` (string, optional) - Alternative text for the image (defaults to `text` if not provided)
-- `index` (boolean, optional) - If true, applies primary button styling; otherwise uses secondary styling
-- `classes` (string, optional) - Additional CSS classes to apply to the button
+* `url` (string, required) - The link destination URL
+* `imgUrl` (string, required) - Path to the image/icon (relative to static folder)
+* `text` (string, required) - Button text displayed below the image
+* `width` (string, optional) - Width of the image (default: "120px")
+* `alt` (string, optional) - Alternative text for the image (defaults to `text` if not provided)
+* `index` (boolean, optional) - If true, applies primary button styling; otherwise uses secondary styling
+* `classes` (string, optional) - Additional CSS classes to apply to the button
 
----
+***
 
 ## Features
 
@@ -129,11 +131,11 @@ const features = [
 
 **Props:**
 
-- `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
-- `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
-- `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
+* `featureList` (array, required) - List of feature objects with `url`, `imgUrl`, `text`, and optional `alt`
+* `index` (boolean, optional) - If true, all buttons use primary styling; otherwise secondary styling
+* `...props` (any, optional) - Passed to each `FeatureButton` (e.g., `width`, `classes`)
 
----
+***
 
 ## BulletBox
 
@@ -156,10 +158,10 @@ import { BulletBox } from "@site/src/components/commons/BulletBox";
 
 **Props:**
 
-- `children` (ReactNode, required) - Content to display inside the box
-- `secondary` (boolean, optional) - If true, applies secondary button styling; otherwise uses primary styling
+* `children` (ReactNode, required) - Content to display inside the box
+* `secondary` (boolean, optional) - If true, applies secondary button styling; otherwise uses primary styling
 
----
+***
 
 ## BulletContainer
 
@@ -188,4 +190,4 @@ import { BulletContainer } from "@site/src/components/commons/BulletBox";
 
 **Props:**
 
-- `children` (ReactNode, required) - Typically contains multiple BulletBox components
+* `children` (ReactNode, required) - Typically contains multiple BulletBox components

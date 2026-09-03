@@ -2,11 +2,13 @@
 
 The end-to-end and visual tests are located under `tests/e2e/` and use Playwright Test. The central configuration is in `playwright.config.ts`.
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 ## Requirements
 
-* Node.js `>=18`
-* Installed project dependencies
-* A Chromium browser for Playwright
+- Node.js `>=18`
+- Installed project dependencies
+- A Chromium browser for Playwright
 
 Install the project dependencies:
 
@@ -95,13 +97,13 @@ Depending on the run, failed tests may produce additional artifacts such as trac
 
 Important settings in `playwright.config.ts`:
 
-* Test directory: `tests/e2e`
-* Browser project: Chromium
-* Default base URL: `http://127.0.0.1:3000`
-* Timeout per test: 60 seconds
-* One retry in CI, no retries locally
-* HTML reporter without automatic opening
-* Deterministic rendering with Light Mode, UTC, and reduced motion
+- Test directory: `tests/e2e`
+- Browser project: Chromium
+- Default base URL: `http://127.0.0.1:3000`
+- Timeout per test: 60 seconds
+- One retry in CI, no retries locally
+- HTML reporter without automatic opening
+- Deterministic rendering with Light Mode, UTC, and reduced motion
 
 If port `3000` is already used by another service, stop that service or change the port consistently in `use.baseURL`, `webServer.url`, and the serve command in `playwright.config.ts`.
 

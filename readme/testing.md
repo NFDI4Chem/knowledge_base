@@ -2,6 +2,8 @@
 
 This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator. When you add or edit pages, you may conveniently preview them locally on your computer.
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 ## Requirements
 
 * In order to clone the repository to your computer, you may simply [download](https://github.com/NFDI4Chem/knowledge_base/archive/refs/heads/main.zip) the repository from Github and extract it. If you want to work locally on changes in your fork, the installation of [Git](https://git-scm.com/) and [Visual Studio Code](https://code.visualstudio.com/) may be convenvient.
