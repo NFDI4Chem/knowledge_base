@@ -2,8 +2,8 @@
 
 This project uses two different checks:
 
-* **Content linting** checks frontmatter and titles in the Markdown and MDX files under `docs/`.
-* **Format linting** checks the formatting of supported source, documentation, and configuration files with Prettier.
+- **Content linting** checks frontmatter and titles in the Markdown and MDX files under `docs/`.
+- **Format linting** checks the formatting of supported source, documentation, and configuration files with Prettier.
 
 The corresponding npm scripts are defined in `package.json`.
 
@@ -11,8 +11,8 @@ The corresponding npm scripts are defined in `package.json`.
 
 ## Requirements
 
-* Node.js `>=18`
-* Installed project dependencies
+- Node.js `>=18`
+- Installed project dependencies
 
 After cloning the repository or changing its dependencies:
 
@@ -32,10 +32,10 @@ npm run lint
 
 This runs `npm run lint:content`. The validation script `scripts/validate-content.js` checks the documents under `docs/` for, among other things:
 
-* valid YAML frontmatter
-* a present `slug`
-* a title provided by an H1 heading or the frontmatter field `title`
-* the project-specific rules for titles and content
+- valid YAML frontmatter
+- a present `slug`
+- a title provided by an H1 heading or the frontmatter field `title`
+- the project-specific rules for titles and content
 
 ### Full check
 
