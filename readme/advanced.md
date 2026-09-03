@@ -1,5 +1,7 @@
 # Advanced stuff
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 ## Downloadable files
 
 Please place downloadable files, e.g. document templates, in the `assets` folder:

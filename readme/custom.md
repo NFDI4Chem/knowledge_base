@@ -1,5 +1,7 @@
 # Custom Components
 
+> **Disclaimer:** Parts of this documentation were generated with the assistance of AI and may contain errors or inaccuracies. Always verify commands and instructions against the current project configuration before using them.
+
 ## FloatImage
 
 A responsive image component with optional linking and custom styling capabilities.
