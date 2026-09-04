@@ -24,7 +24,7 @@ const commonFeatures = {
     eln: {
         url: "/docs/eln",
         imgUrl: "/img/nfdi4chem_SmartLab.svg",
-        text: <Translate>Electronic Lab Notebook</Translate>
+        text: <Translate>Electronic Lab Notebooks</Translate>
     },
     dataPublishing: {
         url: "/docs/data_publishing",
