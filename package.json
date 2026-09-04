@@ -45,7 +45,7 @@
 		"video-privacy": "^1.2.0"
 	},
 	"devDependencies": {
-		"@crowdin/cli": "^5.0.1",
+		"@crowdin/cli": "^5.0.2",
 		"@docusaurus/module-type-aliases": "^3.10.2",
 		"@docusaurus/types": "^3.10.2",
 		"@playwright/test": "^1.62.1",
@@ -68,5 +68,9 @@
 	},
 	"engines": {
 		"node": ">=18.0"
+	},
+	"allowScripts": {
+		"@swc/core@1.16.1": true,
+		"core-js@3.50.0": true
 	}
 }

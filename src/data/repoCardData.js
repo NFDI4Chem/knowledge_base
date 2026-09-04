@@ -5,6 +5,7 @@ export const repositoryData = [
 		name: "Chemotion Repository",
 		url: "/img/data_pub/repos/ChemotionRepo_Logo.svg",
 		alt: "Chemotion Repository Logo",
+		link: "/docs/chemotion_repository/",
 		description: (
 			<Translate>
 				Field-specific sample and reaction-centric repository including
@@ -16,6 +17,7 @@ export const repositoryData = [
 		name: "MassBank",
 		url: "/img/data_pub/repos/Massbank_logo.svg",
 		alt: "Massbank Logo",
+		link: "/docs/massbank_eu/",
 		description: (
 			<Translate>
 				Field-specific ecosystem of databases and tools for mass
@@ -27,6 +29,7 @@ export const repositoryData = [
 		name: "nmrXiv",
 		url: "/img/data_pub/repos/nmrXiv.svg",
 		alt: "nmrXiv Logo",
+		link: "/docs/nmrxiv/",
 		description: (
 			<Translate>Field-specific repository for NMR data.</Translate>
 		),
@@ -35,6 +38,7 @@ export const repositoryData = [
 		name: "RADAR4Chem",
 		url: "/img/data_pub/repos/radar4chem_Logo.svg",
 		alt: "RADAR4Chem Logo",
+		link: "/docs/radar4chem/",
 		description: (
 			<Translate>
 				Generic, multidisciplinary repository that offers a free and
@@ -47,6 +51,7 @@ export const repositoryData = [
 		name: "STRENDA",
 		url: "/img/data_pub/repos/Logo_Beilstein_STRENDA_sRGB.png",
 		alt: "Strenda DB Logo",
+		link: "/docs/strenda_db/",
 		description: (
 			<Translate>
 				Field-specific repository for enzymology data, which
@@ -59,6 +64,7 @@ export const repositoryData = [
 		name: "Suprabank",
 		url: "/img/data_pub/repos/Suprabank_logo.svg",
 		alt: "Suprabank Logo",
+		link: "/docs/suprabank/",
 		description: (
 			<Translate>
 				Field-specific repository for intermolecular interactions data.

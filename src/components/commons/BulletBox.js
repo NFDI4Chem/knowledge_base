@@ -1,4 +1,6 @@
+import React from "react";
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import styles from "@site/src/css/BulletBox.module.css";
 
 function BulletContainer({ children }) {
@@ -8,9 +10,15 @@ function BulletContainer({ children }) {
 function BulletBox({ children, secondary, ...props }) {
 	let boxClass = secondary ? "button--secondary" : "button--primary";
 	let customStyle = {};
+	let link = props.link ?? null;
 
 	Object.keys(props).forEach((key) => {
-		if (key !== "children" && key !== "secondary" && key !== "boxClass") {
+		if (
+			key !== "children" &&
+			key !== "secondary" &&
+			key !== "boxClass" &&
+			key !== "link"
+		) {
 			customStyle[key] = props[key];
 		}
 	});
@@ -25,7 +33,13 @@ function BulletBox({ children, secondary, ...props }) {
 				...customStyle,
 			}}
 		>
-			{children}
+			{link ? (
+				<Link to={link} className={styles.bulletBox_Link}>
+					{children}
+				</Link>
+			) : (
+				<React.Fragment>{children}</React.Fragment>
+			)}
 		</div>
 	);
 }
