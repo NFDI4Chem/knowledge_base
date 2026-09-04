@@ -12,22 +12,35 @@ function BulletBox({ children, secondary, ...props }) {
 	let link = props.link ?? null;
 
 	Object.keys(props).forEach((key) => {
-		if (key !== "children" && key !== "secondary" && key !== "boxClass" && key !== "link") {
+		if (
+			key !== "children" &&
+			key !== "secondary" &&
+			key !== "boxClass" &&
+			key !== "link"
+		) {
 			customStyle[key] = props[key];
 		}
 	});
 
-	return (<div
-		className={clsx("col", "button", "button--lg", boxClass)}
-		style={{
-			padding: "0.75em",
-			margin: "0.4em",
-			flexGrow: 1,
-			...customStyle,
-		}}
-	>
-		{link ? <Link to={link} className={styles.bulletBox_Link}>{children}</Link> : { children }}
-	</div>)
+	return (
+		<div
+			className={clsx("col", "button", "button--lg", boxClass)}
+			style={{
+				padding: "0.75em",
+				margin: "0.4em",
+				flexGrow: 1,
+				...customStyle,
+			}}
+		>
+			{link ? (
+				<Link to={link} className={styles.bulletBox_Link}>
+					{children}
+				</Link>
+			) : (
+				{ children }
+			)}
+		</div>
+	);
 }
 
 export { BulletContainer, BulletBox };
