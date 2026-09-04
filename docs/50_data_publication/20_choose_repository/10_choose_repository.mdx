@@ -36,13 +36,11 @@ Based on the [criteria](https://doi.org/10.3897/rio.6.e55852) chosen by Task Are
 
 <BulletContainer>
 	{repositoryData.map((repo, index) => (
-		<BulletBox secondary {...repositoryStyle}>
-			<Link to={repo.link} key={index}>
-				<RepoDiv img link={repo.link}>
-					<FloatImage url={repo.url} alt={repo.name} />
-				</RepoDiv>
-				<RepoDiv>{repo.description}</RepoDiv>
-			</Link>
+		<BulletBox key={index} secondary {...repositoryStyle} link={repo.link}>
+			<RepoDiv img>
+				<FloatImage url={repo.url} alt={repo.name} />
+			</RepoDiv>
+			<RepoDiv>{repo.description}</RepoDiv>
 		</BulletBox>
 	))}
 </BulletContainer>
