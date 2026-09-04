@@ -1,3 +1,4 @@
+import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import styles from "@site/src/css/BulletBox.module.css";
@@ -37,7 +38,7 @@ function BulletBox({ children, secondary, ...props }) {
 					{children}
 				</Link>
 			) : (
-				{ children }
+				<React.Fragment>{children}</React.Fragment>
 			)}
 		</div>
 	);
