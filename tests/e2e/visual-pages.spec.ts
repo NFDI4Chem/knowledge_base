@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { readFile, readdir } from "node:fs/promises";
+import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 
 const PAGE_EXTENSIONS = new Set([".js", ".jsx", ".ts", ".tsx", ".md", ".mdx"]);
@@ -36,12 +36,9 @@ function joinPathPrefix(prefix: string, route: string): string {
 	return normalizePathname(`${normalizedPrefix}${normalizedRoute}`);
 }
 
-async function collectPageFileRoutes(
-	rootDir: string,
-	relativeDir = "",
-): Promise<string[]> {
+function collectPageFileRoutes(rootDir: string, relativeDir = ""): string[] {
 	const currentDir = path.join(rootDir, relativeDir);
-	const entries = await readdir(currentDir, { withFileTypes: true });
+	const entries = readdirSync(currentDir, { withFileTypes: true });
 	const routes: string[] = [];
 
 	for (const entry of entries) {
@@ -52,9 +49,7 @@ async function collectPageFileRoutes(
 		const entryRelativePath = path.join(relativeDir, entry.name);
 
 		if (entry.isDirectory()) {
-			routes.push(
-				...(await collectPageFileRoutes(rootDir, entryRelativePath)),
-			);
+			routes.push(...collectPageFileRoutes(rootDir, entryRelativePath));
 			continue;
 		}
 
@@ -101,22 +96,9 @@ function waitForDocusaurusHydration(): boolean {
 	return document.documentElement.dataset.hasHydrated === "true";
 }
 
-test("visual regression for docs and src/pages routes", async ({
-	page,
-	baseURL,
-}) => {
-	test.setTimeout(20 * 60_000);
-
-	if (!baseURL) {
-		throw new Error("Playwright baseURL is not configured.");
-	}
-
-	const screenshotStyles = await readFile(
-		path.join(process.cwd(), "tests", "e2e", "screenshot.css"),
-		"utf8",
-	);
+function discoverRoutes(): string[] {
 	const sitemapPath = path.join(process.cwd(), "build", "sitemap.xml");
-	const sitemapXml = await readFile(sitemapPath, "utf8");
+	const sitemapXml = readFileSync(sitemapPath, "utf8");
 	const sitemapPathnames = extractSitemapPathnames(sitemapXml);
 	const sitemapPathnameSet = new Set(sitemapPathnames);
 
@@ -131,23 +113,39 @@ test("visual regression for docs and src/pages routes", async ({
 		(pathname) =>
 			pathname === docsBase || pathname.startsWith(`${docsBase}/`),
 	);
-	const srcPagesCandidates = await collectPageFileRoutes(
+	const srcPagesCandidates = collectPageFileRoutes(
 		path.join(process.cwd(), "src", "pages"),
 	);
 	const srcPagesRoutes = srcPagesCandidates
 		.map((route) => joinPathPrefix(routePrefix, route))
 		.filter((route) => sitemapPathnameSet.has(route));
-	const allRoutes = [...new Set([...docsRoutes, ...srcPagesRoutes])].sort(
-		(a, b) => a.localeCompare(b),
+	return [...new Set([...docsRoutes, ...srcPagesRoutes])].sort((a, b) =>
+		a.localeCompare(b),
 	);
+}
 
-	expect(
-		allRoutes.length,
-		"No routes discovered for docs/src pages visual test.",
-	).toBeGreaterThan(0);
+const screenshotStyles = readFileSync(
+	path.join(process.cwd(), "tests", "e2e", "screenshot.css"),
+	"utf8",
+);
+const allRoutes = discoverRoutes();
+
+expect(
+	allRoutes.length,
+	"No routes discovered for docs/src pages visual test.",
+).toBeGreaterThan(0);
+
+test.describe("visual regression for docs and src/pages routes", () => {
+	test.describe.configure({ mode: "parallel" });
 
 	for (const route of allRoutes) {
-		await test.step(`visual ${route}`, async () => {
+		test(`visual ${route}`, async ({ page, baseURL }) => {
+			test.setTimeout(20 * 60_000);
+
+			if (!baseURL) {
+				throw new Error("Playwright baseURL is not configured.");
+			}
+
 			const response = await page.goto(route, {
 				waitUntil: "domcontentloaded",
 			});
