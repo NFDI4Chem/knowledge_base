@@ -66,6 +66,16 @@ const commonFeatures = {
 		imgUrl: "/img/nfdi4chem_Lead_by_Example.svg",
 		text: <Translate>View Datasets</Translate>,
 	},
+	rdmo: {
+		url: "https://rdmo.nfdi4chem.de/",
+		imgUrl: "/img/nfdi4chem_Data_Management_Plan.svg",
+		text: <Translate>NFDI4Chem RDMO instance</Translate>,
+	},
+	chemistryDmp: {
+		url: "https://doi.org/10.5281/zenodo.10948510",
+		imgUrl: "/img/nfdi4chem_Data_Documentation.svg",
+		text: <Translate>Chemistry-specific DMP Template</Translate>,
+	},
 };
 
 export default commonFeatures;

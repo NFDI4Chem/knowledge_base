@@ -20,3 +20,8 @@ button[class*="agree" i] {
 * {
 	caret-color: transparent !important;
 }
+
+/* Suppress DOI badges */
+img[loading="lazy"][alt="DOI"] {
+	display: none !important;
+}
