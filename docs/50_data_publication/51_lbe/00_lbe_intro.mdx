@@ -5,6 +5,7 @@ id: "lbe_intro"
 ---
 
 import FeatureButton from "@site/src/components/features/FeatureButton";
+import commonFeatures from "@site/src/data/commonFeatures.js";
 
 NFDI4Chem has a clear vision of how chemistry research data will be collected, processed, archived, shared and published. The development of standards for metadata, minimum information, analytical data formats as well as publication standards includes sample datasets in a substantial standard-compliant manner.
 
@@ -16,11 +17,7 @@ Take a look at the list for inspiration as to what is already possible today!
 
 Do you want to have your published dataset highlighted here or do you need assistance in the preparation of your dataset for publication? Pledge your dataset to NFDI4Chem! More information can be found [here](https://www.nfdi4chem.de/index.php/2022/12/15/data-pledge/).
 
-<FeatureButton
-	url={"/docs/datasets"}
-	imgUrl={"/img/nfdi4chem_Lead_by_Example.svg"}
-	text={"View Datasets"}
-/>
+<FeatureButton {...commonFeatures.lbe} />
 
 ---
 
