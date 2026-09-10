@@ -20,7 +20,7 @@ function ShortenDesc({ desc, length }) {
 					style={{ cursor: "pointer" }}
 				>
 					{desc.slice(0, length) +
-						desc.slice(length).split(/[\s,\.]/)[0] +
+						desc.slice(length).split(/[\s,.]/)[0] +
 						" ..."}
 
 					<button className={styles.authorTrigger}>
