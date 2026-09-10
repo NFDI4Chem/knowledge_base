@@ -67,14 +67,14 @@ function Lbe() {
 
 	// Set the state
 
-	console.log(initialState);
-	console.log(lbeState);
+	console.log("Setup: ", initialState);
+	console.log("State: ", lbeState);
 
 	useEffect(() => {
 		setLbeState(initialState);
 	}, []);
 
-	console.log(lbeState);
+	console.log("State: ", lbeState);
 
 	// Get list of subdisciplines
 	var subdiscs = Array.from(
