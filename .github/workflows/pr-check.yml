@@ -1,0 +1,160 @@
+name: PR Check
+
+on:
+    pull_request:
+        paths: &watched-paths
+            - "docs/**"
+            - "src/**"
+            - "i18n/**"
+            - "scripts/**"
+            - "tests/**"
+            - "static/**"
+            - "*.json"
+            - "*.js"
+            - "*.ts"
+            - "*.tsx"
+            - "*.md"
+            - "*.mdx"
+            - "package.json"
+            - "package-lock.json"
+            - ".prettierignore"
+            - ".github/actions/setup-node-env/action.yml"
+            - ".github/workflows/pr-check.yml"
+    push:
+        branches:
+            - main
+            - localisation
+        paths: *watched-paths
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    content-check:
+        name: Content Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run content check
+              run: npm run test:content
+
+    format-check:
+        name: Format Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Detect changed lintable files
+              id: changed-files
+              uses: tj-actions/changed-files@v47
+              with:
+                  files: |
+                      **/*.js
+                      **/*.jsx
+                      **/*.ts
+                      **/*.tsx
+                      **/*.md
+                      **/*.mdx
+                      **/*.json
+                      **/*.css
+                      **/*.yml
+                      **/*.yaml
+                  files_ignore: |
+                      package-lock.json
+
+            - name: Run format check on changed files
+              if: steps.changed-files.outputs.any_changed == 'true'
+              run: npx prettier --check ${{ steps.changed-files.outputs.all_changed_files }}
+
+            - name: No changed lintable files
+              if: steps.changed-files.outputs.any_changed != 'true'
+              run: echo "No lintable files changed."
+
+    js-check:
+        name: JS Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run ESLint
+              run: npm run test:js
+
+    css-check:
+        name: CSS Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run Stylelint
+              run: npm run test:css
+
+    build-validation:
+        name: Build Validation
+        if: github.event_name == 'pull_request'
+        needs: [content-check, format-check, js-check, css-check]
+        runs-on: ubuntu-latest
+        env:
+            HAS_CROWDIN_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN != '' }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Write translations
+              run: npm run write-translations
+              continue-on-error: false
+
+            - name: Download translations from Crowdin
+              if: env.HAS_CROWDIN_TOKEN == 'true'
+              run: npm run crowdin download
+              env:
+                  CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+              continue-on-error: true
+
+            - name: Build website
+              shell: bash
+              run: |
+                  set -o pipefail
+                  npm run build 2>&1 | tee build.log
+
+            - name: Check build log for warnings and broken references
+              shell: bash
+              run: bash tests/ci/check-build-log.sh build.log
+              continue-on-error: false
+
+            - name: All checks passed
+              if: success()
+              run: |
+                  echo "All validations succeeded!"
+                  echo "- Content check passed"
+                  echo "- Format check passed"
+                  echo "- JS check passed"
+                  echo "- CSS check passed"
+                  echo "- Build succeeded"
