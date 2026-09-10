@@ -73,10 +73,21 @@ jobs:
               if: steps.changed-files.outputs.any_changed != 'true'
               run: echo "No lintable files changed."
 
+    js-check:
+        name: JS Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run ESLint
+              run: npm run test:js
+
     build-validation:
         name: Build Validation
         if: github.event_name == 'pull_request'
-        needs: [content-check, format-check]
+        needs: [content-check, format-check, js-check]
         runs-on: ubuntu-latest
 
         steps:
