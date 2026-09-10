@@ -7,6 +7,7 @@ on:
             - "src/**"
             - "i18n/**"
             - "scripts/**"
+            - "tests/**"
             - "static/**"
             - "*.json"
             - "*.js"
@@ -102,7 +103,7 @@ jobs:
 
             - name: Check build log for warnings and broken references
               shell: bash
-              run: bash scripts/check-build-log.sh build.log
+              run: bash tests/ci/check-build-log.sh build.log
               continue-on-error: false
 
             - name: All checks passed

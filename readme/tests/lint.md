@@ -30,7 +30,7 @@ npm ci
 npm run lint
 ```
 
-This runs `npm run test:content`. The validation script `scripts/validate-content.js` checks the documents under `docs/` for, among other things:
+This runs `npm run test:content`. The validation script `tests/content/validate-content.js` checks the documents under `docs/` for, among other things:
 
 * valid YAML frontmatter
 * a present `slug`

@@ -32,7 +32,7 @@ try {
 	process.exit(1);
 }
 
-const DOCS_DIR = path.join(__dirname, "../docs");
+const DOCS_DIR = path.join(__dirname, "../../docs");
 const ERRORS = [];
 const WARNINGS = [];
 

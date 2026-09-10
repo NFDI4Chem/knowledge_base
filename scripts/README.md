@@ -1,6 +1,6 @@
 # Scripts für Dokumentations-Validierung
 
-Dieses Verzeichnis enthält automatisierte Validierungs-Tools für die Knowledge Base.
+Dieses Verzeichnis enthält allgemeine Wartungs- und Analyse-Tools für die Knowledge Base. Die Testskripte (Content-Validierung, Build-Log-Check) liegen unter `tests/content/` und `tests/ci/`.
 
 ## Verfügbare Scripts
 
@@ -8,9 +8,9 @@ Dieses Verzeichnis enthält automatisierte Validierungs-Tools für die Knowledge
 
 Validiert alle Markdown-Dateien auf:
 
-- Gültiges Frontmatter mit Slug
-- Gültige Seitentitel
-- Keine doppelten Titel
+* Gültiges Frontmatter mit Slug
+* Gültige Seitentitel
+* Keine doppelten Titel
 
 **Verwendung:**
 
@@ -20,12 +20,12 @@ npm run validate-content
 
 ## Dokumentation
 
-- **[VALIDATION\_SETUP.md](VALIDATION_SETUP.md)** - Detaillierte Setup-Anleitung
-- **[EXAMPLES.md](EXAMPLES.md)** - Beispiele für gültige und ungültige Dateien
+* **[VALIDATION\_SETUP.md](VALIDATION_SETUP.md)** - Detaillierte Setup-Anleitung
+* **[EXAMPLES.md](EXAMPLES.md)** - Beispiele für gültige und ungültige Dateien
 
 ## GitHub Actions Integration
 
-Der automatische PR-Check ist in `.github/workflows/pr-validation.yml` definiert.
+Der automatische PR-Check ist in `.github/workflows/pr-check.yml` definiert.
 
 Er läuft automatisch bei Pull Requests und prüft:
 
