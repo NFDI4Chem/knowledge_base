@@ -13,10 +13,12 @@
 		"test:e2e:visual": "playwright test tests/e2e/visual-pages.spec.ts",
 		"test:e2e:visual:update": "playwright test tests/e2e/visual-pages.spec.ts --update-snapshots",
 		"test": "npm run test:content",
-		"test:all": "npm run test:format && npm run test:content",
+		"test:all": "npm run test:format && npm run test:content && npm run test:js",
 		"test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,json,css,yml,yaml}\"",
 		"test:content": "npm run validate-content",
 		"test:format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,css,yml,yaml}\"",
+		"test:js": "eslint .",
+		"test:js:fix": "eslint . --fix",
 		"swizzle": "docusaurus swizzle",
 		"deploy": "docusaurus deploy",
 		"clear": "docusaurus clear",
@@ -48,11 +50,18 @@
 		"@crowdin/cli": "^5.0.2",
 		"@docusaurus/module-type-aliases": "^3.10.2",
 		"@docusaurus/types": "^3.10.2",
+		"@eslint/js": "^9.39.5",
 		"@playwright/test": "^1.63.0",
+		"eslint": "^9.39.5",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.1.1",
 		"glob": "^13.0.6",
+		"globals": "^17.12.0",
 		"gray-matter": "^4.0.3",
 		"lint": "^1.2.2",
-		"prettier": "^3.9.6"
+		"prettier": "^3.9.6",
+		"typescript-eslint": "^8.70.0"
 	},
 	"browserslist": {
 		"production": [
