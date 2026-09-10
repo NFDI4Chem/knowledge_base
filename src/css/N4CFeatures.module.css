@@ -16,6 +16,7 @@
 .featureCol {
 	display: flex;
 	width: var(--n4c-col-width);
+
 	/* height: var(--n4c-button-height); */
 	padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
 	align-items: center;
@@ -25,6 +26,7 @@
 .introCol {
 	display: flex;
 	width: var(--n4c-col-width);
+
 	/* height: var(--n4c-button-height); */
 	padding: var(--n4c-button-vpad) var(--n4c-button-hpad);
 	align-items: center;
@@ -49,5 +51,5 @@
 
 .featureButtonSecondary > * {
 	text-align: center;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
