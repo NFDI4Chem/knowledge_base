@@ -16,7 +16,7 @@ const path = require("path");
 let glob;
 try {
 	glob = require("glob");
-} catch (e) {
+} catch {
 	console.error("❌ Error: glob package not installed!");
 	console.error("Please run: npm install");
 	process.exit(1);
@@ -26,7 +26,7 @@ try {
 let matter;
 try {
 	matter = require("gray-matter");
-} catch (e) {
+} catch {
 	console.error("❌ Error: gray-matter package not installed!");
 	console.error("Please run: npm install");
 	process.exit(1);
@@ -35,8 +35,6 @@ try {
 const config = require("./validation.config.js");
 
 const DOCS_DIR = path.join(__dirname, "../../docs");
-const ERRORS = [];
-const WARNINGS = [];
 
 // Check if docs directory exists
 if (!fs.existsSync(DOCS_DIR)) {
@@ -67,7 +65,7 @@ function validateFrontmatter(filePath, content) {
 	const warnings = [];
 
 	try {
-		const { data, matter: frontmatterContent } = matter(content);
+		const { data } = matter(content);
 
 		// Check if frontmatter is empty
 		if (Object.keys(data).length === 0) {
