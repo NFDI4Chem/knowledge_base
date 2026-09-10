@@ -32,6 +32,8 @@ try {
 	process.exit(1);
 }
 
+const config = require("./validation.config.js");
+
 const DOCS_DIR = path.join(__dirname, "../../docs");
 const ERRORS = [];
 const WARNINGS = [];
@@ -47,7 +49,10 @@ if (!fs.existsSync(DOCS_DIR)) {
  */
 function findContentFiles() {
 	try {
-		return glob.sync("**/*.{md,mdx}", { cwd: DOCS_DIR });
+		return glob.sync("**/*.{md,mdx}", {
+			cwd: DOCS_DIR,
+			ignore: config.exclude.paths,
+		});
 	} catch (error) {
 		console.error(`❌ Error searching for files: ${error.message}`);
 		process.exit(1);
@@ -104,6 +109,18 @@ function validateFrontmatter(filePath, content) {
 			}
 		}
 
+		// Check description length (recommended for SEO)
+		const descriptionMaxLength =
+			config.frontmatter.optional.description.maxLength;
+		if (
+			typeof data.description === "string" &&
+			data.description.length > descriptionMaxLength
+		) {
+			warnings.push(
+				`Description is longer than ${descriptionMaxLength} characters (${data.description.length}), which is not recommended for SEO`,
+			);
+		}
+
 		return {
 			hasErrors: errors.length > 0,
 			errors,
@@ -145,6 +162,13 @@ function validateTitle(filePath, frontmatter, content) {
 				`h1 and frontmatter title are identical ("${h1Title}") and thus redundant. Both fields should only be used if different strings are required for page and navigation titles.`,
 			);
 		}
+	}
+
+	// Check h1 length (recommended for SEO)
+	if (h1Title && h1Title.length > config.title.h1MaxLength) {
+		warnings.push(
+			`h1 is longer than ${config.title.h1MaxLength} characters (${h1Title.length}), which is not recommended for SEO`,
+		);
 	}
 
 	return { hasErrors: errors.length > 0, errors, warnings };
@@ -192,46 +216,66 @@ function validateFile(relPath) {
  * Main function
  */
 function main() {
-	console.log("🔍 Validating documents...\n");
-
 	const files = findContentFiles();
-	console.log(`📁 Files found: ${files.length}\n`);
+	const results = files.map((file) => validateFile(file));
 
-	let fileCount = 0;
-	let errorCount = 0;
-	let warningCount = 0;
+	const errorCount = results.reduce((sum, r) => sum + r.errors.length, 0);
+	const warningCount = results.reduce((sum, r) => sum + r.warnings.length, 0);
 
-	files.forEach((file) => {
-		const validation = validateFile(file);
+	if (config.output.json) {
+		console.log(
+			JSON.stringify(
+				{
+					filesChecked: results.length,
+					errorCount,
+					warningCount,
+					files: results.filter(
+						(r) => r.errors.length > 0 || r.warnings.length > 0,
+					),
+				},
+				null,
+				2,
+			),
+		);
+		process.exit(errorCount > 0 ? 1 : 0);
+	}
 
-		if (validation.errors.length > 0 || validation.warnings.length > 0) {
+	console.log("🔍 Validating documents...\n");
+	console.log(`📁 Files found: ${results.length}\n`);
+
+	results.forEach((validation) => {
+		const hasErrors = validation.errors.length > 0;
+		const hasWarnings =
+			!config.output.errorOnly && validation.warnings.length > 0;
+
+		if (hasErrors || hasWarnings || config.output.verbose) {
 			console.log(`📄 ${validation.file}`);
 
-			if (validation.errors.length > 0) {
+			if (hasErrors) {
 				console.log("  ❌ Errors:");
-				validation.errors.forEach((err) => {
-					console.log(`     - ${err}`);
-					errorCount++;
-				});
+				validation.errors.forEach((err) =>
+					console.log(`     - ${err}`),
+				);
 			}
 
-			if (validation.warnings.length > 0) {
+			if (hasWarnings) {
 				console.log("  ⚠️  Warnings:");
-				validation.warnings.forEach((warn) => {
-					console.log(`     - ${warn}`);
-					warningCount++;
-				});
+				validation.warnings.forEach((warn) =>
+					console.log(`     - ${warn}`),
+				);
+			}
+
+			if (!hasErrors && !hasWarnings) {
+				console.log("  ✅ OK");
 			}
 
 			console.log("");
 		}
-
-		fileCount++;
 	});
 
 	// Summary
 	console.log("\n📊 Summary:");
-	console.log(`   Files checked: ${fileCount}`);
+	console.log(`   Files checked: ${results.length}`);
 	console.log(`   Errors: ${errorCount}`);
 	console.log(`   Warnings: ${warningCount}`);
 
