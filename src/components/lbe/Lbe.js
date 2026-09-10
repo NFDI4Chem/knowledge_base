@@ -29,46 +29,52 @@ function Lbe() {
 
 	// Conditions for initial states
 
-	useEffect(() => {
-		// Set initial state, if no params, default to "All" for repo and subdiscipline
-		let initialState = {
-			repo: "All",
-			subd: "All",
-			journal: "All",
+	// Set initial state, if no params, default to "All" for repo and subdiscipline
+	let initialState = {
+		repo: "All",
+		subd: "All",
+		journal: "All",
+		switch: "subd",
+	};
+
+	// Update initial state based on URL params^
+	// If text param is present, set switch to "text" and search to queryText
+	if (queryText !== null) {
+		initialState = {
+			...initialState,
+			search: queryText,
+			switch: "text",
+		};
+	}
+
+	// If subd param is present, set switch to "subd" and subd to querySubd
+	else if (querySubd !== null) {
+		initialState = {
+			...initialState,
+			subd: querySubd,
 			switch: "subd",
 		};
+	}
 
-		// Update initial state based on URL params^
-		// If text param is present, set switch to "text" and search to queryText
-		if (queryText !== null) {
-			initialState = {
-				...initialState,
-				search: queryText,
-				switch: "text",
-			};
-		}
+	// If doi param is present, set switch to "doi" and doi to queryDoi
+	else if (queryDoi !== null) {
+		initialState = {
+			...initialState,
+			doi: queryDoi,
+			switch: "doi",
+		};
+	}
 
-		// If subd param is present, set switch to "subd" and subd to querySubd
-		else if (querySubd !== null) {
-			initialState = {
-				...initialState,
-				subd: querySubd,
-				switch: "subd",
-			};
-		}
+	// Set the state
 
-		// If doi param is present, set switch to "doi" and doi to queryDoi
-		else if (queryDoi !== null) {
-			initialState = {
-				...initialState,
-				doi: queryDoi,
-				switch: "doi",
-			};
-		}
+	console.log(initialState);
+	console.log(lbeState);
 
-		// Set the state
+	useEffect(() => {
 		setLbeState(initialState);
-	}, [queryText, querySubd, queryDoi]);
+	}, []);
+
+	console.log(lbeState);
 
 	// Get list of subdisciplines
 	var subdiscs = Array.from(
