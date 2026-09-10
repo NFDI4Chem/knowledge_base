@@ -46,6 +46,16 @@ const commonFeatures = {
 		imgUrl: "/img/nfdi4chem_Data_Documentation.svg",
 		text: <Translate>Data Documentation</Translate>,
 	},
+	dataFormats: {
+		url: "/docs/data_formats",
+		imgUrl: "/img/nfdi4chem_Data_Storage_and_Archiving.svg",
+		text: <Translate>Data Formats</Translate>,
+	},
+	dataAnnotation: {
+		url: "/docs/data_description_annotation",
+		imgUrl: "/img/nfdi4chem_Data_Documentation.svg",
+		text: <Translate>Data Description and Annotation</Translate>,
+	},
 	dataStorage: {
 		url: "/docs/data_storage",
 		imgUrl: "/img/nfdi4chem_Data_Storage_and_Archiving.svg",

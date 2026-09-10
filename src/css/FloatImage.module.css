@@ -4,6 +4,32 @@
 	margin: 0 20px;
 }
 
+.FloatImage--noFloat {
+	float: none;
+}
+
+.FloatImage--floatLeft {
+	float: left;
+}
+
+.imgGroup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.imgStyle--shadow {
+	box-shadow: 5px 5px 10px lightgrey;
+	margin-bottom: 1em;
+}
+
+.captionStyle {
+	font-style: italic;
+	font-size: 0.8em;
+	text-align: left;
+	margin-bottom: 1em;
+}
+
 a > .FloatImage:hover {
 	transform: scale(var(--n4c-hover-scale));
 	transition: transform var(--n4c-transform-time) ease-in-out;
