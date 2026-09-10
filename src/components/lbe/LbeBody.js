@@ -50,7 +50,7 @@ function LbeBlock({
 
 			<p>
 				<em>{journal}</em> <strong>{pubyear}</strong>, DOI:{" "}
-				<a href={linkpub} target="_blank" rel="noreferrer">
+				<a href={linkpub} target="_blank" rel="noopener noreferrer">
 					{doi}
 				</a>
 				.
