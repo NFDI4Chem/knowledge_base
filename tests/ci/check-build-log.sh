@@ -24,11 +24,11 @@ if [ -n "$WARNINGS" ]; then
       capture {print}
     ' "$BUILD_LOG")
 
-	echo "## Build warnings" >>"$GITHUB_STEP_SUMMARY"
-	echo "Detected build warnings and related output:" >>"$GITHUB_STEP_SUMMARY"
-	echo '```text' >>"$GITHUB_STEP_SUMMARY"
-	echo "$WARNING_DETAILS" >>"$GITHUB_STEP_SUMMARY"
-	echo '```' >>"$GITHUB_STEP_SUMMARY"
+	echo "## Build warnings" >>"${GITHUB_STEP_SUMMARY:-/dev/null}"
+	echo "Detected build warnings and related output:" >>"${GITHUB_STEP_SUMMARY:-/dev/null}"
+	echo '```text' >>"${GITHUB_STEP_SUMMARY:-/dev/null}"
+	echo "$WARNING_DETAILS" >>"${GITHUB_STEP_SUMMARY:-/dev/null}"
+	echo '```' >>"${GITHUB_STEP_SUMMARY:-/dev/null}"
 
 	while IFS= read -r line; do
 		echo "::warning title=Build warning::$line"
