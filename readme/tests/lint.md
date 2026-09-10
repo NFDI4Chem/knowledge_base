@@ -1,9 +1,11 @@
-# Using the content and format checks
+# Using the content, format, JS, and CSS checks
 
-This project uses two different checks:
+This project uses four different checks:
 
 - **Content check** validates frontmatter and titles in the Markdown and MDX files under `docs/`, based on the rules in `tests/content/validation.config.js`.
 - **Format check** checks the formatting of supported source, documentation, and configuration files with Prettier.
+- **JS check** lints JavaScript/JSX/TypeScript with ESLint, based on the rules in `eslint.config.js`.
+- **CSS check** lints CSS with Stylelint, based on the rules in `.stylelintrc.json`.
 
 The corresponding npm scripts are defined in `package.json`.
 
@@ -46,12 +48,15 @@ Some paths are excluded from the content check by default (e.g. `README.md` file
 npm run test:all
 ```
 
-This check runs Prettier first and content validation afterwards:
+This check runs Prettier, content validation, ESLint, and Stylelint in sequence:
 
 ```console
 npm run test:format
 npm run test:content
+npm run lint
 ```
+
+`lint` itself runs `test:js` (ESLint) and `test:css` (Stylelint).
 
 The format check covers files with the extensions `js`, `jsx`, `ts`, `tsx`, `md`, `mdx`, `json`, `css`, `yml`, and `yaml`. The exceptions are defined in `.prettierignore`.
 
@@ -60,6 +65,8 @@ Individual checks can also be started directly:
 ```console
 npm run test:format
 npm run test:content
+npm run test:js
+npm run test:css
 ```
 
 ## Automatically fixing formatting
@@ -68,13 +75,22 @@ npm run test:content
 npm run test:format:fix
 ```
 
-This formats all supported files with Prettier. Run the full check afterwards:
+This formats all supported files with Prettier. ESLint and Stylelint findings that are auto-fixable can be fixed separately:
+
+```console
+npm run test:js:fix
+npm run test:css:fix
+# or both at once:
+npm run lint:fix
+```
+
+Run the full check afterwards:
 
 ```console
 npm run test:all
 ```
 
-`test:format:fix` can change files throughout the repository. Review the changes with Git before committing.
+`test:format:fix` and `lint:fix` can change files throughout the repository. Review the changes with Git before committing.
 
 ## Common errors
 
@@ -112,6 +128,23 @@ npm run test:format:fix
 
 Then use `npm run test:format` to check whether any formatting problems remain that could not be fixed automatically. Files under `node_modules/`, `.docusaurus/`, `build/`, and `coverage/`, as well as `package-lock.json`, are ignored.
 
+### ESLint or Stylelint fails
+
+Run the check with more detail:
+
+```console
+npm run test:js
+npm run test:css
+```
+
+Many findings can be fixed automatically:
+
+```console
+npm run lint:fix
+```
+
+React Hook rule violations (`react-hooks/*`) are reported as warnings and do not fail the check; they should still be reviewed and fixed when touching the affected code.
+
 ## Before pull requests
 
 The minimum local check is:
@@ -121,4 +154,4 @@ npm ci
 npm run test:all
 ```
 
-In CI, the GitHub Actions workflow `PR Check` (`.github/workflows/pr-check.yml`) runs the `Content Check` and `Format Check` jobs on every push and pull request. On pull requests, a `Build Validation` job additionally runs after both checks pass, downloading translations and building the site to catch broken links and anchors.
+In CI, the GitHub Actions workflow `PR Check` (`.github/workflows/pr-check.yml`) runs the `Content Check`, `Format Check`, `JS Check`, and `CSS Check` jobs on every push and pull request. On pull requests, a `Build Validation` job additionally runs after all four checks pass, downloading translations and building the site to catch broken links and anchors.
