@@ -1,0 +1,148 @@
+name: PR Check
+
+on:
+    pull_request:
+        paths: &watched-paths
+            - "docs/**"
+            - "src/**"
+            - "i18n/**"
+            - "scripts/**"
+            - "static/**"
+            - "*.json"
+            - "*.js"
+            - "*.ts"
+            - "*.tsx"
+            - "*.md"
+            - "*.mdx"
+            - "package.json"
+            - "package-lock.json"
+            - ".prettierignore"
+            - ".github/actions/setup-node-env/action.yml"
+            - ".github/workflows/pr-check.yml"
+    push:
+        branches:
+            - main
+            - localisation
+        paths: *watched-paths
+    workflow_dispatch:
+
+jobs:
+    content-lint:
+        name: Content Lint
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run content lint
+              run: npm run lint:content
+
+    format-lint:
+        name: Format Lint
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Detect changed lintable files
+              id: changed-files
+              uses: tj-actions/changed-files@v47
+              with:
+                  files: |
+                      **/*.js
+                      **/*.jsx
+                      **/*.ts
+                      **/*.tsx
+                      **/*.md
+                      **/*.mdx
+                      **/*.json
+                      **/*.css
+                      **/*.yml
+                      **/*.yaml
+                  files_ignore: |
+                      package-lock.json
+
+            - name: Run format lint on changed files
+              if: steps.changed-files.outputs.any_changed == 'true'
+              run: npx prettier --check ${{ steps.changed-files.outputs.all_changed_files }}
+
+            - name: No changed lintable files
+              if: steps.changed-files.outputs.any_changed != 'true'
+              run: echo "No lintable files changed."
+
+    build-validation:
+        name: Build Validation
+        if: github.event_name == 'pull_request'
+        needs: [content-lint, format-lint]
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+              with:
+                  fetch-depth: "0"
+
+            - name: Write translations
+              run: npm run write-translations
+              continue-on-error: false
+
+            - name: Download translations from Crowdin
+              run: npm run crowdin download
+              env:
+                  CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+              continue-on-error: true
+
+            - name: Build website
+              shell: bash
+              run: |
+                  set -o pipefail
+                  npm run build 2>&1 | tee build.log
+
+                  WARNINGS=$(grep -Ei "^\[WARNING\]|^Warning:" build.log || true)
+
+                  if [ -n "$WARNINGS" ]; then
+                    WARNING_DETAILS=$(awk '
+                      BEGIN {capture=0; printed=0}
+                      /^\[WARNING\]|^Warning:/ {
+                        capture=1
+                        if (printed++) print ""
+                        print
+                        next
+                      }
+                      capture && /^\[[^]]+\]/ {
+                        capture=0
+                        next
+                      }
+                      capture {print}
+                    ' build.log)
+
+                    echo "## Build warnings" >> "$GITHUB_STEP_SUMMARY"
+                    echo "Detected build warnings and related output:" >> "$GITHUB_STEP_SUMMARY"
+                    echo '```text' >> "$GITHUB_STEP_SUMMARY"
+                    echo "$WARNING_DETAILS" >> "$GITHUB_STEP_SUMMARY"
+                    echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+                    while IFS= read -r line; do
+                      echo "::warning title=Build warning::$line"
+                    done <<< "$WARNINGS"
+                  fi
+
+                  BROKEN_REFERENCES=$(grep -Ei "Docusaurus found broken (links|anchors)" build.log || true)
+
+                  if [ -n "$BROKEN_REFERENCES" ]; then
+                    echo "::error title=Broken references detected::Docusaurus reported broken links or anchors during build."
+                    echo "## Broken references policy" >> "$GITHUB_STEP_SUMMARY"
+                    echo "Build failed because broken links or broken anchors were detected." >> "$GITHUB_STEP_SUMMARY"
+                    exit 1
+                  fi
+              continue-on-error: false
+
+            - name: All checks passed
+              if: success()
+              run: |
+                  echo "All validations succeeded!"
+                  echo "- Content lint passed"
+                  echo "- Format lint passed"
+                  echo "- Build succeeded"
