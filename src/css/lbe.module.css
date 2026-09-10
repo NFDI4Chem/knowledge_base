@@ -32,7 +32,7 @@ h5 {
 	width: 65%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (width <= 1200px) {
 	.lbe {
 		display: flex;
 		flex-direction: column;
@@ -64,7 +64,6 @@ h5 {
 /* Filter buttons */
 
 .lbeFilterbutton {
-	display: grid;
 	align-items: center;
 	border-radius: var(--ifm-breadcrumb-border-radius);
 	color: white;
@@ -163,7 +162,7 @@ h5 {
 	text-align: left;
 }
 
-@media screen and (max-width: 966px) {
+@media screen and (width <= 966px) {
 	.lbeBlockHeader {
 		display: flex;
 		flex-wrap: wrap-reverse;
@@ -185,6 +184,7 @@ h5 {
 .lbeDetails {
 	--docusaurus-details-transition: transform 200ms ease;
 	--docusaurus-details-decoration-color: var(--ifm-color-primary);
+
 	display: flex;
 	flex-direction: column;
 	padding: 0 1rem;

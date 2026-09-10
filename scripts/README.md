@@ -1,6 +1,6 @@
 # Scripts für Dokumentations-Validierung
 
-Dieses Verzeichnis enthält automatisierte Validierungs-Tools für die Knowledge Base.
+Dieses Verzeichnis enthält allgemeine Wartungs- und Analyse-Tools für die Knowledge Base. Die Testskripte (Content-Validierung, Build-Log-Check) liegen unter `tests/content/` und `tests/ci/`.
 
 ## Verfügbare Scripts
 
@@ -25,7 +25,7 @@ npm run validate-content
 
 ## GitHub Actions Integration
 
-Der automatische PR-Check ist in `.github/workflows/pr-validation.yml` definiert.
+Der automatische PR-Check ist in `.github/workflows/pr-check.yml` definiert.
 
 Er läuft automatisch bei Pull Requests und prüft:
 

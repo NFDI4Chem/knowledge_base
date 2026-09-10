@@ -1,11 +1,10 @@
-@import "@site/src/css/lbe.module.css";
+@import url("@site/src/css/lbe.module.css");
 
 /********** ELN-Finder ************/
 
 .eln {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 }
 
@@ -73,7 +72,7 @@
 	padding: 0.5rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (width <= 1400px) {
 	.eln {
 		display: flex;
 		flex-direction: column;

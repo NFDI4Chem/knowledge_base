@@ -113,7 +113,7 @@ The usual local check is:
 
 ```console
 npm ci
-npm run lint:all
+npm run test:all
 npm run test:e2e
 ```
 

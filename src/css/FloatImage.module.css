@@ -1,7 +1,7 @@
 .FloatImage {
 	width: min(120px, 50%);
 	float: right;
-	margin: 0px 20px 0px 20px;
+	margin: 0 20px;
 }
 
 .FloatImage--noFloat {

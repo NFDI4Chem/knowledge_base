@@ -8,7 +8,7 @@ Dieser Proposal implementiert ein automatisches Validierungssystem für Pull Req
 
 ### 1. Validierungsskript
 
-**Datei:** `scripts/validate-content.js`
+**Datei:** `tests/content/validate-content.js`
 
 - ✅ Prüft alle `md` und `mdx`-Dateien im `docs/`-Verzeichnis
 - ✅ Validiert Frontmatter auf gültiges YAML und erforderlichen Slug
@@ -51,7 +51,7 @@ npm run validate-content
 - ✅ `scripts/VALIDATION_SETUP.md` - Detaillierte Setup-Anleitung
 - ✅ `scripts/EXAMPLES.md` - Praktische Beispiele für gültige/ungültige Dateien
 - ✅ `scripts/README.md` - Schnelle Übersicht
-- ✅ `scripts/validation.config.js` - Vorschläge für Erweiterungen
+- ✅ `tests/content/validation.config.js` - Vorschläge für Erweiterungen
 
 ## 📋 Validierungsregeln
 
@@ -191,7 +191,7 @@ Das System ist modular und kann leicht erweitert werden:
     - MDX-Lint
     - Remark-Plugins
 
-Siehe `scripts/validation.config.js` für Implementierungs-Ideen.
+Siehe `tests/content/validation.config.js` für Implementierungs-Ideen.
 
 ## 📊 Statistik
 
