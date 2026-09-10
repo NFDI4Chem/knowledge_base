@@ -1,4 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -12,7 +13,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap'); */
 
 /* Self-hosted subsetted fonts from /static/fonts */
-@import "./fonts.css";
+@import url("./fonts.css");
 
 /********** Global variables ************/
 
@@ -62,42 +63,31 @@
 	--ifm-color-caution-light: var(--ifm-color-caution);
 	--ifm-color-caution-lighter: var(--ifm-color-caution);
 	--ifm-color-caution-lightest: var(--ifm-color-caution);
-	--ifm-global-shadow-lw: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+	--ifm-global-shadow-lw: 0 3px 4px 0 rgb(0 0 0 / 30%);
 	--ifm-link-color: var(--ifm-color-primary);
 	--ifm-link-decoration: bold;
 	--ifm-link-hover-color: var(--ifm-link-color);
 	--ifm-link-hover-decoration: underline;
 	--ifm-footer-link-hover-color: var(--ifm-color-danger);
-
 	--ifm-table-border-width: 0;
 	--ifm-table-head-background: var(--ifm-color-primary);
 	--ifm-table-head-color: white;
-
 	--ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-800);
-
 	--ifm-font-size-base: 13pt;
-
 	--ifm-button-border-radius: 0;
-
 	--ifm-navbar-height: 5rem;
 	--ifm-navbar-shadow: transparent;
 	--n4c-navbar-border: #e0e0e0;
-
 	--ifm-alert-border-left-width: 1pt;
 	--ifm-alert-border-width: 1pt;
 	--ifm-alert-border-radius: 0;
 	--ifm-alert-shadow: transparent;
-
 	--n4c-col-width: 250px;
-
 	--n4c-button-width: 280px;
 	--n4c-button-height: 240px;
-
 	--n4c-button-secondary-width: 300px;
-
 	--n4c-button-vpad: 10px;
 	--n4c-button-hpad: 5px;
-
 	--n4c-hover-scale: 105%;
 	--n4c-transform-time: 175ms;
 
@@ -110,23 +100,28 @@
 
 [data-theme="light"] .DocSearch {
 	/* --docsearch-primary-color: var(--ifm-color-primary); */
+
 	/* --docsearch-text-color: var(--ifm-font-color-base); */
 	--docsearch-muted-color: var(--ifm-color-primary);
-	--docsearch-container-background: rgba(94, 100, 112, 0.7);
+	--docsearch-container-background: rgb(94 100 112 / 70%);
 	--docsearch-focus-color: var(--ifm-color-primary);
 	--docsearch-highlight-color: var(--ifm-color-primary);
 	--docsearch-secondary-text-color: var(--ifm-color-primary);
+
 	/* Modal */
 	--docsearch-modal-background: var(--ifm-color-white);
+
 	/* Search box */
 	--docsearch-searchbox-background: var(--ifm-color-white);
 	--docsearch-searchbox-focus-background: var(--ifm-color-white);
 	--docsearch-icon-color: var(--ifm-color-primary);
+
 	/* Hit */
 	--docsearch-hit-color: var(--ifm-color-primary);
 	--docsearch-hit-active-color: var(--ifm-color-white);
 	--docsearch-hit-background: var(--ifm-color-white);
 	--docsearch-hit-highlight-color: var(--ifm-menu-color-background-hover);
+
 	/* Footer */
 	--docsearch-footer-background: var(--ifm-color-white);
 }
@@ -135,8 +130,10 @@
 
 .theme-announcement-bar {
 	font-size: 20px;
-	--site-announcement-bar-stripe-color1: rgba(227, 6, 19, 0.15);
+
+	--site-announcement-bar-stripe-color1: rgb(227 6 19 / 15%);
 	--site-announcement-bar-stripe-color2: white;
+
 	background: repeating-linear-gradient(
 		-35deg,
 		var(--site-announcement-bar-stripe-color1),
@@ -171,6 +168,7 @@
 	--ifm-footer-color: var(--ifm-footer-link-color);
 	--ifm-footer-link-color: var(--ifm-color-white);
 	--ifm-footer-title-color: var(--ifm-color-white);
+
 	font-weight: unset;
 	border-top: 1px solid white;
 }
@@ -211,7 +209,7 @@
 	font-weight: unset;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (width <= 1400px) {
 	.footer__copyright {
 		flex-direction: column;
 		align-items: stretch;
@@ -244,6 +242,7 @@
 
 .button--primary:hover {
 	/* --ifm-button-background-color: var(--ifm-color-danger); */
+
 	/* --ifm-button-border-color: white; */
 	transform: scale(var(--n4c-hover-scale));
 	transition: transform var(--n4c-transform-time) ease-in-out;
@@ -251,6 +250,7 @@
 
 .button.button--secondary {
 	color: var(--ifm-color-primary);
+
 	--ifm-button-background-color: white;
 	--ifm-button-border-color: var(--ifm-color-primary);
 }
@@ -300,7 +300,7 @@
 	color: var(--ifm-color-primary);
 	text-align: left;
 	white-space: normal;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 /********** Links ************/
@@ -365,7 +365,7 @@ p,
 
 .searchResultItem_18XW a,
 .searchResultItem_18XW h2 {
-	/*  color: unset;*/
+	/*  color: unset; */
 	color: var(--ifm-color-primary);
 	font-size: unset;
 }
@@ -373,7 +373,8 @@ p,
 mark {
 	color: white;
 	background: var(--ifm-color-danger);
-	/*  background: var(--ifm-color-primary);*/
+
+	/*  background: var(--ifm-color-primary); */
 }
 
 /********** Bullets ************/
@@ -400,8 +401,10 @@ ul ul {
 
 .alert {
 	color: black;
+
 	--ifm-alert-foreground-color: black;
 	--ifm-alert-background-color: white;
+
 	border-style: dashed;
 	text-align: justify;
 }
