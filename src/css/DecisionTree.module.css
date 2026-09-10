@@ -34,10 +34,6 @@ svg > * {
 	font-size: 18px;
 }
 
-.svgDescBox {
-	fill: var(--repo-data-box);
-}
-
 .svglink:hover > * {
 	fill: var(--ifm-color-danger);
 	transition-duration: 0.4s;
