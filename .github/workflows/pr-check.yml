@@ -27,19 +27,19 @@ on:
     workflow_dispatch:
 
 jobs:
-    content-lint:
-        name: Content Lint
+    content-check:
+        name: Content Check
         runs-on: ubuntu-latest
 
         steps:
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
-            - name: Run content lint
-              run: npm run lint:content
+            - name: Run content check
+              run: npm run test:content
 
-    format-lint:
-        name: Format Lint
+    format-check:
+        name: Format Check
         runs-on: ubuntu-latest
 
         steps:
@@ -64,7 +64,7 @@ jobs:
                   files_ignore: |
                       package-lock.json
 
-            - name: Run format lint on changed files
+            - name: Run format check on changed files
               if: steps.changed-files.outputs.any_changed == 'true'
               run: npx prettier --check ${{ steps.changed-files.outputs.all_changed_files }}
 
@@ -75,7 +75,7 @@ jobs:
     build-validation:
         name: Build Validation
         if: github.event_name == 'pull_request'
-        needs: [content-lint, format-lint]
+        needs: [content-check, format-check]
         runs-on: ubuntu-latest
 
         steps:
@@ -109,6 +109,6 @@ jobs:
               if: success()
               run: |
                   echo "All validations succeeded!"
-                  echo "- Content lint passed"
-                  echo "- Format lint passed"
+                  echo "- Content check passed"
+                  echo "- Format check passed"
                   echo "- Build succeeded"

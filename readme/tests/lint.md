@@ -2,8 +2,8 @@
 
 This project uses two different checks:
 
-- **Content linting** checks frontmatter and titles in the Markdown and MDX files under `docs/`.
-- **Format linting** checks the formatting of supported source, documentation, and configuration files with Prettier.
+* **Content linting** checks frontmatter and titles in the Markdown and MDX files under `docs/`.
+* **Format linting** checks the formatting of supported source, documentation, and configuration files with Prettier.
 
 The corresponding npm scripts are defined in `package.json`.
 
@@ -11,8 +11,8 @@ The corresponding npm scripts are defined in `package.json`.
 
 ## Requirements
 
-- Node.js `>=18`
-- Installed project dependencies
+* Node.js `>=18`
+* Installed project dependencies
 
 After cloning the repository or changing its dependencies:
 
@@ -30,12 +30,12 @@ npm ci
 npm run lint
 ```
 
-This runs `npm run lint:content`. The validation script `scripts/validate-content.js` checks the documents under `docs/` for, among other things:
+This runs `npm run test:content`. The validation script `scripts/validate-content.js` checks the documents under `docs/` for, among other things:
 
-- valid YAML frontmatter
-- a present `slug`
-- a title provided by an H1 heading or the frontmatter field `title`
-- the project-specific rules for titles and content
+* valid YAML frontmatter
+* a present `slug`
+* a title provided by an H1 heading or the frontmatter field `title`
+* the project-specific rules for titles and content
 
 ### Full check
 
@@ -46,8 +46,8 @@ npm run lint:all
 This check runs Prettier first and content validation afterwards:
 
 ```console
-npm run lint:format
-npm run lint:content
+npm run test:format
+npm run test:content
 ```
 
 The format check covers files with the extensions `js`, `jsx`, `ts`, `tsx`, `md`, `mdx`, `json`, `css`, `yml`, and `yaml`. The exceptions are defined in `.prettierignore`.
@@ -55,8 +55,8 @@ The format check covers files with the extensions `js`, `jsx`, `ts`, `tsx`, `md`
 Individual checks can also be started directly:
 
 ```console
-npm run lint:format
-npm run lint:content
+npm run test:format
+npm run test:content
 ```
 
 ## Automatically fixing formatting
@@ -98,7 +98,7 @@ Start with:
 npm run lint:fix
 ```
 
-Then use `npm run lint:format` to check whether any formatting problems remain that could not be fixed automatically. Files under `node_modules/`, `.docusaurus/`, `build/`, and `coverage/`, as well as `package-lock.json`, are ignored.
+Then use `npm run test:format` to check whether any formatting problems remain that could not be fixed automatically. Files under `node_modules/`, `.docusaurus/`, `build/`, and `coverage/`, as well as `package-lock.json`, are ignored.
 
 ## Before pull requests
 
