@@ -33,6 +33,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -44,6 +47,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -78,6 +84,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -89,6 +98,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -100,18 +112,24 @@ jobs:
         if: github.event_name == 'pull_request'
         needs: [content-check, format-check, js-check, css-check]
         runs-on: ubuntu-latest
+        env:
+            HAS_CROWDIN_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN != '' }}
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
-              with:
-                  fetch-depth: "0"
 
             - name: Write translations
               run: npm run write-translations
               continue-on-error: false
 
             - name: Download translations from Crowdin
+              if: env.HAS_CROWDIN_TOKEN == 'true'
               run: npm run crowdin download
               env:
                   CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
