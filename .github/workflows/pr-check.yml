@@ -27,6 +27,9 @@ on:
         paths: *watched-paths
     workflow_dispatch:
 
+permissions:
+    contents: read
+
 jobs:
     content-check:
         name: Content Check
@@ -121,8 +124,6 @@ jobs:
 
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
-              with:
-                  fetch-depth: "0"
 
             - name: Write translations
               run: npm run write-translations
