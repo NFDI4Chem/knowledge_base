@@ -84,10 +84,21 @@ jobs:
             - name: Run ESLint
               run: npm run test:js
 
+    css-check:
+        name: CSS Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Run Stylelint
+              run: npm run test:css
+
     build-validation:
         name: Build Validation
         if: github.event_name == 'pull_request'
-        needs: [content-check, format-check, js-check]
+        needs: [content-check, format-check, js-check, css-check]
         runs-on: ubuntu-latest
 
         steps:
@@ -123,4 +134,6 @@ jobs:
                   echo "All validations succeeded!"
                   echo "- Content check passed"
                   echo "- Format check passed"
+                  echo "- JS check passed"
+                  echo "- CSS check passed"
                   echo "- Build succeeded"
