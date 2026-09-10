@@ -130,6 +130,7 @@ jobs:
               continue-on-error: false
 
             - name: Download translations from Crowdin
+              if: ${{ secrets.CROWDIN_PERSONAL_TOKEN != '' }}
               run: npm run crowdin download
               env:
                   CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
