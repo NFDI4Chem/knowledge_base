@@ -29,36 +29,46 @@ function Lbe() {
 
 	// Conditions for initial states
 
-	if (queryText !== null) {
-		useEffect(() => {
-			setLbeState({
+	useEffect(() => {
+		// Set initial state, if no params, default to "All" for repo and subdiscipline
+		let initialState = {
+			repo: "All",
+			subd: "All",
+			journal: "All",
+			switch: "subd",
+		};
+
+		// Update initial state based on URL params^
+		// If text param is present, set switch to "text" and search to queryText
+		if (queryText !== null) {
+			initialState = {
+				...initialState,
 				search: queryText,
 				switch: "text",
-			});
-		}, []);
-	} else if (querySubd !== null) {
-		useEffect(() => {
-			setLbeState({
+			};
+		}
+
+		// If subd param is present, set switch to "subd" and subd to querySubd
+		else if (querySubd !== null) {
+			initialState = {
+				...initialState,
 				subd: querySubd,
 				switch: "subd",
-			});
-		}, []);
-	} else if (queryDoi !== null) {
-		useEffect(() => {
-			setLbeState({
+			};
+		}
+
+		// If doi param is present, set switch to "doi" and doi to queryDoi
+		else if (queryDoi !== null) {
+			initialState = {
+				...initialState,
+				doi: queryDoi,
 				switch: "doi",
-			});
-		}, []);
-	} else {
-		useEffect(() => {
-			setLbeState({
-				repo: "All",
-				subd: "All",
-				journal: "All",
-				switch: "subd",
-			});
-		}, []);
-	}
+			};
+		}
+
+		// Set the state
+		setLbeState(initialState);
+	}, [queryText, querySubd, queryDoi]);
 
 	// Get list of subdisciplines
 	var subdiscs = Array.from(
