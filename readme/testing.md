@@ -6,8 +6,8 @@ This website is built using [Docusaurus 3](https://docusaurus.io/), a modern sta
 
 ## Requirements
 
-* In order to clone the repository to your computer, you may simply [download](https://github.com/NFDI4Chem/knowledge_base/archive/refs/heads/main.zip) the repository from Github and extract it. If you want to work locally on changes in your fork, the installation of [Git](https://git-scm.com/) and [Visual Studio Code](https://code.visualstudio.com/) may be convenvient.
-* To create a local preview of the website, you need to install [NodeJS](https://nodejs.org/) (we recommend using the LTS version, at least `>=18` is required).
+- In order to clone the repository to your computer, you may simply [download](https://github.com/NFDI4Chem/knowledge_base/archive/refs/heads/main.zip) the repository from Github and extract it. If you want to work locally on changes in your fork, the installation of [Git](https://git-scm.com/) and [Visual Studio Code](https://code.visualstudio.com/) may be convenvient.
+- To create a local preview of the website, you need to install [NodeJS](https://nodejs.org/) (we recommend using the LTS version, at least `>=18` is required).
 
 ## Installation
 
