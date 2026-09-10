@@ -28,7 +28,7 @@
 
 .chemotionCarouselDot {
 	font-size: 1.5em;
-	color: rgba(146, 148, 151);
+	color: rgb(146 148 151);
 	border: none;
 	cursor: pointer;
 	opacity: 0.5;
@@ -42,7 +42,7 @@
 	opacity: 0.65;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (width <= 968px) {
 	.chemotionCarousel {
 		display: flex;
 		flex-direction: column;

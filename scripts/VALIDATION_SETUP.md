@@ -6,10 +6,10 @@ Dieses Dokument erklärt den automatischen Test-Setup für Pull Requests.
 
 Das System validiert bei jedem PR automatisch:
 
-1. **Frontmatter-Validierung** (`scripts/validate-content.js`)
+1. **Frontmatter-Validierung** (`tests/content/validate-content.js`)
     - Alle md/mdx-Dateien müssen gültiges YAML-Frontmatter haben
     - Mindestens ein `slug` muss im Frontmatter vorhanden sein
-2. **Titel-Validierung** (`scripts/validate-content.js`)
+2. **Titel-Validierung** (`tests/content/validate-content.js`)
     - Jede Seite muss einen gültigen Titel haben (mindestens eine der folgenden Optionen):
         - Eine `h1`-Überschrift (`# Titel`)
         - Ein `title` im Frontmatter
@@ -22,7 +22,7 @@ Das System validiert bei jedem PR automatisch:
 
 ### 1. Validierungsskript
 
-**Datei:** `scripts/validate-content.js`
+**Datei:** `tests/content/validate-content.js`
 
 Das Node.js-Skript prüft alle md/mdx-Dateien im `docs/`-Verzeichnis:
 
@@ -31,7 +31,7 @@ Das Node.js-Skript prüft alle md/mdx-Dateien im `docs/`-Verzeichnis:
 npm run validate-content
 
 # Oder direkt:
-node scripts/validate-content.js
+node tests/content/validate-content.js
 ```
 
 **Ausgabe-Beispiel:**

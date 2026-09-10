@@ -51,11 +51,6 @@ const commonFeatures = {
 		imgUrl: "/img/nfdi4chem_Data_Storage_and_Archiving.svg",
 		text: <Translate>Data Storage and Archiving</Translate>,
 	},
-	dataPublishing: {
-		url: "/docs/data_publishing",
-		imgUrl: "/img/nfdi4chem_Data_Publication.svg",
-		text: <Translate>Data Publishing</Translate>,
-	},
 	chooseRepository: {
 		url: "/docs/choose_repository",
 		imgUrl: "/img/nfdi4chem_How_to_choose_the_right_repository.svg",

@@ -15,7 +15,7 @@
 		right top;
 }
 
-@media screen and (max-width: 966px) {
+@media screen and (width <= 966px) {
 	.hero {
 		padding: 2rem;
 		background-image: url("/img/Background.png");
@@ -46,13 +46,13 @@
 .heroBanner {
 	padding: 2rem 0;
 	text-align: center;
-	position: center;
 	overflow: hidden;
+
 	--ifm-hero-background-color: var(--ifm-color-primary);
 	--ifm-hero-text-color: var(--ifm-color-white);
 }
 
-@media screen and (max-width: 966px) {
+@media screen and (width <= 966px) {
 	.heroBanner {
 		padding: 2rem;
 	}

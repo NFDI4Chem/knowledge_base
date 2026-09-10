@@ -87,6 +87,7 @@ function Lbe() {
 	repos.unshift("All"); // Add "All" option at the beginning
 
 	var result = [];
+	let resultOutput;
 
 	// Render all datasets if "All" is selected
 
@@ -96,6 +97,7 @@ function Lbe() {
 		// Determine result set based on lbeState.switch states
 		switch (lbeState.switch) {
 			case "tag":
+				// eslint-disable-next-line no-undef -- tagFilter is never set; this branch is currently unreachable (pre-existing)
 				result = lbeTable.filter((n) => n.tags.includes(tagFilter));
 				break;
 			case "repo":
@@ -120,11 +122,11 @@ function Lbe() {
 						.includes(lbeState.search.toLowerCase()),
 				); // Squash object with JSON.stringify() for better searchability
 				if (lbeState.search == "") {
-					var resultOutput = "";
+					resultOutput = "";
 				} else if (result.length == 1) {
-					var resultOutput = result.length + " entry found...";
+					resultOutput = result.length + " entry found...";
 				} else {
-					var resultOutput = result.length + " entries found...";
+					resultOutput = result.length + " entries found...";
 				}
 				break;
 			case "doi":

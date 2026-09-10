@@ -1,14 +1,24 @@
 name: "Setup Node environment"
-description: "Set up Node.js with npm cache and install dependencies"
+description: "Checkout code, set up Node.js with npm cache, and install dependencies"
 
 inputs:
     node-version:
         description: "Node.js version to use"
         required: false
         default: "lts/*"
+    fetch-depth:
+        description: "Number of commits to fetch (0 = all history)"
+        required: false
+        default: "1"
+
 runs:
     using: "composite"
     steps:
+        - name: Checkout code
+          uses: actions/checkout@v5
+          with:
+              fetch-depth: ${{ inputs.fetch-depth }}
+
         - name: Setup Node.js
           uses: actions/setup-node@v6
           with:
