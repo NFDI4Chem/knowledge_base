@@ -25,19 +25,19 @@ To (re-)build the KB files after a content update, run:
 npm run build
 ```
 
-To run the default Lint checks (content validation), run:
+To run the default check (content validation), run:
 
 ```console
-npm run lint
+npm run test
 ```
 
-To run the full Lint checks (formatting + content validation), run:
+To run the full check (formatting + content validation), run:
 
 ```console
-npm run lint:all
+npm run test:all
 ```
 
-For more detailed information about our internal testing routines, see the documentation on our [Lint](tests/lint.md) and [Playwright](tests/playwright.md) tests.
+For more detailed information about our internal testing routines, see the documentation on our [content and format checks](tests/lint.md) and [Playwright](tests/playwright.md) tests.
 
 To run a local testing instance of the knowledge base, run:
 
