@@ -25,30 +25,24 @@ function FloatImage({
 		[styles["imgStyle--shadow"]]: shadow,
 	});
 
-	const image = (
-		<img
-			className={imgClass}
-			alt={alt}
-			src={useBaseUrl(url)}
-		/>
-	);
+	const image = <img className={imgClass} alt={alt} src={useBaseUrl(url)} />;
 
 	const linkedImage = link ? <Link href={link}>{image}</Link> : image;
 
-	const imgGroup = caption !== undefined ? (
-		<div className={styles.imgGroup}>
-			{linkedImage}
-			<p
-				className={styles.captionStyle}
-				style={textAlign ? { textAlign } : undefined}
-			>
-				{caption}
-			</p>
-		</div>
-	) : (
-		linkedImage
-	);
-
+	const imgGroup =
+		caption !== undefined ? (
+			<div className={styles.imgGroup}>
+				{linkedImage}
+				<p
+					className={styles.captionStyle}
+					style={textAlign ? { textAlign } : undefined}
+				>
+					{caption}
+				</p>
+			</div>
+		) : (
+			linkedImage
+		);
 
 	return (
 		<div id={id ?? null} className={containerClass} style={props}>
