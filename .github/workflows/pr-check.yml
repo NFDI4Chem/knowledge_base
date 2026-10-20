@@ -124,12 +124,14 @@ jobs:
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
+              # The following two steps will lead to inconsistencies when the PR is based on the localisation branch because the translations will only be done after the PR is merged into localisation. Therefore, we skip these steps in that case.
             - name: Write translations
+              if: github.base_ref != 'localisation'
               run: npm run write-translations
               continue-on-error: false
 
             - name: Download translations from Crowdin
-              if: env.HAS_CROWDIN_TOKEN == 'true'
+              if: github.base_ref != 'localisation' && env.HAS_CROWDIN_TOKEN == 'true'
               run: npm run crowdin download
               env:
                   CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
