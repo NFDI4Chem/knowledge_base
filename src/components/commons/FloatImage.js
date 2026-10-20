@@ -1,44 +1,53 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Link from "@docusaurus/Link";
+import clsx from "clsx";
 
 import styles from "@site/src/css/FloatImage.module.css";
 
-function FloatImage({ url, alt, ...props }) {
-	// Object for custom styles
-
-	let style = {};
-
-	// Populate style object with all props except 'link'
-
-	Object.keys(props).forEach((key) => {
-		if (key !== "link") {
-			style[key] = props[key];
-		}
+function FloatImage({
+	url,
+	alt,
+	caption,
+	float,
+	noFloat,
+	shadow,
+	textAlign,
+	link,
+	id,
+	...props
+}) {
+	const containerClass = clsx(styles.FloatImage, {
+		[styles["FloatImage--noFloat"]]: float === "none" || noFloat,
+		[styles["FloatImage--floatLeft"]]: float === "left",
 	});
 
-	// Component for image
+	const imgClass = clsx(styles.imgStyle, {
+		[styles["imgStyle--shadow"]]: shadow,
+	});
 
-	const ThisImg = () => {
-		return (
-			<img
-				className={styles.FloatImage}
-				alt={alt}
-				src={useBaseUrl(url)}
-				style={style}
-			/>
+	const image = <img className={imgClass} alt={alt} src={useBaseUrl(url)} />;
+
+	const linkedImage = link ? <Link href={link}>{image}</Link> : image;
+
+	const imgGroup =
+		caption !== undefined ? (
+			<div className={styles.imgGroup}>
+				{linkedImage}
+				<p
+					className={styles.captionStyle}
+					style={textAlign ? { textAlign } : undefined}
+				>
+					{caption}
+				</p>
+			</div>
+		) : (
+			linkedImage
 		);
-	};
 
-	// If link prop is given, wrap image in link
-
-	if (props.link && props.link.length > 0) {
-		return (
-			<Link href={props.link}>
-				<ThisImg />
-			</Link>
-		);
-	}
-
-	return <ThisImg />;
+	return (
+		<div id={id ?? null} className={containerClass} style={props}>
+			{imgGroup}
+		</div>
+	);
 }
 export default FloatImage;

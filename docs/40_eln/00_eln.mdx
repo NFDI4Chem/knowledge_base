@@ -1,0 +1,98 @@
+---
+title: "Electronic Lab Notebooks"
+slug: "/eln"
+id: "eln"
+---
+
+import FloatImage from "@site/src/components/commons/FloatImage.js";
+import {
+	BulletContainer,
+	BulletBox,
+} from "@site/src/components/commons/BulletBox";
+
+# Electronic Lab Notebooks (ELNs)
+
+## Introduction
+
+The world around us is constantly evolving. For example, the smartphones in our pockets are much faster than an 80s supercomputer that could barely fit in an average bedroom. Unfortunately, this development has not yet reached our laboratories. The paper lab notebook is as common as it was 100 years ago, and the way chemical research data is documented - literally with pen and paper - has made little progress in the last century.
+
+Bringing advances in information technology to our labs (smartlab) does not necessarily mean tablets & touchscreens everywhere in your lab. The term smartlab is more about the interconnectivity of the entire workflow and the handling of research data according to the [FAIR principles](/docs/fair). ELNs help assign rich [metadata](/docs/metadata) to experiments and make the data collected traceable and reusable. With the ability to transfer data from instrumentation directly into the ELN, the ELN has all the data in one place. From the ELN, data can be easily published to repositories and transferred to long-term [archiving](/docs/data_storage).
+
+## What is the difference between generic documentation system and an ELN or LIMS?
+
+One of the most important things that distinguishes an ELN from a blank piece of paper is the ability to document [metadata](/docs/metadata) in a structured and ideally human and machine-readable manner. For more information on the differences between simple systems, ELNs, and Laboratory Information Management Systems (LIMS), see the following overview.
+
+### Typical features of different documentation solutions
+
+<!-- prettier-ignore-start -->
+| | Generic solution | Electronic Lab Notebook (ELN) | Laboratory Information Management System (LIMS) |
+|-------|:-------:|:-------:|:-------:|
+| Examples | _Evernote, GoogleDrive, Dropbox, MS Sharepoint_ | _Labfolder, RSpace, eLabFTW, Labguru_ | _Benchling, Starlims, Limesophy_ |
+| Enter text | ✅ | ✅ | ✅ |
+| Add notes | ✅ | ✅ | ✅ |
+| Add files as attachments | ✅ | ✅ | ✅ |
+| Sharing | ✅ | ✅ | ✅ |
+| Searching / findability | ✅ | ✅ | ✅ |
+| Structured metadata | | ✅ | ✅ |
+| Rights management | | ✅ | ✅ |
+| Audit trail | | ✅ | ✅ |
+| API / system integration | | ✅ | ✅ |
+| Sample management | | | ✅ |
+| Instrument integration | | | ✅ |
+| Process management | | | ✅ |
+| Electronic signatures | | | ✅ |
+| Accounting / reporting / statistics | | | ✅ |
+<!-- prettier-ignore-end -->
+
+## Advantages of an ELN
+
+ELNs help link experimental descriptions directly to the collected data so that all information can be found in one place. Furthermore, data loss is avoided by secure data storage and backups. Storing all the data in one central place also assists with knowledge management since the data is findable and accessible, even for new members in a research project. The biggest advantage of an ELN is that [metadata](/docs/metadata) is stored in a structured and [standardised](/docs/data_formats) manner. This also helps with publishing research results and transferring research data to a repository.
+
+<BulletContainer>
+	<BulletBox>
+		<h3>Avoid Data Loss</h3>
+		<ul>
+			<li>
+				Linking experimental descriptions to collected data (analogue
+				and digital)
+			</li>
+			<li>Secure data storage, backups</li>
+		</ul>
+	</BulletBox>
+	<BulletBox secondary>
+		<h3>Knowledge Management</h3>
+		<ul>
+			<li>Data is findable</li>
+			<li>Data is accessible</li>
+			<li>Data is available, even after change of personnel</li>
+		</ul>
+	</BulletBox>
+</BulletContainer>
+
+<BulletContainer>
+  <FloatImage
+    alt="FAIR data principles"
+    url="/img/topics/FAIR_data_principles.png"
+    width="min(100%, 640px)"
+/>
+
+</BulletContainer>
+
+<BulletContainer>
+	<BulletBox secondary>
+		<h3>Standardised Documentation</h3>
+		<ul>
+			<li>Structured and standardised collection of metadata</li>
+			<li>Generation of interoperable (meta)data</li>
+		</ul>
+	</BulletBox>
+	<BulletBox>
+		<h3>Publication</h3>
+		<ul>
+			<li>Data provision for publication of research results</li>
+			<li>Simple transfer of data to repositories</li>
+		</ul>
+	</BulletBox>
+</BulletContainer>
+
+FAIR Image Attribution: SangyaPundir, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
