@@ -21,7 +21,7 @@ function FloatImage({
 		[styles["FloatImage--floatLeft"]]: float === "left",
 	});
 
-	const imgClass = clsx({
+	const imgClass = clsx(styles.imgStyle, {
 		[styles["imgStyle--shadow"]]: shadow,
 	});
 
@@ -30,25 +30,29 @@ function FloatImage({
 			className={imgClass}
 			alt={alt}
 			src={useBaseUrl(url)}
-			style={props}
 		/>
 	);
 
 	const linkedImage = link ? <Link href={link}>{image}</Link> : image;
 
+	const imgGroup = caption !== undefined ? (
+		<div className={styles.imgGroup}>
+			{linkedImage}
+			<p
+				className={styles.captionStyle}
+				style={textAlign ? { textAlign } : undefined}
+			>
+				{caption}
+			</p>
+		</div>
+	) : (
+		linkedImage
+	);
+
+
 	return (
 		<div id={id ?? null} className={containerClass} style={props}>
-			<div className={styles.imgGroup}>
-				{linkedImage}
-				{caption !== undefined && (
-					<p
-						className={styles.captionStyle}
-						style={textAlign ? { textAlign } : undefined}
-					>
-						{caption}
-					</p>
-				)}
-			</div>
+			{imgGroup}
 		</div>
 	);
 }
