@@ -16,14 +16,12 @@ function FloatImage({
 	id,
 	...props
 }) {
-	let containerClass = styles.FloatImage;
-
-	containerClass = clsx(containerClass, {
+	const containerClass = clsx(styles.FloatImage, {
 		[styles["FloatImage--noFloat"]]: float === "none" || noFloat,
 		[styles["FloatImage--floatLeft"]]: float === "left",
 	});
 
-	const imgClass = clsx(styles.FloatImage, {
+	const imgClass = clsx({
 		[styles["imgStyle--shadow"]]: shadow,
 	});
 
