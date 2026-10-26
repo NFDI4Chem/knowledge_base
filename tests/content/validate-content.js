@@ -7,6 +7,7 @@
  * 1. Frontmatter present and valid YAML with at least one slug
  * 2. Valid page titles (h1 or title in frontmatter)
  * 3. No identical h1 and title values
+ * 4. If /i18n exists: slug/id of translations and category link ids match the source
  */
 
 const fs = require("fs");
@@ -35,6 +36,7 @@ try {
 const config = require("./validation.config.js");
 
 const DOCS_DIR = path.join(__dirname, "../../docs");
+const I18N_DIR = path.join(__dirname, "../../i18n");
 
 // Check if docs directory exists
 if (!fs.existsSync(DOCS_DIR)) {
@@ -211,11 +213,103 @@ function validateFile(relPath) {
 }
 
 /**
+ * Reads frontmatter of a file, returns {} on failure
+ */
+function readFrontmatter(filePath) {
+	try {
+		return matter(fs.readFileSync(filePath, "utf-8")).data || {};
+	} catch {
+		return {};
+	}
+}
+
+/**
+ * Compares slug/id of translated docs and category links with the source docs
+ * (only if the i18n directory exists)
+ */
+function validateI18n(files) {
+	if (!fs.existsSync(I18N_DIR)) return [];
+
+	const results = [];
+	const locales = fs
+		.readdirSync(I18N_DIR, { withFileTypes: true })
+		.filter((d) => d.isDirectory())
+		.map((d) => d.name);
+
+	for (const locale of locales) {
+		const localeDocsDir = path.join(
+			I18N_DIR,
+			locale,
+			"docusaurus-plugin-content-docs",
+			"current",
+		);
+		if (!fs.existsSync(localeDocsDir)) continue;
+
+		const check = (relPath, errors) => {
+			if (errors.length > 0) {
+				results.push({
+					file: path.join("i18n", locale, relPath),
+					errors,
+					warnings: [],
+				});
+			}
+		};
+
+		for (const relPath of files) {
+			const translated = path.join(localeDocsDir, relPath);
+			if (!fs.existsSync(translated)) continue;
+
+			const source = readFrontmatter(path.join(DOCS_DIR, relPath));
+			const target = readFrontmatter(translated);
+			const errors = [];
+			for (const key of ["slug", "id"]) {
+				if (source[key] !== target[key]) {
+					errors.push(
+						`${key} differs from source: "${target[key]}" (expected: "${source[key]}")`,
+					);
+				}
+			}
+			check(relPath, errors);
+		}
+
+		const categoryFiles = glob.sync("**/_category_.json", {
+			cwd: DOCS_DIR,
+			ignore: config.exclude.paths,
+		});
+		for (const relPath of categoryFiles) {
+			const translated = path.join(localeDocsDir, relPath);
+			if (!fs.existsSync(translated)) continue;
+			try {
+				const sourceId = JSON.parse(
+					fs.readFileSync(path.join(DOCS_DIR, relPath), "utf-8"),
+				).link?.id;
+				const targetId = JSON.parse(
+					fs.readFileSync(translated, "utf-8"),
+				).link?.id;
+				check(
+					relPath,
+					sourceId !== targetId
+						? [
+								`link.id differs from source: "${targetId}" (expected: "${sourceId}")`,
+							]
+						: [],
+				);
+			} catch (error) {
+				check(relPath, [`Error parsing JSON: ${error.message}`]);
+			}
+		}
+	}
+
+	return results;
+}
+
+/**
  * Main function
  */
 function main() {
 	const files = findContentFiles();
 	const results = files.map((file) => validateFile(file));
+	results.push(...validateI18n(files));
 
 	const errorCount = results.reduce((sum, r) => sum + r.errors.length, 0);
 	const warningCount = results.reduce((sum, r) => sum + r.warnings.length, 0);
