@@ -45,17 +45,10 @@ jobs:
     format-check:
         name: Format Check
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            pull-requests: read
-        outputs:
-            has_fixes: ${{ steps.format.outputs.has_fixes }}
 
         steps:
-            - name: Checkout code
+            - name: Checkout repository
               uses: actions/checkout@v7
-              with:
-                  ref: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref || github.ref }}
 
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
@@ -78,86 +71,13 @@ jobs:
                   files_ignore: |
                       package-lock.json
 
-            - name: Format changed files
-              id: format
+            - name: Run format check on changed files
               if: steps.changed-files.outputs.any_changed == 'true'
-              env:
-                  CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-                  AUTO_FORMAT: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
-              shell: bash
-              run: |
-                  IFS=' ' read -r -a files <<< "$CHANGED_FILES"
+              run: npx prettier --check ${{ steps.changed-files.outputs.all_changed_files }}
 
-                  if [[ "$AUTO_FORMAT" == "true" ]]; then
-                      npx prettier --write -- "${files[@]}"
-                      if ! git diff --quiet; then
-                          git diff --binary > "$RUNNER_TEMP/prettier-fixes.patch"
-                          echo "has_fixes=true" >> "$GITHUB_OUTPUT"
-                      fi
-                  else
-                      npx prettier --check -- "${files[@]}"
-                  fi
-
-            - name: Upload formatting patch
-              if: steps.format.outputs.has_fixes == 'true'
-              uses: actions/upload-artifact@v4
-              with:
-                  name: prettier-fixes
-                  path: ${{ runner.temp }}/prettier-fixes.patch
-                  if-no-files-found: error
-                  retention-days: 1
-
-    format-fix-commit:
-        name: Commit Format Fixes
-        needs: format-check
-        if: needs.format-check.outputs.has_fixes == 'true' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-
-        steps:
-            - name: Checkout pull request branch
-              uses: actions/checkout@v7
-              with:
-                  ref: ${{ github.event.pull_request.head.sha }}
-                  persist-credentials: false
-
-            - name: Download formatting patch
-              uses: actions/download-artifact@v4
-              with:
-                  name: prettier-fixes
-                  path: ${{ runner.temp }}
-
-            - name: Apply patch and commit fixes
-              shell: bash
-              run: |
-                  git apply --check "$RUNNER_TEMP/prettier-fixes.patch"
-                  git apply --index "$RUNNER_TEMP/prettier-fixes.patch"
-
-                  git config user.name "github-actions[bot]"
-                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                  git -c core.hooksPath=/dev/null commit -m "style: format changed files"
-
-            - name: Create GitHub App token
-              id: app-token
-              uses: actions/create-github-app-token@v2
-              with:
-                  app-id: ${{ secrets.PRETTIER_APP_ID }}
-                  private-key: ${{ secrets.PRETTIER_APP_PRIVATE_KEY }}
-                  owner: ${{ github.repository_owner }}
-                  repositories: ${{ github.event.repository.name }}
-                  permission-contents: write
-
-            - name: Push Prettier fixes
-              env:
-                  PRETTIER_APP_TOKEN: ${{ steps.app-token.outputs.token }}
-                  PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
-              shell: bash
-              run: |
-                  auth_header="$(printf 'x-access-token:%s' "$PRETTIER_APP_TOKEN" | base64 -w 0)"
-                  GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null \
-                      git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic ${auth_header}" \
-                      push "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${PR_HEAD_REF}"
+            - name: No changed lintable files
+              if: steps.changed-files.outputs.any_changed != 'true'
+              run: echo "No lintable files changed."
 
     js-check:
         name: JS Check
