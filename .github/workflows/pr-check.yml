@@ -33,9 +33,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v7
-
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -161,9 +158,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v7
-
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -175,9 +169,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v7
-
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -193,13 +184,10 @@ jobs:
             HAS_CROWDIN_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN != '' }}
 
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v7
-              with:
-                  fetch-depth: 0
-
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
+              with:
+                  fetch-depth: 0
 
               # The following two steps will lead to inconsistencies when the PR is based on the localisation branch because the translations will only be done after the PR is merged into localisation. Therefore, we skip these steps in that case.
             - name: Write translations
