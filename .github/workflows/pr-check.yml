@@ -33,6 +33,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -49,10 +52,13 @@ jobs:
             has_fixes: ${{ steps.format.outputs.has_fixes }}
 
         steps:
-            - name: Setup Node environment
-              uses: ./.github/actions/setup-node-env
+            - name: Checkout code
+              uses: actions/checkout@v7
               with:
                   ref: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref || github.ref }}
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
 
             - name: Detect changed lintable files
               id: changed-files
@@ -158,6 +164,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -169,6 +178,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
@@ -184,10 +196,13 @@ jobs:
             HAS_CROWDIN_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN != '' }}
 
         steps:
-            - name: Setup Node environment
-              uses: ./.github/actions/setup-node-env
+            - name: Checkout code
+              uses: actions/checkout@v7
               with:
                   fetch-depth: 0
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
 
               # The following two steps will lead to inconsistencies when the PR is based on the localisation branch because the translations will only be done after the PR is merged into localisation. Therefore, we skip these steps in that case.
             - name: Write translations

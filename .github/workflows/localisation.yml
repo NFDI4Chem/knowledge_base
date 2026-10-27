@@ -14,6 +14,9 @@ jobs:
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/localisation' || github.event_name == 'workflow_dispatch'
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
 
