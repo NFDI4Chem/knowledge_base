@@ -52,13 +52,10 @@ jobs:
             has_fixes: ${{ steps.format.outputs.has_fixes }}
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v7
-              with:
-                  ref: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref || github.ref }}
-
             - name: Setup Node environment
               uses: ./.github/actions/setup-node-env
+              with:
+                  ref: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref || github.ref }}
 
             - name: Detect changed lintable files
               id: changed-files
@@ -83,7 +80,7 @@ jobs:
               if: steps.changed-files.outputs.any_changed == 'true'
               env:
                   CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-                  AUTO_FORMAT: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
+                  AUTO_FORMAT: ${{ github.event_name == 'pull_request' }}
               shell: bash
               run: |
                   IFS=' ' read -r -a files <<< "$CHANGED_FILES"
@@ -106,6 +103,10 @@ jobs:
                   path: ${{ runner.temp }}/prettier-fixes.patch
                   if-no-files-found: error
                   retention-days: 1
+
+            - name: Note formatting patch for fork pull request
+              if: steps.format.outputs.has_fixes == 'true' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+              run: echo "::warning::Prettier fixes are available in the prettier-fixes artifact. Fork pull requests cannot be updated automatically."
 
     format-fix-commit:
         name: Commit Format Fixes
