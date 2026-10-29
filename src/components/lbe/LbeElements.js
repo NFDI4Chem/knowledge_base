@@ -86,8 +86,6 @@ function FilterButton({
 	// Initialize variables
 
 	var buttonClass = styles.lbeFilterbutton;
-	var number = 0;
-	var label = "";
 
 	// Define how the state object should be set when clicked
 
@@ -104,18 +102,19 @@ function FilterButton({
 
 	// Determine number (when needed)
 
-	if (numbered) {
-		if (name === "All") {
-			number = lbeTable.length;
+	const label = () => {
+		if (numbered) {
+			let number =
+				name === "All"
+					? lbeTable.length
+					: lbeTable
+							.map((m) => JSON.stringify(m[filterAttr[type]]))
+							.filter((m) => m.includes(name)).length;
+			return name + " (" + number + ")";
 		} else {
-			number = lbeTable
-				.map((m) => JSON.stringify(m[filterAttr[type]]))
-				.filter((m) => m.includes(name)).length;
+			return name;
 		}
-		label = name + " (" + number + ")";
-	} else {
-		label = name;
-	}
+	};
 
 	return (
 		<button
@@ -130,7 +129,7 @@ function FilterButton({
 						&ensp;
 					</React.Fragment>
 				)}
-				<span>{label}</span>
+				<span>{label()}</span>
 			</div>
 		</button>
 	);

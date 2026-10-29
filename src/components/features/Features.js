@@ -4,9 +4,9 @@ import FeatureButton from "./FeatureButton";
 function Features({ featureList, index, ...props }) {
 	return (
 		<ButtonContainer>
-			{featureList.map((feature, idx) => (
+			{featureList.map((feature) => (
 				<FeatureButton
-					key={idx}
+					key={feature.url}
 					url={feature.url}
 					imgUrl={feature.imgUrl}
 					text={feature.text}

@@ -23,15 +23,21 @@ function ElnFinder(props) {
 	// Fetch ELN data
 
 	useEffect(() => {
-		fetch("../../assets/elnData.json")
+		const controller = new AbortController();
+
+		fetch("../../assets/elnData.json", { signal: controller.signal })
 			.then((response) => response.json())
 			.then((data) => {
 				setElnData(data);
 				console.log(data);
 			})
 			.catch((error) => {
-				console.error(error);
+				if (error.name !== "AbortError") {
+					console.error(error);
+				}
 			});
+
+		return () => controller.abort();
 	}, []);
 
 	// Catch if fetch is still loading
@@ -122,24 +128,24 @@ function ElnFinder(props) {
 
 	// Determine number of results and generate output
 
+	const getResultOutput = (numberOfResults, totalResults) => {
+		if (numberOfResults === totalResults) {
+			return null;
+		}
+
+		if (numberOfResults === 0) {
+			return "No results found.";
+		}
+
+		if (numberOfResults === 1) {
+			return "1 result found.";
+		}
+
+		return `${numberOfResults} results found.`;
+	};
+
 	const numberOfResults = filteredTable.length;
-
-	let resultOutput = null;
-
-	switch (numberOfResults) {
-		case elnTable.length:
-			resultOutput = null;
-			break;
-		case 0:
-			resultOutput = "No results found.";
-			break;
-		case 1:
-			resultOutput = "1 result found.";
-			break;
-		default:
-			resultOutput = numberOfResults + " results found.";
-			break;
-	}
+	const resultOutput = getResultOutput(numberOfResults, elnTable.length);
 
 	// Render ELN Finder component
 

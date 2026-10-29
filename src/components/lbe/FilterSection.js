@@ -16,10 +16,10 @@ function LbeButtons({ repos, subdiscs, journals, lbeState, setLbeState }) {
 			<div className={styles.lbeSearchfilterSection}>
 				<h4>Filter by repositories</h4>
 				<p>
-					{repos.map((props, idx) => (
+					{repos.map((repo) => (
 						<FilterButton
-							key={idx}
-							name={props}
+							key={repo}
+							name={repo}
 							type="repo"
 							numbered={true}
 							{...{ lbeState, setLbeState }}
@@ -30,10 +30,10 @@ function LbeButtons({ repos, subdiscs, journals, lbeState, setLbeState }) {
 			<div className={styles.lbeSearchfilterSection}>
 				<h4>Filter by subdisciplines</h4>
 				<p>
-					{subdiscs.map((props, idx) => (
+					{subdiscs.map((subdisc) => (
 						<FilterButton
-							key={idx}
-							name={props}
+							key={subdisc}
+							name={subdisc}
 							type="subd"
 							numbered={true}
 							{...{ lbeState, setLbeState }}
@@ -44,10 +44,10 @@ function LbeButtons({ repos, subdiscs, journals, lbeState, setLbeState }) {
 			<div className={styles.lbeSearchfilterSection}>
 				<h4>Filter by journals</h4>
 				<p>
-					{journals.map((props, idx) => (
+					{journals.map((journal) => (
 						<FilterButton
-							key={idx}
-							name={props}
+							key={journal}
+							name={journal}
 							type="journal"
 							numbered={true}
 							{...{ lbeState, setLbeState }}

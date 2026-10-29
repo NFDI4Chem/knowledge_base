@@ -7,8 +7,13 @@
 Just follow these simple steps:
 
 1. Create a [fork](https://github.com/NFDI4Chem/knowledge_base/fork) of the repository.
-2. Make additions/changes as required.
-3. Create a pull-request to [`NFDI4Chem/knowledge_base:localisation`](https://github.com/NFDI4Chem/knowledge_base/tree/localisation).\
+2. Install dependencies and set up the pre-commit hook:
+    ```sh
+    npm ci
+    npm run prepare
+    ```
+3. Make additions/changes as required.
+4. Create a pull-request to [`NFDI4Chem/knowledge_base:localisation`](https://github.com/NFDI4Chem/knowledge_base/tree/localisation).\
    _(If you don't know how change the base of your pull request, don't worry - we will re-route your pull request if it is not pointed at that branch.)_
 
 Your changes will then be reviewed by editors of this page. In case of any problems, or if you are unable to contribute via github contact <helpdesk@nfdi4chem.de>.

@@ -1,11 +1,11 @@
-const js = require("@eslint/js");
-const react = require("eslint-plugin-react");
-const reactHooks = require("eslint-plugin-react-hooks");
-const tseslint = require("typescript-eslint");
-const globals = require("globals");
-const eslintConfigPrettier = require("eslint-config-prettier");
+import eslintJs from "@eslint/js";
+import eslintReact from "@eslint-react/eslint-plugin";
+import tseslint from "typescript-eslint";
+import globals from "globals";
+import eslintConfigPrettier from "eslint-config-prettier";
+import { defineConfig } from "eslint/config";
 
-module.exports = [
+export default defineConfig([
 	{
 		ignores: [
 			"build/**",
@@ -23,6 +23,14 @@ module.exports = [
 	// React components and other browser-side JS/JSX under src/
 	{
 		files: ["src/**/*.{js,jsx}"],
+
+		// Extend recommended rule sets from:
+		// 1. ESLint JS's recommended rules
+		// 2. ESLint React's recommended rules
+		extends: [
+			eslintJs.configs.recommended,
+			eslintReact.configs.recommended,
+		],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
@@ -36,15 +44,10 @@ module.exports = [
 				ecmaFeatures: { jsx: true },
 			},
 		},
-		plugins: { react, "react-hooks": reactHooks },
+		plugins: { react: eslintReact },
 		rules: {
-			...js.configs.recommended.rules,
-			...react.configs.recommended.rules,
-			// Downgraded to warnings: existing code is not yet fully compliant
-			"react-hooks/rules-of-hooks": "warn",
-			"react-hooks/exhaustive-deps": "warn",
-			"react/react-in-jsx-scope": "off", // not needed with React 19 / new JSX transform
-			"react/prop-types": "off",
+			...eslintJs.configs.recommended.rules,
+			"@eslint-react/no-missing-key": "warn",
 		},
 		settings: {
 			react: { version: "detect" },
@@ -53,19 +56,14 @@ module.exports = [
 
 	// Node-based CommonJS scripts (config files, content validation tooling)
 	{
-		files: [
-			"tests/content/**/*.js",
-			"*.config.js",
-			"sidebars.js",
-			"copyright.js",
-		],
+		files: ["tests/content/**/*.js", "sidebars.js", "copyright.js"],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "commonjs",
 			globals: globals.node,
 		},
 		rules: {
-			...js.configs.recommended.rules,
+			...eslintJs.configs.recommended.rules,
 		},
 	},
 
@@ -78,7 +76,7 @@ module.exports = [
 			globals: globals.node,
 		},
 		rules: {
-			...js.configs.recommended.rules,
+			...eslintJs.configs.recommended.rules,
 		},
 	},
 
@@ -89,4 +87,4 @@ module.exports = [
 	})),
 
 	eslintConfigPrettier,
-];
+]);

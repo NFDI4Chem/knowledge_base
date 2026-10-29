@@ -4,6 +4,7 @@ import { useCarousel } from "nuka-carousel";
 
 function CustomDots() {
 	const { totalPages, currentPage, goToPage } = useCarousel();
+	const pages = Array.from({ length: totalPages }, (_, page) => page);
 
 	const className = (index) => {
 		let value = styles.chemotionCarouselDot;
@@ -15,11 +16,11 @@ function CustomDots() {
 
 	return (
 		<div className={styles.chemotionCarouselDots}>
-			{[...Array(totalPages)].map((_, index) => (
+			{pages.map((page) => (
 				<span
-					key={index}
-					onClick={() => goToPage(index)}
-					className={className(index)}
+					key={page}
+					onClick={() => goToPage(page)}
+					className={className(page)}
 				>
 					&#8226;
 				</span>
@@ -44,10 +45,10 @@ function ChemotionCarousel({ icon, images }) {
 					wrapMode="wrap"
 					dots={<CustomDots />}
 				>
-					{images.map((image, index) => (
+					{images.map((image) => (
 						<img
 							className={styles.chemotionCarouselImage}
-							key={index}
+							key={image.src}
 							src={image.src}
 							alt={image.alt}
 						/>

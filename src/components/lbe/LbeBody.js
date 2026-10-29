@@ -57,14 +57,14 @@ function LbeBlock({
 			</p>
 
 			<p>
-				{myRepos.map((m, idx) => (
+				{myRepos.map((repo) => (
 					<FilterButton
-						key={idx}
-						name={m}
+						key={repo}
+						name={repo}
 						type="repo"
 						numbered={false}
 						funnel
-						title={"Filter datasets from " + m}
+						title={"Filter datasets from " + repo}
 						{...{ lbeState, setLbeState }}
 					/>
 				))}
@@ -88,8 +88,11 @@ function LbeBlock({
 				summary="Links to datasets"
 			>
 				<p>
-					{linkdata.map((props, idx) => (
-						<RepoButton key={idx} {...props} />
+					{linkdata.map((item) => (
+						<RepoButton
+							key={`${item.name}_${item.url}`}
+							{...item}
+						/>
 					))}
 				</p>
 				<p>
@@ -105,8 +108,12 @@ function LbeBlock({
 function LbeBody({ list, lbeState, setLbeState }) {
 	return (
 		<div className={styles.lbeBody}>
-			{list.map((props, idx) => (
-				<LbeBlock key={idx} {...props} {...{ lbeState, setLbeState }} />
+			{list.map((item) => (
+				<LbeBlock
+					key={item.title}
+					{...item}
+					{...{ lbeState, setLbeState }}
+				/>
 			))}
 		</div>
 	);

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 // Custom functions
 
@@ -14,51 +15,51 @@ import styles from "@site/src/css/lbe.module.css";
 
 import { lbeTable } from "./Data.js";
 
+// Function to get initial state from URL parameters
+
+function getInitialLbeState(search) {
+	const queryParameters = new URLSearchParams(search);
+	const queryText = queryParameters.get("text");
+	const querySubd = queryParameters.get("subd");
+	const queryDoi = queryParameters.get("doi");
+
+	if (queryText !== null) {
+		return { search: queryText, switch: "text" };
+	}
+
+	if (querySubd !== null) {
+		return { subd: querySubd, switch: "subd" };
+	}
+
+	if (queryDoi !== null) {
+		return { switch: "doi" };
+	}
+
+	return {
+		repo: "All",
+		subd: "All",
+		journal: "All",
+		switch: "subd",
+	};
+}
+
 // Main function
 
 function Lbe() {
 	// Get URL params
 	const location = useLocation();
-	const queryParameters = new URLSearchParams(location.search);
-	const queryText = queryParameters.get("text");
-	const querySubd = queryParameters.get("subd");
-	const queryDoi = queryParameters.get("doi");
+	const isBrowser = useIsBrowser();
+	const querySearch = isBrowser ? location.search : "";
+	const queryDoi = new URLSearchParams(location.search).get("doi");
+	const [lbeStateOverride, setLbeStateOverride] = useState(null);
+	const lbeState =
+		lbeStateOverride?.search === querySearch
+			? lbeStateOverride.state
+			: getInitialLbeState(querySearch);
+	const setLbeState = (state) =>
+		setLbeStateOverride({ search: querySearch, state });
 
-	// Define React state object
-	const [lbeState, setLbeState] = useState({});
-
-	// Conditions for initial states
-
-	if (queryText !== null) {
-		useEffect(() => {
-			setLbeState({
-				search: queryText,
-				switch: "text",
-			});
-		}, []);
-	} else if (querySubd !== null) {
-		useEffect(() => {
-			setLbeState({
-				subd: querySubd,
-				switch: "subd",
-			});
-		}, []);
-	} else if (queryDoi !== null) {
-		useEffect(() => {
-			setLbeState({
-				switch: "doi",
-			});
-		}, []);
-	} else {
-		useEffect(() => {
-			setLbeState({
-				repo: "All",
-				subd: "All",
-				journal: "All",
-				switch: "subd",
-			});
-		}, []);
-	}
+	console.log("Initial state:", lbeState); // Log the initial state for debugging
 
 	// Get list of subdisciplines
 	var subdiscs = Array.from(

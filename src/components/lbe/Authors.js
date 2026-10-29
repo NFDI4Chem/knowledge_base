@@ -7,7 +7,7 @@ import styles from "@site/src/css/lbe.module.css";
 // Function for expandible author list
 
 function Authors({ authors, length }) {
-	const [listOpen, ToggleListOpen] = useState(false); // Define state for author list, default "false"
+	const [listOpen, setListOpen] = useState(false); // Define state for author list, default "false"
 	var shortlist = authors.split(", ", length).join(", "); // List of authors with elements given by length
 
 	// If there are less than {length} authors, do not display button
@@ -20,7 +20,7 @@ function Authors({ authors, length }) {
 				{authors}{" "}
 				<button
 					className={styles.lbeBlockAuthorTrigger}
-					onClick={() => ToggleListOpen(!listOpen)}
+					onClick={() => setListOpen(!listOpen)}
 				>
 					&#9650; collapse
 				</button>
@@ -32,7 +32,7 @@ function Authors({ authors, length }) {
 				{shortlist}, ...{" "}
 				<button
 					className={styles.lbeBlockAuthorTrigger}
-					onClick={() => ToggleListOpen(!listOpen)}
+					onClick={() => setListOpen(!listOpen)}
 				>
 					show all &#9660;
 				</button>

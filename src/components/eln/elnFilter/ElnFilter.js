@@ -42,9 +42,9 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
 				<div className={styles.lbeSearchfilterSection}>
 					<h5>Filter by subdisciplines</h5>
 					<p>
-						{subDiscButtons.map((subDisc, idx) => (
+						{subDiscButtons.map((subDisc) => (
 							<FilterButton
-								key={idx}
+								key={subDisc}
 								label={subDisc}
 								type="subDisc"
 								active={isActive("subDisc", subDisc)}
@@ -58,9 +58,9 @@ function ButtonFilters({ allSubDisc, allLicenses, filter, setFilter }) {
 			<div className={styles.lbeSearchfilterSection}>
 				<h5>Filter by license</h5>
 				<p>
-					{licenseButtons.map((license, idx) => (
+					{licenseButtons.map((license) => (
 						<FilterButton
-							key={idx}
+							key={license}
 							label={license}
 							type="license"
 							active={isActive("license", license)}
