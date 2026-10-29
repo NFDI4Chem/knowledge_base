@@ -24,14 +24,14 @@ function ElnCard({ eln, filter, setFilter }) {
 			</div>
 			{eln.subDisc && eln.subDisc.length > 0 && (
 				<div className={styles.elnCardDesc}>
-					{eln.subDisc.map((subdisc, idx) => {
+					{eln.subDisc.map((subdisc) => {
 						let isActive = filter.subDisc === subdisc;
 						return (
 							<FilterButton
 								active={isActive}
 								type="subDisc"
 								label={subdisc}
-								key={idx}
+								key={subdisc}
 								{...{ filter, setFilter }}
 							/>
 						);
