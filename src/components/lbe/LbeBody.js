@@ -59,7 +59,7 @@ function LbeBlock({
 			<p>
 				{myRepos.map((repo) => (
 					<FilterButton
-						key={name}
+						key={repo}
 						name={repo}
 						type="repo"
 						numbered={false}
@@ -89,7 +89,10 @@ function LbeBlock({
 			>
 				<p>
 					{linkdata.map((item) => (
-						<RepoButton key={item.name} {...item} />
+						<RepoButton
+							key={`${item.name}_${item.url}`}
+							{...item}
+						/>
 					))}
 				</p>
 				<p>
