@@ -87,14 +87,14 @@ function LbeBlock({
 				contentClassName={styles.lbeDetailsCollapsible}
 				summary="Links to datasets"
 			>
-				<p>
+				<div className={styles.lbeRepos}>
 					{linkdata.map((item) => (
 						<RepoButton
 							key={`${item.name}_${item.url}`}
 							{...item}
 						/>
 					))}
-				</p>
+				</div>
 				<p>
 					<em>{linkcomment}</em>
 				</p>
