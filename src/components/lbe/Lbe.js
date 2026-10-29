@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 // Custom functions
@@ -48,9 +48,11 @@ function Lbe() {
 	// Get URL params
 	const location = useLocation();
 	const queryDoi = new URLSearchParams(location.search).get("doi");
-	const [lbeState, setLbeState] = useState(() =>
-		getInitialLbeState(location.search),
-	);
+	const [lbeState, setLbeState] = useState(() => getInitialLbeState(""));
+
+	useEffect(() => {
+		setLbeState(getInitialLbeState(location.search));
+	}, [location.search]);
 
 	console.log("Initial state:", lbeState); // Log the initial state for debugging
 
