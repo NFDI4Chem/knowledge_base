@@ -48,6 +48,7 @@ export type DetailsProps = {
 export function Details({
 	summary,
 	children,
+	contentClassName,
 	...props
 }: DetailsProps): ReactNode {
 	useBrokenLinks().collectAnchor(props.id);
@@ -117,11 +118,7 @@ export function Details({
 					setOpen(!newCollapsed);
 				}}
 			>
-				<div
-					className={
-						props.contentClassName ?? styles.collapsibleContent
-					}
-				>
+				<div className={contentClassName ?? styles.collapsibleContent}>
 					{children}
 				</div>
 			</Collapsible>
