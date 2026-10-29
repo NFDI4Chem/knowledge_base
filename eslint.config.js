@@ -1,6 +1,5 @@
 const js = require("@eslint/js");
-const react = require("eslint-plugin-react");
-const reactHooks = require("eslint-plugin-react-hooks");
+const eslintReact = require("@eslint-react/eslint-plugin");
 const tseslint = require("typescript-eslint");
 const globals = require("globals");
 const eslintConfigPrettier = require("eslint-config-prettier");
@@ -36,15 +35,10 @@ module.exports = [
 				ecmaFeatures: { jsx: true },
 			},
 		},
-		plugins: { react, "react-hooks": reactHooks },
+		plugins: { react: eslintReact },
 		rules: {
 			...js.configs.recommended.rules,
-			...react.configs.recommended.rules,
-			// Downgraded to warnings: existing code is not yet fully compliant
-			"react-hooks/rules-of-hooks": "warn",
-			"react-hooks/exhaustive-deps": "warn",
-			"react/react-in-jsx-scope": "off", // not needed with React 19 / new JSX transform
-			"react/prop-types": "off",
+			"@eslint-react/no-missing-key": "warn",
 		},
 		settings: {
 			react: { version: "detect" },
