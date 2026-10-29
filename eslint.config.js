@@ -1,10 +1,11 @@
-const js = require("@eslint/js");
-const eslintReact = require("@eslint-react/eslint-plugin");
-const tseslint = require("typescript-eslint");
-const globals = require("globals");
-const eslintConfigPrettier = require("eslint-config-prettier");
+import eslintJs from "@eslint/js";
+import eslintReact from "@eslint-react/eslint-plugin";
+import tseslint from "typescript-eslint";
+import globals from "globals";
+import eslintConfigPrettier from "eslint-config-prettier";
+import { defineConfig } from "eslint/config";
 
-module.exports = [
+export default defineConfig([
 	{
 		ignores: [
 			"build/**",
@@ -22,6 +23,14 @@ module.exports = [
 	// React components and other browser-side JS/JSX under src/
 	{
 		files: ["src/**/*.{js,jsx}"],
+
+		// Extend recommended rule sets from:
+		// 1. ESLint JS's recommended rules
+		// 2. ESLint React's recommended rules
+		extends: [
+			eslintJs.configs.recommended,
+			eslintReact.configs.recommended,
+		],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
@@ -37,7 +46,7 @@ module.exports = [
 		},
 		plugins: { react: eslintReact },
 		rules: {
-			...js.configs.recommended.rules,
+			...eslintJs.configs.recommended.rules,
 			"@eslint-react/no-missing-key": "warn",
 		},
 		settings: {
@@ -59,7 +68,7 @@ module.exports = [
 			globals: globals.node,
 		},
 		rules: {
-			...js.configs.recommended.rules,
+			...eslintJs.configs.recommended.rules,
 		},
 	},
 
@@ -72,7 +81,7 @@ module.exports = [
 			globals: globals.node,
 		},
 		rules: {
-			...js.configs.recommended.rules,
+			...eslintJs.configs.recommended.rules,
 		},
 	},
 
@@ -83,4 +92,4 @@ module.exports = [
 	})),
 
 	eslintConfigPrettier,
-];
+]);
