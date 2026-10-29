@@ -56,12 +56,7 @@ export default defineConfig([
 
 	// Node-based CommonJS scripts (config files, content validation tooling)
 	{
-		files: [
-			"tests/content/**/*.js",
-			"*.config.js",
-			"sidebars.js",
-			"copyright.js",
-		],
+		files: ["tests/content/**/*.js", "sidebars.js", "copyright.js"],
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "commonjs",
