@@ -37,7 +37,6 @@
 	"dependencies": {
 		"@docusaurus/core": "^3.10.2",
 		"@docusaurus/faster": "^3.10.2",
-		"@docusaurus/plugin-sitemap": "^3.10.2",
 		"@docusaurus/preset-classic": "^3.10.2",
 		"@mdx-js/react": "^3.1.1",
 		"clsx": "^2.1.1",
@@ -47,7 +46,6 @@
 		"prism-react-renderer": "^2.4.1",
 		"react": "^19",
 		"react-dom": "^19",
-		"react-tagcloud": "^2.3.3",
 		"use-immer": "^0.11.0",
 		"video-privacy": "^1.2.0"
 	},
@@ -86,8 +84,8 @@
 		"node": ">=18.0"
 	},
 	"allowScripts": {
-		"@swc/core@1.16.1": true,
-		"core-js@3.50.0": true
+		"core-js@3.50.0": true,
+		"@swc/core@1.16.18": true
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx,md,mdx,json,css,yml,yaml}": "prettier --write"
