@@ -6,7 +6,7 @@ function Features({ featureList, index, ...props }) {
 		<ButtonContainer>
 			{featureList.map((feature) => (
 				<FeatureButton
-					key={feature.text}
+					key={feature.url}
 					url={feature.url}
 					imgUrl={feature.imgUrl}
 					text={feature.text}
