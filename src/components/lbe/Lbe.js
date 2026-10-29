@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 // Custom functions
 
@@ -47,12 +48,16 @@ function getInitialLbeState(search) {
 function Lbe() {
 	// Get URL params
 	const location = useLocation();
+	const isBrowser = useIsBrowser();
+	const querySearch = isBrowser ? location.search : "";
 	const queryDoi = new URLSearchParams(location.search).get("doi");
-	const [lbeState, setLbeState] = useState(() => getInitialLbeState(""));
-
-	useEffect(() => {
-		setLbeState(getInitialLbeState(location.search));
-	}, [location.search]);
+	const [lbeStateOverride, setLbeStateOverride] = useState(null);
+	const lbeState =
+		lbeStateOverride?.search === querySearch
+			? lbeStateOverride.state
+			: getInitialLbeState(querySearch);
+	const setLbeState = (state) =>
+		setLbeStateOverride({ search: querySearch, state });
 
 	console.log("Initial state:", lbeState); // Log the initial state for debugging
 
