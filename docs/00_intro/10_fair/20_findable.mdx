@@ -1,0 +1,36 @@
+---
+slug: "/findable"
+---
+
+# Findable
+
+Researchers — and the computers working on their behalf — must be able to find datasets to be able to reuse them. Therefore, the first guideline of the FAIR Data Principles outlines methods to ensure a dataset’s discovery.
+
+## F1. (meta)data are assigned a globally unique and persistent identifier {#f1}
+
+A globally unique and [persistent identifier (PID)](/docs/pid) helps both machines and humans find the data in the first place. These PIDs are essential for research as they guarantee the availability of the associated resource, in this case a dataset. The registry services that make these identifiers available work to maintain the link to the resource, thus avoiding dead links.
+
+A common example of a citable PID is the Digital Object Identifier, or [DOI](https://doi.org/10.1000/182). As with many journals, scientific data repositories often assign a DOI automatically. For example, both the [The Cambridge Structural Database (CSD)](https://www.ccdc.cam.ac.uk/solutions/csd-system/components/csd/) and the [Chemotion Repository](https://www.chemotion-repository.net/) assign DOIs to each dataset deposited. Researchers must be aware of this option when searching for a suitable repository (e.g. at [re3data](https://www.re3data.org/)), while repositories should offer this service.
+
+## F2. data are described with rich metadata (defined by R1 below) {#f2}
+
+Data need to be sufficiently described in order to make them both findable and reusable. Hence, the specific focus here lies on making the (meta)data findable by using rich discovery [metadata](/docs/metadata) in a standardized format and allowing computers and humans to quickly understand the dataset’s contents. This is an essential component in the plurality of metadata described by [R1](/docs/reusable#r1) below. This information may include, but is not limited to:
+
+- the context on what the dataset is, how it was generated, and how it can be interpreted,
+- the data quality,
+- licensing and (re)use agreements,
+- what other data may be related (linked via its PID), and
+- associated journal publications and their DOI.
+
+Repositories should provide a fillable [application profile](https://en.wikipedia.org/wiki/Application_profile) that allows researchers to give extensive and precise information on their deposited datasets. For example, the Chemotion Repository uses and [RADAR4Chem](https://www.nfdi4chem.de/index.php/2650-2/), among others, the [Datacite Metadata Schema](http://doi.org/10.5438/0012) to build its application profile, a schema specifically created for the publication and citation of research data. These include an assortment of mandatory, recommended, and optional metadata properties, allowing for a rich description of the deposited dataset. For those publishing data, always keep in mind: the more information provided, the better.
+
+## F3. metadata clearly and explicitly include the identifier of the data it describes {#f3}
+
+While [F1](#f1) stipulates the assignment of an identifier, F3 underlines the importance of including this identifier in the metadata itself. The metadata and the dataset it describes are typically separate files. Including the identifier in the metadata directly links the information to the associated dataset.
+
+Furthermore, the dataset may not be published alongside the metadata. For example, in the case of unpublished archived datasets, the PID can lead to a method (e.g. a landing page) to contact those responsible for the data instead of to the dataset itself.
+Researchers must be aware of this importance, while repositories must not only assign a PID as described in [F2](#f2) above, but should also ensure that this PID is a required property of the metadata.
+
+## F4. (meta)data are registered or indexed in a searchable resource {#f4}
+
+Metadata are used to set up indices, enabling machines to efficiently search for and find datasets. For this process to work successfully, metadata must be complete as outlined [above](#f2). Repositories should ensure the metadata entered for a deposited dataset is available in a machine-readable format to facilitate the assignment of indices.
