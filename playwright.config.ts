@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const serveCommand = "npm run serve -- --host 127.0.0.1 --port 3000";
+
 export default defineConfig({
 	testDir: "./tests/e2e",
 	timeout: 60_000,
@@ -26,8 +28,10 @@ export default defineConfig({
 		reducedMotion: "reduce",
 	},
 	webServer: {
-		command:
-			"npm run build && npm run serve -- --host 127.0.0.1 --port 3000",
+		// CI sets PW_SKIP_BUILD when a prebuilt site is already in ./build.
+		command: process.env.PW_SKIP_BUILD
+			? serveCommand
+			: `npm run build && ${serveCommand}`,
 		url: "http://127.0.0.1:3000",
 		reuseExistingServer: !process.env.CI,
 		timeout: 300_000,

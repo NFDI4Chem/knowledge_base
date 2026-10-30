@@ -1,36 +1,27 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type BrowserContext } from "@playwright/test";
 
 const ASSET_FILE_EXTENSIONS =
 	/\.(?:png|jpe?g|gif|webp|svg|ico|pdf|zip|gz|mp4|webm|css|js|json|xml|txt)$/i;
 const EXCLUDED_PATH_PREFIXES = ["/search"];
+const BLOCKED_RESOURCE_TYPES = new Set(["image", "font", "media"]);
+const CONCURRENCY = 6;
+const MAX_PAGES = 300;
 
 function normalizePath(url: URL): string {
 	const pathname = url.pathname.replace(/\/$/, "") || "/";
 	return pathname;
 }
 
-test("all internal pages render without errors", async ({ page, baseURL }) => {
-	test.setTimeout(10 * 60_000);
-
-	if (!baseURL) {
-		throw new Error("Playwright baseURL is not configured.");
-	}
-
-	const origin = new URL(baseURL).origin;
-	const queue = ["/"];
-	const visited = new Set<string>();
+async function checkPage(
+	context: BrowserContext,
+	currentPath: string,
+	origin: string,
+): Promise<{ failures: string[]; links: string[] }> {
 	const failures: string[] = [];
-	const maxPages = 300;
+	const links: string[] = [];
+	const page = await context.newPage();
 
-	while (queue.length > 0 && visited.size < maxPages) {
-		const currentPath = queue.shift();
-
-		if (!currentPath || visited.has(currentPath)) {
-			continue;
-		}
-
-		visited.add(currentPath);
-
+	try {
 		const response = await page.goto(currentPath, {
 			waitUntil: "commit",
 		});
@@ -40,7 +31,7 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 			failures.push(
 				`${currentPath}: HTTP ${response?.status() ?? "NO_RESPONSE"}`,
 			);
-			continue;
+			return { failures, links };
 		}
 
 		const title = (await page.title()).trim();
@@ -100,13 +91,83 @@ test("all internal pages render without errors", async ({ page, baseURL }) => {
 				continue;
 			}
 
-			const normalizedPath = normalizePath(resolvedUrl);
-
-			if (!visited.has(normalizedPath)) {
-				queue.push(normalizedPath);
-			}
+			links.push(normalizePath(resolvedUrl));
 		}
+	} catch (error) {
+		failures.push(`${currentPath}: ${(error as Error).message}`);
+	} finally {
+		await page.close();
 	}
+
+	return { failures, links };
+}
+
+async function runPool<T>(
+	items: T[],
+	limit: number,
+	worker: (item: T) => Promise<void>,
+): Promise<void> {
+	let next = 0;
+
+	await Promise.all(
+		Array.from({ length: Math.min(limit, items.length) }, async () => {
+			while (next < items.length) {
+				await worker(items[next++]);
+			}
+		}),
+	);
+}
+
+test("all internal pages render without errors", async ({
+	context,
+	baseURL,
+}) => {
+	test.setTimeout(10 * 60_000);
+
+	if (!baseURL) {
+		throw new Error("Playwright baseURL is not configured.");
+	}
+
+	const origin = new URL(baseURL).origin;
+	const visited = new Set<string>(["/"]);
+	const failures: string[] = [];
+
+	// The crawl only needs HTML, titles and links, so skip heavy and third-party requests.
+	await context.route("**/*", (route) => {
+		const request = route.request();
+
+		if (
+			BLOCKED_RESOURCE_TYPES.has(request.resourceType()) ||
+			new URL(request.url()).origin !== origin
+		) {
+			return route.abort();
+		}
+
+		return route.continue();
+	});
+
+	// Breadth-first crawl; every level is checked concurrently.
+	let level = ["/"];
+
+	while (level.length > 0) {
+		const nextLevel: string[] = [];
+
+		await runPool(level, CONCURRENCY, async (currentPath) => {
+			const result = await checkPage(context, currentPath, origin);
+			failures.push(...result.failures);
+
+			for (const link of result.links) {
+				if (!visited.has(link) && visited.size < MAX_PAGES) {
+					visited.add(link);
+					nextLevel.push(link);
+				}
+			}
+		});
+
+		level = nextLevel;
+	}
+
+	failures.sort();
 
 	expect(
 		visited.size,
