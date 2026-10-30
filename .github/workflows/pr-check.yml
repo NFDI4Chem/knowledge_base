@@ -107,6 +107,23 @@ jobs:
             - name: Run Stylelint
               run: npm run test:css
 
+    translation-check:
+        name: Translation Completeness
+        if: github.event_name == 'pull_request' && github.base_ref == 'main' && github.head_ref == 'localisation'
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Check Crowdin translation progress is 100% for all locales
+              run: node tests/ci/check-crowdin-progress.js
+              env:
+                  CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
     build-validation:
         name: Build Validation
         if: github.event_name == 'pull_request'
