@@ -1,0 +1,25 @@
+---
+slug: "/accessible"
+---
+
+# Accessible
+
+Accessible means that humans and machines receive instructions on how to obtain the data. It should be noted that FAIR does not equate to open, as further explained in [A1.2](#a1_2).
+
+## A1. (meta)data are retrievable by their identifier using a standardized communications protocol {#a1}
+
+To guarantee access to datasets, persistent identifiers, such as DOIs, are suggested, which are resolved by standard methods. Common protocols include http(s) or (s)ftp.
+
+### A1.1 the protocol is open, free, and universally implementable {#a1_1}
+
+Repositories should only use protocols that allow any computer to access at least the metadata. Not only does this refer to the use of standard communication protocols, as stated in [A1](#a1), these protocols must also be freely available and open-sourced. Therefore, proprietary or non-standard protocols should be avoided.
+
+### A1.2 the protocol allows for an authentication and authorization procedure, where necessary {#a1_2}
+
+Where necessary, machine-readable protocols that let the user know that action needs to be taken (such as a login) to access data must be in place. FAIR data and open data are not synonymous: FAIR data requires that it must be clearly stated how the data can be accessed, as opposed to granting anyone and everyone full access. In manuscripts of scientific articles, this information should be included in a [data availability statement](/docs/data_availability_statement). This can be especially important for sensitive data, where, for example, personal data and/or medical information may be disclosed. Hence, repositories should also provide a way for users (and their computers) to identify themselves, enabling access permission to be granted.
+
+## A2. metadata are accessible, even when the data are no longer available {#a2}
+
+The metadata that describes a dataset should be stored in a separate file so it is available, even if the datasets themselves can no longer be accessed. Problems with dataset availability are usually due to 1) the cost of maintaining and storing full datasets and 2) file format deprecation as technologies evolve. Maintaining metadata files is cheaper and simpler and ensures that, at a minimum, details such as contact information remains available. These files should thus be archived forever.
+
+A repository should clearly state a contingency plan for metadata storage should the service no longer exist, such as migrating to another repository service provider while ensuring the integrity of the persistent identifier is guaranteed.

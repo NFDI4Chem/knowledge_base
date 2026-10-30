@@ -1,0 +1,43 @@
+---
+slug: "/reusable"
+---
+
+# Reusable
+
+Many of the previous points lead to one key aspect of data sharing: data reusability. Datasets must be described in a manner that allows the user to easily determine how and under which conditions the data can be reused.
+
+## R1. (meta)data are richly described with a plurality of accurate and relevant attributes {#r1}
+
+Related to [F2](/docs/findable#f2):
+
+- What the dataset contains, including whether the data is raw and/or processed
+- How the data was processed
+- How the data can be reused
+- Who created the data
+- Date of creation
+- Variable names
+- Standard methods used
+- Scope of the data and project
+- Lab conditions
+- Any limitations to the data
+- Software and versions used for acquisition and processing.
+
+An important piece of information for chemical data are [machine-readable chemical structures](/docs/machine-readable_chemical_structures). This should be included within the dataset and/or metadata and aids computers in finding the correct data in their queries.
+
+Repositories should provide data publishers with the opportunity to include a plurality of information in their metadata. This includes giving a wide range of optional and free-fill fields for data publishers to complete.
+
+### R1.1. (meta)data are released with a clear and accessible data usage license {#r1_1}
+
+The metadata should include human and machine-readable use conditions, such as a [licence](/docs/licences). [Creative Commons](https://creativecommons.org/) licences are commonly used for scientific data. [re3data](https://www.re3data.org/) lists whether a repository allows researchers to directly select a licence or terms of use agreement when depositing data. At a minimum, repositories should allow researchers to add a licence file.
+
+### R1.2. (meta)data are associated with detailed provenance {#r1_2}
+
+In simple terms: metadata include any relevant history. If the dataset is related to other datasets or based on another researcher’s data, these should be linked via their PID as described in I3. This includes citing or acknowledging others for their work, which also takes their licensing or use agreements into consideration (see [R1.1](#r1_1)). Furthermore, metadata should contain machine-readable information on how the data was generated or processed.
+
+### R1.3. (meta)data meet domain-relevant community standards {#r1_3}
+
+As research data management and, as such, [data publishing](/docs/data_publishing) becomes more and more prevalent across research areas, [best practices](/docs/best_practice) in the individual communities will arise. This should encompass metadata templates for proper documentation of datasets, how the data should be [organized](/docs/data_organisation), which vocabularies or [ontologies](/docs/ontology) to use, and [file formats](/docs/data_formats). NFDI4Chem is working to establish [metadata and data standards](https://nfdi4chem.de/your-nfdi4chem-team-get-to-know-the-consortium-4/) for the various communities in chemistry.
+
+Where available, community standards and best practices should be followed when those publishing prepare their datasets and relevant metadata for publication. [Repositories](/docs/repositories), especially domain-specific service providers, should adhere to the standards set forth by the community by requiring files and metadata to follow format specifications.
+
+Where required, format converters should be linked in the dataset’s metadata.
