@@ -148,6 +148,13 @@ jobs:
               run: bash tests/ci/check-build-log.sh build.log
               continue-on-error: false
 
+            - name: Upload build for smoke test
+              uses: actions/upload-artifact@v7
+              with:
+                  name: site-build
+                  path: build
+                  retention-days: 1
+
             - name: All checks passed
               if: success()
               run: |
@@ -157,3 +164,42 @@ jobs:
                   echo "- JS check passed"
                   echo "- CSS check passed"
                   echo "- Build succeeded"
+
+    smoke-test:
+        name: Smoke Test
+        if: github.event_name == 'pull_request'
+        needs: [build-validation]
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+
+            - name: Setup Node environment
+              uses: ./.github/actions/setup-node-env
+
+            - name: Download build
+              uses: actions/download-artifact@v8
+              with:
+                  name: site-build
+                  path: build
+
+            - name: Cache Playwright browsers
+              id: playwright-cache
+              uses: actions/cache@v6
+              with:
+                  path: ~/.cache/ms-playwright
+                  key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+            - name: Install Playwright browser
+              if: steps.playwright-cache.outputs.cache-hit != 'true'
+              run: npx playwright install --with-deps chromium
+
+            - name: Install Playwright system dependencies
+              if: steps.playwright-cache.outputs.cache-hit == 'true'
+              run: npx playwright install-deps chromium
+
+            - name: Run smoke test
+              run: npm run test:e2e:smoke
+              env:
+                  PW_SKIP_BUILD: "true"
