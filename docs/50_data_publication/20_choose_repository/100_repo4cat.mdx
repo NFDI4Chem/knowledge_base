@@ -1,20 +1,25 @@
 ---
-title: Repo4Cat (NFDI4Cat Central Data Repository)
-description: Central Dataverse-based repository for catalysis research data
+title: "Repo4Cat"
+slug: "/repo4cat"
 ---
 
-# Repo4Cat
+import RepoButton from "@site/src/components/repos/RepoButton";
 
-*NFDI4Cat Central Data Repository for catalysis-related sciences*
+_NFDI4Cat Central Data Repository for catalysis-related sciences_
 
-[Link to **Repo4Cat**](https://repository.nfdi4cat.org/) [Link to **Documentation**](https://nfdi4cat.github.io/repo4cat/) [Link to **Demo repository**](https://demo-repository.nfdi4cat.org/)
+<RepoButton
+	url="https://repository.nfdi4cat.org/"
+	intro="Link to"
+	name="RADAR4Chem"
+/>
+<RepoButton
+	url="https://doi.org/10.17616/R31NJNT8"
+	intro="Entry on"
+	name="re3data"
+/>
 
-> **Note:**
-> Repo4Cat is openly browsable. Depositing data requires a user account (sign-up via the "Sign up for a Dataverse account" button on the login page, using your real given and family name). Access to a project area has to be requested from the repository administrators via the "Contact" button.
->
-> Registry entries: [re3data](https://doi.org/10.17616/R31NJNT8). A FAIRsharing record was not found during research.
+:::info Quick facts
 
-## Repo4Cat quick facts:
 
 - **Accepted data types:** datasets, source code and text/documentation (no fixed list of file formats; Dataverse accepts arbitrary files)
 - **Used standards/ontologies:** DataCite Metadata Schema, DDI, Dublin Core, JSON-LD, OAI-ORE, schema.org; Voc4Cat (SKOS vocabulary for catalysis); metadata schemas shared with NFDI4Chem
@@ -39,8 +44,6 @@ Repo4Cat runs on [Dataverse](https://dataverse.org), an open-source repository p
 - **Enhanced publications**, linking data with related publications and documentation
 - **Fine-grained permissions** managed at the level of dataverse collections (Edit → Permissions)
 
-At the time of its last re3data update (August 2025), the repository held 19 dataverses, 44 datasets and 866 files.
-
 ## Organisation of content
 
 Content is organised in Dataverse collections. The top-level structure comprises:
@@ -63,8 +66,5 @@ For a safe playground, use the [demo repository](https://demo-repository.nfdi4ca
 
 Questions and feedback: [info@nfdi4cat.org](mailto:info@nfdi4cat.org), the [NFDI4Cat contact page](https://nfdi4cat.org/Footer/Kontakt.html), or issues on [GitHub](https://github.com/nfdi4cat/repo4cat).
 
----
+Please note: Repo4Cat is openly browsable. Depositing data requires a user account (sign-up via the "Sign up for a Dataverse account" button on the login page, using your real given and family name). Access to a project area has to be requested from the repository administrators via the "Contact" button.
 
-*Information compiled from the re3data record, the NFDI4Cat website and the Repo4Cat GitHub documentation. repository.nfdi4cat.org itself could not be accessed automatically. Please verify details (licences, certification, journal recommendations, current size) directly with the repository before publishing this page.*
-
-Main authors: *to be added (ORCID)*
