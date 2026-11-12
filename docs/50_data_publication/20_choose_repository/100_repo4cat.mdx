@@ -1,0 +1,68 @@
+---
+title: "Repo4Cat"
+slug: "/repo4cat"
+---
+
+import RepoButton from "@site/src/components/repos/RepoButton";
+
+_NFDI4Cat Central Data Repository for catalysis-related sciences_
+
+<RepoButton
+	url="https://repository.nfdi4cat.org/"
+	intro="Link to"
+	name="RADAR4Chem"
+/>
+<RepoButton
+	url="https://doi.org/10.17616/R31NJNT8"
+	intro="Entry on"
+	name="re3data"
+/>
+
+:::info Quick facts
+
+- **Accepted data types:** datasets, source code and text/documentation (no fixed list of file formats; Dataverse accepts arbitrary files)
+- **Used standards/ontologies:** DataCite Metadata Schema, DDI, Dublin Core, JSON-LD, OAI-ORE, schema.org; Voc4Cat (SKOS vocabulary for catalysis); metadata schemas shared with NFDI4Chem
+- **Data deposition condition:** controlled (account required; upload restricted to registered users / institutional membership)
+- **Persistent identifiers:** Handle (hdl); author identification via ORCID
+- **Recommended by Journals/Societies:** none listed (not a journal-mandated repository)
+
+## Repo4Cat and the NFDI4Cat infrastructure
+
+Repo4Cat is the central platform of the [NFDI4Cat](https://www.nfdi4cat.org/) consortium, in which academia and industry work together on research data management for catalysis-related sciences. It is the place to store, describe, share, publish and discover research data, publications and documentation from catalysis science. Typical content includes experimental data on topics such as nanoparticles, propane dehydrogenation and syngas, as well as source code and text documents. Repo4Cat is a disciplinary repository, with English as its working language, and is listed under Chemistry and Engineering Sciences in re3data.
+
+The repository went live in 2024 as the cornerstone of the NFDI4Cat infrastructure, which also includes a Meta Portal for finding metadata across repositories and shared vocabularies and ontologies. The software was chosen in a structured evaluation of candidate repository systems, based on requirements gathered from the project community; the evaluation results are published on [Zenodo](https://doi.org/10.5281/zenodo.7805683). Experience from requirements collection, software comparison, installation, operation and user support has also been summarised in a [paper](https://doi.org/10.1109/IDAACS68557.2025.11322400).
+
+## Technology and features
+
+Repo4Cat runs on [Dataverse](https://dataverse.org), an open-source repository platform. Its main features are:
+
+- **Versioning** of datasets, with drafts that can be edited before publication
+- **Persistent identifiers** based on Handles, so datasets can be cited unambiguously
+- **Rich metadata** supporting standard schemas for exchange and harvesting (OAI-ORE, JSON-LD, DataCite, Dublin Core, DDI)
+- **Usage statistics** as metrics; data citation follows the [Dataverse data citation best practices](https://dataverse.org/best-practices/data-citation)
+- **Enhanced publications**, linking data with related publications and documentation
+- **Fine-grained permissions** managed at the level of dataverse collections (Edit → Permissions)
+
+## Organisation of content
+
+Content is organised in Dataverse collections. The top-level structure comprises:
+
+1. **Projects:** collections for research projects; creation requires a request to the administrators
+2. **Organizations:** collections for institutions, using a dedicated user-group naming scheme
+3. **Personal dataverses:** every user may create their own, with an identifier of the form `name-surname`
+4. **Single publications:** collections for data belonging to individual publications
+
+## How to deposit data
+
+1. Sign up for an account on the [login page](https://repository.nfdi4cat.org/loginpage.xhtml?redirectPage=dataverse.xhtml) with your real name.
+2. Create or request a dataverse (personal, organisation or project) and set permissions.
+3. Add a dataset, fill in the citation metadata and any domain-specific metadata, and upload files.
+4. Save as a draft, review, and publish to make the dataset citable and public.
+
+For a safe playground, use the [demo repository](https://demo-repository.nfdi4cat.org/). Training materials and a first-steps guideline ([Handle link](https://hdl.handle.net/21.11165/4Cat/b4au-u4m3)) are provided in the [documentation repository on GitHub](https://github.com/nfdi4cat/repo4cat).
+
+## Support
+
+Questions and feedback: [info@nfdi4cat.org](mailto:info@nfdi4cat.org), the [NFDI4Cat contact page](https://nfdi4cat.org/Footer/Kontakt.html), or issues on [GitHub](https://github.com/nfdi4cat/repo4cat).
+
+Please note: Repo4Cat is openly browsable. Depositing data requires a user account (sign-up via the "Sign up for a Dataverse account" button on the login page, using your real given and family name). Access to a project area has to be requested from the repository administrators via the "Contact" button.
